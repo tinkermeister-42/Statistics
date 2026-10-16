@@ -1,0 +1,29 @@
+% Shared preamble for the printable mini lessons (1.4 onward).
+%   \documentclass[11pt]{article}
+%   \input{../preamble}
+% Build the key with:  pdflatex -jobname=<name>_KEY "\def\iskey{}\input{<name>}"
+% Figures shared with the web page live in figures/Unit_X/<name>.tex and are
+% pulled in with \fig{Unit_X/<name>}; the standalone package drops their own
+% preamble, so their macros come from figures/preamble.tex, loaded here.
+\input{../../figures/preamble}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage[helvet]{sfmath}  % math in the same sans font as the text
+\usepackage{standalone}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlist[enumerate,1]{leftmargin=1.5em,itemsep=1em}
+\setlist[enumerate,2]{label=(\alph*),leftmargin=2em,itemsep=2.2em}
+
+\newif\ifkey
+\ifdefined\iskey \keytrue \fi
+\colorlet{keyred}{red!75!black}
+\newcommand{\ans}[1]{\ifkey\leavevmode{\color{keyred}#1}\fi}
+% vertical work space on the student copy, less on the key
+\newcommand{\work}[1]{\ifkey\vspace{0.6em}\else\vspace{#1}\fi}
+\newcommand{\fig}[1]{\input{../../figures/#1}}
+% Title line: \lessontitle{Quartiles, IQR, and Box Plots}
+\newcommand{\lessontitle}[1]{{\Large\bfseries #1\ifkey\ \textcolor{keyred}{KEY}\fi}\hfill Name \underline{\hspace{2in}}\par\vspace{0.6em}}
+\newcommand{\partner}{\par\vspace{0.4em}Work with a partner. Compare answers when you finish each problem.\par}

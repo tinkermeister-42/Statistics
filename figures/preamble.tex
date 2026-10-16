@@ -5,6 +5,8 @@
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage{tikz}
 \usetikzlibrary{decorations.pathreplacing}
+% axis numbers in the text font, not math italic
+\pgfkeys{/pgf/number format/.cd,assume math mode=true,1000 sep={}}
 
 % dot plot: \dotplot{min}{max}{value/count,...}{axis label}
 \newcommand{\dotplot}[4]{%
@@ -38,3 +40,22 @@
   \draw[thick] (#5,0.75) -- (#5,1.25);
   \draw[thick,fill=gray!20] (#2,0.55) rectangle (#4,1.45);
   \draw[very thick] (#3,0.55) -- (#3,1.45);}
+
+% ---- added for 1.4 onward ----
+% axis on y=0: \axis{min}{max}{label step}{tick step}{axis label}
+\newcommand{\axis}[5]{%
+  \draw[thick] (#1,0) -- (#2,0);
+  \pgfmathsetmacro{\axT}{#1+#4}\foreach \t in {#1,\axT,...,#2} \draw (\t,0.1) -- (\t,-0.1);
+  \pgfmathsetmacro{\axL}{#1+#3}\foreach \t in {#1,\axL,...,#2}
+    \draw (\t,0.18) -- (\t,-0.18) node[below] {\pgfmathprintnumber{\t}};
+  \node at ({(#1+#2)/2},-0.95) {#5};}
+% box plot centred at height y: \bplotat{y}{min}{Q1}{med}{Q3}{max}
+\newcommand{\bplotat}[6]{%
+  \draw[thick] (#2,#1) -- (#3,#1);
+  \draw[thick] (#5,#1) -- (#6,#1);
+  \draw[thick] (#2,#1-0.22) -- (#2,#1+0.22);
+  \draw[thick] (#6,#1-0.22) -- (#6,#1+0.22);
+  \draw[thick,fill=gray!20] (#3,#1-0.42) rectangle (#5,#1+0.42);
+  \draw[very thick] (#4,#1-0.42) -- (#4,#1+0.42);}
+% an outlier dot: \outlier{x}{y}
+\newcommand{\outlier}[2]{\fill (#1,#2) circle (2.4pt);}

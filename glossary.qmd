@@ -46,6 +46,14 @@ A graph that puts one dot above a number line for each data value. Dots for the 
 
 ***
 
+### fence {#glossary-fence}
+
+A cutoff for outliers. The lower fence is $Q_1 - 1.5 \times \text{IQR}$. The upper fence is $Q_3 + 1.5 \times \text{IQR}$. A value outside the fences is an outlier.
+
+**See Also:** {{< glink outlier >}}, {{< glink "interquartile range" >}}
+
+***
+
 ### five-number summary {#glossary-five-number-summary}
 
 Five numbers that describe a data set: the minimum, Q1, the median, Q3, and the maximum.
@@ -142,7 +150,9 @@ The value that happens most often in a data set.
 
 ### outlier {#glossary-outlier}
 
-A value that is far away from the rest of the data.
+A value that is far away from the rest of the data. A common rule: a value is an outlier if it is more than $1.5 \times \text{IQR}$ below Q1 or above Q3.
+
+**See Also:** {{< glink fence >}}
 
 ***
 
@@ -205,3 +215,11 @@ The long, low side of a graph. The mean is pulled toward the tail.
 ### tally {#glossary-tally}
 
 A mark made for each data value as you count it.
+
+***
+
+### whisker {#glossary-whisker}
+
+A line on a box plot that goes from the box out to the smallest or largest value that is not an outlier.
+
+**See Also:** {{< glink "box plot" >}}

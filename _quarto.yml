@@ -14,6 +14,7 @@ resources:
 extensions:
   - glossary
   - headings
+  - khan
 
 format:
   html:
@@ -53,5 +54,6 @@ book:
         - file: chapters/Unit_1/1.1_Frequency_Tables_Dot_Plots_and_Histograms.qmd
         - file: chapters/Unit_1/1.2_Mean_Median_and_Shape.qmd
         - file: chapters/Unit_1/1.3_Quartiles_IQR_and_Box_Plots.qmd
+        - file: chapters/Unit_1/1.4_Reading_Box_Plots_and_Outliers.qmd
 
     - file: glossary.qmd

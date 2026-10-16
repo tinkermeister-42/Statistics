@@ -4,6 +4,7 @@
   "data": "Facts or numbers that we collect to learn about something.",
   "distribution": "All the values in a data set and how often each one happens. A graph of the data shows its distribution.",
   "dot-plot": "A graph that puts one dot above a number line for each data value. Dots for the same value stack up.",
+  "fence": "A cutoff for outliers. The lower fence is $Q_1 - 1.5 \\times \\text{IQR}$. The upper fence is $Q_3 + 1.5 \\times \\text{IQR}$. A value outside the fences is an outlier.",
   "five-number-summary": "Five numbers that describe a data set: the minimum, Q1, the median, Q3, and the maximum.",
   "frequency": "How many times a value happens in a data set.",
   "frequency-table": "A table that lists each value and its frequency.",
@@ -15,7 +16,7 @@
   "median": "The middle value when the data is in order. With an even number of values, the median is halfway between the two middle values.",
   "minimum": "The smallest value in a data set.",
   "mode": "The value that happens most often in a data set.",
-  "outlier": "A value that is far away from the rest of the data.",
+  "outlier": "A value that is far away from the rest of the data. A common rule: a value is an outlier if it is more than $1.5 \\times \\text{IQR}$ below Q1 or above Q3.",
   "quartile": "The three values that cut ordered data into four parts with the same number of values. Q1 is the median of the lower half. The median is Q2. Q3 is the median of the upper half.",
   "range": "The maximum minus the minimum. It shows how spread out all the data is.",
   "shape": "What a graph of the data looks like: symmetric, skewed left, or skewed right.",
@@ -23,5 +24,6 @@
   "skewed-right": "A shape where most values are low and a long tail stretches to the right. The mean is greater than the median.",
   "symmetric": "A shape where the left side and the right side look about the same. The mean and the median are about equal.",
   "tail": "The long, low side of a graph. The mean is pulled toward the tail.",
-  "tally": "A mark made for each data value as you count it."
+  "tally": "A mark made for each data value as you count it.",
+  "whisker": "A line on a box plot that goes from the box out to the smallest or largest value that is not an outlier."
 }
