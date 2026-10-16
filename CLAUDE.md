@@ -55,8 +55,26 @@ set (`.remember`, `.you-try`, `.you-try-m` + `.answer`, `.think`, `.gotcha`,
 `.note`, `.real-world`).
 
 - **Lesson, handout and figures are one change.** The page restates the
-  handout's notes and problems, and the handout draws its own copy of each
-  figure. Edit all three together
+  handout's notes and problems. Edit both together
+- **One figure source from 1.4 on.** Handouts start with
+  `\input{../preamble}` (`handouts/preamble.tex`: `\lessontitle`, `\ans`,
+  `\work`, `\partner`) and pull shared figures with
+  `\fig{Unit_X/<name>}`, the same `figures/` file the web page uses as an
+  SVG. Only handout-only drawings (blank axes for students, answers drawn in
+  red on the key) live in the handout. 1.1 to 1.3 predate this and draw
+  their own copies
+- **Preambles touch everything.** Changing `figures/preamble.tex` or
+  `handouts/preamble.tex` makes every handout that uses them stale, and the
+  deploy check will say so: rebuild with `./build.sh 1.4 2. 3.` (and so on)
+- **Khan Academy links:** `{{< khan 2.1 2.2 >}}` goes under the printable
+  link on each lesson page; `{{< khanlink 2.3 "3" >}}` is used in the course
+  map. Keys are Khan's own `<unit>.<lesson>`; the list is in
+  `_extensions/khan/khan.lua` (paths from the course page, with
+  `/teacher/library/en` removed)
+- **Z-table:** `handouts/Unit_2/Z_Table.tex` (generated from the normal CDF,
+  area to the left, 4 decimals) is linked from 2.5 and 2.6 with a second
+  `.guided-notes-link`. Answers in those lessons use the table's rounded
+  values, and a reverse lookup takes the closest area in the table
 - **Keys are unlisted.** `<name>_KEY.pdf` is served beside the student PDF
   but nothing links to it. The URL is predictable on purpose so it can be
   shared with colleagues. Practice answers are not printed on the page

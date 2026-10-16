@@ -1,0 +1,25 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}
+\begin{document}
+\begin{tikzpicture}[x=0.62cm,y=0.55cm]
+  \begin{scope}
+    \shadez{-3.6}{0.8}\bellcurve\draw[thick] (-3.8,0) -- (3.8,0);
+    \draw (0.8,0.15) -- (0.8,-0.15) node[below] {$z$};
+    \node[font=\bfseries] at (0,4.0) {Below $z$};
+    \node at (0,-1.7) {use the table};
+  \end{scope}
+  \begin{scope}[xshift=5.4cm]
+    \shadez{0.8}{3.6}\bellcurve\draw[thick] (-3.8,0) -- (3.8,0);
+    \draw (0.8,0.15) -- (0.8,-0.15) node[below] {$z$};
+    \node[font=\bfseries] at (0,4.0) {Above $z$};
+    \node at (0,-1.7) {$1 - \text{table}$};
+  \end{scope}
+  \begin{scope}[xshift=10.8cm]
+    \shadez{-0.9}{1.3}\bellcurve\draw[thick] (-3.8,0) -- (3.8,0);
+    \draw (-0.9,0.15) -- (-0.9,-0.15) node[below] {$z_1$};
+    \draw (1.3,0.15) -- (1.3,-0.15) node[below] {$z_2$};
+    \node[font=\bfseries] at (0,4.0) {Between};
+    \node at (0,-1.7) {$\text{table}(z_2) - \text{table}(z_1)$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}

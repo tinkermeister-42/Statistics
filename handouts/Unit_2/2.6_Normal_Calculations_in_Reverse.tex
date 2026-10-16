@@ -1,0 +1,109 @@
+\documentclass[11pt]{article}
+\input{../preamble}
+
+\begin{document}
+
+\lessontitle{Normal Calculations in Reverse}
+
+In 2.5, you knew the value and found the percent. Now you know the percent and find the value.
+
+\vspace{0.4em}
+\textbf{Example:} Heights of adult women: mean 64 inches, SD 3 inches.
+How tall is a woman at the \textbf{90th percentile}?
+
+\begin{center}\fig{Unit_2/2.6_reverse}\end{center}
+
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{3.0in}|>{\raggedright\arraybackslash}p{3.5in}|}\hline
+\textbf{Steps} & \textbf{Example: 90th percentile}\\ \hline
+1. Draw the curve. Shade the area to the \textbf{left}. &
+90\% is to the left. The area is .9000.\\ \hline
+2. Look \textbf{inside} the table for the area closest to it. &
+The closest area is .8997.\\ \hline
+3. Read the z-score from the row and the column. &
+Row 1.2, column .08: \; $z = 1.28$\\ \hline
+4. Find the value: \; value $=$ mean $+\; z \times \text{SD}$ &
+$64 + 1.28 \times 3 = 64 + 3.84 = 67.84$\\ \hline
+\end{tabular}
+
+\vspace{0.4em}
+A woman at the 90th percentile is about \textbf{67.8 inches} tall.
+
+\vspace{1em}
+\textbf{``Top'' and ``bottom'' questions}
+
+\vspace{0.3em}
+\begin{tabular}{|l|l|}\hline
+The \textbf{bottom 10\%} & area to the left is .10 \\ \hline
+The \textbf{top 10\%} & area to the left is $1 - .10 = .90$ \\ \hline
+\end{tabular}
+
+\vspace{0.6em}
+\textbf{Example:} Below what height are the shortest 10\% of women?
+
+\vspace{0.2em}
+Area .1000. \; Closest in the table: .1003 at $z = -1.28$. \; $64 + (-1.28)(3) = 64 - 3.84 = 60.16$. \; About \textbf{60.2 inches}.
+
+\vspace{0.8em}
+\textbf{Gotcha:} The table gives areas to the \textbf{left}. For ``top'' questions, subtract from 1 before you look in the table.
+
+\vspace{0.4em}
+Use your z-table sheet for the problems.
+
+\partner
+
+% ---------------- PROBLEMS ----------------
+\newpage
+\begin{enumerate}
+
+\item Use the z-table. Find the z-score at each percentile.
+\begin{enumerate}[itemsep=1.4em]
+  \item 80th percentile \ans{\quad closest area .7995: \; $z = 0.84$}
+  \item 30th percentile \ans{\quad closest area .3015: \; $z = -0.52$}
+  \item 97.5th percentile \ans{\quad area .9750: \; $z = 1.96$}
+  \item 25th percentile \ans{\quad closest area .2514: \; $z = -0.67$}
+\end{enumerate}
+\work{1em}
+
+\item A test has scores with a normal distribution. The mean is 500 and the SD is 100.
+\begin{enumerate}[itemsep=1em]
+  \item What score is at the 90th percentile?
+
+  \ans{$z = 1.28$. \; $500 + 1.28 \times 100 = 628$}
+  \work{3.5em}
+  \item What score is at the 30th percentile?
+
+  \ans{$z = -0.52$. \; $500 + (-0.52)(100) = 448$}
+\end{enumerate}
+\work{3.5em}
+
+\item A phone battery lasts a mean of 20 hours with an SD of 2 hours. The times have a normal distribution. The company replaces any battery in the bottom 10\%. Below what time does a battery get replaced?
+
+\ans{Area .10: \; $z = -1.28$. \; $20 + (-1.28)(2) = 20 - 2.56 = 17.44$. \; About 17.4 hours.}
+\work{5em}
+
+\item Apples have a mean weight of 150 grams and an SD of 10 grams. The weights have a normal distribution. The heaviest 15\% are sold as ``premium.'' How heavy must an apple be to be premium?
+
+\ans{Top 15\%, so the area to the left is $1 - .15 = .85$. \; Closest: .8508 at $z = 1.04$. \; $150 + 1.04 \times 10 = 160.4$ grams.}
+\work{5em}
+
+\newpage
+\item Use the test from problem 2 (mean 500, SD 100). One question goes forward and one goes in reverse.
+\begin{enumerate}[itemsep=1em]
+  \item What percentile is a score of 640?
+
+  \ans{$z = \frac{640 - 500}{100} = 1.4$. \; Table: .9192. \; About the 92nd percentile.}
+  \work{4em}
+  \item What score is at the 75th percentile?
+
+  \ans{Closest area .7486 at $z = 0.67$. \; $500 + 0.67 \times 100 = 567$}
+\end{enumerate}
+\work{4em}
+
+\item \textbf{Challenge.} The heights of a type of plant have a normal distribution with a mean of 30 cm. 97.5\% of the plants are shorter than 39.8 cm. Find the SD.
+
+\ans{97.5th percentile: $z = 1.96$. \; $30 + 1.96 \times \text{SD} = 39.8$, so $1.96 \times \text{SD} = 9.8$ and SD $= 9.8 \div 1.96 = 5$ cm.}
+
+\end{enumerate}
+
+\end{document}

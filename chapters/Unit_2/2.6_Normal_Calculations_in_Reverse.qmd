@@ -1,0 +1,112 @@
+# 2.6 - Normal Calculations in Reverse {.unnumbered}
+
+A company wants to replace the worst 10% of its batteries. A store wants to sell the heaviest 15% of its apples as "premium." Where should they draw the line?
+
+In 2.5, you knew the value and found the percent. In this lesson, you know the percent and find the value.
+
+:::{.objectives}
+- [ ] I find the z-score for a percentile with the z-table.
+- [ ] I find the value at a percentile in a normal distribution.
+- [ ] I find cutoffs for "top" and "bottom" percents.
+:::
+
+:::{.vocab}
+{{< glink "z-table" >}},
+{{< glink percentile >}},
+{{< glink z-score >}},
+{{< glink "normal distribution" >}}
+:::
+
+:::{.guided-notes-link}
+[Printable mini lesson](/handouts/Unit_2/2.6_Normal_Calculations_in_Reverse.pdf){target="_blank"} - notes and practice problems to print and write on.
+:::
+
+:::{.guided-notes-link}
+[Z-table](/handouts/Unit_2/Z_Table.pdf){target="_blank"} - the standard normal table, two pages.
+:::
+
+{{< khan 2.5 >}}
+
+{{< learn >}}
+
+### 2.6.1 - From a Percent to a Value
+
+**Example:** Heights of adult women: mean 64 inches, SD 3 inches. How tall is a woman at the **90th percentile**?
+
+![](/images/Unit_2/2.6_reverse.svg){width="500px" fig-align="center"}
+
+| Step | Example: 90th percentile |
+|---|---|
+| 1. Draw the curve. Shade the area to the **left**. | 90% is to the left. The area is .9000. |
+| 2. Look **inside** the table for the area closest to it. | The closest area is .8997. |
+| 3. Read the z-score from the row and the column. | Row 1.2, column .08: $z = 1.28$ |
+| 4. Find the value: value $=$ mean $+\; z \times \text{SD}$ | $64 + 1.28 \times 3 = 67.84$ |
+
+A woman at the 90th percentile is about **67.8 inches** tall.
+
+***
+
+### 2.6.2 - Top and Bottom
+
+| Question | Area to the left |
+|---|---|
+| The **bottom** 10% | .10 |
+| The **top** 10% | $1 - .10 = .90$ |
+
+**Example:** Below what height are the shortest 10% of women?
+
+The area is .1000. The closest area in the table is .1003, at $z = -1.28$.
+
+$$
+64 + (-1.28)(3) = 64 - 3.84 = 60.16
+$$
+
+The shortest 10% are below about **60.2 inches**.
+
+:::{.gotcha title="Top means subtract from 1 first"}
+The table gives areas to the **left**. For a "top" question, subtract from 1 **before** you look in the table.
+:::
+
+:::{.you-try title="Heights again (mean 64, SD 3). How tall is a woman at the 75th percentile?"}
+Area .7500. The closest area is .7486, at $z = 0.67$.
+
+$64 + 0.67 \times 3 = 64 + 2.01 = 66.01$. About **66 inches**.
+:::
+
+{{< practice >}}
+
+Work with a partner. Use the z-table. Compare answers when you finish each problem.
+
+**Finding Z-Scores**
+
+1. Find the z-score at each percentile.
+
+   a. 80th percentile
+
+   b. 30th percentile
+
+   c. 97.5th percentile
+
+   d. 25th percentile
+
+***
+
+**Finding Values**
+
+2. A test has scores with a normal distribution. The mean is 500 and the SD is 100.
+
+   a. What score is at the 90th percentile?
+
+   b. What score is at the 30th percentile?
+
+3. A phone battery lasts a mean of 20 hours with an SD of 2 hours. The times have a normal distribution. The company replaces any battery in the bottom 10%. Below what time does a battery get replaced?
+
+4. Apples have a mean weight of 150 grams and an SD of 10 grams. The weights have a normal distribution. The heaviest 15% are sold as "premium." How heavy must an apple be to be premium?
+
+5. Use the test from problem 2 (mean 500, SD 100). One question goes forward and one goes in reverse.
+
+   a. What percentile is a score of 640?
+
+   b. What score is at the 75th percentile?
+
+6. **Challenge.** The heights of a type of plant have a normal distribution with a mean of 30 cm. 97.5% of the plants are shorter than 39.8 cm. Find the SD.

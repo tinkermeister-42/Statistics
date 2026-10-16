@@ -315,3 +315,11 @@ How many standard deviations a value is above or below the mean. A positive z-sc
 $$z = \frac{\text{value} - \text{mean}}{\text{SD}}$$
 
 **See Also:** {{< glink "standard deviation" >}}, {{< glink percentile >}}
+
+***
+
+### z-table {#glossary-z-table}
+
+A table that gives the area under the standard normal curve to the left of a z-score. That area is the proportion of the data below the z-score.
+
+**See Also:** {{< glink z-score >}}, {{< glink "normal distribution" >}}

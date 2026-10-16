@@ -1,0 +1,112 @@
+\documentclass[11pt]{article}
+\input{../preamble}
+
+\begin{document}
+
+\lessontitle{Normal Calculations with a Z-Table}
+
+The empirical rule only works for whole SDs (1, 2, or 3). A \textbf{z-table} works for any z-score.
+
+\vspace{0.5em}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{6.7in}|}\hline
+The \textbf{z-table} gives the area to the \textbf{left} of $z$. That is the proportion of the data \textbf{below} $z$.\\ \hline
+\end{tabular}
+
+\vspace{0.6em}
+\textbf{Reading the table:} Find $z = 1.33$. Go down to the row \textbf{1.3}. Go across to the column \textbf{.03}. The area is \textbf{.9082}.
+
+\begin{center}\fig{Unit_2/2.5_three_areas}\end{center}
+
+\textbf{Steps}
+
+\vspace{0.2em}
+\begin{tabular}{@{}ll}
+1. & Draw the curve. Shade the part the question asks about.\\
+2. & Find each z-score: \; $z = \dfrac{\text{value} - \text{mean}}{\text{SD}}$. Round to 2 decimal places.\\[0.5em]
+3. & Look up each z-score in the table.\\
+4. & Below: use the table. \; Above: $1 -$ table. \; Between: subtract.\\
+\end{tabular}
+
+\vspace{0.8em}
+\textbf{Example:} Heights of adult women: mean 64 inches, SD 3 inches.
+
+\begin{center}\fig{Unit_2/2.5_heights_between}\end{center}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|l|l|}\hline
+Shorter than 68 inches &
+$z = \frac{68 - 64}{3} = 1.33$ \quad table: .9082 \quad \textbf{90.82\%}\\ \hline
+Taller than 68 inches &
+$1 - .9082 = .0918$ \quad \textbf{9.18\%}\\ \hline
+From 62 to 68 inches &
+$z = \frac{62 - 64}{3} = -0.67$ \quad table: .2514 \quad $.9082 - .2514 = .6568$ \quad \textbf{65.68\%}\\ \hline
+\end{tabular}
+
+\vspace{0.6em}
+Use your z-table sheet for the problems.
+
+\partner
+
+% ---------------- PROBLEMS ----------------
+\newpage
+\begin{enumerate}
+
+\item Use the z-table. Find the area \textbf{below} each z-score.
+\begin{enumerate}[itemsep=1.4em]
+  \item $z = 1.25$ \ans{\quad .8944}
+  \item $z = -0.84$ \ans{\quad .2005}
+  \item $z = 2.00$ \ans{\quad .9772}
+  \item $z = -1.96$ \ans{\quad .0250}
+\end{enumerate}
+\work{1em}
+
+\item Find the area \textbf{above} each z-score.
+\begin{enumerate}[itemsep=1.4em]
+  \item $z = 0.50$ \ans{\quad $1 - .6915 = .3085$}
+  \item $z = -1.20$ \ans{\quad $1 - .1151 = .8849$}
+\end{enumerate}
+\work{1em}
+
+\item Find the area \textbf{between} the two z-scores.
+\begin{enumerate}[itemsep=1.4em]
+  \item $z = -1$ and $z = 1$ \ans{\quad $.8413 - .1587 = .6826$}
+  \item $z = 0.5$ and $z = 1.5$ \ans{\quad $.9332 - .6915 = .2417$}
+\end{enumerate}
+\work{1em}
+
+\item The empirical rule says about 68\% of the data is within 1 SD of the mean. Your answer to 3(a) is .6826. Do these agree? Explain.
+
+\ans{Yes. .6826 is 68.26\%. The empirical rule rounds it to 68\%.}
+\work{3em}
+
+\newpage
+\item Commute times to a school have a normal distribution with a mean of 25 minutes and an SD of 5 minutes. What percent of students have a commute:
+\begin{enumerate}[itemsep=1em]
+  \item less than 30 minutes?
+
+  \ans{$z = \frac{30 - 25}{5} = 1$. \; Table: .8413. \; 84.13\%}
+  \work{4em}
+  \item more than 33 minutes?
+
+  \ans{$z = \frac{33 - 25}{5} = 1.6$. \; $1 - .9452 = .0548$. \; 5.48\%}
+  \work{4em}
+  \item from 20 to 28 minutes?
+
+  \ans{$z = -1$: .1587. \; $z = 0.6$: .7257. \; $.7257 - .1587 = .5670$. \; 56.70\%}
+\end{enumerate}
+\work{4em}
+
+\item Apples from an orchard have a mean weight of 150 grams and an SD of 10 grams. The weights have a normal distribution.
+\begin{enumerate}[itemsep=1em]
+  \item The store sells apples over 165 grams as ``extra large.'' What percent of apples are extra large?
+
+  \ans{$z = \frac{165 - 150}{10} = 1.5$. \; $1 - .9332 = .0668$. \; 6.68\%}
+  \work{4em}
+  \item Apples under 138 grams are used for juice. What percent go to juice?
+
+  \ans{$z = \frac{138 - 150}{10} = -1.2$. \; Table: .1151. \; 11.51\%}
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

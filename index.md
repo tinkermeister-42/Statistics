@@ -34,8 +34,8 @@ Do the mini lesson first. Then do the matching Khan Academy lessons.
 | [2.2](chapters/Unit_2/2.2_Choosing_Measures_and_Comparing_Distributions.qmd) | Choosing measures and comparing distributions | Unit 2, lessons {{< khanlink 2.1 "1" >}} and {{< khanlink 2.2 "2" >}} |
 | [2.3](chapters/Unit_2/2.3_Percentiles_and_Z-Scores.qmd) | Percentiles and z-scores | Unit 2, lesson {{< khanlink 2.3 "3" >}} |
 | [2.4](chapters/Unit_2/2.4_Normal_Distributions_and_the_Empirical_Rule.qmd) | Normal distributions and the empirical rule | Unit 2, lesson {{< khanlink 2.4 "4" >}} |
-| 2.5 | Normal calculations with a z-table | Unit 2, lesson {{< khanlink 2.5 "5" >}} |
-| 2.6 | Normal calculations in reverse | Unit 2, lesson {{< khanlink 2.5 "5" >}} |
+| [2.5](chapters/Unit_2/2.5_Normal_Calculations_with_a_Z-Table.qmd) | Normal calculations with a z-table | Unit 2, lesson {{< khanlink 2.5 "5" >}} |
+| [2.6](chapters/Unit_2/2.6_Normal_Calculations_in_Reverse.qmd) | Normal calculations in reverse | Unit 2, lesson {{< khanlink 2.5 "5" >}} |
 | **Unit 3: Two-Way Tables** | | |
 | 3.1 | Two-way tables and relative frequency | Unit 3, lesson {{< khanlink 3.1 "1" >}} |
 | 3.2 | Marginal and conditional distributions | Unit 3, lesson {{< khanlink 3.2 "2" >}} |
