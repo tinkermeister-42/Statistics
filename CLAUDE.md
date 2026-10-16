@@ -22,9 +22,17 @@ notes, a worked example or two, one You Try, and the practice set.
   glossary post-render writes `glossary.json` after the copy step)
 - **Deploy:** `./deploy.sh` renders, runs `scripts/check-site-assets.py`
   (fails on a missing or stale PDF or SVG), and force-pushes `_book` to
-  `gh-pages`. `.github/workflows/sync-to-work.yml` then mirrors `gh-pages` to
-  the work account (`WORK_OWNER`/`WORK_REPO`, branch `prod`) using the
-  `WORK_TOKEN` secret
+  `gh-pages` (personal site: `tinkermeister-42.github.io/Statistics`)
+- **Mirror to the work site is manual.** The teacher reviews the personal
+  site, then runs "Mirror site to Work Account" from the Actions tab
+  (`.github/workflows/sync-to-work.yml`, workflow_dispatch from `main`). It
+  force-pushes `gh-pages` to `andyrosscps/DHS-Statistics` branch `prod` with
+  the `WORK_TOKEN` secret. Its push trigger never fires because `gh-pages`
+  carries no workflow file, and should stay that way: a workflow file on
+  `gh-pages` would also need the Workflows permission on the token
+- A shallow clone fetches only `main`, so `deploy.sh` dies with "invalid
+  reference: origin/gh-pages". Fix with
+  `git config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' && git fetch --depth 1 origin gh-pages`
 - A container needs quarto >= 1.7 (tarball from the quarto-cli releases into
   `/opt/quarto`), pdflatex, `pdftocairo` (poppler), and a clean tree
 
