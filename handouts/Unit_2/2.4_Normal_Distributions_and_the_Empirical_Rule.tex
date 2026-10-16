@@ -1,0 +1,119 @@
+\documentclass[11pt]{article}
+\input{../preamble}
+
+\begin{document}
+
+\lessontitle{Normal Distributions and the Empirical Rule}
+
+Measure the heights of thousands of adult women. The histogram makes a smooth \textbf{bell shape}.
+Data like this has a \textbf{normal distribution}.
+
+\vspace{0.4em}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{6.7in}|}\hline
+\textbf{A normal distribution:}
+\begin{itemize}[itemsep=0pt,topsep=2pt]
+  \item is bell-shaped and symmetric
+  \item has the mean and the median in the center (they are equal)
+  \item is described by two numbers: the \textbf{mean} (center) and the \textbf{SD} (spread)
+\end{itemize}\vspace{-0.8em}\\ \hline
+\end{tabular}
+
+\vspace{0.8em}
+\textbf{The empirical rule (68-95-99.7 rule)}
+
+\begin{center}\fig{Unit_2/2.4_empirical}\end{center}
+
+\begin{tabular}{@{}ll}
+About \textbf{68\%} of the data is within \textbf{1 SD} of the mean.\\
+About \textbf{95\%} of the data is within \textbf{2 SDs} of the mean.\\
+About \textbf{99.7\%} of the data is within \textbf{3 SDs} of the mean.\\
+\end{tabular}
+
+\vspace{0.8em}
+\textbf{Example:} Heights of adult women have a mean of about 64 inches and an SD of about 3 inches.
+
+\begin{center}\fig{Unit_2/2.4_heights}\end{center}
+
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{2.9in}|>{\raggedright\arraybackslash}p{3.6in}|}\hline
+Percent from 61 to 67 inches & 68\% (within 1 SD)\\ \hline
+Percent from 58 to 70 inches & 95\% (within 2 SDs)\\ \hline
+Percent taller than 67 inches & $13.5\% + 2.35\% + 0.15\% = 16\%$\\ \hline
+Percentile of 67 inches & $100\% - 16\% = 84\%$, the 84th percentile\\ \hline
+\end{tabular}
+
+\vspace{0.6em}
+\textbf{Tip:} Draw the curve and label it every time. Then add up the parts you need.
+
+\partner
+
+% ---------------- PROBLEMS ----------------
+\newpage
+\begin{enumerate}
+
+\item The weights of apples from one orchard have a normal distribution. The mean is 150 grams and the SD is 10 grams.
+
+\vspace{0.3em}
+Label the number line with the weights.
+\begin{center}
+\begin{tikzpicture}[x=1.5cm,y=0.8cm]
+  \bellcurve
+  \draw[thick] (-3.8,0) -- (3.8,0);
+  \foreach \z in {-3,...,3} \draw (\z,0.12) -- (\z,-0.12);
+  \ifkey\begin{scope}[keyred]\foreach \z/\v in {-3/120,-2/130,-1/140,0/150,1/160,2/170,3/180} \node[below] at (\z,-0.12) {\v};\end{scope}\fi
+  \node at (0,-1.1) {Weight (grams)};
+\end{tikzpicture}
+\end{center}
+About what percent of the apples weigh:
+\begin{enumerate}[itemsep=1.6em]
+  \item from 140 to 160 grams? \ans{\quad 68\%}
+  \item from 130 to 170 grams? \ans{\quad 95\%}
+  \item more than 160 grams? \ans{\quad $13.5 + 2.35 + 0.15 = 16\%$}
+  \item less than 130 grams? \ans{\quad $2.35 + 0.15 = 2.5\%$}
+  \item from 150 to 170 grams? \ans{\quad $34 + 13.5 = 47.5\%$}
+  \item from 130 to 160 grams? \ans{\quad $13.5 + 34 + 34 = 81.5\%$}
+\end{enumerate}
+
+\work{1em}
+\item A phone battery lasts a mean of 20 hours with an SD of 2 hours. The times have a normal distribution.
+\begin{enumerate}[itemsep=1.6em]
+  \item Between what two times do the middle 95\% of batteries last? \ans{\quad $20 - 4 = 16$ to $20 + 4 = 24$ hours}
+  \item What percentile is 22 hours? \ans{\quad $50 + 34 = 84$, the 84th percentile}
+  \item About what percent of batteries last less than 16 hours? \ans{\quad 2.5\%}
+  \item A battery lasts 27 hours. Is that unusual? Explain.
+
+  \ans{Yes. 27 is 3.5 SDs above the mean. Almost no batteries (less than 0.15\%) last that long.}
+\end{enumerate}
+\work{1.5em}
+
+\newpage
+\item In a normal distribution, what percentile is a value with each z-score?
+\begin{enumerate}[itemsep=1.6em]
+  \item $z = 0$ \ans{\quad 50th percentile}
+  \item $z = 1$ \ans{\quad $50 + 34 = 84$th percentile}
+  \item $z = -2$ \ans{\quad $2.35 + 0.15 = 2.5$th percentile}
+  \item $z = 2$ \ans{\quad $100 - 2.5 = 97.5$th percentile}
+\end{enumerate}
+\work{1.5em}
+
+\item The three curves are normal distributions.
+\begin{center}\fig{Unit_2/2.4_compare_curves}\end{center}
+\begin{enumerate}[itemsep=1.6em]
+  \item Which two curves have the same mean? \ans{\quad A and B (both 8)}
+  \item Which curve has the largest SD? Explain. \ans{\quad B. It is the widest and most spread out.}
+  \item How are A and C the same? How are they different?
+
+  \ans{Same SD (same width and shape). Different means: A is centered at 8, C at 16.}
+\end{enumerate}
+\work{1.5em}
+
+\item Would each data set have a normal distribution? Explain.
+\begin{enumerate}[itemsep=2.2em]
+  \item The heights of all adult men in Missouri. \ans{\quad Yes. Heights are bell-shaped and symmetric.}
+  \item The yearly income of every household in the US. \ans{\quad No. Income is skewed right.}
+  \item Scores on a very easy test. \ans{\quad No. Most scores are high, so it is skewed left.}
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

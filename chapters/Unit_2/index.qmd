@@ -29,10 +29,10 @@ Measure how far the values usually are from the mean.
 [**Choosing Measures & Comparing Distributions**](2.2_Choosing_Measures_and_Comparing_Distributions.qmd)  
 Pick mean and SD or median and IQR. Compare two groups.
 
-**Percentiles & Z-Scores** (coming soon)
+[**Percentiles & Z-Scores**](2.3_Percentiles_and_Z-Scores.qmd)  
 Tell where one value stands in a data set.
 
-**Normal Distributions & the Empirical Rule** (coming soon)
+[**Normal Distributions & the Empirical Rule**](2.4_Normal_Distributions_and_the_Empirical_Rule.qmd)  
 Use the 68-95-99.7 rule on a bell-shaped curve.
 
 **Normal Calculations with a Z-Table** (coming soon)

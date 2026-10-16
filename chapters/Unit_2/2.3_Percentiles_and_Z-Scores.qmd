@@ -1,0 +1,177 @@
+# 2.3 - Percentiles and Z-Scores {.unnumbered}
+
+You scored 85 on a test. Is that good?
+
+If everyone else scored 95, it is not so good. If everyone else scored 60, it is great. A score only has meaning when you compare it to the rest of the data.
+
+In this lesson, you use {{< glink slug="percentile" text="percentiles" >}} and {{< glink slug="z-score" text="z-scores" >}} to tell where one value stands.
+
+:::{.objectives}
+- [ ] I find the percentile of a value.
+- [ ] I find and explain a z-score.
+- [ ] I compare values from different data sets with z-scores.
+- [ ] I find a value from its z-score.
+:::
+
+:::{.vocab}
+{{< glink percentile >}},
+{{< glink z-score >}},
+{{< glink "standard deviation" >}},
+{{< glink mean >}}
+:::
+
+:::{.guided-notes-link}
+[Printable mini lesson](/handouts/Unit_2/2.3_Percentiles_and_Z-Scores.pdf){target="_blank"} - notes and practice problems to print and write on.
+:::
+
+{{< khan 2.3 >}}
+
+{{< learn >}}
+
+### 2.3.1 - Percentiles
+
+:::{.remember title="Percentile"}
+The **percentile** of a value is the percent of the data that is **below** it.
+
+$$
+\text{percentile} = \frac{\text{number of values below}}{\text{total number of values}} \times 100
+$$
+:::
+
+**Example:** 20 students took a test. 15 students scored below 85.
+
+$$
+15 \div 20 = 0.75
+$$
+
+A score of 85 is at the **75th percentile**. It is higher than 75% of the class.
+
+:::{.gotcha title="A percentile is not a percent score"}
+Scoring at the 75th percentile does **not** mean you got 75% of the questions right. It means you scored higher than 75% of the people.
+:::
+
+***
+
+### 2.3.2 - Z-Scores
+
+:::{.remember title="Z-Score"}
+A **z-score** tells how many standard deviations a value is above or below the mean.
+
+$$
+z = \frac{\text{value} - \text{mean}}{\text{SD}}
+$$
+
+- $z > 0$: above the mean
+- $z < 0$: below the mean
+- $z = 0$: equal to the mean
+:::
+
+**Example:** A test has a mean of 70 and an SD of 10. What is the z-score of 85?
+
+$$
+z = \frac{85 - 70}{10} = \frac{15}{10} = 1.5
+$$
+
+85 is **1.5 standard deviations above** the mean.
+
+![](/images/Unit_2/2.3_z_line.svg){width="560px" fig-align="center"}
+
+:::{.you-try title="Same test (mean 70, SD 10). Find the z-score of 55."}
+$$
+z = \frac{55 - 70}{10} = \frac{-15}{10} = -1.5
+$$
+
+55 is 1.5 standard deviations **below** the mean.
+:::
+
+***
+
+### 2.3.3 - Comparing with Z-Scores
+
+Z-scores let you compare values from **different** data sets.
+
+| | Score | Mean | SD | $z$ |
+|---|:---:|:---:|:---:|:---:|
+| Ana, math test | 85 | 70 | 10 | $\frac{85 - 70}{10} = 1.5$ |
+| Ben, history test | 80 | 74 | 3 | $\frac{80 - 74}{3} = 2$ |
+
+Ana's score is higher. But Ben did better **compared to his class**, because his z-score is larger.
+
+***
+
+### 2.3.4 - Going Backward
+
+If you know the z-score, you can find the value.
+
+$$
+\text{value} = \text{mean} + z \times \text{SD}
+$$
+
+**Example:** On Ana's test, what score has $z = -2$?
+
+$$
+70 + (-2)(10) = 70 - 20 = 50
+$$
+
+{{< practice >}}
+
+Work with a partner. Compare answers when you finish each problem.
+
+**Percentiles**
+
+1. Here are the quiz scores of 20 students, in order.
+
+   52, 58, 61, 64, 66, 68, 70, 71, 73, 75, 76, 78, 80, 81, 83, 85, 88, 90, 94, 98
+
+   a. What percentile is a score of 83?
+
+   b. What percentile is a score of 61?
+
+   c. Which score is at the 50th percentile?
+
+2. This dot plot shows how many hours 25 students spent on homework last week.
+
+   ![](/images/Unit_2/2.3_dot_plot_hours.svg){width="460px"}
+
+   a. What percentile is 7 hours?
+
+   b. What percentile is 4 hours?
+
+***
+
+**Z-Scores**
+
+3. A class took a quiz. The mean is 20 points and the SD is 4 points. Find the z-score of each score. Then say what it means.
+
+   a. 26
+
+   b. 14
+
+   c. 20
+
+   d. 30
+
+4. Lin took two tests.
+
+   | Test | Lin's score | Class mean | Class SD |
+   |---|:---:|:---:|:---:|
+   | Spanish | 88 | 80 | 4 |
+   | Science | 90 | 84 | 6 |
+
+   a. Find Lin's z-score on each test.
+
+   b. Lin's science score is higher. On which test did Lin do better compared to the class? Explain.
+
+5. A test has a mean of 70 and an SD of 8.
+
+   a. What score has a z-score of 2?
+
+   b. What score has a z-score of $-0.5$?
+
+6. In a 100-meter race, a **lower** time is better. The team's mean time is 14.0 seconds, with an SD of 0.5 seconds.
+
+   a. Maria ran 13.0 seconds. Find her z-score.
+
+   b. Is a negative z-score good or bad for Maria? Explain.
+
+7. A student says, "A z-score of $-1$ means the value is 1 less than the mean." Is the student right? Explain.

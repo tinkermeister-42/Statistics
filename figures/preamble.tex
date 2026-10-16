@@ -61,3 +61,10 @@
 \newcommand{\outlier}[2]{\fill (#1,#2) circle (2.4pt);}
 % stacked dots above an axis at y=0 (y unit 1cm): \dotsat{value/count,...}
 \newcommand{\dotsat}[1]{\foreach \v/\c in {#1} {\ifnum\c>0 \foreach \k in {1,...,\c} {\fill (\v,\k*0.36) circle (0.13cm);}\fi}}
+% normal curve drawn in z units (use x=1.5cm or so): \bellcurve, \shadez{a}{b}, \zaxis{mean}{sd}
+\newcommand{\bellcurve}{\draw[thick,domain=-3.6:3.6,samples=120] plot (\x,{3*exp(-\x*\x/2)});}
+\newcommand{\shadez}[3][gray!30]{\fill[#1,domain=#2:#3,samples=60] (#2,0) -- plot (\x,{3*exp(-\x*\x/2)}) -- (#3,0) -- cycle;}
+\newcommand{\zaxis}[2]{%
+  \draw[thick] (-3.8,0) -- (3.8,0);
+  \foreach \z in {-3,...,3} {\draw (\z,0.12) -- (\z,-0.12);
+    \pgfmathsetmacro{\zv}{#1+\z*#2}\node[below] at (\z,-0.12) {\pgfmathprintnumber{\zv}};}}

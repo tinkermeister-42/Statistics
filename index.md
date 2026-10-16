@@ -32,8 +32,8 @@ Do the mini lesson first. Then do the matching Khan Academy lessons.
 | **Unit 2: Analyzing One Variable** | | |
 | [2.1](chapters/Unit_2/2.1_Standard_Deviation.qmd) | Standard deviation | Unit 2, lesson {{< khanlink 2.1 "1" >}} |
 | [2.2](chapters/Unit_2/2.2_Choosing_Measures_and_Comparing_Distributions.qmd) | Choosing measures and comparing distributions | Unit 2, lessons {{< khanlink 2.1 "1" >}} and {{< khanlink 2.2 "2" >}} |
-| 2.3 | Percentiles and z-scores | Unit 2, lesson {{< khanlink 2.3 "3" >}} |
-| 2.4 | Normal distributions and the empirical rule | Unit 2, lesson {{< khanlink 2.4 "4" >}} |
+| [2.3](chapters/Unit_2/2.3_Percentiles_and_Z-Scores.qmd) | Percentiles and z-scores | Unit 2, lesson {{< khanlink 2.3 "3" >}} |
+| [2.4](chapters/Unit_2/2.4_Normal_Distributions_and_the_Empirical_Rule.qmd) | Normal distributions and the empirical rule | Unit 2, lesson {{< khanlink 2.4 "4" >}} |
 | 2.5 | Normal calculations with a z-table | Unit 2, lesson {{< khanlink 2.5 "5" >}} |
 | 2.6 | Normal calculations in reverse | Unit 2, lesson {{< khanlink 2.5 "5" >}} |
 | **Unit 3: Two-Way Tables** | | |

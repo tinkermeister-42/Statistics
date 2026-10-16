@@ -1,0 +1,18 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}
+\begin{document}
+\begin{tikzpicture}[x=1.7cm,y=1cm]
+  \shadez[gray!45]{-1}{1}\shadez[gray!25]{-2}{-1}\shadez[gray!25]{1}{2}\shadez[gray!10]{-3}{-2}\shadez[gray!10]{2}{3}
+  \bellcurve
+  \foreach \z in {-3,...,3} \draw[gray] (\z,0) -- (\z,{3*exp(-\z*\z/2)});
+  \draw[thick] (-3.8,0) -- (3.8,0);
+  \foreach \z/\l in {-3/$-3$,-2/$-2$,-1/$-1$,0/mean,1/$+1$,2/$+2$,3/$+3$} {\draw (\z,0.12) -- (\z,-0.12); \node[below] at (\z,-0.12) {\l};}
+  \node[font=\footnotesize] at (0,-0.9) {standard deviations from the mean};
+  \foreach \x/\p in {-0.5/34\%,0.5/34\%,-1.5/13.5\%,1.5/13.5\%} \node[font=\small] at (\x,0.55) {\p};
+  \node[font=\scriptsize] at (-2.45,0.3) {2.35\%}; \node[font=\scriptsize] at (2.45,0.3) {2.35\%};
+  \node[font=\scriptsize] at (-3.4,0.55) {0.15\%}; \node[font=\scriptsize] at (3.4,0.55) {0.15\%};
+  \draw[<->] (-1,3.35) -- (1,3.35) node[midway,fill=white,font=\small] {68\%};
+  \draw[<->] (-2,3.85) -- (2,3.85) node[midway,fill=white,font=\small] {95\%};
+  \draw[<->] (-3,4.35) -- (3,4.35) node[midway,fill=white,font=\small] {99.7\%};
+\end{tikzpicture}
+\end{document}

@@ -61,5 +61,7 @@ book:
         - file: chapters/Unit_2/index.qmd
         - file: chapters/Unit_2/2.1_Standard_Deviation.qmd
         - file: chapters/Unit_2/2.2_Choosing_Measures_and_Comparing_Distributions.qmd
+        - file: chapters/Unit_2/2.3_Percentiles_and_Z-Scores.qmd
+        - file: chapters/Unit_2/2.4_Normal_Distributions_and_the_Empirical_Rule.qmd
 
     - file: glossary.qmd

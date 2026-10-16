@@ -1,0 +1,134 @@
+\documentclass[11pt]{article}
+\input{../preamble}
+
+\begin{document}
+
+\lessontitle{Percentiles and Z-Scores}
+
+You scored 85 on a test. Is that good? It depends on how everyone else did.
+Percentiles and z-scores tell where one value stands in a data set.
+
+\vspace{0.6em}
+\textbf{Percentile}
+
+\vspace{0.2em}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{6.7in}|}\hline
+The \textbf{percentile} of a value is the percent of the data that is \textbf{below} it.\par\vspace{0.3em}
+\hspace*{1.5in}percentile $= \dfrac{\text{number of values below}}{\text{total number of values}} \times 100$\\[1.2em] \hline
+\end{tabular}
+
+\vspace{0.4em}
+\textbf{Example:} 20 students took a test. 15 students scored below 85.
+
+\vspace{0.2em}
+$15 \div 20 = 0.75$, so a score of 85 is at the \textbf{75th percentile}. 85 is higher than 75\% of the class.
+
+\vspace{1em}
+\textbf{Z-score}
+
+\vspace{0.2em}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{6.7in}|}\hline
+A \textbf{z-score} tells how many standard deviations a value is above or below the mean.\par\vspace{0.3em}
+\hspace*{2.2in}$z = \dfrac{\text{value} - \text{mean}}{\text{SD}}$\par\vspace{0.4em}
+$z > 0$: above the mean. \qquad $z < 0$: below the mean. \qquad $z = 0$: equal to the mean.\\ \hline
+\end{tabular}
+
+\vspace{0.4em}
+\textbf{Example:} The test has a mean of 70 and an SD of 10. What is the z-score of 85?
+
+\vspace{0.2em}
+$z = \dfrac{85 - 70}{10} = \dfrac{15}{10} = 1.5$ \qquad 85 is \textbf{1.5 standard deviations above} the mean.
+
+\begin{center}\fig{Unit_2/2.3_z_line}\end{center}
+
+\textbf{Comparing with z-scores.} Z-scores let you compare values from different data sets.
+
+\vspace{0.3em}
+\begin{tabular}{|l|c|c|c|c|}\hline
+ & Score & Mean & SD & $z$ \\ \hline
+Ana, math test & 85 & 70 & 10 & $\frac{85 - 70}{10} = 1.5$ \\[0.3em] \hline
+Ben, history test & 80 & 74 & 3 & $\frac{80 - 74}{3} = 2$ \\[0.3em] \hline
+\end{tabular}
+
+\vspace{0.4em}
+Ana's score is higher, but Ben did better \textbf{compared to his class}. His z-score is larger.
+
+\vspace{0.8em}
+\textbf{Going backward:} \quad value $=$ mean $+\; z \times \text{SD}$ \qquad
+$z = -2$ on Ana's test: \; $70 + (-2)(10) = 50$
+
+\partner
+
+% ---------------- PROBLEMS ----------------
+\newpage
+\begin{enumerate}
+
+\item Here are the quiz scores of 20 students, in order.
+\begin{center}52, 58, 61, 64, 66, 68, 70, 71, 73, 75, 76, 78, 80, 81, 83, 85, 88, 90, 94, 98\end{center}
+\begin{enumerate}[itemsep=1.6em]
+  \item What percentile is a score of 83? \ans{\quad 14 scores are below 83. $14 \div 20 = 0.70$, the 70th percentile.}
+  \item What percentile is a score of 61? \ans{\quad 2 scores are below. $2 \div 20 = 0.10$, the 10th percentile.}
+  \item Which score is at the 50th percentile? \ans{\quad 50\% of 20 is 10 scores below it: 76.}
+\end{enumerate}
+\work{1.5em}
+
+\item This dot plot shows how many hours 25 students spent on homework last week.
+\begin{center}\fig{Unit_2/2.3_dot_plot_hours}\end{center}
+\begin{enumerate}[itemsep=1.6em]
+  \item What percentile is 7 hours? \ans{\quad $1 + 2 + 3 + 5 + 5 = 16$ below. $16 \div 25 = 0.64$, the 64th percentile.}
+  \item What percentile is 4 hours? \ans{\quad 3 below. $3 \div 25 = 0.12$, the 12th percentile.}
+\end{enumerate}
+\work{1.5em}
+
+\item A class took a quiz. The mean is 20 points and the SD is 4 points. Find the z-score of each score. Then say what it means.
+\begin{enumerate}[itemsep=1.6em]
+  \item 26 \ans{\quad $z = \frac{26 - 20}{4} = 1.5$. \; 1.5 SDs above the mean.}
+  \item 14 \ans{\quad $z = \frac{14 - 20}{4} = -1.5$. \; 1.5 SDs below the mean.}
+  \item 20 \ans{\quad $z = 0$. \; Equal to the mean.}
+  \item 30 \ans{\quad $z = \frac{30 - 20}{4} = 2.5$. \; 2.5 SDs above the mean.}
+\end{enumerate}
+
+\newpage
+\item Lin took two tests.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|l|c|c|c|}\hline
+Test & Lin's score & Class mean & Class SD \\ \hline
+Spanish & 88 & 80 & 4 \\ \hline
+Science & 90 & 84 & 6 \\ \hline
+\end{tabular}
+\end{center}
+\begin{enumerate}[itemsep=1.6em]
+  \item Find Lin's z-score on each test. \ans{\quad Spanish: $\frac{88 - 80}{4} = 2$. \; Science: $\frac{90 - 84}{6} = 1$.}
+  \work{2em}
+  \item Lin's science score is higher. On which test did Lin do better compared to the class? Explain.
+
+  \ans{Spanish. Lin was 2 SDs above the mean in Spanish, but only 1 SD above in science.}
+\end{enumerate}
+\work{2em}
+
+\item A test has a mean of 70 and an SD of 8.
+\begin{enumerate}[itemsep=1.6em]
+  \item What score has a z-score of 2? \ans{\quad $70 + 2 \times 8 = 86$}
+  \item What score has a z-score of $-0.5$? \ans{\quad $70 + (-0.5)(8) = 70 - 4 = 66$}
+\end{enumerate}
+\work{1.5em}
+
+\item In a 100-meter race, a \textbf{lower} time is better. The team's mean time is 14.0 seconds, with an SD of 0.5 seconds.
+\begin{enumerate}[itemsep=1.6em]
+  \item Maria ran 13.0 seconds. Find her z-score. \ans{\quad $z = \frac{13.0 - 14.0}{0.5} = -2$}
+  \item Is a negative z-score good or bad for Maria? Explain.
+
+  \ans{Good. She is 2 SDs below the mean time, so she was much faster than most of the team.}
+\end{enumerate}
+\work{1.5em}
+
+\item A student says, ``A z-score of $-1$ means the value is 1 less than the mean.'' Is the student right? Explain.
+
+\ans{No. It means the value is 1 \textbf{standard deviation} below the mean. With an SD of 10, that is 10 less than the mean.}
+
+\end{enumerate}
+
+\end{document}
