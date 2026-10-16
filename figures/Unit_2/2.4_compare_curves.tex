@@ -1,0 +1,14 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}
+\begin{document}
+\begin{tikzpicture}[x=0.55cm,y=1cm]
+  \draw[thick] (0,0) -- (24,0);
+  \foreach \t in {0,2,...,24} {\draw (\t,0.1) -- (\t,-0.1) node[below] {\t};}
+  \draw[thick,domain=0:24,samples=150] plot (\x,{3*exp(-(\x-8)*(\x-8)/(2*1.5*1.5))});
+  \draw[thick,dashed,domain=0:24,samples=150] plot (\x,{1.5*exp(-(\x-8)*(\x-8)/(2*3*3))});
+  \draw[thick,dotted,domain=0:24,samples=150] plot (\x,{3*exp(-(\x-16)*(\x-16)/(2*1.5*1.5))});
+  \node[font=\bfseries] at (8,3.3) {A};
+  \node[font=\bfseries] at (12.2,1.3) {B};
+  \node[font=\bfseries] at (16,3.3) {C};
+\end{tikzpicture}
+\end{document}

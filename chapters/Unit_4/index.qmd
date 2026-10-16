@@ -1,0 +1,34 @@
+# Introduction {.unnumbered}
+
+Welcome to Unit 4! Does studying more mean a higher test score? Does an older car sell for less?
+
+These questions are about **two** numbers for each person or thing. A scatterplot shows how the two numbers move together. A line can describe that movement and make predictions.
+
+***
+
+## What You'll Learn
+
+By the end of this unit, you will be able to:
+
+* Describe the direction, form, and strength of a scatterplot
+* Draw a line of best fit and write its equation
+* Make predictions, and know when not to trust them
+* Explain the slope and the y-intercept in context
+* Estimate the correlation coefficient $r$
+* Explain why correlation does not prove cause
+* Find and use residuals
+
+This unit matches **Unit 4: Scatterplots** in Khan Academy's Statistics essentials.
+
+***
+
+## Topics in This Unit
+
+[**Scatterplots & Lines of Best Fit**](4.1_Scatterplots_and_Lines_of_Best_Fit.qmd)\
+Describe a scatterplot. Fit a line and use it to predict.
+
+[**Slope, Intercept & Correlation**](4.2_Slope_Intercept_and_Correlation.qmd)\
+Explain what the line means. Measure how strong the pattern is.
+
+[**Residuals**](4.3_Residuals.qmd)\
+Measure how far each point is from the line.

@@ -1,0 +1,142 @@
+# 3.2 - Marginal and Conditional Distributions {.unnumbered}
+
+| | **Job** | **No job** | **Total** |
+|---|:---:|:---:|:---:|
+| **Sport** | 8 | 22 | 30 |
+| **No sport** | 12 | 18 | 30 |
+| **Total** | 20 | 40 | 60 |
+
+Do students who play a sport have jobs as often as students who do not? 8 sport players have a job and 12 others do. But that does not answer the question yet. You need percents **inside each group**.
+
+In this lesson, you find {{< glink "marginal distribution" text="marginal" >}} and {{< glink "conditional distribution" text="conditional" >}} distributions. Then you use them to decide if two variables are {{< glink slug="association" text="associated" >}}.
+
+:::{.objectives}
+- [ ] I find a marginal distribution.
+- [ ] I find a conditional distribution.
+- [ ] I choose the right total to divide by.
+- [ ] I decide if two categorical variables are associated.
+:::
+
+:::{.vocab}
+{{< glink "marginal distribution" >}},
+{{< glink "conditional distribution" >}},
+{{< glink association >}},
+{{< glink "segmented bar chart" >}}
+:::
+
+:::{.guided-notes-link}
+[Printable mini lesson](/handouts/Unit_3/3.2_Marginal_and_Conditional_Distributions.pdf){target="_blank"} - notes and practice problems to print and write on.
+:::
+
+{{< khan 3.2 >}}
+
+{{< learn >}}
+
+### 3.2.1 - Marginal and Conditional
+
+| | What it is | Example |
+|---|---|---|
+| **Marginal distribution** | Percents from the **totals** (the margins). Divide by the **grand total**. | Job: $\frac{20}{60} \approx 33\%$. No job: $\frac{40}{60} \approx 67\%$. |
+| **Conditional distribution** | Percents inside **one group**. Divide by that group's **total**. | Students who play a sport. Job: $\frac{8}{30} \approx 27\%$. No job: $\frac{22}{30} \approx 73\%$. |
+
+:::{.gotcha title="Check the denominator"}
+"Of the students who **play a sport**, what percent have a job?"
+
+Divide by the sport total (30). Do not divide by 60. Do not divide by the job total (20).
+:::
+
+:::{.you-try title="Of the students who do NOT play a sport, what percent have a job?"}
+The group is "No sport." Its total is 30.
+
+$\frac{12}{30} = 40\%$
+:::
+
+***
+
+### 3.2.2 - Association
+
+Compare the conditional distributions of the two groups. A {{< glink "segmented bar chart" >}} shows them side by side.
+
+![](/images/Unit_3/3.2_bars_sport_job.svg){width="380px" fig-align="center"}
+
+- Sport: about 27% have a job.
+- No sport: 40% have a job.
+
+The percents are **different**. So playing a sport and having a job are **associated**. In this group, students who play a sport are less likely to have a job.
+
+:::{.remember title="Association"}
+- Conditional percents are **different** in the groups: the variables are **associated**.
+- Conditional percents are about the **same**: there is **no association**.
+:::
+
+:::{.think title="Does this mean sports cause students to not have jobs?"}
+No. An association only says the two things happen together. Maybe practice takes time away from a job. Maybe something else explains both. You will learn more about cause in Unit 5.
+:::
+
+{{< practice >}}
+
+Work with a partner. Compare answers when you finish each problem.
+
+Problems 1 to 4 use this table of how 80 students get to school.
+
+| | **Bus** | **Car** | **Walk** | **Total** |
+|---|:---:|:---:|:---:|:---:|
+| **9th grade** | 18 | 12 | 10 | 40 |
+| **10th grade** | 14 | 20 | 6 | 40 |
+| **Total** | 32 | 32 | 16 | 80 |
+
+**Marginal and Conditional**
+
+1. Find the marginal distribution of how students get to school.
+
+2. Conditional distributions:
+
+   a. Find the conditional distribution of how 9th graders get to school.
+
+   b. Find the conditional distribution of how 10th graders get to school.
+
+   c. Is grade associated with how students get to school? Explain.
+
+3. Denominators:
+
+   a. What percent of 10th graders come by car?
+
+   b. What percent of car riders are 10th graders?
+
+   c. Why are the answers to (a) and (b) different?
+
+4. Is each statement a **marginal** or a **conditional** percent?
+
+   a. 40% of all students ride the bus.
+
+   b. Of the students who walk, 62.5% are 9th graders.
+
+   c. Half of the students are 10th graders.
+
+   d. 25% of 9th graders walk.
+
+***
+
+**Association**
+
+5. 100 students said if they wear glasses and if they play an instrument.
+
+   | | **Glasses** | **No glasses** | **Total** |
+   |---|:---:|:---:|:---:|
+   | **Instrument** | 12 | 28 | 40 |
+   | **No instrument** | 18 | 42 | 60 |
+   | **Total** | 30 | 70 | 100 |
+
+   a. What percent of students who play an instrument wear glasses?
+
+   b. What percent of students who do not play an instrument wear glasses?
+
+   c. Is playing an instrument associated with wearing glasses? Explain.
+
+6. This segmented bar chart shows the conditional distributions from problem 2.
+
+   ![](/images/Unit_3/3.2_bars_transport.svg){width="380px"}
+
+   a. Which grade has the larger percent of students who walk?
+
+   b. How does the chart show that grade and transportation are associated?

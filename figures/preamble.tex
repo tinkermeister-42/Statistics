@@ -3,8 +3,11 @@
 \usepackage[T1]{fontenc}
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
+\usepackage{amsmath}
 \usepackage{tikz}
 \usetikzlibrary{decorations.pathreplacing}
+% axis numbers in the text font, not math italic
+\pgfkeys{/pgf/number format/.cd,assume math mode=true,1000 sep={}}
 
 % dot plot: \dotplot{min}{max}{value/count,...}{axis label}
 \newcommand{\dotplot}[4]{%
@@ -38,3 +41,87 @@
   \draw[thick] (#5,0.75) -- (#5,1.25);
   \draw[thick,fill=gray!20] (#2,0.55) rectangle (#4,1.45);
   \draw[very thick] (#3,0.55) -- (#3,1.45);}
+
+% ---- added for 1.4 onward ----
+% axis on y=0: \axis{min}{max}{label step}{tick step}{axis label}
+\newcommand{\axis}[5]{%
+  \draw[thick] (#1,0) -- (#2,0);
+  \pgfmathsetmacro{\axT}{#1+#4}\foreach \t in {#1,\axT,...,#2} \draw (\t,0.1) -- (\t,-0.1);
+  \pgfmathsetmacro{\axL}{#1+#3}\foreach \t in {#1,\axL,...,#2}
+    \draw (\t,0.18) -- (\t,-0.18) node[below] {\pgfmathprintnumber{\t}};
+  \node at ({(#1+#2)/2},-0.95) {#5};}
+% box plot centred at height y: \bplotat{y}{min}{Q1}{med}{Q3}{max}
+\newcommand{\bplotat}[6]{%
+  \draw[thick] (#2,#1) -- (#3,#1);
+  \draw[thick] (#5,#1) -- (#6,#1);
+  \draw[thick] (#2,#1-0.22) -- (#2,#1+0.22);
+  \draw[thick] (#6,#1-0.22) -- (#6,#1+0.22);
+  \draw[thick,fill=gray!20] (#3,#1-0.42) rectangle (#5,#1+0.42);
+  \draw[very thick] (#4,#1-0.42) -- (#4,#1+0.42);}
+% an outlier dot: \outlier{x}{y}
+\newcommand{\outlier}[2]{\fill (#1,#2) circle (2.4pt);}
+% stacked dots above an axis at y=0 (y unit 1cm): \dotsat{value/count,...}
+\newcommand{\dotsat}[1]{\foreach \v/\c in {#1} {\ifnum\c>0 \foreach \k in {1,...,\c} {\fill (\v,\k*0.36) circle (0.13cm);}\fi}}
+% normal curve drawn in z units (use x=1.5cm or so): \bellcurve, \shadez{a}{b}, \zaxis{mean}{sd}
+\newcommand{\bellcurve}{\draw[thick,domain=-3.6:3.6,samples=120] plot (\x,{3*exp(-\x*\x/2)});}
+\newcommand{\shadez}[3][gray!30]{\fill[#1,domain=#2:#3,samples=60] (#2,0) -- plot (\x,{3*exp(-\x*\x/2)}) -- (#3,0) -- cycle;}
+\newcommand{\zaxis}[2]{%
+  \draw[thick] (-3.8,0) -- (3.8,0);
+  \foreach \z in {-3,...,3} {\draw (\z,0.12) -- (\z,-0.12);
+    \pgfmathsetmacro{\zv}{#1+\z*#2}\node[below] at (\z,-0.12) {\pgfmathprintnumber{\zv}};}}
+% Venn diagram of two sets in a box: \venn{A}{B}{only A}{both}{only B}{neither}
+% (an empty count argument leaves that region blank)
+\newcommand{\venn}[6]{%
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \draw[thick] (0,0) rectangle (8,4.6);
+  \draw[thick,fill=gray!15,fill opacity=0.6] (3,2.2) circle (1.7);
+  \draw[thick,fill=gray!15,fill opacity=0.6] (5,2.2) circle (1.7);
+  \node[font=\bfseries] at (2.3,4.15) {#1};
+  \node[font=\bfseries] at (5.7,4.15) {#2};
+  \node[font=\large] at (2.2,2.2) {#3};
+  \node[font=\large] at (4,2.2) {#4};
+  \node[font=\large] at (5.8,2.2) {#5};
+  \node[font=\large] at (7.4,0.4) {#6};
+\end{tikzpicture}}
+% light grid with labelled axes:
+% \grid{xmin}{xmax}{xstep}{ymin}{ymax}{ystep}{x label}{y label}
+% (x and y are in data units; set the tikzpicture x= and y= scales)
+\newcommand{\grid}[8]{%
+  \pgfmathsetmacro{\gxs}{#1+#3}\pgfmathsetmacro{\gys}{#4+#6}
+  \foreach \t in {#1,\gxs,...,#2} \draw[gray!25] (\t,#4) -- (\t,#5);
+  \foreach \t in {#4,\gys,...,#5} \draw[gray!25] (#1,\t) -- (#2,\t);
+  \draw[thick] (#1,#4) -- (#2,#4); \draw[thick] (#1,#4) -- (#1,#5);
+  \foreach \t in {#1,\gxs,...,#2} \node[below,font=\small] at (\t,#4) {\pgfmathprintnumber{\t}};
+  \foreach \t in {#4,\gys,...,#5} \node[left,font=\small] at (#1,\t) {\pgfmathprintnumber{\t}};
+  \node[below=16pt] at ({(#1+#2)/2},#4) {#7};
+  \node[rotate=90,above=20pt] at (#1,{(#4+#5)/2}) {#8};}
+% scatter points: \pts{x/y,x/y,...}
+\newcommand{\pts}[1]{\foreach \px/\py in {#1} \fill (\px,\py) circle (2.2pt);}
+% two-stage probability tree (14 arguments):
+% \tree{A}{P(A)}{not A}{P(not A)}{B}{not B}{P(B|A)}{P(not B|A)}{P(B|not A)}
+%      {P(not B|not A)}{end 1}{end 2}{end 3}{end 4}
+\newcommand{\tree}[9]{\def\tA{#1}\def\tpA{#2}\def\tnA{#3}\def\tpnA{#4}\def\tB{#5}\def\tnB{#6}\def\tpBA{#7}\def\tpnBA{#8}\def\tpBnA{#9}\treeC}
+\newcommand{\treeC}[5]{%
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+  \draw (0,0) -- (2.6,1.6); \draw (0,0) -- (2.6,-1.6);
+  \node[right] at (2.6,1.6) {\tA}; \node[right] at (2.6,-1.6) {\tnA};
+  \node[above left] at (1.3,0.8) {\tpA}; \node[below left] at (1.3,-0.8) {\tpnA};
+  \draw (4.0,1.6) -- (6.4,2.4); \draw (4.0,1.6) -- (6.4,0.8);
+  \draw (4.0,-1.6) -- (6.4,-0.8); \draw (4.0,-1.6) -- (6.4,-2.4);
+  \node[right] at (6.4,2.4) {\tB}; \node[right] at (6.4,0.8) {\tnB};
+  \node[right] at (6.4,-0.8) {\tB}; \node[right] at (6.4,-2.4) {\tnB};
+  \node[above] at (5.0,2.05) {\tpBA}; \node[below] at (5.0,1.15) {\tpnBA};
+  \node[above] at (5.0,-1.15) {\tpBnA}; \node[below] at (5.0,-2.05) {#1};
+  \node[right] at (8.0,2.4) {#2}; \node[right] at (8.0,0.8) {#3};
+  \node[right] at (8.0,-0.8) {#4}; \node[right] at (8.0,-2.4) {#5};
+\end{tikzpicture}}
+% probability bar graph: \probbars{x/p,...}{ymax}{ystep}{x label}
+% (use x=1cm and y scaled so ymax fits, e.g. y=8cm for ymax 0.5)
+\newcommand{\probbars}[4]{%
+  \pgfmathsetmacro{\pbs}{#3*2}
+  \foreach \t in {0,#3,...,#2} {\draw[gray!25] (-0.6,\t) -- (\pbmax,\t); \node[left,font=\small] at (-0.6,\t) {\pgfmathprintnumber{\t}};}
+  \draw[thick] (-0.6,0) -- (\pbmax,0); \draw[thick] (-0.6,0) -- (-0.6,#2);
+  \foreach \x/\p in {#1} {\draw[fill=gray!35] (\x-0.35,0) rectangle (\x+0.35,\p); \node[below] at (\x,0) {\x};}
+  \node[below=16pt] at ({(\pbmax-0.6)/2},0) {#4};
+  \node[rotate=90,above=22pt] at (-0.6,{#2/2}) {$P(x)$};}
+\def\pbmax{3.6}

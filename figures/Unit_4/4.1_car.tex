@@ -1,0 +1,12 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}
+\begin{document}
+\begin{tikzpicture}[x=0.8cm,y=0.16cm]
+  \grid{0}{10}{1}{0}{35}{5}{Age of the car (years)}{Value (thousands of dollars)}
+  \pts{1/28,2/25,2/26,3/22,4/20,5/18,6/14,7/13,8/10,9/7}
+  \draw[thick,blue!70!black] (0,30) -- (10,5);
+  \foreach \p in {(0,30),(8,10)} \draw[thick,blue!70!black,fill=white] \p circle (3.2pt);
+  \node[font=\small,anchor=south west] at (0.1,30.3) {(0, 30)};
+  \node[font=\small,anchor=south west] at (8.1,10.3) {(8, 10)};
+\end{tikzpicture}
+\end{document}

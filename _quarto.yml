@@ -14,6 +14,7 @@ resources:
 extensions:
   - glossary
   - headings
+  - khan
 
 format:
   html:
@@ -53,5 +54,55 @@ book:
         - file: chapters/Unit_1/1.1_Frequency_Tables_Dot_Plots_and_Histograms.qmd
         - file: chapters/Unit_1/1.2_Mean_Median_and_Shape.qmd
         - file: chapters/Unit_1/1.3_Quartiles_IQR_and_Box_Plots.qmd
+        - file: chapters/Unit_1/1.4_Reading_Box_Plots_and_Outliers.qmd
+
+    - part: "Unit 2: Analyzing One Variable"
+      chapters:
+        - file: chapters/Unit_2/index.qmd
+        - file: chapters/Unit_2/2.1_Standard_Deviation.qmd
+        - file: chapters/Unit_2/2.2_Choosing_Measures_and_Comparing_Distributions.qmd
+        - file: chapters/Unit_2/2.3_Percentiles_and_Z-Scores.qmd
+        - file: chapters/Unit_2/2.4_Normal_Distributions_and_the_Empirical_Rule.qmd
+        - file: chapters/Unit_2/2.5_Normal_Calculations_with_a_Z-Table.qmd
+        - file: chapters/Unit_2/2.6_Normal_Calculations_in_Reverse.qmd
+
+    - part: "Unit 3: Two-Way Tables"
+      chapters:
+        - file: chapters/Unit_3/index.qmd
+        - file: chapters/Unit_3/3.1_Two-Way_Tables_and_Relative_Frequency.qmd
+        - file: chapters/Unit_3/3.2_Marginal_and_Conditional_Distributions.qmd
+
+    - part: "Unit 4: Scatterplots"
+      chapters:
+        - file: chapters/Unit_4/index.qmd
+        - file: chapters/Unit_4/4.1_Scatterplots_and_Lines_of_Best_Fit.qmd
+        - file: chapters/Unit_4/4.2_Slope_Intercept_and_Correlation.qmd
+        - file: chapters/Unit_4/4.3_Residuals.qmd
+
+    - part: "Unit 5: Study Design"
+      chapters:
+        - file: chapters/Unit_5/index.qmd
+        - file: chapters/Unit_5/5.1_Samples_Studies_and_Bias.qmd
+        - file: chapters/Unit_5/5.2_Sampling_Methods.qmd
+        - file: chapters/Unit_5/5.3_Experiments.qmd
+        - file: chapters/Unit_5/5.4_What_a_Study_Can_Prove.qmd
+
+    - part: "Unit 6: Probability"
+      chapters:
+        - file: chapters/Unit_6/index.qmd
+        - file: chapters/Unit_6/6.1_Venn_Diagrams_and_the_Addition_Rule.qmd
+        - file: chapters/Unit_6/6.2_The_Multiplication_Rule.qmd
+        - file: chapters/Unit_6/6.3_Conditional_Probability.qmd
+        - file: chapters/Unit_6/6.4_Simulations.qmd
+        - file: chapters/Unit_6/6.5_Permutations.qmd
+        - file: chapters/Unit_6/6.6_Combinations.qmd
+        - file: chapters/Unit_6/6.7_Probability_with_Counting.qmd
+
+    - part: "Unit 7: Probability Distributions"
+      chapters:
+        - file: chapters/Unit_7/index.qmd
+        - file: chapters/Unit_7/7.1_Probability_Distributions.qmd
+        - file: chapters/Unit_7/7.2_Expected_Value.qmd
+        - file: chapters/Unit_7/7.3_Expected_Payoff.qmd
 
     - file: glossary.qmd

@@ -30,6 +30,8 @@ In this lesson, you learn three ways to show {{< glink data >}}: frequency table
 [Printable mini lesson](/handouts/Unit_1/1.1_Frequency_Tables_Dot_Plots_and_Histograms.pdf){target="_blank"} - notes and practice problems to print and write on.
 :::
 
+{{< khan 1.1 1.2 >}}
+
 {{< learn >}}
 
 ### 1.1.1 - Frequency Tables

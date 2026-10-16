@@ -1,0 +1,140 @@
+\documentclass[11pt]{article}
+\input{../preamble}
+\newcommand{\blank}[1]{\ans{#1}}
+
+\begin{document}
+
+\lessontitle{Two-Way Tables and Relative Frequency}
+
+60 students answered two questions: \textit{Do you play a sport?} \textit{Do you have a job?}
+A \textbf{two-way table} shows the answers to both questions at once.
+
+\vspace{0.6em}
+\begin{minipage}[c]{0.5\linewidth}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|c|c|c|}\hline
+ & \textbf{Job} & \textbf{No job} & \textbf{Total} \\ \hline
+\textbf{Sport} & 8 & 22 & 30 \\ \hline
+\textbf{No sport} & 12 & 18 & 30 \\ \hline
+\textbf{Total} & 20 & 40 & 60 \\ \hline
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.45\linewidth}\centering
+\scalebox{0.75}{\fig{Unit_3/3.1_venn_sport_job}}
+\end{minipage}
+
+\vspace{0.6em}
+\begin{tabular}{@{}ll}
+Each \textbf{cell} counts students who match \textbf{both} labels. & 8 students play a sport \textbf{and} have a job.\\
+The \textbf{totals} are in the margins. & 30 students play a sport. 20 have a job.\\
+The \textbf{grand total} is the corner. & 60 students in all.\\
+\end{tabular}
+
+\vspace{0.4em}
+\textbf{Check:} Each row adds to its total. Each column adds to its total. \quad $8 + 22 = 30$, \; $8 + 12 = 20$.
+
+\vspace{0.4em}
+\textbf{Venn diagram:} the overlap is ``both'' (8). Outside the circles is ``neither'' (18).
+
+\vspace{1em}
+\textbf{Relative frequency table.} Divide every count by the \textbf{grand total}. This gives the percent of \textbf{all} students.
+
+\vspace{0.4em}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|c|c|c|}\hline
+ & \textbf{Job} & \textbf{No job} & \textbf{Total} \\ \hline
+\textbf{Sport} & $\frac{8}{60} \approx 13\%$ & $\frac{22}{60} \approx 37\%$ & $\frac{30}{60} = 50\%$ \\[0.3em] \hline
+\textbf{No sport} & $\frac{12}{60} = 20\%$ & $\frac{18}{60} = 30\%$ & $\frac{30}{60} = 50\%$ \\[0.3em] \hline
+\textbf{Total} & $\frac{20}{60} \approx 33\%$ & $\frac{40}{60} \approx 67\%$ & 100\% \\[0.3em] \hline
+\end{tabular}
+
+\vspace{0.4em}
+About 13\% of \textbf{all} the students play a sport and have a job. The whole table adds to 100\%.
+
+\partner
+
+% ---------------- PROBLEMS ----------------
+\newpage
+\begin{enumerate}
+
+\item 80 students said how they get to school.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|c|c|c|c|}\hline
+ & \textbf{Bus} & \textbf{Car} & \textbf{Walk} & \textbf{Total} \\ \hline
+\textbf{9th grade} & 18 & 12 & 10 & 40 \\ \hline
+\textbf{10th grade} & 14 & 20 & 6 & 40 \\ \hline
+\textbf{Total} & 32 & 32 & 16 & 80 \\ \hline
+\end{tabular}
+\end{center}
+\begin{enumerate}[itemsep=1.4em]
+  \item How many 10th graders walk? \ans{\quad 6}
+  \item How many students ride the bus? \ans{\quad 32}
+  \item How many students are 9th graders who come by car? \ans{\quad 12}
+  \item How many students do \textbf{not} walk? \ans{\quad $80 - 16 = 64$}
+\end{enumerate}
+\work{1.5em}
+
+\item Fill in the missing numbers. Students said if they ate breakfast today.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{|l|p{0.8in}|p{0.8in}|p{0.8in}|}\hline
+ & \textbf{Yes} & \textbf{No} & \textbf{Total} \\ \hline
+\textbf{11th grade} & 15 & \blank{20} & 35 \\ \hline
+\textbf{12th grade} & \blank{12} & 10 & \blank{22} \\ \hline
+\textbf{Total} & 27 & \blank{30} & 57 \\ \hline
+\end{tabular}
+\end{center}
+\work{2em}
+
+\item 50 people were asked about pets. 30 like cats. 26 like dogs. 12 like both.
+\begin{enumerate}[itemsep=1em]
+  \item Fill in the two-way table.
+
+  \begin{center}
+  \renewcommand{\arraystretch}{1.6}
+  \begin{tabular}{|l|p{0.9in}|p{0.9in}|p{0.9in}|}\hline
+   & \textbf{Likes dogs} & \textbf{No dogs} & \textbf{Total} \\ \hline
+  \textbf{Likes cats} & \blank{12} & \blank{18} & \blank{30} \\ \hline
+  \textbf{No cats} & \blank{14} & \blank{6} & \blank{20} \\ \hline
+  \textbf{Total} & \blank{26} & \blank{24} & \blank{50} \\ \hline
+  \end{tabular}
+  \end{center}
+  \item How many people like neither cats nor dogs? \ans{\quad 6}
+\end{enumerate}
+
+\newpage
+\item This Venn diagram shows which sports 50 students play.
+\begin{center}\scalebox{0.75}{\fig{Unit_3/3.1_venn_sports}}\end{center}
+Make a two-way table from the Venn diagram.
+\begin{center}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{|l|p{1in}|p{1in}|p{1in}|}\hline
+ & \textbf{Soccer} & \textbf{No soccer} & \textbf{Total} \\ \hline
+\textbf{Basketball} & \blank{5} & \blank{15} & \blank{20} \\ \hline
+\textbf{No basketball} & \blank{10} & \blank{20} & \blank{30} \\ \hline
+\textbf{Total} & \blank{15} & \blank{35} & \blank{50} \\ \hline
+\end{tabular}
+\end{center}
+\work{1.5em}
+
+\item Make a relative frequency table for problem 1. Divide each count by 80. Write percents.
+\begin{center}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{|l|p{0.8in}|p{0.8in}|p{0.8in}|p{0.8in}|}\hline
+ & \textbf{Bus} & \textbf{Car} & \textbf{Walk} & \textbf{Total} \\ \hline
+\textbf{9th grade} & \blank{22.5\%} & \blank{15\%} & \blank{12.5\%} & \blank{50\%} \\ \hline
+\textbf{10th grade} & \blank{17.5\%} & \blank{25\%} & \blank{7.5\%} & \blank{50\%} \\ \hline
+\textbf{Total} & \blank{40\%} & \blank{40\%} & \blank{20\%} & \blank{100\%} \\ \hline
+\end{tabular}
+\end{center}
+\begin{enumerate}[itemsep=1.4em]
+  \item What percent of all the students are 10th graders who come by car? \ans{\quad 25\%}
+  \item What percent of all the students walk? \ans{\quad 20\%}
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,121 @@
+# 2.5 - Normal Calculations with a Z-Table {.unnumbered}
+
+Adult women have a mean height of 64 inches and an SD of 3 inches. What percent are shorter than 68 inches?
+
+68 is not 1, 2, or 3 SDs from the mean. The empirical rule cannot answer this. A {{< glink "z-table" >}} can.
+
+:::{.objectives}
+- [ ] I read a z-table.
+- [ ] I find the percent of data below, above, or between values in a normal distribution.
+:::
+
+:::{.vocab}
+{{< glink "z-table" >}},
+{{< glink z-score >}},
+{{< glink "normal distribution" >}}
+:::
+
+:::{.guided-notes-link}
+[Printable mini lesson](/handouts/Unit_2/2.5_Normal_Calculations_with_a_Z-Table.pdf){target="_blank"} - notes and practice problems to print and write on.
+:::
+
+:::{.guided-notes-link}
+[Z-table](/handouts/Unit_2/Z_Table.pdf){target="_blank"} - the standard normal table, two pages. You need it for this lesson and the next.
+:::
+
+{{< khan 2.5 >}}
+
+{{< learn >}}
+
+### 2.5.1 - Reading the Z-Table
+
+:::{.remember title="The Z-Table"}
+The z-table gives the area to the **left** of $z$. That is the proportion of the data **below** $z$.
+:::
+
+**Example:** Find the area below $z = 1.33$.
+
+- Go down to the row **1.3**.
+- Go across to the column **.03**.
+- The area is **.9082**. About 90.82% of the data is below $z = 1.33$.
+
+***
+
+### 2.5.2 - Below, Above, and Between
+
+![](/images/Unit_2/2.5_three_areas.svg){width="640px" fig-align="center"}
+
+:::{.remember title="Steps"}
+1. Draw the curve. Shade the part the question asks about.
+2. Find each z-score: $z = \dfrac{x - \mu}{\sigma}$. Round to 2 decimal places.
+3. Look up each z-score in the table.
+4. **Below:** use the table. **Above:** $1 -$ table. **Between:** subtract the two table values.
+:::
+
+**Example:** Heights of adult women: mean 64 inches, SD 3 inches.
+
+![](/images/Unit_2/2.5_heights_between.svg){width="500px" fig-align="center"}
+
+| Question | Work | Answer |
+|---|---|---|
+| Shorter than 68 inches | $z = \frac{68 - 64}{3} = 1.33$, table: .9082 | 90.82% |
+| Taller than 68 inches | $1 - .9082 = .0918$ | 9.18% |
+| From 62 to 68 inches | $z = \frac{62 - 64}{3} = -0.67$, table: .2514. Then $.9082 - .2514 = .6568$ | 65.68% |
+
+:::{.gotcha title="Above means subtract from 1"}
+The table always gives the area **below**. For "more than" or "taller than", subtract the table value from 1.
+:::
+
+:::{.you-try title="Same heights. What percent of women are taller than 61 inches?"}
+$z = \frac{61 - 64}{3} = -1$. The table gives .1587.
+
+$1 - .1587 = .8413$. About **84.13%** are taller than 61 inches.
+:::
+
+{{< practice >}}
+
+Work with a partner. Use the z-table. Compare answers when you finish each problem.
+
+**Reading the Table**
+
+1. Find the area **below** each z-score.
+
+   a. $z = 1.25$
+
+   b. $z = -0.84$
+
+   c. $z = 2.00$
+
+   d. $z = -1.96$
+
+2. Find the area **above** each z-score.
+
+   a. $z = 0.50$
+
+   b. $z = -1.20$
+
+3. Find the area **between** the two z-scores.
+
+   a. $z = -1$ and $z = 1$
+
+   b. $z = 0.5$ and $z = 1.5$
+
+4. The empirical rule says about 68% of the data is within 1 SD of the mean. Your answer to 3(a) is .6826. Do these agree? Explain.
+
+***
+
+**In Context**
+
+5. Commute times to a school have a normal distribution with a mean of 25 minutes and an SD of 5 minutes. What percent of students have a commute:
+
+   a. less than 30 minutes?
+
+   b. more than 33 minutes?
+
+   c. from 20 to 28 minutes?
+
+6. Apples from an orchard have a mean weight of 150 grams and an SD of 10 grams. The weights have a normal distribution.
+
+   a. The store sells apples over 165 grams as "extra large." What percent of apples are extra large?
+
+   b. Apples under 138 grams are used for juice. What percent go to juice?

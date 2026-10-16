@@ -1,0 +1,32 @@
+# Introduction {.unnumbered}
+
+Welcome to Unit 7! Is a raffle ticket worth buying? Should you pay for a phone protection plan? How many goals will a team score, on average?
+
+In this unit, you list every possible outcome of a chance process with its probability. Then you find the long-run average, called the expected value, and use it to make decisions.
+
+***
+
+## What You'll Learn
+
+By the end of this unit, you will be able to:
+
+* Build and check probability distributions
+* Find theoretical and empirical probability distributions
+* Find and explain the expected value of a random variable
+* Decide if a game or a method of choosing is fair
+* Find expected payoffs for lotteries, games, and protection plans
+
+This unit matches **Unit 7: Probability distributions & expected value** in Khan Academy's Statistics essentials.
+
+***
+
+## Topics in This Unit
+
+[**Probability Distributions**](7.1_Probability_Distributions.qmd)\
+List every value of a random variable with its probability.
+
+[**Expected Value**](7.2_Expected_Value.qmd)\
+Find the long-run average and decide what is fair.
+
+[**Expected Payoff**](7.3_Expected_Payoff.qmd)\
+Decide if a lottery, a game, or a protection plan is worth the money.

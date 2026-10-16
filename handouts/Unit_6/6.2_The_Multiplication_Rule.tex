@@ -1,0 +1,114 @@
+\documentclass[11pt]{article}
+\input{../preamble}
+
+\begin{document}
+
+\lessontitle{The Multiplication Rule}
+
+You guess on 3 multiple-choice questions. Each has 4 choices. What is the probability you get all 3 right?
+Each guess has a $\dfrac{1}{4}$ chance. The questions do not affect each other, so multiply:
+\[ P(\text{all 3 right}) = \dfrac{1}{4} \cdot \dfrac{1}{4} \cdot \dfrac{1}{4} = \dfrac{1}{64} \]
+
+\vspace{-0.4em}
+\textbf{Independent events.} Two events are \textbf{independent} if one happening does not change the probability of the other.
+
+\vspace{0.3em}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{6.7in}|}\hline
+\textbf{Independent:} \qquad $P(A \cap B) = P(A) \cdot P(B)$\\ \hline
+\end{tabular}
+
+\vspace{0.3em}
+\textbf{Example:} Flip a coin and roll a number cube. \quad $P(\text{heads} \cap 6) = \dfrac{1}{2} \cdot \dfrac{1}{6} = \dfrac{1}{12}$
+
+\vspace{1em}
+\textbf{Dependent events.} A bag has 5 red and 3 blue marbles. Draw 2 marbles.
+
+\vspace{0.3em}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{3.2in}|>{\raggedright\arraybackslash}p{3.3in}|}\hline
+\textbf{With replacement} (put the first one back) & \textbf{Without replacement} (keep the first one out)\\ \hline
+The second draw is the same as the first.\par Independent. &
+The bag changes: 4 red and 3 blue are left.\par Dependent.\\[0.3em] \hline
+$P(\text{red, red}) = \dfrac{5}{8} \cdot \dfrac{5}{8} = \dfrac{25}{64}$ &
+$P(\text{red, red}) = \dfrac{5}{8} \cdot \dfrac{4}{7} = \dfrac{20}{56} = \dfrac{5}{14}$\\[0.9em] \hline
+\end{tabular}
+
+\vspace{0.8em}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{6.7in}|}\hline
+\textbf{General multiplication rule:} \qquad $P(A \cap B) = P(A) \cdot P(B \mid A)$\par\vspace{0.3em}
+$P(B \mid A)$ is read ``the probability of $B$ \textbf{given} $A$.'' It is the probability of $B$ after $A$ has already happened.\\ \hline
+\end{tabular}
+
+\vspace{0.4em}
+In the marble example: $P(\text{red second} \mid \text{red first}) = \dfrac{4}{7}$.
+
+\vspace{0.8em}
+\textbf{Tip:} ``At least one'' questions are often easier with the complement.
+$P(\text{at least one wrong}) = 1 - P(\text{all right})$.
+
+\partner
+
+% ---------------- PROBLEMS ----------------
+\newpage
+\begin{enumerate}
+
+\item These events are independent. Find each probability.
+\begin{enumerate}[itemsep=1.4em]
+  \item Flip a coin 3 times. $P(\text{3 heads})$ \ans{\quad $\frac{1}{2} \cdot \frac{1}{2} \cdot \frac{1}{2} = \frac{1}{8}$}
+  \item Roll a number cube twice. $P(\text{two 6s})$ \ans{\quad $\frac{1}{6} \cdot \frac{1}{6} = \frac{1}{36}$}
+  \item A basketball player makes 80\% of her free throws. $P(\text{she makes 2 in a row})$ \ans{\quad $0.8 \cdot 0.8 = 0.64$}
+  \item Same player. $P(\text{she misses both})$ \ans{\quad $0.2 \cdot 0.2 = 0.04$}
+\end{enumerate}
+\work{1em}
+
+\item You guess on a 5-question true-or-false quiz.
+\begin{enumerate}[itemsep=1.4em]
+  \item $P(\text{all 5 right})$ \ans{\quad $\left(\frac{1}{2}\right)^5 = \frac{1}{32}$}
+  \item $P(\text{at least one wrong})$ \ans{\quad $1 - \frac{1}{32} = \frac{31}{32}$}
+\end{enumerate}
+\work{1em}
+
+\item A bag has 4 green and 6 yellow marbles. Draw 2 marbles.
+\begin{enumerate}[itemsep=1em]
+  \item Find $P(\text{green, green})$ \textbf{with} replacement.
+
+  \ans{$\frac{4}{10} \cdot \frac{4}{10} = \frac{16}{100} = \frac{4}{25}$}
+  \work{2em}
+  \item Find $P(\text{green, green})$ \textbf{without} replacement.
+
+  \ans{$\frac{4}{10} \cdot \frac{3}{9} = \frac{12}{90} = \frac{2}{15}$}
+  \work{2em}
+  \item Why is the answer to (b) smaller?
+
+  \ans{After a green is taken out, fewer greens are left, so the second green is less likely.}
+\end{enumerate}
+
+\newpage
+\item Independent or dependent? Explain.
+\begin{enumerate}[itemsep=2em]
+  \item Flip a coin, then roll a number cube.
+
+  \ans{Independent. The coin does not change the cube.}
+  \item Pick a class president, then pick a vice president from the students who are left.
+
+  \ans{Dependent. The president cannot be picked again, so the choices change.}
+  \item Draw a card, put it back, shuffle, and draw again.
+
+  \ans{Independent. The deck is the same for the second draw.}
+  \item It rains today, and you carry an umbrella today.
+
+  \ans{Dependent. Rain makes carrying an umbrella more likely.}
+\end{enumerate}
+\work{1.5em}
+
+\item At a school, $P(\text{late}) = 0.2$ and $P(\text{detention} \mid \text{late}) = 0.5$.
+\begin{enumerate}[itemsep=1em]
+  \item Find $P(\text{late} \cap \text{detention})$. \ans{\quad $0.2 \cdot 0.5 = 0.1$}
+  \item Explain what your answer means in words.
+
+  \ans{About 10\% of all students are late and get a detention.}
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

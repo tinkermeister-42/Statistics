@@ -1,0 +1,11 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}
+\begin{document}
+\begin{tikzpicture}[x=0.26cm,y=1cm]
+  \axis{50}{100}{5}{1}{Test score}
+  \bplotat{2.2}{55}{70}{78}{85}{96}
+  \bplotat{0.9}{62}{72}{76}{79}{88}
+  \node[anchor=east,font=\small] at (49,2.2) {Period 2};
+  \node[anchor=east,font=\small] at (49,0.9) {Period 5};
+\end{tikzpicture}
+\end{document}

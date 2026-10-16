@@ -1,0 +1,40 @@
+% Shared preamble for the printable mini lessons (1.4 onward).
+%   \documentclass[11pt]{article}
+%   \input{../preamble}
+% Build the key with:  pdflatex -jobname=<name>_KEY "\def\iskey{}\input{<name>}"
+% Figures shared with the web page live in figures/Unit_X/<name>.tex and are
+% pulled in with \fig{Unit_X/<name>}; the standalone package drops their own
+% preamble, so their macros come from figures/preamble.tex, loaded here.
+\input{../../figures/preamble}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage[helvet]{sfmath}  % math in the same sans font as the text
+\usepackage{standalone}
+\renewcommand{\ttdefault}{pcr}  % Courier: a real Type 1 typewriter font
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlist[enumerate,1]{leftmargin=1.5em,itemsep=1em}
+\setlist[enumerate,2]{label=(\alph*),leftmargin=2em,itemsep=2.2em}
+
+\newif\ifkey
+\ifdefined\iskey \keytrue \fi
+\colorlet{keyred}{red!75!black}
+\newcommand{\ans}[1]{\ifkey\leavevmode{\color{keyred}\let\frac\dfrac #1}\fi}  % full-size fractions in answers
+% vertical work space on the student copy, less on the key
+\newcommand{\work}[1]{\ifkey\vspace{0.6em}\else\vspace{#1}\fi}
+\newcommand{\fig}[1]{\input{../../figures/#1}}
+% Title line: \lessontitle{Quartiles, IQR, and Box Plots}
+% A long title gets the Name line on its own line above it.
+\newlength{\titlewidth}
+\newcommand{\lessontitle}[1]{%
+  \settowidth{\titlewidth}{\Large\bfseries #1\ifkey\ KEY\fi}%
+  \ifdim\titlewidth>4.3in
+    \hfill Name \underline{\hspace{2in}}\par\vspace{0.5em}
+    {\Large\bfseries #1\ifkey\ \textcolor{keyred}{KEY}\fi}\par\vspace{0.6em}
+  \else
+    {\Large\bfseries #1\ifkey\ \textcolor{keyred}{KEY}\fi}\hfill Name \underline{\hspace{2in}}\par\vspace{0.6em}
+  \fi}
+\newcommand{\partner}{\par\vspace{0.4em}Work with a partner. Compare answers when you finish each problem.\par}

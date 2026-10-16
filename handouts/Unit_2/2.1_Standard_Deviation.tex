@@ -1,0 +1,164 @@
+\documentclass[11pt]{article}
+\input{../preamble}
+% one row of an SD table: \sdrow{x}{x - mean}{(x - mean)^2}; the last two show on the key only
+\newcommand{\sdrow}[3]{#1 & \ans{#2} & \ans{#3} \\ \hline}
+\newenvironment{sdtable}{\renewcommand{\arraystretch}{1.45}\begin{tabular}{|c|p{1.1in}|p{1.1in}|}\hline
+  $x$ & $x - \bar{x}$ & $(x - \bar{x})^2$ \\ \hline}{\end{tabular}}
+
+\begin{document}
+
+\lessontitle{Standard Deviation}
+
+Two basketball players both score \textbf{10 points} per game on average.
+
+\begin{center}\fig{Unit_2/2.1_players}\end{center}
+
+Player A's points are close to the mean. Player B's points are spread far from the mean.
+The \textbf{standard deviation} (SD) measures this.
+
+\vspace{0.4em}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{6.7in}|}\hline
+\textbf{Standard deviation} is about how far the values usually are from the mean.\newline
+\textbf{Small SD:} values are close to the mean. \qquad \textbf{Large SD:} values are spread out.\\ \hline
+\end{tabular}
+
+\vspace{0.8em}
+\textbf{How to find the standard deviation} \hfill \textbf{Example:} 7, 7, 10, 13, 13
+
+\vspace{0.3em}
+\begin{minipage}[t]{0.52\linewidth}\vspace{0pt}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{@{}l@{\;\;}l}
+1. & Find the mean, $\bar{x}$. \quad $\bar{x} = 50 \div 5 = 10$\\
+2. & Subtract the mean from each value.\\
+3. & Square each result.\\
+4. & Add the squares. \quad $\Sigma(x - \bar{x})^2 = 36$\\
+5. & Divide by $n - 1$. \quad $36 \div 4 = 9$\\
+   & (This number is called the \textbf{variance}.)\\
+6. & Take the square root. \quad $s = \sqrt{9} = \mathbf{3}$\\
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.42\linewidth}\vspace{0pt}\centering
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|c|c|c|}\hline
+$x$ & $x - \bar{x}$ & $(x - \bar{x})^2$ \\ \hline
+7 & $-3$ & 9 \\
+7 & $-3$ & 9 \\
+10 & 0 & 0 \\
+13 & 3 & 9 \\
+13 & 3 & 9 \\ \hline
+\multicolumn{2}{|r|}{$\Sigma(x - \bar{x})^2$} & 36 \\ \hline
+\end{tabular}
+\end{minipage}
+
+\vspace{0.8em}
+\textbf{The formula:} \qquad
+$\displaystyle s = \sqrt{\frac{\Sigma(x - \bar{x})^2}{n - 1}}$ \qquad ($n$ = how many values)
+
+\vspace{0.3em}
+$\Sigma$ (capital \textbf{sigma}) means \textbf{add up}. \; $\Sigma(x - \bar{x})^2$ means: find $(x - \bar{x})^2$ for every value, then add them all.
+
+\vspace{0.6em}
+\textbf{Why $n - 1$?} Our data is usually a \textbf{sample}, a small part of a bigger group.
+A sample is usually a little less spread out than the whole group. Dividing by $n - 1$ makes $s$ a little bigger to fix this.
+
+\vspace{0.6em}
+\textbf{Remember:}
+\begin{itemize}[itemsep=0pt,topsep=2pt]
+  \item The SD is never negative.
+  \item The SD is 0 only when every value is the same.
+  \item The SD has the same units as the data (points, minutes, inches).
+\end{itemize}
+
+\partner
+
+% ---------------- PROBLEMS ----------------
+\newpage
+\begin{enumerate}
+
+\item Find the standard deviation of 4, 6, 8, 10, 12.
+
+\vspace{0.3em}
+\begin{minipage}[t]{0.45\linewidth}\vspace{0pt}
+\begin{sdtable}
+\sdrow{4}{$-4$}{16}
+\sdrow{6}{$-2$}{4}
+\sdrow{8}{0}{0}
+\sdrow{10}{2}{4}
+\sdrow{12}{4}{16}
+\multicolumn{2}{|r|}{$\Sigma(x - \bar{x})^2$} & \ans{40} \\ \hline
+\end{sdtable}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.5\linewidth}\vspace{0pt}
+Mean: \ans{\; $40 \div 5 = 8$}
+
+\vspace{4em}
+$s =$ \ans{\; $\sqrt{40 \div 4} = \sqrt{10} \approx 3.16$}
+\end{minipage}
+\work{2em}
+
+\item Four quiz scores: 7, 3, 7, 7. Find the standard deviation.
+
+\vspace{0.3em}
+\begin{minipage}[t]{0.45\linewidth}\vspace{0pt}
+\begin{sdtable}
+\sdrow{7}{1}{1}
+\sdrow{3}{$-3$}{9}
+\sdrow{7}{1}{1}
+\sdrow{7}{1}{1}
+\multicolumn{2}{|r|}{$\Sigma(x - \bar{x})^2$} & \ans{12} \\ \hline
+\end{sdtable}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.5\linewidth}\vspace{0pt}
+Mean: \ans{\; $24 \div 4 = 6$}
+
+\vspace{4em}
+$s =$ \ans{\; $\sqrt{12 \div 3} = \sqrt{4} = 2$}
+\end{minipage}
+\work{2em}
+
+\item Look at the two players on page 1.
+
+\vspace{0.3em}
+\begin{tabular}{@{}ll}
+Player A: & 9, 10, 10, 11, 10\\
+Player B: & 2, 18, 5, 15, 10\\
+\end{tabular}
+\begin{enumerate}[itemsep=1.2em]
+  \item Find the mean of each player. \ans{\quad A: $50 \div 5 = 10$. \; B: $50 \div 5 = 10$.}
+  \item Without calculating, which player has the larger SD? Explain.
+
+  \ans{Player B. B's points are much farther from 10.}
+  \work{1.5em}
+  \item Find $s$ for Player A.
+
+  \ans{Differences $-1, 0, 0, 1, 0$. \; $\Sigma(x - \bar{x})^2 = 2$. \; $s = \sqrt{2 \div 4} = \sqrt{0.5} \approx 0.71$}
+  \work{5em}
+  \item Player B's SD is about 6.67. A coach needs a player who scores close to 10 points every game. Which player should the coach choose? Explain.
+
+  \ans{Player A. A's SD is much smaller, so A's scores stay close to 10.}
+\end{enumerate}
+
+\newpage
+\item All three dot plots have a mean of 5. Put them in order from the \textbf{smallest} SD to the \textbf{largest} SD. Explain.
+\begin{center}\fig{Unit_2/2.1_rank_sd}\end{center}
+\ans{R, P, Q. The dots in R are packed close to 5. The dots in Q are far from 5.\\
+(The SDs are about 0.67, 1.83, and 3.16.)}
+\work{4em}
+
+\item Think about what the SD means.
+\begin{enumerate}[itemsep=2.4em]
+  \item Can a standard deviation be negative? Explain.
+
+  \ans{No. It comes from adding squares (never negative) and taking a square root.}
+  \item Find the SD of 10, 10, 10, 10 without a formula. Explain.
+
+  \ans{0. Every value equals the mean, so there is no spread.}
+  \item Set B is 9, 10, 10, 11. Set C is 0, 10, 10, 20. Both have a mean of 10. Which set has the larger SD? Explain.
+
+  \ans{Set C. Its values are much farther from 10.}
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

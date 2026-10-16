@@ -1,0 +1,106 @@
+\documentclass[11pt]{article}
+\input{../preamble}
+
+\begin{document}
+
+\lessontitle{Expected Payoff}
+
+Is a lottery ticket worth buying? Is a protection plan worth the money? The expected value of the \textbf{payoff} tells you what happens on average.
+
+\vspace{0.4em}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{6.7in}|}\hline
+\rule{0pt}{1.2em}\textbf{Net gain} $=$ what you win $-$ what you paid \par\vspace{0.3em}
+\textbf{Expected payoff} $= \Sigma\,(\text{net gain} \cdot \text{probability})$\\ \hline
+\end{tabular}
+
+\vspace{0.8em}
+\textbf{Example 1: a lottery ticket.} A ticket costs \$2. 1 in 1,000 tickets wins \$500. 1 in 50 tickets wins \$10. The rest win nothing.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|c|c|c|}\hline
+Outcome & Net gain $x$ & $P(x)$ & $x \cdot P(x)$ \\ \hline
+Win \$500 & $500 - 2 = 498$ & 0.001 & 0.498 \\ \hline
+Win \$10 & $10 - 2 = 8$ & 0.02 & 0.16 \\ \hline
+Win nothing & $-2$ & 0.979 & $-1.958$ \\ \hline
+\multicolumn{3}{|r|}{$E(X) = \Sigma\, x \cdot P(x)$} & $-1.30$ \\ \hline
+\end{tabular}
+\end{center}
+
+On average, a buyer \textbf{loses \$1.30} per ticket. The lottery keeps that money.
+
+\vspace{0.8em}
+\textbf{Example 2: a protection plan.} A phone costs \$300 to replace. The chance it breaks this year is 0.10.
+A protection plan costs \$40 for the year.
+
+\vspace{0.3em}
+\begin{tabular}{@{}ll}
+Expected cost with no plan: & $0.10 \cdot 300 = \$30$\\
+Cost of the plan: & \$40\\
+\end{tabular}
+
+\vspace{0.3em}
+On average, the plan costs \$10 more than paying for a broken phone yourself. That is how the company makes money.
+
+\vspace{0.3em}
+\textbf{But:} the plan protects you from a sudden \$300 bill. Expected value is one part of a decision. How much risk you can afford is another.
+
+\partner
+
+% ---------------- PROBLEMS ----------------
+\newpage
+\begin{enumerate}
+
+\item A school sells 500 raffle tickets for \$5 each. One ticket wins \$1,000.
+\begin{enumerate}[itemsep=1em]
+  \item Fill in the table.
+
+  \begin{center}
+  \renewcommand{\arraystretch}{2.5}
+  \begin{tabular}{|l|p{1.1in}|p{1.1in}|p{1.3in}|}\hline
+  Outcome & Net gain $x$ & $P(x)$ & $x \cdot P(x)$ \\ \hline
+  Win & \ans{995} & \ans{$\frac{1}{500}$} & \ans{1.99} \\ \hline
+  Lose & \ans{$-5$} & \ans{$\frac{499}{500}$} & \ans{$-4.99$} \\ \hline
+  \end{tabular}
+  \end{center}
+  \item Find the expected payoff. What does it mean? \ans{\quad $1.99 - 4.99 = -\$3$. On average, a buyer loses \$3 per ticket.}
+\end{enumerate}
+\work{2em}
+
+\item A game costs \$1 to play. You spin a spinner: half the time you win nothing, a quarter of the time you win \$1, and a quarter of the time you win \$3.
+\begin{enumerate}[itemsep=1em]
+  \item Find the expected payoff.
+
+  \ans{Net gains: $-1$, 0, 2. \; $(-1)(0.5) + 0(0.25) + 2(0.25) = -0.5 + 0 + 0.5 = 0$}
+  \work{3em}
+  \item Is the game fair? \ans{\quad Yes. The expected payoff is 0.}
+\end{enumerate}
+
+\newpage
+\item At a carnival, you pay \$2 and draw one card from a deck. An ace wins \$10. A face card (J, Q, K) wins \$5. Anything else wins nothing.
+\begin{enumerate}[itemsep=1em]
+  \item Find the probability of each outcome. \ans{\quad Ace $\frac{4}{52}$, face card $\frac{12}{52}$, other $\frac{36}{52}$}
+  \work{2em}
+  \item Find the expected payoff. Should you expect to win money?
+
+  \ans{$8 \cdot \frac{4}{52} + 3 \cdot \frac{12}{52} + (-2) \cdot \frac{36}{52} = \frac{32 + 36 - 72}{52} = -\frac{4}{52} \approx -\$0.08$\par No. You lose about 8 cents a game on average.}
+\end{enumerate}
+\work{3em}
+
+\item A laptop repair costs \$400. The chance a laptop needs repair in its first year is 0.15. A one-year warranty costs \$75.
+\begin{enumerate}[itemsep=1em]
+  \item Find the expected repair cost without the warranty. \ans{\quad $0.15 \cdot 400 = \$60$}
+  \item Which is cheaper on average: buying the warranty or not? \ans{\quad Not buying it (\$60 is less than \$75).}
+  \item Give a reason someone might still buy the warranty.
+
+  \ans{They could not afford a sudden \$400 bill. The warranty removes that risk.}
+\end{enumerate}
+\work{2em}
+
+\item The store sells 1,000 of these warranties. About how much money does the store expect to make? Explain.
+
+\ans{It collects $1{,}000 \cdot 75 = \$75{,}000$. About 150 laptops need repair: $150 \cdot 400 = \$60{,}000$. It expects to make about \$15,000.}
+
+\end{enumerate}
+
+\end{document}

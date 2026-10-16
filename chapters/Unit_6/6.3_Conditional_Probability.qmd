@@ -1,0 +1,129 @@
+# 6.3 - Conditional Probability {.unnumbered}
+
+60% of students ride the bus. A student walks into class late. Is that student more likely or less likely to be a bus rider?
+
+Knowing that the student was late changes the probability. In this lesson, you find {{< glink "conditional probability" text="conditional probabilities" >}}: probabilities when you already know something happened.
+
+:::{.objectives}
+- [ ] I read and use the notation $P(A \mid B)$.
+- [ ] I find conditional probabilities from a two-way table.
+- [ ] I use a tree diagram to find probabilities.
+- [ ] I check if two events are independent.
+:::
+
+:::{.vocab}
+{{< glink "conditional probability" >}},
+{{< glink "tree diagram" >}},
+{{< glink "independent events" >}}
+:::
+
+:::{.guided-notes-link}
+[Printable mini lesson](/handouts/Unit_6/6.3_Conditional_Probability.pdf){target="_blank"} - notes and practice problems to print and write on.
+:::
+
+{{< khan 6.3 >}}
+
+{{< learn >}}
+
+### 6.3.1 - The Formula
+
+:::{.remember title="Conditional Probability"}
+$$
+P(A \mid B) = \frac{P(A \cap B)}{P(B)}
+$$
+
+Read it as "the probability of $A$ **given** $B$." In a table, only look at the $B$ group:
+
+$$
+P(A \mid B) = \frac{\text{number in } A \text{ and } B}{\text{number in } B}
+$$
+:::
+
+| | **Job** | **No job** | **Total** |
+|---|:---:|:---:|:---:|
+| **Sport** | 8 | 22 | 30 |
+| **No sport** | 12 | 18 | 30 |
+| **Total** | 20 | 40 | 60 |
+
+- $P(\text{job} \mid \text{sport}) = \frac{8}{30} \approx 0.27$. Only look at the 30 students in sports.
+- $P(\text{sport} \mid \text{job}) = \frac{8}{20} = 0.40$. Only look at the 20 students with jobs.
+
+:::{.gotcha title="The order matters"}
+$P(\text{job} \mid \text{sport})$ and $P(\text{sport} \mid \text{job})$ are different questions with different answers. The group after the bar is the group you look inside.
+:::
+
+***
+
+### 6.3.2 - Tree Diagrams
+
+60% of students ride the bus. 25% of bus riders are late. 10% of the others are late.
+
+![](/images/Unit_6/6.3_tree_bus.svg){width="520px" fig-align="center"}
+
+| Step | Work |
+|---|---|
+| Multiply **along** a path. | $P(\text{bus} \cap \text{late}) = 0.6 \cdot 0.25 = 0.15$ |
+| Add the paths you want. | $P(\text{late}) = 0.15 + 0.04 = 0.19$ |
+| Then divide. | $P(\text{bus} \mid \text{late}) = \frac{0.15}{0.19} \approx 0.79$ |
+
+About 79% of late students ride the bus.
+
+***
+
+### 6.3.3 - Checking Independence
+
+:::{.remember title="Independent Events"}
+$A$ and $B$ are independent if $P(A \mid B) = P(A)$. Knowing $B$ does not change the probability of $A$.
+:::
+
+$P(\text{job}) = \frac{20}{60} \approx 0.33$, but $P(\text{job} \mid \text{sport}) \approx 0.27$. They are different. So having a job and playing a sport are **not** independent.
+
+:::{.you-try title="Use the tree. Find P(late | no bus)."}
+This is given on the branch: $0.10$. You can also check it with the formula: $\frac{0.04}{0.4} = 0.10$.
+:::
+
+{{< practice >}}
+
+Work with a partner. Compare answers when you finish each problem.
+
+**Two-Way Tables**
+
+1. 100 students said if they ate breakfast and if they were on time.
+
+   | | **Breakfast** | **No breakfast** | **Total** |
+   |---|:---:|:---:|:---:|
+   | **On time** | 45 | 15 | 60 |
+   | **Late** | 10 | 30 | 40 |
+   | **Total** | 55 | 45 | 100 |
+
+   a. $P(\text{late})$
+
+   b. $P(\text{late} \mid \text{no breakfast})$
+
+   c. $P(\text{no breakfast} \mid \text{late})$
+
+   d. $P(\text{late} \mid \text{breakfast})$
+
+   e. Are being late and eating breakfast independent? Explain.
+
+2. $P(A \cap B) = 0.12$ and $P(B) = 0.4$. Find $P(A \mid B)$.
+
+3. Draw one card from a deck. Face cards are J, Q, and K (12 in all).
+
+   a. $P(\text{king} \mid \text{face card})$
+
+   b. $P(\text{face card} \mid \text{king})$
+
+***
+
+**Trees and Independence**
+
+4. A factory has two machines. Machine A makes 70% of the parts and Machine B makes 30%. 2% of A's parts are defective (D). 5% of B's parts are defective.
+
+   a. Draw a tree diagram and fill in every probability.
+
+   b. Find $P(D)$, the probability a part is defective.
+
+   c. A part is defective. Find $P(B \mid D)$.
+
+5. 100 students said if they wear glasses and if they play an instrument. 40 play an instrument, and 12 of them wear glasses. 30 of all 100 students wear glasses. Are wearing glasses and playing an instrument independent? Show your work.

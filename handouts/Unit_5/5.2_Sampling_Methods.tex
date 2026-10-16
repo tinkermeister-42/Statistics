@@ -1,0 +1,113 @@
+\documentclass[11pt]{article}
+\input{../preamble}
+
+\begin{document}
+
+\lessontitle{Sampling Methods}
+
+A school has 1,200 students. The principal wants to ask 60 of them about the new schedule.
+How should she choose the 60? The best methods use \textbf{chance} to pick, so no group is favored.
+
+\vspace{0.6em}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{1.25in}|>{\raggedright\arraybackslash}p{2.7in}|>{\raggedright\arraybackslash}p{2.45in}|}\hline
+\textbf{Method} & \textbf{How it works} & \textbf{Example (60 of 1,200)}\\ \hline
+\textbf{Simple random sample (SRS)} & Every group of people has the same chance of being chosen. Like drawing names from a hat. & Number the students 1 to 1,200. A random number generator picks 60 numbers.\\ \hline
+\textbf{Stratified} & Split the population into groups that are alike (\textbf{strata}). Take a random sample from \textbf{each} group. & Randomly pick 15 students from each grade: 9th, 10th, 11th, 12th.\\ \hline
+\textbf{Cluster} & Split the population into groups (\textbf{clusters}). Randomly pick some \textbf{whole} groups. & Randomly pick 3 homerooms. Ask everyone in them.\\ \hline
+\textbf{Systematic} & Pick a random start. Then take every $k$th person. & Start at a random student between 1 and 20. Then take every 20th student on the list.\\ \hline
+\textbf{Convenience} (bad) & Take whoever is easy to reach. & Ask the first 60 students who walk in the door.\\ \hline
+\end{tabular}
+
+\vspace{0.6em}
+\textbf{Stratified or cluster?} \; Stratified: a \textbf{few} from \textbf{every} group. \; Cluster: \textbf{everyone} from a \textbf{few} groups.
+
+\vspace{0.8em}
+\textbf{Using a random digit table.} Each digit is random. Read the digits in pairs for 2-digit numbers.
+
+\vspace{0.3em}
+\begin{center}
+\renewcommand{\arraystretch}{1.3}\large
+\begin{tabular}{|l|l|}\hline
+Row 1 & \texttt{\bfseries 52601 81590 83016 61318 60913 90996 03082 46281}\\
+Row 2 & \texttt{\bfseries 94821 99351 81909 37865 79754 32319 48757 49118}\\
+Row 3 & \texttt{\bfseries 62527 60189 55597 97114 71049 74650 75291 70342}\\ \hline
+\end{tabular}
+\end{center}
+
+\textbf{Example:} Choose 3 of 25 students, numbered 01 to 25. Use row 1.
+
+\vspace{0.2em}
+Pairs: \texttt{52 60 \textbf{18} \textbf{15} 90 83 \textbf{01}} \ldots \qquad
+Skip numbers over 25 and skip repeats. \quad The sample is students \textbf{18, 15, and 01}.
+
+\vspace{0.8em}
+\textbf{Why random?} Chance does not pick favorites. A random sample is not biased toward any group.
+
+\partner
+
+% ---------------- PROBLEMS ----------------
+\newpage
+\begin{enumerate}
+
+\item Name the sampling method.
+\begin{enumerate}[itemsep=2em]
+  \item A store gives a survey to every 10th customer, starting with a randomly chosen customer from the first 10.
+
+  \ans{Systematic}
+  \item A city randomly picks 5 of its 40 neighborhoods and surveys every home in those 5.
+
+  \ans{Cluster}
+  \item A teacher puts all 28 names in a hat and draws 6.
+
+  \ans{Simple random sample}
+  \item A college randomly picks 50 first-year, 50 second-year, 50 third-year, and 50 fourth-year students.
+
+  \ans{Stratified (the strata are the years)}
+  \item A reporter asks people walking past a coffee shop.
+
+  \ans{Convenience}
+\end{enumerate}
+\work{1.5em}
+
+\item A class has 30 students, numbered 01 to 30. Use \textbf{row 3} of the random digit table on page 1 to choose 4 students.
+
+\ans{Pairs: 62 52 76 \textbf{01} 89 55 59 79 71 \textbf{14} 71 \textbf{04} 97 46 50 75 \textbf{29}. \; The sample is 01, 14, 04, 29.}
+\work{4em}
+
+\newpage
+\item A school wants to survey 100 of its 1,000 students about sports. About half of the students play a sport.
+\begin{enumerate}[itemsep=1em]
+  \item Describe how to take a stratified sample.
+
+  \ans{Split the students into athletes and non-athletes. Randomly choose 50 from each group.}
+  \work{3em}
+  \item Why might a stratified sample be better than an SRS here?
+
+  \ans{It makes sure both groups are in the sample in the right numbers. An SRS could, by chance, pick too many athletes.}
+\end{enumerate}
+\work{3em}
+
+\item A farmer has 50 rows of corn. She wants to check 500 plants for insects. She randomly picks 5 rows and checks every plant in them.
+\begin{enumerate}[itemsep=1em]
+  \item What method is this? \ans{\quad Cluster}
+  \item Why would a farmer choose this method?
+
+  \ans{It is quicker. She only walks 5 rows instead of searching the whole field.}
+\end{enumerate}
+\work{2.5em}
+
+\item Maya wants to know how students feel about school lunch. She surveys the first 40 students in the lunch line.
+\begin{enumerate}[itemsep=1em]
+  \item What method is this? What is the problem?
+
+  \ans{Convenience. Students who skip lunch or come late are left out, so the results are biased.}
+  \work{2.5em}
+  \item Describe a better way for Maya to choose 40 students.
+
+  \ans{Get a list of all students. Use a random number generator to pick 40 names (an SRS).}
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

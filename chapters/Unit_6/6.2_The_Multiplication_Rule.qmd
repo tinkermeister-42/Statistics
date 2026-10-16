@@ -1,0 +1,135 @@
+# 6.2 - The Multiplication Rule {.unnumbered}
+
+You guess on 3 multiple-choice questions. Each question has 4 choices. What is the probability you get all 3 right?
+
+Each guess has a $\frac{1}{4}$ chance. The questions do not affect each other, so you multiply:
+
+$$
+P(\text{all 3 right}) = \frac{1}{4} \cdot \frac{1}{4} \cdot \frac{1}{4} = \frac{1}{64}
+$$
+
+That is about a 1.6% chance. In this lesson, you learn when and how to multiply probabilities.
+
+:::{.objectives}
+- [ ] I decide if two events are independent or dependent.
+- [ ] I use the multiplication rule for independent events.
+- [ ] I use the general multiplication rule for dependent events.
+- [ ] I use the complement for "at least one" questions.
+:::
+
+:::{.vocab}
+{{< glink "independent events" >}},
+{{< glink "dependent events" >}},
+{{< glink "multiplication rule" >}},
+{{< glink "conditional probability" >}},
+{{< glink complement >}}
+:::
+
+:::{.guided-notes-link}
+[Printable mini lesson](/handouts/Unit_6/6.2_The_Multiplication_Rule.pdf){target="_blank"} - notes and practice problems to print and write on.
+:::
+
+{{< khan 6.2 >}}
+
+{{< learn >}}
+
+### 6.2.1 - Independent Events
+
+Two events are {{< glink "independent events" text="independent" >}} if one happening does not change the probability of the other.
+
+:::{.remember title="Independent Events"}
+$$
+P(A \cap B) = P(A) \cdot P(B)
+$$
+:::
+
+**Example:** Flip a coin and roll a number cube.
+
+$$
+P(\text{heads} \cap 6) = \frac{1}{2} \cdot \frac{1}{6} = \frac{1}{12}
+$$
+
+***
+
+### 6.2.2 - Dependent Events
+
+A bag has 5 red and 3 blue marbles. Draw 2 marbles.
+
+| **With replacement** (put the first one back) | **Without replacement** (keep the first one out) |
+|---|---|
+| The second draw is the same as the first. Independent. | The bag changes: 4 red and 3 blue are left. Dependent. |
+| $P(\text{red, red}) = \frac{5}{8} \cdot \frac{5}{8} = \frac{25}{64}$ | $P(\text{red, red}) = \frac{5}{8} \cdot \frac{4}{7} = \frac{20}{56} = \frac{5}{14}$ |
+
+:::{.remember title="The General Multiplication Rule"}
+$$
+P(A \cap B) = P(A) \cdot P(B \mid A)
+$$
+
+$P(B \mid A)$ is read "the probability of $B$ **given** $A$." It is the probability of $B$ after $A$ has already happened. The bar $\mid$ means "given."
+:::
+
+In the marble example, $P(\text{red second} \mid \text{red first}) = \frac{4}{7}$.
+
+***
+
+### 6.2.3 - "At Least One"
+
+"At least one" questions are often easier with the {{< glink complement >}}:
+
+$$
+P(\text{at least one wrong}) = 1 - P(\text{all right})
+$$
+
+:::{.you-try title="You guess on 3 questions with 4 choices each. Find P(at least one wrong)."}
+$P(\text{all right}) = \frac{1}{64}$, so $P(\text{at least one wrong}) = 1 - \frac{1}{64} = \frac{63}{64}$.
+:::
+
+{{< practice >}}
+
+Work with a partner. Compare answers when you finish each problem.
+
+**Independent Events**
+
+1. These events are independent. Find each probability.
+
+   a. Flip a coin 3 times. $P(\text{3 heads})$
+
+   b. Roll a number cube twice. $P(\text{two 6s})$
+
+   c. A basketball player makes 80% of her free throws. $P(\text{she makes 2 in a row})$
+
+   d. Same player. $P(\text{she misses both})$
+
+2. You guess on a 5-question true-or-false quiz.
+
+   a. $P(\text{all 5 right})$
+
+   b. $P(\text{at least one wrong})$
+
+***
+
+**Dependent Events**
+
+3. A bag has 4 green and 6 yellow marbles. Draw 2 marbles.
+
+   a. Find $P(\text{green, green})$ **with** replacement.
+
+   b. Find $P(\text{green, green})$ **without** replacement.
+
+   c. Why is the answer to (b) smaller?
+
+4. Independent or dependent? Explain.
+
+   a. Flip a coin, then roll a number cube.
+
+   b. Pick a class president, then pick a vice president from the students who are left.
+
+   c. Draw a card, put it back, shuffle, and draw again.
+
+   d. It rains today, and you carry an umbrella today.
+
+5. At a school, $P(\text{late}) = 0.2$ and $P(\text{detention} \mid \text{late}) = 0.5$.
+
+   a. Find $P(\text{late} \cap \text{detention})$.
+
+   b. Explain what your answer means in words.

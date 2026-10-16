@@ -1,0 +1,120 @@
+# 6.4 - Simulations {.unnumbered}
+
+Flip a coin 20 times. Do you get exactly 10 heads? Probably not. You might get 12, or 8.
+
+The math says $P(\text{heads}) = \frac{1}{2}$. Real trials wobble around that number. In this lesson, you compare the two kinds of probability and use random digits to act out chance events.
+
+:::{.objectives}
+- [ ] I tell theoretical and experimental probability apart.
+- [ ] I explain the law of large numbers.
+- [ ] I assign random digits to simulate an event.
+- [ ] I run a simulation and use it to estimate a probability.
+:::
+
+:::{.vocab}
+{{< glink "theoretical probability" >}},
+{{< glink "experimental probability" >}},
+{{< glink "law of large numbers" >}},
+{{< glink simulation >}},
+{{< glink trial >}}
+:::
+
+:::{.guided-notes-link}
+[Printable mini lesson](/handouts/Unit_6/6.4_Simulations.pdf){target="_blank"} - notes and practice problems to print and write on.
+:::
+
+{{< khan 6.4 >}}
+
+{{< learn >}}
+
+### 6.4.1 - Two Kinds of Probability
+
+| | How you find it | Coin example |
+|---|---|---|
+| **Theoretical probability** | By reasoning about equally likely outcomes. | $P(\text{heads}) = \frac{1}{2}$ |
+| **Experimental probability** | By doing trials: $\frac{\text{number of times it happened}}{\text{number of trials}}$ | 20 flips, 12 heads: $\frac{12}{20} = 0.6$ |
+
+:::{.remember title="The Law of Large Numbers"}
+The more trials you do, the closer the experimental probability gets to the theoretical probability.
+:::
+
+***
+
+### 6.4.2 - Running a Simulation
+
+A {{< glink simulation >}} uses random numbers to act out a chance event many times.
+
+:::{.remember title="Steps"}
+1. Assign digits to the outcomes so the probabilities match.
+2. Decide what one {{< glink trial >}} is.
+3. Run many trials with random digits.
+4. Count how often the event happened.
+:::
+
+**Example:** A basketball player makes 70% of her free throws. About how often does she make all 3 of 3 shots?
+
+1. Digits 0 to 6 = make (7 of the 10 digits is 70%). Digits 7, 8, 9 = miss.
+2. One trial = 3 digits (3 shots).
+3. Use row 1. Make 10 trials.
+
+| | |
+|---|---|
+| Row 1 | `26647 37828 83005 96123 30669 70587` |
+| Row 2 | `15021 10728 56722 07313 39118 78635` |
+
+| Trial | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Digits | 266 | 473 | 782 | 883 | 005 | 961 | 233 | 066 | 970 | 587 |
+| Makes | **3** | 2 | 1 | 1 | **3** | 2 | **3** | **3** | 1 | 1 |
+
+4 of the 10 trials made all 3. The experimental probability is $\frac{4}{10} = 0.4$.
+
+The theoretical probability is $0.7 \cdot 0.7 \cdot 0.7 = 0.343$. With more trials, the simulation would get closer to it.
+
+:::{.you-try title="How would you assign digits for an event with P = 0.3?"}
+Use 0, 1, 2 for "yes" (3 of the 10 digits) and 3 to 9 for "no."
+:::
+
+{{< practice >}}
+
+Work with a partner. Compare answers when you finish each problem.
+
+**Theoretical and Experimental**
+
+1. A spinner has 4 equal parts: red, blue, green, yellow. It is spun 40 times: red 14, blue 8, green 10, yellow 8.
+
+   a. Find the experimental probability of red.
+
+   b. Find the theoretical probability of red.
+
+   c. Why are they different?
+
+   d. What would you expect if the spinner were spun 4,000 times?
+
+2. How would you assign random digits to simulate each event?
+
+   a. A coin lands heads ($P = 0.5$).
+
+   b. A student is chosen from a class where 30% walk to school.
+
+   c. A number cube is rolled.
+
+   d. An event with $P = 0.25$.
+
+***
+
+**Running and Reading Simulations**
+
+3. A family has 3 children. Each child is equally likely to be a girl or a boy. Simulate: even digit = girl, odd digit = boy. One trial = 3 digits.
+
+   a. Use **row 2** to run 10 trials. Count the girls in each trial.
+
+   b. Estimate $P(\text{at least 2 girls})$ from your simulation.
+
+   c. The theoretical probability is 0.5. How could you make your estimate closer?
+
+4. A student flips a coin 50 times and gets 34 heads. She wonders if the coin is fair. A computer simulated 100 sets of 50 flips of a fair coin. The number of heads ranged from 17 to 33. No set had 34 or more heads.
+
+   a. What does the simulation tell you about getting 34 heads with a fair coin?
+
+   b. Do you think the coin is fair? Explain.

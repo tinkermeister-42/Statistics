@@ -1,0 +1,13 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}
+\begin{document}
+\begin{tikzpicture}[x=1.5cm,y=0.8cm]
+  \shadez{-0.667}{1.333}
+  \bellcurve
+  \zaxis{64}{3}
+  \foreach \v/\z in {62/-0.667,68/1.333} \draw[thick] (\z,0) -- (\z,{3*exp(-\z*\z/2)});
+  \node[font=\small] at (-0.667,-1.05) {\textbf{62}};
+  \node[font=\small] at (1.333,-1.05) {\textbf{68}};
+  \node at (0,-1.7) {Height of adult women (inches)};
+\end{tikzpicture}
+\end{document}

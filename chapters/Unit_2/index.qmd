@@ -1,0 +1,42 @@
+# Introduction {.unnumbered}
+
+Welcome to Unit 2! In Unit 1, you showed data with graphs. Now you measure it.
+
+Two classes can have the same average score. In one class, everyone is close to the average. In the other, scores are all over the place. This unit gives you numbers for that difference.
+
+***
+
+## What You'll Learn
+
+By the end of this unit, you will be able to:
+
+* Find and explain the standard deviation
+* Choose the best measures of center and spread
+* Compare two distributions
+* Find percentiles and z-scores
+* Use the empirical rule for normal distributions
+* Use a z-table to find areas and values in a normal distribution
+
+This unit matches **Unit 2: Analyzing a single quantitative variable** in Khan Academy's Statistics essentials.
+
+***
+
+## Topics in This Unit
+
+[**Standard Deviation**](2.1_Standard_Deviation.qmd)\
+Measure how far the values usually are from the mean.
+
+[**Choosing Measures & Comparing Distributions**](2.2_Choosing_Measures_and_Comparing_Distributions.qmd)\
+Pick mean and SD or median and IQR. Compare two groups.
+
+[**Percentiles & Z-Scores**](2.3_Percentiles_and_Z-Scores.qmd)\
+Tell where one value stands in a data set.
+
+[**Normal Distributions & the Empirical Rule**](2.4_Normal_Distributions_and_the_Empirical_Rule.qmd)\
+Use the 68-95-99.7 rule on a bell-shaped curve.
+
+[**Normal Calculations with a Z-Table**](2.5_Normal_Calculations_with_a_Z-Table.qmd)\
+Find the percent of data above, below, or between values.
+
+[**Normal Calculations in Reverse**](2.6_Normal_Calculations_in_Reverse.qmd)\
+Find the value that matches a percentile.

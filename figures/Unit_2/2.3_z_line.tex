@@ -1,0 +1,16 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}
+\begin{document}
+\begin{tikzpicture}[x=0.3cm,y=1cm]
+  \draw[thick] (45,0) -- (95,0);
+  \foreach \s/\z in {50/$-2$,60/$-1$,70/0,80/1,90/2} {
+    \draw (\s,0.18) -- (\s,-0.18);
+    \node[below] at (\s,-0.2) {\s};
+    \node[font=\small] at (\s,-1.0) {\z};}
+  \node[anchor=east,font=\small] at (44,-0.45) {score};
+  \node[anchor=east,font=\small] at (44,-1.0) {$z$};
+  \fill (85,0) circle (3pt);
+  \draw[->] (85,1.1) node[above,font=\small,align=center] {85\\$z = 1.5$} -- (85,0.2);
+  \draw[decorate,decoration={brace,amplitude=4pt}] (70,0.35) -- (80,0.35) node[midway,above=3pt,font=\footnotesize] {1 SD = 10};
+\end{tikzpicture}
+\end{document}

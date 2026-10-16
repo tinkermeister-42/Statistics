@@ -1,0 +1,15 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}
+\begin{document}
+\begin{tikzpicture}[x=0.6cm,y=1cm]
+  \begin{scope}[yshift=2.6cm]
+    \axis{0}{20}{2}{1}{}
+    \dotsat{9/1,10/3,11/1}
+    \node[anchor=east,font=\small\bfseries] at (-0.6,0.6) {Player A};
+  \end{scope}
+  \axis{0}{20}{2}{1}{Points scored in a game}
+  \dotsat{2/1,5/1,10/1,15/1,18/1}
+  \node[anchor=east,font=\small\bfseries] at (-0.6,0.6) {Player B};
+  \draw[dashed,gray] (10,-0.2) -- (10,3.9) node[above,font=\footnotesize,black] {mean = 10};
+\end{tikzpicture}
+\end{document}

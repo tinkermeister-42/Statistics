@@ -155,3 +155,15 @@
   border-top: 2px dashed #9aa3ab;
 }
 .daybreak p { margin: 0; }
+
+/* Link to the matching Khan Academy lessons, under the printable-sheet link */
+.khan-link {
+  margin: -0.5rem 0 1rem;
+  padding: 0.5rem 0.85rem;
+  border-left: 4px solid #14bf96;
+  background: #eefaf6;
+  border-radius: 2px;
+  font-size: 0.95rem;
+}
+.khan-link p { margin: 0; }
+.khan-link p::before { content: "\1F393\00a0"; }

@@ -1,0 +1,146 @@
+\documentclass[11pt]{article}
+\input{../preamble}
+
+\begin{document}
+
+\lessontitle{Choosing Measures and Comparing Distributions}
+
+\textbf{Which measures should you use?} It depends on the shape of the data.
+
+\vspace{0.4em}
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|c|c|}\hline
+\textbf{Shape of the data} & \textbf{Center} & \textbf{Spread} \\ \hline
+Symmetric, no outliers & mean & standard deviation \\ \hline
+Skewed, or has outliers & median & IQR \\ \hline
+\end{tabular}
+\end{center}
+
+\textbf{Why?} An outlier pulls the mean and the SD. It does not pull the median and the IQR much.
+
+\vspace{0.4em}
+\textbf{Example:} 2, 3, 3, 4, 5, 40
+
+\vspace{0.2em}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|l|c|c|c|c|}\hline
+ & Mean & SD & Median & IQR \\ \hline
+With 40 & 9.5 & 15.0 & 3.5 & 2 \\ \hline
+Without 40 & 3.4 & 1.1 & 3 & 2 \\ \hline
+\end{tabular}
+\qquad
+\begin{minipage}{2.6in}
+One value moved the mean by 6.1 and the SD by about 14. The median moved 0.5. The IQR did not move.
+\end{minipage}
+
+\vspace{1em}
+\textbf{Comparing two distributions.} Talk about all four of these. Use numbers and the context.
+
+\vspace{0.3em}
+\begin{tabular}{@{}ll}
+\textbf{Shape:} & symmetric or skewed?\\
+\textbf{Center:} & which group is higher? (median or mean)\\
+\textbf{Spread:} & which group is more spread out? (IQR or SD)\\
+\textbf{Outliers:} & any values far from the rest?\\
+\end{tabular}
+
+\begin{center}\fig{Unit_2/2.2_sleep}\end{center}
+
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{0.9in}|>{\raggedright\arraybackslash}p{5.7in}|}\hline
+Shape & 9th grade is symmetric. 12th grade is skewed right.\\ \hline
+Center & The median for 9th grade (8 hours) is greater than for 12th grade (6 hours). 9th graders usually sleep about 2 hours more.\\ \hline
+Spread & Both groups have an IQR of 2 hours. The spreads are about the same.\\ \hline
+Outliers & One 12th grader slept 12 hours. That is an outlier (the upper fence is 10).\\ \hline
+\end{tabular}
+
+\vspace{0.4em}
+12th grade has an outlier, so we compare with the median and the IQR.
+
+\partner
+
+% ---------------- PROBLEMS ----------------
+\newpage
+\begin{enumerate}
+
+\item For each data set, should you use the \textbf{mean and SD} or the \textbf{median and IQR}? Explain.
+\begin{enumerate}[itemsep=2em]
+  \item The heights of 200 adult women. The histogram is symmetric.
+
+  \ans{Mean and SD. The data is symmetric with no outliers.}
+  \item The price of every house sold in a city. The histogram is skewed right.
+
+  \ans{Median and IQR. The data is skewed.}
+  \item Quiz scores: 7, 8, 8, 9, 9, 10, 2
+
+  \ans{Median and IQR. 2 is an outlier.}
+\end{enumerate}
+\work{2em}
+
+\item Look at the example on page 1: 2, 3, 3, 4, 5, 40.
+\begin{enumerate}[itemsep=2em]
+  \item Which pair describes a typical value better: mean 9.5 and SD 15.0, or median 3.5 and IQR 2? Explain.
+
+  \ans{Median 3.5 and IQR 2. Five of the six values are from 2 to 5. The mean of 9.5 is bigger than all of them except 40.}
+  \item A student says, ``The SD is 15, so the values are very spread out.'' Is that a fair description? Explain.
+
+  \ans{No. Five values are packed from 2 to 5. One outlier makes the SD large.}
+\end{enumerate}
+\work{2em}
+
+\item These dot plots show how many books students in two classes read this summer.
+\begin{center}\fig{Unit_2/2.2_books}\end{center}
+\begin{enumerate}[itemsep=1.4em]
+  \item Describe the shape of each class.
+
+  \ans{Class A is symmetric. Class B is skewed right.}
+  \item Class A has median 3 and IQR 2. Class B has median 1 and IQR 2. Compare the centers.
+
+  \ans{The median for Class A (3 books) is greater than for Class B (1 book). Class A usually read 2 more books.}
+  \work{1em}
+  \item Compare the spreads.
+
+  \ans{Both IQRs are 2 books. The spreads are about the same.}
+  \item Does either class have an outlier? Explain.
+
+  \ans{Yes. One student in Class B read 9 books. The upper fence for B is $3 + 1.5 \times 2 = 6$.}
+\end{enumerate}
+
+\newpage
+\item These box plots show test scores in two class periods.
+\begin{center}\fig{Unit_2/2.2_periods}\end{center}
+\begin{enumerate}[itemsep=2em]
+  \item Compare the centers. Use numbers.
+
+  \ans{The medians are close: Period 2 is 78 and Period 5 is 76. Period 2 is a little higher.}
+  \item Compare the spreads. Use numbers.
+
+  \ans{Period 2 IQR $= 85 - 70 = 15$. Period 5 IQR $= 79 - 72 = 7$. Period 2 is much more spread out.}
+  \item Which period's scores are more consistent? Explain.
+
+  \ans{Period 5. Its IQR and its range are both smaller.}
+\end{enumerate}
+\work{2em}
+
+\item Two soccer teams measured the heights of their players. Both histograms are symmetric.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|l|c|c|}\hline
+ & Mean & SD \\ \hline
+Team X & 70 inches & 2 inches \\ \hline
+Team Y & 72 inches & 5 inches \\ \hline
+\end{tabular}
+\end{center}
+\begin{enumerate}[itemsep=2em]
+  \item Which team is taller on average? \ans{\quad Team Y, by 2 inches.}
+  \item Which team has heights that are more spread out? \ans{\quad Team Y. Its SD is larger.}
+  \item Write one sentence that compares the two teams. Use both the center and the spread.
+
+  \ans{Team Y is taller on average (72 vs 70 inches), and its heights are more spread out (SD 5 vs 2 inches).}
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

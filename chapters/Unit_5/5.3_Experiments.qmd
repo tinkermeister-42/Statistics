@@ -1,0 +1,112 @@
+# 5.3 - Experiments {.unnumbered}
+
+Does a new pill stop headaches? You could compare people who chose to take it with people who did not. But those two groups might be different in many ways: age, sleep, stress.
+
+An {{< glink experiment >}} solves this. The researcher gives the treatment on purpose and compares groups that are alike.
+
+:::{.objectives}
+- [ ] I name the subjects, treatments, explanatory variable, and response variable in an experiment.
+- [ ] I explain control groups, placebos, and blinding.
+- [ ] I explain why random assignment matters.
+- [ ] I describe a completely randomized design and a matched pairs design.
+:::
+
+:::{.vocab}
+{{< glink experiment >}},
+{{< glink treatment >}},
+{{< glink "explanatory variable" >}},
+{{< glink "response variable" >}},
+{{< glink "control group" >}},
+{{< glink placebo >}},
+{{< glink "double-blind" >}},
+{{< glink "random assignment" >}},
+{{< glink "matched pairs" >}}
+:::
+
+:::{.guided-notes-link}
+[Printable mini lesson](/handouts/Unit_5/5.3_Experiments.pdf){target="_blank"} - notes and practice problems to print and write on.
+:::
+
+{{< khan 5.4 >}}
+
+{{< learn >}}
+
+### 5.3.1 - The Language of Experiments
+
+| Word | In the headache experiment |
+|---|---|
+| Subjects (experimental units) | The 40 volunteers with headaches |
+| {{< glink "explanatory variable" text="Explanatory variable" >}} | What we change: the type of pill |
+| {{< glink treatment text="Treatments" >}} | The things we compare: new pill, placebo |
+| {{< glink "response variable" text="Response variable" >}} | What we measure: headache relief |
+| {{< glink "control group" text="Control group" >}} | The group that does not get the new treatment |
+| {{< glink placebo text="Placebo" >}} | A fake treatment that looks real, like a sugar pill |
+| {{< glink "double-blind" text="Double-blind" >}} | Neither the subjects nor the people measuring know who got which pill |
+
+![](/images/Unit_5/5.3_design.svg){width="620px" fig-align="center"}
+
+***
+
+### 5.3.2 - Principles of a Good Experiment
+
+:::{.remember title="Control, Random Assignment, Replication"}
+- **Control:** Compare to a control group. Keep everything else the same for both groups.
+- **Random assignment:** Use chance to put subjects into groups. Then the groups are alike except for the treatment.
+- **Replication:** Use enough subjects that chance differences between people even out.
+:::
+
+:::{.think title="Why give the control group a placebo?"}
+People often feel better just because they *think* they got medicine. This is the **placebo effect**. With a placebo, both groups think they are being treated. So any extra difference comes from the real pill.
+:::
+
+***
+
+### 5.3.3 - Matched Pairs
+
+In a {{< glink "matched pairs" >}} design, each subject gets **both** treatments, in a random order. Or you pair up very similar subjects, like twins.
+
+**Example:** Which running shoe is faster? Each runner runs once in each shoe. A coin flip decides which shoe goes first. Comparing each runner to themselves removes the differences between runners.
+
+:::{.you-try title="Why flip a coin to decide which shoe goes first?"}
+Runners might be tired on the second run, or warmed up. The coin keeps that from always helping the same shoe.
+:::
+
+{{< practice >}}
+
+Work with a partner. Compare answers when you finish each problem.
+
+**Parts of an Experiment**
+
+1. 60 tomato plants are randomly split into two groups of 30. One group gets a new fertilizer. The other gets only water. After 6 weeks, the weight of the tomatoes is measured.
+
+   a. What are the subjects?
+
+   b. What is the explanatory variable?
+
+   c. What is the response variable?
+
+   d. What is the control group?
+
+   e. Why split the plants **randomly**?
+
+2. In the headache experiment, the study is double-blind.
+
+   a. Why should the subjects not know which pill they got?
+
+   b. Why should the nurses who measure headache relief not know?
+
+***
+
+**Designing Experiments**
+
+3. Does listening to music help students memorize a list of words? You have 50 student volunteers. Describe a completely randomized experiment. Name the treatments, how you assign them, and what you measure.
+
+4. A company tests two hand lotions. Each of 20 volunteers puts Lotion A on one hand and Lotion B on the other. A coin flip decides which hand gets A. After a week, a doctor rates the dryness of each hand.
+
+   a. What kind of design is this?
+
+   b. Why flip a coin to pick the hand?
+
+   c. Why is this design better than giving 10 people Lotion A and 10 people Lotion B?
+
+5. A teacher tries a new reading program with her 1st-hour class and the old program with her 6th-hour class. The 1st-hour class scores higher. Can she conclude the new program works better? Explain.

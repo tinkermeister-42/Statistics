@@ -1,0 +1,145 @@
+# 2.2 - Choosing Measures and Comparing Distributions {.unnumbered}
+
+Here are six numbers: 2, 3, 3, 4, 5, 40.
+
+The mean is 9.5. The median is 3.5. Five of the six values are 5 or less. Which number tells the truth about a typical value?
+
+In this lesson, you choose the best measures of {{< glink center >}} and {{< glink spread >}}. Then you use them to compare two groups.
+
+:::{.objectives}
+- [ ] I choose mean and SD or median and IQR based on the shape of the data.
+- [ ] I compare two distributions using shape, center, spread, and outliers.
+- [ ] I write comparisons with numbers and context.
+:::
+
+:::{.vocab}
+{{< glink center >}},
+{{< glink spread >}},
+{{< glink distribution >}},
+{{< glink outlier >}},
+{{< glink "standard deviation" >}},
+{{< glink "interquartile range" >}}
+:::
+
+:::{.guided-notes-link}
+[Printable mini lesson](/handouts/Unit_2/2.2_Choosing_Measures_and_Comparing_Distributions.pdf){target="_blank"} - notes and practice problems to print and write on.
+:::
+
+{{< khan 2.1 2.2 >}}
+
+{{< learn >}}
+
+### 2.2.1 - Which Measures to Use
+
+:::{.remember title="Choose by Shape"}
+| Shape of the data | Center | Spread |
+|---|:---:|:---:|
+| Symmetric, no outliers | mean | standard deviation |
+| Skewed, or has outliers | median | IQR |
+:::
+
+An outlier pulls the mean and the SD. It does not pull the median and the IQR much.
+
+**Example:** 2, 3, 3, 4, 5, 40
+
+| | Mean | SD | Median | IQR |
+|---|:---:|:---:|:---:|:---:|
+| With 40 | 9.5 | 15.0 | 3.5 | 2 |
+| Without 40 | 3.4 | 1.1 | 3 | 2 |
+
+One value moved the mean by 6.1 and the SD by about 14. The median moved 0.5. The IQR did not move.
+
+:::{.gotcha title="A large SD can come from one value"}
+The SD of 2, 3, 3, 4, 5, 40 is 15. That does not mean all the values are spread out. Five of them are packed from 2 to 5. One outlier makes the SD large.
+:::
+
+***
+
+### 2.2.2 - Comparing Two Distributions
+
+When you compare two groups, talk about all four of these. Use numbers and the context.
+
+| | Ask |
+|---|---|
+| **Shape** | Symmetric or skewed? |
+| **Center** | Which group is higher? (median or mean) |
+| **Spread** | Which group is more spread out? (IQR or SD) |
+| **Outliers** | Any values far from the rest? |
+
+**Example:** How many hours did students sleep last night?
+
+![](/images/Unit_2/2.2_sleep.svg){width="520px" fig-align="center"}
+
+| | Comparison |
+|---|---|
+| Shape | 9th grade is symmetric. 12th grade is skewed right. |
+| Center | The median for 9th grade (8 hours) is greater than for 12th grade (6 hours). 9th graders usually sleep about 2 hours more. |
+| Spread | Both groups have an IQR of 2 hours. The spreads are about the same. |
+| Outliers | One 12th grader slept 12 hours. That is an outlier (the upper fence is 10). |
+
+12th grade has an outlier, so we compare with the median and the IQR.
+
+:::{.gotcha title="Use comparing words"}
+"9th grade has a median of 8. 12th grade has a median of 6." This lists two facts. It does not compare.
+
+"The median for 9th grade is **2 hours greater than** for 12th grade." This compares.
+:::
+
+{{< practice >}}
+
+Work with a partner. Compare answers when you finish each problem.
+
+**Choosing Measures**
+
+1. For each data set, should you use the **mean and SD** or the **median and IQR**? Explain.
+
+   a. The heights of 200 adult women. The histogram is symmetric.
+
+   b. The price of every house sold in a city. The histogram is skewed right.
+
+   c. Quiz scores: 7, 8, 8, 9, 9, 10, 2
+
+2. Look at the example above: 2, 3, 3, 4, 5, 40.
+
+   a. Which pair describes a typical value better: mean 9.5 and SD 15.0, or median 3.5 and IQR 2? Explain.
+
+   b. A student says, "The SD is 15, so the values are very spread out." Is that a fair description? Explain.
+
+***
+
+**Comparing Distributions**
+
+3. These dot plots show how many books students in two classes read this summer.
+
+   ![](/images/Unit_2/2.2_books.svg){width="480px"}
+
+   a. Describe the shape of each class.
+
+   b. Class A has median 3 and IQR 2. Class B has median 1 and IQR 2. Compare the centers.
+
+   c. Compare the spreads.
+
+   d. Does either class have an outlier? Explain.
+
+4. These box plots show test scores in two class periods.
+
+   ![](/images/Unit_2/2.2_periods.svg){width="520px"}
+
+   a. Compare the centers. Use numbers.
+
+   b. Compare the spreads. Use numbers.
+
+   c. Which period's scores are more consistent? Explain.
+
+5. Two soccer teams measured the heights of their players. Both histograms are symmetric.
+
+   | | Mean | SD |
+   |---|:---:|:---:|
+   | Team X | 70 inches | 2 inches |
+   | Team Y | 72 inches | 5 inches |
+
+   a. Which team is taller on average?
+
+   b. Which team has heights that are more spread out?
+
+   c. Write one sentence that compares the two teams. Use both the center and the spread.

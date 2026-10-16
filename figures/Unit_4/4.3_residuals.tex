@@ -1,0 +1,15 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}
+\begin{document}
+\begin{tikzpicture}[x=0.85cm,y=0.09cm]
+  \grid{0}{9}{1}{50}{100}{10}{Hours studied}{Test score}
+  \draw[thick,blue!70!black] (0,54) -- (9,99);
+  \foreach \x/\y in {1/58,2/62,2/66,3/70,4/72,4/78,5/80,6/84,7/88,8/96} {
+    \pgfmathsetmacro{\yh}{5*\x+54}
+    \draw[red!70!black,thick] (\x,\y) -- (\x,\yh);}
+  \pts{1/58,2/62,2/66,3/70,4/72,4/78,5/80,6/84,7/88,8/96}
+  \node[font=\small,anchor=east] at (3.9,80) {$+4$};
+  \node[font=\small,anchor=west] at (4.1,71) {$-2$};
+  \node[font=\small,blue!70!black,anchor=west] at (6.6,82) {$\hat{y} = 5x + 54$};
+\end{tikzpicture}
+\end{document}
