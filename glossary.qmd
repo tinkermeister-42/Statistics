@@ -8,6 +8,16 @@ Two variables are associated when knowing one tells you something about the othe
 
 ***
 
+### bias {#glossary-bias}
+
+When the way data is collected favors some answers over others. A biased sample does not represent the population.
+
+> **Example:**
+>
+> Voluntary response, convenience, undercoverage, nonresponse, and response bias.
+
+***
+
 ### bin {#glossary-bin}
 
 One group of values in a histogram. Each bar of a histogram is one bin.
@@ -52,11 +62,35 @@ A single number that describes a typical value in a data set. The mean and the m
 
 ***
 
+### cluster sample {#glossary-cluster-sample}
+
+Split the population into groups (clusters). Then randomly choose some whole clusters and use everyone in them.
+
+**See Also:** {{< glink "stratified sample" >}}
+
+***
+
 ### conditional distribution {#glossary-conditional-distribution}
 
 The percents for one variable inside a single group. Divide each count in that group's row (or column) by the group's total.
 
 **See Also:** {{< glink "marginal distribution" >}}, {{< glink association >}}
+
+***
+
+### control group {#glossary-control-group}
+
+The group in an experiment that does not get the new treatment. It may get a placebo or the usual treatment.
+
+**See Also:** {{< glink placebo >}}
+
+***
+
+### convenience sample {#glossary-convenience-sample}
+
+A sample of people who are easy to reach. It is usually biased.
+
+**See Also:** {{< glink bias >}}
 
 ***
 
@@ -94,11 +128,33 @@ A graph that puts one dot above a number line for each data value. Dots for the 
 
 ***
 
+### double-blind {#glossary-double-blind}
+
+An experiment where neither the subjects nor the people measuring the results know who got which treatment.
+
+***
+
 ### empirical rule {#glossary-empirical-rule}
 
 In a normal distribution, about 68% of the data is within 1 standard deviation of the mean, about 95% is within 2, and about 99.7% is within 3. Also called the 68-95-99.7 rule.
 
 **See Also:** {{< glink "normal distribution" >}}
+
+***
+
+### experiment {#glossary-experiment}
+
+A study where the researcher gives a treatment on purpose and measures what happens. With random assignment, an experiment can show cause and effect.
+
+**See Also:** {{< glink treatment >}}, {{< glink "random assignment" >}}
+
+***
+
+### explanatory variable {#glossary-explanatory-variable}
+
+The variable a researcher changes, or uses to explain changes in another variable. In a scatterplot, it goes on the $x$-axis.
+
+**See Also:** {{< glink "response variable" >}}
 
 ***
 
@@ -139,6 +195,14 @@ How many times a value happens in a data set.
 A table that lists each value and its frequency.
 
 **See Also:** {{< glink frequency >}}, {{< glink tally >}}
+
+***
+
+### generalize {#glossary-generalize}
+
+To say that results from a sample are true for the whole population. This is only safe when the sample was chosen at random.
+
+**See Also:** {{< glink sample >}}, {{< glink population >}}
 
 ***
 
@@ -202,6 +266,12 @@ The percents for one variable, found from the totals in the margins of a two-way
 
 ***
 
+### matched pairs {#glossary-matched-pairs}
+
+An experiment design where each subject gets both treatments in a random order, or very similar subjects are paired and each gets a different treatment.
+
+***
+
 ### maximum {#glossary-maximum}
 
 The largest value in a data set.
@@ -262,6 +332,14 @@ A bell-shaped, symmetric distribution. Its mean and median are equal and sit in 
 
 ***
 
+### observational study {#glossary-observational-study}
+
+A study that watches or measures without changing anything. It can show an association but not a cause.
+
+**See Also:** {{< glink experiment >}}
+
+***
+
 ### outlier {#glossary-outlier}
 
 A value that is far away from the rest of the data. A common rule: a value is an outlier if it is more than $1.5 \times \text{IQR}$ below Q1 or above Q3.
@@ -282,6 +360,12 @@ The percent of the data that is below a value.
 
 ***
 
+### placebo {#glossary-placebo}
+
+A fake treatment that looks real, like a sugar pill. People can feel better just from believing they were treated (the placebo effect).
+
+***
+
 ### population {#glossary-population}
 
 The whole group we want to learn about.
@@ -299,6 +383,14 @@ The whole group we want to learn about.
 The three values that cut ordered data into four parts with the same number of values. Q1 is the median of the lower half. The median is Q2. Q3 is the median of the upper half.
 
 **See Also:** {{< glink "five-number summary" >}}, {{< glink "interquartile range" >}}
+
+***
+
+### random assignment {#glossary-random-assignment}
+
+Using chance to decide which subjects get which treatment. It makes the groups alike, so a difference can be blamed on the treatment.
+
+**See Also:** {{< glink experiment >}}
 
 ***
 
@@ -338,11 +430,27 @@ A graph of the residuals against $x$. Random scatter means a line is a good mode
 
 ***
 
+### response variable {#glossary-response-variable}
+
+The variable that is measured to see the effect. In a scatterplot, it goes on the $y$-axis.
+
+**See Also:** {{< glink "explanatory variable" >}}
+
+***
+
 ### sample {#glossary-sample}
 
 A part of a group that we collect data from. We use the sample to learn about the whole group (the population).
 
 **See Also:** {{< glink population >}}
+
+***
+
+### sample survey {#glossary-sample-survey}
+
+A study that asks a sample of people questions.
+
+**See Also:** {{< glink "observational study" >}}, {{< glink experiment >}}
 
 ***
 
@@ -375,6 +483,22 @@ What a graph of the data looks like: symmetric, skewed left, or skewed right.
 The small Greek letter $\sigma$. It stands for the standard deviation of a population or of a normal distribution. The capital letter $\Sigma$ means something different: add up.
 
 **See Also:** {{< glink "standard deviation" >}}, {{< glink mu >}}
+
+***
+
+### simple random sample {#glossary-simple-random-sample}
+
+A sample where every group of people of that size has the same chance of being chosen. Also called an SRS.
+
+**See Also:** {{< glink "stratified sample" >}}
+
+***
+
+### simulation {#glossary-simulation}
+
+Using random numbers or shuffling to copy a chance process many times, to see what usually happens.
+
+**See Also:** {{< glink "statistically significant" >}}
 
 ***
 
@@ -424,9 +548,31 @@ $$s = \sqrt{\frac{\Sigma(x - \bar{x})^2}{n - 1}}$$
 
 ***
 
+### statistically significant {#glossary-statistically-significant}
+
+A result that is too big to happen by chance alone very often (usually less than 5% of the time).
+
+**See Also:** {{< glink simulation >}}
+
+***
+
+### stratified sample {#glossary-stratified-sample}
+
+Split the population into groups that are alike (strata). Then take a random sample from each group.
+
+**See Also:** {{< glink "cluster sample" >}}
+
+***
+
 ### symmetric {#glossary-symmetric}
 
 A shape where the left side and the right side look about the same. The mean and the median are about equal.
+
+***
+
+### systematic sample {#glossary-systematic-sample}
+
+Pick a random starting point. Then choose every $k$th person on a list.
 
 ***
 
@@ -439,6 +585,14 @@ The long, low side of a graph. The mean is pulled toward the tail.
 ### tally {#glossary-tally}
 
 A mark made for each data value as you count it.
+
+***
+
+### treatment {#glossary-treatment}
+
+What the researcher does to the subjects in an experiment.
+
+**See Also:** {{< glink experiment >}}, {{< glink "control group" >}}
 
 ***
 

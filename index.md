@@ -44,10 +44,10 @@ Do the mini lesson first. Then do the matching Khan Academy lessons.
 | [4.2](chapters/Unit_4/4.2_Slope_Intercept_and_Correlation.qmd) | Slope, intercept, and correlation | Unit 4, lesson {{< khanlink 4.2 "2" >}} |
 | [4.3](chapters/Unit_4/4.3_Residuals.qmd) | Residuals | Unit 4, lesson {{< khanlink 4.3 "3" >}} |
 | **Unit 5: Study Design** | | |
-| 5.1 | Samples, studies, and bias | Unit 5, lessons {{< khanlink 5.1 "1" >}} and {{< khanlink 5.2 "2" >}} |
-| 5.2 | Sampling methods | Unit 5, lesson {{< khanlink 5.3 "3" >}} |
-| 5.3 | Experiments | Unit 5, lesson {{< khanlink 5.4 "4" >}} |
-| 5.4 | What a study can prove | Unit 5, lesson {{< khanlink 5.5 "5" >}} |
+| [5.1](chapters/Unit_5/5.1_Samples_Studies_and_Bias.qmd) | Samples, studies, and bias | Unit 5, lessons {{< khanlink 5.1 "1" >}} and {{< khanlink 5.2 "2" >}} |
+| [5.2](chapters/Unit_5/5.2_Sampling_Methods.qmd) | Sampling methods | Unit 5, lesson {{< khanlink 5.3 "3" >}} |
+| [5.3](chapters/Unit_5/5.3_Experiments.qmd) | Experiments | Unit 5, lesson {{< khanlink 5.4 "4" >}} |
+| [5.4](chapters/Unit_5/5.4_What_a_Study_Can_Prove.qmd) | What a study can prove | Unit 5, lesson {{< khanlink 5.5 "5" >}} |
 | **Unit 6: Probability** | | |
 | 6.1 | Venn diagrams and the addition rule | Unit 6, lesson {{< khanlink 6.1 "1" >}} |
 | 6.2 | The multiplication rule | Unit 6, lesson {{< khanlink 6.2 "2" >}} |

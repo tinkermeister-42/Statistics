@@ -1,0 +1,107 @@
+# 5.2 - Sampling Methods {.unnumbered}
+
+A school has 1,200 students. The principal wants to ask 60 of them about the new schedule.
+
+If she asks the first 60 students who walk in the door, she gets the early arrivers. They may not be like everyone else. The best ways to choose use **chance**, so no group is favored.
+
+:::{.objectives}
+- [ ] I name and describe simple random, stratified, cluster, systematic, and convenience samples.
+- [ ] I tell stratified and cluster samples apart.
+- [ ] I use a random digit table to choose a sample.
+- [ ] I choose a good sampling method for a situation.
+:::
+
+:::{.vocab}
+{{< glink "simple random sample" >}},
+{{< glink "stratified sample" >}},
+{{< glink "cluster sample" >}},
+{{< glink "systematic sample" >}},
+{{< glink "convenience sample" >}}
+:::
+
+:::{.guided-notes-link}
+[Printable mini lesson](/handouts/Unit_5/5.2_Sampling_Methods.pdf){target="_blank"} - notes and practice problems to print and write on.
+:::
+
+{{< khan 5.3 >}}
+
+{{< learn >}}
+
+### 5.2.1 - Five Ways to Choose a Sample
+
+| Method | How it works | Example (60 of 1,200) |
+|---|---|---|
+| **Simple random sample (SRS)** | Every group of people has the same chance of being chosen. Like drawing names from a hat. | Number the students 1 to 1,200. A random number generator picks 60 numbers. |
+| **Stratified** | Split the population into groups that are alike (**strata**). Take a random sample from **each** group. | Randomly pick 15 students from each grade: 9th, 10th, 11th, 12th. |
+| **Cluster** | Split the population into groups (**clusters**). Randomly pick some **whole** groups. | Randomly pick 3 homerooms. Ask everyone in them. |
+| **Systematic** | Pick a random start. Then take every $k$th person. | Start at a random student from 1 to 20. Then take every 20th student on the list. |
+| **Convenience** (bad) | Take whoever is easy to reach. | Ask the first 60 students who walk in the door. |
+
+:::{.gotcha title="Stratified or cluster?"}
+- **Stratified:** a **few** from **every** group.
+- **Cluster:** **everyone** from a **few** groups.
+:::
+
+***
+
+### 5.2.2 - Using a Random Digit Table
+
+Each digit in the table is random. For 2-digit numbers, read the digits in pairs.
+
+| | |
+|---|---|
+| Row 1 | `52601 81590 83016 61318 60913 90996 03082 46281` |
+| Row 2 | `94821 99351 81909 37865 79754 32319 48757 49118` |
+| Row 3 | `62527 60189 55597 97114 71049 74650 75291 70342` |
+
+**Example:** Choose 3 of 25 students, numbered 01 to 25. Use row 1.
+
+Pairs: 52, 60, **18**, **15**, 90, 83, **01**, ...
+
+Skip numbers over 25. Skip repeats. The sample is students **18, 15, and 01**.
+
+:::{.think title="Why use chance at all?"}
+People who pick a sample "by hand" often pick, without meaning to, people who are easy to reach or similar to themselves. Chance does not pick favorites, so a random sample is not biased toward any group.
+:::
+
+{{< practice >}}
+
+Work with a partner. Compare answers when you finish each problem.
+
+**Naming Methods**
+
+1. Name the sampling method.
+
+   a. A store gives a survey to every 10th customer, starting with a randomly chosen customer from the first 10.
+
+   b. A city randomly picks 5 of its 40 neighborhoods and surveys every home in those 5.
+
+   c. A teacher puts all 28 names in a hat and draws 6.
+
+   d. A college randomly picks 50 first-year, 50 second-year, 50 third-year, and 50 fourth-year students.
+
+   e. A reporter asks people walking past a coffee shop.
+
+2. A class has 30 students, numbered 01 to 30. Use **row 3** of the random digit table to choose 4 students.
+
+***
+
+**Choosing a Method**
+
+3. A school wants to survey 100 of its 1,000 students about sports. About half of the students play a sport.
+
+   a. Describe how to take a stratified sample.
+
+   b. Why might a stratified sample be better than an SRS here?
+
+4. A farmer has 50 rows of corn. She wants to check 500 plants for insects. She randomly picks 5 rows and checks every plant in them.
+
+   a. What method is this?
+
+   b. Why would a farmer choose this method?
+
+5. Maya wants to know how students feel about school lunch. She surveys the first 40 students in the lunch line.
+
+   a. What method is this? What is the problem?
+
+   b. Describe a better way for Maya to choose 40 students.

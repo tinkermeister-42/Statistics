@@ -1,0 +1,36 @@
+# Introduction {.unnumbered}
+
+Welcome to Unit 5! Every day you hear claims like "Studies show..." or "A survey found...". Some of those claims are true. Some come from studies that were set up badly.
+
+In this unit, you learn how good studies are designed. Then you can judge the claims you hear for yourself.
+
+***
+
+## What You'll Learn
+
+By the end of this unit, you will be able to:
+
+* Name the population and the sample in a study
+* Tell surveys, observational studies, and experiments apart
+* Find bias in a sample or a survey question
+* Choose and use random sampling methods
+* Design an experiment with a control group and random assignment
+* Decide what a study can and cannot prove
+
+This unit matches **Unit 5: Study design** in Khan Academy's Statistics essentials.
+
+***
+
+## Topics in This Unit
+
+[**Samples, Studies & Bias**](5.1_Samples_Studies_and_Bias.qmd)\
+Who is in a study, what kind of study it is, and how it can go wrong.
+
+[**Sampling Methods**](5.2_Sampling_Methods.qmd)\
+Pick a sample that represents the population.
+
+[**Experiments**](5.3_Experiments.qmd)\
+Test a treatment fairly.
+
+[**What a Study Can Prove**](5.4_What_a_Study_Can_Prove.qmd)\
+Decide when results apply to everyone and when they show a cause.
