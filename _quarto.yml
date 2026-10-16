@@ -94,5 +94,8 @@ book:
         - file: chapters/Unit_6/6.2_The_Multiplication_Rule.qmd
         - file: chapters/Unit_6/6.3_Conditional_Probability.qmd
         - file: chapters/Unit_6/6.4_Simulations.qmd
+        - file: chapters/Unit_6/6.5_Permutations.qmd
+        - file: chapters/Unit_6/6.6_Combinations.qmd
+        - file: chapters/Unit_6/6.7_Probability_with_Counting.qmd
 
     - file: glossary.qmd

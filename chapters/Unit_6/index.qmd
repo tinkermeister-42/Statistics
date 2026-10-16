@@ -36,11 +36,11 @@ Find a probability when you already know something happened.
 [**Simulations**](6.4_Simulations.qmd)\
 Use random numbers to estimate a probability.
 
-**Permutations** (coming soon)\
+[**Permutations**](6.5_Permutations.qmd)\
 Count arrangements where order matters.
 
-**Combinations** (coming soon)\
+[**Combinations**](6.6_Combinations.qmd)\
 Count groups where order does not matter.
 
-**Probability with Counting** (coming soon)\
+[**Probability with Counting**](6.7_Probability_with_Counting.qmd)\
 Use permutations and combinations to find probabilities.

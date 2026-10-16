@@ -10,6 +10,7 @@
 \usepackage{array}
 \usepackage{enumitem}
 \usepackage{amsmath}
+\usepackage{cancel}
 \usepackage[helvet]{sfmath}  % math in the same sans font as the text
 \usepackage{standalone}
 \renewcommand{\ttdefault}{pcr}  % Courier: a real Type 1 typewriter font
@@ -21,7 +22,7 @@
 \newif\ifkey
 \ifdefined\iskey \keytrue \fi
 \colorlet{keyred}{red!75!black}
-\newcommand{\ans}[1]{\ifkey\leavevmode{\color{keyred}#1}\fi}
+\newcommand{\ans}[1]{\ifkey\leavevmode{\color{keyred}\let\frac\dfrac #1}\fi}  % full-size fractions in answers
 % vertical work space on the student copy, less on the key
 \newcommand{\work}[1]{\ifkey\vspace{0.6em}\else\vspace{#1}\fi}
 \newcommand{\fig}[1]{\input{../../figures/#1}}

@@ -1,0 +1,127 @@
+# 6.5 - Permutations {.unnumbered}
+
+A club of 10 students picks a president, a vice president, and a secretary. How many different ways can they fill the three jobs?
+
+Listing them all would take a long time. There are 720! In this lesson, you learn to count arrangements without listing them.
+
+:::{.objectives}
+- [ ] I use the counting principle.
+- [ ] I find and use factorials.
+- [ ] I count permutations with ${}_nP_r$.
+- [ ] I tell when repeats are allowed and when they are not.
+:::
+
+:::{.vocab}
+{{< glink "counting principle" >}},
+{{< glink factorial >}},
+{{< glink permutation >}}
+:::
+
+:::{.guided-notes-link}
+[Printable mini lesson](/handouts/Unit_6/6.5_Permutations.pdf){target="_blank"} - notes and practice problems to print and write on.
+:::
+
+{{< khan 6.5 >}}
+
+{{< learn >}}
+
+### 6.5.1 - The Counting Principle
+
+:::{.remember title="The Counting Principle"}
+If one choice has $m$ options and a second choice has $n$ options, there are $m \cdot n$ ways to make both choices.
+:::
+
+**Example:** 3 shirts and 4 pairs of pants make $3 \cdot 4 = 12$ outfits.
+
+***
+
+### 6.5.2 - Factorials
+
+In how many ways can 4 students sit in 4 chairs in a row?
+
+| Chair 1 | Chair 2 | Chair 3 | Chair 4 |
+|:---:|:---:|:---:|:---:|
+| 4 choices | 3 left | 2 left | 1 left |
+
+$$
+4 \cdot 3 \cdot 2 \cdot 1 = 24 \text{ ways}
+$$
+
+:::{.remember title="Factorial"}
+$$
+n! = n \cdot (n - 1) \cdot (n - 2) \cdots 2 \cdot 1
+$$
+
+Read $n!$ as "$n$ factorial." For example, $4! = 24$ and $1! = 1$.
+
+Also, $0! = 1$. There is exactly one way to arrange nothing.
+:::
+
+***
+
+### 6.5.3 - Permutations
+
+A {{< glink permutation >}} is an arrangement where **order matters**.
+
+In the club example, Ana as president and Ben as vice president is different from Ben as president and Ana as vice president. So order matters: $10 \cdot 9 \cdot 8 = 720$ ways.
+
+:::{.remember title="The Permutation Formula"}
+$$
+{}_nP_r = \frac{n!}{(n - r)!}
+$$
+
+This counts the ways to arrange $r$ things chosen from $n$ things. Read ${}_nP_r$ as "$n$ permute $r$." Some books write $P(n, r)$.
+:::
+
+$$
+{}_{10}P_3 = \frac{10!}{7!} = \frac{10 \cdot 9 \cdot 8 \cdot \cancel{7 \cdot 6 \cdots 1}}{\cancel{7 \cdot 6 \cdots 1}} = 720
+$$
+
+:::{.gotcha title="Repeats allowed?"}
+3-letter codes from 26 letters:
+
+- **No repeats:** $26 \cdot 25 \cdot 24 = 15{,}600$. This is a permutation.
+- **Repeats allowed:** $26 \cdot 26 \cdot 26 = 26^3 = 17{,}576$. This is not a permutation. Use the counting principle.
+:::
+
+:::{.you-try title="In how many ways can 5 people stand in a line?"}
+$5! = 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 120$
+:::
+
+{{< practice >}}
+
+Work with a partner. Compare answers when you finish each problem.
+
+**Factorials and Permutations**
+
+1. Find each value.
+
+   a. $5!$
+
+   b. $\dfrac{6!}{4!}$
+
+   c. $0!$
+
+   d. ${}_8P_3$
+
+2. You have 5 shirts, 3 pairs of pants, and 2 pairs of shoes. How many outfits can you make?
+
+3. In how many ways can 6 different books be arranged on a shelf?
+
+4. 8 runners are in a race. In how many ways can gold, silver, and bronze medals be given?
+
+***
+
+**Repeats and Reasoning**
+
+5. A phone code has 4 digits (0 to 9).
+
+   a. How many codes are there if digits can repeat?
+
+   b. How many codes are there if no digit repeats?
+
+6. In how many ways can you arrange the letters of the word MATH?
+
+7. A club of 12 members picks a president and a treasurer. One person cannot have both jobs. How many ways?
+
+8. Explain why ${}_{10}P_3$ is the same as $10 \cdot 9 \cdot 8$.

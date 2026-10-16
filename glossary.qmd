@@ -78,6 +78,14 @@ Split the population into groups (clusters). Then randomly choose some whole clu
 
 ***
 
+### combination {#glossary-combination}
+
+A group where order does not matter. The number of ways to choose $r$ things from $n$ is ${}_nC_r = \dbinom{n}{r} = \dfrac{n!}{r!\,(n-r)!}$, read "$n$ choose $r$."
+
+**See Also:** {{< glink permutation >}}
+
+***
+
 ### complement {#glossary-complement}
 
 The event that $A$ does **not** happen. $P(\text{not } A) = 1 - P(A)$. Some books write $P(A^C)$.
@@ -121,6 +129,12 @@ A sample of people who are easy to reach. It is usually biased.
 A number $r$ from $-1$ to $1$ that measures the direction and strength of a linear pattern. Close to $1$ or $-1$ is strong. Close to $0$ is weak.
 
 **See Also:** {{< glink scatterplot >}}, {{< glink causation >}}
+
+***
+
+### counting principle {#glossary-counting-principle}
+
+If one choice has $m$ options and a second choice has $n$ options, there are $m \cdot n$ ways to make both choices.
 
 ***
 
@@ -203,6 +217,16 @@ The variable a researcher changes, or uses to explain changes in another variabl
 ### extrapolation {#glossary-extrapolation}
 
 Using a line to predict far outside the range of the data. Extrapolation is risky and can give answers that make no sense.
+
+***
+
+### factorial {#glossary-factorial}
+
+$n! = n \cdot (n-1) \cdot (n-2) \cdots 2 \cdot 1$, read "$n$ factorial." It counts the ways to arrange $n$ things in order. By definition, $0! = 1$.
+
+> **Example:**
+>
+> $4! = 4 \cdot 3 \cdot 2 \cdot 1 = 24$
 
 ***
 
@@ -433,6 +457,14 @@ The percent of the data that is below a value.
 > A score at the 75th percentile is higher than 75% of the scores.
 
 **See Also:** {{< glink z-score >}}, {{< glink quartile >}}
+
+***
+
+### permutation {#glossary-permutation}
+
+An arrangement where order matters. The number of ways to arrange $r$ things chosen from $n$ is ${}_nP_r = \dfrac{n!}{(n-r)!}$, read "$n$ permute $r$."
+
+**See Also:** {{< glink combination >}}
 
 ***
 

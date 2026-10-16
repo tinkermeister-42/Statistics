@@ -1,0 +1,113 @@
+# 6.6 - Combinations {.unnumbered}
+
+Pick 3 students from 5 (A, B, C, D, E) to be on a committee. All 3 have the same job.
+
+Choosing A, B, C gives the **same committee** as choosing C, A, B. The order does not matter. So a permutation counts too many. In this lesson, you learn to count groups where order does not matter.
+
+:::{.objectives}
+- [ ] I explain the difference between a permutation and a combination.
+- [ ] I count combinations with ${}_nC_r$.
+- [ ] I decide whether a problem needs a permutation or a combination.
+:::
+
+:::{.vocab}
+{{< glink combination >}},
+{{< glink permutation >}},
+{{< glink factorial >}}
+:::
+
+:::{.guided-notes-link}
+[Printable mini lesson](/handouts/Unit_6/6.6_Combinations.pdf){target="_blank"} - notes and practice problems to print and write on.
+:::
+
+{{< khan 6.6 >}}
+
+{{< learn >}}
+
+### 6.6.1 - From Permutations to Combinations
+
+| Step | Work |
+|---|---|
+| Count as if order mattered. | ${}_5P_3 = 5 \cdot 4 \cdot 3 = 60$ |
+| Each committee of 3 was counted $3! = 6$ times. | ABC, ACB, BAC, BCA, CAB, CBA |
+| Divide. | $60 \div 6 = 10$ committees |
+
+:::{.remember title="The Combination Formula"}
+$$
+{}_nC_r = \binom{n}{r} = \frac{n!}{r!\,(n - r)!}
+$$
+
+This counts the ways to choose $r$ things from $n$ things when order does not matter. ${}_nC_r$ and $\binom{n}{r}$ are both read "$n$ choose $r$." Some books write $C(n, r)$.
+:::
+
+**Example:**
+
+$$
+{}_5C_3 = \frac{5!}{3!\,2!} = \frac{120}{6 \cdot 2} = 10
+$$
+
+***
+
+### 6.6.2 - Permutation or Combination?
+
+Ask: *If I switch the order, is it a different result?*
+
+| Order matters: permutation | Order does not matter: combination |
+|---|---|
+| President, VP, secretary (different jobs) | A committee of 3 (same job) |
+| 1st, 2nd, 3rd place | Picking 3 winners of the same prize |
+| Arranging books on a shelf | Choosing 3 books to take on a trip |
+
+**Handshakes.** 10 people each shake hands once with everyone else. A handshake is a pair, and Ana-Ben is the same as Ben-Ana:
+
+$$
+{}_{10}C_2 = \frac{10 \cdot 9}{2} = 45 \text{ handshakes}
+$$
+
+:::{.you-try title="How many ways can you choose 2 of 4 friends to go to a movie?"}
+Order does not matter. ${}_4C_2 = \frac{4 \cdot 3}{2} = 6$.
+:::
+
+{{< practice >}}
+
+Work with a partner. Compare answers when you finish each problem.
+
+**Finding Combinations**
+
+1. Find each value.
+
+   a. ${}_5C_2$
+
+   b. ${}_6C_3$
+
+   c. ${}_8C_1$
+
+   d. $\binom{7}{7}$
+
+2. Permutation or combination? Then find the number of ways.
+
+   a. Choose 3 pizza toppings from 10.
+
+   b. Give 1st, 2nd, and 3rd prizes to 3 of 10 people.
+
+   c. Choose a president and a treasurer from 12 people.
+
+   d. Choose 4 people from 15 for a committee.
+
+3. 12 people meet. Each person shakes hands once with every other person. How many handshakes?
+
+***
+
+**Reasoning**
+
+4. A restaurant has 8 toppings. A pizza has 2 different toppings. How many different 2-topping pizzas are there?
+
+5. Compare ${}_{10}P_3 = 720$ and ${}_{10}C_3 = 120$.
+
+   a. Why is ${}_{10}P_3$ bigger?
+
+   b. What number do you divide by to get from 720 to 120? Why?
+
+6. A hand of 5 cards is dealt from a deck of 52 cards. Use a calculator. How many different hands are there?
+
+7. A student says, "Choosing 2 of 6 students to clean the board is a permutation, because there are 2 people." Do you agree? Explain.
