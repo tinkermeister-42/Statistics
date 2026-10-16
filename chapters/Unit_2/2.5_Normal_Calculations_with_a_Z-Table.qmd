@@ -47,7 +47,7 @@ The z-table gives the area to the **left** of $z$. That is the proportion of the
 
 :::{.remember title="Steps"}
 1. Draw the curve. Shade the part the question asks about.
-2. Find each z-score: $z = \dfrac{\text{value} - \text{mean}}{\text{SD}}$. Round to 2 decimal places.
+2. Find each z-score: $z = \dfrac{x - \mu}{\sigma}$. Round to 2 decimal places.
 3. Look up each z-score in the table.
 4. **Below:** use the table. **Above:** $1 -$ table. **Between:** subtract the two table values.
 :::

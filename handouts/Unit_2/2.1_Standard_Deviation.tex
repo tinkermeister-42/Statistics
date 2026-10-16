@@ -32,7 +32,7 @@ The \textbf{standard deviation} (SD) measures this.
 1. & Find the mean, $\bar{x}$. \quad $\bar{x} = 50 \div 5 = 10$\\
 2. & Subtract the mean from each value.\\
 3. & Square each result.\\
-4. & Add the squares. \quad $9 + 9 + 0 + 9 + 9 = 36$\\
+4. & Add the squares. \quad $\Sigma(x - \bar{x})^2 = 36$\\
 5. & Divide by $n - 1$. \quad $36 \div 4 = 9$\\
    & (This number is called the \textbf{variance}.)\\
 6. & Take the square root. \quad $s = \sqrt{9} = \mathbf{3}$\\
@@ -47,13 +47,16 @@ $x$ & $x - \bar{x}$ & $(x - \bar{x})^2$ \\ \hline
 10 & 0 & 0 \\
 13 & 3 & 9 \\
 13 & 3 & 9 \\ \hline
-\multicolumn{2}{|r|}{Sum} & 36 \\ \hline
+\multicolumn{2}{|r|}{$\Sigma(x - \bar{x})^2$} & 36 \\ \hline
 \end{tabular}
 \end{minipage}
 
 \vspace{0.8em}
 \textbf{The formula:} \qquad
-$\displaystyle s = \sqrt{\frac{\text{sum of } (x - \bar{x})^2}{n - 1}}$ \qquad ($n$ = how many values)
+$\displaystyle s = \sqrt{\frac{\Sigma(x - \bar{x})^2}{n - 1}}$ \qquad ($n$ = how many values)
+
+\vspace{0.3em}
+$\Sigma$ (capital \textbf{sigma}) means \textbf{add up}. \; $\Sigma(x - \bar{x})^2$ means: find $(x - \bar{x})^2$ for every value, then add them all.
 
 \vspace{0.6em}
 \textbf{Why $n - 1$?} Our data is usually a \textbf{sample}, a small part of a bigger group.
@@ -83,7 +86,7 @@ A sample is usually a little less spread out than the whole group. Dividing by $
 \sdrow{8}{0}{0}
 \sdrow{10}{2}{4}
 \sdrow{12}{4}{16}
-\multicolumn{2}{|r|}{Sum} & \ans{40} \\ \hline
+\multicolumn{2}{|r|}{$\Sigma(x - \bar{x})^2$} & \ans{40} \\ \hline
 \end{sdtable}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.5\linewidth}\vspace{0pt}
@@ -103,7 +106,7 @@ $s =$ \ans{\; $\sqrt{40 \div 4} = \sqrt{10} \approx 3.16$}
 \sdrow{3}{$-3$}{9}
 \sdrow{7}{1}{1}
 \sdrow{7}{1}{1}
-\multicolumn{2}{|r|}{Sum} & \ans{12} \\ \hline
+\multicolumn{2}{|r|}{$\Sigma(x - \bar{x})^2$} & \ans{12} \\ \hline
 \end{sdtable}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.5\linewidth}\vspace{0pt}
@@ -129,7 +132,7 @@ Player B: & 2, 18, 5, 15, 10\\
   \work{1.5em}
   \item Find $s$ for Player A.
 
-  \ans{Differences $-1, 0, 0, 1, 0$. Squares add to 2. \; $s = \sqrt{2 \div 4} = \sqrt{0.5} \approx 0.71$}
+  \ans{Differences $-1, 0, 0, 1, 0$. \; $\Sigma(x - \bar{x})^2 = 2$. \; $s = \sqrt{2 \div 4} = \sqrt{0.5} \approx 0.71$}
   \work{5em}
   \item Player B's SD is about 6.67. A coach needs a player who scores close to 10 points every game. Which player should the coach choose? Explain.
 

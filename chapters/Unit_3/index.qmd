@@ -1,0 +1,29 @@
+# Introduction {.unnumbered}
+
+Welcome to Unit 3! So far, your data has been numbers. Now the data is **categories**: yes or no, bus or car, 9th grade or 10th grade.
+
+When you ask people two questions, a two-way table shows both answers at once. It can show whether the two answers are connected.
+
+***
+
+## What You'll Learn
+
+By the end of this unit, you will be able to:
+
+* Read and make two-way tables
+* Move between Venn diagrams and two-way tables
+* Make relative frequency tables
+* Find marginal and conditional distributions
+* Decide if two categorical variables are associated
+
+This unit matches **Unit 3: Two-way tables** in Khan Academy's Statistics essentials.
+
+***
+
+## Topics in This Unit
+
+[**Two-Way Tables & Relative Frequency**](3.1_Two-Way_Tables_and_Relative_Frequency.qmd)
+Count answers to two questions at once. Turn counts into percents.
+
+[**Marginal & Conditional Distributions**](3.2_Marginal_and_Conditional_Distributions.qmd)  
+Find percents within one group. Decide if two variables are connected.

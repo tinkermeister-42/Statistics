@@ -69,3 +69,17 @@
   \draw[thick] (-3.8,0) -- (3.8,0);
   \foreach \z in {-3,...,3} {\draw (\z,0.12) -- (\z,-0.12);
     \pgfmathsetmacro{\zv}{#1+\z*#2}\node[below] at (\z,-0.12) {\pgfmathprintnumber{\zv}};}}
+% Venn diagram of two sets in a box: \venn{A}{B}{only A}{both}{only B}{neither}
+% (an empty count argument leaves that region blank)
+\newcommand{\venn}[6]{%
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \draw[thick] (0,0) rectangle (8,4.6);
+  \draw[thick,fill=gray!15,fill opacity=0.6] (3,2.2) circle (1.7);
+  \draw[thick,fill=gray!15,fill opacity=0.6] (5,2.2) circle (1.7);
+  \node[font=\bfseries] at (2.3,4.15) {#1};
+  \node[font=\bfseries] at (5.7,4.15) {#2};
+  \node[font=\large] at (2.2,2.2) {#3};
+  \node[font=\large] at (4,2.2) {#4};
+  \node[font=\large] at (5.8,2.2) {#5};
+  \node[font=\large] at (7.4,0.4) {#6};
+\end{tikzpicture}}

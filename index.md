@@ -37,8 +37,8 @@ Do the mini lesson first. Then do the matching Khan Academy lessons.
 | [2.5](chapters/Unit_2/2.5_Normal_Calculations_with_a_Z-Table.qmd) | Normal calculations with a z-table | Unit 2, lesson {{< khanlink 2.5 "5" >}} |
 | [2.6](chapters/Unit_2/2.6_Normal_Calculations_in_Reverse.qmd) | Normal calculations in reverse | Unit 2, lesson {{< khanlink 2.5 "5" >}} |
 | **Unit 3: Two-Way Tables** | | |
-| 3.1 | Two-way tables and relative frequency | Unit 3, lesson {{< khanlink 3.1 "1" >}} |
-| 3.2 | Marginal and conditional distributions | Unit 3, lesson {{< khanlink 3.2 "2" >}} |
+| [3.1](chapters/Unit_3/3.1_Two-Way_Tables_and_Relative_Frequency.qmd) | Two-way tables and relative frequency | Unit 3, lesson {{< khanlink 3.1 "1" >}} |
+| [3.2](chapters/Unit_3/3.2_Marginal_and_Conditional_Distributions.qmd) | Marginal and conditional distributions | Unit 3, lesson {{< khanlink 3.2 "2" >}} |
 | **Unit 4: Scatterplots** | | |
 | 4.1 | Scatterplots and lines of best fit | Unit 4, lesson {{< khanlink 4.1 "1" >}} |
 | 4.2 | Slope, intercept, and correlation | Unit 4, lesson {{< khanlink 4.2 "2" >}} |

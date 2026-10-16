@@ -19,6 +19,8 @@ In this lesson, you learn two ways to find the center of data: the {{< glink mea
 
 :::{.vocab}
 {{< glink mean >}},
+{{< glink "x-bar" >}},
+{{< glink slug="sigma-notation" text="Σ (sigma)" >}},
 {{< glink median >}},
 {{< glink mode >}},
 {{< glink shape >}},
@@ -58,6 +60,19 @@ $$
 $$
 
 The mean is **4**.
+
+:::{.remember title="The Mean in Symbols"}
+$$
+\bar{x} = \frac{\Sigma x}{n}
+$$
+
+- $\Sigma$ is the Greek capital letter **sigma**. It means **add up**.
+- $\Sigma x$ means add up all the values.
+- $\bar{x}$ ("x-bar") is the mean.
+- $n$ is how many values there are.
+
+For the example: $\Sigma x = 20$ and $n = 5$, so $\bar{x} = \frac{20}{5} = 4$.
+:::
 
 ***
 

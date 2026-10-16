@@ -66,4 +66,10 @@ book:
         - file: chapters/Unit_2/2.5_Normal_Calculations_with_a_Z-Table.qmd
         - file: chapters/Unit_2/2.6_Normal_Calculations_in_Reverse.qmd
 
+    - part: "Unit 3: Two-Way Tables"
+      chapters:
+        - file: chapters/Unit_3/index.qmd
+        - file: chapters/Unit_3/3.1_Two-Way_Tables_and_Relative_Frequency.qmd
+        - file: chapters/Unit_3/3.2_Marginal_and_Conditional_Distributions.qmd
+
     - file: glossary.qmd

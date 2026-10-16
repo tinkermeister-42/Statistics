@@ -87,6 +87,14 @@ set (`.remember`, `.you-try`, `.you-try-m` + `.answer`, `.think`, `.gotcha`,
   A bare `$84,000` pairs with the next dollar sign in the paragraph and
   MathJax renders the text between them as math
 - Worksheet directions say "Work with a partner", never "work by yourself"
+- **Real notation, explained.** The teacher wants students exposed to real
+  statistical notation. Write $\Sigma$, not "sum of"; write $\bar{x}$,
+  $\mu$, $\sigma$, $s$, $n$, $z = \frac{x - \mu}{\sigma}$, not word
+  formulas. The first few times a symbol appears (in a lesson and in the unit
+  that introduces it), say in plain words what it means: "$\Sigma$ means add
+  up", "$\mu$ (mu) is the mean". First appearances so far: $\bar{x}$, $\Sigma$,
+  $n$ in 1.2; $\Sigma(x - \bar{x})^2$ and $s$ in 2.1; $\mu$, $\sigma$ in 2.3.
+  Each symbol has a glossary entry
 
 ## Branches
 

@@ -49,7 +49,7 @@ Player A has a small SD. Player B has a large SD.
 | 1. Find the mean, $\bar{x}$. | $\bar{x} = 50 \div 5 = 10$ |
 | 2. Subtract the mean from each value. | See the table below. |
 | 3. Square each result. | See the table below. |
-| 4. Add the squares. | $9 + 9 + 0 + 9 + 9 = 36$ |
+| 4. Add the squares. | $\Sigma(x - \bar{x})^2 = 9 + 9 + 0 + 9 + 9 = 36$ |
 | 5. Divide by $n - 1$. This is the {{< glink variance >}}. | $36 \div 4 = 9$ |
 | 6. Take the square root. | $s = \sqrt{9} = 3$ |
 
@@ -60,16 +60,18 @@ Player A has a small SD. Player B has a large SD.
 | 10 | 0 | 0 |
 | 13 | 3 | 9 |
 | 13 | 3 | 9 |
-| | **Sum** | **36** |
+| | $\Sigma(x - \bar{x})^2$ | **36** |
 
 The standard deviation is $s = 3$.
 
 :::{.remember title="The Formula"}
 $$
-s = \sqrt{\frac{\text{sum of } (x - \bar{x})^2}{n - 1}}
+s = \sqrt{\frac{\Sigma(x - \bar{x})^2}{n - 1}}
 $$
 
-$n$ is how many values there are.
+- $\Sigma$ (capital **sigma**) means **add up**.
+- $\Sigma(x - \bar{x})^2$ means: find $(x - \bar{x})^2$ for every value, then add them all.
+- $n$ is how many values there are.
 :::
 
 :::{.think title="Why divide by n − 1 and not n?"}
@@ -81,7 +83,7 @@ A sample is usually a little less spread out than the whole group. Dividing by $
 :::{.you-try title="Find the SD of 2, 4, 6"}
 Mean: $12 \div 3 = 4$.
 
-Differences: $-2, 0, 2$. Squares: $4, 0, 4$. Sum: 8.
+Differences: $-2, 0, 2$. Squares: $4, 0, 4$. So $\Sigma(x - \bar{x})^2 = 8$.
 
 $s = \sqrt{8 \div 2} = \sqrt{4} = 2$
 :::

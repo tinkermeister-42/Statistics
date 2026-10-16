@@ -34,7 +34,7 @@ Data with this shape has a {{< glink "normal distribution" >}}. In this lesson, 
 :::{.remember title="A Normal Distribution"}
 - is bell-shaped and symmetric
 - has the mean and the median in the center (they are equal)
-- is described by two numbers: the **mean** (center) and the **SD** (spread)
+- is described by two numbers: the **mean** $\mu$ (center) and the **SD** $\sigma$ (spread)
 :::
 
 A larger SD makes the curve wider and flatter. A different mean moves the curve left or right.
@@ -46,9 +46,9 @@ A larger SD makes the curve wider and flatter. A different mean moves the curve 
 ![](/images/Unit_2/2.4_empirical.svg){width="620px" fig-align="center"}
 
 :::{.remember title="The 68-95-99.7 Rule"}
-- About **68%** of the data is within **1 SD** of the mean.
-- About **95%** of the data is within **2 SDs** of the mean.
-- About **99.7%** of the data is within **3 SDs** of the mean.
+- About **68%** of the data is within **1 SD** of the mean, from $\mu - \sigma$ to $\mu + \sigma$.
+- About **95%** of the data is within **2 SDs** of the mean, from $\mu - 2\sigma$ to $\mu + 2\sigma$.
+- About **99.7%** of the data is within **3 SDs** of the mean, from $\mu - 3\sigma$ to $\mu + 3\sigma$.
 :::
 
 **Example:** Heights of adult women have a mean of about 64 inches and an SD of about 3 inches.

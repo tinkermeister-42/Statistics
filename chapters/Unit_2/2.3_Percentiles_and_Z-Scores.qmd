@@ -16,6 +16,8 @@ In this lesson, you use {{< glink slug="percentile" text="percentiles" >}} and {
 :::{.vocab}
 {{< glink percentile >}},
 {{< glink z-score >}},
+{{< glink mu >}},
+{{< glink sigma >}},
 {{< glink "standard deviation" >}},
 {{< glink mean >}}
 :::
@@ -58,8 +60,12 @@ Scoring at the 75th percentile does **not** mean you got 75% of the questions ri
 A **z-score** tells how many standard deviations a value is above or below the mean.
 
 $$
-z = \frac{\text{value} - \text{mean}}{\text{SD}}
+z = \frac{x - \mu}{\sigma}
 $$
+
+- $x$ is the value.
+- $\mu$ (the Greek letter **mu**) is the mean.
+- $\sigma$ (a small **sigma**) is the standard deviation. Do not mix it up with the capital $\Sigma$, which means add up.
 
 - $z > 0$: above the mean
 - $z < 0$: below the mean
@@ -104,7 +110,7 @@ Ana's score is higher. But Ben did better **compared to his class**, because his
 If you know the z-score, you can find the value.
 
 $$
-\text{value} = \text{mean} + z \times \text{SD}
+x = \mu + z\sigma
 $$
 
 **Example:** On Ana's test, what score has $z = -2$?

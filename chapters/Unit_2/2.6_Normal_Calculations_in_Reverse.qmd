@@ -40,7 +40,7 @@ In 2.5, you knew the value and found the percent. In this lesson, you know the p
 | 1. Draw the curve. Shade the area to the **left**. | 90% is to the left. The area is .9000. |
 | 2. Look **inside** the table for the area closest to it. | The closest area is .8997. |
 | 3. Read the z-score from the row and the column. | Row 1.2, column .08: $z = 1.28$ |
-| 4. Find the value: value $=$ mean $+\; z \times \text{SD}$ | $64 + 1.28 \times 3 = 67.84$ |
+| 4. Find the value: $x = \mu + z\sigma$ | $64 + 1.28 \times 3 = 67.84$ |
 
 A woman at the 90th percentile is about **67.8 inches** tall.
 
