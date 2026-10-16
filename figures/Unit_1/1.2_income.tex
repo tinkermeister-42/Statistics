@@ -1,0 +1,18 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}
+\begin{document}
+\begin{tikzpicture}[x=0.042cm,y=1cm]
+  \def\mu{4.4308} \def\sg{0.855}
+  \fill[gray!25] (2,0) -- plot[domain=2:84,samples=80] (\x,{310/(\x*\sg*2.5066)*exp(-((ln(\x)-\mu)^2)/(2*\sg*\sg))}) -- (84,0) -- cycle;
+  \draw[thick] plot[domain=2:330,samples=200] (\x,{310/(\x*\sg*2.5066)*exp(-((ln(\x)-\mu)^2)/(2*\sg*\sg))});
+  \draw (0,0) -- (340,0);
+  \foreach \t/\l in {0/\$0,50/\$50k,100/\$100k,150/\$150k,200/\$200k,250/\$250k,300/\$300k}
+    \draw (\t,0.08) -- (\t,-0.08) node[below,font=\footnotesize] {\l};
+  \draw[very thick,dashed] (84,0) -- (84,3.0) node[above,font=\footnotesize,align=center] {median\\ \$84,000};
+  \fill (121,0) -- ++(-7,-0.32) -- ++(14,0) -- cycle;
+  \draw[->] (150,1.9) node[right,font=\footnotesize,align=left] {mean \$121,000} -- (124,0.2);
+  \node[font=\footnotesize,align=center] at (55,0.55) {half of\\households};
+  \node[font=\footnotesize] at (285,0.75) {tail keeps going $\rightarrow$};
+  \node[font=\footnotesize] at (170,-0.95) {Household income per year (shape is a sketch)};
+\end{tikzpicture}
+\end{document}

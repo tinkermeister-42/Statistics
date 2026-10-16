@@ -1,0 +1,57 @@
+project:
+  type: book
+  post-render:
+    - bash ./scripts/build-glossary.sh
+
+resources:
+  - glossary.json
+  - scripts/*.js
+  # Printable mini lessons.  The student copy is linked from each lesson page.
+  # The _KEY copy sits beside it and is deliberately not linked: it is
+  # reachable only by typing the URL.  Built by ./build.sh.
+  - handouts/Unit_*/*.pdf
+
+extensions:
+  - glossary
+  - headings
+
+format:
+  html:
+    theme:
+      - flatly
+    css:
+      - styles/widget-themes.css
+      - styles/glossary-tooltips.css
+      - styles/custom-callouts.css
+      - styles/custom-general.css
+    include-after-body:
+      - scripts/inject-custom.html
+    include-in-header: mathjax-macros.html
+    html-math-method: mathjax
+
+book:
+  title: "DHS Statistics"
+  author: "Andy Ross"
+  favicon: images/logo.png
+  image: images/logo.png
+  search: true
+
+  navbar:
+    search: true
+
+  sidebar:
+    search: true
+    logo: images/logo.png
+    collapse-level: 1
+
+  chapters:
+    - file: index.md
+
+    - part: "Unit 1: Displaying One Variable"
+      chapters:
+        - file: chapters/Unit_1/index.qmd
+        - file: chapters/Unit_1/1.1_Frequency_Tables_Dot_Plots_and_Histograms.qmd
+        - file: chapters/Unit_1/1.2_Mean_Median_and_Shape.qmd
+        - file: chapters/Unit_1/1.3_Quartiles_IQR_and_Box_Plots.qmd
+
+    - file: glossary.qmd

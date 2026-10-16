@@ -1,0 +1,28 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}
+\begin{document}
+\begin{tikzpicture}[x=0.37cm,y=0.2cm]
+\begin{scope}
+  \shapehist{0.5,0.6,0.8,1,1.2,1.5,2,3,4.5,7,9,5}{Skewed left}
+  \medmark{9.42}{11} \meanmark{8.66}
+  \node[font=\footnotesize,anchor=south] at (9.9,11) {median};
+  \node[font=\small] at (6,-4.6) {tail on the left};
+  \node[font=\small] at (6,-6.6) {\textbf{mean $<$ median}};
+\end{scope}
+\begin{scope}[xshift=5.6cm]
+  \shapehist{0.5,1,2,4,7,9,9,7,4,2,1,0.5}{Symmetric}
+  \medmark{6}{11} \meanmark{6}
+  \node[font=\footnotesize,anchor=south] at (6,11) {median};
+  \node[font=\small] at (6,-4.6) {both sides match};
+  \node[font=\small] at (6,-6.6) {\textbf{mean $\approx$ median}};
+\end{scope}
+\begin{scope}[xshift=11.2cm]
+  \shapehist{5,9,7,4.5,3,2,1.5,1.2,1,0.8,0.6,0.5}{Skewed right}
+  \medmark{2.58}{11} \meanmark{3.34}
+  \node[font=\footnotesize,anchor=south] at (2.1,11) {median};
+  \node[font=\small] at (6,-4.6) {tail on the right};
+  \node[font=\small] at (6,-6.6) {\textbf{mean $>$ median}};
+\end{scope}
+\node[font=\small,anchor=west] at (8,-9.4) {\tikz\fill (0,0) -- (0.3,0) -- (0.15,0.22) -- cycle; = mean (the balance point) \qquad \tikz\draw[very thick,dashed] (0,0) -- (0,0.3); = median};
+\end{tikzpicture}
+\end{document}

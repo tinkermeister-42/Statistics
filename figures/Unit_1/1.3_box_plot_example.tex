@@ -1,0 +1,14 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}
+\begin{document}
+\begin{tikzpicture}[x=0.72cm,y=1cm]
+  \nline{0}{22}{2}{}
+  \bplot{3}{6}{10}{15}{20}
+  \foreach \x/\l in {3/min,6/Q1,10/median,15/Q3,20/max}
+    \node[font=\small,above] at (\x,1.5) {\l};
+  \foreach \a/\b in {3/6,6/10,10/15,15/20}
+    \draw[decorate,decoration={brace,amplitude=4pt,mirror}] (\a,-0.95) -- (\b,-0.95)
+      node[midway,below=3pt,font=\footnotesize] {25\%};
+  \draw[<->] (6,2.25) -- (15,2.25) node[midway,above,font=\small] {IQR = 9};
+\end{tikzpicture}
+\end{document}

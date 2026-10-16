@@ -1,0 +1,12 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}
+\begin{document}
+\begin{tikzpicture}[x=0.75cm,y=0.45cm]
+  \draw[->] (0,0) -- (0,8.2); \draw (0,0) -- (8.5,0);
+  \foreach \y in {0,2,...,8} \draw (0.12,\y) -- (-0.12,\y) node[left] {\y};
+  \foreach \i/\h in {0/2,1/6,2/7,3/3} \draw[fill=gray!35] (\i*2,0) rectangle (\i*2+2,\h);
+  \foreach \i/\l in {0/150,1/160,2/170,3/180,4/190} \node[below] at (\i*2,0) {\l};
+  \node at (4,-1.6) {Height (cm)};
+  \node[rotate=90] at (-1.4,4) {Number of students};
+\end{tikzpicture}
+\end{document}

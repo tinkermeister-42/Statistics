@@ -1,0 +1,188 @@
+# 1.1 - Frequency Tables, Dot Plots, and Histograms {.unnumbered}
+
+Eleven students say how many siblings they have:
+
+:::{.text-center}
+1, 0, 2, 1, 1, 3, 2, 0, 1, 2, 4
+:::
+
+What number is most common? It is hard to see in a list. A table or a graph shows it at once.
+
+In this lesson, you learn three ways to show {{< glink data >}}: frequency tables, dot plots, and histograms.
+
+:::{.objectives}
+- [ ] I make and read a frequency table.
+- [ ] I make and read a dot plot.
+- [ ] I make and read a histogram.
+:::
+
+:::{.vocab}
+{{< glink data >}},
+{{< glink frequency >}},
+{{< glink "frequency table" >}},
+{{< glink tally >}},
+{{< glink "dot plot" >}},
+{{< glink histogram >}},
+{{< glink bin >}}
+:::
+
+:::{.guided-notes-link}
+[Printable mini lesson](/handouts/Unit_1/1.1_Frequency_Tables_Dot_Plots_and_Histograms.pdf){target="_blank"} - notes and practice problems to print and write on.
+:::
+
+{{< learn >}}
+
+### 1.1.1 - Frequency Tables
+
+{{< glink frequency text="Frequency" >}} means **how many times** something happens.
+
+A {{< glink "frequency table" >}} lists each value and its frequency. Read the data one value at a time. Make a {{< glink tally >}} mark for each one. Then count the marks.
+
+Here is the siblings data:
+
+| Siblings | Tally | Frequency |
+|:---:|:---:|:---:|
+| 0 | \|\| | 2 |
+| 1 | \|\|\|\| | 4 |
+| 2 | \|\|\| | 3 |
+| 3 | \| | 1 |
+| 4 | \| | 1 |
+
+The most common number of siblings is **1**.
+
+:::{.remember title="Check Your Count"}
+Add the frequency column. The total should equal the number of data values.
+
+$$2 + 4 + 3 + 1 + 1 = 11 \text{ students}$$
+:::
+
+***
+
+### 1.1.2 - Dot Plots
+
+A {{< glink "dot plot" >}} puts the values on a number line. Each value gets **one dot**. Dots for the same value stack up.
+
+This dot plot shows the same siblings data:
+
+![](/images/Unit_1/1.1_dot_plot_siblings.svg){width="320px" fig-align="center"}
+
+The height of each stack is the frequency. The stack above 1 is the tallest, so 1 is the most common.
+
+:::{.you-try-m title="Read the dot plot above."}
+a. How many students have 2 siblings?
+
+b. How many students have more than 1 sibling?
+:::
+:::{.answer title="Answer"}
+a. The stack above 2 has **3** dots.
+
+b. Count the dots above 2, 3, and 4: $3 + 1 + 1 = 5$ students.
+:::
+
+***
+
+### 1.1.3 - Histograms
+
+A {{< glink histogram >}} is a bar graph for number data. The values are put into groups called {{< glink slug="bin" text="bins" >}}. Each bar is one bin.
+
+![](/images/Unit_1/1.1_histogram_heights.svg){width="380px" fig-align="center"}
+
+The tallest bar is 170 to 180. So 7 students are from 170 cm to 180 cm tall.
+
+There are **no gaps** between the bars. The bins touch, like the numbers on a number line.
+
+:::{.remember title="The Histogram Rule"}
+If a value is **on a line** between two bars, it goes in the bar on the **right**.
+
+160 goes in the 160 to 170 bar.
+:::
+
+:::{.gotcha title="A histogram hides the exact values"}
+The graph shows that 6 students are from 160 cm to 170 cm. It does **not** show their exact heights. A dot plot shows every value. A histogram does not.
+:::
+
+:::{.think title="When is a histogram better than a dot plot?"}
+When there is a lot of data, or the values are spread out.
+
+Heights in centimeters can be 158, 163, 171, 179, and so on. A dot plot would have many short stacks. A histogram groups them, so the shape is easy to see.
+:::
+
+:::{.remember title="Every Time You Read a Graph"}
+1. Read the title.
+2. Read both axis labels.
+3. Check the scale.
+:::
+
+{{< practice >}}
+
+Work with a partner. Compare answers when you finish each problem.
+
+**Dot Plots**
+
+1. This dot plot shows how many pets some students have.
+
+   ![](/images/Unit_1/1.1_dot_plot_pets.svg){width="360px"}
+
+   a. How many students have exactly 2 pets?
+
+   b. How many students are in the data?
+
+   c. How many students have more than 2 pets?
+
+   d. What number of pets is most common?
+
+2. A soccer team scored these goals in 12 games. Make a dot plot.
+
+   2, 0, 1, 3, 1, 1, 4, 2, 0, 1, 2, 1
+
+***
+
+**Frequency Tables**
+
+3. 20 students said how many siblings they have. Make a frequency table.
+
+   1, 2, 0, 3, 1, 1, 2, 4, 0, 2, 1, 3, 2, 1, 0, 2, 1, 5, 2, 1
+
+   a. How many students have 2 or more siblings?
+
+   b. How can you use your table to check that you counted everyone?
+
+4. This frequency table shows how many hours some students slept last night.
+
+   | Hours of sleep | Frequency |
+   |:---:|:---:|
+   | 5 | 2 |
+   | 6 | 4 |
+   | 7 | 6 |
+   | 8 | 5 |
+   | 9 | 3 |
+
+   a. How many students are in the data?
+
+   b. How many students slept less than 7 hours?
+
+   c. Make a dot plot of the same data.
+
+***
+
+**Histograms**
+
+5. This histogram shows how many minutes some students take to get to school.
+
+   ![](/images/Unit_1/1.1_histogram_minutes.svg){width="440px"}
+
+   a. How many students take from 20 to 30 minutes?
+
+   b. How many students take less than 20 minutes?
+
+   c. How many students are in the data?
+
+   d. Can you tell from this graph how many students take exactly 15 minutes? Explain.
+
+6. A basketball player scored these points in 15 games.
+
+   12, 8, 15, 21, 9, 14, 18, 10, 25, 13, 7, 16, 20, 11, 19
+
+   a. Make a frequency table with the bins 5 to 10, 10 to 15, 15 to 20, 20 to 25, and 25 to 30. Remember the histogram rule.
+
+   b. Make a histogram. Label both axes.

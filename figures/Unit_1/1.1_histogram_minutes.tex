@@ -1,0 +1,12 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}
+\begin{document}
+\begin{tikzpicture}[x=0.29cm,y=0.4cm]
+  \draw[->] (0,0) -- (0,9.6); \draw (0,0) -- (53,0);
+  \foreach \y in {0,...,9} \draw (0.25,\y) -- (-0.25,\y) node[left,font=\small] {\y};
+  \foreach \i/\h in {0/5,1/8,2/6,3/3,4/2} \draw[fill=gray!35] (\i*10,0) rectangle (\i*10+10,\h);
+  \foreach \l in {0,10,...,50} \node[below] at (\l,0) {\l};
+  \node[rotate=90] at (-3.5,4.8) {Number of students};
+  \node at (25,-1.9) {Minutes to get to school};
+\end{tikzpicture}
+\end{document}

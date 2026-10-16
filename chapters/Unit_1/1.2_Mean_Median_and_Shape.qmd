@@ -1,0 +1,218 @@
+# 1.2 - Mean, Median, and Shape {.unnumbered}
+
+A small company puts this in a job ad:
+
+:::{.text-center}
+**"Average pay at our company: $\$80{,}000$!"**
+:::
+
+Four of the five people there earn less than $\$40{,}000$. How can the ad be true?
+
+In this lesson, you learn two ways to find the center of data: the {{< glink mean >}} and the {{< glink median >}}. You also learn how the {{< glink shape >}} of a graph can pull them apart.
+
+:::{.objectives}
+- [ ] I find the mean of a data set.
+- [ ] I find the median of a data set.
+- [ ] I tell if a graph is symmetric, skewed left, or skewed right.
+- [ ] I choose the measure that best describes a typical value.
+:::
+
+:::{.vocab}
+{{< glink mean >}},
+{{< glink median >}},
+{{< glink mode >}},
+{{< glink shape >}},
+{{< glink symmetric >}},
+{{< glink "skewed left" >}},
+{{< glink "skewed right" >}},
+{{< glink tail >}}
+:::
+
+:::{.guided-notes-link}
+[Printable mini lesson](/handouts/Unit_1/1.2_Mean_Median_and_Shape.pdf){target="_blank"} - notes and practice problems to print and write on.
+:::
+
+{{< learn >}}
+
+### 1.2.1 - The Mean
+
+The {{< glink mean >}} is also called the **average**.
+
+:::{.remember title="How to Find the Mean"}
+1. Add all the values.
+2. Divide by how many values there are.
+:::
+
+**Example 1:** 2, 3, 8, 3, 4
+
+$$
+2 + 3 + 8 + 3 + 4 = 20
+$$
+
+There are 5 values.
+
+$$
+20 \div 5 = 4
+$$
+
+The mean is **4**.
+
+***
+
+### 1.2.2 - The Median
+
+The {{< glink median >}} is the **middle** value.
+
+:::{.remember title="How to Find the Median"}
+1. Put the values in order.
+2. Find the middle value.
+:::
+
+**Example 2:** the same data, 2, 3, 8, 3, 4
+
+In order: 2, 3, **3**, 4, 8
+
+The middle value is **3**. So the median is 3.
+
+**Example 3:** an even number of values, 2, 3, 5, 8
+
+There are two numbers in the middle: 3 and 5. The median is the number halfway between them.
+
+$$
+(3 + 5) \div 2 = 4
+$$
+
+The median is **4**.
+
+:::{.you-try title="Find the mean and the median of 6, 1, 9, 4"}
+**Mean:** $6 + 1 + 9 + 4 = 20$. Then $20 \div 4 = 5$. The mean is **5**.
+
+**Median:** In order: 1, **4**, **6**, 9. Then $(4 + 6) \div 2 = 5$. The median is **5**.
+:::
+
+:::{.note title="The Mode"}
+The {{< glink mode >}} is the value that happens **most often**. In 2, 3, 8, 3, 4, the mode is 3.
+:::
+
+***
+
+### 1.2.3 - Shape Changes the Mean
+
+The {{< glink tail >}} is the long, low side of a graph.
+
+:::{.remember title="The Mean Follows the Tail"}
+The mean is **pulled toward the tail**. The median is not pulled much.
+:::
+
+![](/images/Unit_1/1.2_shapes.svg){width="640px" fig-align="center"}
+
+| Shape | What it looks like | Mean and median |
+|---|---|---|
+| {{< glink "skewed left" text="Skewed left" >}} | Tail on the left | mean < median |
+| {{< glink symmetric text="Symmetric" >}} | Both sides match | mean ≈ median |
+| {{< glink "skewed right" text="Skewed right" >}} | Tail on the right | mean > median |
+
+:::{.think title="Why does the job ad say $\$80{,}000$?"}
+The pay is 30,000, 32,000, 35,000, 38,000, and 265,000 dollars.
+
+The mean is $400{,}000 \div 5 = 80{,}000$ dollars. The owner's pay is a long tail on the right. It pulls the mean up.
+
+The median is 35,000 dollars. That is a better picture of a **typical** worker.
+:::
+
+***
+
+### 1.2.4 - Real Example: US Household Income
+
+Most households earn a medium amount. A small number of households earn millions of dollars. That makes a long tail on the right.
+
+![](/images/Unit_1/1.2_income.svg){width="640px" fig-align="center"}
+
+:::{.real-world title="US household income (2024)"}
+- Median: about **$\$84{,}000$**
+- Mean: about **$\$121{,}000$**
+
+Half of households earn less than the median. **Most households earn less than the mean.**
+
+When you hear "the average household," ask: is that the mean or the median?
+
+*Source: US Census Bureau, Income in the United States: 2024. Median $\$83{,}730$. Mean about $\$121{,}000$.*
+:::
+
+{{< practice >}}
+
+Work with a partner. Compare answers when you finish each problem.
+
+**Mean and Median**
+
+1. A student recorded how many hours she slept each night for one week.
+
+   7, 8, 6, 9, 7, 5, 7
+
+   a. Find the mean.
+
+   b. Find the median.
+
+2. Six students timed their walk to the bus stop, in minutes.
+
+   15, 22, 18, 30, 19, 16
+
+   a. Find the mean.
+
+   b. Find the median.
+
+3. This dot plot shows how many books some students read this month.
+
+   ![](/images/Unit_1/1.2_dot_plot_books.svg){width="320px"}
+
+   a. How many students are in the data?
+
+   b. Find the median.
+
+   c. Find the mean.
+
+***
+
+**One Big Value**
+
+4. A small company has 5 people. Here is what each person is paid in one year.
+
+   | Person | Pay |
+   |---|---:|
+   | Worker A | $\$30{,}000$ |
+   | Worker B | $\$32{,}000$ |
+   | Worker C | $\$35{,}000$ |
+   | Worker D | $\$38{,}000$ |
+   | Owner | $\$265{,}000$ |
+
+   a. Find the mean pay.
+
+   b. Find the median pay.
+
+   c. The company puts this in a job ad: *"Average pay at our company: $\$80{,}000$!"* Is this true? Is it fair to a person looking for a job? Explain.
+
+   d. Leave out the owner. Find the mean pay of the 4 workers. How much did one person change the mean?
+
+***
+
+**Shape**
+
+5. Look at each histogram. For each one, name the shape. Then tell if the mean is greater than, less than, or about equal to the median.
+
+   ![](/images/Unit_1/1.2_histograms_abc.svg){width="640px"}
+
+6. Guess the shape of each data set: skewed left, symmetric, or skewed right. Explain.
+
+   a. The price of every house sold in Columbia this year.
+
+   b. Scores on a very easy test. Most students score 90 to 100.
+
+   c. The heights of all adult women in Missouri.
+
+7. Look at the US household income graph above.
+
+   a. Why is the mean ($\$121{,}000$) bigger than the median ($\$84{,}000$)?
+
+   b. A news story says, *"The average US household earns $\$121{,}000$."* Is this true? Does it describe a typical household? Explain.
+
+   c. Do more than half of households earn less than $\$121{,}000$? How do you know?

@@ -1,0 +1,207 @@
+# Glossary {.unnumbered}
+
+### bin {#glossary-bin}
+
+One group of values in a histogram. Each bar of a histogram is one bin.
+
+> **Example:**
+>
+> The bin "10 to 20" holds every value from 10 up to (but not including) 20.
+
+**See Also:** {{< glink histogram >}}
+
+***
+
+### box plot {#glossary-box-plot}
+
+A graph that shows the five-number summary. A box goes from Q1 to Q3, with a line at the median. Lines called whiskers go out to the minimum and the maximum.
+
+**See Also:** {{< glink "five-number summary" >}}, {{< glink quartile >}}
+
+***
+
+### data {#glossary-data}
+
+Facts or numbers that we collect to learn about something.
+
+> **Example:**
+>
+> The number of pets each student in a class has.
+
+***
+
+### distribution {#glossary-distribution}
+
+All the values in a data set and how often each one happens. A graph of the data shows its distribution.
+
+**See Also:** {{< glink shape >}}
+
+***
+
+### dot plot {#glossary-dot-plot}
+
+A graph that puts one dot above a number line for each data value. Dots for the same value stack up.
+
+**See Also:** {{< glink "frequency table" >}}, {{< glink histogram >}}
+
+***
+
+### five-number summary {#glossary-five-number-summary}
+
+Five numbers that describe a data set: the minimum, Q1, the median, Q3, and the maximum.
+
+**See Also:** {{< glink "box plot" >}}, {{< glink quartile >}}
+
+***
+
+### frequency {#glossary-frequency}
+
+How many times a value happens in a data set.
+
+> **Example:**
+>
+> In the data 2, 3, 3, 5, the value 3 has a frequency of 2.
+
+***
+
+### frequency table {#glossary-frequency-table}
+
+A table that lists each value and its frequency.
+
+**See Also:** {{< glink frequency >}}, {{< glink tally >}}
+
+***
+
+### histogram {#glossary-histogram}
+
+A bar graph for number data. The values are put in groups called bins. The bars touch, and the height of each bar is how many values are in that bin.
+
+**See Also:** {{< glink bin >}}, {{< glink "dot plot" >}}
+
+***
+
+### interquartile range {#glossary-interquartile-range}
+
+The distance from Q1 to Q3. It shows how spread out the middle half of the data is. Also called the **IQR**.
+
+$$\text{IQR} = Q_3 - Q_1$$
+
+**See Also:** {{< glink quartile >}}, {{< glink range >}}
+
+***
+
+### IQR {#glossary-iqr}
+
+Short for interquartile range: $Q_3 - Q_1$. It shows how spread out the middle half of the data is.
+
+**See Also:** {{< glink "interquartile range" >}}
+
+***
+
+### maximum {#glossary-maximum}
+
+The largest value in a data set.
+
+***
+
+### mean {#glossary-mean}
+
+The sum of all the values divided by how many values there are. Also called the **average**.
+
+> **Example:**
+>
+> The mean of 2, 3, 8, 3, 4 is $20 \div 5 = 4$.
+
+**See Also:** {{< glink median >}}
+
+***
+
+### median {#glossary-median}
+
+The middle value when the data is in order. With an even number of values, the median is halfway between the two middle values.
+
+> **Example:**
+>
+> The median of 2, 3, 3, 4, 8 is 3.
+
+**See Also:** {{< glink mean >}}
+
+***
+
+### minimum {#glossary-minimum}
+
+The smallest value in a data set.
+
+***
+
+### mode {#glossary-mode}
+
+The value that happens most often in a data set.
+
+***
+
+### outlier {#glossary-outlier}
+
+A value that is far away from the rest of the data.
+
+***
+
+### quartile {#glossary-quartile}
+
+The three values that cut ordered data into four parts with the same number of values. Q1 is the median of the lower half. The median is Q2. Q3 is the median of the upper half.
+
+**See Also:** {{< glink "five-number summary" >}}, {{< glink "interquartile range" >}}
+
+***
+
+### range {#glossary-range}
+
+The maximum minus the minimum. It shows how spread out all the data is.
+
+**See Also:** {{< glink "interquartile range" >}}
+
+***
+
+### shape {#glossary-shape}
+
+What a graph of the data looks like: symmetric, skewed left, or skewed right.
+
+**See Also:** {{< glink symmetric >}}, {{< glink "skewed left" >}}, {{< glink "skewed right" >}}
+
+***
+
+### skewed left {#glossary-skewed-left}
+
+A shape where most values are high and a long tail stretches to the left. The mean is less than the median.
+
+**See Also:** {{< glink "skewed right" >}}, {{< glink tail >}}
+
+***
+
+### skewed right {#glossary-skewed-right}
+
+A shape where most values are low and a long tail stretches to the right. The mean is greater than the median.
+
+> **Example:**
+>
+> US household income is skewed right.
+
+**See Also:** {{< glink "skewed left" >}}, {{< glink tail >}}
+
+***
+
+### symmetric {#glossary-symmetric}
+
+A shape where the left side and the right side look about the same. The mean and the median are about equal.
+
+***
+
+### tail {#glossary-tail}
+
+The long, low side of a graph. The mean is pulled toward the tail.
+
+***
+
+### tally {#glossary-tally}
+
+A mark made for each data value as you count it.

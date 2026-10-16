@@ -1,0 +1,19 @@
+.tippy-box[data-theme~='light-border'] {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 6px 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* GLOSSARY LINKS */
+a.glossary-link {
+  font-weight: 550;
+  color: #1a4c7a;
+  text-decoration: underline dotted #9cb7d4;
+  text-underline-offset: 2px;
+}
+

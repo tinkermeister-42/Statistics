@@ -1,0 +1,180 @@
+# 1.3 - Quartiles, IQR, and Box Plots {.unnumbered}
+
+The median cuts data into two halves. What if you cut each half in half again?
+
+You get four parts. Each part has about 25% of the data. The numbers that make those cuts are called {{< glink slug="quartile" text="quartiles" >}}.
+
+In this lesson, you find quartiles, use them to measure spread, and draw a {{< glink "box plot" >}}.
+
+:::{.objectives}
+- [ ] I find Q1, the median, and Q3.
+- [ ] I find the five-number summary and the IQR.
+- [ ] I make a box plot.
+:::
+
+:::{.vocab}
+{{< glink quartile >}},
+{{< glink "five-number summary" >}},
+{{< glink "interquartile range" >}},
+{{< glink IQR >}},
+{{< glink "box plot" >}},
+{{< glink minimum >}},
+{{< glink maximum >}},
+{{< glink range >}}
+:::
+
+:::{.guided-notes-link}
+[Printable mini lesson](/handouts/Unit_1/1.3_Quartiles_IQR_and_Box_Plots.pdf){target="_blank"} - notes and practice problems to print and write on.
+:::
+
+{{< learn >}}
+
+### 1.3.1 - Finding Quartiles
+
+:::{.remember title="How to Find the Quartiles"}
+1. Put the data in order.
+2. Find the **median**. It splits the data into a **lower half** and an **upper half**.
+3. **Q1** = the median of the lower half.
+4. **Q3** = the median of the upper half.
+
+**Odd number of values?** Leave the median out of both halves.
+:::
+
+**Example 1:** an odd number of values (11)
+
+3, 4, 6, 7, 9, **10**, 12, 13, 15, 18, 20
+
+The median is **10**. Leave it out of the halves.
+
+| Lower half | Upper half |
+|:---:|:---:|
+| 3, 4, **6**, 7, 9 | 12, 13, **15**, 18, 20 |
+| Q1 = 6 | Q3 = 15 |
+
+**Example 2:** an even number of values (10)
+
+1, 3, 4, 6, **7**, **9**, 10, 12, 14, 18
+
+There are two middle values, 7 and 9. The median is $(7 + 9) \div 2 = 8$.
+
+| Lower half | Upper half |
+|:---:|:---:|
+| 1, 3, **4**, 6, 7 | 9, 10, **12**, 14, 18 |
+| Q1 = 4 | Q3 = 12 |
+
+***
+
+### 1.3.2 - The Five-Number Summary and the IQR
+
+The {{< glink "five-number summary" >}} is five numbers:
+
+**minimum, Q1, median, Q3, maximum**
+
+The {{< glink "interquartile range" >}} (IQR) shows how spread out the **middle half** of the data is.
+
+$$
+\text{IQR} = Q_3 - Q_1
+$$
+
+For Example 1: IQR $= 15 - 6 = 9$.
+
+For Example 2: IQR $= 12 - 4 = 8$.
+
+:::{.you-try-m title="Find the five-number summary and the IQR."}
+5, 9, 2, 7, 4, 8, 3
+:::
+:::{.answer title="Answer"}
+In order: 2, 3, 4, **5**, 7, 8, 9. The median is 5.
+
+Lower half: 2, **3**, 4. So Q1 = 3.
+
+Upper half: 7, **8**, 9. So Q3 = 8.
+
+Five-number summary: 2, 3, 5, 8, 9. IQR $= 8 - 3 = 5$.
+:::
+
+***
+
+### 1.3.3 - Box Plots
+
+A {{< glink "box plot" >}} draws the five-number summary on a number line. Here is Example 1.
+
+![](/images/Unit_1/1.3_box_plot_example.svg){width="640px" fig-align="center"}
+
+- The **box** goes from Q1 to Q3. Its length is the IQR.
+- The **line inside the box** is the median.
+- The **whiskers** go out to the minimum and the maximum.
+
+:::{.gotcha title="Same count, not same width"}
+The 4 parts have the same **number of values**, not the same width. A short part means the values are packed close together. A long part means they are spread out.
+:::
+
+:::{.think title="Why use the IQR instead of the range?"}
+The range is maximum minus minimum. One extreme value changes it a lot.
+
+The IQR only uses the middle half of the data. One extreme value does not move it. This is like the median and the mean.
+:::
+
+{{< practice >}}
+
+Work with a partner. Compare answers when you finish each problem.
+
+**Five-Number Summary**
+
+1. Find the five-number summary and the IQR.
+
+   4, 8, 1, 6, 9, 3, 7
+
+2. Find the five-number summary and the IQR.
+
+   12, 15, 10, 20, 18, 11, 16, 14
+
+***
+
+**Box Plots**
+
+3. Eleven students recorded how many minutes they spent on homework last night.
+
+   30, 10, 45, 5, 25, 60, 15, 30, 10, 40, 20
+
+   a. Find the five-number summary.
+
+   b. Make a box plot.
+
+   c. What is the IQR? What does it tell you?
+
+4. Twelve students counted how many texts they sent in one hour.
+
+   13, 2, 20, 8, 30, 12, 5, 18, 10, 24, 8, 15
+
+   a. Find the five-number summary.
+
+   b. Make a box plot.
+
+   c. Which part of the box plot is the longest? What does that tell you about the data?
+
+***
+
+**Quartiles from a Graph**
+
+5. This dot plot shows how many pets some students have.
+
+   ![](/images/Unit_1/1.3_dot_plot_pets.svg){width="440px"}
+
+   a. How many students are in the data?
+
+   b. Find Q1, the median, and Q3.
+
+   c. Find the IQR.
+
+6. Look at these two data sets.
+
+   Set A: 1, 2, 3, 4, 5, 6, 7
+
+   Set B: 1, 2, 3, 4, 5, 6, 70
+
+   a. Find the IQR of each set.
+
+   b. Find the range (maximum minus minimum) of each set.
+
+   c. One number changed. Which measure of spread changed a lot? Which did not change? Why?

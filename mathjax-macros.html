@@ -1,0 +1,22 @@
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      packages: { '[+]': ['ams', 'color', 'cancel', 'html'] },
+      macros: {
+        stepnote: ['\\hbox{}\\hskip 1em\\class{stepnote}{\\textcolor{gray}{\\scriptsize\\hbox{#1}}}', 1],
+        steptag: ['\\stepnote{#1}', 1],
+        snboth: ['\\hbox{}\\hskip 1em\\class{stepnote}{\\textcolor{gray}{\\scriptsize\\hbox{$#1$ both sides}}}', 1],
+        snplus: ['\\snboth{+\\,#1}', 1],
+        snminus: ['\\snboth{-\\,#1}', 1],
+        sntimes: ['\\snboth{\\times\\,#1}', 1],
+        sndiv: ['\\snboth{\\div\\,#1}', 1]
+      }},
+    chtml: { mtextInheritFont: true }
+    };
+</script>
+
+<script defer
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>

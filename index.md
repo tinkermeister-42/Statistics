@@ -1,0 +1,64 @@
+# Welcome to Statistics {.unnumbered}
+
+Welcome to Statistics at Frederick Douglass High School!
+
+Statistics is the math of data. Every day, people use numbers to tell you something. An ad says "average pay is $\$80{,}000$." A news story says "most people agree." Statistics helps you check if those numbers tell the truth.
+
+***
+
+## 🧭 How This Book Works
+
+You do most of your work on Khan Academy, in the course **Statistics essentials**. You work at your own speed.
+
+This book has the **mini lessons** we do at the start of class. Each mini lesson:
+
+- Matches one or two Khan Academy lessons
+- Shows the key ideas with examples
+- Has a printable sheet with practice problems
+
+Do the mini lesson first. Then do the matching Khan Academy lessons.
+
+***
+
+## 🗺️ Mini Lessons and Khan Academy
+
+| Mini lesson | Topic | Khan Academy |
+|---|---|---|
+| **Unit 1: Displaying One Variable** | | |
+| [1.1](chapters/Unit_1/1.1_Frequency_Tables_Dot_Plots_and_Histograms.qmd) | Frequency tables, dot plots, and histograms | Unit 1, lessons 1 and 2 |
+| [1.2](chapters/Unit_1/1.2_Mean_Median_and_Shape.qmd) | Mean, median, and shape | Unit 1, lesson 3 |
+| [1.3](chapters/Unit_1/1.3_Quartiles_IQR_and_Box_Plots.qmd) | Quartiles, IQR, and box plots | Unit 1, lessons 4 and 5 |
+| 1.4 | Reading box plots and outliers | Unit 1, lesson 5 |
+| **Unit 2: Analyzing One Variable** | | |
+| 2.1 | Standard deviation | Unit 2, lesson 1 |
+| 2.2 | Choosing measures and comparing distributions | Unit 2, lessons 1 and 2 |
+| 2.3 | Percentiles and z-scores | Unit 2, lesson 3 |
+| 2.4 | Normal distributions and the empirical rule | Unit 2, lesson 4 |
+| 2.5 | Normal calculations with a z-table | Unit 2, lesson 5 |
+| 2.6 | Normal calculations in reverse | Unit 2, lesson 5 |
+| **Unit 3: Two-Way Tables** | | |
+| 3.1 | Two-way tables and relative frequency | Unit 3, lesson 1 |
+| 3.2 | Marginal and conditional distributions | Unit 3, lesson 2 |
+| **Unit 4: Scatterplots** | | |
+| 4.1 | Scatterplots and lines of best fit | Unit 4, lesson 1 |
+| 4.2 | Slope, intercept, and correlation | Unit 4, lesson 2 |
+| 4.3 | Residuals | Unit 4, lesson 3 |
+| **Unit 5: Study Design** | | |
+| 5.1 | Samples, studies, and bias | Unit 5, lessons 1 and 2 |
+| 5.2 | Sampling methods | Unit 5, lesson 3 |
+| 5.3 | Experiments | Unit 5, lesson 4 |
+| 5.4 | What a study can prove | Unit 5, lesson 5 |
+| **Unit 6: Probability** | | |
+| 6.1 | Venn diagrams and the addition rule | Unit 6, lesson 1 |
+| 6.2 | The multiplication rule | Unit 6, lesson 2 |
+| 6.3 | Conditional probability | Unit 6, lesson 3 |
+| 6.4 | Simulations | Unit 6, lesson 4 |
+| 6.5 | Permutations | Unit 6, lesson 5 |
+| 6.6 | Combinations | Unit 6, lesson 6 |
+| 6.7 | Probability with counting | Unit 6, lesson 7 |
+| **Unit 7: Probability Distributions** | | |
+| 7.1 | Probability distributions | Unit 7, lessons 1 and 2 |
+| 7.2 | Expected value | Unit 7, lessons 3 and 4 |
+| 7.3 | Expected payoff | Unit 7, lesson 4 |
+
+Mini lessons without a link are coming soon.
