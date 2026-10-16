@@ -1,0 +1,129 @@
+# 4.1 - Scatterplots and Lines of Best Fit {.unnumbered}
+
+Ten students recorded how many hours they studied and their test score.
+
+![](/images/Unit_4/4.1_study.svg){width="420px" fig-align="center"}
+
+Each dot is one student. The students who studied more mostly scored higher. In this lesson, you describe patterns like this and draw a line to make predictions.
+
+:::{.objectives}
+- [ ] I describe the direction, form, and strength of a scatterplot.
+- [ ] I choose a good line of best fit.
+- [ ] I write the equation of a line of best fit.
+- [ ] I make predictions and know when not to trust them.
+:::
+
+:::{.vocab}
+{{< glink scatterplot >}},
+{{< glink "line of best fit" >}},
+{{< glink "y-hat" >}},
+{{< glink extrapolation >}}
+:::
+
+:::{.guided-notes-link}
+[Printable mini lesson](/handouts/Unit_4/4.1_Scatterplots_and_Lines_of_Best_Fit.pdf){target="_blank"} - notes and practice problems to print and write on.
+:::
+
+{{< khan 4.1 >}}
+
+{{< learn >}}
+
+### 4.1.1 - Describing a Scatterplot
+
+A {{< glink scatterplot >}} shows two numbers for each person or thing. The first number ($x$) goes across. The second number ($y$) goes up.
+
+| | Ask | The study data |
+|---|---|---|
+| **Direction** | As $x$ goes up, does $y$ go up (positive) or down (negative)? | Positive |
+| **Form** | Do the dots follow a line (linear) or a curve? | Linear |
+| **Strength** | Are the dots close to a line (strong) or spread out (weak)? | Strong |
+| **Unusual** | Any outliers or clusters? | None |
+
+***
+
+### 4.1.2 - The Line of Best Fit
+
+A {{< glink "line of best fit" >}} follows the trend of the dots.
+
+- It goes through the middle of the dots.
+- About the same number of dots are above it as below it.
+
+![](/images/Unit_4/4.1_study_line.svg){width="420px" fig-align="center"}
+
+**Finding its equation.** Pick two points **on the line**. They do not have to be dots: $(2, 64)$ and $(6, 84)$.
+
+$$
+m = \frac{84 - 64}{6 - 2} = \frac{20}{4} = 5
+$$
+
+$$
+64 = 5(2) + b \quad \Rightarrow \quad b = 54
+$$
+
+$$
+\hat{y} = 5x + 54
+$$
+
+:::{.remember title="y-hat"}
+$\hat{y}$ is read "y-hat." The hat means **predicted**. The line predicts $y$. It does not give the exact $y$ for every student.
+:::
+
+***
+
+### 4.1.3 - Predicting
+
+A student studies 5 hours:
+
+$$
+\hat{y} = 5(5) + 54 = 79
+$$
+
+The predicted score is **79**.
+
+:::{.gotcha title="Extrapolation"}
+Predicting far outside the data is called {{< glink extrapolation >}}. It is risky.
+
+12 hours gives $\hat{y} = 5(12) + 54 = 114$. A test score cannot be more than 100. The data only goes from 1 to 8 hours.
+:::
+
+:::{.you-try title="Use $\hat{y} = 5x + 54$. Predict the score for 7 hours of study."}
+$\hat{y} = 5(7) + 54 = 35 + 54 = 89$
+:::
+
+{{< practice >}}
+
+Work with a partner. Compare answers when you finish each problem.
+
+**Describing**
+
+1. Describe the direction, form, and strength of each scatterplot.
+
+   ![](/images/Unit_4/4.1_describe.svg){width="620px"}
+
+2. Which line fits the study data best? Explain why the other two do not.
+
+   ![](/images/Unit_4/4.1_lines.svg){width="420px"}
+
+***
+
+**Equations and Predictions**
+
+3. This scatterplot shows the age and value of 10 used cars. A line of best fit is drawn.
+
+   ![](/images/Unit_4/4.1_car.svg){width="440px"}
+
+   a. Describe the direction, form, and strength.
+
+   b. Use the two marked points to find the slope.
+
+   c. Write the equation of the line.
+
+   d. Predict the value of a 6-year-old car.
+
+   e. Predict the value of a 15-year-old car. Does your answer make sense? Explain.
+
+4. The line for the study data is $\hat{y} = 5x + 54$.
+
+   a. Predict the score of a student who studies 3 hours.
+
+   b. A student plans to study 10 hours. Predict the score. Should you trust this prediction? Explain.

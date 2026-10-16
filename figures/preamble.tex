@@ -83,3 +83,17 @@
   \node[font=\large] at (5.8,2.2) {#5};
   \node[font=\large] at (7.4,0.4) {#6};
 \end{tikzpicture}}
+% light grid with labelled axes:
+% \grid{xmin}{xmax}{xstep}{ymin}{ymax}{ystep}{x label}{y label}
+% (x and y are in data units; set the tikzpicture x= and y= scales)
+\newcommand{\grid}[8]{%
+  \pgfmathsetmacro{\gxs}{#1+#3}\pgfmathsetmacro{\gys}{#4+#6}
+  \foreach \t in {#1,\gxs,...,#2} \draw[gray!25] (\t,#4) -- (\t,#5);
+  \foreach \t in {#4,\gys,...,#5} \draw[gray!25] (#1,\t) -- (#2,\t);
+  \draw[thick] (#1,#4) -- (#2,#4); \draw[thick] (#1,#4) -- (#1,#5);
+  \foreach \t in {#1,\gxs,...,#2} \node[below,font=\small] at (\t,#4) {\pgfmathprintnumber{\t}};
+  \foreach \t in {#4,\gys,...,#5} \node[left,font=\small] at (#1,\t) {\pgfmathprintnumber{\t}};
+  \node[below=16pt] at ({(#1+#2)/2},#4) {#7};
+  \node[rotate=90,above=20pt] at (#1,{(#4+#5)/2}) {#8};}
+% scatter points: \pts{x/y,x/y,...}
+\newcommand{\pts}[1]{\foreach \px/\py in {#1} \fill (\px,\py) circle (2.2pt);}

@@ -1,0 +1,10 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}
+\begin{document}
+\begin{tikzpicture}[x=0.8cm,y=0.18cm]
+  \grid{0}{9}{1}{0}{30}{5}{Weeks after planting}{Height (cm)}
+  \pts{1/6.8,2/8.6,3/11.8,4/13.6,5/16.9,6/18.7,7/21.8,8/23.6}
+  \draw[thick,blue!70!black] (0,4) -- (9,26.5);
+  \node[font=\small,blue!70!black,anchor=west] at (5.4,13) {$\hat{y} = 2.5x + 4$};
+\end{tikzpicture}
+\end{document}

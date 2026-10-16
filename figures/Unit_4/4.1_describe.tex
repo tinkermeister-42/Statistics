@@ -1,0 +1,15 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}
+\begin{document}
+\begin{tikzpicture}[x=0.32cm,y=0.32cm]
+  \foreach \lab/\sx/\sy in {A/0/0,B/13/0,C/26/0,D/39/0} {
+    \begin{scope}[shift={(\sx,\sy)}]
+      \draw[thick] (0,0) -- (10,0); \draw[thick] (0,0) -- (0,10);
+      \node[font=\bfseries] at (5,11) {\lab};
+    \end{scope}}
+  \begin{scope}[shift={(0,0)}]\pts{1/1.6,2/2.1,2.5/3.2,3/3.4,4/4.3,4.5/5.1,5/5.0,6/6.4,6.5/6.6,7/7.4,8/8.2,9/9.1}\end{scope}
+  \begin{scope}[shift={(13,0)}]\pts{1/8.5,2/6.0,2.5/8.8,3/5.2,4/7.0,4.5/4.0,5/6.4,6/3.4,6.5/5.6,7/2.9,8/4.4,9/2.0}\end{scope}
+  \begin{scope}[shift={(26,0)}]\pts{1/5.5,2/2.5,2.5/8.0,3/4.0,4/6.5,4.5/1.8,5/8.6,6/3.6,6.5/6.0,7/2.2,8/7.4,9/4.8}\end{scope}
+  \begin{scope}[shift={(39,0)}]\pts{1/9.0,2/6.6,2.5/5.4,3/4.2,4/2.6,4.5/2.0,5/1.7,6/2.1,6.5/2.7,7/3.6,8/5.8,9/8.6}\end{scope}
+\end{tikzpicture}
+\end{document}

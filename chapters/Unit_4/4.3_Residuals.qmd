@@ -1,0 +1,129 @@
+# 4.3 - Residuals {.unnumbered}
+
+The study line $\hat{y} = 5x + 54$ predicts that a student who studies 4 hours scores 74. One student who studied 4 hours scored 78. Another scored 72.
+
+The line is never exactly right. In this lesson, you measure how far off each prediction is. That number is called a {{< glink residual >}}.
+
+:::{.objectives}
+- [ ] I find and explain a residual.
+- [ ] I tell if a point is above or below the line from its residual.
+- [ ] I explain what the least-squares line is.
+- [ ] I use a residual plot to decide if a line is a good model.
+:::
+
+:::{.vocab}
+{{< glink residual >}},
+{{< glink "y-hat" >}},
+{{< glink "least-squares regression line" >}},
+{{< glink "residual plot" >}}
+:::
+
+:::{.guided-notes-link}
+[Printable mini lesson](/handouts/Unit_4/4.3_Residuals.pdf){target="_blank"} - notes and practice problems to print and write on.
+:::
+
+{{< khan 4.3 >}}
+
+{{< learn >}}
+
+### 4.3.1 - Finding a Residual
+
+:::{.remember title="Residual"}
+$$
+\text{residual} = \text{actual} - \text{predicted} = y - \hat{y}
+$$
+
+- **Positive** residual: the point is **above** the line.
+- **Negative** residual: the point is **below** the line.
+:::
+
+![](/images/Unit_4/4.3_residuals.svg){width="440px" fig-align="center"}
+
+**Example:** The line is $\hat{y} = 5x + 54$. Two students studied 4 hours.
+
+| $x$ | $y$ (actual) | $\hat{y}$ (predicted) | $y - \hat{y}$ | Meaning |
+|:---:|:---:|:---:|:---:|---|
+| 4 | 78 | $5(4) + 54 = 74$ | $78 - 74 = 4$ | scored 4 points **more** than predicted |
+| 4 | 72 | 74 | $72 - 74 = -2$ | scored 2 points **less** than predicted |
+
+:::{.you-try title="A student studied 6 hours and scored 90. Find the residual."}
+$\hat{y} = 5(6) + 54 = 84$.
+
+Residual $= 90 - 84 = 6$. The student scored 6 points more than predicted.
+:::
+
+***
+
+### 4.3.2 - The Least-Squares Line
+
+Square every residual and add them up:
+
+$$
+\Sigma(y - \hat{y})^2
+$$
+
+The {{< glink "least-squares regression line" >}} is the line that makes this sum as **small as possible**. Calculators and computers find this line for you.
+
+:::{.think title="Why square the residuals?"}
+Some residuals are positive and some are negative. If you just add them, they cancel out. Squaring makes every one positive, so big misses count a lot.
+:::
+
+***
+
+### 4.3.3 - Residual Plots
+
+A {{< glink "residual plot" >}} puts $x$ across the bottom and the residuals up the side.
+
+![](/images/Unit_4/4.3_resid_plots.svg){width="560px" fig-align="center"}
+
+| Plot | What you see | What it means |
+|---|---|---|
+| A | Random scatter, no pattern | A line is a **good** model. |
+| B | A curved pattern | A line is **not** a good model. The data is curved. |
+
+{{< practice >}}
+
+Work with a partner. Compare answers when you finish each problem.
+
+**Finding Residuals**
+
+1. A plant's height (cm) is predicted by $\hat{y} = 2.5x + 4$, where $x$ is the number of weeks. Make a table with columns $x$, $y$, $\hat{y}$, and $y - \hat{y}$.
+
+   | $x$ (weeks) | 1 | 2 | 3 | 4 | 5 |
+   |---|:---:|:---:|:---:|:---:|:---:|
+   | $y$ (actual) | 6.8 | 8.6 | 11.8 | 13.6 | 16.9 |
+
+   a. Which weeks have points above the line?
+
+   b. Is the point for week 2 above or below the line? How do you know?
+
+2. Use the study line $\hat{y} = 5x + 54$.
+
+   a. A student studied 6 hours and scored 90. Find the residual.
+
+   b. Another student has a residual of $-5$. What does that mean?
+
+3. The used car line is $\hat{y} = -2.5x + 30$ (value in thousands of dollars). A 6-year-old car is worth $\$14{,}000$. Find the residual and explain it.
+
+***
+
+**Least Squares and Residual Plots**
+
+4. Two lines were fit to the same 4 points. Here are their residuals.
+
+   | | Residuals |
+   |---|---|
+   | Line A | 2, $-1$, $-1$, 0 |
+   | Line B | 3, $-2$, 1, $-2$ |
+
+   a. Find $\Sigma(y - \hat{y})^2$ for each line. (Square each residual, then add.)
+
+   b. Which line is closer to the least-squares line? Explain.
+
+5. Look at the residual plots above.
+
+   a. Which plot shows that a line is a good model?
+
+   b. What does the pattern in plot B tell you?
+
+6. A residual plot has positive residuals for small $x$, negative residuals in the middle, and positive residuals for large $x$. Is a line a good model? Explain.

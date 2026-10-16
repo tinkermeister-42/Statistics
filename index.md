@@ -40,9 +40,9 @@ Do the mini lesson first. Then do the matching Khan Academy lessons.
 | [3.1](chapters/Unit_3/3.1_Two-Way_Tables_and_Relative_Frequency.qmd) | Two-way tables and relative frequency | Unit 3, lesson {{< khanlink 3.1 "1" >}} |
 | [3.2](chapters/Unit_3/3.2_Marginal_and_Conditional_Distributions.qmd) | Marginal and conditional distributions | Unit 3, lesson {{< khanlink 3.2 "2" >}} |
 | **Unit 4: Scatterplots** | | |
-| 4.1 | Scatterplots and lines of best fit | Unit 4, lesson {{< khanlink 4.1 "1" >}} |
-| 4.2 | Slope, intercept, and correlation | Unit 4, lesson {{< khanlink 4.2 "2" >}} |
-| 4.3 | Residuals | Unit 4, lesson {{< khanlink 4.3 "3" >}} |
+| [4.1](chapters/Unit_4/4.1_Scatterplots_and_Lines_of_Best_Fit.qmd) | Scatterplots and lines of best fit | Unit 4, lesson {{< khanlink 4.1 "1" >}} |
+| [4.2](chapters/Unit_4/4.2_Slope_Intercept_and_Correlation.qmd) | Slope, intercept, and correlation | Unit 4, lesson {{< khanlink 4.2 "2" >}} |
+| [4.3](chapters/Unit_4/4.3_Residuals.qmd) | Residuals | Unit 4, lesson {{< khanlink 4.3 "3" >}} |
 | **Unit 5: Study Design** | | |
 | 5.1 | Samples, studies, and bias | Unit 5, lessons {{< khanlink 5.1 "1" >}} and {{< khanlink 5.2 "2" >}} |
 | 5.2 | Sampling methods | Unit 5, lesson {{< khanlink 5.3 "3" >}} |

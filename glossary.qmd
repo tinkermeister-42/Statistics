@@ -36,6 +36,14 @@ Data that puts each answer into a group or category, like "bus, car, or walk." I
 
 ***
 
+### causation {#glossary-causation}
+
+When one thing actually makes another thing happen. A correlation does not prove causation.
+
+**See Also:** {{< glink "lurking variable" >}}
+
+***
+
 ### center {#glossary-center}
 
 A single number that describes a typical value in a data set. The mean and the median are measures of center.
@@ -49,6 +57,14 @@ A single number that describes a typical value in a data set. The mean and the m
 The percents for one variable inside a single group. Divide each count in that group's row (or column) by the group's total.
 
 **See Also:** {{< glink "marginal distribution" >}}, {{< glink association >}}
+
+***
+
+### correlation coefficient {#glossary-correlation-coefficient}
+
+A number $r$ from $-1$ to $1$ that measures the direction and strength of a linear pattern. Close to $1$ or $-1$ is strong. Close to $0$ is weak.
+
+**See Also:** {{< glink scatterplot >}}, {{< glink causation >}}
 
 ***
 
@@ -83,6 +99,12 @@ A graph that puts one dot above a number line for each data value. Dots for the 
 In a normal distribution, about 68% of the data is within 1 standard deviation of the mean, about 95% is within 2, and about 99.7% is within 3. Also called the 68-95-99.7 rule.
 
 **See Also:** {{< glink "normal distribution" >}}
+
+***
+
+### extrapolation {#glossary-extrapolation}
+
+Using a line to predict far outside the range of the data. Extrapolation is risky and can give answers that make no sense.
 
 ***
 
@@ -143,6 +165,32 @@ $$\text{IQR} = Q_3 - Q_1$$
 Short for interquartile range: $Q_3 - Q_1$. It shows how spread out the middle half of the data is.
 
 **See Also:** {{< glink "interquartile range" >}}
+
+***
+
+### least-squares regression line {#glossary-least-squares-regression-line}
+
+The line that makes $\Sigma(y - \hat{y})^2$, the sum of the squared residuals, as small as possible.
+
+**See Also:** {{< glink residual >}}
+
+***
+
+### line of best fit {#glossary-line-of-best-fit}
+
+A line that follows the trend of the dots in a scatterplot. About the same number of dots are above it as below it. Also called a trend line.
+
+**See Also:** {{< glink "least-squares regression line" >}}, {{< glink "y-hat" >}}
+
+***
+
+### lurking variable {#glossary-lurking-variable}
+
+A hidden variable that affects both variables in a study. It can make two things look connected when one does not cause the other.
+
+> **Example:**
+>
+> Hot weather causes both more ice cream sales and more sunburns.
 
 ***
 
@@ -274,11 +322,35 @@ A count divided by a total, written as a fraction, decimal, or percent.
 
 ***
 
+### residual {#glossary-residual}
+
+The actual value minus the predicted value: $y - \hat{y}$. A positive residual means the point is above the line.
+
+**See Also:** {{< glink "residual plot" >}}, {{< glink "least-squares regression line" >}}
+
+***
+
+### residual plot {#glossary-residual-plot}
+
+A graph of the residuals against $x$. Random scatter means a line is a good model. A pattern, like a curve, means it is not.
+
+**See Also:** {{< glink residual >}}
+
+***
+
 ### sample {#glossary-sample}
 
 A part of a group that we collect data from. We use the sample to learn about the whole group (the population).
 
 **See Also:** {{< glink population >}}
+
+***
+
+### scatterplot {#glossary-scatterplot}
+
+A graph of two numbers for each person or thing. Each dot shows one pair $(x, y)$.
+
+**See Also:** {{< glink "line of best fit" >}}, {{< glink "correlation coefficient" >}}
 
 ***
 
@@ -323,6 +395,14 @@ A shape where most values are low and a long tail stretches to the right. The me
 > US household income is skewed right.
 
 **See Also:** {{< glink "skewed left" >}}, {{< glink tail >}}
+
+***
+
+### slope {#glossary-slope}
+
+How much $y$ changes when $x$ goes up by 1. For a line of best fit: for each additional unit of $x$, the predicted $y$ changes by the slope.
+
+**See Also:** {{< glink "y-intercept" >}}
 
 ***
 
@@ -399,6 +479,22 @@ A line on a box plot that goes from the box out to the smallest or largest value
 The symbol $\bar{x}$, read "x-bar." It stands for the mean of a sample: $\bar{x} = \dfrac{\Sigma x}{n}$.
 
 **See Also:** {{< glink mean >}}, {{< glink mu >}}
+
+***
+
+### y-hat {#glossary-y-hat}
+
+The symbol $\hat{y}$, read "y-hat." It stands for a **predicted** value of $y$ from a line, such as $\hat{y} = 5x + 54$.
+
+**See Also:** {{< glink residual >}}
+
+***
+
+### y-intercept {#glossary-y-intercept}
+
+The value of $y$ when $x = 0$. For a line of best fit, it is the predicted $y$ when $x = 0$. Sometimes it has no real meaning.
+
+**See Also:** {{< glink slope >}}
 
 ***
 

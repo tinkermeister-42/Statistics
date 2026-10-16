@@ -1,0 +1,117 @@
+\documentclass[11pt]{article}
+\input{../preamble}
+\newcommand{\blank}[1]{\ans{#1}}
+
+\begin{document}
+
+\lessontitle{Residuals}
+
+A line of best fit makes predictions. Most real points are a little above or below the line.
+A \textbf{residual} measures how far off the prediction is.
+
+\vspace{0.5em}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{6.7in}|}\hline
+\textbf{residual} $=$ actual $-$ predicted $= y - \hat{y}$\par\vspace{0.2em}
+Positive residual: the point is \textbf{above} the line. \qquad Negative residual: the point is \textbf{below} the line.\\ \hline
+\end{tabular}
+
+\begin{center}\scalebox{0.95}{\fig{Unit_4/4.3_residuals}}\end{center}
+
+\textbf{Example:} The line is $\hat{y} = 5x + 54$. Two students studied 4 hours.
+
+\vspace{0.3em}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|c|c|c|c|l|}\hline
+$x$ & $y$ (actual) & $\hat{y}$ (predicted) & $y - \hat{y}$ & Meaning\\ \hline
+4 & 78 & $5(4) + 54 = 74$ & $78 - 74 = 4$ & scored 4 points \textbf{more} than predicted\\ \hline
+4 & 72 & 74 & $72 - 74 = -2$ & scored 2 points \textbf{less} than predicted\\ \hline
+\end{tabular}
+
+\vspace{0.8em}
+\textbf{The least-squares line.} Square every residual and add them: $\Sigma(y - \hat{y})^2$.
+The \textbf{least-squares regression line} is the line that makes this sum as small as possible.
+Calculators and computers find this line for you.
+
+\vspace{0.8em}
+\textbf{Residual plots.} Put $x$ across the bottom and the residuals up the side.
+
+\begin{center}\fig{Unit_4/4.3_resid_plots}\end{center}
+
+\begin{tabular}{@{}ll}
+\textbf{A:} random scatter, no pattern. & A line is a \textbf{good} model.\\
+\textbf{B:} a curved pattern. & A line is \textbf{not} a good model. The data is curved.\\
+\end{tabular}
+
+\partner
+
+% ---------------- PROBLEMS ----------------
+\newpage
+\begin{enumerate}
+
+\item A plant's height (cm) is predicted by $\hat{y} = 2.5x + 4$, where $x$ is the number of weeks. Fill in the table.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{|c|c|p{1.3in}|p{1.3in}|}\hline
+$x$ (weeks) & $y$ (actual) & $\hat{y}$ (predicted) & residual $y - \hat{y}$ \\ \hline
+1 & 6.8 & \blank{6.5} & \blank{0.3} \\ \hline
+2 & 8.6 & \blank{9} & \blank{$-0.4$} \\ \hline
+3 & 11.8 & \blank{11.5} & \blank{0.3} \\ \hline
+4 & 13.6 & \blank{14} & \blank{$-0.4$} \\ \hline
+5 & 16.9 & \blank{16.5} & \blank{0.4} \\ \hline
+\end{tabular}
+\end{center}
+\begin{enumerate}[itemsep=1.4em]
+  \item Which weeks have points above the line? \ans{\quad Weeks 1, 3, and 5 (positive residuals)}
+  \item Is the point for week 2 above or below the line? How do you know? \ans{\quad Below. Its residual is negative.}
+\end{enumerate}
+\work{1.5em}
+
+\item Use the study line $\hat{y} = 5x + 54$.
+\begin{enumerate}[itemsep=1em]
+  \item A student studied 6 hours and scored 90. Find the residual.
+
+  \ans{$\hat{y} = 5(6) + 54 = 84$. \; Residual $= 90 - 84 = 6$.}
+  \work{2.5em}
+  \item Another student has a residual of $-5$. What does that mean?
+
+  \ans{The student scored 5 points less than the line predicted.}
+\end{enumerate}
+\work{2em}
+
+\item The used car line is $\hat{y} = -2.5x + 30$ (value in thousands of dollars). A 6-year-old car is worth \$14,000. Find the residual and explain it.
+
+\ans{$\hat{y} = -2.5(6) + 30 = 15$. \; Residual $= 14 - 15 = -1$. The car is worth \$1,000 less than predicted.}
+\work{4em}
+
+\newpage
+\item Two lines were fit to the same 4 points. Here are their residuals.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|c|c|c|c|p{1.2in}|}\hline
+ & \multicolumn{4}{c|}{Residuals} & $\Sigma(y - \hat{y})^2$ \\ \hline
+Line A & 2 & $-1$ & $-1$ & 0 & \blank{$4 + 1 + 1 + 0 = 6$} \\ \hline
+Line B & 3 & $-2$ & 1 & $-2$ & \blank{$9 + 4 + 1 + 4 = 18$} \\ \hline
+\end{tabular}
+\end{center}
+\begin{enumerate}[itemsep=1.4em]
+  \item Find $\Sigma(y - \hat{y})^2$ for each line. (Square each residual, then add.)
+  \item Which line is closer to the least-squares line? Explain. \ans{\quad Line A. Its sum of squared residuals is smaller.}
+\end{enumerate}
+\work{2em}
+
+\item Look at the residual plots on page 1.
+\begin{enumerate}[itemsep=1.4em]
+  \item Which plot shows that a line is a good model? \ans{\quad A}
+  \item What does the pattern in plot B tell you? \ans{\quad The data is curved, so a straight line does not fit well.}
+\end{enumerate}
+\work{1.5em}
+
+\item A residual plot has positive residuals for small $x$, negative residuals in the middle, and positive residuals for large $x$. Is a line a good model? Explain.
+
+\ans{No. The residuals make a U-shaped pattern. The data is curved.}
+
+\end{enumerate}
+
+\end{document}

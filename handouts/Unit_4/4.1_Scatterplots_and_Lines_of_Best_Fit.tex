@@ -1,0 +1,108 @@
+\documentclass[11pt]{article}
+\input{../preamble}
+
+\begin{document}
+
+\lessontitle{Scatterplots and Lines of Best Fit}
+
+Ten students recorded how many hours they studied and their test score. A \textbf{scatterplot} shows both numbers for each student. Each dot is one student.
+
+\vspace{0.3em}
+\begin{minipage}[c]{0.5\linewidth}\centering
+\scalebox{0.92}{\fig{Unit_4/4.1_study_line}}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.47\linewidth}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}p{0.85in}p{2.25in}}
+\textbf{Direction} & \textbf{Positive}: as $x$ goes up, $y$ goes up. (Negative: $y$ goes down.)\\
+\textbf{Form} & \textbf{Linear}: the dots follow a line. (Or curved.)\\
+\textbf{Strength} & \textbf{Strong}: the dots are close to the line. (Or weak.)\\
+\textbf{Unusual} & Outliers or clusters? None here.\\
+\end{tabular}
+\end{minipage}
+
+\vspace{0.8em}
+\textbf{Line of best fit.} A line that follows the trend of the dots.
+\begin{itemize}[itemsep=0pt,topsep=2pt]
+  \item It goes through the middle of the dots.
+  \item About the same number of dots are above it as below it.
+\end{itemize}
+
+\vspace{0.6em}
+\textbf{Finding its equation.} Pick two points \textbf{on the line} (they do not have to be dots): $(2, 64)$ and $(6, 84)$.
+
+\vspace{0.3em}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{@{}ll}
+Slope: & $m = \dfrac{84 - 64}{6 - 2} = \dfrac{20}{4} = 5$\\
+$y$-intercept: & $64 = 5(2) + b$, \; so $b = 54$\\
+Equation: & $\hat{y} = 5x + 54$\\
+\end{tabular}
+
+\vspace{0.3em}
+$\hat{y}$ is read ``y-hat.'' The hat means \textbf{predicted}. The line predicts $y$; it does not give the exact $y$.
+
+\vspace{0.6em}
+\textbf{Predicting.} A student studies 5 hours: \; $\hat{y} = 5(5) + 54 = 79$. \; The predicted score is 79.
+
+\vspace{0.6em}
+\textbf{Gotcha: extrapolation.} Predicting far outside the data is risky.
+12 hours gives $\hat{y} = 5(12) + 54 = 114$, but a test score cannot be more than 100.
+The data only goes from 1 to 8 hours.
+
+\partner
+
+% ---------------- PROBLEMS ----------------
+\newpage
+\begin{enumerate}
+
+\item Describe the direction, form, and strength of each scatterplot.
+\begin{center}\fig{Unit_4/4.1_describe}\end{center}
+\begin{enumerate}[itemsep=1.8em]
+  \item A \ans{\quad Positive, linear, strong}
+  \item B \ans{\quad Negative, linear, moderate (the dots are spread out from a line)}
+  \item C \ans{\quad No association: no direction or pattern}
+  \item D \ans{\quad Curved (not linear), strong. It goes down and then up.}
+\end{enumerate}
+\work{1.5em}
+
+\item Which line fits the study data best? Explain why the other two do not.
+\begin{center}\scalebox{0.9}{\fig{Unit_4/4.1_lines}}\end{center}
+\ans{Line B. It follows the trend, with about as many dots above as below.
+Line A is too flat: it is above the low dots and below the high dots. Line C is below almost all the dots.}
+\work{4em}
+
+\newpage
+\item This scatterplot shows the age and value of 10 used cars. A line of best fit is drawn.
+\begin{center}\scalebox{0.9}{\fig{Unit_4/4.1_car}}\end{center}
+\begin{enumerate}[itemsep=1em]
+  \item Describe the direction, form, and strength. \ans{\quad Negative, linear, strong}
+  \work{1.5em}
+  \item Use the two marked points to find the slope.
+
+  \ans{$m = \dfrac{10 - 30}{8 - 0} = \dfrac{-20}{8} = -2.5$}
+  \work{3em}
+  \item Write the equation of the line. \ans{\quad $\hat{y} = -2.5x + 30$}
+  \work{1.5em}
+  \item Predict the value of a 6-year-old car.
+
+  \ans{$\hat{y} = -2.5(6) + 30 = 15$, \; about \$15,000}
+  \work{2.5em}
+  \item Predict the value of a 15-year-old car. Does your answer make sense? Explain.
+
+  \ans{$\hat{y} = -2.5(15) + 30 = -7.5$. No. A car cannot be worth less than \$0. 15 years is far outside the data (1 to 9 years).}
+\end{enumerate}
+\work{2.5em}
+
+\item The line for the study data is $\hat{y} = 5x + 54$.
+\begin{enumerate}[itemsep=1em]
+  \item Predict the score of a student who studies 3 hours. \ans{\quad $5(3) + 54 = 69$}
+  \work{1.5em}
+  \item A student plans to study 10 hours. Predict the score. Should you trust this prediction? Explain.
+
+  \ans{$5(10) + 54 = 104$. No. Scores cannot be more than 100, and 10 hours is outside the data.}
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

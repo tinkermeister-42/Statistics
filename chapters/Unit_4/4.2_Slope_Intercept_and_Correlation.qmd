@@ -1,0 +1,125 @@
+# 4.2 - Slope, Intercept, and Correlation {.unnumbered}
+
+In summer, ice cream sales go up. Sunburns go up too. The two numbers rise together.
+
+Does ice cream cause sunburns? Of course not. In this lesson, you learn what a line of best fit tells you, how to measure the strength of a pattern, and why a pattern does not prove a cause.
+
+:::{.objectives}
+- [ ] I explain the slope of a line of best fit in context.
+- [ ] I explain the y-intercept in context, or tell why it has no meaning.
+- [ ] I estimate the correlation coefficient $r$ from a scatterplot.
+- [ ] I explain why correlation does not prove causation.
+:::
+
+:::{.vocab}
+{{< glink slope >}},
+{{< glink "y-intercept" >}},
+{{< glink "correlation coefficient" >}},
+{{< glink causation >}},
+{{< glink "lurking variable" >}}
+:::
+
+:::{.guided-notes-link}
+[Printable mini lesson](/handouts/Unit_4/4.2_Slope_Intercept_and_Correlation.pdf){target="_blank"} - notes and practice problems to print and write on.
+:::
+
+{{< khan 4.2 >}}
+
+{{< learn >}}
+
+### 4.2.1 - Slope and Intercept in Context
+
+A student measured a plant every week. The line of best fit is $\hat{y} = 2.5x + 4$.
+
+![](/images/Unit_4/4.2_plant.svg){width="420px" fig-align="center"}
+
+| | Meaning |
+|---|---|
+| **Slope** (2.5) | For each additional **week**, the predicted **height** increases by **2.5 cm**. |
+| **y-intercept** (4) | When $x = 0$ (the day it was planted), the predicted height is **4 cm**. |
+
+:::{.remember title="Sentence Frames"}
+**Slope:** For each additional [$x$ unit], the predicted [$y$] increases (or decreases) by [slope and units].
+
+**Intercept:** When [$x$] is 0, the predicted [$y$] is [intercept and units].
+:::
+
+:::{.gotcha title="Some intercepts have no meaning"}
+If $x$ is a person's height, then $x = 0$ is not possible. The intercept is only there to place the line.
+:::
+
+***
+
+### 4.2.2 - The Correlation Coefficient
+
+The {{< glink "correlation coefficient" >}} $r$ measures how strong a **linear** pattern is.
+
+![](/images/Unit_4/4.2_r_examples.svg){width="640px" fig-align="center"}
+
+:::{.remember title="Reading r"}
+- $r$ is always from $-1$ to $1$.
+- The **sign** shows the direction: $r > 0$ is positive, $r < 0$ is negative.
+- The **size** shows the strength: close to $1$ or $-1$ is strong. Close to $0$ is weak.
+:::
+
+:::{.you-try title="Which is stronger: r = −0.8 or r = 0.6?"}
+$r = -0.8$. It is closer to $-1$ than $0.6$ is to $1$. The minus sign only tells the direction.
+:::
+
+***
+
+### 4.2.3 - Correlation Is Not Causation
+
+Ice cream sales and sunburns have a strong positive correlation. But ice cream does not cause sunburns. Hot, sunny weather causes **both**.
+
+A hidden cause like this is called a {{< glink "lurking variable" >}}.
+
+:::{.remember title="Correlation Is Not Causation"}
+A correlation shows that two things change together. It does **not** prove that one causes the other.
+:::
+
+{{< practice >}}
+
+Work with a partner. Compare answers when you finish each problem.
+
+**Slope and Intercept**
+
+1. The value of a used car is $\hat{y} = -2.5x + 30$, where $x$ is the age in years and $y$ is the value in thousands of dollars.
+
+   a. Explain the slope in context.
+
+   b. Explain the y-intercept in context.
+
+2. For adults, arm span can be predicted from height: $\hat{y} = 1.02x - 1.3$, where $x$ and $y$ are in inches.
+
+   a. Explain the slope in context.
+
+   b. Does the y-intercept have a real meaning here? Explain.
+
+***
+
+**Correlation**
+
+3. Match each $r$ to a scatterplot: $r = -0.9$, $r = 0.3$, $r = 0.85$, $r = -0.4$
+
+   ![](/images/Unit_4/4.2_match.svg){width="640px"}
+
+4. Is each statement true or false? Explain.
+
+   a. $r = -0.9$ shows a weaker relationship than $r = 0.5$.
+
+   b. A scatterplot has $r = 1.3$.
+
+   c. $r = 0$ means there is no linear pattern.
+
+***
+
+**Causation**
+
+5. In a city, the number of fire trucks sent to a fire and the amount of damage have a strong positive correlation.
+
+   a. Do more fire trucks cause more damage? Explain.
+
+   b. What lurking variable could cause both?
+
+6. A study finds that students who eat breakfast have higher grades. A news story says, "Eating breakfast raises your grades." Is the news story right? Name a lurking variable that could explain the pattern.

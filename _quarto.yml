@@ -72,4 +72,11 @@ book:
         - file: chapters/Unit_3/3.1_Two-Way_Tables_and_Relative_Frequency.qmd
         - file: chapters/Unit_3/3.2_Marginal_and_Conditional_Distributions.qmd
 
+    - part: "Unit 4: Scatterplots"
+      chapters:
+        - file: chapters/Unit_4/index.qmd
+        - file: chapters/Unit_4/4.1_Scatterplots_and_Lines_of_Best_Fit.qmd
+        - file: chapters/Unit_4/4.2_Slope_Intercept_and_Correlation.qmd
+        - file: chapters/Unit_4/4.3_Residuals.qmd
+
     - file: glossary.qmd

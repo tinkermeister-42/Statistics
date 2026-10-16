@@ -1,0 +1,11 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}
+\begin{document}
+\begin{tikzpicture}[x=0.85cm,y=0.09cm]
+  \grid{0}{9}{1}{50}{100}{10}{Hours studied}{Test score}
+  \pts{1/58,2/62,2/66,3/70,4/72,4/78,5/80,6/84,7/88,8/96}
+  \draw[thick,dashed] (0,62) -- (9,88) node[right,font=\bfseries] {A};
+  \draw[thick] (0,54) -- (9,99) node[above right,font=\bfseries] {B};
+  \draw[thick,dotted] (0,50) -- (9,95) node[below right,font=\bfseries] {C};
+\end{tikzpicture}
+\end{document}
