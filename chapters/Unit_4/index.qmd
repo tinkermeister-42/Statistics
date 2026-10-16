@@ -24,11 +24,11 @@ This unit matches **Unit 4: Scatterplots** in Khan Academy's Statistics essentia
 
 ## Topics in This Unit
 
-[**Scatterplots & Lines of Best Fit**](4.1_Scatterplots_and_Lines_of_Best_Fit.qmd)
+[**Scatterplots & Lines of Best Fit**](4.1_Scatterplots_and_Lines_of_Best_Fit.qmd)\
 Describe a scatterplot. Fit a line and use it to predict.
 
-[**Slope, Intercept & Correlation**](4.2_Slope_Intercept_and_Correlation.qmd)  
+[**Slope, Intercept & Correlation**](4.2_Slope_Intercept_and_Correlation.qmd)\
 Explain what the line means. Measure how strong the pattern is.
 
-[**Residuals**](4.3_Residuals.qmd)  
+[**Residuals**](4.3_Residuals.qmd)\
 Measure how far each point is from the line.

@@ -22,8 +22,8 @@ This unit matches **Unit 3: Two-way tables** in Khan Academy's Statistics essent
 
 ## Topics in This Unit
 
-[**Two-Way Tables & Relative Frequency**](3.1_Two-Way_Tables_and_Relative_Frequency.qmd)
+[**Two-Way Tables & Relative Frequency**](3.1_Two-Way_Tables_and_Relative_Frequency.qmd)\
 Count answers to two questions at once. Turn counts into percents.
 
-[**Marginal & Conditional Distributions**](3.2_Marginal_and_Conditional_Distributions.qmd)  
+[**Marginal & Conditional Distributions**](3.2_Marginal_and_Conditional_Distributions.qmd)\
 Find percents within one group. Decide if two variables are connected.

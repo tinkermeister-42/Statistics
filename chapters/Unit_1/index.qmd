@@ -23,14 +23,14 @@ This unit matches **Unit 1: Displaying a single quantitative variable** in Khan 
 
 ## Topics in This Unit
 
-[**Frequency Tables, Dot Plots & Histograms**](1.1_Frequency_Tables_Dot_Plots_and_Histograms.qmd)
+[**Frequency Tables, Dot Plots & Histograms**](1.1_Frequency_Tables_Dot_Plots_and_Histograms.qmd)\
 Count data, then show it with a table, a dot plot, or a histogram.
 
-[**Mean, Median & Shape**](1.2_Mean_Median_and_Shape.qmd)
+[**Mean, Median & Shape**](1.2_Mean_Median_and_Shape.qmd)\
 Find the center of the data. See how a long tail pulls the mean.
 
-[**Quartiles, IQR & Box Plots**](1.3_Quartiles_IQR_and_Box_Plots.qmd)
+[**Quartiles, IQR & Box Plots**](1.3_Quartiles_IQR_and_Box_Plots.qmd)\
 Cut the data into four parts and draw a box plot.
 
-[**Reading Box Plots & Outliers**](1.4_Reading_Box_Plots_and_Outliers.qmd)  
+[**Reading Box Plots & Outliers**](1.4_Reading_Box_Plots_and_Outliers.qmd)\
 Read a box plot and find values that are far from the rest.
