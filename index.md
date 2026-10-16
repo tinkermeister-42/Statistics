@@ -49,10 +49,10 @@ Do the mini lesson first. Then do the matching Khan Academy lessons.
 | [5.3](chapters/Unit_5/5.3_Experiments.qmd) | Experiments | Unit 5, lesson {{< khanlink 5.4 "4" >}} |
 | [5.4](chapters/Unit_5/5.4_What_a_Study_Can_Prove.qmd) | What a study can prove | Unit 5, lesson {{< khanlink 5.5 "5" >}} |
 | **Unit 6: Probability** | | |
-| 6.1 | Venn diagrams and the addition rule | Unit 6, lesson {{< khanlink 6.1 "1" >}} |
-| 6.2 | The multiplication rule | Unit 6, lesson {{< khanlink 6.2 "2" >}} |
-| 6.3 | Conditional probability | Unit 6, lesson {{< khanlink 6.3 "3" >}} |
-| 6.4 | Simulations | Unit 6, lesson {{< khanlink 6.4 "4" >}} |
+| [6.1](chapters/Unit_6/6.1_Venn_Diagrams_and_the_Addition_Rule.qmd) | Venn diagrams and the addition rule | Unit 6, lesson {{< khanlink 6.1 "1" >}} |
+| [6.2](chapters/Unit_6/6.2_The_Multiplication_Rule.qmd) | The multiplication rule | Unit 6, lesson {{< khanlink 6.2 "2" >}} |
+| [6.3](chapters/Unit_6/6.3_Conditional_Probability.qmd) | Conditional probability | Unit 6, lesson {{< khanlink 6.3 "3" >}} |
+| [6.4](chapters/Unit_6/6.4_Simulations.qmd) | Simulations | Unit 6, lesson {{< khanlink 6.4 "4" >}} |
 | 6.5 | Permutations | Unit 6, lesson {{< khanlink 6.5 "5" >}} |
 | 6.6 | Combinations | Unit 6, lesson {{< khanlink 6.6 "6" >}} |
 | 6.7 | Probability with counting | Unit 6, lesson {{< khanlink 6.7 "7" >}} |

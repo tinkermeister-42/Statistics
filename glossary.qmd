@@ -1,5 +1,13 @@
 # Glossary {.unnumbered}
 
+### addition rule {#glossary-addition-rule}
+
+$P(A \cup B) = P(A) + P(B) - P(A \cap B)$. Subtract the overlap because it was counted twice.
+
+**See Also:** {{< glink "mutually exclusive" >}}
+
+***
+
 ### association {#glossary-association}
 
 Two variables are associated when knowing one tells you something about the other. In a two-way table, the conditional percents are different from group to group. An association does not prove that one thing causes the other.
@@ -70,11 +78,25 @@ Split the population into groups (clusters). Then randomly choose some whole clu
 
 ***
 
+### complement {#glossary-complement}
+
+The event that $A$ does **not** happen. $P(\text{not } A) = 1 - P(A)$. Some books write $P(A^C)$.
+
+***
+
 ### conditional distribution {#glossary-conditional-distribution}
 
 The percents for one variable inside a single group. Divide each count in that group's row (or column) by the group's total.
 
 **See Also:** {{< glink "marginal distribution" >}}, {{< glink association >}}
+
+***
+
+### conditional probability {#glossary-conditional-probability}
+
+The probability of $A$ when you know $B$ happened. Written $P(A \mid B)$ and read "the probability of $A$ given $B$."
+
+$$P(A \mid B) = \frac{P(A \cap B)}{P(B)}$$
 
 ***
 
@@ -109,6 +131,18 @@ Facts or numbers that we collect to learn about something.
 > **Example:**
 >
 > The number of pets each student in a class has.
+
+***
+
+### dependent events {#glossary-dependent-events}
+
+Events where one happening changes the probability of the other.
+
+> **Example:**
+>
+> Drawing two marbles without putting the first one back.
+
+**See Also:** {{< glink "independent events" >}}
 
 ***
 
@@ -147,6 +181,14 @@ In a normal distribution, about 68% of the data is within 1 standard deviation o
 A study where the researcher gives a treatment on purpose and measures what happens. With random assignment, an experiment can show cause and effect.
 
 **See Also:** {{< glink treatment >}}, {{< glink "random assignment" >}}
+
+***
+
+### experimental probability {#glossary-experimental-probability}
+
+A probability found from trials: the number of times an event happened divided by the number of trials.
+
+**See Also:** {{< glink "law of large numbers" >}}
 
 ***
 
@@ -214,6 +256,14 @@ A bar graph for number data. The values are put in groups called bins. The bars 
 
 ***
 
+### independent events {#glossary-independent-events}
+
+Events where one happening does not change the probability of the other. Then $P(A \cap B) = P(A) \cdot P(B)$, and $P(A \mid B) = P(A)$.
+
+**See Also:** {{< glink "dependent events" >}}
+
+***
+
 ### interquartile range {#glossary-interquartile-range}
 
 The distance from Q1 to Q3. It shows how spread out the middle half of the data is. Also called the **IQR**.
@@ -224,11 +274,25 @@ $$\text{IQR} = Q_3 - Q_1$$
 
 ***
 
+### intersection {#glossary-intersection}
+
+$A \cap B$, read "$A$ intersect $B$" or "$A$ and $B$." Both $A$ and $B$ happen. In a Venn diagram, it is the overlap.
+
+**See Also:** {{< glink union >}}, {{< glink "multiplication rule" >}}
+
+***
+
 ### IQR {#glossary-iqr}
 
 Short for interquartile range: $Q_3 - Q_1$. It shows how spread out the middle half of the data is.
 
 **See Also:** {{< glink "interquartile range" >}}
+
+***
+
+### law of large numbers {#glossary-law-of-large-numbers}
+
+As the number of trials grows, the experimental probability gets closer to the theoretical probability.
 
 ***
 
@@ -324,6 +388,18 @@ The Greek letter $\mu$, read "mew." It stands for the mean of a population or of
 
 ***
 
+### multiplication rule {#glossary-multiplication-rule}
+
+$P(A \cap B) = P(A) \cdot P(B \mid A)$. For independent events, this is $P(A) \cdot P(B)$.
+
+***
+
+### mutually exclusive {#glossary-mutually-exclusive}
+
+Events that cannot happen at the same time. Then $P(A \cap B) = 0$ and $P(A \cup B) = P(A) + P(B)$.
+
+***
+
 ### normal distribution {#glossary-normal-distribution}
 
 A bell-shaped, symmetric distribution. Its mean and median are equal and sit in the center. It is described by its mean and its standard deviation.
@@ -375,6 +451,14 @@ The whole group we want to learn about.
 > All students at a school. A sample might be 50 of those students.
 
 **See Also:** {{< glink sample >}}
+
+***
+
+### probability {#glossary-probability}
+
+A number from 0 to 1 that tells how likely something is. 0 means impossible and 1 means certain. $P(A)$ is read "the probability of $A$."
+
+$$P(A) = \frac{\text{number of ways } A \text{ can happen}}{\text{total number of outcomes}}$$
 
 ***
 
@@ -588,6 +672,14 @@ A mark made for each data value as you count it.
 
 ***
 
+### theoretical probability {#glossary-theoretical-probability}
+
+A probability found by reasoning about equally likely outcomes.
+
+**See Also:** {{< glink "experimental probability" >}}
+
+***
+
 ### treatment {#glossary-treatment}
 
 What the researcher does to the subjects in an experiment.
@@ -596,11 +688,31 @@ What the researcher does to the subjects in an experiment.
 
 ***
 
+### tree diagram {#glossary-tree-diagram}
+
+A diagram with branches that shows each stage of a chance process. Multiply along a path to find the probability of that path.
+
+***
+
+### trial {#glossary-trial}
+
+One run of a chance process, such as one flip of a coin or one set of 3 free throws in a simulation.
+
+***
+
 ### two-way table {#glossary-two-way-table}
 
 A table that shows counts for two categorical variables at once. One variable goes across the rows and the other down the columns. The totals are in the margins.
 
 **See Also:** {{< glink "relative frequency" >}}, {{< glink "venn diagram" >}}
+
+***
+
+### union {#glossary-union}
+
+$A \cup B$, read "$A$ union $B$" or "$A$ or $B$." $A$ happens, $B$ happens, or both happen.
+
+**See Also:** {{< glink intersection >}}, {{< glink "addition rule" >}}
 
 ***
 

@@ -1,0 +1,46 @@
+# Introduction {.unnumbered}
+
+Welcome to Unit 6! What are the chances of rain? Of guessing every answer right on a quiz? Of winning a lottery?
+
+Probability is the math of chance. In this unit, you learn the rules for combining chances, how to count outcomes, and how to test a chance model with a simulation.
+
+***
+
+## What You'll Learn
+
+By the end of this unit, you will be able to:
+
+* Find probabilities with Venn diagrams and two-way tables
+* Use the addition rule and the multiplication rule
+* Find conditional probabilities and use tree diagrams
+* Decide if two events are independent
+* Use simulations to estimate probabilities
+* Count with permutations and combinations
+* Use counting to find probabilities
+
+This unit matches **Unit 6: Probability** in Khan Academy's Statistics essentials.
+
+***
+
+## Topics in This Unit
+
+[**Venn Diagrams & the Addition Rule**](6.1_Venn_Diagrams_and_the_Addition_Rule.qmd)\
+Find the probability of $A$ or $B$.
+
+[**The Multiplication Rule**](6.2_The_Multiplication_Rule.qmd)\
+Find the probability of $A$ and $B$.
+
+[**Conditional Probability**](6.3_Conditional_Probability.qmd)\
+Find a probability when you already know something happened.
+
+[**Simulations**](6.4_Simulations.qmd)\
+Use random numbers to estimate a probability.
+
+**Permutations** (coming soon)\
+Count arrangements where order matters.
+
+**Combinations** (coming soon)\
+Count groups where order does not matter.
+
+**Probability with Counting** (coming soon)\
+Use permutations and combinations to find probabilities.

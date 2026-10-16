@@ -1,0 +1,141 @@
+# 6.1 - Venn Diagrams and the Addition Rule {.unnumbered}
+
+In a class of 30 students, 12 play soccer and 10 play basketball. Pick one student at random. What is the probability the student plays soccer **or** basketball?
+
+It is tempting to add: $12 + 10 = 22$, so $\frac{22}{30}$. But 4 students play both. They were counted twice. In this lesson, you learn the rule that fixes this.
+
+:::{.objectives}
+- [ ] I find a probability and the probability of a complement.
+- [ ] I read and use the symbols $P(A)$, $A \cup B$, and $A \cap B$.
+- [ ] I use the addition rule.
+- [ ] I decide if two events are mutually exclusive.
+:::
+
+:::{.vocab}
+{{< glink probability >}},
+{{< glink complement >}},
+{{< glink union >}},
+{{< glink intersection >}},
+{{< glink "addition rule" >}},
+{{< glink "mutually exclusive" >}}
+:::
+
+:::{.guided-notes-link}
+[Printable mini lesson](/handouts/Unit_6/6.1_Venn_Diagrams_and_the_Addition_Rule.pdf){target="_blank"} - notes and practice problems to print and write on.
+:::
+
+{{< khan 6.1 >}}
+
+{{< learn >}}
+
+### 6.1.1 - Probability
+
+{{< glink probability text="Probability" >}} is how likely something is, from 0 (impossible) to 1 (certain). When every outcome is equally likely:
+
+$$
+P(A) = \frac{\text{number of ways } A \text{ can happen}}{\text{total number of outcomes}}
+$$
+
+- $P(A)$ is read "the probability of $A$."
+- **Complement:** $P(\text{not } A) = 1 - P(A)$. Some books write $P(A^C)$.
+
+**Example:** Roll a number cube (1 to 6). $P(\text{even}) = \frac{3}{6} = \frac{1}{2}$, and $P(\text{not even}) = 1 - \frac{1}{2} = \frac{1}{2}$.
+
+***
+
+### 6.1.2 - "Or" and "And"
+
+:::{.remember title="Symbols"}
+| Symbol | Read it as | Meaning |
+|:---:|---|---|
+| $A \cup B$ | "$A$ union $B$" or "$A$ or $B$" | $A$ happens, or $B$ happens, or both |
+| $A \cap B$ | "$A$ intersect $B$" or "$A$ and $B$" | $A$ and $B$ both happen (the overlap) |
+:::
+
+![](/images/Unit_6/6.1_venn_sports.svg){width="320px" fig-align="center"}
+
+If we add $12 + 10$, the 4 students who play both are counted **twice**. Subtract them once:
+
+$$
+P(S \cup B) = \frac{12}{30} + \frac{10}{30} - \frac{4}{30} = \frac{18}{30} = 0.6
+$$
+
+:::{.remember title="The Addition Rule"}
+$$
+P(A \cup B) = P(A) + P(B) - P(A \cap B)
+$$
+:::
+
+***
+
+### 6.1.3 - Mutually Exclusive Events
+
+{{< glink "mutually exclusive" text="Mutually exclusive" >}} events cannot both happen. Then $P(A \cap B) = 0$, so
+
+$$
+P(A \cup B) = P(A) + P(B)
+$$
+
+**Example:** Roll a number cube. Rolling a 1 and rolling a 2 cannot both happen. $P(1 \cup 2) = \frac{1}{6} + \frac{1}{6} = \frac{1}{3}$.
+
+:::{.note title="A Deck of Cards"}
+A standard deck has 52 cards: 4 suits (hearts, diamonds, clubs, spades), with 13 cards in each suit (A, 2 to 10, J, Q, K).
+:::
+
+:::{.you-try title="Draw one card. Find $P(\text{heart} \cup \text{king})$."}
+They are **not** mutually exclusive: the king of hearts is both.
+
+$$
+\frac{13}{52} + \frac{4}{52} - \frac{1}{52} = \frac{16}{52} = \frac{4}{13}
+$$
+:::
+
+{{< practice >}}
+
+Work with a partner. Compare answers when you finish each problem.
+
+**Basic Probability**
+
+1. Roll a number cube (1 to 6). Find each probability.
+
+   a. $P(\text{even})$
+
+   b. $P(\text{not } 6)$
+
+   c. $P(\text{greater than } 4)$
+
+***
+
+**The Addition Rule**
+
+2. In a class of 40 students, 18 take Spanish ($S$), 15 take art ($A$), and 6 take both.
+
+   a. Draw and fill in a Venn diagram.
+
+   b. Find $P(S \cup A)$.
+
+   c. Find $P(S \cap A)$.
+
+   d. Find the probability that a student takes neither.
+
+3. $P(A) = 0.5$, $P(B) = 0.4$, and $P(A \cap B) = 0.2$. Find $P(A \cup B)$.
+
+4. Draw one card from a deck. Are the events mutually exclusive? Find the probability.
+
+   a. a heart or a spade
+
+   b. a heart or a king
+
+5. Pick one student from this table at random.
+
+   | | **Bus** | **Car** | **Walk** | **Total** |
+   |---|:---:|:---:|:---:|:---:|
+   | **9th grade** | 18 | 12 | 10 | 40 |
+   | **10th grade** | 14 | 20 | 6 | 40 |
+   | **Total** | 32 | 32 | 16 | 80 |
+
+   a. $P(\text{9th grade} \cap \text{car})$
+
+   b. $P(\text{10th grade} \cup \text{walk})$
+
+6. A student says, "$P(A) = 0.6$ and $P(B) = 0.5$, so $P(A \cup B) = 1.1$." What did the student do wrong?

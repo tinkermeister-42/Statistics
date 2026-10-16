@@ -87,4 +87,12 @@ book:
         - file: chapters/Unit_5/5.3_Experiments.qmd
         - file: chapters/Unit_5/5.4_What_a_Study_Can_Prove.qmd
 
+    - part: "Unit 6: Probability"
+      chapters:
+        - file: chapters/Unit_6/index.qmd
+        - file: chapters/Unit_6/6.1_Venn_Diagrams_and_the_Addition_Rule.qmd
+        - file: chapters/Unit_6/6.2_The_Multiplication_Rule.qmd
+        - file: chapters/Unit_6/6.3_Conditional_Probability.qmd
+        - file: chapters/Unit_6/6.4_Simulations.qmd
+
     - file: glossary.qmd

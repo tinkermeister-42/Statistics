@@ -97,3 +97,21 @@
   \node[rotate=90,above=20pt] at (#1,{(#4+#5)/2}) {#8};}
 % scatter points: \pts{x/y,x/y,...}
 \newcommand{\pts}[1]{\foreach \px/\py in {#1} \fill (\px,\py) circle (2.2pt);}
+% two-stage probability tree (14 arguments):
+% \tree{A}{P(A)}{not A}{P(not A)}{B}{not B}{P(B|A)}{P(not B|A)}{P(B|not A)}
+%      {P(not B|not A)}{end 1}{end 2}{end 3}{end 4}
+\newcommand{\tree}[9]{\def\tA{#1}\def\tpA{#2}\def\tnA{#3}\def\tpnA{#4}\def\tB{#5}\def\tnB{#6}\def\tpBA{#7}\def\tpnBA{#8}\def\tpBnA{#9}\treeC}
+\newcommand{\treeC}[5]{%
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+  \draw (0,0) -- (2.6,1.6); \draw (0,0) -- (2.6,-1.6);
+  \node[right] at (2.6,1.6) {\tA}; \node[right] at (2.6,-1.6) {\tnA};
+  \node[above left] at (1.3,0.8) {\tpA}; \node[below left] at (1.3,-0.8) {\tpnA};
+  \draw (4.0,1.6) -- (6.4,2.4); \draw (4.0,1.6) -- (6.4,0.8);
+  \draw (4.0,-1.6) -- (6.4,-0.8); \draw (4.0,-1.6) -- (6.4,-2.4);
+  \node[right] at (6.4,2.4) {\tB}; \node[right] at (6.4,0.8) {\tnB};
+  \node[right] at (6.4,-0.8) {\tB}; \node[right] at (6.4,-2.4) {\tnB};
+  \node[above] at (5.0,2.05) {\tpBA}; \node[below] at (5.0,1.15) {\tpnBA};
+  \node[above] at (5.0,-1.15) {\tpBnA}; \node[below] at (5.0,-2.05) {#1};
+  \node[right] at (8.0,2.4) {#2}; \node[right] at (8.0,0.8) {#3};
+  \node[right] at (8.0,-0.8) {#4}; \node[right] at (8.0,-2.4) {#5};
+\end{tikzpicture}}
