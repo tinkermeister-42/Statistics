@@ -1,0 +1,133 @@
+\documentclass[11pt]{article}
+\input{../preamble}
+
+\begin{document}
+
+\lessontitle{Probability Distributions}
+
+Flip a coin 2 times. Let $X$ = the number of heads. $X$ is a \textbf{random variable}: a number that comes from a chance process.
+
+\vspace{0.4em}
+\begin{minipage}[c]{0.52\linewidth}
+Outcomes: HH, HT, TH, TT (all equally likely)
+
+\vspace{0.6em}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c|c|c|c|}\hline
+$x$ (heads) & 0 & 1 & 2 \\ \hline
+$P(x)$ & $\frac{1}{4}$ & $\frac{2}{4} = \frac{1}{2}$ & $\frac{1}{4}$ \\ \hline
+\end{tabular}
+
+\vspace{0.6em}
+This table is the \textbf{probability distribution} of $X$. It lists every value of $X$ and its probability.
+\end{minipage}\hfill
+\begin{minipage}[c]{0.44\linewidth}\centering
+\scalebox{0.8}{\fig{Unit_7/7.1_two_coins}}
+\end{minipage}
+
+\vspace{0.8em}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{6.7in}|}\hline
+\textbf{A valid probability distribution:}\par
+1. Every probability is from 0 to 1. \qquad 2. The probabilities add to 1: \; $\Sigma P(x) = 1$\\ \hline
+\end{tabular}
+
+\vspace{0.3em}
+Check: $\frac{1}{4} + \frac{1}{2} + \frac{1}{4} = 1$. \quad Valid.
+
+\vspace{0.8em}
+\textbf{Using a distribution.} Add the probabilities of the values you want.
+
+\vspace{0.2em}
+$P(X \ge 1) = P(1) + P(2) = \frac{1}{2} + \frac{1}{4} = \frac{3}{4}$ \qquad ($\ge$ means ``greater than or equal to'')
+
+\vspace{1em}
+\textbf{Theoretical or empirical?}
+
+\vspace{0.3em}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{1.4in}|>{\raggedright\arraybackslash}p{5.1in}|}\hline
+\textbf{Theoretical} & From reasoning about equally likely outcomes, like the coin flips above.\\ \hline
+\textbf{Empirical} & From data. Divide each count by the total. \par
+50 families: 0 cars: 5, \; 1 car: 20, \; 2 cars: 18, \; 3 cars: 7\par
+$P(0) = \frac{5}{50} = 0.10$, \; $P(1) = 0.40$, \; $P(2) = 0.36$, \; $P(3) = 0.14$\\[0.3em] \hline
+\end{tabular}
+
+\partner
+
+% ---------------- PROBLEMS ----------------
+\newpage
+\begin{enumerate}
+
+\item Is each table a valid probability distribution? Explain.
+
+\vspace{0.3em}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{@{}lll}
+(a) \begin{tabular}{|c|c|c|c|}\hline $x$ & 1 & 2 & 3\\ \hline $P(x)$ & 0.2 & 0.3 & 0.5\\ \hline\end{tabular} & \qquad &
+(b) \begin{tabular}{|c|c|c|c|}\hline $x$ & 1 & 2 & 3\\ \hline $P(x)$ & 0.4 & 0.4 & 0.3\\ \hline\end{tabular}\\[2.6em]
+(c) \begin{tabular}{|c|c|c|c|}\hline $x$ & 1 & 2 & 3\\ \hline $P(x)$ & 0.5 & $-0.1$ & 0.6\\ \hline\end{tabular} & &
+(d) \begin{tabular}{|c|c|c|c|}\hline $x$ & 1 & 2 & 3\\ \hline $P(x)$ & $\frac{1}{3}$ & $\frac{1}{3}$ & $\frac{1}{3}$\\ \hline\end{tabular}\\
+\end{tabular}
+
+\vspace{0.5em}
+\ans{(a) Valid: sums to 1. \; (b) Not valid: sums to 1.1. \; (c) Not valid: a probability cannot be negative. \; (d) Valid.}
+\work{3em}
+
+\item Find the missing probability.
+
+\vspace{0.3em}
+\begin{tabular}{|c|c|c|c|c|}\hline $x$ & 0 & 1 & 2 & 3\\ \hline $P(x)$ & 0.15 & 0.35 & ? & 0.10\\ \hline\end{tabular}
+\qquad \ans{$1 - (0.15 + 0.35 + 0.10) = 0.40$}
+\work{3em}
+
+\item This is the distribution of the number of goals a soccer team scores in a game.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}\hline $x$ & 0 & 1 & 2 & 3 & 4\\ \hline $P(x)$ & 0.1 & 0.3 & 0.3 & 0.2 & 0.1\\ \hline\end{tabular}
+\qquad \raisebox{-0.5\height}{\scalebox{0.6}{\fig{Unit_7/7.1_goals}}}
+\end{center}
+\begin{enumerate}[itemsep=1.4em]
+  \item $P(X \ge 2)$ \ans{\quad $0.3 + 0.2 + 0.1 = 0.6$}
+  \item $P(X < 1)$ \ans{\quad $0.1$}
+  \item $P(1 \le X \le 3)$ \ans{\quad $0.3 + 0.3 + 0.2 = 0.8$}
+\end{enumerate}
+
+\newpage
+\item Flip a coin 3 times. Let $X$ = the number of heads.
+\begin{enumerate}[itemsep=1em]
+  \item List all 8 outcomes. \ans{\quad HHH, HHT, HTH, THH, HTT, THT, TTH, TTT}
+  \work{1.5em}
+  \item Make the probability distribution of $X$.
+
+  \begin{center}
+  \renewcommand{\arraystretch}{2.3}
+  \begin{tabular}{|c|p{0.6in}|p{0.6in}|p{0.6in}|p{0.6in}|}\hline
+  $x$ & 0 & 1 & 2 & 3\\ \hline
+  $P(x)$ & \ans{$\frac{1}{8}$} & \ans{$\frac{3}{8}$} & \ans{$\frac{3}{8}$} & \ans{$\frac{1}{8}$}\\ \hline
+  \end{tabular}
+  \end{center}
+  \item Draw a bar graph of the distribution.
+
+  \begin{center}
+  \begin{tikzpicture}[x=1.2cm,y=8cm]
+    \foreach \t in {0,0.1,...,0.5} {\draw[gray!25] (-0.6,\t) -- (3.6,\t); \node[left,font=\small] at (-0.6,\t) {\pgfmathprintnumber{\t}};}
+    \draw[thick] (-0.6,0) -- (3.6,0); \draw[thick] (-0.6,0) -- (-0.6,0.5);
+    \foreach \x in {0,...,3} \node[below] at (\x,0) {\x};
+    \node[below=16pt] at (1.5,0) {$x$ = number of heads in 3 flips};
+    \ifkey\foreach \x/\p in {0/0.125,1/0.375,2/0.375,3/0.125} \draw[keyred,thick,fill=red!12] (\x-0.35,0) rectangle (\x+0.35,\p);\fi
+  \end{tikzpicture}
+  \end{center}
+  \item Find $P(X \ge 2)$. \ans{\quad $\frac{3}{8} + \frac{1}{8} = \frac{4}{8} = \frac{1}{2}$}
+\end{enumerate}
+\work{1em}
+
+\item 40 households said how many pets they have: 0 pets: 12, \; 1 pet: 16, \; 2 pets: 8, \; 3 pets: 4.
+\begin{enumerate}[itemsep=1em]
+  \item Make the empirical probability distribution. \ans{\quad $P(0) = 0.30$, \; $P(1) = 0.40$, \; $P(2) = 0.20$, \; $P(3) = 0.10$}
+  \work{2em}
+  \item Find $P(\text{at least 1 pet})$. \ans{\quad $0.40 + 0.20 + 0.10 = 0.70$ \; (or $1 - 0.30$)}
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

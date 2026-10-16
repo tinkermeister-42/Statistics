@@ -4,7 +4,7 @@ Mini lessons for the Statistics class at Frederick Douglass High School. The
 students work self-paced in Khan Academy's **Statistics essentials**; each
 mini lesson opens a class block and matches one or two Khan lessons. The
 course map (all 29 mini lessons and the Khan lessons each one covers) is the
-table in `index.md`. It follows Khan's order on purpose, so a sheet always
+table in `index.md`. All 29 are written (fall 2026); later work is revision. It follows Khan's order on purpose, so a sheet always
 matches what the students see on screen. Grouping is by cognitive load, not
 by a fixed number of Khan lessons.
 
@@ -71,6 +71,16 @@ set (`.remember`, `.you-try`, `.you-try-m` + `.answer`, `.think`, `.gotcha`,
   map. Keys are Khan's own `<unit>.<lesson>`; the list is in
   `_extensions/khan/khan.lua` (paths from the course page, with
   `/teacher/library/en` removed)
+- **Figure macros** (`figures/preamble.tex`): `\dotplot`, `\dotsat`,
+  `\shapehist`, `\axis`, `\bplotat`, `\outlier`, `\bellcurve`,
+  `\shadez`, `\zaxis`, `\venn`, `\grid`, `\pts`, `\tree` (two-stage
+  probability tree, 14 arguments), `\probbars`. Handouts can call them
+  directly, with `\ans{}` in the blanks a student fills in
+- **Key answers print fractions full size:** `\ans` makes `\frac` act as
+  `\dfrac`. Give a table that holds key fractions an `\arraystretch` of
+  about 2.3 so they clear the rules
+- **Unit intro topic lists** end each link line with a backslash (a hard
+  line break). Trailing double spaces get stripped by editors
 - **Z-table:** `handouts/Unit_2/Z_Table.tex` (generated from the normal CDF,
   area to the left, 4 decimals) is linked from 2.5 and 2.6 with a second
   `.guided-notes-link`. Answers in those lessons use the table's rounded

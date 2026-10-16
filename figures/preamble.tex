@@ -115,3 +115,13 @@
   \node[right] at (8.0,2.4) {#2}; \node[right] at (8.0,0.8) {#3};
   \node[right] at (8.0,-0.8) {#4}; \node[right] at (8.0,-2.4) {#5};
 \end{tikzpicture}}
+% probability bar graph: \probbars{x/p,...}{ymax}{ystep}{x label}
+% (use x=1cm and y scaled so ymax fits, e.g. y=8cm for ymax 0.5)
+\newcommand{\probbars}[4]{%
+  \pgfmathsetmacro{\pbs}{#3*2}
+  \foreach \t in {0,#3,...,#2} {\draw[gray!25] (-0.6,\t) -- (\pbmax,\t); \node[left,font=\small] at (-0.6,\t) {\pgfmathprintnumber{\t}};}
+  \draw[thick] (-0.6,0) -- (\pbmax,0); \draw[thick] (-0.6,0) -- (-0.6,#2);
+  \foreach \x/\p in {#1} {\draw[fill=gray!35] (\x-0.35,0) rectangle (\x+0.35,\p); \node[below] at (\x,0) {\x};}
+  \node[below=16pt] at ({(\pbmax-0.6)/2},0) {#4};
+  \node[rotate=90,above=22pt] at (-0.6,{#2/2}) {$P(x)$};}
+\def\pbmax{3.6}

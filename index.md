@@ -57,8 +57,8 @@ Do the mini lesson first. Then do the matching Khan Academy lessons.
 | [6.6](chapters/Unit_6/6.6_Combinations.qmd) | Combinations | Unit 6, lesson {{< khanlink 6.6 "6" >}} |
 | [6.7](chapters/Unit_6/6.7_Probability_with_Counting.qmd) | Probability with counting | Unit 6, lesson {{< khanlink 6.7 "7" >}} |
 | **Unit 7: Probability Distributions** | | |
-| 7.1 | Probability distributions | Unit 7, lessons {{< khanlink 7.1 "1" >}} and {{< khanlink 7.2 "2" >}} |
-| 7.2 | Expected value | Unit 7, lessons {{< khanlink 7.3 "3" >}} and {{< khanlink 7.4 "4" >}} |
-| 7.3 | Expected payoff | Unit 7, lesson {{< khanlink 7.4 "4" >}} |
+| [7.1](chapters/Unit_7/7.1_Probability_Distributions.qmd) | Probability distributions | Unit 7, lessons {{< khanlink 7.1 "1" >}} and {{< khanlink 7.2 "2" >}} |
+| [7.2](chapters/Unit_7/7.2_Expected_Value.qmd) | Expected value | Unit 7, lessons {{< khanlink 7.3 "3" >}} and {{< khanlink 7.4 "4" >}} |
+| [7.3](chapters/Unit_7/7.3_Expected_Payoff.qmd) | Expected payoff | Unit 7, lesson {{< khanlink 7.4 "4" >}} |
 
-Mini lessons without a link are coming soon.
+Click a mini lesson number to open it. Click a Khan Academy lesson number to open that lesson on Khan Academy.

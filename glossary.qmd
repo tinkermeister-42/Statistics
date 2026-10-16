@@ -182,11 +182,35 @@ An experiment where neither the subjects nor the people measuring the results kn
 
 ***
 
+### empirical distribution {#glossary-empirical-distribution}
+
+A probability distribution made from data. Each probability is a count divided by the total.
+
+**See Also:** {{< glink "theoretical probability" >}}
+
+***
+
 ### empirical rule {#glossary-empirical-rule}
 
 In a normal distribution, about 68% of the data is within 1 standard deviation of the mean, about 95% is within 2, and about 99.7% is within 3. Also called the 68-95-99.7 rule.
 
 **See Also:** {{< glink "normal distribution" >}}
+
+***
+
+### expected payoff {#glossary-expected-payoff}
+
+The expected value of the net gain: $\Sigma\,(\text{net gain} \cdot \text{probability})$. A negative expected payoff means you lose money on average.
+
+**See Also:** {{< glink "expected value" >}}, {{< glink "net gain" >}}
+
+***
+
+### expected value {#glossary-expected-value}
+
+The long-run average of a random variable: $E(X) = \Sigma\, x \cdot P(x)$. Multiply each value by its probability and add. Also called the mean of $X$, $\mu_X$.
+
+**See Also:** {{< glink "expected payoff" >}}
 
 ***
 
@@ -227,6 +251,12 @@ $n! = n \cdot (n-1) \cdot (n-2) \cdots 2 \cdot 1$, read "$n$ factorial." It coun
 > **Example:**
 >
 > $4! = 4 \cdot 3 \cdot 2 \cdot 1 = 24$
+
+***
+
+### fair game {#glossary-fair-game}
+
+A game where the expected value of what you win is 0. On average, no one wins or loses.
 
 ***
 
@@ -424,6 +454,12 @@ Events that cannot happen at the same time. Then $P(A \cap B) = 0$ and $P(A \cup
 
 ***
 
+### net gain {#glossary-net-gain}
+
+What you win minus what you paid. It is negative when you lose money.
+
+***
+
 ### normal distribution {#glossary-normal-distribution}
 
 A bell-shaped, symmetric distribution. Its mean and median are equal and sit in the center. It is described by its mean and its standard deviation.
@@ -494,6 +530,14 @@ $$P(A) = \frac{\text{number of ways } A \text{ can happen}}{\text{total number o
 
 ***
 
+### probability distribution {#glossary-probability-distribution}
+
+A list or graph of every value of a random variable and its probability. Every probability is from 0 to 1, and they add to 1: $\Sigma P(x) = 1$.
+
+**See Also:** {{< glink "random variable" >}}, {{< glink "expected value" >}}
+
+***
+
 ### quartile {#glossary-quartile}
 
 The three values that cut ordered data into four parts with the same number of values. Q1 is the median of the lower half. The median is Q2. Q3 is the median of the upper half.
@@ -507,6 +551,14 @@ The three values that cut ordered data into four parts with the same number of v
 Using chance to decide which subjects get which treatment. It makes the groups alike, so a difference can be blamed on the treatment.
 
 **See Also:** {{< glink experiment >}}
+
+***
+
+### random variable {#glossary-random-variable}
+
+A number that comes from a chance process, such as the number of heads in 3 coin flips. It is often written with a capital letter, like $X$.
+
+**See Also:** {{< glink "probability distribution" >}}
 
 ***
 

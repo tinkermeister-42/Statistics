@@ -98,4 +98,11 @@ book:
         - file: chapters/Unit_6/6.6_Combinations.qmd
         - file: chapters/Unit_6/6.7_Probability_with_Counting.qmd
 
+    - part: "Unit 7: Probability Distributions"
+      chapters:
+        - file: chapters/Unit_7/index.qmd
+        - file: chapters/Unit_7/7.1_Probability_Distributions.qmd
+        - file: chapters/Unit_7/7.2_Expected_Value.qmd
+        - file: chapters/Unit_7/7.3_Expected_Payoff.qmd
+
     - file: glossary.qmd

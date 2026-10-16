@@ -1,0 +1,124 @@
+# 7.1 - Probability Distributions {.unnumbered}
+
+Flip a coin 2 times and count the heads. You might get 0, 1, or 2 heads. Are they all equally likely?
+
+No. There are four outcomes: HH, HT, TH, TT. Only one gives 0 heads, but two give 1 head. In this lesson, you list every possible value with its probability. That list is called a {{< glink "probability distribution" >}}.
+
+:::{.objectives}
+- [ ] I explain what a random variable is.
+- [ ] I make a probability distribution as a table and a graph.
+- [ ] I check if a probability distribution is valid.
+- [ ] I make theoretical and empirical distributions.
+:::
+
+:::{.vocab}
+{{< glink "random variable" >}},
+{{< glink "probability distribution" >}},
+{{< glink "theoretical probability" >}},
+{{< glink "empirical distribution" >}}
+:::
+
+:::{.guided-notes-link}
+[Printable mini lesson](/handouts/Unit_7/7.1_Probability_Distributions.pdf){target="_blank"} - notes and practice problems to print and write on.
+:::
+
+{{< khan 7.1 7.2 >}}
+
+{{< learn >}}
+
+### 7.1.1 - Random Variables and Distributions
+
+Flip a coin 2 times. Let $X$ = the number of heads. $X$ is a {{< glink "random variable" >}}: a number that comes from a chance process.
+
+| $x$ (heads) | 0 | 1 | 2 |
+|---|:---:|:---:|:---:|
+| $P(x)$ | $\frac{1}{4}$ | $\frac{2}{4} = \frac{1}{2}$ | $\frac{1}{4}$ |
+
+![](/images/Unit_7/7.1_two_coins.svg){width="300px" fig-align="center"}
+
+:::{.remember title="A Valid Probability Distribution"}
+1. Every probability is from 0 to 1.
+2. The probabilities add to 1: $\Sigma P(x) = 1$
+
+Check: $\frac{1}{4} + \frac{1}{2} + \frac{1}{4} = 1$.
+:::
+
+***
+
+### 7.1.2 - Using a Distribution
+
+Add the probabilities of the values you want.
+
+$$
+P(X \ge 1) = P(1) + P(2) = \frac{1}{2} + \frac{1}{4} = \frac{3}{4}
+$$
+
+The symbol $\ge$ means "greater than or equal to."
+
+:::{.you-try title="Find P(X < 2) for the two coin flips."}
+$P(0) + P(1) = \frac{1}{4} + \frac{1}{2} = \frac{3}{4}$
+:::
+
+***
+
+### 7.1.3 - Theoretical or Empirical?
+
+| Kind | Where it comes from | Example |
+|---|---|---|
+| **Theoretical** | Reasoning about equally likely outcomes | The coin flips above |
+| **Empirical** | Data. Divide each count by the total. | 50 families: 0 cars: 5, 1 car: 20, 2 cars: 18, 3 cars: 7. So $P(0) = \frac{5}{50} = 0.10$, $P(1) = 0.40$, $P(2) = 0.36$, $P(3) = 0.14$. |
+
+{{< practice >}}
+
+Work with a partner. Compare answers when you finish each problem.
+
+**Valid Distributions**
+
+1. Is each table a valid probability distribution? Explain.
+
+   | | $x = 1$ | $x = 2$ | $x = 3$ |
+   |---|:---:|:---:|:---:|
+   | (a) $P(x)$ | 0.2 | 0.3 | 0.5 |
+   | (b) $P(x)$ | 0.4 | 0.4 | 0.3 |
+   | (c) $P(x)$ | 0.5 | $-0.1$ | 0.6 |
+   | (d) $P(x)$ | $\frac{1}{3}$ | $\frac{1}{3}$ | $\frac{1}{3}$ |
+
+2. Find the missing probability.
+
+   | $x$ | 0 | 1 | 2 | 3 |
+   |---|:---:|:---:|:---:|:---:|
+   | $P(x)$ | 0.15 | 0.35 | ? | 0.10 |
+
+3. This is the distribution of the number of goals a soccer team scores in a game.
+
+   ![](/images/Unit_7/7.1_goals.svg){width="340px"}
+
+   | $x$ | 0 | 1 | 2 | 3 | 4 |
+   |---|:---:|:---:|:---:|:---:|:---:|
+   | $P(x)$ | 0.1 | 0.3 | 0.3 | 0.2 | 0.1 |
+
+   a. $P(X \ge 2)$
+
+   b. $P(X < 1)$
+
+   c. $P(1 \le X \le 3)$
+
+***
+
+**Building Distributions**
+
+4. Flip a coin 3 times. Let $X$ = the number of heads.
+
+   a. List all 8 outcomes.
+
+   b. Make the probability distribution of $X$.
+
+   c. Draw a bar graph of the distribution.
+
+   d. Find $P(X \ge 2)$.
+
+5. 40 households said how many pets they have: 0 pets: 12, 1 pet: 16, 2 pets: 8, 3 pets: 4.
+
+   a. Make the empirical probability distribution.
+
+   b. Find $P(\text{at least 1 pet})$.

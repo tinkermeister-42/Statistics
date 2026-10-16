@@ -1,0 +1,115 @@
+\documentclass[11pt]{article}
+\input{../preamble}
+
+\begin{document}
+
+\lessontitle{Expected Value}
+
+A soccer team's goals per game have this distribution. On average, how many goals does the team score?
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|c|c|c|c|c|c|}\hline
+$x$ (goals) & 0 & 1 & 2 & 3 & 4 \\ \hline
+$P(x)$ & 0.1 & 0.3 & 0.3 & 0.2 & 0.1 \\ \hline
+$x \cdot P(x)$ & 0 & 0.3 & 0.6 & 0.6 & 0.4 \\ \hline
+\end{tabular}
+\end{center}
+
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{6.7in}|}\hline
+\textbf{Expected value:} \qquad $E(X) = \Sigma\, x \cdot P(x)$\par\vspace{0.3em}
+Multiply each value by its probability. Then add them all up ($\Sigma$ means add up). The expected value is also called the \textbf{mean} of $X$, written $\mu_X$.\\ \hline
+\end{tabular}
+
+\vspace{0.4em}
+$E(X) = 0 + 0.3 + 0.6 + 0.6 + 0.4 = \mathbf{1.9}$ goals
+
+\vspace{0.4em}
+\textbf{What it means:} over many games, the team scores about 1.9 goals per game on average.
+No single game has 1.9 goals. The expected value is a \textbf{long-run average}.
+
+\vspace{1em}
+\textbf{Fair decisions.} A method is \textbf{fair} if every person has the same probability of being chosen.
+
+\vspace{0.2em}
+Ana, Ben, and Cai need to decide who goes first.
+
+\vspace{0.3em}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{3.3in}|>{\raggedright\arraybackslash}p{3.2in}|}\hline
+\textbf{Method} & \textbf{Fair?}\\ \hline
+Roll a number cube. 1 or 2: Ana, 3 or 4: Ben, 5 or 6: Cai. & Yes. Each has $\frac{2}{6} = \frac{1}{3}$.\\[0.3em] \hline
+Flip 2 coins. HH: Ana, TT: Ben, one of each: Cai. & No. Ana $\frac{1}{4}$, Ben $\frac{1}{4}$, Cai $\frac{2}{4} = \frac{1}{2}$.\\[0.3em] \hline
+\end{tabular}
+
+\vspace{1em}
+\textbf{Fair games.} A game is fair if the expected value of what you win is \textbf{0}.
+
+\vspace{0.2em}
+\textbf{Example:} Roll a number cube. You win \$3 if you roll a 6. You pay \$1 for any other number.
+
+\vspace{0.2em}
+$E(X) = 3 \cdot \frac{1}{6} + (-1) \cdot \frac{5}{6} = \frac{3}{6} - \frac{5}{6} = -\frac{2}{6} \approx -\$0.33$
+
+\vspace{0.2em}
+On average you lose about 33 cents a game. The game is \textbf{not} fair.
+
+\partner
+
+% ---------------- PROBLEMS ----------------
+\newpage
+\begin{enumerate}
+
+\item Find the expected value.
+\begin{enumerate}[itemsep=1em]
+  \item \begin{tabular}{|c|c|c|c|}\hline $x$ & 1 & 2 & 3\\ \hline $P(x)$ & 0.2 & 0.5 & 0.3\\ \hline\end{tabular}
+
+  \ans{$1(0.2) + 2(0.5) + 3(0.3) = 0.2 + 1.0 + 0.9 = 2.1$}
+  \work{2em}
+  \item \begin{tabular}{|c|c|c|c|c|}\hline $x$ & 0 & 1 & 2 & 3\\ \hline $P(x)$ & 0.3 & 0.4 & 0.2 & 0.1\\ \hline\end{tabular}
+
+  \ans{$0 + 0.4 + 0.4 + 0.3 = 1.1$}
+\end{enumerate}
+\work{2em}
+
+\item Flip a coin 3 times. $X$ = the number of heads has $P(0) = \frac{1}{8}$, $P(1) = \frac{3}{8}$, $P(2) = \frac{3}{8}$, $P(3) = \frac{1}{8}$.
+\begin{enumerate}[itemsep=1em]
+  \item Find $E(X)$. \ans{\quad $0 + \frac{3}{8} + \frac{6}{8} + \frac{3}{8} = \frac{12}{8} = 1.5$}
+  \work{2em}
+  \item Explain what $E(X)$ means. \ans{\quad If you flip 3 coins many times, you get 1.5 heads per set of 3 on average.}
+\end{enumerate}
+\work{2em}
+
+\item The number of pets per household is $X$, with $P(0) = 0.30$, $P(1) = 0.40$, $P(2) = 0.20$, $P(3) = 0.10$.
+A student says, ``The expected value is 1.1, so a household can have 1.1 pets.'' What is wrong with this?
+
+\ans{No household has 1.1 pets. 1.1 is the average over many households.}
+\work{3em}
+
+\newpage
+\item Four friends use a spinner with 4 equal parts to pick who chooses the movie. Each friend gets one part.
+Then they switch to rolling a number cube: 1: Ana, 2: Ben, 3: Cai, 4 to 6: Dee.
+\begin{enumerate}[itemsep=1em]
+  \item Is the spinner fair? Explain. \ans{\quad Yes. Each friend has $\frac{1}{4}$.}
+  \item Is the number cube fair? Explain. \ans{\quad No. Dee has $\frac{3}{6} = \frac{1}{2}$. The others have $\frac{1}{6}$.}
+  \item Change the number cube method to make it fair.
+
+  \ans{Example: 1: Ana, 2: Ben, 3: Cai, 4: Dee, and roll again on 5 or 6.}
+\end{enumerate}
+\work{2em}
+
+\item A game: roll a number cube. You win \$5 if you roll a 6. You pay \$1 for any other number.
+\begin{enumerate}[itemsep=1em]
+  \item Find the expected value. \ans{\quad $5 \cdot \frac{1}{6} + (-1) \cdot \frac{5}{6} = \frac{5}{6} - \frac{5}{6} = 0$}
+  \work{2.5em}
+  \item Is the game fair? Explain. \ans{\quad Yes. The expected value is 0, so no one wins or loses on average.}
+\end{enumerate}
+\work{2em}
+
+\item In the notes example, you win \$3 for a 6. How much should you win for a 6 to make the game fair?
+
+\ans{You pay \$1 five times out of six, so a 6 must pay \$5: \; $w \cdot \frac{1}{6} - \frac{5}{6} = 0$ gives $w = 5$.}
+
+\end{enumerate}
+
+\end{document}

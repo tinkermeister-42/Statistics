@@ -1,0 +1,118 @@
+# 7.2 - Expected Value {.unnumbered}
+
+A soccer team scores 0, 1, 2, 3, or 4 goals in a game, each with its own probability. How many goals does the team score on average?
+
+You cannot just average 0, 1, 2, 3, and 4. Some values happen more often than others. In this lesson, you find the {{< glink "expected value" >}}, an average that uses the probabilities. Then you use probability to decide what is fair.
+
+:::{.objectives}
+- [ ] I find the expected value of a random variable.
+- [ ] I explain what an expected value means.
+- [ ] I decide if a method of choosing is fair.
+- [ ] I decide if a game is fair.
+:::
+
+:::{.vocab}
+{{< glink "expected value" >}},
+{{< glink "random variable" >}},
+{{< glink "fair game" >}}
+:::
+
+:::{.guided-notes-link}
+[Printable mini lesson](/handouts/Unit_7/7.2_Expected_Value.pdf){target="_blank"} - notes and practice problems to print and write on.
+:::
+
+{{< khan 7.3 7.4 >}}
+
+{{< learn >}}
+
+### 7.2.1 - Finding the Expected Value
+
+| $x$ (goals) | 0 | 1 | 2 | 3 | 4 |
+|---|:---:|:---:|:---:|:---:|:---:|
+| $P(x)$ | 0.1 | 0.3 | 0.3 | 0.2 | 0.1 |
+| $x \cdot P(x)$ | 0 | 0.3 | 0.6 | 0.6 | 0.4 |
+
+:::{.remember title="Expected Value"}
+$$
+E(X) = \Sigma\, x \cdot P(x)
+$$
+
+Multiply each value by its probability. Then add them all up ($\Sigma$ means add up). The expected value is also called the **mean** of $X$, written $\mu_X$.
+:::
+
+$$
+E(X) = 0 + 0.3 + 0.6 + 0.6 + 0.4 = 1.9 \text{ goals}
+$$
+
+:::{.gotcha title="It is a long-run average"}
+No single game has 1.9 goals. Over many games, the team scores about 1.9 goals per game on average.
+:::
+
+***
+
+### 7.2.2 - Fair Decisions
+
+A method is **fair** if every person has the same probability of being chosen. Ana, Ben, and Cai need to decide who goes first.
+
+| Method | Fair? |
+|---|---|
+| Roll a number cube. 1 or 2: Ana, 3 or 4: Ben, 5 or 6: Cai. | Yes. Each has $\frac{2}{6} = \frac{1}{3}$. |
+| Flip 2 coins. HH: Ana, TT: Ben, one of each: Cai. | No. Ana $\frac{1}{4}$, Ben $\frac{1}{4}$, Cai $\frac{2}{4} = \frac{1}{2}$. |
+
+***
+
+### 7.2.3 - Fair Games
+
+A game is {{< glink "fair game" text="fair" >}} if the expected value of what you win is **0**.
+
+**Example:** Roll a number cube. You win $\$3$ if you roll a 6. You pay $\$1$ for any other number.
+
+$$
+E(X) = 3 \cdot \frac{1}{6} + (-1) \cdot \frac{5}{6} = \frac{3}{6} - \frac{5}{6} = -\frac{2}{6} \approx -0.33
+$$
+
+On average you lose about 33 cents a game. The game is **not** fair.
+
+:::{.you-try title="Find E(X): P(0) = 0.5, P(10) = 0.5."}
+$0(0.5) + 10(0.5) = 5$
+:::
+
+{{< practice >}}
+
+Work with a partner. Compare answers when you finish each problem.
+
+**Expected Value**
+
+1. Find the expected value.
+
+   a. $P(1) = 0.2$, $P(2) = 0.5$, $P(3) = 0.3$
+
+   b. $P(0) = 0.3$, $P(1) = 0.4$, $P(2) = 0.2$, $P(3) = 0.1$
+
+2. Flip a coin 3 times. $X$ = the number of heads has $P(0) = \frac{1}{8}$, $P(1) = \frac{3}{8}$, $P(2) = \frac{3}{8}$, $P(3) = \frac{1}{8}$.
+
+   a. Find $E(X)$.
+
+   b. Explain what $E(X)$ means.
+
+3. The number of pets per household is $X$, with $P(0) = 0.30$, $P(1) = 0.40$, $P(2) = 0.20$, $P(3) = 0.10$. A student says, "The expected value is 1.1, so a household can have 1.1 pets." What is wrong with this?
+
+***
+
+**Fair or Not?**
+
+4. Four friends use a spinner with 4 equal parts to pick who chooses the movie. Each friend gets one part. Then they switch to rolling a number cube: 1: Ana, 2: Ben, 3: Cai, 4 to 6: Dee.
+
+   a. Is the spinner fair? Explain.
+
+   b. Is the number cube fair? Explain.
+
+   c. Change the number cube method to make it fair.
+
+5. A game: roll a number cube. You win $\$5$ if you roll a 6. You pay $\$1$ for any other number.
+
+   a. Find the expected value.
+
+   b. Is the game fair? Explain.
+
+6. In the example above, you win $\$3$ for a 6. How much should you win for a 6 to make the game fair?
