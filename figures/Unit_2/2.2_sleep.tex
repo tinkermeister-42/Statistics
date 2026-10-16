@@ -1,0 +1,14 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}
+\begin{document}
+\begin{tikzpicture}[x=0.9cm,y=1cm]
+  \begin{scope}[yshift=3.2cm]
+    \axis{3}{13}{1}{1}{}
+    \dotsat{5/1,6/2,7/4,8/6,9/4,10/2,11/1}
+    \node[anchor=east,font=\small\bfseries] at (2.6,0.8) {9th grade};
+  \end{scope}
+  \axis{3}{13}{1}{1}{Hours of sleep last night}
+  \dotsat{4/2,5/4,6/6,7/4,8/2,9/1,12/1}
+  \node[anchor=east,font=\small\bfseries] at (2.6,0.8) {12th grade};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,137 @@
+# 2.1 - Standard Deviation {.unnumbered}
+
+Two basketball players both score **10 points** per game on average.
+
+![](/images/Unit_2/2.1_players.svg){width="560px" fig-align="center"}
+
+Player A scores close to 10 every game. Player B might score 2 or 18. The mean is the same, but the players are very different.
+
+In this lesson, you learn the {{< glink "standard deviation" >}}, a number that measures this spread.
+
+:::{.objectives}
+- [ ] I explain what the standard deviation tells about data.
+- [ ] I find the standard deviation of a small data set.
+- [ ] I compare the spread of data sets by looking at graphs.
+:::
+
+:::{.vocab}
+{{< glink "standard deviation" >}},
+{{< glink variance >}},
+{{< glink mean >}},
+{{< glink sample >}}
+:::
+
+:::{.guided-notes-link}
+[Printable mini lesson](/handouts/Unit_2/2.1_Standard_Deviation.pdf){target="_blank"} - notes and practice problems to print and write on.
+:::
+
+{{< khan 2.1 >}}
+
+{{< learn >}}
+
+### 2.1.1 - What the SD Tells You
+
+The {{< glink "standard deviation" >}} (SD) is about **how far the values usually are from the mean**.
+
+- **Small SD:** the values are close to the mean.
+- **Large SD:** the values are spread out.
+
+Player A has a small SD. Player B has a large SD.
+
+***
+
+### 2.1.2 - Finding the Standard Deviation
+
+**Example:** 7, 7, 10, 13, 13
+
+| Step | Work |
+|---|---|
+| 1. Find the mean, $\bar{x}$. | $\bar{x} = 50 \div 5 = 10$ |
+| 2. Subtract the mean from each value. | See the table below. |
+| 3. Square each result. | See the table below. |
+| 4. Add the squares. | $9 + 9 + 0 + 9 + 9 = 36$ |
+| 5. Divide by $n - 1$. This is the {{< glink variance >}}. | $36 \div 4 = 9$ |
+| 6. Take the square root. | $s = \sqrt{9} = 3$ |
+
+| $x$ | $x - \bar{x}$ | $(x - \bar{x})^2$ |
+|:---:|:---:|:---:|
+| 7 | $-3$ | 9 |
+| 7 | $-3$ | 9 |
+| 10 | 0 | 0 |
+| 13 | 3 | 9 |
+| 13 | 3 | 9 |
+| | **Sum** | **36** |
+
+The standard deviation is $s = 3$.
+
+:::{.remember title="The Formula"}
+$$
+s = \sqrt{\frac{\text{sum of } (x - \bar{x})^2}{n - 1}}
+$$
+
+$n$ is how many values there are.
+:::
+
+:::{.think title="Why divide by n − 1 and not n?"}
+Our data is usually a {{< glink sample >}}, a small part of a bigger group.
+
+A sample is usually a little less spread out than the whole group. Dividing by $n - 1$ makes $s$ a little bigger. This fixes the problem.
+:::
+
+:::{.you-try title="Find the SD of 2, 4, 6"}
+Mean: $12 \div 3 = 4$.
+
+Differences: $-2, 0, 2$. Squares: $4, 0, 4$. Sum: 8.
+
+$s = \sqrt{8 \div 2} = \sqrt{4} = 2$
+:::
+
+***
+
+### 2.1.3 - Facts About the SD
+
+:::{.remember title="Facts About the Standard Deviation"}
+- The SD is **never negative**.
+- The SD is **0** only when every value is the same.
+- The SD has the **same units** as the data (points, minutes, inches).
+:::
+
+{{< practice >}}
+
+Work with a partner. Compare answers when you finish each problem.
+
+**Finding the SD**
+
+1. Find the standard deviation of 4, 6, 8, 10, 12.
+
+2. Four quiz scores: 7, 3, 7, 7. Find the standard deviation.
+
+3. Look at the two players at the top of this page.
+
+   Player A: 9, 10, 10, 11, 10
+
+   Player B: 2, 18, 5, 15, 10
+
+   a. Find the mean of each player.
+
+   b. Without calculating, which player has the larger SD? Explain.
+
+   c. Find $s$ for Player A.
+
+   d. Player B's SD is about 6.67. A coach needs a player who scores close to 10 points every game. Which player should the coach choose? Explain.
+
+***
+
+**Seeing the SD**
+
+4. All three dot plots have a mean of 5. Put them in order from the **smallest** SD to the **largest** SD. Explain.
+
+   ![](/images/Unit_2/2.1_rank_sd.svg){width="420px"}
+
+5. Think about what the SD means.
+
+   a. Can a standard deviation be negative? Explain.
+
+   b. Find the SD of 10, 10, 10, 10 without a formula. Explain.
+
+   c. Set B is 9, 10, 10, 11. Set C is 0, 10, 10, 20. Both have a mean of 10. Which set has the larger SD? Explain.

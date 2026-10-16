@@ -1,0 +1,14 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}
+\begin{document}
+\begin{tikzpicture}[x=0.9cm,y=1cm]
+  \begin{scope}[yshift=3.4cm]
+    \axis{0}{10}{1}{1}{}
+    \dotsat{0/1,1/2,2/3,3/7,4/3,5/2,6/1}
+    \node[anchor=east,font=\small\bfseries] at (-0.4,0.8) {Class A};
+  \end{scope}
+  \axis{0}{10}{1}{1}{Books read this summer}
+  \dotsat{0/4,1/6,2/4,3/2,4/1,5/1,9/1}
+  \node[anchor=east,font=\small\bfseries] at (-0.4,0.8) {Class B};
+\end{tikzpicture}
+\end{document}

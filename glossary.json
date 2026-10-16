@@ -1,6 +1,7 @@
 {
   "bin": "One group of values in a histogram. Each bar of a histogram is one bin.",
   "box-plot": "A graph that shows the five-number summary. A box goes from Q1 to Q3, with a line at the median. Lines called whiskers go out to the minimum and the maximum.",
+  "center": "A single number that describes a typical value in a data set. The mean and the median are measures of center.",
   "data": "Facts or numbers that we collect to learn about something.",
   "distribution": "All the values in a data set and how often each one happens. A graph of the data shows its distribution.",
   "dot-plot": "A graph that puts one dot above a number line for each data value. Dots for the same value stack up.",
@@ -17,13 +18,18 @@
   "minimum": "The smallest value in a data set.",
   "mode": "The value that happens most often in a data set.",
   "outlier": "A value that is far away from the rest of the data. A common rule: a value is an outlier if it is more than $1.5 \\times \\text{IQR}$ below Q1 or above Q3.",
+  "population": "The whole group we want to learn about.",
   "quartile": "The three values that cut ordered data into four parts with the same number of values. Q1 is the median of the lower half. The median is Q2. Q3 is the median of the upper half.",
   "range": "The maximum minus the minimum. It shows how spread out all the data is.",
+  "sample": "A part of a group that we collect data from. We use the sample to learn about the whole group (the population).",
   "shape": "What a graph of the data looks like: symmetric, skewed left, or skewed right.",
   "skewed-left": "A shape where most values are high and a long tail stretches to the left. The mean is less than the median.",
   "skewed-right": "A shape where most values are low and a long tail stretches to the right. The mean is greater than the median.",
+  "spread": "How far apart the values in a data set are. The range, the IQR, and the standard deviation are measures of spread.",
+  "standard-deviation": "A number that tells how far the values in a data set usually are from the mean. A small standard deviation means the values are close to the mean. It is often written $s$ (for a sample) or SD.",
   "symmetric": "A shape where the left side and the right side look about the same. The mean and the median are about equal.",
   "tail": "The long, low side of a graph. The mean is pulled toward the tail.",
   "tally": "A mark made for each data value as you count it.",
+  "variance": "The standard deviation squared. To find it, add the squared differences from the mean and divide by $n - 1$.",
   "whisker": "A line on a box plot that goes from the box out to the smallest or largest value that is not an outlier."
 }

@@ -56,4 +56,10 @@ book:
         - file: chapters/Unit_1/1.3_Quartiles_IQR_and_Box_Plots.qmd
         - file: chapters/Unit_1/1.4_Reading_Box_Plots_and_Outliers.qmd
 
+    - part: "Unit 2: Analyzing One Variable"
+      chapters:
+        - file: chapters/Unit_2/index.qmd
+        - file: chapters/Unit_2/2.1_Standard_Deviation.qmd
+        - file: chapters/Unit_2/2.2_Choosing_Measures_and_Comparing_Distributions.qmd
+
     - file: glossary.qmd

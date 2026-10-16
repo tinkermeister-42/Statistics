@@ -30,8 +30,8 @@ Do the mini lesson first. Then do the matching Khan Academy lessons.
 | [1.3](chapters/Unit_1/1.3_Quartiles_IQR_and_Box_Plots.qmd) | Quartiles, IQR, and box plots | Unit 1, lessons {{< khanlink 1.4 "4" >}} and {{< khanlink 1.5 "5" >}} |
 | [1.4](chapters/Unit_1/1.4_Reading_Box_Plots_and_Outliers.qmd) | Reading box plots and outliers | Unit 1, lesson {{< khanlink 1.5 "5" >}} |
 | **Unit 2: Analyzing One Variable** | | |
-| 2.1 | Standard deviation | Unit 2, lesson {{< khanlink 2.1 "1" >}} |
-| 2.2 | Choosing measures and comparing distributions | Unit 2, lessons {{< khanlink 2.1 "1" >}} and {{< khanlink 2.2 "2" >}} |
+| [2.1](chapters/Unit_2/2.1_Standard_Deviation.qmd) | Standard deviation | Unit 2, lesson {{< khanlink 2.1 "1" >}} |
+| [2.2](chapters/Unit_2/2.2_Choosing_Measures_and_Comparing_Distributions.qmd) | Choosing measures and comparing distributions | Unit 2, lessons {{< khanlink 2.1 "1" >}} and {{< khanlink 2.2 "2" >}} |
 | 2.3 | Percentiles and z-scores | Unit 2, lesson {{< khanlink 2.3 "3" >}} |
 | 2.4 | Normal distributions and the empirical rule | Unit 2, lesson {{< khanlink 2.4 "4" >}} |
 | 2.5 | Normal calculations with a z-table | Unit 2, lesson {{< khanlink 2.5 "5" >}} |

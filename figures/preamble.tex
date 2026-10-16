@@ -59,3 +59,5 @@
   \draw[very thick] (#4,#1-0.42) -- (#4,#1+0.42);}
 % an outlier dot: \outlier{x}{y}
 \newcommand{\outlier}[2]{\fill (#1,#2) circle (2.4pt);}
+% stacked dots above an axis at y=0 (y unit 1cm): \dotsat{value/count,...}
+\newcommand{\dotsat}[1]{\foreach \v/\c in {#1} {\ifnum\c>0 \foreach \k in {1,...,\c} {\fill (\v,\k*0.36) circle (0.13cm);}\fi}}
