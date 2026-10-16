@@ -1,4 +1,4 @@
-name: Mirror site to Work Account (gh-pages → prod)
+name: Mirror site to Work Account (gh-pages → gh-pages)
 
 on:
   push:
@@ -12,7 +12,7 @@ on:
       dest_branch:
         description: "Destination branch in work repo"
         required: false
-        default: "prod"
+        default: "gh-pages"
 
 jobs:
   mirror:
@@ -37,5 +37,5 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git remote add work "$WORK_URL"
-          echo "Pushing ${{ inputs.source_ref || 'gh-pages' }} -> ${{ inputs.dest_branch || 'prod' }} (force)…"
-          git push --force work ${{ inputs.source_ref || 'gh-pages' }}:${{ inputs.dest_branch || 'prod' }}
+          echo "Pushing ${{ inputs.source_ref || 'gh-pages' }} -> ${{ inputs.dest_branch || 'gh-pages' }} (force)…"
+          git push --force work ${{ inputs.source_ref || 'gh-pages' }}:${{ inputs.dest_branch || 'gh-pages' }}

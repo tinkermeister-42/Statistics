@@ -26,7 +26,7 @@ notes, a worked example or two, one You Try, and the practice set.
 - **Mirror to the work site is manual.** The teacher reviews the personal
   site, then runs "Mirror site to Work Account" from the Actions tab
   (`.github/workflows/sync-to-work.yml`, workflow_dispatch from `main`). It
-  force-pushes `gh-pages` to `andyrosscps/DHS-Statistics` branch `prod` with
+  force-pushes `gh-pages` to `andyrosscps/DHS-Statistics` branch `gh-pages` (its Pages source) with
   the `WORK_TOKEN` secret. Its push trigger never fires because `gh-pages`
   carries no workflow file, and should stay that way: a workflow file on
   `gh-pages` would also need the Workflows permission on the token
