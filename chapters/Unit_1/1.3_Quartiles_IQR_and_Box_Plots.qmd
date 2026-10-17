@@ -78,6 +78,8 @@ $$
 \text{IQR} = Q_3 - Q_1
 $$
 
+$Q_1$ and $Q_3$ are another way to write Q1 and Q3.
+
 For Example 1: IQR $= 15 - 6 = 9$.
 
 For Example 2: IQR $= 12 - 4 = 8$.
@@ -112,9 +114,9 @@ The 4 parts have the same **number of values**, not the same width. A short part
 :::
 
 :::{.think title="Why use the IQR instead of the range?"}
-The range is maximum minus minimum. One extreme value changes it a lot.
+Range $=$ maximum $-$ minimum. One extreme value changes it a lot.
 
-The IQR only uses the middle half of the data. One extreme value does not move it. This is like the median and the mean.
+The IQR only uses the middle half of the data. One extreme value does not move it much. The median works the same way: one extreme value moves the mean a lot, but not the median.
 :::
 
 {{< practice >}}
@@ -177,6 +179,6 @@ Work with a partner. Compare answers when you finish each problem.
 
    a. Find the IQR of each set.
 
-   b. Find the range (maximum minus minimum) of each set.
+   b. Find the range (maximum $-$ minimum) of each set.
 
    c. One number changed. Which measure of spread changed a lot? Which did not change? Why?
