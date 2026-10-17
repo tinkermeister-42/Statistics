@@ -104,8 +104,10 @@ set (`.remember`, `.you-try`, `.you-try-m` + `.answer`, `.think`, `.gotcha`,
   halves
 - **Money in prose is math:** write `$\$84{,}000$`, as the Algebra book does.
   A bare `$84,000` pairs with the next dollar sign in the paragraph and
-  MathJax renders the text between them as math. Callout titles too:
-  `title="A game costs $\$1$."` (the title script reads `\$` as a dollar)
+  MathJax renders the text between them as math. Callout titles too, with
+  the backslash doubled: `title="A game costs $\\$1$."`. Pandoc strips one
+  backslash before punctuation in an attribute, and the title script then
+  reads `$\$1$` as math
 - Worksheet directions say "Work with a partner", never "work by yourself"
 - **Real notation, explained.** The teacher wants students exposed to real
   statistical notation. Write $\Sigma$, not "sum of"; write $\bar{x}$,

@@ -130,7 +130,7 @@ The mean is **pulled toward the tail**. The median is not pulled much.
 | {{< glink symmetric text="Symmetric" >}} | Both sides match | mean ≈ median |
 | {{< glink "skewed right" text="Skewed right" >}} | Tail on the right | mean > median |
 
-:::{.think title="Why does the job ad say $\$80{,}000$?"}
+:::{.think title="Why does the job ad say $\\$80{,}000$?"}
 The pay is 30,000, 32,000, 35,000, 38,000, and 265,000 dollars.
 
 The mean is $400{,}000 \div 5 = 80{,}000$ dollars. The owner's pay is a long tail on the right. It pulls the mean up.
