@@ -8,7 +8,7 @@ A small company puts this in a job ad:
 
 Four of the five people there earn less than $\$40{,}000$. How can the ad be true?
 
-In this lesson, you learn two ways to find the center of data: the {{< glink mean >}} and the {{< glink median >}}. You also learn how the {{< glink shape >}} of a graph can pull them apart.
+In this lesson, you learn two ways to find the center of data: the {{< glink mean >}} and the {{< glink median >}}. You also learn how the {{< glink shape >}} of a graph can make them different.
 
 :::{.objectives}
 - [ ] I find the mean of a data set.
@@ -21,6 +21,7 @@ In this lesson, you learn two ways to find the center of data: the {{< glink mea
 {{< glink mean >}},
 {{< glink "x-bar" >}},
 {{< glink slug="sigma-notation" text="Σ (sigma)" >}},
+{{< glink n >}},
 {{< glink median >}},
 {{< glink mode >}},
 {{< glink shape >}},
@@ -134,7 +135,7 @@ The pay is 30,000, 32,000, 35,000, 38,000, and 265,000 dollars.
 
 The mean is $400{,}000 \div 5 = 80{,}000$ dollars. The owner's pay is a long tail on the right. It pulls the mean up.
 
-The median is 35,000 dollars. That is a better picture of a **typical** worker.
+The median is 35,000 dollars. That is a better description of a **typical** worker.
 :::
 
 ***
@@ -188,11 +189,17 @@ Work with a partner. Compare answers when you finish each problem.
 
    c. Find the mean.
 
+4. This histogram shows how many minutes some students take to get to school.
+
+   ![](/images/Unit_1/1.1_histogram_minutes.svg){width="440px"}
+
+   Which bar holds the median? Explain.
+
 ***
 
 **One Big Value**
 
-4. A small company has 5 people. Here is what each person is paid in one year.
+5. A small company has 5 people. Here is what each person is paid in one year.
 
    | Person | Pay |
    |---|---:|
@@ -214,11 +221,11 @@ Work with a partner. Compare answers when you finish each problem.
 
 **Shape**
 
-5. Look at each histogram. For each one, name the shape. Then tell if the mean is greater than, less than, or about equal to the median.
+6. Look at each histogram. For each one, name the shape. Then tell if the mean is greater than, less than, or about equal to the median.
 
    ![](/images/Unit_1/1.2_histograms_abc.svg){width="640px"}
 
-6. Guess the shape of each data set: skewed left, symmetric, or skewed right. Explain.
+7. Guess the shape of each data set: skewed left, symmetric, or skewed right. Explain.
 
    a. The price of every house sold in Columbia this year.
 
@@ -226,7 +233,7 @@ Work with a partner. Compare answers when you finish each problem.
 
    c. The heights of all adult women in Missouri.
 
-7. Look at the US household income graph above.
+8. Look at the US household income graph above.
 
    a. Why is the mean ($\$121{,}000$) bigger than the median ($\$84{,}000$)?
 

@@ -2,7 +2,7 @@
 
 Here are six numbers: 2, 3, 3, 4, 5, 40.
 
-The mean is 9.5. The median is 3.5. Five of the six values are 5 or less. Which number tells the truth about a typical value?
+The mean is 9.5. The median is 3.5. Five of the six values are 5 or less. Which number describes a typical value better?
 
 In this lesson, you choose the best measures of {{< glink center >}} and {{< glink spread >}}. Then you use them to compare two groups.
 

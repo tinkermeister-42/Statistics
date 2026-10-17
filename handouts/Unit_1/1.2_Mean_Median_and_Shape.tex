@@ -120,7 +120,7 @@ That makes a long tail on the right.
 \end{tikzpicture}
 \end{center}
 
-The median is a better picture of a \textbf{typical} household. Most households earn \textbf{less than the mean}.
+The median is a better description of a \textbf{typical} household. Most households earn \textbf{less than the mean}.
 
 {\footnotesize Source: US Census Bureau, \textit{Income in the United States: 2024}. Median \$83,730. Mean about \$121,000.}
 
@@ -133,30 +133,46 @@ Work with a partner. Compare answers when you finish each problem.
 
 \item A student recorded how many hours she slept each night for one week.
 \begin{center}7,\; 8,\; 6,\; 9,\; 7,\; 5,\; 7\end{center}
-\begin{enumerate}
+\begin{enumerate}[itemsep=\ifkey 1em\else 4.5em\fi]
   \item Find the mean. \ans{\quad $49 \div 7 = 7$ hours}
   \item Find the median. \ans{\quad 5, 6, 7, \fbox{7}, 7, 8, 9 \;$\rightarrow$\; 7 hours}
 \end{enumerate}
-\vspace{2.2em}
+\vspace{\ifkey 1em\else 4.5em\fi}
 
 \item Six students timed their walk to the bus stop, in minutes.
 \begin{center}15,\; 22,\; 18,\; 30,\; 19,\; 16\end{center}
-\begin{enumerate}
+\begin{enumerate}[itemsep=\ifkey 1em\else 4.5em\fi]
   \item Find the mean. \ans{\quad $120 \div 6 = 20$ minutes}
   \item Find the median. \ans{\quad 15, 16, \fbox{18}, \fbox{19}, 22, 30 \;$\rightarrow$\; $(18 + 19) \div 2 = 18.5$ minutes. The 30 pulls the mean above the median.}
 \end{enumerate}
-\vspace{2.2em}
+\vspace{\ifkey 1em\else 4.5em\fi}
 
 \item This dot plot shows how many books some students read this month.
 \begin{center}\dotplot{0}{4}{0/1,1/3,2/5,3/4,4/2}{Books read this month}\end{center}
-\begin{enumerate}
+\begin{enumerate}[itemsep=\ifkey 1em\else 3.5em\fi]
   \item How many students are in the data? \ans{\quad 15}
   \item Find the median. \ans{\quad The 8th value is 2 books.}
   \item Find the mean. \ans{\quad $(0 + 3 + 10 + 12 + 8) \div 15 = 33 \div 15 = 2.2$ books. Watch for: adding 0 to 4 instead of every dot.}
 \end{enumerate}
-\vspace{2.2em}
 
 \newpage
+\item This histogram shows how many minutes some students take to get to school.
+
+\begin{center}
+\begin{tikzpicture}[x=0.29cm,y=0.4cm]
+  \draw[->] (0,0) -- (0,9.6); \draw (0,0) -- (53,0);
+  \foreach \y in {0,...,9} \draw (0.25,\y) -- (-0.25,\y) node[left,font=\small] {\y};
+  \foreach \i/\h in {0/5,1/8,2/6,3/3,4/2} \draw[fill=gray!35] (\i*10,0) rectangle (\i*10+10,\h);
+  \foreach \l in {0,10,...,50} \node[below] at (\l,0) {\l};
+  \node[rotate=90] at (-3.5,4.8) {Number of students};
+  \node at (25,-1.9) {Minutes to get to school};
+\end{tikzpicture}
+\end{center}
+Which bar holds the median? Explain.
+
+\ans{10 to 20 minutes. There are $5 + 8 + 6 + 3 + 2 = 24$ values, so the median is between the 12th and 13th values. 5 values are below 10. $5 + 8 = 13$ values are below 20. So the 12th and 13th values are both in the 10 to 20 bar.}
+\vspace{\ifkey 1em\else 7em\fi}
+
 \item A small company has 5 people. Here is what each person is paid in one year.
 \begin{center}
 \renewcommand{\arraystretch}{1.3}
@@ -164,21 +180,20 @@ Work with a partner. Compare answers when you finish each problem.
 Worker A & \$30,000 \\ Worker B & \$32,000 \\ Worker C & \$35,000 \\ Worker D & \$38,000 \\ Owner & \$265,000 \\ \hline
 \end{tabular}
 \end{center}
-\begin{enumerate}
+\begin{enumerate}[itemsep=\ifkey 1em\else 4em\fi]
   \item Find the mean pay. \ans{\quad $400{,}000 \div 5 = \$80{,}000$}
   \item Find the median pay. \ans{\quad \$35,000}
   \item The company puts this in a job ad: \textit{``Average pay at our company: \$80,000!''}
   Is this true? Is it fair to a person looking for a job? Explain.
 
-  \ans{True, but not fair. 4 of the 5 people earn less than \$40,000. The owner's pay pulls the mean up. The median (\$35,000) is a better picture of a typical worker.}
+  \ans{True, but not fair. 4 of the 5 people earn less than \$40,000. The owner's pay pulls the mean up. The median (\$35,000) is a better description of a typical worker.}
   \item Leave out the owner. Find the mean pay of the 4 workers. How much did one person change the mean?
 
   \ans{$135{,}000 \div 4 = \$33{,}750$. One person moved the mean up by \$46,250.}
 \end{enumerate}
-\vspace{2.2em}
 
 \newpage
-\item Look at each histogram.
+\item Look at each histogram. Name the shape. Then tell if the mean is greater than, less than, or about equal to the median.
 
 \begin{center}
 \begin{tikzpicture}[x=0.37cm,y=0.2cm]
@@ -218,7 +233,7 @@ A & \ans{skewed right} & \ans{mean $>$ median} \\ B & \ans{skewed left} & \ans{m
   \item A news story says, \textit{``The average US household earns \$121,000.''}
   Is this true? Does it describe a typical household? Explain.
 
-  \ans{It is true for the mean. It does not describe a typical household. Most households earn less. The median is a better picture.}
+  \ans{It is true for the mean. It does not describe a typical household. Most households earn less. The median is a better description of a typical household.}
   \item Do more than half of households earn less than \$121,000? How do you know?
 
   \ans{Yes. Half of households earn less than \$84,000 (the median). Some more earn between \$84,000 and \$121,000.}

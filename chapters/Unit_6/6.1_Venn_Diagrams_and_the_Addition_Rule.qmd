@@ -2,7 +2,7 @@
 
 In a class of 30 students, 12 play soccer and 10 play basketball. Pick one student at random. What is the probability the student plays soccer **or** basketball?
 
-It is tempting to add: $12 + 10 = 22$, so $\frac{22}{30}$. But 4 students play both. They were counted twice. In this lesson, you learn the rule that fixes this.
+You might add: $12 + 10 = 22$, so $\frac{22}{30}$. But 4 students play both. They were counted twice. In this lesson, you learn the rule that fixes this.
 
 :::{.objectives}
 - [ ] I find a probability and the probability of a complement.
@@ -39,7 +39,7 @@ $$
 - $P(A)$ is read "the probability of $A$."
 - **Complement:** $P(\text{not } A) = 1 - P(A)$. Some books write $P(A^C)$.
 
-**Example:** Roll a number cube (1 to 6). $P(\text{even}) = \frac{3}{6} = \frac{1}{2}$, and $P(\text{not even}) = 1 - \frac{1}{2} = \frac{1}{2}$.
+**Example:** A bag has 3 red and 7 blue marbles. Pick one. $P(\text{red}) = \frac{3}{10}$, and $P(\text{not red}) = 1 - \frac{3}{10} = \frac{7}{10}$.
 
 ***
 
@@ -82,8 +82,8 @@ $$
 A standard deck has 52 cards: 4 suits (hearts, diamonds, clubs, spades), with 13 cards in each suit (A, 2 to 10, J, Q, K).
 :::
 
-:::{.you-try title="Draw one card. Find $P(\text{heart} \cup \text{king})$."}
-They are **not** mutually exclusive: the king of hearts is both.
+:::{.you-try title="Draw one card. Find $P(\text{spade} \cup \text{queen})$."}
+They are **not** mutually exclusive: the queen of spades is both.
 
 $$
 \frac{13}{52} + \frac{4}{52} - \frac{1}{52} = \frac{16}{52} = \frac{4}{13}
