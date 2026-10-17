@@ -41,8 +41,8 @@ You also learn how to tell if a difference is real or just chance.
 
 {{< glink "sample survey" text="Sample surveys" >}} and {{< glink "observational study" text="observational studies" >}} have no random assignment. They can show an association, but not a cause.
 
-:::{.you-try title="A school randomly picks 60 of its 900 students. Chance decides which 30 use a new study app. The app group scores much higher. Can we conclude cause? Can we generalize?"}
-**Cause:** yes. The students were randomly assigned.
+:::{.you-try title="A school randomly picks 60 of its 900 students. Chance decides which 30 use a new study app. The app group scores much higher. The difference is too big to be just chance. Can we conclude cause? Can we generalize?"}
+**Cause:** yes. The students were randomly assigned, and the difference is too big to be just chance.
 
 **Generalize:** yes, to all 900 students. They were a random sample of the school.
 :::

@@ -76,7 +76,7 @@ In a {{< glink "matched pairs" >}} design, each subject gets **both** treatments
 Runners might be tired on the second run, or warmed up. The coin keeps that from always helping the same shoe.
 :::
 
-**{{< glink "randomized block design" text="Randomized block design" >}}:** first split the subjects into groups that are alike (**blocks**), like 9th graders and 10th graders. Then randomly assign the treatments inside each block.
+**{{< glink "randomized block design" text="Randomized block design" >}}:** first split the subjects into groups that are alike (**blocks**), like boys and girls. Then randomly assign the treatments inside each block. Comparing inside each block keeps the differences between blocks out of the result.
 
 {{< practice >}}
 

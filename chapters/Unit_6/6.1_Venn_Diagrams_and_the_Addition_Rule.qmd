@@ -82,11 +82,11 @@ $$
 A standard deck has 52 cards: 4 suits (hearts, diamonds, clubs, spades), with 13 cards in each suit (A, 2 to 10, J, Q, K).
 :::
 
-:::{.you-try title="Draw one card. Find $P(\text{spade} \cup \text{queen})$."}
-They are **not** mutually exclusive: the queen of spades is both.
+:::{.you-try title="Draw one card. Find $P(\text{red} \cup \text{queen})$."}
+They are **not** mutually exclusive: the queen of hearts and the queen of diamonds are both.
 
 $$
-\frac{13}{52} + \frac{4}{52} - \frac{1}{52} = \frac{16}{52} = \frac{4}{13}
+\frac{26}{52} + \frac{4}{52} - \frac{2}{52} = \frac{28}{52} = \frac{7}{13}
 $$
 :::
 

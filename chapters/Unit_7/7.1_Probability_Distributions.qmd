@@ -119,7 +119,7 @@ Work with a partner. Compare answers when you finish each problem.
 
    d. Find $P(X \ge 2)$.
 
-5. A player makes 70% of her free throws. She shoots 2. Let $X$ = the number she makes. Make the probability distribution of $X$.
+5. A player makes 70% of her free throws. She shoots 2. Her shots do not affect each other. Let $X$ = the number she makes. Make the probability distribution of $X$.
 
 6. 40 households said how many pets they have: 0 pets: 12, 1 pet: 16, 2 pets: 8, 3 pets: 4.
 
