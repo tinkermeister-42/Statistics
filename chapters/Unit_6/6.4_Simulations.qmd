@@ -2,10 +2,10 @@
 
 Flip a coin 20 times. Do you get exactly 10 heads? Probably not. You might get 12, or 8.
 
-The math says $P(\text{heads}) = \frac{1}{2}$. Real trials wobble around that number. In this lesson, you compare the two kinds of probability and use random digits to act out chance events.
+The math says $P(\text{heads}) = \frac{1}{2}$. Real trials give numbers near $\frac{1}{2}$, but not always exactly $\frac{1}{2}$. In this lesson, you compare the two kinds of probability and use random digits to act out chance events.
 
 :::{.objectives}
-- [ ] I tell theoretical and experimental probability apart.
+- [ ] I explain the difference between theoretical and experimental probability.
 - [ ] I explain the law of large numbers.
 - [ ] I assign random digits to simulate an event.
 - [ ] I run a simulation and use it to estimate a probability.
@@ -35,7 +35,7 @@ The math says $P(\text{heads}) = \frac{1}{2}$. Real trials wobble around that nu
 | **Experimental probability** | By doing trials: $\frac{\text{number of times it happened}}{\text{number of trials}}$ | 20 flips, 12 heads: $\frac{12}{20} = 0.6$ |
 
 :::{.remember title="The Law of Large Numbers"}
-The more trials you do, the closer the experimental probability gets to the theoretical probability.
+The more trials you do, the closer the experimental probability usually gets to the theoretical probability.
 :::
 
 ***
@@ -71,8 +71,8 @@ A {{< glink simulation >}} uses random numbers to act out a chance event many ti
 
 The theoretical probability is $0.7 \cdot 0.7 \cdot 0.7 = 0.343$. With more trials, the simulation would get closer to it.
 
-:::{.you-try title="How would you assign digits for an event with P = 0.3?"}
-Use 0, 1, 2 for "yes" (3 of the 10 digits) and 3 to 9 for "no."
+:::{.you-try title="How would you assign digits for an event with $P = 0.6$?"}
+Use 0 to 5 for "yes" (6 of the 10 digits) and 6 to 9 for "no."
 :::
 
 {{< practice >}}
@@ -113,7 +113,7 @@ Work with a partner. Compare answers when you finish each problem.
 
    c. The theoretical probability is 0.5. How could you make your estimate closer?
 
-4. A student flips a coin 50 times and gets 34 heads. She wonders if the coin is fair. A computer simulated 100 sets of 50 flips of a fair coin. The number of heads ranged from 17 to 33. No set had 34 or more heads.
+4. A student flips a coin 50 times and gets 34 heads. She wonders if the coin is fair. (A fair coin lands heads half the time.) A computer simulated 100 sets of 50 flips of a fair coin. The number of heads ranged from 17 to 33. No set had 34 or more heads.
 
    a. What does the simulation tell you about getting 34 heads with a fair coin?
 

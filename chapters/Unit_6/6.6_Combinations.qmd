@@ -54,7 +54,7 @@ Ask: *If I switch the order, is it a different result?*
 
 | Order matters: permutation | Order does not matter: combination |
 |---|---|
-| President, VP, secretary (different jobs) | A committee of 3 (same job) |
+| President, vice president, secretary (different jobs) | A committee of 3 (same job) |
 | 1st, 2nd, 3rd place | Picking 3 winners of the same prize |
 | Arranging books on a shelf | Choosing 3 books to take on a trip |
 

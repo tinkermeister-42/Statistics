@@ -69,7 +69,7 @@ An **observational study**. The scientist measures, but does not tell anyone how
 | Response | The question or the setting pushes people to answer a certain way. | "Don't you agree that our great principal deserves a raise?" |
 
 :::{.gotcha title="A bigger sample does not fix bias"}
-A call-in poll with 10,000 callers is still biased. More people who chose to call does not make the sample represent everyone.
+A call-in poll with 10,000 callers is still biased. More callers do not fix the problem. The callers still chose to call.
 :::
 
 {{< practice >}}

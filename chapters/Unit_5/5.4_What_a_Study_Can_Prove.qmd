@@ -1,6 +1,6 @@
 # 5.4 - What a Study Can Prove {.unnumbered}
 
-"A study shows that..." You hear this every day. But a study can only prove what its design allows. In this lesson, you learn two questions that tell you what any study can prove.
+"A study shows that..." You hear this every day. But what a study can prove depends on how it was done. In this lesson, you learn two questions that tell you what any study can prove.
 
 You also learn how to tell if a difference is real or just chance.
 
@@ -31,7 +31,7 @@ You also learn how to tell if a difference is real or just chance.
 
 :::{.remember title="What Can This Study Prove?"}
 1. Was the sample chosen at **random** from the population? If yes, we can **generalize** to the population.
-2. Were the treatments given by **random assignment**? If yes, we can say the treatment **caused** the result.
+2. Were the treatments given by **random assignment**? If yes, and the difference is too big to be just chance, we can say the treatment **caused** the result.
 :::
 
 | | **Random assignment** | **No random assignment** |
@@ -39,12 +39,12 @@ You also learn how to tell if a difference is real or just chance.
 | **Random sample** | Cause: yes. Generalize: yes. | Cause: no. Generalize: yes. |
 | **Not a random sample** | Cause: yes, for these subjects. Generalize: no. | Cause: no. Generalize: no. |
 
-{{< glink "observational study" text="Observational studies" >}} have no random assignment. They can show an association, but not a cause.
+{{< glink "sample survey" text="Sample surveys" >}} and {{< glink "observational study" text="observational studies" >}} have no random assignment. They can show an association, but not a cause.
 
-:::{.you-try title="40 volunteers are randomly assigned to drink green tea or water. Can we conclude cause? Can we generalize?"}
-**Cause:** yes, for these volunteers. They were randomly assigned.
+:::{.you-try title="A school randomly picks 60 of its 900 students. Chance decides which 30 use a new study app. The app group scores much higher. Can we conclude cause? Can we generalize?"}
+**Cause:** yes. The students were randomly assigned.
 
-**Generalize:** no. Volunteers are not a random sample of all people.
+**Generalize:** yes, to all 900 students. They were a random sample of the school.
 :::
 
 ***
@@ -63,7 +63,7 @@ Even if the break does nothing, two random groups will score a little differentl
 
 Only **3** of the 100 shuffles gave a difference of 6 or more. A 6-point difference is very unlikely to happen by chance alone. We say the result is {{< glink "statistically significant" >}}. The break probably helped.
 
-:::{.remember title="Rule of Thumb"}
+:::{.remember title="The 5% Rule"}
 If chance gives a result this big less than about **5%** of the time, call it statistically significant.
 :::
 
@@ -87,9 +87,9 @@ Work with a partner. Compare answers when you finish each problem.
 
 2. Use the simulation dot plot above. Each dot is the difference between two random groups when the treatment does nothing.
 
-   a. In a plant experiment, the fertilizer group grew 2 cm more than the water group. How many of the 100 shuffles gave a difference of 2 or more?
+   a. Suppose the break group had scored only 2 points higher. How many of the 100 shuffles gave a difference of 2 or more?
 
-   b. Is a 2 cm difference statistically significant? Explain.
+   b. Is a 2-point difference statistically significant? Explain.
 
 ***
 
@@ -97,9 +97,9 @@ Work with a partner. Compare answers when you finish each problem.
 
 3. Find the mistake in each conclusion.
 
-   a. A survey of 500 randomly chosen adults found that people who drink coffee live longer. Conclusion: "Coffee makes you live longer."
+   a. A study followed 500 randomly chosen adults for 20 years. The coffee drinkers lived longer. Conclusion: "Coffee makes you live longer."
 
-   b. 30 runners from one gym were randomly assigned to two training plans. Plan A runners got faster. Conclusion: "Plan A will make every runner in the country faster."
+   b. 30 runners from one gym were randomly assigned to two training plans. Plan A runners got much faster than Plan B runners. Conclusion: "Plan A will make every runner in the country faster."
 
    c. In a randomized experiment, Group A scored 1 point higher than Group B. A simulation shows chance gives a difference of 1 or more about 40% of the time. Conclusion: "Treatment A works better."
 

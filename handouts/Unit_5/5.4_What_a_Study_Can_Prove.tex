@@ -10,7 +10,7 @@ Two questions decide what a study can tell us.
 \vspace{0.4em}
 \begin{tabular}{@{}>{\raggedright\arraybackslash}p{3.4in}>{\raggedright\arraybackslash}p{3.2in}}
 1. Was the sample chosen at \textbf{random} from the population? & If yes, we can \textbf{generalize} to the population.\\[0.4em]
-2. Were the treatments given by \textbf{random assignment}? & If yes, we can say the treatment \textbf{caused} the result.\\
+2. Were the treatments given by \textbf{random assignment}? & If yes, and the difference is too big to be just chance, we can say the treatment \textbf{caused} the result.\\
 \end{tabular}
 
 \vspace{0.6em}
@@ -23,7 +23,7 @@ Two questions decide what a study can tell us.
 \end{tabular}
 \end{center}
 
-\textbf{Observational studies} have no random assignment. They can show an \textbf{association}, but not a cause.
+\textbf{Sample surveys} and \textbf{observational studies} have no random assignment. They can show an \textbf{association}, but not a cause.
 
 \vspace{1em}
 \textbf{Is the difference real, or just chance?}
@@ -33,7 +33,11 @@ Two questions decide what a study can tell us.
 
 \vspace{0.2em}
 Even if the break does nothing, two random groups will score a little differently. To see how big a difference chance can make, we \textbf{simulate}:
-shuffle the 20 scores into two random groups of 10, find the difference, and repeat 100 times.
+\begin{enumerate}[itemsep=0pt,topsep=2pt]
+  \item Shuffle the 20 scores into two random groups of 10.
+  \item Find the difference between the group means.
+  \item Repeat 100 times.
+\end{enumerate}
 
 \begin{center}\fig{Unit_5/5.4_simulation}\end{center}
 
@@ -41,7 +45,7 @@ Only \textbf{3} of the 100 shuffles gave a difference of 6 or more. A 6-point di
 We say the result is \textbf{statistically significant}. The break probably helped.
 
 \vspace{0.4em}
-\textbf{Rule of thumb:} if chance gives a result this big less than about 5\% of the time, call it statistically significant.
+\textbf{The 5\% rule:} if chance gives a result this big less than about 5\% of the time, call it statistically significant.
 
 \partner
 
@@ -50,10 +54,10 @@ We say the result is \textbf{statistically significant}. The break probably help
 \begin{enumerate}
 
 \item For each study, can we conclude cause? Can we generalize to the population? Explain.
-\begin{enumerate}[itemsep=2.4em]
+\begin{enumerate}[itemsep=3.5em]
   \item Researchers randomly choose 1,000 adults in Missouri and ask how much they exercise and how often they get sick.
 
-  \ans{Generalize to Missouri adults: yes (random sample). Cause: no (observational, no random assignment).}
+  \ans{Generalize to Missouri adults: yes (random sample). Cause: no (a survey, no random assignment).}
   \item 40 volunteers are randomly assigned to drink green tea or water every day for a month. The tea group has lower blood pressure.
 
   \ans{Cause: yes, for these volunteers (random assignment). Generalize: no (volunteers, not a random sample).}
@@ -65,22 +69,22 @@ We say the result is \textbf{statistically significant}. The break probably help
 
 \item Use the simulation dot plot on page 1. Each dot is the difference between two random groups when the treatment does nothing.
 \begin{enumerate}[itemsep=1em]
-  \item In a plant experiment, the fertilizer group grew 2 cm more than the water group. How many of the 100 shuffles gave a difference of 2 or more?
+  \item Suppose the break group had scored only 2 points higher. How many of the 100 shuffles gave a difference of 2 or more?
 
   \ans{$11 + 8 + 5 + 3 + 2 + 1 = 30$}
   \work{2em}
-  \item Is a 2 cm difference statistically significant? Explain.
+  \item Is a 2-point difference statistically significant? Explain.
 
   \ans{No. Chance alone gave a difference this big 30\% of the time. That is common.}
 \end{enumerate}
 
 \newpage
 \item Find the mistake in each conclusion.
-\begin{enumerate}[itemsep=2.6em]
-  \item A survey of 500 randomly chosen adults found that people who drink coffee live longer. Conclusion: ``Coffee makes you live longer.''
+\begin{enumerate}[itemsep=3.5em]
+  \item A study followed 500 randomly chosen adults for 20 years. The coffee drinkers lived longer. Conclusion: ``Coffee makes you live longer.''
 
   \ans{This is an observational study. It shows an association, not a cause. Coffee drinkers may differ in other ways (lurking variables).}
-  \item 30 runners from one gym were randomly assigned to two training plans. Plan A runners got faster. Conclusion: ``Plan A will make every runner in the country faster.''
+  \item 30 runners from one gym were randomly assigned to two training plans. Plan A runners got much faster than Plan B runners. Conclusion: ``Plan A will make every runner in the country faster.''
 
   \ans{The runners were not a random sample of all runners. We can only say Plan A caused the change for these runners.}
   \item In a randomized experiment, Group A scored 1 point higher than Group B. A simulation shows chance gives a difference of 1 or more about 40\% of the time. Conclusion: ``Treatment A works better.''

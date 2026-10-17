@@ -100,7 +100,7 @@ Work with a partner. Use the z-table. Compare answers when you finish each probl
 
    b. $z = 0.5$ and $z = 1.5$
 
-4. The empirical rule says about 68% of the data is within 1 SD of the mean. Your answer to 3(a) is .6826. Do these agree? Explain.
+4. The empirical rule says about 68% of the data is within 1 SD of the mean. Compare this to your answer to 3(a). Do they agree? Explain.
 
 ***
 

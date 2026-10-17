@@ -66,7 +66,7 @@ $P(\text{job} \mid \text{sport})$ and $P(\text{sport} \mid \text{job})$ are diff
 | Add the paths you want. | $P(\text{late}) = 0.15 + 0.04 = 0.19$ |
 | Then divide. | $P(\text{bus} \mid \text{late}) = \frac{0.15}{0.19} \approx 0.79$ |
 
-About 79% of late students ride the bus.
+About 79% of late students ride the bus. That is more than 60%. So a late student is **more likely** to be a bus rider.
 
 ***
 
@@ -78,7 +78,7 @@ $A$ and $B$ are independent if $P(A \mid B) = P(A)$. Knowing $B$ does not change
 
 $P(\text{job}) = \frac{20}{60} \approx 0.33$, but $P(\text{job} \mid \text{sport}) \approx 0.27$. They are different. So having a job and playing a sport are **not** independent.
 
-:::{.you-try title="Use the tree. Find P(late | no bus)."}
+:::{.you-try title="Use the tree. Find $P(\text{late} \mid \text{no bus})$."}
 This is given on the branch: $0.10$. You can also check it with the formula: $\frac{0.04}{0.4} = 0.10$.
 :::
 

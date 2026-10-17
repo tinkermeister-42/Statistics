@@ -119,7 +119,8 @@
 % (use x=1cm and y scaled so ymax fits, e.g. y=8cm for ymax 0.5)
 \newcommand{\probbars}[4]{%
   \pgfmathsetmacro{\pbs}{#3*2}
-  \foreach \t in {0,#3,...,#2} {\draw[gray!25] (-0.6,\t) -- (\pbmax,\t); \node[left,font=\small] at (-0.6,\t) {\pgfmathprintnumber{\t}};}
+  \pgfmathtruncatemacro{\pbn}{round(#2/#3)}% integer count: a decimal loop stops one step short
+  \foreach \i in {0,...,\pbn} {\pgfmathsetmacro{\t}{\i*#3}\draw[gray!25] (-0.6,\t) -- (\pbmax,\t); \node[left,font=\small] at (-0.6,\t) {\pgfmathprintnumber{\t}};}
   \draw[thick] (-0.6,0) -- (\pbmax,0); \draw[thick] (-0.6,0) -- (-0.6,#2);
   \foreach \x/\p in {#1} {\draw[fill=gray!35] (\x-0.35,0) rectangle (\x+0.35,\p); \node[below] at (\x,0) {\x};}
   \node[below=16pt] at ({(\pbmax-0.6)/2},0) {#4};

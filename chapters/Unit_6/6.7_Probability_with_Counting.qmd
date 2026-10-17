@@ -61,7 +61,7 @@ $$
 
 Order matters (different jobs). Total: ${}_{10}P_2 = 90$. Only 1 way works, so $P = \frac{1}{90}$.
 
-:::{.you-try title="A teacher picks 2 of the 9 students. Find P(both boys)."}
+:::{.you-try title="A teacher picks 2 of the 9 students. Find $P(\text{both boys})$."}
 ${}_4C_2 = 6$ ways to pick 2 boys. ${}_9C_2 = 36$ ways in all.
 
 $P(\text{both boys}) = \frac{6}{36} = \frac{1}{6}$
@@ -73,7 +73,7 @@ Work with a partner. Compare answers when you finish each problem.
 
 **Groups and Lotteries**
 
-1. A committee of 3 is chosen at random from 6 juniors and 4 seniors.
+1. A committee of 3 is chosen at random from 6 juniors (11th grade) and 4 seniors (12th grade).
 
    a. How many committees are possible?
 
@@ -91,7 +91,7 @@ Work with a partner. Compare answers when you finish each problem.
 
 **More Counting**
 
-5. In a taste test, a person tastes 4 drinks and guesses which brand each one is. Each brand is used once. If the person just guesses, what is the probability that all 4 are right?
+5. In a taste test, there are 4 drinks from 4 different brands. A person tastes each drink and matches it to a brand. Each brand is used once. If the person just guesses, what is the probability that all 4 are right?
 
 6. You grab 2 shirts at random from a drawer of 8 shirts. 3 of the shirts are blue. What is $P(\text{both blue})$?
 
@@ -99,4 +99,4 @@ Work with a partner. Compare answers when you finish each problem.
 
    a. Use a calculator. How many different tickets are possible?
 
-   b. What is the probability of winning with one ticket? Is it a good idea to expect to win?
+   b. What is the probability of winning with one ticket? Should you expect to win? Explain.
