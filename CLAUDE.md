@@ -22,7 +22,9 @@ notes, a worked example or two, one You Try, and the practice set.
   glossary post-render writes `glossary.json` after the copy step)
 - **Deploy:** `./deploy.sh` renders, runs `scripts/check-site-assets.py`
   (fails on a missing or stale PDF or SVG), and force-pushes `_book` to
-  `gh-pages` (personal site: `tinkermeister-42.github.io/Statistics`)
+  `gh-pages` (personal site: `tinkermeister-42.github.io/Statistics`).
+  "Stale" compares last commit times for committed, unchanged files and
+  mtimes otherwise, so a fresh clone or checkout passes
 - **Mirror to the work site is manual.** The teacher reviews the personal
   site, then runs "Mirror site to Work Account" from the Actions tab
   (`.github/workflows/sync-to-work.yml`, workflow_dispatch from `main`). It
@@ -87,15 +89,23 @@ set (`.remember`, `.you-try`, `.you-try-m` + `.answer`, `.think`, `.gotcha`,
   values, and a reverse lookup takes the closest area in the table
 - **Keys are unlisted.** `<name>_KEY.pdf` is served beside the student PDF
   but nothing links to it. The URL is predictable on purpose so it can be
-  shared with colleagues. Practice answers are not printed on the page
+  shared with colleagues. Practice answers are not printed on the page, so a
+  You Try or worked example never reuses a practice problem's numbers or
+  scenario
 - **A key answers the paper in the space provided.** Answers go inline with
   `\ans{...}` in the handout `.tex`; drawn answers (dot plots, box plots,
-  histograms) are drawn in red inside `\ifkey ... \fi`
+  histograms) are drawn in red inside `\ifkey ... \fi`. The key keeps the
+  student copy's page count and page breaks. Give the student copy real room
+  to write (`\work{}`, or `itemsep=\ifkey 1em\else 5em\fi`)
+- **Handouts are ragged right with hyphenation off** (`handouts/preamble.tex`;
+  1.1 to 1.3 set it in their own preambles). A minipage or `p{}` column is
+  justified again unless it gets its own `\raggedright`
 - **Quartiles follow Khan:** with an odd count the median is left out of both
   halves
 - **Money in prose is math:** write `$\$84{,}000$`, as the Algebra book does.
   A bare `$84,000` pairs with the next dollar sign in the paragraph and
-  MathJax renders the text between them as math
+  MathJax renders the text between them as math. Callout titles too:
+  `title="A game costs $\$1$."` (the title script reads `\$` as a dollar)
 - Worksheet directions say "Work with a partner", never "work by yourself"
 - **Real notation, explained.** The teacher wants students exposed to real
   statistical notation. Write $\Sigma$, not "sum of"; write $\bar{x}$,
