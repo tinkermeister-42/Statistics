@@ -45,7 +45,7 @@ The prize is big, but the chance is small. In this lesson, you find the {{< glin
 
 On average, a buyer **loses $\$1.30$** per ticket. The lottery keeps that money.
 
-:::{.you-try title="A game costs $1. You win $4 with probability 0.2. Find the expected payoff."}
+:::{.you-try title="A game costs $\$1$. You win $\$4$ with probability 0.2. Find the expected payoff."}
 Net gains: $4 - 1 = 3$ (probability 0.2) and $-1$ (probability 0.8).
 
 $3(0.2) + (-1)(0.8) = 0.6 - 0.8 = -0.2$. You lose 20 cents a game on average.
