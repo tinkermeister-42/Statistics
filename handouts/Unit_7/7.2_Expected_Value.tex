@@ -5,7 +5,7 @@
 
 \lessontitle{Expected Value}
 
-A soccer team's goals per game have this distribution. On average, how many goals does the team score?
+This table shows how many goals a soccer team scores in a game. On average, how many goals does the team score?
 
 \begin{center}
 \renewcommand{\arraystretch}{1.4}
@@ -19,7 +19,7 @@ $x \cdot P(x)$ & 0 & 0.3 & 0.6 & 0.6 & 0.4 \\ \hline
 \renewcommand{\arraystretch}{1.3}
 \begin{tabular}{|>{\raggedright\arraybackslash}p{6.7in}|}\hline
 \textbf{Expected value:} \qquad $E(X) = \Sigma\, x \cdot P(x)$\par\vspace{0.3em}
-Multiply each value by its probability. Then add them all up ($\Sigma$ means add up). The expected value is also called the \textbf{mean} of $X$, written $\mu_X$.\\ \hline
+$E(X)$ means the expected value of $X$. Multiply each value by its probability. Then add them all up ($\Sigma$ means add up). The expected value is also called the \textbf{mean} of $X$, written $\mu_X$.\\ \hline
 \end{tabular}
 
 \vspace{0.4em}
@@ -43,10 +43,10 @@ Flip 2 coins. HH: Ana, TT: Ben, one of each: Cai. & No. Ana $\frac{1}{4}$, Ben $
 \end{tabular}
 
 \vspace{1em}
-\textbf{Fair games.} A game is fair if the expected value of what you win is \textbf{0}.
+\textbf{Fair games.} A game is fair if the expected value of the money you win or lose is \textbf{0}.
 
 \vspace{0.2em}
-\textbf{Example:} Roll a number cube. You win \$3 if you roll a 6. You pay \$1 for any other number.
+\textbf{Example:} Roll a number cube. You win \$3 if you roll a 6. You pay \$1 for any other number. Let $X$ = the money you win or lose in one game.
 
 \vspace{0.2em}
 $E(X) = 3 \cdot \frac{1}{6} + (-1) \cdot \frac{5}{6} = \frac{3}{6} - \frac{5}{6} = -\frac{2}{6} \approx -\$0.33$
@@ -91,14 +91,16 @@ A student says, ``The expected value is 1.1, so a household can have 1.1 pets.''
 Then they switch to rolling a number cube: 1: Ana, 2: Ben, 3: Cai, 4 to 6: Dee.
 \begin{enumerate}[itemsep=1em]
   \item Is the spinner fair? Explain. \ans{\quad Yes. Each friend has $\frac{1}{4}$.}
+  \work{2em}
   \item Is the number cube fair? Explain. \ans{\quad No. Dee has $\frac{3}{6} = \frac{1}{2}$. The others have $\frac{1}{6}$.}
+  \work{2em}
   \item Change the number cube method to make it fair.
 
   \ans{Example: 1: Ana, 2: Ben, 3: Cai, 4: Dee, and roll again on 5 or 6.}
 \end{enumerate}
 \work{2em}
 
-\item A game: roll a number cube. You win \$5 if you roll a 6. You pay \$1 for any other number.
+\item A game: roll a number cube. You win \$5 if you roll a 6. You pay \$1 for any other number. Let $X$ = the money you win or lose in one game.
 \begin{enumerate}[itemsep=1em]
   \item Find the expected value. \ans{\quad $5 \cdot \frac{1}{6} + (-1) \cdot \frac{5}{6} = \frac{5}{6} - \frac{5}{6} = 0$}
   \work{2.5em}
@@ -106,9 +108,9 @@ Then they switch to rolling a number cube: 1: Ana, 2: Ben, 3: Cai, 4 to 6: Dee.
 \end{enumerate}
 \work{2em}
 
-\item In the notes example, you win \$3 for a 6. How much should you win for a 6 to make the game fair?
+\item In the notes example, you win \$3 if you roll a 6. How much should you pay for any other number to make the game fair?
 
-\ans{You pay \$1 five times out of six, so a 6 must pay \$5: \; $w \cdot \frac{1}{6} - \frac{5}{6} = 0$ gives $w = 5$.}
+\ans{Let $c$ = what you pay. \; $3 \cdot \frac{1}{6} - c \cdot \frac{5}{6} = 0$, so $5c = 3$ and $c = \$0.60$.}
 
 \end{enumerate}
 
