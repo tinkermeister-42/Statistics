@@ -70,7 +70,7 @@ The percents are **different**. So playing a sport and having a job are **associ
 :::
 
 :::{.think title="Does this mean sports cause students to not have jobs?"}
-Not by itself. An association only says the two things happen together. It does not prove cause. Maybe practice takes time away from a job. Maybe something else explains both. You will learn more about cause in Unit 5.
+We cannot tell from this table. An association only says the two things happen together. It does not prove cause. Maybe practice takes time away from a job. Maybe something else explains both. You will learn more about cause in Unit 5.
 :::
 
 {{< practice >}}

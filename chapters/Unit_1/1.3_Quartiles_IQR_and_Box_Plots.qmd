@@ -85,16 +85,16 @@ For Example 1: IQR $= 15 - 6 = 9$.
 For Example 2: IQR $= 12 - 4 = 8$.
 
 :::{.you-try-m title="Find the five-number summary and the IQR."}
-5, 9, 2, 7, 4, 8, 3
+7, 15, 2, 10, 4, 11, 6
 :::
 :::{.answer title="Answer"}
-In order: 2, 3, 4, **5**, 7, 8, 9. The median is 5.
+In order: 2, 4, 6, **7**, 10, 11, 15. The median is 7.
 
-Lower half: 2, **3**, 4. So Q1 = 3.
+Lower half: 2, **4**, 6. So Q1 = 4.
 
-Upper half: 7, **8**, 9. So Q3 = 8.
+Upper half: 10, **11**, 15. So Q3 = 11.
 
-Five-number summary: 2, 3, 5, 8, 9. IQR $= 8 - 3 = 5$.
+Five-number summary: 2, 4, 7, 11, 15. IQR $= 11 - 4 = 7$.
 :::
 
 ***
