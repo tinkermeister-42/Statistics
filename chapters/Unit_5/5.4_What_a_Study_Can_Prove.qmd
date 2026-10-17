@@ -77,7 +77,7 @@ Work with a partner. Compare answers when you finish each problem.
 
    a. Researchers randomly choose 1,000 adults in Missouri and ask how much they exercise and how often they get sick.
 
-   b. 40 volunteers are randomly assigned to drink green tea or water every day for a month. The tea group has lower blood pressure.
+   b. 40 volunteers are randomly assigned to drink green tea or water every day for a month. The tea group has much lower blood pressure. The difference is too big to be just chance.
 
    c. A teacher compares the grades of students who chose to join a study club with students who did not.
 
