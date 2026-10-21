@@ -40,6 +40,7 @@ notes, a worked example or two, one You Try, and the practice set.
 ```
 chapters/Unit_1…7/     # Lessons: #.#_Topic.qmd, index.qmd
 handouts/Unit_1…7/     # Printable mini lessons: .tex source, student + _KEY PDFs
+assessments/Unit_1…7/  # Unit quizzes: .tex source, student + _KEY PDFs (unlisted)
 figures/Unit_1…7/      # TikZ sources for web figures -> images/Unit_X/*.svg
 scripts/               # JS helpers, glossary build, figure build, asset check
 styles/                # CSS (copied from the Algebra 1 book)
@@ -105,6 +106,23 @@ set (`.remember`, `.you-try`, `.you-try-m` + `.answer`, `.think`, `.gotcha`,
   up", "$\mu$ (mu) is the mean". First appearances so far: $\bar{x}$, $\Sigma$,
   $n$ in 1.2; $\Sigma(x - \bar{x})^2$ and $s$ in 2.1; $\mu$, $\sigma$ in 2.3.
   Each symbol has a glossary entry
+
+## Unit Reviews and Quizzes
+- **Review page:** `chapters/Unit_X/Review.qmd` after the last lesson, handout
+  `handouts/Unit_X/Unit_X_Review.tex`, figures `figures/Unit_X/Review_*.tex`.
+  Learn Together walks one small data set through every lesson's tool; the
+  practice mirrors the quiz question for question (same "I ..." goals, 2-3x
+  the parts), then ends with test-style multiple choice in EOC wording
+- **Quiz:** `assessments/Unit_X/UnitX_Quiz.tex`, two questions per lesson, a
+  section per lesson, each question headed by its "I ..." goal. Built by
+  `./build.sh UnitX_Quiz`; it inputs `../../handouts/preamble`. Served at
+  `/assessments/Unit_X/UnitX_Quiz.pdf` and `_KEY.pdf`, linked from nowhere
+- **A quiz key lines up page for page.** Answers sit in fixed-height `\abox`
+  space, so the key never moves anything; a handout key still shrinks `\work`
+- Unit 1 is done (fall 2026); Units 2-7 have neither yet
+- **Fresh clone mtimes:** checkout writes files in no useful order, so
+  `check-site-assets.py` calls every committed PDF and SVG stale. They are
+  not: `git ls-files 'handouts/*.pdf' 'assessments/*.pdf' 'images/*.svg' | xargs touch`
 
 ## Branches
 

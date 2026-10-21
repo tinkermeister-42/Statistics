@@ -16,13 +16,13 @@ def newest_source(tex):
     """The .tex itself, the shared preambles, and every figure it \\fig's."""
     text = tex.read_text()
     paths = [tex]
-    if "\\input{../preamble}" in text:
+    if "\\input{../preamble}" in text or "\\input{../../handouts/preamble}" in text:
         paths += [root / "handouts" / "preamble.tex", root / "figures" / "preamble.tex"]
     paths += [root / "figures" / (m + ".tex") for m in FIG.findall(text)]
     return max(p.stat().st_mtime for p in paths if p.exists())
 
 
-for tex in sorted(root.glob("handouts/Unit_*/*.tex")):
+for tex in sorted(root.glob("handouts/Unit_*/*.tex")) + sorted(root.glob("assessments/Unit_*/*.tex")):
     for suffix in ("", "_KEY"):
         pdf = tex.with_name(tex.stem + suffix + ".pdf")
         built = root / "_book" / pdf.relative_to(root)
