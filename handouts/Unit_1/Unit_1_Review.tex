@@ -148,34 +148,39 @@ This histogram shows how many minutes some students spent on Khan Academy last n
   \ans{No. The graph only shows that 8 students spent from 15 to 30 minutes. It hides the exact values.}
 \end{enumerate}
 
-\vspace{1.2em}
+\vspace{0.5em}
 A runner recorded her time, in minutes, for 16 runs.
 \begin{center}22,\; 25,\; 31,\; 28,\; 24,\; 35,\; 27,\; 29,\; 21,\; 33,\; 26,\; 30,\; 38,\; 25,\; 29,\; 32\end{center}
-\begin{enumerate}[start=6,itemsep=1em]
+\begin{minipage}[t]{0.44\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}[start=6]
   \item Make a frequency table. Remember the histogram rule.
 
-  \begin{center}
+  \vspace{0.5em}
   \renewcommand{\arraystretch}{1.5}
-  \begin{tabular}{|c|p{2.6in}|} \hline
+  \begin{tabular}{|c|p{2.1in}|} \hline
   Minutes & Frequency \\ \hline
   20 to 25 & \ans{3 \;(21, 22, 24)} \\ 25 to 30 & \ans{7 \;(25, 25, 26, 27, 28, 29, 29)} \\ 30 to 35 & \ans{4 \;(30, 31, 32, 33)} \\ 35 to 40 & \ans{2 \;(35, 38)} \\ \hline
   \end{tabular}
-  \end{center}
+\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.53\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}[start=7]
   \item Make a histogram. Label both axes.
 
-  \begin{center}
-  \begin{tikzpicture}[x=0.38cm,y=0.42cm]
+  \vspace{0.5em}
+  \begin{tikzpicture}[x=0.34cm,y=0.42cm]
     \draw[->] (0,0) -- (0,8.6); \draw (0,0) -- (25,0);
+    \fill[white] (1.2,-0.25) rectangle (1.8,0.25); \draw (1.0,-0.25) -- (1.4,0.25) (1.6,-0.25) -- (2.0,0.25);
     \foreach \y in {0,...,8} \draw (0.2,\y) -- (-0.2,\y) node[left,font=\small] {\y};
     \foreach \l/\p in {20/3,25/8,30/13,35/18,40/23} {\draw (\p,0.2) -- (\p,-0.2) node[below] {\l};}
     \ifkey\begin{scope}[keyred]
       \foreach \i/\h in {0/3,1/7,2/4,3/2} \draw[fill=red!12] (3+\i*5,0) rectangle (8+\i*5,\h);
       \node[rotate=90] at (-2.6,4) {Number of runs};
       \node at (13,-1.9) {Minutes};
-    \end{scope}\fi
+    \end{scope}\else\path (0,-2.3);\fi
   \end{tikzpicture}
-  \end{center}
 \end{enumerate}
+\end{minipage}
 
 \end{enumerate}
 
@@ -245,7 +250,7 @@ Seven students timed their trip to school, in minutes.
   \work{3em}
   \item Which better describes a typical trip, the mean or the median? Explain.
 
-  \ans{The median. 60 is far from the rest. It pulls the mean up. 6 of the 7 students take less than the mean.}
+  \ans{The median. 60 is far from the rest. It pulls the mean up. 6 of the 7 students take less time than the mean.}
   \work{3em}
 \end{enumerate}
 
@@ -413,7 +418,7 @@ A store sells 8 used bikes. Here are the prices, in dollars.
 \lessonhead{Test-Style Questions}
 A test asks the same questions with more words. Read slowly. Circle the best answer.
 
-\begin{enumerate}[resume,itemsep=1.6em]
+\begin{enumerate}[resume,itemsep=1.2em]
 
 \item A teacher recorded the number of minutes each of her 28 students spent on Khan Academy last night. The results are shown in the histogram in Problem 2. Which statement is supported by the histogram?
 \choices{\opt{A} & Exactly 8 students spent 20 minutes on Khan Academy.}
