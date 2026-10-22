@@ -11,6 +11,8 @@
 % circled choices: \opt{A} prints plain; \optans{B} is circled in red on the key
 \newcommand{\opt}[1]{\tikz[baseline=(c.base)]\node[inner sep=2.5pt](c){#1};}
 \newcommand{\optans}[1]{\ifkey\tikz[baseline=(c.base)]\node[circle,inner sep=1.2pt,draw=keyred,thick,text=keyred](c){#1};\else\opt{#1}\fi}
+% a grading note on the key: other answers that earn credit
+\newcommand{\also}[1]{\par{\small #1}}
 \newcommand{\choices}[4]{\par\vspace{0.3em}\begin{tabular}{@{}l@{\hspace{0.6em}}>{\raggedright\arraybackslash}p{\dimexpr\linewidth-2.6em\relax}}#1\\#2\\#3\\#4\\\end{tabular}}
 
 \begin{document}
@@ -114,13 +116,14 @@ Name the type of bias. Explain how it could change the results.
 
   \ans{Convenience. Sam's friends may like the same music as Sam, so the results may not match the school.}
   \work{3em}
-  \item To learn how many students have a library card, a school surveys a random sample from the list of students who visited the library this year.
+  \item A school wants to know how many students have a library card. It surveys a random sample of the students who visited the library this year.
 
   \ans{Undercoverage. Students who never visit the library are left out. They are less likely to have a card, so the percent will look too high.}
   \work{3em}
   \item A store mails a survey to 1,000 randomly chosen customers. Only 150 send it back.
 
-  \ans{Nonresponse bias. The 150 who answer may feel more strongly (very happy or very upset) than the 850 who do not.}
+  \ans{Nonresponse bias. The 150 who answer may feel more strongly (very happy or very upset) than the 850 who do not.
+  \also{Voluntary response: partial credit. The cue is ``randomly chosen'', so the answer is nonresponse.}}
   \work{3em}
   \item A survey asks, ``Do you agree that the new lunch menu, which students love, should stay?''
 
@@ -163,8 +166,8 @@ Name the sampling method. Then write if it uses chance.
 (b) \; A factory checks every 20th phone case that comes off the line. It starts with a random case from the first 20. & \ans{Systematic (uses chance)}\\ \hline
 (c) \; A school randomly picks 4 of its 40 homerooms and surveys every student in those 4. & \ans{Cluster (uses chance)}\\ \hline
 (d) \; A gym randomly picks 25 members who come in the morning and 25 who come in the evening. & \ans{Stratified (uses chance)}\\ \hline
-(e) \; A reporter asks the first 30 people who leave a concert. & \ans{Convenience (no chance)}\\ \hline
-(f) \; A website asks visitors to answer a poll if they want to. & \ans{Voluntary response (no chance)}\\ \hline
+(e) \; A reporter asks the first 30 people who leave a concert.\rule[-1.4em]{0pt}{0pt} & \ans{Convenience (no chance)}\\ \hline
+(f) \; A website asks visitors to answer a poll if they want to.\rule[-1.4em]{0pt}{0pt} & \ans{Voluntary response (no chance)\also{Also accept: convenience (no chance).}}\\ \hline
 \end{tabular}
 
 \vspace{1em}
@@ -183,10 +186,7 @@ A school has 600 students in 30 homerooms of 20 students. It has 3 lunch periods
   \ans{The cluster sample takes \textbf{everyone} from a \textbf{few} homerooms. The stratified sample takes a \textbf{few} students from \textbf{every} lunch period.}
   \work{3em}
   \item A company has 12 phone stores. To survey its workers, the manager randomly selects 10 workers from each of the 12 stores. Which sampling method does the manager use? Circle the letter.
-  \choices{\opt{A} & Simple random sample}
-          {\optans{B} & Stratified sample}
-          {\opt{C} & Cluster sample}
-          {\opt{D} & Systematic sample}
+  \par\vspace{0.3em}\begin{tabular}{@{}l@{\hspace{0.6em}}p{2.4in}l@{\hspace{0.6em}}p{2.4in}}\opt{A} & Simple random sample & \optans{B} & Stratified sample\\ \opt{C} & Cluster sample & \opt{D} & Systematic sample\\\end{tabular}
 \end{enumerate}
 
 \newpage
@@ -216,7 +216,8 @@ A town has 6,000 residents. 4,500 live in town, and 1,500 live on farms outside 
 \begin{enumerate}[start=3]
   \item Describe a good sampling method. Name it, and explain why it is a good choice.
 
-  \ans{Stratified sample. Split the residents into town residents and farm residents. $\frac{120}{6{,}000} = 2\%$. Randomly pick $2\%$ of each group: $0.02 \times 4{,}500 = 90$ town residents and $0.02 \times 1{,}500 = 30$ farm residents. Farm residents may use the road in a different way, so both groups are in the sample in the right numbers.}
+  \ans{Stratified sample. Split the residents into town residents and farm residents. $\frac{120}{6{,}000} = 2\%$. Randomly pick $2\%$ of each group: $0.02 \times 4{,}500 = 90$ town residents and $0.02 \times 1{,}500 = 30$ farm residents. Farm residents may use the road in a different way, so both groups are in the sample in the right numbers.
+  \also{Also accept, with a reason: a stratified sample with equal numbers from each group, a simple random sample, or a systematic sample from the full list of 6,000.}}
   \work{6em}
   \item Someone says to ask 120 people at the grocery store in town. What is wrong with this method?
 
@@ -290,14 +291,16 @@ A company says its new ``study tea'' helps students do better on math tests. 60 
 
   \ans{She might, without meaning to, grade the study tea group more kindly.}
   \work{3em}
-  \item Neither the students nor the teacher know who drank which tea. What is this called? \ans{\quad Double-blind}
+  \item Neither the students nor the teacher knows who drank which tea. What is this called? \ans{\quad Double-blind}
+  \work{2em}
   \item Is this experiment a completely randomized design or a matched pairs design? Explain.
 
   \ans{Completely randomized. Each student gets only one treatment, and chance decides which one.}
   \work{3em}
   \item Describe how to test study tea with a matched pairs design.
 
-  \ans{Each student takes two math tests of the same difficulty on two days: once after study tea and once after plain tea. A coin flip decides which tea comes first. Compare each student's two scores.}
+  \ans{Each student takes two math tests of the same difficulty on two days: once after study tea and once after plain tea. A coin flip decides which tea comes first. Compare each student's two scores.
+  \also{Also accept: pair students with similar scores (for example, on a pretest), then flip a coin in each pair to choose who drinks study tea.}}
   \work{4em}
   \item In your matched pairs design, why flip a coin to decide which tea comes first?
 
@@ -322,10 +325,10 @@ For each study, can we conclude cause? Can we generalize to the population? Expl
 \renewcommand{\arraystretch}{1.4}
 \begin{tabular}{|>{\raggedright\arraybackslash}p{2.85in}|>{\raggedright\arraybackslash}p{1.65in}|>{\raggedright\arraybackslash}p{1.7in}|}\hline
 \textbf{Study} & \textbf{Cause? Why?} & \textbf{Generalize? Why?}\\ \hline
-(a) \; Researchers randomly choose 800 high school students in Missouri. Students who play a musical instrument have higher math grades. & \ans{No. Observational study, no random assignment. Something else could explain both.} & \ans{Yes, to high school students in Missouri. The sample is random.}\\ \hline
-(b) \; 50 volunteers are randomly assigned to use a standing desk or a regular desk for a month. The standing desk group finishes more work. & \ans{Yes, for these 50 volunteers (random assignment).} & \ans{No. Volunteers are not a random sample of all workers.}\\ \hline
-(c) \; A website asks visitors who own a cat and visitors who own a dog how happy they are. The dog owners say they are happier. & \ans{No. People chose their pets. There is no random assignment.} & \ans{No. Visitors chose to answer. It is not a random sample.}\\ \hline
-(d) \; A school randomly chooses 60 of its 900 students. It randomly assigns 30 to read with a new reading app and 30 to read paper books. After a month, the app group reads faster. & \ans{Yes. They were randomly assigned.} & \ans{Yes, to all 900 students at the school. The sample is random.}\\ \hline
+(a) \; Researchers randomly choose 800 high school students in Missouri. Students who play a musical instrument have higher math grades.\rule[-2.2em]{0pt}{0pt} & \ans{No. Observational study, no random assignment. Something else could explain both.} & \ans{Yes, to high school students in Missouri. The sample is random.}\\ \hline
+(b) \; 50 volunteers are randomly assigned to use a standing desk or a regular desk for a month. The standing desk group finishes more work.\rule[-2.2em]{0pt}{0pt} & \ans{Yes, for these 50 volunteers (random assignment).\also{Also accept: yes, if the difference is statistically significant.}} & \ans{No. Volunteers are not a random sample of all workers.}\\ \hline
+(c) \; A website asks visitors who own a cat and visitors who own a dog how happy they are. The dog owners say they are happier.\rule[-2.2em]{0pt}{0pt} & \ans{No. People chose their pets. There is no random assignment.} & \ans{No. Visitors chose to answer. It is not a random sample.}\\ \hline
+(d) \; A school randomly chooses 60 of its 900 students. It randomly assigns 30 to read with a new reading app and 30 to read paper books. After a month, the app group reads faster.\rule[-2.2em]{0pt}{0pt} & \ans{Yes. They were randomly assigned.\also{Also accept: yes, if the difference is statistically significant.}} & \ans{Yes, to all 900 students at the school. The sample is random.}\\ \hline
 \end{tabular}
 
 \vspace{1em}
@@ -346,36 +349,34 @@ A coach tests a new jump training. 24 players are randomly split into two groups
 \fig{Unit_5/Review_jump_simulation}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.47\linewidth}\vspace{0pt}\raggedright
-\begin{enumerate}[itemsep=1em]
+\begin{enumerate}[itemsep=0.8em]
   \item The training group's mean jump was 5 cm higher. How many of the 100 shuffles gave a difference of 5 or more?
 
-  \ans{$3 + 1 = 4$ shuffles}
+  \ans{$1 + 1 = 2$ shuffles}
   \work{1.5em}
-  \item What percent of the shuffles is that?
+  \item What percent of the shuffles is that? \ans{\quad $\frac{2}{100} = 2\%$}
+  \work{0.5em}
+  \item Is a 5 cm difference statistically significant? Explain.
 
-  \ans{$\frac{4}{100} = 4\%$}
+  \ans{Yes. Chance gave a difference this big only 2\% of the time. That is less than 5\%.}
 \end{enumerate}
 \end{minipage}
 
 \vspace{0.6em}
-\begin{enumerate}[start=3,itemsep=1em]
-  \item Is a 5 cm difference statistically significant? Explain.
-
-  \ans{Yes. Chance gave a difference this big only 4\% of the time. That is less than 5\%.}
-  \work{2.5em}
+\begin{enumerate}[start=4,itemsep=0.9em]
   \item Another team did the same experiment. Its training group jumped 2 cm higher. How many shuffles gave 2 or more? Is 2 cm statistically significant?
 
-  \ans{$10 + 7 + 5 + 3 + 1 = 26$ shuffles (26\%). No. Chance gives a difference this big often.}
+  \ans{$12 + 8 + 5 + 1 + 1 = 27$ shuffles (27\%). No. Chance gives a difference this big often.}
   \work{2.5em}
   \item What is the smallest whole number of cm that would be statistically significant? Explain.
 
-  \ans{5 cm. 5 or more happened 4 times (4\%), which is less than 5\%. 4 or more happened $5 + 3 + 1 = 9$ times (9\%), which is not.}
+  \ans{5 cm. 5 or more happened 2 times (2\%), which is less than 5\%. 4 or more happened $5 + 1 + 1 = 7$ times (7\%), which is not.}
   \work{2.5em}
 \end{enumerate}
 
-\vspace{0.4em}
+\vspace{0.3em}
 Find the mistake in each conclusion.
-\begin{enumerate}[start=6,itemsep=1em]
+\begin{enumerate}[start=6,itemsep=0.9em]
   \item A survey of 400 randomly chosen teens found that teens who read for fun get better grades. A headline says, ``Reading for fun raises grades.''
 
   \ans{A survey shows an association, not a cause. Teens who read for fun may differ in other ways.}
@@ -391,6 +392,7 @@ Find the mistake in each conclusion.
   \item Rewrite the headline in (f) so it does not claim a cause.
 
   \ans{``Teens who read for fun tend to get better grades.''}
+  \ifkey\else\par\rule{0pt}{2.6em}\fi
 \end{enumerate}
 
 \end{enumerate}

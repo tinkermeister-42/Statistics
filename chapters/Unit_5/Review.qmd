@@ -136,7 +136,7 @@ Work with a partner. Compare answers when you finish each problem.
 
    b. To learn what music students at his school like, Sam asks his friends at lunch.
 
-   c. To learn how many students have a library card, a school surveys a random sample from the list of students who visited the library this year.
+   c. A school wants to know how many students have a library card. It surveys a random sample of the students who visited the library this year.
 
    d. A store mails a survey to 1,000 randomly chosen customers. Only 150 send it back.
 
@@ -244,7 +244,7 @@ Work with a partner. Compare answers when you finish each problem.
 
    e. Why should the teacher who grades the tests not know?
 
-   f. Neither the students nor the teacher know who drank which tea. What is this called?
+   f. Neither the students nor the teacher knows who drank which tea. What is this called?
 
    g. Is this experiment a completely randomized design or a matched pairs design? Explain.
 
