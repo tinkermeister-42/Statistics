@@ -1,10 +1,10 @@
 \documentclass[border=6pt]{standalone}
 \input{../preamble}
 \begin{document}
-\begin{tikzpicture}[x=0.7cm,y=1cm]
-  \axis{-7}{7}{1}{1}{Difference between the group means in each shuffle (cm)}
+\begin{tikzpicture}[x=0.5cm,y=1cm]
+  \axis{-7}{7}{1}{1}{Difference between the group means (cm)}
   \foreach \v/\c in {-6/1,-5/3,-4/5,-3/8,-2/11,-1/15,0/17,1/14,2/10,3/7,4/5,5/3,6/1}
-    {\foreach \k in {1,...,\c} {\fill (\v,\k*0.22) circle (0.08cm);}}
-  \node[font=\small,anchor=west] at (3.6,3.2) {100 shuffles};
+    {\foreach \k in {1,...,\c} {\fill (\v,\k*0.19) circle (0.075cm);}}
+  \node[font=\small,anchor=west] at (2.4,3.0) {100 shuffles};
 \end{tikzpicture}
 \end{document}
