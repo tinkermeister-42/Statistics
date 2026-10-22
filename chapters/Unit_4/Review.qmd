@@ -78,7 +78,7 @@ A candle that burns 15 hours: $\hat{y} = -2(15) + 24 = -6$ cm. A height cannot b
 |---|---|
 | **Slope** ($-2$) | For each additional **hour**, the predicted **height** decreases by **2 cm**. |
 | **y-intercept** (24) | When $x = 0$ (a new candle), the predicted height is **24 cm**. |
-| **$r$** | The dots are close to a line that goes down. $r$ is close to $-1$ ($r \approx -0.98$). |
+| **$r$** | $r$ is always from $-1$ to $1$. The dots are close to a line that goes down, so $r$ is close to $-1$ ($r \approx -0.98$). |
 
 :::{.remember title="Correlation Is Not Causation"}
 When more umbrellas are sold, there are more car accidents. Umbrellas do not cause accidents. Rain causes both. Rain is a {{< glink "lurking variable" >}}.
