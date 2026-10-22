@@ -250,7 +250,7 @@ Work with a partner. Compare answers when you finish each problem.
 
    h. Describe how to test study tea with a matched pairs design.
 
-   i. In your matched pairs design, why flip a coin to decide which tea comes first?
+   i. Suppose each student drinks both teas, on two different days. Why flip a coin to decide which tea comes first?
 
    j. Why is a matched pairs design a good choice here?
 
