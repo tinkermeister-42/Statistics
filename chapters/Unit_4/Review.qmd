@@ -134,7 +134,7 @@ Work with a partner. Compare answers when you finish each problem.
    12 students recorded how many hours they practiced typing last week and their typing speed.
 
    | Hours ($x$) | 1 | 2 | 3 | 3 | 4 | 5 | 6 | 6 | 7 | 8 | 9 | 10 |
-   |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+   |------------------|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
    | **Words per minute ($y$)** | 28 | 23 | 31 | 25 | 30 | 38 | 35 | 40 | 37 | 45 | 45 | 55 |
 
    ![](/images/Unit_4/Review_typing.svg){width="420px"}
@@ -149,7 +149,7 @@ Work with a partner. Compare answers when you finish each problem.
 
    ![](/images/Unit_4/Review_typing_ken.svg){width="420px"}
 
-   g. Is Ken's line a good line of best fit? Explain.
+   g. Is it a good line of best fit? Explain.
 
 2. Mia charged her phone on 10 days. She recorded how many minutes it charged and the battery percent at the end. A line of best fit is drawn.
 
