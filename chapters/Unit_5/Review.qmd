@@ -1,0 +1,341 @@
+# Unit 5 Review {.unnumbered}
+
+A company says its new homework app raises quiz scores. A school has 800 students. How can the principal find out if the company is right?
+
+Every tool from Unit 5 helps answer that question. Bias shows which plans fail. A random sample picks who is in the study. Random assignment makes a fair experiment. A simulation shows if the result is real or just chance.
+
+This review uses all of them. It has every kind of problem on the Unit 5 quiz, with more of each.
+
+:::{.objectives}
+- [ ] I name the population and the sample in a study, and I tell a sample survey, an observational study, and an experiment apart.
+- [ ] I name the type of bias in a sample or a question, and I decide if results can be generalized to a population.
+- [ ] I name and describe simple random, stratified, cluster, systematic, and convenience samples, and I tell stratified and cluster samples apart.
+- [ ] I use a random digit table to choose a sample, and I choose a good sampling method for a situation.
+- [ ] I name the subjects, treatments, explanatory variable, and response variable in an experiment, and I explain why random assignment matters.
+- [ ] I explain control groups, placebos, and blinding, and I describe a completely randomized design and a matched pairs design.
+- [ ] I decide if a study's results can be generalized to a population, and I decide if a study can show cause and effect.
+- [ ] I use a simulation to decide if a result is statistically significant, and I find mistakes in conclusions about studies.
+:::
+
+:::{.vocab}
+{{< glink population >}},
+{{< glink sample >}},
+{{< glink bias >}},
+{{< glink "observational study" >}},
+{{< glink experiment >}},
+{{< glink "simple random sample" >}},
+{{< glink "stratified sample" >}},
+{{< glink "cluster sample" >}},
+{{< glink "systematic sample" >}},
+{{< glink "convenience sample" >}},
+{{< glink "control group" >}},
+{{< glink placebo >}},
+{{< glink "double-blind" >}},
+{{< glink "random assignment" >}},
+{{< glink "matched pairs" >}},
+{{< glink generalize >}},
+{{< glink "statistically significant" >}}
+:::
+
+:::{.guided-notes-link}
+[Printable review](/handouts/Unit_5/Unit_5_Review.pdf){target="_blank"} - notes and practice problems to print and write on.
+:::
+
+{{< khan 5.1 5.2 5.3 5.4 5.5 >}}
+
+{{< learn >}}
+
+### 5.1 - Who Is in the Study?
+
+The {{< glink population >}} is all 800 students at the school. The {{< glink sample >}} is the part of the population we collect data from.
+
+**Idea 1:** Post a link: "Did the app help you?" 150 students answer. This is **voluntary response bias**. Students with strong feelings answer most.
+
+**Idea 2:** Compare students who chose the app with students who did not. This is an {{< glink "observational study" >}}. Students who chose the app may already work harder.
+
+:::{.gotcha title="A bigger sample does not fix bias"}
+If 1,000 people choose to answer a poll, it is still a voluntary response sample. Only chance makes a sample represent the population.
+:::
+
+***
+
+### 5.2 - Choose the Sample
+
+Randomly pick 10 students from each grade, 9 to 12. The sample is 40 students.
+
+This is a {{< glink "stratified sample" >}}. Every grade is in it, and chance picks the students.
+
+:::{.remember title="Stratified or Cluster?"}
+- **Stratified:** a **few** from **every** group.
+- **Cluster:** **everyone** from a **few** groups.
+:::
+
+***
+
+### 5.3 - Run an Experiment
+
+![](/images/Unit_5/Review_app_design.svg){width="560px" fig-align="center"}
+
+- Explanatory variable: app or paper.
+- Response variable: quiz score.
+- Group 2 is the {{< glink "control group" >}}. It does not get the new treatment.
+
+Both groups get the same homework and take the same quiz. {{< glink "random assignment" text="Random assignment" >}} makes the groups alike. So a difference in scores comes from the app.
+
+***
+
+### 5.4 - What Can It Prove?
+
+App group: $\bar{x} = 82$. Paper group: $\bar{x} = 74$. ($\bar{x}$ is the mean.)
+
+$$
+82 - 74 = 8 \text{ points}
+$$
+
+Is 8 points real, or just chance? Shuffle the 40 scores into two random groups of 20. Find the difference. Repeat 100 times.
+
+![](/images/Unit_5/Review_app_simulation.svg){width="520px" fig-align="center"}
+
+Only 2 of the 100 shuffles gave 8 or more (2%). The result is {{< glink "statistically significant" >}}.
+
+:::{.remember title="What Can This Study Prove?"}
+- Random sample: we can **generalize** to all 800 students.
+- Random assignment: the app **caused** the higher scores.
+- Less than 5% by chance: the result is statistically significant.
+:::
+
+{{< practice >}}
+
+Work with a partner. Compare answers when you finish each problem.
+
+**5.1 - Samples, Studies, and Bias**
+
+1. Name the population and the sample.
+
+   a. A factory makes 40,000 soccer balls each month. To check them, it tests 200 balls chosen at random.
+
+   b. A town wants to know how its residents feel about a new bike path. It asks 350 randomly chosen residents.
+
+   c. A school wants to know how many hours its 900 students sleep. It asks every student in 3 homerooms.
+
+   Is each study a sample survey, an observational study, or an experiment? Explain.
+
+   d. A city asks 300 bus riders how long they wait for the bus.
+
+   e. Researchers compare the grades of students who have a part-time job and students who do not.
+
+   f. A gardener randomly chooses 20 bean plants to grow in the sun and 20 to grow in the shade. She measures how tall they grow.
+
+   g. A scientist records the high temperature and the number of people at a beach each day.
+
+   h. A teacher randomly chooses half of the class to use a calculator on a quiz. The other half do not use one. She compares the scores.
+
+2. Name the type of bias. Explain how it could change the results.
+
+   a. A news website asks readers to click yes or no: "Should phones be allowed in class?"
+
+   b. To learn what music students at his school like, Sam asks his friends at lunch.
+
+   c. To learn how many students have a library card, a school surveys a random sample from the list of students who visited the library this year.
+
+   d. A store mails a survey to 1,000 randomly chosen customers. Only 150 send it back.
+
+   e. A survey asks, "Do you agree that the new lunch menu, which students love, should stay?"
+
+   f. A teacher asks each student, in front of the whole class, "Did you finish all of your homework this week?"
+
+   Can the results be generalized to the population? Explain.
+
+   g. To learn how students get to school, Omar asks 50 students who are waiting at the bus stop.
+
+   h. A school numbers its 1,200 students. A random number generator picks 100 of them. The school asks them how much time they spend on homework.
+
+***
+
+**5.2 - Sampling Methods**
+
+3. Name the sampling method. Then write if it uses chance.
+
+   a. A teacher writes all 30 names on cards, mixes them in a bag, and draws 5.
+
+   b. A factory checks every 20th phone case that comes off the line. It starts with a random case from the first 20.
+
+   c. A school randomly picks 4 of its 40 homerooms and surveys every student in those 4.
+
+   d. A gym randomly picks 25 members who come in the morning and 25 who come in the evening.
+
+   e. A reporter asks the first 30 people who leave a concert.
+
+   f. A website asks visitors to answer a poll if they want to.
+
+   A school has 600 students in 30 homerooms of 20 students. It has 3 lunch periods with 200 students each. The school wants to survey 60 students.
+
+   g. Describe a cluster sample of 60 students.
+
+   h. Describe a stratified sample of 60 students. Use the lunch periods as the groups.
+
+   i. What is the difference between your samples in (g) and (h)?
+
+   j. A company has 12 phone stores. To survey its workers, the manager randomly selects 10 workers from each of the 12 stores. Which sampling method does the manager use?
+
+      A. Simple random sample\
+      B. Stratified sample\
+      C. Cluster sample\
+      D. Systematic sample
+
+4. Use this random digit table.
+
+   | | |
+   |---|---|
+   | Row 1 | `80705 31552 01750 12036 81867 61814 36988 70804` |
+   | Row 2 | `57068 19587 06206 66786 12176 19087 11019 66850` |
+
+   a. A club has 50 members, numbered 01 to 50. Use **row 1** to choose 5 members.
+
+   b. A class has 18 students, numbered 01 to 18. Use **row 2** to choose 3 students.
+
+   A town has 6,000 residents. 4,500 live in town, and 1,500 live on farms outside town. The town wants to ask 120 residents about a new road.
+
+   c. Describe a good sampling method. Name it, and explain why it is a good choice.
+
+   d. Someone says to ask 120 people at the grocery store in town. What is wrong with this method?
+
+   e. A bus company has 30 buses with 40 seats each. It wants to check 120 seats for damage. Describe a fast way to choose the seats. Name the method.
+
+   f. A teacher wants to choose 4 of her 28 students to test a new website. Describe how to choose a simple random sample.
+
+***
+
+**5.3 - Experiments**
+
+5. Does a new kind of soil help pepper plants grow taller? 36 pepper plants are randomly split into two groups of 18. One group grows in the new soil. The other group grows in regular soil. After 8 weeks, a class measures the height of each plant.
+
+   a. What are the subjects?
+
+   b. What are the treatments?
+
+   c. What is the explanatory variable?
+
+   d. What is the response variable?
+
+   e. What is the control group?
+
+   f. Why split the plants into groups **at random**?
+
+   A phone company tests a new battery saving setting. 50 phones of the same model are randomly split into two groups of 25. One group uses the new setting. The other group uses the normal setting. Each phone plays the same video until the battery dies. The company records how many hours each battery lasts.
+
+   g. What are the subjects?
+
+   h. What is the explanatory variable?
+
+   i. What is the response variable?
+
+   j. Instead, the company puts the 25 newest phones in the new setting group. Why is this a problem?
+
+6. A company says its new "study tea" helps students do better on math tests. 60 student volunteers are randomly split into two groups of 30. One group drinks study tea. The other group drinks a plain tea that looks and tastes the same. Then every student takes the same math test. A teacher grades the tests.
+
+   a. What is the control group?
+
+   b. The plain tea is a placebo. What is a placebo?
+
+   c. Why give the control group a placebo, and not nothing at all?
+
+   d. Why should the students not know which tea they drank?
+
+   e. Why should the teacher who grades the tests not know?
+
+   f. Neither the students nor the teacher know who drank which tea. What is this called?
+
+   g. Is this experiment a completely randomized design or a matched pairs design? Explain.
+
+   h. Describe how to test study tea with a matched pairs design.
+
+   i. In your matched pairs design, why flip a coin to decide which tea comes first?
+
+   j. Why is a matched pairs design a good choice here?
+
+***
+
+**5.4 - What a Study Can Prove**
+
+7. For each study, can we conclude cause? Can we generalize to the population? Explain.
+
+   a. Researchers randomly choose 800 high school students in Missouri. Students who play a musical instrument have higher math grades.
+
+   b. 50 volunteers are randomly assigned to use a standing desk or a regular desk for a month. The standing desk group finishes more work.
+
+   c. A website asks visitors who own a cat and visitors who own a dog how happy they are. The dog owners say they are happier.
+
+   d. A school randomly chooses 60 of its 900 students. It randomly assigns 30 to read with a new reading app and 30 to read paper books. After a month, the app group reads faster.
+
+   e. A researcher randomly selects 500 adults in a large city. She asks how many books they read each year and how many hours of TV they watch each week. Adults who read more books tend to watch less TV. Which conclusion is best supported?
+
+      A. Reading more books causes adults in the city to watch less TV.\
+      B. Reading more books causes all adults in the country to watch less TV.\
+      C. For adults in the city, reading more books is associated with watching less TV, but the study does not show cause.\
+      D. The results apply only to the 500 adults in the study.
+
+8. A coach tests a new jump training. 24 players are randomly split into two groups of 12. After 4 weeks, the coach measures how high each player jumps. Each dot is the difference between the group means in one random shuffle of the 24 jumps, when the training does nothing.
+
+   ![](/images/Unit_5/Review_jump_simulation.svg){width="400px"}
+
+   a. The training group's mean jump was 5 cm higher. How many of the 100 shuffles gave a difference of 5 or more?
+
+   b. What percent of the shuffles is that?
+
+   c. Is a 5 cm difference statistically significant? Explain.
+
+   d. Another team did the same experiment. Its training group jumped 2 cm higher. How many shuffles gave 2 or more? Is 2 cm statistically significant?
+
+   e. What is the smallest whole number of cm that would be statistically significant? Explain.
+
+   Find the mistake in each conclusion.
+
+   f. A survey of 400 randomly chosen teens found that teens who read for fun get better grades. A headline says, "Reading for fun raises grades."
+
+   g. 36 volunteers from one music class were randomly assigned to two practice plans. Plan B players learned a new song faster. Conclusion: "Plan B works better for every music student in the country."
+
+   h. In a randomized experiment, Group 1 scored 3 points higher than Group 2. A simulation shows chance gives a difference of 3 or more 35 times out of 100. Conclusion: "The treatment for Group 1 works better."
+
+   i. Rewrite the headline in (f) so it does not claim a cause.
+
+***
+
+**Test-Style Questions**
+
+A test asks the same questions with more words. Read slowly. Choose the best answer.
+
+9. A researcher wants to estimate the mean number of hours that students at a large high school spend on homework each week. She surveys all 28 students in one advanced math class. Which statement best describes a problem with the researcher's method?
+
+   A. The sample is too large to give useful results.\
+   B. The population is the 28 students in the class, so the results cannot be used.\
+   C. The sample may not represent the school, because an advanced class may do more homework.\
+   D. The study is an experiment, so the results cannot be generalized.
+
+10. A city council member wants to know whether residents support building a new public pool. She posts a survey on her website and asks people to respond. Of the 400 people who respond, 85% support the pool. Which type of bias is most likely present?
+
+    A. Voluntary response bias, because people chose whether to answer.\
+    B. Nonresponse bias, because some residents who were chosen did not answer.\
+    C. Response bias, because the question was worded unfairly.\
+    D. No bias, because 400 people is a large sample.
+
+11. A store manager randomly selects a number from 1 to 15, for example 6. She surveys the 6th customer who enters the store, and then she surveys every 15th customer after that. Which sampling method does the manager use?
+
+    A. Simple random sample\
+    B. Stratified sample\
+    C. Cluster sample\
+    D. Systematic sample
+
+12. To test whether a new plant food increases the number of flowers on rose plants, 40 rose plants are randomly assigned to get either the plant food or water only. What is the main purpose of the random assignment?
+
+    A. To make sure every plant receives the plant food.\
+    B. To make the two groups alike, so that a difference in flowers can be linked to the plant food.\
+    C. To make sure the results apply to all rose plants in the world.\
+    D. To increase the number of flowers on every plant.
+
+13. In the homework app study at the top of this page, a stratified random sample of 40 students was randomly assigned to use the app or paper homework. The app group's mean quiz score was 8 points higher, and 2 of 100 shuffles gave a difference of 8 or more. Which conclusion is best supported?
+
+    A. The difference is likely due to chance, so the app does not work.\
+    B. The app will raise quiz scores for every student in the country.\
+    C. The result is statistically significant, and the app likely caused higher scores at this school.\
+    D. No conclusion is possible, because only 40 of the 800 students were in the study.
