@@ -43,7 +43,7 @@ This review uses every tool from Unit 3. It has every kind of problem on the Uni
 | **No card** | 9 | 21 | 30 |
 | **Total** | 23 | 27 | 50 |
 
-Each cell counts students in **both** groups. 14 students have a card **and** read for fun.
+Each cell counts students who match **both** labels. 14 students have a card **and** read for fun.
 
 :::{.remember title="Check Your Table"}
 Each row adds to its total. Each column adds to its total.
@@ -138,15 +138,22 @@ Work with a partner. Compare answers when you finish each problem.
 
    d. What percent of all the students play at least one of the two games?
 
+   e. Which statement is supported by the relative frequency table?
+
+      A. 9% of the students play both video games and chess.\
+      B. 25% of the students play chess.\
+      C. 40% of the students play neither game.\
+      D. 10% of the students play video games but not chess.
+
    80 students were asked if they ride a bike and if they skateboard. 46 ride a bike. 22 skateboard. 14 do both.
 
-   e. Make a Venn diagram.
+   f. Make a Venn diagram.
 
-   f. Make a two-way table with the rows "Bike" and "No bike" and the columns "Skate" and "No skate."
+   g. Make a two-way table with the rows "Bike" and "No bike" and the columns "Skate" and "No skate."
 
-   g. How many students do neither?
+   h. How many students do neither?
 
-   h. What percent of all the students ride a bike and skateboard?
+   i. What percent of all the students ride a bike and skateboard?
 
 ***
 

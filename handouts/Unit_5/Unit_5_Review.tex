@@ -11,7 +11,7 @@
 % circled choices: \opt{A} prints plain; \optans{B} is circled in red on the key
 \newcommand{\opt}[1]{\tikz[baseline=(c.base)]\node[inner sep=2.5pt](c){#1};}
 \newcommand{\optans}[1]{\ifkey\tikz[baseline=(c.base)]\node[circle,inner sep=1.2pt,draw=keyred,thick,text=keyred](c){#1};\else\opt{#1}\fi}
-\newcommand{\choices}[4]{\par\vspace{0.3em}\begin{tabular}{@{}l@{\hspace{0.6em}}p{6in}}#1\\#2\\#3\\#4\\\end{tabular}}
+\newcommand{\choices}[4]{\par\vspace{0.3em}\begin{tabular}{@{}l@{\hspace{0.6em}}>{\raggedright\arraybackslash}p{\dimexpr\linewidth-2.6em\relax}}#1\\#2\\#3\\#4\\\end{tabular}}
 
 \begin{document}
 
@@ -67,15 +67,15 @@ Name the population and the sample.
   \item A factory makes 40,000 soccer balls each month. To check them, it tests 200 balls chosen at random.
 
   \ans{Population: all 40,000 soccer balls made that month. \; Sample: the 200 balls tested.}
-  \work{1.5em}
+  \work{2.4em}
   \item A town wants to know how its residents feel about a new bike path. It asks 350 randomly chosen residents.
 
   \ans{Population: all residents of the town. \; Sample: the 350 residents asked.}
-  \work{1.5em}
+  \work{2.4em}
   \item A school wants to know how many hours its 900 students sleep. It asks every student in 3 homerooms.
 
   \ans{Population: all 900 students at the school. \; Sample: the students in the 3 homerooms.}
-  \work{1.5em}
+  \work{2.4em}
 \end{enumerate}
 
 \vspace{0.6em}
@@ -84,19 +84,19 @@ Is each study a sample survey, an observational study, or an experiment? Explain
   \item A city asks 300 bus riders how long they wait for the bus.
 
   \ans{Sample survey. The city asks a sample questions. It changes nothing.}
-  \work{1.5em}
+  \work{2.4em}
   \item Researchers compare the grades of students who have a part-time job and students who do not.
 
   \ans{Observational study. The researchers do not choose who has a job.}
-  \work{1.5em}
+  \work{2.4em}
   \item A gardener randomly chooses 20 bean plants to grow in the sun and 20 to grow in the shade. She measures how tall they grow.
 
   \ans{Experiment. She assigns a treatment (sun or shade) and measures the result.}
-  \work{1.5em}
+  \work{2.4em}
   \item A scientist records the high temperature and the number of people at a beach each day.
 
   \ans{Observational study. She only measures. She does not change the temperature.}
-  \work{1.5em}
+  \work{2.4em}
   \item A teacher randomly chooses half of the class to use a calculator on a quiz. The other half do not use one. She compares the scores.
 
   \ans{Experiment. The teacher assigns a treatment (calculator or no calculator).}
@@ -109,27 +109,27 @@ Name the type of bias. Explain how it could change the results.
   \item A news website asks readers to click yes or no: ``Should phones be allowed in class?''
 
   \ans{Voluntary response bias. Readers choose to vote. People with strong feelings vote most, so the result may not match all readers.}
-  \work{2.5em}
+  \work{3em}
   \item To learn what music students at his school like, Sam asks his friends at lunch.
 
   \ans{Convenience. Sam's friends may like the same music as Sam, so the results may not match the school.}
-  \work{2.5em}
+  \work{3em}
   \item To learn how many students have a library card, a school surveys a random sample from the list of students who visited the library this year.
 
   \ans{Undercoverage. Students who never visit the library are left out. They are less likely to have a card, so the percent will look too high.}
-  \work{2.5em}
+  \work{3em}
   \item A store mails a survey to 1,000 randomly chosen customers. Only 150 send it back.
 
   \ans{Nonresponse bias. The 150 who answer may feel more strongly (very happy or very upset) than the 850 who do not.}
-  \work{2.5em}
+  \work{3em}
   \item A survey asks, ``Do you agree that the new lunch menu, which students love, should stay?''
 
   \ans{Response bias. The words ``which students love'' push people to say yes.}
-  \work{2.5em}
+  \work{3em}
   \item A teacher asks each student, in front of the whole class, ``Did you finish all of your homework this week?''
 
   \ans{Response bias. The setting pushes students to say yes, because the class is listening.}
-  \work{2.5em}
+  \work{3em}
 \end{enumerate}
 
 \vspace{0.4em}
@@ -138,11 +138,11 @@ Can the results be generalized to the population? Explain.
   \item To learn how students get to school, Omar asks 50 students who are waiting at the bus stop.
 
   \ans{No. Everyone at the bus stop rides the bus. Students who walk or get a ride are left out, so the sample does not represent the school.}
-  \work{3em}
+  \work{3.5em}
   \item A school numbers its 1,200 students. A random number generator picks 100 of them. The school asks them how much time they spend on homework.
 
   \ans{Yes, to all 1,200 students. The sample was chosen at random from the whole school, so it should represent the school well.}
-  \work{3em}
+  \work{3.5em}
 \end{enumerate}
 
 \end{enumerate}
@@ -157,7 +157,7 @@ Name the sampling method. Then write if it uses chance.
 
 \vspace{0.4em}
 \renewcommand{\arraystretch}{1.6}
-\begin{tabular}{|>{\raggedright\arraybackslash}p{4.6in}|>{\raggedright\arraybackslash}p{1.7in}|}\hline
+\begin{tabular}{|>{\raggedright\arraybackslash}p{4.25in}|>{\raggedright\arraybackslash}p{2.05in}|}\hline
 \textbf{How the sample is chosen} & \textbf{Method}\\ \hline
 (a) \; A teacher writes all 30 names on cards, mixes them in a bag, and draws 5. & \ans{Simple random (uses chance)}\\ \hline
 (b) \; A factory checks every 20th phone case that comes off the line. It starts with a random case from the first 20. & \ans{Systematic (uses chance)}\\ \hline
@@ -203,12 +203,12 @@ Row 2 & \texttt{\bfseries 57068 19587 06206 66786 12176 19087 11019 66850}\\ \hl
 
   \ans{Pairs: 80, 70, 53, \textbf{15}, 52, \textbf{01}, 75, 01, \textbf{20}, \textbf{36}, 81, 86, 76, \textbf{18}.\\
   Skip numbers over 50 and the second 01 (a repeat). The sample is members 15, 01, 20, 36, and 18.}
-  \work{4em}
+  \work{5em}
   \item A class has 18 students, numbered 01 to 18. Use \textbf{row 2} to choose 3 students.
 
   \ans{Pairs: 57, \textbf{06}, 81, 95, 87, 06, 20, 66, 67, 86, \textbf{12}, \textbf{17}.\\
   Skip numbers over 18 and the second 06 (a repeat). The sample is students 06, 12, and 17.}
-  \work{4em}
+  \work{5em}
 \end{enumerate}
 
 \vspace{0.4em}
@@ -217,11 +217,11 @@ A town has 6,000 residents. 4,500 live in town, and 1,500 live on farms outside 
   \item Describe a good sampling method. Name it, and explain why it is a good choice.
 
   \ans{Stratified sample. Split the residents into town residents and farm residents. $\frac{120}{6{,}000} = 2\%$. Randomly pick $2\%$ of each group: $0.02 \times 4{,}500 = 90$ town residents and $0.02 \times 1{,}500 = 30$ farm residents. Farm residents may use the road in a different way, so both groups are in the sample in the right numbers.}
-  \work{5em}
+  \work{6em}
   \item Someone says to ask 120 people at the grocery store in town. What is wrong with this method?
 
   \ans{It is a convenience sample. People who live on farms, or shop somewhere else, are less likely to be there. The sample may not represent the town.}
-  \work{3em}
+  \work{3.5em}
 \end{enumerate}
 
 \vspace{0.4em}
@@ -229,11 +229,11 @@ A town has 6,000 residents. 4,500 live in town, and 1,500 live on farms outside 
   \item A bus company has 30 buses with 40 seats each. It wants to check 120 seats for damage. Describe a fast way to choose the seats. Name the method.
 
   \ans{Cluster sample. Randomly pick 3 buses and check all 40 seats in each. $3 \times 40 = 120$ seats. Workers only go to 3 buses.}
-  \work{3em}
+  \work{3.5em}
   \item A teacher wants to choose 4 of her 28 students to test a new website. Describe how to choose a simple random sample.
 
   \ans{Number the students 01 to 28. Use a random digit table (or a random number generator) to pick 4 numbers. Skip numbers over 28 and repeats.}
-  \work{3em}
+  \work{3.5em}
 \end{enumerate}
 
 \end{enumerate}
@@ -245,7 +245,7 @@ A town has 6,000 residents. 4,500 live in town, and 1,500 live on farms outside 
 
 \item \goal{I name the subjects, treatments, explanatory variable, and response variable in an experiment, and I explain why random assignment matters.}
 Does a new kind of soil help pepper plants grow taller? 36 pepper plants are randomly split into two groups of 18. One group grows in the new soil. The other group grows in regular soil. After 8 weeks, a class measures the height of each plant.
-\begin{enumerate}[itemsep=1em]
+\begin{enumerate}[itemsep=1.5em]
   \item What are the subjects? \ans{\quad The 36 pepper plants}
   \item What are the treatments? \ans{\quad New soil and regular soil}
   \item What is the explanatory variable? \ans{\quad The type of soil}
@@ -254,19 +254,19 @@ Does a new kind of soil help pepper plants grow taller? 36 pepper plants are ran
   \item Why split the plants into groups \textbf{at random}?
 
   \ans{So the two groups are alike. The strongest plants do not all end up in one group. Then a difference in height comes from the soil, not from the plants.}
-  \work{3em}
+  \work{4em}
 \end{enumerate}
 
 \vspace{0.6em}
 A phone company tests a new battery saving setting. 50 phones of the same model are randomly split into two groups of 25. One group uses the new setting. The other group uses the normal setting. Each phone plays the same video until the battery dies. The company records how many hours each battery lasts.
-\begin{enumerate}[start=7,itemsep=1em]
+\begin{enumerate}[start=7,itemsep=1.5em]
   \item What are the subjects? \ans{\quad The 50 phones}
   \item What is the explanatory variable? \ans{\quad The setting (new or normal)}
   \item What is the response variable? \ans{\quad How many hours the battery lasts}
   \item Instead, the company puts the 25 newest phones in the new setting group. Why is this a problem?
 
   \ans{Newer batteries may last longer anyway. Then we cannot tell if the setting or the newer batteries caused the longer time. Random assignment makes the groups alike.}
-  \work{3em}
+  \work{4em}
 \end{enumerate}
 
 \newpage
@@ -281,28 +281,28 @@ A company says its new ``study tea'' helps students do better on math tests. 60 
   \item Why give the control group a placebo, and not nothing at all?
 
   \ans{Students may do better just because they \textit{think} they got study tea (the placebo effect). With a placebo, both groups think they may have it. So an extra difference comes from the study tea itself.}
-  \work{3em}
+  \work{3.5em}
   \item Why should the students not know which tea they drank?
 
   \ans{If they know they got study tea, they may feel sure and try harder. The placebo effect could change their scores.}
-  \work{2.5em}
+  \work{3em}
   \item Why should the teacher who grades the tests not know?
 
   \ans{She might, without meaning to, grade the study tea group more kindly.}
-  \work{2.5em}
+  \work{3em}
   \item Neither the students nor the teacher know who drank which tea. What is this called? \ans{\quad Double-blind}
   \item Is this experiment a completely randomized design or a matched pairs design? Explain.
 
   \ans{Completely randomized. Each student gets only one treatment, and chance decides which one.}
-  \work{2.5em}
+  \work{3em}
   \item Describe how to test study tea with a matched pairs design.
 
   \ans{Each student takes two math tests of the same difficulty on two days: once after study tea and once after plain tea. A coin flip decides which tea comes first. Compare each student's two scores.}
-  \work{3.5em}
+  \work{4em}
   \item In your matched pairs design, why flip a coin to decide which tea comes first?
 
   \ans{Students may do better on the second test (practice) or worse (tired). The coin keeps that from always helping the same tea.}
-  \work{2.5em}
+  \work{3em}
   \item Why is a matched pairs design a good choice here?
 
   \ans{Each student is compared to themselves. So differences in math skill from student to student do not matter.}
@@ -317,31 +317,23 @@ A company says its new ``study tea'' helps students do better on math tests. 60 
 
 \item \goal{I decide if a study's results can be generalized to a population, and I decide if a study can show cause and effect.}
 For each study, can we conclude cause? Can we generalize to the population? Explain.
-\begin{enumerate}
-  \item Researchers randomly choose 800 high school students in Missouri. Students who play a musical instrument have higher math grades.
 
-  \ans{Cause: no. This is an observational study, with no random assignment. Something else could explain both.\\
-  Generalize: yes, to high school students in Missouri, because the sample is random.}
-  \work{3em}
-  \item 50 volunteers are randomly assigned to use a standing desk or a regular desk for a month. The standing desk group finishes more work.
+\vspace{0.4em}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{2.85in}|>{\raggedright\arraybackslash}p{1.65in}|>{\raggedright\arraybackslash}p{1.7in}|}\hline
+\textbf{Study} & \textbf{Cause? Why?} & \textbf{Generalize? Why?}\\ \hline
+(a) \; Researchers randomly choose 800 high school students in Missouri. Students who play a musical instrument have higher math grades. & \ans{No. Observational study, no random assignment. Something else could explain both.} & \ans{Yes, to high school students in Missouri. The sample is random.}\\ \hline
+(b) \; 50 volunteers are randomly assigned to use a standing desk or a regular desk for a month. The standing desk group finishes more work. & \ans{Yes, for these 50 volunteers (random assignment).} & \ans{No. Volunteers are not a random sample of all workers.}\\ \hline
+(c) \; A website asks visitors who own a cat and visitors who own a dog how happy they are. The dog owners say they are happier. & \ans{No. People chose their pets. There is no random assignment.} & \ans{No. Visitors chose to answer. It is not a random sample.}\\ \hline
+(d) \; A school randomly chooses 60 of its 900 students. It randomly assigns 30 to read with a new reading app and 30 to read paper books. After a month, the app group reads faster. & \ans{Yes. They were randomly assigned.} & \ans{Yes, to all 900 students at the school. The sample is random.}\\ \hline
+\end{tabular}
 
-  \ans{Cause: yes, for these 50 volunteers, because of random assignment.\\
-  Generalize: no. Volunteers are not a random sample of all workers.}
-  \work{3em}
-  \item A website asks visitors who own a cat and visitors who own a dog how happy they are. The dog owners say they are happier.
-
-  \ans{Cause: no. People chose their pets. There is no random assignment.\\
-  Generalize: no. Visitors chose to answer. It is not a random sample.}
-  \work{3em}
-  \item A school randomly chooses 60 of its 900 students. It randomly assigns 30 to read with a new reading app and 30 to read paper books. After a month, the app group reads faster.
-
-  \ans{Cause: yes, because of random assignment.\\
-  Generalize: yes, to all 900 students at the school, because the sample is random.}
-  \work{3em}
+\vspace{1em}
+\begin{enumerate}[start=5]
   \item A researcher randomly selects 500 adults in a large city. She asks how many books they read each year and how many hours of TV they watch each week. Adults who read more books tend to watch less TV. Which conclusion is best supported? Circle the letter.
   \choices{\opt{A} & Reading more books causes adults in the city to watch less TV.}
-          {\optans{B} & For adults in the city, reading more books is associated with watching less TV, but the study does not show cause.}
-          {\opt{C} & Reading more books causes all adults in the country to watch less TV.}
+          {\opt{B} & Reading more books causes all adults in the country to watch less TV.}
+          {\optans{C} & For adults in the city, reading more books is associated with watching less TV, but the study does not show cause.}
           {\opt{D} & The results apply only to the 500 adults in the study.}
 \end{enumerate}
 
@@ -412,13 +404,13 @@ A test asks the same questions with more words. Read slowly. Circle the best ans
 
 \item A researcher wants to estimate the mean number of hours that students at a large high school spend on homework each week. She surveys all 28 students in one advanced math class. Which statement best describes a problem with the researcher's method?
 \choices{\opt{A} & The sample is too large to give useful results.}
-        {\optans{B} & The sample may not represent the school, because an advanced class may do more homework.}
-        {\opt{C} & The population is the 28 students in the class, so the results cannot be used.}
+        {\opt{B} & The population is the 28 students in the class, so the results cannot be used.}
+        {\optans{C} & The sample may not represent the school, because an advanced class may do more homework.}
         {\opt{D} & The study is an experiment, so the results cannot be generalized.}
 
 \item A city council member wants to know whether residents support building a new public pool. She posts a survey on her website and asks people to respond. Of the 400 people who respond, 85\% support the pool. Which type of bias is most likely present?
-\choices{\opt{A} & Nonresponse bias, because some residents who were chosen did not answer.}
-        {\optans{B} & Voluntary response bias, because people chose whether to answer.}
+\choices{\optans{A} & Voluntary response bias, because people chose whether to answer.}
+        {\opt{B} & Nonresponse bias, because some residents who were chosen did not answer.}
         {\opt{C} & Response bias, because the question was worded unfairly.}
         {\opt{D} & No bias, because 400 people is a large sample.}
 
@@ -433,8 +425,8 @@ A test asks the same questions with more words. Read slowly. Circle the best ans
 
 \item In the homework app study on page 1, a stratified random sample of 40 students was randomly assigned to use the app or paper homework. The app group's mean quiz score was 8 points higher, and 2 of 100 shuffles gave a difference of 8 or more. Which conclusion is best supported?
 \choices{\opt{A} & The difference is likely due to chance, so the app does not work.}
-        {\optans{B} & The result is statistically significant, and the app likely caused higher scores at this school.}
-        {\opt{C} & The app will raise quiz scores for every student in the country.}
+        {\opt{B} & The app will raise quiz scores for every student in the country.}
+        {\optans{C} & The result is statistically significant, and the app likely caused higher scores at this school.}
         {\opt{D} & No conclusion is possible, because only 40 of the 800 students were in the study.}
 
 \end{enumerate}

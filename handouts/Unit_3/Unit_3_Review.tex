@@ -31,12 +31,12 @@
 \hline
 \textbf{3.1 Read the table.}
 
-Each cell counts students in \textbf{both} groups. Each row and each column adds to its total. &
+Each cell counts students who match \textbf{both} labels. Each row and each column adds to its total. &
 \vspace{0.2em}
 \begin{minipage}[c]{2.8in}
 \renewcommand{\arraystretch}{1.3}
-\begin{tabular}{|l|c|c|c|}\hline
- & \textbf{Reads} & \textbf{Does not} & \textbf{Total} \\ \hline
+\begin{tabular}{|l|c|C{0.62in}|c|}\hline
+ & \textbf{Reads} & \textbf{Does not read} & \textbf{Total} \\ \hline
 \textbf{Card} & 14 & 6 & 20 \\ \hline
 \textbf{No card} & 9 & 21 & 30 \\ \hline
 \textbf{Total} & 23 & 27 & 50 \\ \hline
@@ -56,7 +56,7 @@ A relative frequency table shows the percent of \textbf{all} the students. &
 \vspace{0.2em}
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular}{|l|c|c|c|}\hline
- & \textbf{Reads} & \textbf{Does not} & \textbf{Total} \\ \hline
+ & \textbf{Reads} & \textbf{Does not read} & \textbf{Total} \\ \hline
 \textbf{Card} & $\frac{14}{50} = 28\%$ & $\frac{6}{50} = 12\%$ & $\frac{20}{50} = 40\%$ \\[0.2em] \hline
 \textbf{No card} & $\frac{9}{50} = 18\%$ & $\frac{21}{50} = 42\%$ & $\frac{30}{50} = 60\%$ \\[0.2em] \hline
 \textbf{Total} & $\frac{23}{50} = 46\%$ & $\frac{27}{50} = 54\%$ & 100\% \\[0.2em] \hline
@@ -181,34 +181,56 @@ This Venn diagram shows how many of 60 students play video games and how many pl
   \textbf{Total} & \ans{$\frac{15}{60} = 25\%$} & \ans{$\frac{45}{60} = 75\%$} & \ans{100\%} \\ \hline
   \end{tabular}
   \end{center}
-  \item What percent of all the students play chess but not video games? \ans{\quad $\frac{6}{60} = 10\%$}
-  \work{1.5em}
-  \item What percent of all the students play at least one of the two games?
-
-  \ans{$24 + 9 + 6 = 39$ students. \quad $\frac{39}{60} = 65\%$ \qquad (Or: $100\% - 35\% = 65\%$)}
-  \work{2em}
 \end{enumerate}
 
-\needspace{2.8in}
+\begin{minipage}[t]{0.47\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}[start=3]
+  \item What percent of all the students play chess but not video games?
+
+  \ans{$\frac{6}{60} = 10\%$}
+  \work{4em}
+  \item What percent of all the students play at least one of the two games?
+
+  \ans{$24 + 9 + 6 = 39$ students.\\ $\frac{39}{60} = 65\%$\\ (Or: $100\% - 35\% = 65\%$)}
+  \work{4em}
+\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.5\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}[start=5]
+  \item Which statement is supported by the relative frequency table? Circle the letter.
+
+  \vspace{0.3em}
+  \begin{tabular}{@{}l@{\hspace{0.4em}}>{\raggedright\arraybackslash}p{2.7in}}
+  \opt{A} & 9\% of the students play both video games and chess.\\
+  \optans{B} & 25\% of the students play chess.\\
+  \opt{C} & 40\% of the students play neither game.\\
+  \opt{D} & 10\% of the students play video games but not chess.\\
+  \end{tabular}
+\end{enumerate}
+\end{minipage}
+
+\newpage
+\textit{Problem 2, continued.}
+
 \vspace{0.6em}
 80 students were asked if they ride a bike and if they skateboard. 46 ride a bike. 22 skateboard. 14 do both.
 
 \vspace{0.4em}
 \begin{minipage}[t]{0.4\linewidth}\vspace{0pt}\raggedright
-\begin{enumerate}[start=5]
+\begin{enumerate}[start=6]
   \item Fill in the Venn diagram.
 
   \vspace{0.5em}
   \scalebox{0.66}{\venn{Rides a bike}{Skateboards}{\ans{32}}{\ans{14}}{\ans{8}}{\ans{26}}}
 \end{enumerate}
-\begin{enumerate}[start=7]
+\begin{enumerate}[start=8]
   \item How many students do neither?
 
   \ans{$80 - (32 + 14 + 8) = 26$}
 \end{enumerate}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.57\linewidth}\vspace{0pt}\raggedright
-\begin{enumerate}[start=6]
+\begin{enumerate}[start=7]
   \item Fill in the two-way table.
 
   \vspace{0.5em}
@@ -220,7 +242,7 @@ This Venn diagram shows how many of 60 students play video games and how many pl
   \textbf{Total} & \ans{22} & \ans{58} & \ans{80} \\ \hline
   \end{tabular}
 \end{enumerate}
-\begin{enumerate}[start=8]
+\begin{enumerate}[start=9]
   \item What percent of all the students ride a bike and skateboard?
 
   \ans{$\frac{14}{80} = 17.5\%$}

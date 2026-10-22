@@ -1,0 +1,483 @@
+# Unit 2 Review {.unnumbered}
+
+A class flew paper airplanes. Here are 5 flights, in feet:
+
+:::{.text-center}
+14, 18, 22, 22, 24
+:::
+
+Every tool from Unit 2 tells you something about these flights. The standard deviation shows their spread. A percentile and a z-score tell where one flight stands. The normal curve and the z-table find percents for all the flights in the school.
+
+This review uses all of them. It has every kind of problem on the Unit 2 quiz, with more of each.
+
+:::{.objectives}
+- [ ] I find the standard deviation of a small data set.
+- [ ] I compare the spread of data sets by looking at graphs, and I explain what the standard deviation tells about data.
+- [ ] I choose mean and SD or median and IQR based on the shape of the data.
+- [ ] I compare two distributions using shape, center, spread, and outliers.
+- [ ] I find the percentile of a value.
+- [ ] I find and explain a z-score, and I compare values from different data sets with z-scores.
+- [ ] I use the empirical rule (68-95-99.7) to find percents, and I find the percentile of a value 1, 2, or 3 SDs from the mean.
+- [ ] I describe a normal distribution, and I compare normal curves with different means and SDs.
+- [ ] I read a z-table.
+- [ ] I find the percent of data below, above, or between values in a normal distribution.
+- [ ] I find the z-score for a percentile with the z-table, and I find the value at a percentile in a normal distribution.
+- [ ] I find cutoffs for "top" and "bottom" percents.
+:::
+
+:::{.vocab}
+{{< glink "standard deviation" >}},
+{{< glink variance >}},
+{{< glink center >}},
+{{< glink spread >}},
+{{< glink outlier >}},
+{{< glink IQR >}},
+{{< glink percentile >}},
+{{< glink z-score >}},
+{{< glink mu >}},
+{{< glink sigma >}},
+{{< glink "normal distribution" >}},
+{{< glink "empirical rule" >}},
+{{< glink "z-table" >}}
+:::
+
+:::{.guided-notes-link}
+[Printable review](/handouts/Unit_2/Unit_2_Review.pdf){target="_blank"} - notes and practice problems to print and write on.
+:::
+
+:::{.guided-notes-link}
+[Z-table](/handouts/Unit_2/Z_Table.pdf){target="_blank"} - the standard normal table, two pages. You need it for 2.5 and 2.6.
+:::
+
+{{< khan 2.1 2.2 2.3 2.4 2.5 >}}
+
+{{< learn >}}
+
+### 2.1 - Find the SD
+
+The {{< glink "standard deviation" >}} (SD) is about how far the values usually are from the mean.
+
+$$
+\bar{x} = 100 \div 5 = 20 \text{ feet}
+$$
+
+| $x$ | $x - \bar{x}$ | $(x - \bar{x})^2$ |
+|:---:|:---:|:---:|
+| 14 | $-6$ | 36 |
+| 18 | $-2$ | 4 |
+| 22 | 2 | 4 |
+| 22 | 2 | 4 |
+| 24 | 4 | 16 |
+| | $\Sigma(x - \bar{x})^2$ | **64** |
+
+$$
+s = \sqrt{\frac{\Sigma(x - \bar{x})^2}{n - 1}} = \sqrt{\frac{64}{4}} = \sqrt{16} = 4 \text{ feet}
+$$
+
+The flights are usually about 4 feet from the mean.
+
+***
+
+### 2.2 - Choose the Measures
+
+:::{.remember title="Choose by Shape"}
+| Shape of the data | Center | Spread |
+|---|:---:|:---:|
+| Symmetric, no outliers | mean | standard deviation |
+| Skewed, or has outliers | median | IQR |
+:::
+
+A sixth plane flew 62 feet.
+
+![](/images/Unit_2/Review_planes_dot_plot.svg){width="460px" fig-align="center"}
+
+- Mean $= 162 \div 6 = 27$ feet. SD $\approx 17.5$ feet.
+- Median $= 22$ feet. Q1 $= 18$, Q3 $= 24$, IQR $= 24 - 18 = 6$ feet.
+- Upper fence $= 24 + 1.5 \times 6 = 33$, so 62 is an outlier.
+
+One flight pulled the mean from 20 up to 27. Use the **median and the IQR**.
+
+***
+
+### 2.3 - Where One Value Stands
+
+:::{.remember title="Percentile and Z-Score"}
+- The **percentile** of a value is the percent of the data below it.
+- A **z-score** tells how many SDs a value is above or below the mean: $z = \dfrac{x - \mu}{\sigma}$.
+- $\mu$ (mu) is the mean. $\sigma$ (small sigma) is the SD.
+:::
+
+4 of the 5 flights are shorter than 24 feet. $4 \div 5 = 0.80$. So 24 feet is at the **80th percentile**.
+
+All the school's flights have a mean $\mu = 20$ feet and an SD $\sigma = 4$ feet. A flight is 26 feet long:
+
+$$
+z = \frac{x - \mu}{\sigma} = \frac{26 - 20}{4} = 1.5
+$$
+
+It is 1.5 SDs above the mean.
+
+***
+
+### 2.4 - Use the Empirical Rule
+
+The school's flights have a {{< glink "normal distribution" >}}.
+
+![](/images/Unit_2/Review_planes_normal.svg){width="440px" fig-align="center"}
+
+:::{.remember title="The 68-95-99.7 Rule"}
+- About **68%** of the data is within **1 SD** of the mean.
+- About **95%** of the data is within **2 SDs** of the mean.
+- About **99.7%** of the data is within **3 SDs** of the mean.
+:::
+
+68% of the flights are from 16 to 24 feet. 95% are from 12 to 28 feet.
+
+***
+
+### 2.5 - Use the Z-Table
+
+The {{< glink "z-table" >}} gives the area **below** $z$.
+
+| Question | Work | Answer |
+|---|---|---|
+| Shorter than 25 feet | $z = \frac{25 - 20}{4} = 1.25$, table: .8944 | 89.44% |
+| Longer than 25 feet | $1 - .8944 = .1056$ | 10.56% |
+
+:::{.gotcha title="Above or top? Subtract from 1."}
+The z-table always gives the area below $z$ (to the left).
+:::
+
+***
+
+### 2.6 - Work in Reverse
+
+The longest 10% of flights win a prize. How far must a flight go?
+
+| Step | Work |
+|---|---|
+| 1. Find the area to the left. | $1 - .10 = .90$ |
+| 2. Find the closest area inside the table. | .8997, at $z = 1.28$ |
+| 3. Find the value: $x = \mu + z\sigma$ | $20 + 1.28 \times 4 = 25.12$ |
+
+A flight must go about **25.1 feet**.
+
+{{< practice >}}
+
+Work with a partner. Compare answers when you finish each problem.
+
+**2.1 - Standard Deviation**
+
+1. A bike shop sold this many bikes each day for 5 days.
+
+   4, 11, 7, 11, 7
+
+   a. Find the mean, $\bar{x}$. Then make a table of $x$, $x - \bar{x}$, and $(x - \bar{x})^2$.
+
+   b. Find the standard deviation, $s$. Round to 2 decimal places if you need to.
+
+   Four friends scored these points on a 10-point quiz.
+
+   9, 5, 8, 6
+
+   c. Find the mean, $\bar{x}$. Then make a table of $x$, $x - \bar{x}$, and $(x - \bar{x})^2$.
+
+   d. Find the standard deviation, $s$. Round to 2 decimal places.
+
+2. Each dot plot has 10 values and a mean of 6.
+
+   ![](/images/Unit_2/Review_sd_three_plots.svg){width="440px"}
+
+   a. Put the dot plots in order from the **smallest** SD to the **largest** SD.
+
+   b. Explain your order.
+
+   c. The SD of plot K is about 3.94. What does that number tell you?
+
+   d. A data set has an SD of 0. What do you know about its values?
+
+   e. Set M is 40, 45, 50, 55, 60. Set N is 48, 49, 50, 51, 52. Both have a mean of 50. Without calculating, which set has the larger SD? Explain.
+
+   f. Can a standard deviation be negative? Explain.
+
+***
+
+**2.2 - Choosing Measures and Comparing Distributions**
+
+3. For each data set, should you use the **mean and SD** or the **median and IQR**? Explain.
+
+   a. The heights of 500 corn plants in a field. The histogram is symmetric, with no outliers.
+
+   b. The number of followers 40 students have on a social media app. The histogram is skewed right.
+
+   c. Scores on a very easy test. The histogram is skewed left.
+
+   d. The times 200 students took to run a mile. The histogram is symmetric, with no outliers.
+
+   e. Minutes 7 students spent on homework: 30, 35, 40, 40, 45, 50, 120
+
+   f. High temperatures for 9 days, in °F: 70, 72, 73, 74, 75, 76, 77, 78, 80
+
+   g. For the homework data in (e), find the mean and the median. Which one better describes a typical student? Explain.
+
+4. These dot plots show how many hours students in two clubs volunteered last month. Each club has 20 students.
+
+   ![](/images/Unit_2/Review_volunteer_dot_plots.svg){width="460px"}
+
+   | | Q1 | Median | Q3 | IQR |
+   |---|:---:|:---:|:---:|:---:|
+   | Art | 4 | 5.5 | 7 | 3 |
+   | Science | 1 | 2 | 3.5 | 2.5 |
+
+   a. Describe the shape of each club's data.
+
+   b. Compare the centers. Use numbers and the context.
+
+   c. Compare the spreads. Use numbers.
+
+   d. Does either club have an outlier? Explain.
+
+   e. Should you compare these clubs with the mean and SD or with the median and IQR? Why?
+
+   Two pizza places recorded their delivery times. Both histograms are symmetric.
+
+   | | Mean | SD |
+   |---|:---:|:---:|
+   | Place A | 30 minutes | 3 minutes |
+   | Place B | 26 minutes | 8 minutes |
+
+   f. Which place is faster on average?
+
+   g. Which place has delivery times that are more spread out?
+
+   h. Write one sentence that compares the two places. Use both the center and the spread.
+
+***
+
+**2.3 - Percentiles and Z-Scores**
+
+5. 20 students said how many minutes they practiced a musical instrument yesterday. Here are the times, in order.
+
+   10, 12, 15, 18, 20, 24, 25, 28, 30, 32, 35, 36, 40, 42, 45, 48, 50, 55, 60, 90
+
+   a. What percentile is 40 minutes?
+
+   b. What percentile is 15 minutes?
+
+   c. Which time is at the 25th percentile?
+
+   d. Which time is at the 90th percentile?
+
+   This dot plot shows how many goals 25 hockey players scored this season.
+
+   ![](/images/Unit_2/Review_goals_dot_plot.svg){width="420px"}
+
+   e. What percentile is 6 goals?
+
+   f. What percentile is 3 goals?
+
+   g. Nadia says, "My test score is at the 90th percentile, so I got 90% of the questions right." Explain her mistake.
+
+6. Scores on a spelling test have a mean $\mu = 50$ and an SD $\sigma = 6$. Find the z-score of each score. Then say what it means.
+
+   a. 62
+
+   b. 47
+
+   c. 50
+
+   d. 41
+
+   Omar and Lena compete in different events.
+
+   | Athlete | Event | Jump | Mean $\mu$ | SD $\sigma$ |
+   |---|---|:---:|:---:|:---:|
+   | Omar | long jump | 5.6 m | 5.0 m | 0.3 m |
+   | Lena | high jump | 1.55 m | 1.40 m | 0.10 m |
+
+   e. Find each athlete's z-score.
+
+   f. Lena jumped 1.55 m and Omar jumped 5.6 m. Who did better compared to the others in the event? Explain.
+
+   Go back to the spelling test ($\mu = 50$, $\sigma = 6$). Use $x = \mu + z\sigma$.
+
+   g. What score has a z-score of 1.5?
+
+   h. What score has a z-score of $-2$?
+
+***
+
+**2.4 - Normal Distributions and the Empirical Rule**
+
+7. The heights of sunflowers in a field have a normal distribution. The mean is 180 cm and the SD is 12 cm.
+
+   a. Draw the curve. Label the number line with the heights.
+
+   b. About what percent of the sunflowers are from 168 to 192 cm tall?
+
+   c. About what percent are from 156 to 204 cm tall?
+
+   d. About what percent are taller than 192 cm?
+
+   e. About what percent are shorter than 156 cm?
+
+   f. About what percent are from 180 to 204 cm tall?
+
+   g. About what percent are from 192 to 216 cm tall?
+
+   h. What percentile is a height of 204 cm?
+
+   i. What percentile is a height of 168 cm?
+
+8. The three curves are normal distributions.
+
+   ![](/images/Unit_2/Review_three_curves.svg){width="480px"}
+
+   a. Which two curves have the same mean?
+
+   b. Which two curves have the same SD?
+
+   c. Which curve has the smallest SD? Explain.
+
+   d. How are X and Z the same? How are they different?
+
+   Would each data set have a normal distribution? Explain.
+
+   e. The heights of 1,000 adult women.
+
+   f. The prices of every car sold in a city.
+
+   g. Scores on a very hard test.
+
+   h. Which statement is true for every normal distribution?
+
+      A. About 95% of the data is within 1 SD of the mean.\
+      B. A larger SD makes the curve taller and narrower.\
+      C. The curve is symmetric about the mean.\
+      D. The median is greater than the mean.
+
+***
+
+**2.5 - Normal Calculations with a Z-Table**
+
+Use the z-table.
+
+9. Find the area **below** each z-score.
+
+   a. $z = 0.36$
+
+   b. $z = -2.15$
+
+   c. $z = 1.82$
+
+   d. $z = -0.07$
+
+   Find the area **above** each z-score.
+
+   e. $z = 0.95$
+
+   f. $z = -1.38$
+
+   Find the area **between** the two z-scores.
+
+   g. $z = -2$ and $z = 2$
+
+   h. $z = 0.25$ and $z = 1.75$
+
+10. The lengths of movies at a theater have a normal distribution with a mean of 110 minutes and an SD of 12 minutes. What percent of the movies are:
+
+    a. shorter than 125 minutes?
+
+    b. longer than 128 minutes?
+
+    c. from 100 to 120 minutes long?
+
+    Bags of trail mix have weights with a normal distribution. The mean is 250 grams and the SD is 4 grams. What percent of the bags weigh:
+
+    d. less than 245 grams?
+
+    e. more than 251 grams?
+
+    f. from 247 to 256 grams?
+
+***
+
+**2.6 - Normal Calculations in Reverse**
+
+Use the z-table.
+
+11. Find the z-score at each percentile.
+
+    a. 72nd percentile
+
+    b. 15th percentile
+
+    c. 99th percentile
+
+    d. 42nd percentile
+
+    The times to finish one level of a puzzle game have a normal distribution. The mean is 90 seconds and the SD is 15 seconds.
+
+    e. What time is at the 72nd percentile?
+
+    f. What time is at the 15th percentile?
+
+12. Typing speeds in a class have a normal distribution. The mean is 40 words per minute and the SD is 6 words per minute.
+
+    a. The top 2% get a certificate. How fast must a student type to get one?
+
+    b. Students in the bottom 25% get extra practice. Below what speed does a student get extra practice?
+
+    The weights of pumpkins at a farm have a normal distribution. The mean is 12 pounds and the SD is 2 pounds.
+
+    c. The heaviest 10% are sold as "giant" pumpkins. How heavy must a pumpkin be to be giant?
+
+    d. The lightest 20% are used to make pies. Below what weight is a pumpkin used for pie?
+
+***
+
+**Test-Style Questions**
+
+A test asks the same questions with more words. Read slowly. Choose the best answer.
+
+13. Each data set below has a mean of 50. Which data set has the greatest standard deviation?
+
+    A. 48, 49, 50, 51, 52\
+    B. 30, 40, 50, 60, 70\
+    C. 45, 50, 50, 50, 55\
+    D. 50, 50, 50, 50, 50
+
+14. A restaurant recorded the number of minutes that each of 50 customers waited for a table. The distribution of the wait times is strongly skewed to the right and has several outliers. Which measures of center and spread are most appropriate to describe the wait times?
+
+    A. the median and the interquartile range\
+    B. the mean and the standard deviation\
+    C. the mean and the interquartile range\
+    D. the median and the standard deviation
+
+15. On a science test, the class mean was 72 points with a standard deviation of 6 points. On a history test, the class mean was 80 points with a standard deviation of 5 points. Mia scored 84 points on the science test and 88 points on the history test. Which statement is true?
+
+    A. Mia did better on the history test compared to her class, because 88 is greater than 84.\
+    B. Mia did equally well on both tests compared to her class, because both scores are above the class mean.\
+    C. Mia's history score was 1.6 points above the class mean.\
+    D. Mia did better on the science test compared to her class, because her z-score was greater on that test.
+
+16. The lifetimes of a type of light bulb are approximately normally distributed with a mean of 900 hours and a standard deviation of 50 hours. According to the empirical rule, approximately what percent of the light bulbs last between 800 hours and 950 hours?
+
+    A. 47.5%\
+    B. 68%\
+    C. 81.5%\
+    D. 95%
+
+17. The scores on a math contest are approximately normally distributed with a mean of 60 points and a standard deviation of 8 points. Use the z-table. What proportion of the scores are greater than 74 points?
+
+    A. .0401\
+    B. .4599\
+    C. .5401\
+    D. .9599
+
+18. The weights of watermelons at a farm are approximately normally distributed with a mean of 20 pounds and a standard deviation of 2.5 pounds. The heaviest 3% of the watermelons win a blue ribbon. Use the z-table. Which weight is closest to the lightest watermelon that wins a blue ribbon?
+
+    A. 15.3 pounds\
+    B. 22.5 pounds\
+    C. 24.7 pounds\
+    D. 25.0 pounds
