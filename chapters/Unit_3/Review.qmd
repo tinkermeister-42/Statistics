@@ -1,0 +1,282 @@
+# Unit 3 Review {.unnumbered}
+
+50 students answered two questions:
+
+- *Do you have a library card?*
+- *Do you read for fun?*
+
+A two-way table shows both answers at once. Percents show if the two answers are connected.
+
+This review uses every tool from Unit 3. It has every kind of problem on the Unit 3 quiz, with more of each.
+
+:::{.objectives}
+- [ ] I read a two-way table, and I fill in missing numbers in it.
+- [ ] I move between a Venn diagram and a two-way table, and I make a relative frequency table.
+- [ ] I find a marginal distribution and a conditional distribution.
+- [ ] I choose the right total to divide by, and I decide if two categorical variables are associated.
+:::
+
+:::{.vocab}
+{{< glink "categorical data" >}},
+{{< glink "two-way table" >}},
+{{< glink "venn diagram" >}},
+{{< glink "relative frequency" >}},
+{{< glink "marginal distribution" >}},
+{{< glink "conditional distribution" >}},
+{{< glink association >}},
+{{< glink "segmented bar chart" >}}
+:::
+
+:::{.guided-notes-link}
+[Printable review](/handouts/Unit_3/Unit_3_Review.pdf){target="_blank"} - notes and practice problems to print and write on.
+:::
+
+{{< khan 3.1 3.2 >}}
+
+{{< learn >}}
+
+### 3.1 - Count, Then Divide by All
+
+| | **Reads** | **Does not read** | **Total** |
+|---|:---:|:---:|:---:|
+| **Card** | 14 | 6 | 20 |
+| **No card** | 9 | 21 | 30 |
+| **Total** | 23 | 27 | 50 |
+
+Each cell counts students in **both** groups. 14 students have a card **and** read for fun.
+
+:::{.remember title="Check Your Table"}
+Each row adds to its total. Each column adds to its total.
+
+$$14 + 6 = 20 \qquad 14 + 9 = 23$$
+:::
+
+The {{< glink "venn diagram" >}} shows the same counts. 21 students are outside both circles. They are in neither group.
+
+![](/images/Unit_3/Review_venn_library.svg){width="320px" fig-align="center"}
+
+A {{< glink "relative frequency" >}} table divides every count by the **grand total**, 50.
+
+| | **Reads** | **Does not read** | **Total** |
+|---|:---:|:---:|:---:|
+| **Card** | $\frac{14}{50} = 28\%$ | $\frac{6}{50} = 12\%$ | $\frac{20}{50} = 40\%$ |
+| **No card** | $\frac{9}{50} = 18\%$ | $\frac{21}{50} = 42\%$ | $\frac{30}{50} = 60\%$ |
+| **Total** | $\frac{23}{50} = 46\%$ | $\frac{27}{50} = 54\%$ | 100% |
+
+28% of **all** the students have a card and read for fun. The whole table adds to 100%.
+
+***
+
+### 3.2 - Divide by One Group
+
+| | Divide by | Example |
+|---|---|---|
+| **{{< glink "marginal distribution" text="Marginal distribution" >}}** | the **grand total** | Reads: $\frac{23}{50} = 46\%$. Does not read: $\frac{27}{50} = 54\%$. |
+| **{{< glink "conditional distribution" text="Conditional distribution" >}}** | that **group's total** | Card: $\frac{14}{20} = 70\%$ read. No card: $\frac{9}{30} = 30\%$ read. |
+
+A {{< glink "segmented bar chart" >}} shows the two conditional distributions side by side.
+
+![](/images/Unit_3/Review_bars_library.svg){width="380px" fig-align="center"}
+
+70% and 30% are very different. So having a library card and reading for fun are {{< glink slug="association" text="associated" >}}.
+
+:::{.gotcha title="Check the denominator"}
+"Of the students **with a card**, what percent read for fun?"
+
+Divide by the card total (20). Do not divide by 50. Do not divide by the reads total (23).
+:::
+
+:::{.think title="Does a library card make students read for fun?"}
+We do not know. An association only says the two things happen together. Maybe students who already like to read get a card.
+:::
+
+{{< practice >}}
+
+Work with a partner. Compare answers when you finish each problem.
+
+**3.1 - Two-Way Tables and Relative Frequency**
+
+1. 120 students in 9th and 10th grade said which after-school club they are in. Each student is in one club.
+
+   | | **Art** | **Chess** | **Garden** | **Total** |
+   |---|:---:|:---:|:---:|:---:|
+   | **9th grade** | 18 | ? | ? | 55 |
+   | **10th grade** | ? | 14 | 25 | ? |
+   | **Total** | 44 | ? | 40 | 120 |
+
+   a. Fill in the missing numbers.
+
+   b. How many students are in the chess club?
+
+   c. How many 9th graders are **not** in the art club?
+
+   d. Which club has the most 10th graders?
+
+   75 students in 11th and 12th grade said what kind of phone they have.
+
+   | | **Android** | **iPhone** | **Total** |
+   |---|:---:|:---:|:---:|
+   | **11th grade** | 16 | ? | 30 |
+   | **12th grade** | ? | ? | ? |
+   | **Total** | ? | 39 | 75 |
+
+   e. Fill in the missing numbers.
+
+   f. How many 12th graders have an iPhone?
+
+   g. How many students have an Android phone?
+
+2. This Venn diagram shows how many of 60 students play video games and how many play chess.
+
+   ![](/images/Unit_3/Review_venn_games.svg){width="320px"}
+
+   a. Make a two-way table from the Venn diagram. Use the rows "Games" and "No games" and the columns "Chess" and "No chess."
+
+   b. Make a relative frequency table. Divide each count by 60. Write percents.
+
+   c. What percent of all the students play chess but not video games?
+
+   d. What percent of all the students play at least one of the two games?
+
+   80 students were asked if they ride a bike and if they skateboard. 46 ride a bike. 22 skateboard. 14 do both.
+
+   e. Make a Venn diagram.
+
+   f. Make a two-way table with the rows "Bike" and "No bike" and the columns "Skate" and "No skate."
+
+   g. How many students do neither?
+
+   h. What percent of all the students ride a bike and skateboard?
+
+***
+
+**3.2 - Marginal and Conditional Distributions**
+
+3. 120 students in 9th and 10th grade chose their favorite kind of game.
+
+   | | **Board** | **Video** | **Card** | **Total** |
+   |---|:---:|:---:|:---:|:---:|
+   | **9th grade** | 10 | 22 | 8 | 40 |
+   | **10th grade** | 26 | 34 | 20 | 80 |
+   | **Total** | 36 | 56 | 28 | 120 |
+
+   a. Find the marginal distribution of favorite kind of game.
+
+   b. Find the marginal distribution of grade.
+
+   c. Find the conditional distribution of favorite game for 9th graders.
+
+   d. Find the conditional distribution of favorite game for 10th graders.
+
+   e. Find the conditional distribution of grade for the students who chose card games.
+
+   Is each statement a **marginal** or a **conditional** percent?
+
+   f. About 47% of all the students chose video games.
+
+   g. Of the 10th graders, 25% chose card games.
+
+   h. 30% of the students chose board games.
+
+   i. 55% of 9th graders chose video games.
+
+4. A class grew 60 bean plants. Some plants got plant food. The class recorded which plants grew flowers.
+
+   | | **Flowers** | **No flowers** | **Total** |
+   |---|:---:|:---:|:---:|
+   | **Plant food** | 30 | 10 | 40 |
+   | **No plant food** | 9 | 11 | 20 |
+   | **Total** | 39 | 21 | 60 |
+
+   a. What percent of the plants with plant food grew flowers?
+
+   b. What percent of the plants without plant food grew flowers?
+
+   c. Is plant food associated with growing flowers? Explain.
+
+   d. What percent of the plants with flowers got plant food?
+
+   e. Why are the answers to (a) and (d) different?
+
+   f. Of the plants with no flowers, what percent got no plant food? Which fraction gives the answer?
+
+      A. $\frac{11}{20}$\
+      B. $\frac{11}{21}$\
+      C. $\frac{11}{60}$\
+      D. $\frac{21}{60}$
+
+   130 students in 9th and 10th grade said if they write with a pen or a pencil.
+
+   | | **Pen** | **Pencil** | **Total** |
+   |---|:---:|:---:|:---:|
+   | **9th grade** | 15 | 35 | 50 |
+   | **10th grade** | 24 | 56 | 80 |
+   | **Total** | 39 | 91 | 130 |
+
+   g. What percent of 9th graders use a pen?
+
+   h. What percent of 10th graders use a pen?
+
+   i. Is grade associated with using a pen or a pencil? Explain.
+
+***
+
+**Test-Style Questions**
+
+A test asks the same questions with more words. Read slowly. Choose the best answer.
+
+5. A survey asked 90 students in 11th and 12th grade where they like to watch movies: at a theater or at home. Each student chose one place. The two-way table shows the results, but some of the values are missing.
+
+   | | **Theater** | **Home** | **Total** |
+   |---|:---:|:---:|:---:|
+   | **11th grade** | 12 | ? | 40 |
+   | **12th grade** | ? | ? | ? |
+   | **Total** | 30 | ? | 90 |
+
+   Based on the table, how many 12th graders like to watch movies at home?
+
+   A. 28\
+   B. 32\
+   C. 50\
+   D. 60
+
+6. A school surveyed 200 students about their phones. The two-way table shows whether each phone has a case and whether its screen is cracked.
+
+   | | **Cracked** | **Not cracked** | **Total** |
+   |---|:---:|:---:|:---:|
+   | **Case** | 14 | 106 | 120 |
+   | **No case** | 36 | 44 | 80 |
+   | **Total** | 50 | 150 | 200 |
+
+   What percent of all the students surveyed have a phone with a case and a cracked screen?
+
+   A. 7%\
+   B. about 12%\
+   C. 25%\
+   D. 28%
+
+7. A music teacher asked 150 students in 11th and 12th grade which instrument they would most like to learn. The results are shown in the two-way table.
+
+   | | **Guitar** | **Piano** | **Drums** | **Total** |
+   |---|:---:|:---:|:---:|:---:|
+   | **11th** | 30 | 18 | 12 | 60 |
+   | **12th** | 36 | 45 | 9 | 90 |
+   | **Total** | 66 | 63 | 21 | 150 |
+
+   Based on the table, what percent of the 12th graders surveyed want to learn piano?
+
+   A. 30%\
+   B. 42%\
+   C. 50%\
+   D. about 71%
+
+8. A survey asked students in 9th grade and 12th grade if they like to study with music or in silence. The segmented bar chart shows the conditional distribution of study choice for each grade.
+
+   ![](/images/Unit_3/Review_bars_study.svg){width="380px"}
+
+   Which statement is supported by the segmented bar chart?
+
+   A. There is no association, because each bar adds up to 100%.\
+   B. Grade and study choice are associated, because the percent of students who study with music is different in the two grades.\
+   C. More 9th graders than 12th graders were surveyed.\
+   D. Most 12th graders like to study with music.

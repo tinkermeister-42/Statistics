@@ -1,0 +1,12 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}
+\begin{document}
+\begin{tikzpicture}[box/.style={draw,thick,rounded corners=2pt,align=center,font=\small,inner sep=4pt},->,>=stealth,thick]
+  \node[box] (s) at (0,0) {40 students};
+  \node[box,fill=gray!15] (r) at (2.6,0) {Random\\assignment};
+  \node[box] (g1) at (5.5,0.8) {Group 1: 20\\homework app};
+  \node[box] (g2) at (5.5,-0.8) {Group 2: 20\\paper homework};
+  \node[box] (c) at (8.5,0) {Compare\\quiz scores};
+  \draw (s) -- (r); \draw (r) -- (g1); \draw (r) -- (g2); \draw (g1) -- (c); \draw (g2) -- (c);
+\end{tikzpicture}
+\end{document}

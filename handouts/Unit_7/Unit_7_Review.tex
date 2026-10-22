@@ -1,0 +1,514 @@
+\documentclass[11pt]{article}
+\input{../preamble}
+% Unit 7 review.  Problems 1-6 follow the Unit 7 quiz question for question
+% (same "I ..." goals, two or three times the parts); 7-12 ask the same
+% skills in test wording.
+\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000
+\setlist[enumerate,1]{leftmargin=1.5em,itemsep=1.2em}
+\setlist[enumerate,2]{label=(\alph*),leftmargin=2em,itemsep=1.6em}
+\newcommand{\lessonhead}[1]{\par\vspace{0.6em}{\large\bfseries #1}\par\vspace{0.25em}\hrule\vspace{0.6em}}
+\newcommand{\goal}[1]{\textbf{#1}\par\vspace{0.35em}}
+% blank probability bar graph (\probbars with every bar at height 0);
+% the key draws the bars in red: \blankbars{xmax}{x/0,...}{ymax}{x label}{x/p,...}
+\newcommand{\blankbars}[5]{%
+  \def\pbmax{#1}\probbars{#2}{#3}{0.1}{#4}%
+  \ifkey\foreach \x/\p in {#5} \draw[keyred,thick,fill=red!12] (\x-0.35,0) rectangle (\x+0.35,\p);\fi}
+% circled choices: \opt{A} prints plain; \optans{B} is circled in red on the key
+\newcommand{\opt}[1]{\tikz[baseline=(c.base)]\node[inner sep=2.5pt](c){#1};}
+\newcommand{\optans}[1]{\ifkey\tikz[baseline=(c.base)]\node[circle,inner sep=1.2pt,draw=keyred,thick,text=keyred](c){#1};\else\opt{#1}\fi}
+\newcommand{\hchoices}[4]{\par\vspace{0.3em}\hspace*{0.2em}#1\hspace{3em}#2\hspace{3em}#3\hspace{3em}#4\par}
+\newcommand{\choices}[4]{\par\vspace{0.3em}\begin{tabular}{@{}l@{\hspace{0.6em}}p{6in}}#1\\#2\\#3\\#4\\\end{tabular}}
+
+\begin{document}
+
+\lessontitle{Unit 7 Review}
+
+\begin{minipage}[c]{0.7\linewidth}\raggedright
+\textbf{One game, every tool.} A game booth at the school fair raises money. You pay $\$2$ to spin this spinner one time. It has 4 equal parts. You win the prize on your part.
+\end{minipage}\hfill
+\begin{minipage}[c]{0.26\linewidth}\centering
+\scalebox{0.7}{\fig{Unit_7/Review_spinner_prizes}}
+\end{minipage}
+
+\vspace{0.6em}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{1.8in}|>{\raggedright\arraybackslash}p{4.7in}|}
+\hline
+\textbf{7.1 Make the distribution.}
+
+List every value of $X$ with its probability.\newline Each $P(x)$ is from 0 to 1.\newline $\Sigma P(x) = 1$ \newline ($\Sigma$ means add up.) &
+$X$ = the prize from one spin, in dollars.
+
+\begin{minipage}[c]{0.46\linewidth}
+\renewcommand{\arraystretch}{2.2}
+\begin{tabular}{|c|c|c|c|}\hline
+$x$ & 0 & 1 & 5\\ \hline
+$P(x)$ & $\dfrac{2}{4} = \dfrac{1}{2}$ & $\dfrac{1}{4}$ & $\dfrac{1}{4}$\\ \hline
+\end{tabular}
+
+\vspace{0.5em}
+Check: $\dfrac{1}{2} + \dfrac{1}{4} + \dfrac{1}{4} = 1$. \; Valid.
+\end{minipage}\hfill
+\begin{minipage}[c]{0.52\linewidth}\centering
+\vspace{0.3em}
+\scalebox{0.85}{\fig{Unit_7/Review_prize_bars}}
+\end{minipage} \\ \hline
+\textbf{7.1 Theoretical or empirical?}
+
+\textbf{Theoretical}: from equally likely outcomes.\newline \textbf{Empirical}: from data. Divide each count by the total. &
+The 4 parts are equally likely, so the table above is \textbf{theoretical}.
+
+The booth counted 100 spins: $\$0$ 52 times, $\$1$ 23 times, $\$5$ 25 times. This is the \textbf{empirical} distribution:
+
+$P(0) = \dfrac{52}{100} = 0.52$, \quad $P(1) = 0.23$, \quad $P(5) = 0.25$
+
+It is close to the theoretical one, but not the same. \\ \hline
+\textbf{7.2 Find the expected value.}
+
+$E(X) = \Sigma\, x \cdot P(x)$\newline Multiply each value by its probability. Then add. $E(X)$ is also the mean of $X$, written $\mu_X$. &
+\begin{tabular}{|c|c|c|c|}\hline
+$x$ & 0 & 1 & 5\\ \hline
+$P(x)$ & 0.5 & 0.25 & 0.25\\ \hline
+$x \cdot P(x)$ & 0 & 0.25 & 1.25\\ \hline
+\end{tabular}
+\quad $E(X) = 0 + 0.25 + 1.25 = \$1.50$\par\vspace{0.3em}
+
+Over many spins, a spin pays about $\$1.50$ on average. No single spin pays $\$1.50$. \\ \hline
+\textbf{7.3 Find the expected payoff.}
+
+\textbf{Net gain} $=$ what you win $-$ what you paid.\newline A game is \textbf{fair} if the expected payoff is 0. &
+A spin costs $\$2$.\par\vspace{0.2em}
+\begin{tabular}{|l|c|c|c|}\hline
+Outcome & Net gain $x$ & $P(x)$ & $x \cdot P(x)$\\ \hline
+Win $\$0$ & $0 - 2 = -2$ & 0.5 & $-1$\\ \hline
+Win $\$1$ & $1 - 2 = -1$ & 0.25 & $-0.25$\\ \hline
+Win $\$5$ & $5 - 2 = 3$ & 0.25 & 0.75\\ \hline
+\end{tabular}\par\vspace{0.4em}
+
+Expected payoff $= -1 - 0.25 + 0.75 = -\$0.50$
+
+On average, a player loses 50 cents a spin. The game is \textbf{not fair}. The booth keeps that money for the school. A spin that cost $\$1.50$ would be fair. \\ \hline
+\end{tabular}
+
+\vspace{0.6em}
+\textbf{Expected value is a long-run average.} It tells you what happens over many tries. It does not tell you what happens on one try. For a decision, also think about risk: can you pay for the worst outcome?
+
+\partner
+
+% ---------------- PROBLEMS ----------------
+\newpage
+\lessonhead{7.1 - Probability Distributions}
+\begin{enumerate}
+
+\item \goal{I check if a probability distribution is valid, and I draw it as a graph.}
+Is each table a valid probability distribution? Explain.
+
+\vspace{0.4em}
+\renewcommand{\arraystretch}{1.4}
+\begin{minipage}[t]{0.48\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}
+  \item \begin{tabular}[t]{|c|c|c|c|}\hline $x$ & 0 & 1 & 2\\ \hline $P(x)$ & 0.25 & 0.45 & 0.30\\ \hline\end{tabular}
+
+  \vspace{0.3em}
+  \ans{Valid. Each one is from 0 to 1, and $0.25 + 0.45 + 0.30 = 1$.}
+  \work{3em}
+\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}[start=2]
+  \item \begin{tabular}[t]{|c|c|c|c|c|}\hline $x$ & 1 & 2 & 3 & 4\\ \hline $P(x)$ & 0.1 & 0.3 & 0.3 & 0.2\\ \hline\end{tabular}
+
+  \vspace{0.3em}
+  \ans{Not valid. $0.1 + 0.3 + 0.3 + 0.2 = 0.9$, not 1.}
+  \work{3em}
+\end{enumerate}
+\end{minipage}
+
+\vspace{0.8em}
+\begin{minipage}[t]{0.48\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}[start=3]
+  \item \begin{tabular}[t]{|c|c|c|c|}\hline $x$ & 0 & 1 & 2\\ \hline $P(x)$ & 0.6 & 0.5 & $-0.1$\\ \hline\end{tabular}
+
+  \vspace{0.3em}
+  \ans{Not valid. They add to 1, but $-0.1$ is less than 0.}
+  \work{3em}
+\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}[start=4]
+  \item {\renewcommand{\arraystretch}{2.2}\begin{tabular}[t]{|c|c|c|c|}\hline $x$ & 1 & 2 & 3\\ \hline $P(x)$ & $\dfrac{1}{2}$ & $\dfrac{1}{3}$ & $\dfrac{1}{6}$\\ \hline\end{tabular}}
+
+  \vspace{0.3em}
+  \ans{Valid. $\frac{3}{6} + \frac{2}{6} + \frac{1}{6} = \frac{6}{6} = 1$.}
+  \work{3em}
+\end{enumerate}
+\end{minipage}
+
+\vspace{1em}
+Let $X$ = the number of library books a student checks out in one visit.
+
+\vspace{0.3em}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}\hline
+$x$ & 0 & 1 & 2 & 3 & 4\\ \hline
+$P(x)$ & 0.10 & 0.40 & \;?\; & 0.15 & 0.05\\ \hline
+\end{tabular}
+\end{center}
+
+\begin{minipage}[t]{0.47\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}[start=5,itemsep=1em]
+  \item Find the missing probability, $P(2)$.
+
+  \ans{$1 - (0.10 + 0.40 + 0.15 + 0.05)$\\ $= 1 - 0.70 = 0.30$}
+  \work{3em}
+  \item Find $P(X \ge 2)$.
+
+  \ans{$0.30 + 0.15 + 0.05 = 0.50$}
+  \work{2.5em}
+  \item Find $P(1 \le X \le 3)$.\\ ($\le$ means ``less than or equal to.'')
+
+  \ans{$0.40 + 0.30 + 0.15 = 0.85$}
+\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.5\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}[start=8]
+  \item Draw a bar graph of the distribution.
+
+  \vspace{0.5em}
+  \begin{tikzpicture}[x=0.95cm,y=7cm]
+    \blankbars{4.6}{0/0,1/0,2/0,3/0,4/0}{0.401}{$x$ = books checked out}{0/0.10,1/0.40,2/0.30,3/0.15,4/0.05}
+  \end{tikzpicture}
+\end{enumerate}
+\end{minipage}
+
+\vspace{1.2em}
+\begin{enumerate}[start=9]
+  \item Find the missing probability.
+
+  \vspace{0.3em}
+  {\renewcommand{\arraystretch}{2.2}\begin{tabular}{|c|c|c|c|c|}\hline $x$ & 1 & 2 & 3 & 4\\ \hline $P(x)$ & $\dfrac{1}{8}$ & $\dfrac{3}{8}$ & \;?\; & $\dfrac{1}{4}$\\ \hline\end{tabular}}
+  \qquad \ans{$1 - \left(\frac{1}{8} + \frac{3}{8} + \frac{2}{8}\right) = \frac{2}{8} = \frac{1}{4}$}
+  \work{3em}
+\end{enumerate}
+
+\newpage
+\item \goal{I explain what a random variable is, and I make theoretical and empirical distributions.}
+Is each one a random variable? Explain.
+\begin{enumerate}[itemsep=1em]
+  \item The number of heads when you flip a coin 4 times.
+
+  \ans{Yes. It is a number, and it comes from a chance process.}
+  \work{1.5em}
+  \item The number of days in the month of May.
+
+  \ans{No. It is always 31. It does not come from chance.}
+  \work{1.5em}
+  \item The color of the next car that drives past the school.
+
+  \ans{No. It comes from chance, but it is not a number.}
+  \work{1em}
+\end{enumerate}
+
+\vspace{0.4em}
+A spinner has 3 equal parts, numbered 1, 2, and 3. Spin it 2 times. Let $X$ = the sum of the two numbers.
+\begin{enumerate}[start=4,itemsep=1em]
+  \item List all 9 outcomes and the sum for each.
+
+  \ans{1+1 = 2, \; 1+2 = 3, \; 1+3 = 4, \; 2+1 = 3, \; 2+2 = 4, \; 2+3 = 5, \; 3+1 = 4, \; 3+2 = 5, \; 3+3 = 6}
+  \work{3em}
+  \item Make the theoretical probability distribution of $X$.
+
+  \vspace{0.3em}
+  {\renewcommand{\arraystretch}{2.3}
+  \begin{tabular}{|c|p{0.6in}|p{0.6in}|p{0.6in}|p{0.6in}|p{0.6in}|}\hline
+  $x$ & 2 & 3 & 4 & 5 & 6\\ \hline
+  $P(x)$ & \ans{$\frac{1}{9}$} & \ans{$\frac{2}{9}$} & \ans{$\frac{3}{9}$} & \ans{$\frac{2}{9}$} & \ans{$\frac{1}{9}$}\\ \hline
+  \end{tabular}}
+  \item Find $P(X \ge 5)$. \ans{\quad $\frac{2}{9} + \frac{1}{9} = \frac{3}{9} = \frac{1}{3}$}
+  \work{1.5em}
+\end{enumerate}
+
+\vspace{0.4em}
+\begin{minipage}[c]{0.5\linewidth}\raggedright
+A class did this 100 times. Each time, they spun 2 times and wrote the sum.
+\end{minipage}\hfill
+\begin{minipage}[c]{0.46\linewidth}\raggedleft
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|c|c|c|c|c|c|}\hline
+Sum & 2 & 3 & 4 & 5 & 6\\ \hline
+Count & 9 & 24 & 30 & 25 & 12\\ \hline
+\end{tabular}
+\end{minipage}
+
+\vspace{0.4em}
+\begin{enumerate}[start=7,itemsep=1em]
+  \item Make the empirical probability distribution of $X$.
+
+  \vspace{0.3em}
+  {\renewcommand{\arraystretch}{1.8}
+  \begin{tabular}{|c|p{0.6in}|p{0.6in}|p{0.6in}|p{0.6in}|p{0.6in}|}\hline
+  $x$ & 2 & 3 & 4 & 5 & 6\\ \hline
+  $P(x)$ & \ans{0.09} & \ans{0.24} & \ans{0.30} & \ans{0.25} & \ans{0.12}\\ \hline
+  \end{tabular}}
+  \item Compare $P(4)$ in the two distributions. Why are they different?
+
+  \ans{Theoretical: $\frac{3}{9} \approx 0.33$. \; Empirical: 0.30. \; The empirical one comes from only 100 tries. Chance makes the counts vary.}
+  \work{3em}
+  \item The class does this 1,000 more times. What do you expect to happen to the empirical distribution?
+
+  \ans{It should get closer to the theoretical distribution. More trials give results closer to the theoretical probabilities.}
+  \work{2.5em}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{7.2 - Expected Value}
+\begin{enumerate}[resume]
+
+\item \goal{I find the expected value of a random variable, and I explain what it means.}
+Let $X$ = the number of hits a baseball player gets in one game.
+
+\vspace{0.3em}
+\begin{center}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{|c|>{\centering\arraybackslash}p{0.6in}|>{\centering\arraybackslash}p{0.6in}|>{\centering\arraybackslash}p{0.6in}|>{\centering\arraybackslash}p{0.6in}|}\hline
+$x$ (hits) & 0 & 1 & 2 & 3\\ \hline
+$P(x)$ & 0.25 & 0.45 & 0.20 & 0.10\\ \hline
+$x \cdot P(x)$ & \ans{0} & \ans{0.45} & \ans{0.40} & \ans{0.30}\\ \hline
+\end{tabular}
+\end{center}
+\begin{enumerate}[itemsep=1em]
+  \item Fill in the last row of the table.
+  \item Find $E(X)$.
+
+  \ans{$E(X) = \Sigma\, x \cdot P(x) = 0 + 0.45 + 0.40 + 0.30 = 1.15$ hits}
+  \work{2.5em}
+  \item What does $E(X)$ mean?
+
+  \ans{Over many games, the player gets about 1.15 hits per game, on average.}
+  \work{2.5em}
+  \item A student says, ``No game has 1.15 hits, so the expected value is wrong.'' Explain the mistake.
+
+  \ans{The expected value is a long-run average. It does not have to be a value that can happen in one game.}
+  \work{3em}
+  \item The player plays 40 games. About how many hits do you expect? \ans{\quad $40 \times 1.15 = 46$ hits}
+  \work{2em}
+\end{enumerate}
+
+\vspace{0.4em}
+Flip a coin 4 times. Let $X$ = the number of heads.
+
+\vspace{0.3em}
+\begin{center}
+\renewcommand{\arraystretch}{2.2}
+\begin{tabular}{|c|c|c|c|c|c|}\hline
+$x$ & 0 & 1 & 2 & 3 & 4\\ \hline
+$P(x)$ & $\dfrac{1}{16}$ & $\dfrac{4}{16}$ & $\dfrac{6}{16}$ & $\dfrac{4}{16}$ & $\dfrac{1}{16}$\\ \hline
+\end{tabular}
+\end{center}
+\begin{enumerate}[start=6,itemsep=1em]
+  \item Find $E(X)$.
+
+  \ans{$0 \cdot \frac{1}{16} + 1 \cdot \frac{4}{16} + 2 \cdot \frac{6}{16} + 3 \cdot \frac{4}{16} + 4 \cdot \frac{1}{16} = \frac{0 + 4 + 12 + 12 + 4}{16} = \frac{32}{16} = 2$ heads}
+  \work{3em}
+  \item Another name for $E(X)$ is $\mu_X$, the mean of $X$. ($\mu$ is ``mu.'') Find $\mu_X$.
+
+  \vspace{0.3em}
+  \renewcommand{\arraystretch}{1.4}
+  \begin{tabular}{|c|c|c|c|}\hline $x$ & 10 & 20 & 50\\ \hline $P(x)$ & 0.5 & 0.3 & 0.2\\ \hline\end{tabular}
+  \qquad \ans{$\mu_X = 10(0.5) + 20(0.3) + 50(0.2) = 5 + 6 + 10 = 21$}
+\end{enumerate}
+
+\newpage
+\item \goal{I decide if a method of choosing is fair, and I decide if a game is fair.}
+Rosa, Tam, and Yusuf need to choose who goes first in a game. Is each method fair? Explain.
+\begin{enumerate}[itemsep=1em]
+  \item Roll a number cube. 1 or 4: Rosa. \; 2 or 5: Tam. \; 3 or 6: Yusuf.
+
+  \ans{Fair. Each person has $\frac{2}{6} = \frac{1}{3}$.}
+  \work{2em}
+  \item Draw one card from a standard deck. Hearts: Rosa. \; Diamonds: Tam. \; Clubs or spades: Yusuf.
+
+  \ans{Not fair. Rosa $\frac{13}{52} = \frac{1}{4}$, \; Tam $\frac{13}{52} = \frac{1}{4}$, \; Yusuf $\frac{26}{52} = \frac{1}{2}$.}
+  \work{2em}
+  \item Draw one card from a standard deck. A face card (J, Q, K): Rosa. \; An ace: Tam. \; Any other card: Yusuf.
+
+  \ans{Not fair. Rosa $\frac{12}{52}$, \; Tam $\frac{4}{52}$, \; Yusuf $\frac{36}{52}$.}
+  \work{2em}
+  \item Change method (b) to make it fair.
+
+  \ans{Example: Hearts: Rosa. Diamonds: Tam. Clubs: Yusuf. Spades: draw again.}
+  \work{2em}
+\end{enumerate}
+
+\vspace{0.4em}
+At a school fair booth, you draw one card from a standard deck. You win $\$6$ if it is a heart. You pay $\$2$ for any other card.
+\begin{enumerate}[start=5,itemsep=1em]
+  \item Find the expected value of what you win.
+
+  \ans{$6 \cdot \frac{13}{52} + (-2) \cdot \frac{39}{52} = \frac{78}{52} - \frac{78}{52} = 0$}
+  \work{3em}
+  \item Is the game fair? Explain. \ans{\quad Yes. The expected value is 0. On average, no one wins or loses.}
+  \work{2em}
+\end{enumerate}
+
+\vspace{0.4em}
+At another booth, you flip 2 coins. You win $\$5$ if both are heads. You pay $\$2$ for anything else.
+\begin{enumerate}[start=7,itemsep=1em]
+  \item Find the expected value. Is the game fair?
+
+  \ans{$5 \cdot \frac{1}{4} + (-2) \cdot \frac{3}{4} = \frac{5}{4} - \frac{6}{4} = -\frac{1}{4} = -\$0.25$. \; Not fair. You lose 25 cents a game, on average.}
+  \work{3em}
+  \item How much should you win for two heads to make the game fair?
+
+  \ans{$w \cdot \frac{1}{4} - \frac{6}{4} = 0$, so $w = 6$. \; You should win $\$6$.}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{7.3 - Expected Payoff}
+\begin{enumerate}[resume]
+
+\item \goal{I find the net gain for each outcome, and I find the expected payoff of a lottery, game, or plan.}
+The art club sells 250 raffle tickets for $\$4$ each. One ticket wins $\$250$. Five tickets win $\$30$ each. The rest win nothing.
+\begin{enumerate}[itemsep=1em]
+  \item Fill in the table.
+
+  \vspace{0.3em}
+  \begin{center}
+  \renewcommand{\arraystretch}{2.3}
+  \begin{tabular}{|l|p{1.2in}|p{1.2in}|p{1.2in}|}\hline
+  Outcome & Net gain $x$ & $P(x)$ & $x \cdot P(x)$ \\ \hline
+  Win $\$250$ & \ans{$250 - 4 = 246$} & \ans{$\frac{1}{250} = 0.004$} & \ans{0.984} \\ \hline
+  Win $\$30$ & \ans{$30 - 4 = 26$} & \ans{$\frac{5}{250} = 0.02$} & \ans{0.52} \\ \hline
+  Win nothing & \ans{$-4$} & \ans{$\frac{244}{250} = 0.976$} & \ans{$-3.904$} \\ \hline
+  \end{tabular}
+  \end{center}
+  \item Find the expected payoff. \ans{\quad $0.984 + 0.52 - 3.904 = -\$2.40$}
+  \work{2.5em}
+  \item What does the expected payoff mean? \ans{\quad On average, a buyer loses $\$2.40$ per ticket.}
+  \work{2em}
+  \item The club sells all 250 tickets. How much money does the club raise?
+
+  \ans{$250 \times \$2.40 = \$600$ \; (or $\$1{,}000 - \$250 - \$150 = \$600$)}
+  \work{2em}
+\end{enumerate}
+
+\vspace{0.4em}
+At another booth, you pay $\$3$ to spin a spinner with 10 equal parts. 1 part wins $\$20$. 2 parts win $\$5$. The other 7 parts win nothing.
+\begin{enumerate}[start=5,itemsep=1em]
+  \item Find the net gain for each outcome.
+
+  \ans{Win $\$20$: $20 - 3 = 17$. \quad Win $\$5$: $5 - 3 = 2$. \quad Win nothing: $-3$.}
+  \work{2em}
+  \item Find the expected payoff.
+
+  \ans{$17(0.1) + 2(0.2) + (-3)(0.7) = 1.7 + 0.4 - 2.1 = 0$}
+  \work{2.5em}
+  \item Is the game fair? Should a player expect to win money?
+
+  \ans{Yes, it is fair. No. On average, a player does not win or lose money.}
+  \work{2em}
+  \item The school wants to make $\$1$ per player, on average. How much should a spin cost?
+
+  \ans{Average prize: $20(0.1) + 5(0.2) = \$3$. \; Cost: $\$3 + \$1 = \$4$.\\
+  Check: $16(0.1) + 1(0.2) + (-4)(0.7) = 1.6 + 0.2 - 2.8 = -1$}
+  \work{3em}
+\end{enumerate}
+
+\newpage
+\item \goal{I use expected value, and risk, to make a decision.}
+A game console costs $\$350$ to repair. The chance that it needs a repair in the first year is 0.06. Plan A is a one-year protection plan. It costs $\$29$.
+\begin{enumerate}[itemsep=1em]
+  \item Find the expected repair cost with no plan. \ans{\quad $0.06 \cdot 350 = \$21$}
+  \work{2em}
+  \item Which is cheaper on average: Plan A or no plan? By how much?
+
+  \ans{No plan. \; $\$29 - \$21 = \$8$ cheaper on average.}
+  \work{2em}
+  \item Give a reason someone might still buy Plan A.
+
+  \ans{They could not pay a sudden $\$350$ bill. The plan removes that risk.}
+  \work{2em}
+  \item The store sells 500 of Plan A. About how much money does the store expect to make?
+
+  \ans{Each plan: $\$29 - \$21 = \$8$. \quad $500 \times 8 = \$4{,}000$}
+  \work{2.5em}
+\end{enumerate}
+
+\vspace{0.4em}
+Plan B costs $\$12$. With Plan B, you still pay $\$100$ if the console needs a repair.
+\begin{enumerate}[start=5,itemsep=1em]
+  \item Find the expected cost of Plan B.
+
+  \ans{You always pay $\$12$. You pay $\$100$ more with probability 0.06.\\ $12 + 0.06 \cdot 100 = 12 + 6 = \$18$}
+  \work{3em}
+  \item Which choice costs the least on average: no plan, Plan A, or Plan B?
+
+  \ans{Plan B ($\$18$). Then no plan ($\$21$). Then Plan A ($\$29$).}
+  \work{2em}
+  \item Mia has only $\$60$ saved for surprise bills. Which choice would you tell her to pick? Explain.
+
+  \ans{Plan A. With no plan, she could get a $\$350$ bill. With Plan B, she could get a $\$100$ bill. Both are more than $\$60$. With Plan A, she never pays more than $\$29$.}
+  \work{4em}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{Test-Style Questions}
+A test asks the same questions with more words. Read slowly. Circle the best answer.
+\renewcommand{\arraystretch}{1.2}
+
+\begin{enumerate}[resume,itemsep=1.2em]
+
+\item The random variable $X$ represents the number of times a randomly selected student rode the city bus last week. The table shows the probability distribution of $X$, but one probability is missing.
+
+\vspace{0.3em}
+{\renewcommand{\arraystretch}{1.3}\begin{tabular}{|c|c|c|c|c|c|}\hline $x$ & 0 & 1 & 2 & 3 & 4\\ \hline $P(x)$ & 0.42 & 0.25 & 0.18 & \;?\; & 0.05\\ \hline\end{tabular}}
+
+\vspace{0.3em}
+What is the probability that a randomly selected student rode the city bus at least 2 times last week?
+\hchoices{\opt{A} 0.10}{\opt{B} 0.23}{\optans{C} 0.33}{\opt{D} 0.58}
+\par\ans{Missing: $1 - 0.90 = 0.10$. \; $P(X \ge 2) = 0.18 + 0.10 + 0.05 = 0.33$}
+
+\item Which of the following describes an empirical probability distribution?
+\choices{\opt{A} & The probability of each sum when two fair number cubes are rolled, found by listing all 36 outcomes.}
+        {\opt{B} & The probability of each number of heads when 3 fair coins are flipped, found by listing all 8 outcomes.}
+        {\optans{C} & The probability of each number of goals a team scores, found by dividing the number of games with that many goals by the total number of games played last season.}
+        {\opt{D} & The probability of drawing each suit from a standard deck of 52 cards, found by counting the cards of each suit.}
+
+\item On each turn of a board game, a player spins a spinner and earns points. The random variable $X$ represents the number of points a player earns on one turn. The table shows the probability distribution of $X$.
+
+\vspace{0.3em}
+{\renewcommand{\arraystretch}{1.3}\begin{tabular}{|c|c|c|c|c|}\hline $x$ & 0 & 2 & 5 & 10\\ \hline $P(x)$ & 0.4 & 0.3 & 0.2 & 0.1\\ \hline\end{tabular}}
+
+\vspace{0.3em}
+What is the expected value of $X$?
+\hchoices{\opt{A} 0}{\optans{B} 2.6}{\opt{C} 4.25}{\opt{D} 17}
+\par\ans{$0(0.4) + 2(0.3) + 5(0.2) + 10(0.1) = 0 + 0.6 + 1.0 + 1.0 = 2.6$}
+
+\newpage
+\item In a game, a player rolls a fair number cube one time. If the cube lands on 6, the player wins $\$10$. If the cube lands on any other number, the player loses $\$1$. Which statement about the game is true?
+\choices{\opt{A} & The game is fair, because the player wins on only one of the six numbers.}
+        {\opt{B} & The game is fair, because the expected value of the game is $\$0$.}
+        {\opt{C} & The game is not fair, because the player loses about $\$0.83$ per game, on average.}
+        {\optans{D} & The game is not fair, because the player wins about $\$0.83$ per game, on average.}
+\par\ans{$10 \cdot \frac{1}{6} + (-1) \cdot \frac{5}{6} = \frac{10}{6} - \frac{5}{6} = \frac{5}{6} \approx \$0.83$}
+
+\item A company charges $\$75$ for a one-year warranty on a washing machine. The company estimates that 4\% of the machines will need a repair that costs $\$900$ during the year, and that the other machines will need no repairs. Based on these estimates, what is the company's expected profit for each warranty it sells?
+\hchoices{\opt{A} $\$36$}{\optans{B} $\$39$}{\opt{C} $\$75$}{\opt{D} $\$825$}
+\par\ans{Expected repair cost: $0.04 \cdot 900 = \$36$. \; Profit: $\$75 - \$36 = \$39$}
+
+\item A school club sells 500 raffle tickets for $\$4$ each. One ticket wins a $\$500$ prize, and 5 tickets each win a $\$50$ prize. All other tickets win nothing. What is the expected payoff for a person who buys one ticket?
+\hchoices{\opt{A} $-\$4.00$}{\optans{B} $-\$2.50$}{\opt{C} $\$1.50$}{\opt{D} $\$2.50$}
+\par\ans{$496 \cdot \frac{1}{500} + 46 \cdot \frac{5}{500} + (-4) \cdot \frac{494}{500} = 0.992 + 0.46 - 3.952 = -\$2.50$}
+
+\end{enumerate}
+
+\end{document}

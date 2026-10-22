@@ -1,0 +1,12 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}
+\begin{document}
+\begin{tikzpicture}[x=0.5cm,y=0.12cm]
+  \grid{0}{9}{1}{0}{25}{5}{Hours burned}{Height (cm)}
+  \draw[thick,blue!70!black] (0,24) -- (9,6);
+  \pts{1/23,2/19,3/18,4/17,5/13,6/13,7/9,8/8}
+  \foreach \p in {(2,20),(7,10)} \draw[thick,blue!70!black,fill=white] \p circle (3.2pt);
+  \node[font=\small,anchor=south west] at (2.05,20.3) {(2, 20)};
+  \node[font=\small,anchor=south west] at (7.1,10.3) {(7, 10)};
+\end{tikzpicture}
+\end{document}

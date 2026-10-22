@@ -1,0 +1,450 @@
+\documentclass[11pt]{article}
+\input{../preamble}
+\usepackage{needspace}
+% Unit 3 review.  Problems 1-4 follow the Unit 3 quiz question for question
+% (same "I ..." goals, two or three times the parts); 5-8 ask the same
+% skills in test wording.
+\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000
+\setlist[enumerate,1]{leftmargin=1.5em,itemsep=1.2em}
+\setlist[enumerate,2]{label=(\alph*),leftmargin=2em,itemsep=1.6em}
+\newcommand{\lessonhead}[1]{\par\vspace{0.6em}{\large\bfseries #1}\par\vspace{0.25em}\hrule\vspace{0.6em}}
+\newcommand{\goal}[1]{\textbf{#1}\par\vspace{0.35em}}
+% circled choices: \opt{A} prints plain; \optans{B} is circled in red on the key
+\newcommand{\opt}[1]{\tikz[baseline=(c.base)]\node[inner sep=2.5pt](c){#1};}
+\newcommand{\optans}[1]{\ifkey\tikz[baseline=(c.base)]\node[circle,inner sep=1.2pt,draw=keyred,thick,text=keyred](c){#1};\else\opt{#1}\fi}
+% circle-one words (Marginal / Conditional): rounded ring on the key
+\newcommand{\word}[1]{\tikz[baseline=(c.base)]\node[rounded corners=0.6em,inner sep=2.5pt](c){#1};}
+\newcommand{\wordans}[1]{\ifkey\tikz[baseline=(c.base)]\node[rounded corners=0.6em,inner sep=2.5pt,draw=keyred,thick,text=keyred](c){#1};\else\word{#1}\fi}
+\newcommand{\choices}[4]{\par\vspace{0.3em}\begin{tabular}{@{}l@{\hspace{0.6em}}p{6in}}#1\\#2\\#3\\#4\\\end{tabular}}
+% centred fixed-width table column, so a blank cell is as wide as a filled one
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+\begin{document}
+
+\lessontitle{Unit 3 Review}
+
+\textbf{One survey, every tool.} 50 students answered two questions: \textit{Do you have a library card?} \textit{Do you read for fun?}
+
+\vspace{0.5em}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{1.8in}|>{\raggedright\arraybackslash}p{4.7in}|}
+\hline
+\textbf{3.1 Read the table.}
+
+Each cell counts students in \textbf{both} groups. Each row and each column adds to its total. &
+\vspace{0.2em}
+\begin{minipage}[c]{2.8in}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|l|c|c|c|}\hline
+ & \textbf{Reads} & \textbf{Does not} & \textbf{Total} \\ \hline
+\textbf{Card} & 14 & 6 & 20 \\ \hline
+\textbf{No card} & 9 & 21 & 30 \\ \hline
+\textbf{Total} & 23 & 27 & 50 \\ \hline
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[c]{1.8in}\raggedleft
+\scalebox{0.52}{\fig{Unit_3/Review_venn_library}}
+\end{minipage}
+
+\vspace{0.3em}
+14 students have a card \textbf{and} read for fun.\newline
+Check: $14 + 6 = 20$ \; and \; $14 + 9 = 23$.\newline
+The Venn diagram shows the same counts. 21 students are outside both circles. \\ \hline
+\textbf{3.1 Divide by the grand total.}
+
+A relative frequency table shows the percent of \textbf{all} the students. &
+\vspace{0.2em}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|l|c|c|c|}\hline
+ & \textbf{Reads} & \textbf{Does not} & \textbf{Total} \\ \hline
+\textbf{Card} & $\frac{14}{50} = 28\%$ & $\frac{6}{50} = 12\%$ & $\frac{20}{50} = 40\%$ \\[0.2em] \hline
+\textbf{No card} & $\frac{9}{50} = 18\%$ & $\frac{21}{50} = 42\%$ & $\frac{30}{50} = 60\%$ \\[0.2em] \hline
+\textbf{Total} & $\frac{23}{50} = 46\%$ & $\frac{27}{50} = 54\%$ & 100\% \\[0.2em] \hline
+\end{tabular}
+
+\vspace{0.3em}
+28\% of \textbf{all} the students have a card and read for fun. The whole table adds to 100\%. \\ \hline
+\textbf{3.2 Marginal: use the totals.}
+
+Divide each total by the grand total. &
+\rule{0pt}{1.4em}Reads: $\frac{23}{50} = 46\%$ \qquad Does not read: $\frac{27}{50} = 54\%$
+
+Card: $\frac{20}{50} = 40\%$ \qquad No card: $\frac{30}{50} = 60\%$ \\[0.3em] \hline
+\textbf{3.2 Conditional: use one group.}
+
+Divide by that group's total.
+
+Different percents in the groups mean the two variables are \textbf{associated}. &
+\vspace{0.2em}
+\begin{minipage}[c]{2.4in}
+\scalebox{0.6}{\fig{Unit_3/Review_bars_library}}
+\end{minipage}\hfill
+\begin{minipage}[c]{2.2in}\raggedright
+Card: $\frac{14}{20} = 70\%$ read for fun.\par
+No card: $\frac{9}{30} = 30\%$ read for fun.
+
+\vspace{0.5em}
+70\% and 30\% are very different. Having a library card and reading for fun are \textbf{associated}.
+\end{minipage}
+\vspace{0.3em} \\ \hline
+\end{tabular}
+
+\vspace{0.6em}
+\textbf{Check the denominator.} ``Of the students \underline{with a card}, what percent read for fun?'' Divide by the card total (20). Do not divide by 50. Do not divide by the reads total (23).
+
+\vspace{0.3em}
+An association does not prove that one thing causes the other.
+
+\partner
+
+% ---------------- PROBLEMS ----------------
+\newpage
+\lessonhead{3.1 - Two-Way Tables and Relative Frequency}
+\begin{enumerate}
+
+\item \goal{I read a two-way table, and I fill in missing numbers in it.}
+120 students in 9th and 10th grade said which after-school club they are in. Each student is in one club.
+\begin{enumerate}
+  \item Fill in the missing numbers.
+
+  \begin{center}
+  \renewcommand{\arraystretch}{1.9}
+  \begin{tabular}{|l|C{0.9in}|C{0.9in}|C{0.9in}|C{0.9in}|}\hline
+   & \textbf{Art} & \textbf{Chess} & \textbf{Garden} & \textbf{Total} \\ \hline
+  \textbf{9th grade} & 18 & \ans{22} & \ans{15} & 55 \\ \hline
+  \textbf{10th grade} & \ans{26} & 14 & 25 & \ans{65} \\ \hline
+  \textbf{Total} & 44 & \ans{36} & 40 & 120 \\ \hline
+  \end{tabular}
+  \end{center}
+  \ans{10th art: $44 - 18 = 26$. \quad 10th total: $26 + 14 + 25 = 65$. \quad 9th garden: $40 - 25 = 15$.\\
+  9th chess: $55 - 18 - 15 = 22$. \quad Chess total: $22 + 14 = 36$. \quad Check: $55 + 65 = 120$.}
+  \work{5em}
+  \item How many students are in the chess club? \ans{\quad 36}
+  \item How many 9th graders are \textbf{not} in the art club? \ans{\quad $55 - 18 = 37$}
+  \item Which club has the most 10th graders? \ans{\quad Art (26 students)}
+\end{enumerate}
+
+\vspace{1em}
+75 students in 11th and 12th grade said what kind of phone they have.
+\begin{enumerate}[start=5]
+  \item Fill in the missing numbers.
+
+  \begin{center}
+  \renewcommand{\arraystretch}{1.9}
+  \begin{tabular}{|l|C{0.9in}|C{0.9in}|C{0.9in}|}\hline
+   & \textbf{Android} & \textbf{iPhone} & \textbf{Total} \\ \hline
+  \textbf{11th grade} & 16 & \ans{14} & 30 \\ \hline
+  \textbf{12th grade} & \ans{20} & \ans{25} & \ans{45} \\ \hline
+  \textbf{Total} & \ans{36} & 39 & 75 \\ \hline
+  \end{tabular}
+  \end{center}
+  \ans{11th iPhone: $30 - 16 = 14$. \quad 12th iPhone: $39 - 14 = 25$. \quad 12th total: $75 - 30 = 45$.\\
+  12th Android: $45 - 25 = 20$. \quad Android total: $16 + 20 = 36$.}
+  \work{5em}
+  \item How many 12th graders have an iPhone? \ans{\quad 25}
+  \item How many students have an Android phone? \ans{\quad $16 + 20 = 36$}
+\end{enumerate}
+
+\newpage
+\item \goal{I move between a Venn diagram and a two-way table, and I make a relative frequency table.}
+This Venn diagram shows how many of 60 students play video games and how many play chess.
+
+\vspace{0.4em}
+\begin{minipage}[t]{0.4\linewidth}\vspace{0pt}\raggedright
+\scalebox{0.72}{\fig{Unit_3/Review_venn_games}}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.57\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}
+  \item Make a two-way table from the Venn diagram.
+
+  \vspace{0.5em}
+  \renewcommand{\arraystretch}{1.7}
+  \begin{tabular}{|l|C{0.7in}|C{0.7in}|C{0.7in}|}\hline
+   & \textbf{Chess} & \textbf{No chess} & \textbf{Total} \\ \hline
+  \textbf{Games} & \ans{9} & \ans{24} & \ans{33} \\ \hline
+  \textbf{No games} & \ans{6} & \ans{21} & \ans{27} \\ \hline
+  \textbf{Total} & \ans{15} & \ans{45} & \ans{60} \\ \hline
+  \end{tabular}
+\end{enumerate}
+\end{minipage}
+
+\vspace{1em}
+\begin{enumerate}[start=2]
+  \item Make a relative frequency table. Divide each count by 60. Write percents.
+
+  \begin{center}
+  \renewcommand{\arraystretch}{2.3}
+  \begin{tabular}{|l|C{1.15in}|C{1.15in}|C{1.15in}|}\hline
+   & \textbf{Chess} & \textbf{No chess} & \textbf{Total} \\ \hline
+  \textbf{Games} & \ans{$\frac{9}{60} = 15\%$} & \ans{$\frac{24}{60} = 40\%$} & \ans{$\frac{33}{60} = 55\%$} \\ \hline
+  \textbf{No games} & \ans{$\frac{6}{60} = 10\%$} & \ans{$\frac{21}{60} = 35\%$} & \ans{$\frac{27}{60} = 45\%$} \\ \hline
+  \textbf{Total} & \ans{$\frac{15}{60} = 25\%$} & \ans{$\frac{45}{60} = 75\%$} & \ans{100\%} \\ \hline
+  \end{tabular}
+  \end{center}
+  \item What percent of all the students play chess but not video games? \ans{\quad $\frac{6}{60} = 10\%$}
+  \work{1.5em}
+  \item What percent of all the students play at least one of the two games?
+
+  \ans{$24 + 9 + 6 = 39$ students. \quad $\frac{39}{60} = 65\%$ \qquad (Or: $100\% - 35\% = 65\%$)}
+  \work{2em}
+\end{enumerate}
+
+\needspace{2.8in}
+\vspace{0.6em}
+80 students were asked if they ride a bike and if they skateboard. 46 ride a bike. 22 skateboard. 14 do both.
+
+\vspace{0.4em}
+\begin{minipage}[t]{0.4\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}[start=5]
+  \item Fill in the Venn diagram.
+
+  \vspace{0.5em}
+  \scalebox{0.66}{\venn{Rides a bike}{Skateboards}{\ans{32}}{\ans{14}}{\ans{8}}{\ans{26}}}
+\end{enumerate}
+\begin{enumerate}[start=7]
+  \item How many students do neither?
+
+  \ans{$80 - (32 + 14 + 8) = 26$}
+\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.57\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}[start=6]
+  \item Fill in the two-way table.
+
+  \vspace{0.5em}
+  \renewcommand{\arraystretch}{1.7}
+  \begin{tabular}{|l|C{0.7in}|C{0.7in}|C{0.7in}|}\hline
+   & \textbf{Skate} & \textbf{No skate} & \textbf{Total} \\ \hline
+  \textbf{Bike} & \ans{14} & \ans{32} & \ans{46} \\ \hline
+  \textbf{No bike} & \ans{8} & \ans{26} & \ans{34} \\ \hline
+  \textbf{Total} & \ans{22} & \ans{58} & \ans{80} \\ \hline
+  \end{tabular}
+\end{enumerate}
+\begin{enumerate}[start=8]
+  \item What percent of all the students ride a bike and skateboard?
+
+  \ans{$\frac{14}{80} = 17.5\%$}
+\end{enumerate}
+\end{minipage}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{3.2 - Marginal and Conditional Distributions}
+\begin{enumerate}[resume]
+
+\item \goal{I find a marginal distribution and a conditional distribution.}
+120 students in 9th and 10th grade chose their favorite kind of game.
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|l|C{0.8in}|C{0.8in}|C{0.8in}|C{0.8in}|}\hline
+ & \textbf{Board} & \textbf{Video} & \textbf{Card} & \textbf{Total} \\ \hline
+\textbf{9th grade} & 10 & 22 & 8 & 40 \\ \hline
+\textbf{10th grade} & 26 & 34 & 20 & 80 \\ \hline
+\textbf{Total} & 36 & 56 & 28 & 120 \\ \hline
+\end{tabular}
+\end{center}
+\begin{enumerate}[itemsep=1.2em]
+  \item Find the marginal distribution of favorite kind of game.
+
+  \ans{Board $\frac{36}{120} = 30\%$, \; Video $\frac{56}{120} \approx 47\%$, \; Card $\frac{28}{120} \approx 23\%$}
+  \work{2.5em}
+  \item Find the marginal distribution of grade.
+
+  \ans{9th grade $\frac{40}{120} \approx 33\%$, \; 10th grade $\frac{80}{120} \approx 67\%$}
+  \work{2.5em}
+  \item Find the conditional distribution of favorite game for 9th graders.
+
+  \ans{Board $\frac{10}{40} = 25\%$, \; Video $\frac{22}{40} = 55\%$, \; Card $\frac{8}{40} = 20\%$}
+  \work{2.5em}
+  \item Find the conditional distribution of favorite game for 10th graders.
+
+  \ans{Board $\frac{26}{80} = 32.5\%$, \; Video $\frac{34}{80} = 42.5\%$, \; Card $\frac{20}{80} = 25\%$}
+  \work{2.5em}
+  \item Find the conditional distribution of grade for the students who chose card games.
+
+  \ans{Divide by the card total, 28. \quad 9th grade $\frac{8}{28} \approx 29\%$, \; 10th grade $\frac{20}{28} \approx 71\%$}
+  \work{2.5em}
+\end{enumerate}
+
+\vspace{0.4em}
+Is each statement a \textbf{marginal} or a \textbf{conditional} percent? Circle one.
+\begin{enumerate}[start=6,itemsep=0.6em]
+  \item \makebox[3.9in][l]{About 47\% of all the students chose video games.} \wordans{Marginal} \quad \word{Conditional}
+  \item \makebox[3.9in][l]{Of the 10th graders, 25\% chose card games.} \word{Marginal} \quad \wordans{Conditional}
+  \item \makebox[3.9in][l]{30\% of the students chose board games.} \wordans{Marginal} \quad \word{Conditional}
+  \item \makebox[3.9in][l]{55\% of 9th graders chose video games.} \word{Marginal} \quad \wordans{Conditional}
+\end{enumerate}
+
+\newpage
+\item \goal{I choose the right total to divide by, and I decide if two categorical variables are associated.}
+A class grew 60 bean plants. Some plants got plant food. The class recorded which plants grew flowers.
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|l|C{0.9in}|C{0.9in}|C{0.9in}|}\hline
+ & \textbf{Flowers} & \textbf{No flowers} & \textbf{Total} \\ \hline
+\textbf{Plant food} & 30 & 10 & 40 \\ \hline
+\textbf{No plant food} & 9 & 11 & 20 \\ \hline
+\textbf{Total} & 39 & 21 & 60 \\ \hline
+\end{tabular}
+\end{center}
+\begin{enumerate}[itemsep=1.2em]
+  \item What percent of the plants with plant food grew flowers? \ans{\quad $\frac{30}{40} = 75\%$}
+  \work{2.5em}
+  \item What percent of the plants without plant food grew flowers? \ans{\quad $\frac{9}{20} = 45\%$}
+  \work{2.5em}
+  \item Is plant food associated with growing flowers? Explain.
+
+  \ans{Yes. The percents are different. 75\% of the plants with plant food grew flowers, but only 45\% of the plants without it.}
+  \work{4em}
+  \item What percent of the plants with flowers got plant food? \ans{\quad $\frac{30}{39} \approx 77\%$}
+  \work{2.5em}
+  \item Why are the answers to (a) and (d) different?
+
+  \ans{They divide by different groups: (a) by the 40 plants with plant food, (d) by the 39 plants with flowers.}
+  \work{4em}
+  \item Of the plants with no flowers, what percent got no plant food? Which fraction gives the answer? Circle the letter.
+
+  \vspace{0.3em}
+  \renewcommand{\arraystretch}{2.3}
+  \begin{tabular}{@{}l@{\hspace{0.4em}}l@{\hspace{3em}}l@{\hspace{0.4em}}l@{\hspace{3em}}l@{\hspace{0.4em}}l@{\hspace{3em}}l@{\hspace{0.4em}}l}
+  \opt{A} & $\dfrac{11}{20}$ & \optans{B} & $\dfrac{11}{21}$ & \opt{C} & $\dfrac{11}{60}$ & \opt{D} & $\dfrac{21}{60}$\\
+  \end{tabular}
+\end{enumerate}
+
+\newpage
+\textit{Problem 4, continued.}
+
+\vspace{0.6em}
+130 students in 9th and 10th grade said if they write with a pen or a pencil.
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|l|C{0.9in}|C{0.9in}|C{0.9in}|}\hline
+ & \textbf{Pen} & \textbf{Pencil} & \textbf{Total} \\ \hline
+\textbf{9th grade} & 15 & 35 & 50 \\ \hline
+\textbf{10th grade} & 24 & 56 & 80 \\ \hline
+\textbf{Total} & 39 & 91 & 130 \\ \hline
+\end{tabular}
+\end{center}
+\begin{enumerate}[start=7,itemsep=1.2em]
+  \item What percent of 9th graders use a pen? \ans{\quad $\frac{15}{50} = 30\%$}
+  \work{3em}
+  \item What percent of 10th graders use a pen? \ans{\quad $\frac{24}{80} = 30\%$}
+  \work{3em}
+  \item Is grade associated with using a pen or a pencil? Explain.
+
+  \ans{No. The percents are the same. 30\% of the 9th graders and 30\% of the 10th graders use a pen.}
+  \work{4em}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\needspace{4in}
+\vspace{1em}
+\lessonhead{Test-Style Questions}
+A test asks the same questions with more words. Read slowly. Circle the best answer.
+
+\begin{enumerate}[resume,itemsep=1.4em]
+
+\needspace{2.8in}
+\item A survey asked 90 students in 11th and 12th grade where they like to watch movies: at a theater or at home. Each student chose one place. The two-way table shows the results, but some of the values are missing.
+
+\vspace{0.3em}
+\begin{minipage}[t]{0.52\linewidth}\vspace{0pt}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|C{0.65in}|C{0.65in}|C{0.65in}|}\hline
+ & \textbf{Theater} & \textbf{Home} & \textbf{Total} \\ \hline
+\textbf{11th grade} & 12 & & 40 \\ \hline
+\textbf{12th grade} & & & \\ \hline
+\textbf{Total} & 30 & & 90 \\ \hline
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.45\linewidth}\vspace{0pt}\raggedright
+Based on the table, how many 12th graders like to watch movies at home?
+
+\vspace{0.3em}
+\begin{tabular}{@{}l@{\hspace{0.6em}}l}
+\opt{A} & 28\\
+\optans{B} & 32\\
+\opt{C} & 50\\
+\opt{D} & 60\\
+\end{tabular}
+\end{minipage}
+\par\ans{12th grade total: $90 - 40 = 50$. \; 12th grade, theater: $30 - 12 = 18$. \; 12th grade, home: $50 - 18 = 32$.}
+
+\needspace{2.8in}
+\item A school surveyed 200 students about their phones. The two-way table shows whether each phone has a case and whether its screen is cracked.
+
+\vspace{0.3em}
+\begin{minipage}[t]{0.52\linewidth}\vspace{0pt}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|C{0.65in}|C{0.95in}|C{0.5in}|}\hline
+ & \textbf{Cracked} & \textbf{Not cracked} & \textbf{Total} \\ \hline
+\textbf{Case} & 14 & 106 & 120 \\ \hline
+\textbf{No case} & 36 & 44 & 80 \\ \hline
+\textbf{Total} & 50 & 150 & 200 \\ \hline
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.45\linewidth}\vspace{0pt}\raggedright
+What percent of all the students surveyed have a phone with a case and a cracked screen?
+
+\vspace{0.3em}
+\begin{tabular}{@{}l@{\hspace{0.6em}}l}
+\optans{A} & 7\%\\
+\opt{B} & about 12\%\\
+\opt{C} & 25\%\\
+\opt{D} & 28\%\\
+\end{tabular}
+\end{minipage}
+\par\ans{``All the students'' means divide by the grand total: $\frac{14}{200} = 7\%$.}
+
+\needspace{2.8in}
+\item A music teacher asked 150 students in 11th and 12th grade which instrument they would most like to learn. The results are shown in the two-way table.
+
+\vspace{0.3em}
+\begin{minipage}[t]{0.52\linewidth}\vspace{0pt}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|C{0.55in}|C{0.5in}|C{0.5in}|C{0.5in}|}\hline
+ & \textbf{Guitar} & \textbf{Piano} & \textbf{Drums} & \textbf{Total} \\ \hline
+\textbf{11th} & 30 & 18 & 12 & 60 \\ \hline
+\textbf{12th} & 36 & 45 & 9 & 90 \\ \hline
+\textbf{Total} & 66 & 63 & 21 & 150 \\ \hline
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.45\linewidth}\vspace{0pt}\raggedright
+Based on the table, what percent of the 12th graders surveyed want to learn piano?
+
+\vspace{0.3em}
+\begin{tabular}{@{}l@{\hspace{0.6em}}l}
+\opt{A} & 30\%\\
+\opt{B} & 42\%\\
+\optans{C} & 50\%\\
+\opt{D} & about 71\%\\
+\end{tabular}
+\end{minipage}
+\par\ans{Divide by the 12th grade total: $\frac{45}{90} = 50\%$.}
+
+\needspace{2.8in}
+\item A survey asked students in 9th grade and 12th grade if they like to study with music or in silence. The segmented bar chart shows the conditional distribution of study choice for each grade.
+
+\vspace{0.3em}
+\begin{minipage}[t]{0.38\linewidth}\vspace{0pt}
+\scalebox{0.72}{\fig{Unit_3/Review_bars_study}}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.6\linewidth}\vspace{0pt}\raggedright
+Which statement is supported by the segmented bar chart?
+
+\vspace{0.3em}
+\begin{tabular}{@{}l@{\hspace{0.6em}}p{3.6in}}
+\opt{A} & There is no association, because each bar adds up to 100\%.\\
+\optans{B} & Grade and study choice are associated, because the percent of students who study with music is different in the two grades.\\
+\opt{C} & More 9th graders than 12th graders were surveyed.\\
+\opt{D} & Most 12th graders like to study with music.\\
+\end{tabular}
+\end{minipage}
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,604 @@
+\documentclass[11pt]{article}
+\input{../preamble}
+% Unit 2 review.  Problems 1-12 follow the Unit 2 quiz question for question
+% (same "I ..." goals, two or three times the parts); 13-18 ask the same
+% skills in test wording.  2.5 and 2.6 use the printed z-table
+% (Z_Table.tex): answers use its 4-decimal areas, and a reverse lookup
+% takes the closest area in the table.
+\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000
+\setlist[enumerate,1]{leftmargin=1.5em,itemsep=1.2em}
+\setlist[enumerate,2]{label=(\alph*),leftmargin=2em,itemsep=1.6em}
+\newcommand{\lessonhead}[1]{\par\vspace{0.6em}{\large\bfseries #1}\par\vspace{0.25em}\hrule\vspace{0.6em}}
+\newcommand{\goal}[1]{\textbf{#1}\par\vspace{0.35em}}
+% circled choices: \opt{A} prints plain; \optans{B} is circled in red on the key
+\newcommand{\opt}[1]{\tikz[baseline=(c.base)]\node[inner sep=2.5pt](c){#1};}
+\newcommand{\optans}[1]{\ifkey\tikz[baseline=(c.base)]\node[circle,inner sep=1.2pt,draw=keyred,thick,text=keyred](c){#1};\else\opt{#1}\fi}
+\newcommand{\choices}[4]{\par\vspace{0.3em}\begin{tabular}{@{}l@{\hspace{0.6em}}p{6in}}#1\\#2\\#3\\#4\\\end{tabular}}
+% a circled pair of measures (oval on the key): \pair{mean and SD} / \pairans{median and IQR}
+\newcommand{\pair}[1]{\tikz[baseline=(c.base)]\node[rounded corners=0.6em,inner sep=2.5pt](c){#1};}
+\newcommand{\pairans}[1]{\ifkey\tikz[baseline=(c.base)]\node[rounded corners=0.6em,inner sep=2.5pt,draw=keyred,thick,text=keyred](c){#1};\else\pair{#1}\fi}
+% one row of an SD table (as in 2.1): \sdrow{x}{x - mean}{(x - mean)^2}; the last two show on the key only
+\newcommand{\sdrow}[3]{#1 & \ans{#2} & \ans{#3} \\ \hline}
+\newenvironment{sdtable}{\renewcommand{\arraystretch}{1.45}\begin{tabular}{|c|p{1.0in}|p{1.0in}|}\hline
+  $x$ & $x - \bar{x}$ & $(x - \bar{x})^2$ \\ \hline}{\end{tabular}}
+% blank normal curve over a number line; the key writes the values in red:
+% \labelcurve{v1/v2/.../v7 as z/value pairs}{axis label}
+\newcommand{\labelcurve}[2]{%
+\begin{tikzpicture}[x=1.3cm,y=0.7cm]
+  \bellcurve
+  \draw[thick] (-3.8,0) -- (3.8,0);
+  \foreach \z in {-3,...,3} \draw (\z,0.12) -- (\z,-0.12);
+  \ifkey\begin{scope}[keyred]\foreach \z/\v in {#1} \node[below] at (\z,-0.12) {\v};\end{scope}\fi
+  \node at (0,-1.3) {#2};
+\end{tikzpicture}}
+
+\begin{document}
+
+\lessontitle{Unit 2 Review}
+
+\textbf{One study, every tool.} A class flew paper airplanes. Here are 5 flights, in feet.
+\begin{center}14,\; 18,\; 22,\; 22,\; 24\end{center}
+
+\vspace{-0.4em}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{1.8in}|>{\raggedright\arraybackslash}p{4.7in}|}
+\hline
+\textbf{2.1 Find the SD.}
+
+The SD is about how far the values usually are from the mean. &
+$\bar{x} = 100 \div 5 = 20$ feet \quad
+{\renewcommand{\arraystretch}{1.15}\small
+\begin{tabular}[t]{|c|c|c|c|c|c|}\hline
+$x$ & 14 & 18 & 22 & 22 & 24 \\ \hline
+$x - \bar{x}$ & $-6$ & $-2$ & 2 & 2 & 4 \\ \hline
+$(x - \bar{x})^2$ & 36 & 4 & 4 & 4 & 16 \\ \hline
+\end{tabular}}
+
+\vspace{0.3em}
+$\Sigma(x - \bar{x})^2 = 64$ \qquad $s = \sqrt{\dfrac{\Sigma(x - \bar{x})^2}{n - 1}} = \sqrt{\dfrac{64}{4}} = \sqrt{16} = 4$ feet
+
+The flights are usually about 4 feet from the mean. \\ \hline
+\textbf{2.2 Choose the measures.}
+
+Symmetric, no outliers: mean and SD.\newline Skewed or outliers: median and IQR. &
+A sixth plane flew 62 feet.
+\centerline{\fig{Unit_2/Review_planes_dot_plot}}
+Mean $= 162 \div 6 = 27$ feet. \quad SD $\approx 17.5$ feet.\newline
+Median $= 22$ feet. \quad Q1 $= 18$, \; Q3 $= 24$, \; IQR $= 24 - 18 = 6$ feet.
+
+Upper fence $= 24 + 1.5 \times 6 = 33$, so 62 is an outlier. It pulled the mean from 20 up to 27. Use the \textbf{median and the IQR}. \\ \hline
+\textbf{2.3 Where does one value stand?}
+
+Percentile: the percent of the data below the value. &
+4 of the 5 flights are shorter than 24 feet. $4 \div 5 = 0.80$. So 24 feet is at the \textbf{80th percentile}.
+
+All the school's flights: mean $\mu = 20$ feet, SD $\sigma = 4$ feet.\newline
+A 26-foot flight: \; $z = \dfrac{x - \mu}{\sigma} = \dfrac{26 - 20}{4} = 1.5$. \; It is 1.5 SDs above the mean. \\ \hline
+\textbf{2.4 Use the empirical rule.}
+
+In a normal distribution, about 68\% is within 1 SD of the mean, 95\% within 2 SDs, and 99.7\% within 3 SDs. &
+The school's flights have a normal distribution.
+\centerline{\fig{Unit_2/Review_planes_normal}}
+68\% of the flights are from 16 to 24 feet. 95\% are from 12 to 28 feet. \\ \hline
+\textbf{2.5 Use the z-table.}
+
+The table gives the area below $z$. &
+Shorter than 25 feet: \; $z = \dfrac{25 - 20}{4} = 1.25$. \; Table: .8944. \; \textbf{89.44\%}\newline
+Longer than 25 feet: \; $1 - .8944 = .1056$. \; \textbf{10.56\%} \\ \hline
+\textbf{2.6 Work in reverse.}
+
+Find the area inside the table. Read $z$. Then $x = \mu + z\sigma$. &
+The longest 10\% of flights win a prize. Area to the left: $1 - .10 = .90$.\newline
+Closest area .8997, at $z = 1.28$. \; $x = 20 + 1.28 \times 4 = 25.12$. \; A flight must go about \textbf{25.1 feet}. \\ \hline
+\end{tabular}
+
+\vspace{0.5em}
+\textbf{Above or top? Subtract from 1.} The z-table always gives the area below $z$ (to the left).
+
+\partner
+
+% ---------------- PROBLEMS ----------------
+\newpage
+\lessonhead{2.1 - Standard Deviation}
+\begin{enumerate}
+
+\item \goal{I find the standard deviation of a small data set.}
+A bike shop sold this many bikes each day for 5 days.
+\begin{center}4,\; 11,\; 7,\; 11,\; 7\end{center}
+\begin{minipage}[t]{0.5\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}
+  \item Find the mean, $\bar{x}$. Then complete the table.
+
+  \vspace{0.5em}
+  $\bar{x} =$ \underline{\makebox[1.3in]{\ans{$40 \div 5 = 8$}}}
+
+  \vspace{0.6em}
+  \begin{sdtable}
+  \sdrow{4}{$-4$}{16}
+  \sdrow{11}{3}{9}
+  \sdrow{7}{$-1$}{1}
+  \sdrow{11}{3}{9}
+  \sdrow{7}{$-1$}{1}
+  \multicolumn{2}{|r|}{$\Sigma(x - \bar{x})^2$} & \ans{36} \\ \hline
+  \end{sdtable}
+\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.47\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}[start=2]
+  \item Find the standard deviation, $s$. Round to 2 decimal places if you need to.
+
+  \vspace{0.6em}
+  \ans{$s = \sqrt{\frac{\Sigma(x - \bar{x})^2}{n - 1}} = \sqrt{\frac{36}{4}} = \sqrt{9} = 3$ bikes}
+\end{enumerate}
+\end{minipage}
+
+\vspace{1.4em}
+Four friends scored these points on a 10-point quiz.
+\begin{center}9,\; 5,\; 8,\; 6\end{center}
+\begin{minipage}[t]{0.5\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}[start=3]
+  \item Find the mean, $\bar{x}$. Then complete the table.
+
+  \vspace{0.5em}
+  $\bar{x} =$ \underline{\makebox[1.3in]{\ans{$28 \div 4 = 7$}}}
+
+  \vspace{0.6em}
+  \begin{sdtable}
+  \sdrow{9}{2}{4}
+  \sdrow{5}{$-2$}{4}
+  \sdrow{8}{1}{1}
+  \sdrow{6}{$-1$}{1}
+  \multicolumn{2}{|r|}{$\Sigma(x - \bar{x})^2$} & \ans{10} \\ \hline
+  \end{sdtable}
+\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.47\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}[start=4]
+  \item Find the standard deviation, $s$. Round to 2 decimal places.
+
+  \vspace{0.6em}
+  \ans{$s = \sqrt{\frac{10}{4 - 1}} = \sqrt{\frac{10}{3}} \approx \sqrt{3.33} \approx 1.83$ points}
+\end{enumerate}
+\end{minipage}
+
+\newpage
+\item \goal{I compare the spread of data sets by looking at graphs, and I explain what the standard deviation tells about data.}
+Each dot plot has 10 values and a mean of 6.
+\begin{center}\fig{Unit_2/Review_sd_three_plots}\end{center}
+\begin{enumerate}[itemsep=1.2em]
+  \item Put the dot plots in order from the \textbf{smallest} SD to the \textbf{largest} SD. \ans{\quad L, J, K}
+  \item Explain your order.
+
+  \ans{The values in L are packed close to 6. The values in K are far from 6.\\
+  (The SDs are about 0.82, 1.83, and 3.94.)}
+  \work{2.5em}
+  \item The SD of plot K is about 3.94. What does that number tell you?
+
+  \ans{The values in K are usually about 4 away from the mean of 6.}
+  \work{2.5em}
+  \item A data set has an SD of 0. What do you know about its values?
+
+  \ans{All the values are the same. Every value is equal to the mean.}
+  \work{2em}
+  \item Set M is 40, 45, 50, 55, 60. Set N is 48, 49, 50, 51, 52. Both have a mean of 50. Without calculating, which set has the larger SD? Explain.
+
+  \ans{Set M. Its values are farther from 50.}
+  \work{2em}
+  \item Can a standard deviation be negative? Explain.
+
+  \ans{No. It comes from adding squares (never negative) and taking a square root.}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{2.2 - Choosing Measures and Comparing Distributions}
+\begin{enumerate}[resume]
+
+\item \goal{I choose mean and SD or median and IQR based on the shape of the data.}
+For each data set, circle the measures you should use. Then explain.
+\begin{enumerate}[itemsep=1.1em]
+  \item The heights of 500 corn plants in a field. The histogram is symmetric, with no outliers.
+
+  \pairans{mean and SD}\hspace{1em}\pair{median and IQR}\hspace{1.5em}\ans{The data is symmetric with no outliers.}
+  \work{1.2em}
+  \item The number of followers 40 students have on a social media app. The histogram is skewed right.
+
+  \pair{mean and SD}\hspace{1em}\pairans{median and IQR}\hspace{1.5em}\ans{The data is skewed.}
+  \work{1.2em}
+  \item Scores on a very easy test. The histogram is skewed left.
+
+  \pair{mean and SD}\hspace{1em}\pairans{median and IQR}\hspace{1.5em}\ans{The data is skewed.}
+  \work{1.2em}
+  \item The times 200 students took to run a mile. The histogram is symmetric, with no outliers.
+
+  \pairans{mean and SD}\hspace{1em}\pair{median and IQR}\hspace{1.5em}\ans{The data is symmetric with no outliers.}
+  \work{1.2em}
+  \item Minutes 7 students spent on homework: \; 30,\; 35,\; 40,\; 40,\; 45,\; 50,\; 120
+
+  \pair{mean and SD}\hspace{1em}\pairans{median and IQR}\hspace{1.5em}\ans{120 is an outlier.}
+
+  \ans{Q1 $= 35$, Q3 $= 50$, IQR $= 15$. Upper fence $= 50 + 1.5 \times 15 = 72.5$, and 120 is above it.}
+  \work{2.5em}
+  \item High temperatures for 9 days, in $^\circ$F: \; 70,\; 72,\; 73,\; 74,\; 75,\; 76,\; 77,\; 78,\; 80
+
+  \pairans{mean and SD}\hspace{1em}\pair{median and IQR}\hspace{1.5em}\ans{Symmetric (mean $=$ median $= 75$), no outliers.}
+
+  \ans{Q1 $= 72.5$, Q3 $= 77.5$, IQR $= 5$. Fences: 65 and 85. No value is outside them.}
+  \work{2.5em}
+  \item For the homework data in (e), find the mean and the median. Which one better describes a typical student? Explain.
+
+  \ans{Mean $= 360 \div 7 \approx 51.4$ minutes. Median $= 40$ minutes. The median is better. 120 pulls the mean up, and 6 of the 7 students spent less than the mean.}
+  \work{4em}
+\end{enumerate}
+
+\newpage
+\item \goal{I compare two distributions using shape, center, spread, and outliers.}
+These dot plots show how many hours students in two clubs volunteered last month. Each club has 20 students.
+
+\vspace{0.3em}
+\begin{minipage}[t]{0.6\linewidth}\vspace{0pt}\raggedright
+\fig{Unit_2/Review_volunteer_dot_plots}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.37\linewidth}\vspace{0.8em}\raggedright
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|l|c|c|c|c|}\hline
+ & Q1 & Median & Q3 & IQR \\ \hline
+Art & 4 & 5.5 & 7 & 3 \\ \hline
+Science & 1 & 2 & 3.5 & 2.5 \\ \hline
+\end{tabular}
+\end{minipage}
+
+\vspace{0.4em}
+\begin{enumerate}[itemsep=1em]
+  \item Describe the shape of each club's data. \ans{\quad The art club is symmetric. The science club is skewed right.}
+  \work{1em}
+  \item Compare the centers. Use numbers and the context.
+
+  \ans{The median for the art club (5.5 hours) is greater than for the science club (2 hours). Art club students usually volunteered 3.5 hours more.}
+  \work{2.5em}
+  \item Compare the spreads. Use numbers.
+
+  \ans{The IQR for the art club (3 hours) is a little greater than for the science club (2.5 hours). The middle half of the art club is a little more spread out.}
+  \work{2.5em}
+  \item Does either club have an outlier? Explain.
+
+  \ans{Yes. One science club student volunteered 13 hours. The upper fence is $3.5 + 1.5 \times 2.5 = 7.25$, and 13 is above it.}
+  \work{2.5em}
+  \item Should you compare these clubs with the mean and SD or with the median and IQR? Why?
+
+  \ans{The median and IQR. The science club is skewed right and has an outlier.}
+\end{enumerate}
+
+\vspace{1.4em}
+Two pizza places recorded their delivery times. Both histograms are symmetric.
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|l|c|c|}\hline
+ & Mean & SD \\ \hline
+Place A & 30 minutes & 3 minutes \\ \hline
+Place B & 26 minutes & 8 minutes \\ \hline
+\end{tabular}
+\end{center}
+\begin{enumerate}[start=6,itemsep=1em]
+  \item Which place is faster on average? \ans{\quad Place B, by 4 minutes.}
+  \item Which place has delivery times that are more spread out? \ans{\quad Place B. Its SD is larger.}
+  \item Write one sentence that compares the two places. Use both the center and the spread.
+
+  \ans{Place B is faster on average (26 vs 30 minutes), but its times are more spread out (SD 8 vs 3 minutes).}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{2.3 - Percentiles and Z-Scores}
+\begin{enumerate}[resume]
+
+\item \goal{I find the percentile of a value.}
+20 students said how many minutes they practiced a musical instrument yesterday. Here are the times, in order.
+\begin{center}10,\; 12,\; 15,\; 18,\; 20,\; 24,\; 25,\; 28,\; 30,\; 32,\; 35,\; 36,\; 40,\; 42,\; 45,\; 48,\; 50,\; 55,\; 60,\; 90\end{center}
+\begin{enumerate}[itemsep=1.2em]
+  \item What percentile is 40 minutes? \ans{\quad 12 times are below 40. \; $12 \div 20 = 0.60$, the 60th percentile}
+  \work{1em}
+  \item What percentile is 15 minutes? \ans{\quad 2 times are below 15. \; $2 \div 20 = 0.10$, the 10th percentile}
+  \work{1em}
+  \item Which time is at the 25th percentile? \ans{\quad 25\% of 20 is 5 times below it. The 6th time: \textbf{24 minutes}}
+  \work{1em}
+  \item Which time is at the 90th percentile? \ans{\quad 90\% of 20 is 18 times below it. The 19th time: \textbf{60 minutes}}
+  \work{1em}
+\end{enumerate}
+
+\vspace{0.6em}
+This dot plot shows how many goals 25 hockey players scored this season.
+\begin{center}\fig{Unit_2/Review_goals_dot_plot}\end{center}
+\begin{enumerate}[start=5,itemsep=1.2em]
+  \item What percentile is 6 goals? \ans{\quad $2 + 3 + 4 + 5 + 4 = 18$ below. \; $18 \div 25 = 0.72$, the 72nd percentile}
+  \work{1em}
+  \item What percentile is 3 goals? \ans{\quad $2 + 3 = 5$ below. \; $5 \div 25 = 0.20$, the 20th percentile}
+  \work{1em}
+  \item Nadia says, ``My test score is at the 90th percentile, so I got 90\% of the questions right.'' Explain her mistake.
+
+  \ans{A percentile is not a percent score. She scored higher than 90\% of the students. It does not tell what percent of the questions she got right.}
+\end{enumerate}
+
+\newpage
+\item \goal{I find and explain a z-score, and I compare values from different data sets with z-scores.}
+Scores on a spelling test have a mean $\mu = 50$ and an SD $\sigma = 6$. Find the z-score of each score. Then say what it means.
+\begin{enumerate}[itemsep=1.2em]
+  \item 62 \ans{\quad $z = \frac{62 - 50}{6} = 2$. \; 2 SDs above the mean.}
+  \work{1.5em}
+  \item 47 \ans{\quad $z = \frac{47 - 50}{6} = -0.5$. \; Half an SD below the mean.}
+  \work{1.5em}
+  \item 50 \ans{\quad $z = \frac{50 - 50}{6} = 0$. \; Equal to the mean.}
+  \work{1.5em}
+  \item 41 \ans{\quad $z = \frac{41 - 50}{6} = -1.5$. \; 1.5 SDs below the mean.}
+  \work{1.5em}
+\end{enumerate}
+
+\vspace{0.6em}
+Omar and Lena compete in different events.
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|l|l|c|c|c|}\hline
+Athlete & Event & Jump & Mean $\mu$ & SD $\sigma$ \\ \hline
+Omar & long jump & 5.6 m & 5.0 m & 0.3 m \\ \hline
+Lena & high jump & 1.55 m & 1.40 m & 0.10 m \\ \hline
+\end{tabular}
+\end{center}
+\begin{enumerate}[start=5,itemsep=1.2em]
+  \item Find each athlete's z-score.
+
+  \ans{Omar: $z = \frac{5.6 - 5.0}{0.3} = \frac{0.6}{0.3} = 2$ \qquad Lena: $z = \frac{1.55 - 1.40}{0.10} = \frac{0.15}{0.10} = 1.5$}
+  \work{3em}
+  \item Lena jumped 1.55 m and Omar jumped 5.6 m. Who did better compared to the others in the event? Explain.
+
+  \ans{Omar. His z-score (2) is larger than Lena's (1.5). Their jumps are in different events, so we compare z-scores, not meters.}
+  \work{2.5em}
+\end{enumerate}
+
+\vspace{0.6em}
+Go back to the spelling test ($\mu = 50$, $\sigma = 6$). Use $x = \mu + z\sigma$.
+\begin{enumerate}[start=7,itemsep=1.2em]
+  \item What score has a z-score of 1.5? \ans{\quad $50 + 1.5 \times 6 = 50 + 9 = 59$}
+  \work{1.5em}
+  \item What score has a z-score of $-2$? \ans{\quad $50 + (-2)(6) = 50 - 12 = 38$}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{2.4 - Normal Distributions and the Empirical Rule}
+\begin{enumerate}[resume]
+
+\item \goal{I use the empirical rule (68-95-99.7) to find percents, and I find the percentile of a value 1, 2, or 3 SDs from the mean.}
+The heights of sunflowers in a field have a normal distribution. The mean is 180 cm and the SD is 12 cm.
+\begin{enumerate}[itemsep=1.1em]
+  \item Label the number line with the heights.
+
+  \begin{center}\labelcurve{-3/144,-2/156,-1/168,0/180,1/192,2/204,3/216}{Height of a sunflower (cm)}\end{center}
+  \item About what percent of the sunflowers are from 168 to 192 cm tall? \ans{\quad 68\%}
+  \item About what percent are from 156 to 204 cm tall? \ans{\quad 95\%}
+  \item About what percent are taller than 192 cm? \ans{\quad $13.5 + 2.35 + 0.15 = 16\%$}
+  \item About what percent are shorter than 156 cm? \ans{\quad $2.35 + 0.15 = 2.5\%$}
+  \item About what percent are from 180 to 204 cm tall? \ans{\quad $34 + 13.5 = 47.5\%$}
+  \item About what percent are from 192 to 216 cm tall? \ans{\quad $13.5 + 2.35 = 15.85\%$}
+  \item What percentile is a height of 204 cm? \ans{\quad 2 SDs above. \; $100 - 2.5 = 97.5$, the 97.5th percentile}
+  \item What percentile is a height of 168 cm? \ans{\quad 1 SD below. \; $0.15 + 2.35 + 13.5 = 16$, the 16th percentile}
+\end{enumerate}
+
+\newpage
+\item \goal{I describe a normal distribution, and I compare normal curves with different means and SDs.}
+The three curves are normal distributions.
+\begin{center}\fig{Unit_2/Review_three_curves}\end{center}
+\begin{enumerate}[itemsep=1.1em]
+  \item Which two curves have the same mean? \ans{\quad X and Y (both 12)}
+  \item Which two curves have the same SD? \ans{\quad X and Z (same width and shape)}
+  \item Which curve has the smallest SD? Explain. \ans{\quad Y. It is the tallest and the narrowest.}
+  \work{1em}
+  \item How are X and Z the same? How are they different?
+
+  \ans{Same SD (same width and shape). Different means: X is centered at 12, Z at 24.}
+  \work{2em}
+\end{enumerate}
+
+\vspace{0.4em}
+Would each data set have a normal distribution? Explain.
+\begin{enumerate}[start=5,itemsep=1.1em]
+  \item The heights of 1,000 adult women. \ans{\quad Yes. Heights are bell-shaped and symmetric.}
+  \work{1em}
+  \item The prices of every car sold in a city. \ans{\quad No. A few very expensive cars make it skewed right.}
+  \work{1em}
+  \item Scores on a very hard test. \ans{\quad No. Most scores are low, so it is skewed right.}
+  \work{1em}
+  \item Which statement is true for every normal distribution? Circle the letter.
+  \choices{\opt{A} & About 95\% of the data is within 1 SD of the mean.}
+          {\opt{B} & A larger SD makes the curve taller and narrower.}
+          {\optans{C} & The curve is symmetric about the mean.}
+          {\opt{D} & The median is greater than the mean.}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{2.5 - Normal Calculations with a Z-Table}
+Use the z-table.
+\begin{enumerate}[resume]
+
+\item \goal{I read a z-table.}
+\begin{minipage}[t]{0.48\linewidth}\vspace{0pt}\raggedright
+Find the area \textbf{below} each z-score.
+\begin{enumerate}[itemsep=1.2em]
+  \item $z = 0.36$ \ans{\quad .6406}
+  \item $z = -2.15$ \ans{\quad .0158}
+  \item $z = 1.82$ \ans{\quad .9656}
+  \item $z = -0.07$ \ans{\quad .4721}
+\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\linewidth}\vspace{0pt}\raggedright
+Find the area \textbf{above} each z-score.
+\begin{enumerate}[start=5,itemsep=1.2em]
+  \item $z = 0.95$ \ans{\quad $1 - .8289 = .1711$}
+  \item $z = -1.38$ \ans{\quad $1 - .0838 = .9162$}
+\end{enumerate}
+
+\vspace{1.2em}
+Find the area \textbf{between} the two z-scores.
+\begin{enumerate}[start=7,itemsep=1.2em]
+  \item $z = -2$ and $z = 2$ \ans{\quad $.9772 - .0228 = .9544$}
+  \item $z = 0.25$ and $z = 1.75$ \ans{\quad $.9599 - .5987 = .3612$}
+\end{enumerate}
+\end{minipage}
+
+\vspace{1em}
+\item \goal{I find the percent of data below, above, or between values in a normal distribution.}
+The lengths of movies at a theater have a normal distribution with a mean of 110 minutes and an SD of 12 minutes. What percent of the movies are:
+\begin{enumerate}[itemsep=1em]
+  \item shorter than 125 minutes?
+
+  \ans{$z = \frac{125 - 110}{12} = 1.25$. \; Table: .8944. \; \textbf{89.44\%}}
+  \work{4em}
+  \item longer than 128 minutes?
+
+  \ans{$z = \frac{128 - 110}{12} = 1.5$. \; $1 - .9332 = .0668$. \; \textbf{6.68\%}}
+  \work{4em}
+  \item from 100 to 120 minutes long?
+
+  \ans{$z = \frac{100 - 110}{12} = -0.83$, table .2033. \; $z = \frac{120 - 110}{12} = 0.83$, table .7967. \; $.7967 - .2033 = .5934$. \; \textbf{59.34\%}}
+  \work{4em}
+\end{enumerate}
+
+\newpage
+Bags of trail mix have weights with a normal distribution. The mean is 250 grams and the SD is 4 grams. What percent of the bags weigh:
+\begin{enumerate}[start=4,itemsep=1em]
+  \item less than 245 grams?
+
+  \ans{$z = \frac{245 - 250}{4} = -1.25$. \; Table: .1056. \; \textbf{10.56\%}}
+  \work{4em}
+  \item more than 251 grams?
+
+  \ans{$z = \frac{251 - 250}{4} = 0.25$. \; $1 - .5987 = .4013$. \; \textbf{40.13\%}}
+  \work{4em}
+  \item from 247 to 256 grams?
+
+  \ans{$z = \frac{247 - 250}{4} = -0.75$, table .2266. \; $z = \frac{256 - 250}{4} = 1.5$, table .9332. \; $.9332 - .2266 = .7066$. \; \textbf{70.66\%}}
+  \work{4em}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{2.6 - Normal Calculations in Reverse}
+Use the z-table.
+\begin{enumerate}[resume]
+
+\item \goal{I find the z-score for a percentile with the z-table, and I find the value at a percentile in a normal distribution.}
+Find the z-score at each percentile.
+\begin{enumerate}[itemsep=1.2em]
+  \item 72nd percentile \ans{\quad area .7200. Closest area .7190: \; $z = 0.58$}
+  \item 15th percentile \ans{\quad area .1500. Closest area .1492: \; $z = -1.04$}
+  \item 99th percentile \ans{\quad area .9900. Closest area .9901: \; $z = 2.33$}
+  \item 42nd percentile \ans{\quad area .4200. Closest area .4207: \; $z = -0.20$}
+\end{enumerate}
+
+\vspace{0.8em}
+The times to finish one level of a puzzle game have a normal distribution. The mean is 90 seconds and the SD is 15 seconds.
+\begin{enumerate}[start=5,itemsep=1em]
+  \item What time is at the 72nd percentile?
+
+  \ans{$z = 0.58$. \; $x = \mu + z\sigma = 90 + 0.58 \times 15 = 90 + 8.7 = 98.7$ seconds}
+  \work{4em}
+  \item What time is at the 15th percentile?
+
+  \ans{$z = -1.04$. \; $90 + (-1.04)(15) = 90 - 15.6 = 74.4$ seconds}
+  \work{4em}
+\end{enumerate}
+
+\item \goal{I find cutoffs for ``top'' and ``bottom'' percents.}
+Typing speeds in a class have a normal distribution. The mean is 40 words per minute and the SD is 6 words per minute.
+\begin{enumerate}[itemsep=1em]
+  \item The top 2\% get a certificate. How fast must a student type to get one?
+
+  \ans{Top 2\%: the area to the left is $1 - .02 = .98$. Closest area .9798: \; $z = 2.05$.\\
+  $40 + 2.05 \times 6 = 40 + 12.3 = 52.3$ words per minute}
+  \work{4em}
+  \item Students in the bottom 25\% get extra practice. Below what speed does a student get extra practice?
+
+  \ans{Bottom 25\%: the area is .25. Closest area .2514: \; $z = -0.67$.\\
+  $40 + (-0.67)(6) = 40 - 4.02 = 35.98$. About \textbf{36.0 words per minute}}
+  \work{4em}
+\end{enumerate}
+
+\newpage
+The weights of pumpkins at a farm have a normal distribution. The mean is 12 pounds and the SD is 2 pounds.
+\begin{enumerate}[start=3,itemsep=1em]
+  \item The heaviest 10\% are sold as ``giant'' pumpkins. How heavy must a pumpkin be to be giant?
+
+  \ans{Top 10\%: the area to the left is $1 - .10 = .90$. Closest area .8997: \; $z = 1.28$.\\
+  $12 + 1.28 \times 2 = 12 + 2.56 = 14.56$ pounds}
+  \work{4em}
+  \item The lightest 20\% are used to make pies. Below what weight is a pumpkin used for pie?
+
+  \ans{Bottom 20\%: the area is .20. Closest area .2005: \; $z = -0.84$.\\
+  $12 + (-0.84)(2) = 12 - 1.68 = 10.32$ pounds}
+  \work{4em}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{Test-Style Questions}
+A test asks the same questions with more words. Read slowly. Circle the best answer.
+
+\begin{enumerate}[resume,itemsep=1.2em]
+
+\item Each data set below has a mean of 50. Which data set has the greatest standard deviation?
+\choices{\opt{A} & 48, 49, 50, 51, 52}
+        {\optans{B} & 30, 40, 50, 60, 70}
+        {\opt{C} & 45, 50, 50, 50, 55}
+        {\opt{D} & 50, 50, 50, 50, 50}
+
+\item A restaurant recorded the number of minutes that each of 50 customers waited for a table. The distribution of the wait times is strongly skewed to the right and has several outliers. Which measures of center and spread are most appropriate to describe the wait times?
+\choices{\optans{A} & the median and the interquartile range}
+        {\opt{B} & the mean and the standard deviation}
+        {\opt{C} & the mean and the interquartile range}
+        {\opt{D} & the median and the standard deviation}
+
+\item On a science test, the class mean was 72 points with a standard deviation of 6 points. On a history test, the class mean was 80 points with a standard deviation of 5 points. Mia scored 84 points on the science test and 88 points on the history test. Which statement is true?
+\choices{\opt{A} & Mia did better on the history test compared to her class, because 88 is greater than 84.}
+        {\opt{B} & Mia did equally well on both tests compared to her class, because both scores are above the class mean.}
+        {\opt{C} & Mia's history score was 1.6 points above the class mean.}
+        {\optans{D} & Mia did better on the science test compared to her class, because her z-score was greater on that test.}
+\par\ans{Science: $z = \frac{84 - 72}{6} = 2$. \; History: $z = \frac{88 - 80}{5} = 1.6$. \; C is wrong: 88 is 8 points (1.6 SDs) above the mean.}
+
+\newpage
+
+\item The lifetimes of a type of light bulb are approximately normally distributed with a mean of 900 hours and a standard deviation of 50 hours. According to the empirical rule, approximately what percent of the light bulbs last between 800 hours and 950 hours?
+\choices{\opt{A} & 47.5\%}
+        {\opt{B} & 68\%}
+        {\optans{C} & 81.5\%}
+        {\opt{D} & 95\%}
+\par\ans{800 is 2 SDs below the mean and 950 is 1 SD above. \; $13.5 + 34 + 34 = 81.5\%$}
+
+\item The scores on a math contest are approximately normally distributed with a mean of 60 points and a standard deviation of 8 points. Use the z-table. What proportion of the scores are greater than 74 points?
+\choices{\optans{A} & .0401}
+        {\opt{B} & .4599}
+        {\opt{C} & .5401}
+        {\opt{D} & .9599}
+\par\ans{$z = \frac{74 - 60}{8} = 1.75$. \; $1 - .9599 = .0401$}
+
+\item The weights of watermelons at a farm are approximately normally distributed with a mean of 20 pounds and a standard deviation of 2.5 pounds. The heaviest 3\% of the watermelons win a blue ribbon. Use the z-table. Which weight is closest to the lightest watermelon that wins a blue ribbon?
+\choices{\opt{A} & 15.3 pounds}
+        {\opt{B} & 22.5 pounds}
+        {\optans{C} & 24.7 pounds}
+        {\opt{D} & 25.0 pounds}
+\par\ans{Area to the left $= 1 - .03 = .97$. Closest area .9699: \; $z = 1.88$. \; $20 + 1.88 \times 2.5 = 24.7$}
+
+\end{enumerate}
+
+\end{document}

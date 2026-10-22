@@ -1,0 +1,16 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \fill[gray!12] (0,0) -- (1.6,0) arc (0:90:1.6) -- cycle;
+  \fill[gray!30] (0,0) -- (0,-1.6) arc (270:360:1.6) -- cycle;
+  \draw[thick] (0,0) circle (1.6);
+  \draw[thick] (-1.6,0) -- (1.6,0) (0,-1.6) -- (0,1.6);
+  \node[font=\large] at (135:0.95) {\$0};
+  \node[font=\large] at (45:0.95) {\$1};
+  \node[font=\large] at (315:0.95) {\$5};
+  \node[font=\large] at (225:0.95) {\$0};
+  \draw[very thick,->,>=stealth] (0,0) -- (70:1.25);
+  \fill (0,0) circle (2.5pt);
+\end{tikzpicture}
+\end{document}

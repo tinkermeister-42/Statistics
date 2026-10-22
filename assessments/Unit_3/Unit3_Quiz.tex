@@ -1,0 +1,171 @@
+\documentclass[11pt]{article}
+\input{../../handouts/preamble}
+% Unit quiz: two questions per mini lesson, each headed by the lesson's
+% objective.  The key keeps every box the same height as the student copy,
+% so key page N lines up with quiz page N.
+\newcommand{\lessonhead}[1]{\par\vspace{0.6em}{\large\bfseries #1}\par\vspace{0.25em}\hrule\vspace{0.6em}}
+\newcommand{\goal}[1]{\textbf{#1}\par\vspace{0.35em}}
+% answer box: same height on both copies, answer printed only on the key
+\newcommand{\abox}[2]{\par\begin{minipage}[t][#1][t]{\linewidth}\raggedright\vspace{0.2em}\ans{#2}\end{minipage}\par}
+% circled choices: \opt{A} prints plain; \optans{B} is circled in red on the key
+\newcommand{\opt}[1]{\tikz[baseline=(c.base)]\node[rounded corners=0.6em,inner sep=2.5pt](c){#1};}
+% (the ring is an overlay, so it takes no space and the key keeps the student layout)
+\newcommand{\optans}[1]{\ifkey\tikz[baseline=(c.base)]{\node[rounded corners=0.6em,inner sep=2.5pt,text=keyred](c){#1};\draw[overlay,keyred,thick,rounded corners=0.6em] (c.south west) rectangle (c.north east);}\else\opt{#1}\fi}
+% centred fixed-width table column, so a blank cell is as wide as a filled one
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\setlist[enumerate,2]{label=(\alph*),leftmargin=2em,itemsep=0.3em}
+\setlist[enumerate,1]{leftmargin=1.5em,itemsep=1em}
+\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000
+
+\begin{document}
+
+\lessontitle{Unit 3 Quiz: Two-Way Tables}
+
+Show your work.
+
+% ======================================================================
+\lessonhead{3.1 - Two-Way Tables and Relative Frequency}
+\begin{enumerate}
+
+\item \goal{I read a two-way table, and I fill in missing numbers in it.}
+100 students in 9th and 10th grade chose their favorite sport. Each student chose one sport.
+\begin{enumerate}
+  \item Fill in the missing numbers. Show your work below the table.
+
+  \begin{center}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{|l|C{0.95in}|C{0.95in}|C{0.95in}|C{0.95in}|}\hline
+   & \textbf{Soccer} & \textbf{Basketball} & \textbf{Volleyball} & \textbf{Total} \\ \hline
+  \textbf{9th grade} & 24 & \ans{17} & 11 & \ans{52} \\ \hline
+  \textbf{10th grade} & \ans{21} & 15 & \ans{12} & 48 \\ \hline
+  \textbf{Total} & 45 & \ans{32} & 23 & 100 \\ \hline
+  \end{tabular}
+  \end{center}
+  \abox{11em}{10th grade, soccer: $45 - 24 = 21$ \qquad 10th grade, volleyball: $23 - 11 = 12$\\[0.4em]
+  9th grade total: $100 - 48 = 52$ \qquad 9th grade, basketball: $52 - 24 - 11 = 17$\\[0.4em]
+  Basketball total: $17 + 15 = 32$\\[0.4em]
+  Check: $21 + 15 + 12 = 48$ \; and \; $45 + 32 + 23 = 100$}
+  \item How many students are 10th graders who chose soccer?
+  \abox{3.5em}{21 students}
+  \item How many students did \textbf{not} choose volleyball?
+  \abox{3.5em}{$100 - 23 = 77$ students}
+  \item How many 9th graders did \textbf{not} choose soccer?
+  \abox{3.5em}{$52 - 24 = 28$ students}
+\end{enumerate}
+
+\newpage
+\item \goal{I move between a Venn diagram and a two-way table, and I make a relative frequency table.}
+This Venn diagram shows the music that 40 students like.
+
+\vspace{0.4em}
+\begin{minipage}[t]{0.42\linewidth}\vspace{0pt}\raggedright
+\scalebox{0.8}{\venn{Likes rap}{Likes pop}{12}{8}{14}{6}}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.55\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}
+  \item Make a two-way table from the Venn diagram.
+
+  \vspace{0.5em}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{|l|C{0.6in}|C{0.6in}|C{0.6in}|}\hline
+   & \textbf{Pop} & \textbf{No pop} & \textbf{Total} \\ \hline
+  \textbf{Rap} & \ans{8} & \ans{12} & \ans{20} \\ \hline
+  \textbf{No rap} & \ans{14} & \ans{6} & \ans{20} \\ \hline
+  \textbf{Total} & \ans{22} & \ans{18} & \ans{40} \\ \hline
+  \end{tabular}
+\end{enumerate}
+\end{minipage}
+
+\vspace{1em}
+\begin{enumerate}[start=2,itemsep=0.9em]
+  \item Make a relative frequency table. Divide each count by 40. Write percents.
+
+  \begin{center}
+  \renewcommand{\arraystretch}{2.6}
+  \begin{tabular}{|l|C{1.15in}|C{1.15in}|C{1.15in}|}\hline
+   & \textbf{Pop} & \textbf{No pop} & \textbf{Total} \\ \hline
+  \textbf{Rap} & \ans{$\frac{8}{40} = 20\%$} & \ans{$\frac{12}{40} = 30\%$} & \ans{$\frac{20}{40} = 50\%$} \\ \hline
+  \textbf{No rap} & \ans{$\frac{14}{40} = 35\%$} & \ans{$\frac{6}{40} = 15\%$} & \ans{$\frac{20}{40} = 50\%$} \\ \hline
+  \textbf{Total} & \ans{$\frac{22}{40} = 55\%$} & \ans{$\frac{18}{40} = 45\%$} & \ans{100\%} \\ \hline
+  \end{tabular}
+  \end{center}
+  \item What percent of all the students like at least one of the two kinds of music?
+  \abox{5.5em}{$12 + 8 + 14 = 34$ students. \quad $\frac{34}{40} = 85\%$ \qquad (Or: $100\% - 15\% = 85\%$)}
+  \item Which statement is supported by the relative frequency table? Circle the letter.
+
+  \vspace{0.3em}
+  \renewcommand{\arraystretch}{1.3}
+  \begin{tabular}{@{}ll}
+  \opt{A} & 8\% of the students like both rap and pop.\\
+  \optans{B} & 55\% of the students like pop.\\
+  \opt{C} & 30\% of the students like neither rap nor pop.\\
+  \opt{D} & 35\% of the students like rap but not pop.\\
+  \end{tabular}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{3.2 - Marginal and Conditional Distributions}
+\begin{enumerate}[resume]
+
+\item \goal{I find a marginal distribution and a conditional distribution.}
+80 students in 10th and 11th grade chose their favorite school subject.
+\begin{center}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{|l|C{0.8in}|C{0.8in}|C{0.8in}|C{0.8in}|}\hline
+ & \textbf{Math} & \textbf{Science} & \textbf{Art} & \textbf{Total} \\ \hline
+\textbf{10th grade} & 12 & 9 & 9 & 30 \\ \hline
+\textbf{11th grade} & 18 & 21 & 11 & 50 \\ \hline
+\textbf{Total} & 30 & 30 & 20 & 80 \\ \hline
+\end{tabular}
+\end{center}
+\begin{enumerate}
+  \item Find the marginal distribution of favorite subject.
+  \abox{9.5em}{Divide each total by the grand total, 80.\\[0.4em]
+  Math $\frac{30}{80} = 37.5\%$ \qquad Science $\frac{30}{80} = 37.5\%$ \qquad Art $\frac{20}{80} = 25\%$}
+  \item Find the conditional distribution of favorite subject for 11th graders.
+  \abox{9.5em}{Divide by the 11th grade total, 50.\\[0.4em]
+  Math $\frac{18}{50} = 36\%$ \qquad Science $\frac{21}{50} = 42\%$ \qquad Art $\frac{11}{50} = 22\%$}
+  \item Is each statement a \textbf{marginal} or a \textbf{conditional} percent? Circle one.
+
+  \vspace{0.6em}
+  \renewcommand{\arraystretch}{1.8}
+  \begin{tabular}{@{}p{3.6in}ll}
+  25\% of all the students chose art. & \optans{Marginal} & \opt{Conditional}\\
+  Of the 10th graders, 40\% chose math. & \opt{Marginal} & \optans{Conditional}\\
+  \end{tabular}
+\end{enumerate}
+
+\newpage
+\item \goal{I choose the right total to divide by, and I decide if two categorical variables are associated.}
+A student recorded the weather and the school bus for 75 school days.
+\begin{center}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{|l|C{0.9in}|C{0.9in}|C{0.9in}|}\hline
+ & \textbf{Bus late} & \textbf{Bus on time} & \textbf{Total} \\ \hline
+\textbf{Rain} & 9 & 6 & 15 \\ \hline
+\textbf{No rain} & 12 & 48 & 60 \\ \hline
+\textbf{Total} & 21 & 54 & 75 \\ \hline
+\end{tabular}
+\end{center}
+\begin{enumerate}
+  \item On what percent of the rainy days was the bus late?
+  \abox{6.5em}{Divide by the rain total, 15. \quad $\frac{9}{15} = 60\%$}
+  \item On what percent of the days with no rain was the bus late?
+  \abox{6.5em}{Divide by the no rain total, 60. \quad $\frac{12}{60} = 20\%$}
+  \item Is rain associated with a late bus? Explain.
+  \abox{7.5em}{Yes. The percents are different. The bus was late on 60\% of the rainy days, but on only 20\% of the days with no rain.}
+  \item Of the days when the bus was late, what percent had rain? Which fraction gives the answer? Circle the letter.
+
+  \vspace{0.4em}
+  \renewcommand{\arraystretch}{2.3}
+  \begin{tabular}{@{}l@{\hspace{0.4em}}l@{\hspace{3em}}l@{\hspace{0.4em}}l@{\hspace{3em}}l@{\hspace{0.4em}}l@{\hspace{3em}}l@{\hspace{0.4em}}l}
+  \opt{A} & $\dfrac{9}{15}$ & \optans{B} & $\dfrac{9}{21}$ & \opt{C} & $\dfrac{9}{75}$ & \opt{D} & $\dfrac{21}{75}$\\
+  \end{tabular}
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
