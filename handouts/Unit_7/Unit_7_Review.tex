@@ -215,7 +215,7 @@ A spinner has 3 equal parts, numbered 1, 2, and 3. Spin it 2 times. Let $X$ = th
   \item List all 9 outcomes and the sum for each.
 
   \ans{1+1 = 2, \; 1+2 = 3, \; 1+3 = 4, \; 2+1 = 3, \; 2+2 = 4, \; 2+3 = 5, \; 3+1 = 4, \; 3+2 = 5, \; 3+3 = 6}
-  \work{3em}
+  \work{6em}
   \item Make the theoretical probability distribution of $X$.
 
   \vspace{0.3em}
@@ -289,7 +289,7 @@ $x \cdot P(x)$ & \ans{0} & \ans{0.45} & \ans{0.40} & \ans{0.30}\\ \hline
 
   \ans{Over many games, the player gets about 1.15 hits per game, on average.}
   \work{2.5em}
-  \item A student says, ``No game has 1.15 hits, so the expected value is wrong.'' Explain the mistake.
+  \item A student says, ``The expected value must be wrong. A player cannot get part of a hit.'' Explain the mistake.
 
   \ans{The expected value is a long-run average. It does not have to be a value that can happen in one game.}
   \work{3em}
@@ -313,7 +313,15 @@ $P(x)$ & $\dfrac{1}{16}$ & $\dfrac{4}{16}$ & $\dfrac{6}{16}$ & $\dfrac{4}{16}$ &
 
   \ans{$0 \cdot \frac{1}{16} + 1 \cdot \frac{4}{16} + 2 \cdot \frac{6}{16} + 3 \cdot \frac{4}{16} + 4 \cdot \frac{1}{16} = \frac{0 + 4 + 12 + 12 + 4}{16} = \frac{32}{16} = 2$ heads}
   \work{3em}
-  \item Another name for $E(X)$ is $\mu_X$, the mean of $X$. ($\mu$ is ``mu.'') Find $\mu_X$.
+  \item This distribution is symmetric. How does that help you check your answer to (f)?
+
+  \ans{The probabilities are the same on both sides of 2. So the mean is in the middle, at 2.}
+  \work{2.5em}
+\end{enumerate}
+
+\vspace{0.4em}
+\begin{enumerate}[start=8,itemsep=1em]
+  \item Another name for $E(X)$ is $\mu_X$, the mean of $X$. ($\mu$ is ``mu.'') Find $\mu_X$ for this table.
 
   \vspace{0.3em}
   \renewcommand{\arraystretch}{1.4}
@@ -328,15 +336,19 @@ Rosa, Tam, and Yusuf need to choose who goes first in a game. Is each method fai
   \item Roll a number cube. 1 or 4: Rosa. \; 2 or 5: Tam. \; 3 or 6: Yusuf.
 
   \ans{Fair. Each person has $\frac{2}{6} = \frac{1}{3}$.}
-  \work{2em}
+  \work{3em}
   \item Draw one card from a standard deck. Hearts: Rosa. \; Diamonds: Tam. \; Clubs or spades: Yusuf.
 
   \ans{Not fair. Rosa $\frac{13}{52} = \frac{1}{4}$, \; Tam $\frac{13}{52} = \frac{1}{4}$, \; Yusuf $\frac{26}{52} = \frac{1}{2}$.}
-  \work{2em}
+  \work{3em}
   \item Draw one card from a standard deck. A face card (J, Q, K): Rosa. \; An ace: Tam. \; Any other card: Yusuf.
 
   \ans{Not fair. Rosa $\frac{12}{52}$, \; Tam $\frac{4}{52}$, \; Yusuf $\frac{36}{52}$.}
-  \work{2em}
+  \work{3em}
+  \item Flip a coin. Heads: Rosa. Tails: roll a number cube. 1, 2, or 3: Tam. \; 4, 5, or 6: Yusuf.
+
+  \ans{Not fair. Rosa $\frac{1}{2}$, \; Tam $\frac{1}{2} \cdot \frac{3}{6} = \frac{1}{4}$, \; Yusuf $\frac{1}{2} \cdot \frac{3}{6} = \frac{1}{4}$.}
+  \work{3em}
   \item Change method (b) to make it fair.
 
   \ans{Example: Hearts: Rosa. Diamonds: Tam. Clubs: Yusuf. Spades: draw again.}
@@ -345,7 +357,7 @@ Rosa, Tam, and Yusuf need to choose who goes first in a game. Is each method fai
 
 \vspace{0.4em}
 At a school fair booth, you draw one card from a standard deck. You win $\$6$ if it is a heart. You pay $\$2$ for any other card.
-\begin{enumerate}[start=5,itemsep=1em]
+\begin{enumerate}[start=6,itemsep=1em]
   \item Find the expected value of what you win.
 
   \ans{$6 \cdot \frac{13}{52} + (-2) \cdot \frac{39}{52} = \frac{78}{52} - \frac{78}{52} = 0$}
@@ -356,11 +368,15 @@ At a school fair booth, you draw one card from a standard deck. You win $\$6$ if
 
 \vspace{0.4em}
 At another booth, you flip 2 coins. You win $\$5$ if both are heads. You pay $\$2$ for anything else.
-\begin{enumerate}[start=7,itemsep=1em]
+\begin{enumerate}[start=8,itemsep=1em]
   \item Find the expected value. Is the game fair?
 
   \ans{$5 \cdot \frac{1}{4} + (-2) \cdot \frac{3}{4} = \frac{5}{4} - \frac{6}{4} = -\frac{1}{4} = -\$0.25$. \; Not fair. You lose 25 cents a game, on average.}
   \work{3em}
+  \item You play this game 40 times. About how much money do you expect to win or lose in total?
+
+  \ans{$40 \times (-\$0.25) = -\$10$. \; You expect to lose about $\$10$.}
+  \work{2.5em}
   \item How much should you win for two heads to make the game fair?
 
   \ans{$w \cdot \frac{1}{4} - \frac{6}{4} = 0$, so $w = 6$. \; You should win $\$6$.}
@@ -455,6 +471,10 @@ Plan B costs $\$12$. With Plan B, you still pay $\$100$ if the console needs a r
 
   \ans{Plan A. With no plan, she could get a $\$350$ bill. With Plan B, she could get a $\$100$ bill. Both are more than $\$60$. With Plan A, she never pays more than $\$29$.}
   \work{4em}
+  \item At what price would Plan A cost the same as no plan, on average?
+
+  \ans{$\$21$, the expected repair cost with no plan.}
+  \work{2.5em}
 \end{enumerate}
 
 \end{enumerate}

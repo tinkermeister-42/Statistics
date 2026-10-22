@@ -12,7 +12,7 @@
 \newcommand{\optans}[1]{\ifkey\tikz[baseline=(c.base)]\node[rounded corners=0.6em,inner sep=2.5pt,draw=keyred,thick,text=keyred](c){#1};\else\opt{#1}\fi}
 % blanks on a tree diagram: same width on both copies, filled in red on the key
 \newcommand{\tb}[1]{\underline{\makebox[0.42in]{\ans{#1}}}}
-\newcommand{\te}[1]{\underline{\makebox[1.35in][l]{\ans{#1}}}}
+\newcommand{\te}[1]{\hspace{0.15in}\underline{\makebox[1.2in][l]{\ans{#1}}}}
 \setlist[enumerate,2]{label=(\alph*),leftmargin=2em,itemsep=0.3em}
 \setlist[enumerate,1]{leftmargin=1.5em,itemsep=1em}
 \raggedright\hyphenpenalty=10000\exhyphenpenalty=10000

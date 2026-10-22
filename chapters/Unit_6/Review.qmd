@@ -387,9 +387,9 @@ Work with a partner. Compare answers when you finish each problem.
 
     f. How many codes are there if no digit repeats?
 
-    g. A code uses 3 of the vowels A, E, I, O, U. Repeats are allowed. How many codes are there?
+    g. A code has 3 letters. Each letter is a vowel (A, E, I, O, U). Repeats are allowed. How many codes are there?
 
-    h. Which answer is a permutation, (e) or (f)? Explain.
+    h. Which count is a permutation, (e) or (f)? Explain.
 
 ***
 

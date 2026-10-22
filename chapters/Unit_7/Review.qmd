@@ -201,7 +201,7 @@ Work with a partner. Compare answers when you finish each problem.
 
    c. What does $E(X)$ mean?
 
-   d. A student says, "No game has 1.15 hits, so the expected value is wrong." Explain the mistake.
+   d. A student says, "The expected value must be wrong. A player cannot get part of a hit." Explain the mistake.
 
    e. The player plays 40 games. About how many hits do you expect?
 
@@ -213,7 +213,9 @@ Work with a partner. Compare answers when you finish each problem.
 
    f. Find $E(X)$.
 
-   g. Another name for $E(X)$ is $\mu_X$, the mean of $X$. ($\mu$ is "mu.") Find $\mu_X$.
+   g. This distribution is symmetric. How does that help you check your answer to (f)?
+
+   h. Another name for $E(X)$ is $\mu_X$, the mean of $X$. ($\mu$ is "mu.") Find $\mu_X$ for this table.
 
       | $x$ | 10 | 20 | 50 |
       |---|:---:|:---:|:---:|
@@ -227,19 +229,23 @@ Work with a partner. Compare answers when you finish each problem.
 
    c. Draw one card from a standard deck. A face card (J, Q, K): Rosa. An ace: Tam. Any other card: Yusuf.
 
-   d. Change method (b) to make it fair.
+   d. Flip a coin. Heads: Rosa. Tails: roll a number cube. 1, 2, or 3: Tam. 4, 5, or 6: Yusuf.
+
+   e. Change method (b) to make it fair.
 
    At a school fair booth, you draw one card from a standard deck. You win $\$6$ if it is a heart. You pay $\$2$ for any other card.
 
-   e. Find the expected value of what you win.
+   f. Find the expected value of what you win.
 
-   f. Is the game fair? Explain.
+   g. Is the game fair? Explain.
 
    At another booth, you flip 2 coins. You win $\$5$ if both are heads. You pay $\$2$ for anything else.
 
-   g. Find the expected value. Is the game fair?
+   h. Find the expected value. Is the game fair?
 
-   h. How much should you win for two heads to make the game fair?
+   i. You play this game 40 times. About how much money do you expect to win or lose in total?
+
+   j. How much should you win for two heads to make the game fair?
 
 ***
 
@@ -288,6 +294,8 @@ Work with a partner. Compare answers when you finish each problem.
    f. Which choice costs the least on average: no plan, Plan A, or Plan B?
 
    g. Mia has only $\$60$ saved for surprise bills. Which choice would you tell her to pick? Explain.
+
+   h. At what price would Plan A cost the same as no plan, on average?
 
 ***
 

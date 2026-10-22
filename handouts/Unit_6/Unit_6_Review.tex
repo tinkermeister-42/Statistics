@@ -16,7 +16,7 @@
 \newcommand{\fchoices}[4]{\par\vspace{0.1em}{\renewcommand{\arraystretch}{2.3}\begin{tabular}{@{}l@{\hspace{0.6em}}p{6in}}#1\\#2\\#3\\#4\\\end{tabular}}}
 % blanks on a tree diagram, filled in red on the key
 \newcommand{\tb}[1]{\underline{\makebox[0.42in]{\ans{#1}}}}
-\newcommand{\te}[1]{\underline{\makebox[1.4in][l]{\ans{#1}}}}
+\newcommand{\te}[1]{\hspace{0.15in}\underline{\makebox[1.3in][l]{\ans{#1}}}}
 
 \begin{document}
 
@@ -111,34 +111,34 @@ The 3 players are chosen at random. What is the probability that all 3 are also 
   \item Find $P(R)$.
 
   \ans{$\frac{17 + 9}{50} = \frac{26}{50} = \frac{13}{25} = 0.52$}
-  \work{1.5em}
+  \work{2.5em}
   \item Find $P(\text{not } R)$.
 
   \ans{$1 - \frac{13}{25} = \frac{12}{25} = 0.48$}
-  \work{1.5em}
+  \work{2.5em}
 \end{enumerate}
 \end{minipage}
 
 \vspace{0.6em}
 \begin{enumerate}[start=3]
   \item Find $P(K)$. \ans{\quad $\frac{9 + 12}{50} = \frac{21}{50} = 0.42$}
-  \work{1.5em}
+  \work{2.5em}
   \item What does $R \cap K$ mean in words? Find $P(R \cap K)$.
 
   \ans{Listens to rap \textbf{and} K-pop. \quad $\frac{9}{50} = 0.18$}
-  \work{2em}
+  \work{3em}
   \item What does $R \cup K$ mean in words? Find $P(R \cup K)$.
 
   \ans{Listens to rap \textbf{or} K-pop \textbf{or} both. \quad $\frac{17 + 9 + 12}{50} = \frac{38}{50} = \frac{19}{25} = 0.76$}
-  \work{2em}
+  \work{3em}
   \item Find $P(\text{neither})$. \ans{\quad $\frac{12}{50} = \frac{6}{25} = 0.24$}
-  \work{1.5em}
+  \work{2.5em}
   \item Find $P(\text{rap only})$. \ans{\quad $\frac{17}{50} = 0.34$}
-  \work{1.5em}
+  \work{2.5em}
   \item Explain why $P(R \cup K) + P(\text{neither}) = 1$.
 
-  \ans{``Neither'' is the complement of $R \cup K$. Every student is in exactly one of the two groups. \quad $0.76 + 0.24 = 1$}
-  \work{2em}
+  \ans{``Neither'' is the complement of $R \cup K$. Each student is in $R \cup K$ or in neither. No student is in both. \quad $0.76 + 0.24 = 1$}
+  \work{3em}
 \end{enumerate}
 
 \newpage
@@ -210,31 +210,31 @@ Draw one card from a deck of 52. Are the events mutually exclusive? Find the pro
 A soccer player scores on 75\% of her penalty kicks. The kicks are independent. She takes 2 kicks.
 \begin{enumerate}
   \item Find $P(\text{scores both})$. \ans{\quad $0.75 \cdot 0.75 = 0.5625$}
-  \work{1.5em}
+  \work{3.2em}
   \item Find $P(\text{misses both})$. \ans{\quad $0.25 \cdot 0.25 = 0.0625$}
-  \work{1.5em}
+  \work{3.2em}
   \item Find $P(\text{scores at least one})$. \ans{\quad $1 - P(\text{misses both}) = 1 - 0.0625 = 0.9375$}
-  \work{1.5em}
+  \work{3.2em}
 \end{enumerate}
 
 \vspace{0.4em}
 Spin a spinner with 3 equal parts (red, blue, green). Then roll a number cube.
 \begin{enumerate}[start=4]
   \item Find $P(\text{red} \cap 6)$. \ans{\quad $\frac{1}{3} \cdot \frac{1}{6} = \frac{1}{18}$}
-  \work{1.5em}
+  \work{3.2em}
 \end{enumerate}
 
 \vspace{0.4em}
 A quiz has 3 questions. Each question has 5 choices. You guess on all 3.
 \begin{enumerate}[start=5]
   \item Find $P(\text{all 3 right})$. \ans{\quad $\frac{1}{5} \cdot \frac{1}{5} \cdot \frac{1}{5} = \frac{1}{125} = 0.008$}
-  \work{1.5em}
+  \work{3.2em}
   \item Find $P(\text{at least one wrong})$. \ans{\quad $1 - \frac{1}{125} = \frac{124}{125} = 0.992$}
-  \work{1.5em}
+  \work{3.2em}
   \item Find $P(\text{all 3 wrong})$. \ans{\quad $\frac{4}{5} \cdot \frac{4}{5} \cdot \frac{4}{5} = \frac{64}{125} = 0.512$}
-  \work{1.5em}
+  \work{3.2em}
   \item Find $P(\text{at least one right})$. \ans{\quad $1 - \frac{64}{125} = \frac{61}{125} = 0.488$}
-  \work{1.5em}
+  \work{3.2em}
 \end{enumerate}
 
 \newpage
@@ -244,27 +244,27 @@ A jar has 7 red beads and 3 blue beads. You take 2 beads without looking.
   \item You put the first bead back before you take the second. Find $P(\text{red, red})$.
 
   \ans{Independent. \quad $\frac{7}{10} \cdot \frac{7}{10} = \frac{49}{100} = 0.49$}
-  \work{2em}
+  \work{3.5em}
   \item You keep the first bead out. Find $P(\text{red second} \mid \text{red first})$.
 
   \ans{6 red beads are left out of 9 beads. \quad $\frac{6}{9} = \frac{2}{3}$}
-  \work{2em}
+  \work{3.5em}
   \item You keep the first bead out. Find $P(\text{red, red})$.
 
   \ans{Dependent. \quad $\frac{7}{10} \cdot \frac{6}{9} = \frac{42}{90} = \frac{7}{15} \approx 0.47$}
-  \work{2em}
+  \work{3.5em}
   \item You keep the first bead out. Find $P(\text{blue, blue})$.
 
   \ans{$\frac{3}{10} \cdot \frac{2}{9} = \frac{6}{90} = \frac{1}{15} \approx 0.07$}
-  \work{2em}
+  \work{3.5em}
   \item You keep the first bead out. Find $P(\text{red first, then blue})$.
 
   \ans{$\frac{7}{10} \cdot \frac{3}{9} = \frac{21}{90} = \frac{7}{30} \approx 0.23$}
-  \work{2em}
+  \work{3.5em}
   \item $P(A) = 0.5$ and $P(B \mid A) = 0.3$. Find $P(A \cap B)$.
 
   \ans{$P(A \cap B) = P(A) \cdot P(B \mid A) = 0.5 \cdot 0.3 = 0.15$}
-  \work{2em}
+  \work{3.5em}
 \end{enumerate}
 
 \vspace{0.4em}
@@ -273,11 +273,11 @@ Independent or dependent? Explain.
   \item Roll a number cube two times.
 
   \ans{Independent. The first roll does not change the second roll.}
-  \work{2em}
+  \work{3.5em}
   \item Choose 2 different students from a class to read aloud.
 
   \ans{Dependent. The first student cannot be chosen again, so the choices change.}
-  \work{2em}
+  \work{3.5em}
 \end{enumerate}
 
 \end{enumerate}
@@ -346,25 +346,25 @@ Independent or dependent? Explain.
   \begin{center}\tree{Online}{0.75}{Paper}{\tb{0.25}}{On time}{Late}{0.9}{\tb{0.1}}{0.7}{\tb{0.3}}%
   {\te{$0.75 \cdot 0.9 = 0.675$}}{\te{$0.75 \cdot 0.1 = 0.075$}}{\te{$0.25 \cdot 0.7 = 0.175$}}{\te{$0.25 \cdot 0.3 = 0.075$}}\end{center}
   \item Find $P(\text{online} \cap \text{on time})$. \ans{\quad $0.75 \cdot 0.9 = 0.675$}
-  \work{1.5em}
+  \work{2.5em}
   \item Find $P(\text{on time})$. \ans{\quad $0.675 + 0.175 = 0.85$}
-  \work{1.5em}
+  \work{2.5em}
   \item Find $P(\text{late})$ two ways.
 
   \ans{Add the late paths: $0.075 + 0.075 = 0.15$. \quad Use the complement: $1 - 0.85 = 0.15$.}
-  \work{2em}
+  \work{3em}
   \item The homework was on time. Find $P(\text{paper} \mid \text{on time})$.
 
   \ans{$\frac{0.175}{0.85} = \frac{7}{34} \approx 0.21$}
-  \work{2em}
+  \work{3em}
   \item The homework was late. Find $P(\text{online} \mid \text{late})$.
 
   \ans{$\frac{0.075}{0.15} = 0.5$}
-  \work{2em}
+  \work{3em}
   \item Find $P(\text{on time} \mid \text{paper})$. Where on the tree do you see it?
 
   \ans{0.7. It is on the branch after Paper. \quad Check: $\frac{0.175}{0.25} = 0.7$}
-  \work{2em}
+  \work{3em}
 \end{enumerate}
 
 \end{enumerate}
@@ -385,21 +385,21 @@ Times rolled & 8 & 12 & 9 & 7 & 10 & 14 \\ \hline
 \end{center}
 \begin{enumerate}
   \item Find the experimental probability of a 6. \ans{\quad $\frac{14}{60} = \frac{7}{30} \approx 0.23$}
-  \work{1.5em}
+  \work{2.5em}
   \item Find the theoretical probability of a 6. \ans{\quad $\frac{1}{6} \approx 0.17$}
-  \work{1.5em}
+  \work{2.5em}
   \item Find the experimental probability of an even number. \ans{\quad $\frac{12 + 7 + 14}{60} = \frac{33}{60} = \frac{11}{20} = 0.55$}
-  \work{1.5em}
+  \work{2.5em}
   \item Find the theoretical probability of an even number. \ans{\quad $\frac{3}{6} = \frac{1}{2} = 0.5$}
-  \work{1.5em}
+  \work{2.5em}
   \item Why are the experimental and theoretical probabilities different?
 
   \ans{Chance. 60 rolls is not very many trials.}
-  \work{2em}
+  \work{3em}
   \item The cube is rolled 6,000 times. What number do you expect the experimental probability of a 6 to be close to? Why?
 
   \ans{Close to $\frac{1}{6} \approx 0.17$.\\[0.2em] The law of large numbers: with more trials, the experimental probability gets closer to the theoretical probability.}
-  \work{2em}
+  \work{3em}
 \end{enumerate}
 
 \vspace{0.4em}
@@ -408,11 +408,11 @@ Theoretical or experimental? Explain.
   \item It rained on 12 of the last 30 days, so $P(\text{rain}) = \dfrac{12}{30} = 0.4$.
 
   \ans{Experimental. It comes from what happened.}
-  \work{2em}
+  \work{3em}
   \item A spinner has 8 equal parts, so the probability of each part is $\dfrac{1}{8}$.
 
   \ans{Theoretical. It comes from reasoning about equally likely outcomes.}
-  \work{2em}
+  \work{3em}
 \end{enumerate}
 
 \newpage
@@ -423,7 +423,7 @@ Digits 0 to 7 = sprouts. \; Digits 8 and 9 = does not sprout. \; One trial = 3 d
   \item Why do the digits 0 to 7 stand for a seed that sprouts?
 
   \ans{0 to 7 is 8 of the 10 digits, and $\frac{8}{10} = 80\%$.}
-  \work{1.5em}
+  \work{2.5em}
   \item Use these random digits to run 10 trials. Count the seeds that sprout in each trial.
 
   \begin{center}
@@ -439,26 +439,26 @@ Digits 0 to 7 = sprouts. \; Digits 8 and 9 = does not sprout. \; One trial = 3 d
   \end{tabular}
   \end{center}
   \item Estimate $P(\text{all 3 sprout})$. \ans{\quad Trials 1, 4, 5, 7, 9, and 10. \; $\frac{6}{10} = 0.6$}
-  \work{1.5em}
+  \work{2.5em}
   \item Estimate $P(\text{exactly 2 sprout})$. \ans{\quad Trials 3, 6, and 8. \; $\frac{3}{10} = 0.3$}
-  \work{1.5em}
+  \work{2.5em}
   \item The theoretical probability that all 3 sprout is $0.8 \cdot 0.8 \cdot 0.8 = 0.512$. How could you make your estimate closer?
 
   \ans{Run many more trials.}
-  \work{1.5em}
+  \work{2.5em}
 \end{enumerate}
 
 \vspace{0.4em}
 How would you assign random digits to simulate each event?
 \begin{enumerate}[start=6]
   \item A player makes 90\% of her free throws. \ans{\quad 0 to 8 = make, 9 = miss}
-  \work{1.5em}
+  \work{2.5em}
   \item An event with $P = 0.15$. \ans{\quad Use pairs: 00 to 14 = yes, 15 to 99 = no}
-  \work{1.5em}
+  \work{2.5em}
   \item A spinner with 3 equal parts: red, blue, and green.
 
   \ans{1, 2, 3 = red; \; 4, 5, 6 = blue; \; 7, 8, 9 = green; \; skip 0}
-  \work{1.5em}
+  \work{2.5em}
 \end{enumerate}
 
 \end{enumerate}
@@ -472,63 +472,63 @@ How would you assign random digits to simulate each event?
 Find each value.
 \begin{enumerate}
   \item $6!$ \ans{\quad $6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 720$}
-  \work{1.5em}
+  \work{2.5em}
   \item $\dfrac{9!}{7!}$ \ans{\quad $9 \cdot 8 = 72$}
-  \work{1.5em}
+  \work{2.5em}
   \item $0!$ \ans{\quad 1}
-  \work{1.5em}
+  \work{2.5em}
 \end{enumerate}
 \begin{enumerate}[start=4]
   \item A video game character has 5 hair styles, 4 shirts, and 3 hats. How many different characters can you make?
 
   \ans{$5 \cdot 4 \cdot 3 = 60$ characters}
-  \work{3em}
+  \work{4em}
   \item A school ID has 2 letters (A to Z) and then 3 digits (0 to 9). Letters and digits can repeat. How many IDs are there?
 
   \ans{$26 \cdot 26 \cdot 10 \cdot 10 \cdot 10 = 676{,}000$ IDs}
-  \work{3em}
+  \work{4em}
   \item In how many ways can 8 students line up for a photo?
 
   \ans{$8! = 40{,}320$ ways}
-  \work{3em}
+  \work{4em}
   \item In how many ways can you arrange the letters of the word PLANT?
 
   \ans{$5! = 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 120$ ways}
-  \work{3em}
+  \work{4em}
 \end{enumerate}
 
 \newpage
 \item \goal{I count permutations with ${}_nP_r$, and I tell when repeats are allowed.}
 \begin{enumerate}
   \item Find ${}_7P_2$. \ans{\quad $7 \cdot 6 = 42$}
-  \work{1em}
+  \work{2.5em}
   \item Find ${}_9P_4$. \ans{\quad $9 \cdot 8 \cdot 7 \cdot 6 = 3{,}024$}
-  \work{1em}
+  \work{2.5em}
   \item 11 students run for president, vice president, secretary, and treasurer. In how many ways can the 4 jobs be filled?
 
   \ans{${}_{11}P_4 = 11 \cdot 10 \cdot 9 \cdot 8 = 7{,}920$ ways}
-  \work{2em}
+  \work{3em}
   \item 7 swimmers are in a race. In how many ways can gold, silver, and bronze medals be given?
 
   \ans{${}_7P_3 = 7 \cdot 6 \cdot 5 = 210$ ways}
-  \work{2em}
+  \work{3em}
 \end{enumerate}
 
 \vspace{0.4em}
 A bike lock code has 5 digits (0 to 9).
 \begin{enumerate}[start=5]
   \item How many codes are there if digits can repeat? \ans{\quad $10^5 = 100{,}000$}
-  \work{1.5em}
+  \work{3em}
   \item How many codes are there if no digit repeats? \ans{\quad ${}_{10}P_5 = 10 \cdot 9 \cdot 8 \cdot 7 \cdot 6 = 30{,}240$}
-  \work{1.5em}
-  \item A code uses 3 of the vowels A, E, I, O, U. Repeats are allowed. How many codes are there?
+  \work{3em}
+  \item A code has 3 letters. Each letter is a vowel (A, E, I, O, U). Repeats are allowed. How many codes are there?
 
   \ans{$5 \cdot 5 \cdot 5 = 5^3 = 125$ codes}
-  \work{1.5em}
-  \item Which answer is a permutation, (e) or (f)? Explain.
+  \work{3em}
+  \item Which count is a permutation, (e) or (f)? Explain.
 
   \ans{(f). No digit repeats, and order matters. With repeats, it is not a permutation. Use the counting principle.}
-  \work{2em}
+  \work{3em}
 \end{enumerate}
 
 \end{enumerate}
@@ -542,27 +542,27 @@ A bike lock code has 5 digits (0 to 9).
 Find each value.
 \begin{enumerate}
   \item ${}_7C_2$ \ans{\quad $\frac{7 \cdot 6}{2 \cdot 1} = 21$}
-  \work{1em}
+  \work{3em}
   \item ${}_9C_3$ \ans{\quad $\frac{9 \cdot 8 \cdot 7}{3 \cdot 2 \cdot 1} = 84$}
-  \work{1em}
+  \work{3em}
   \item ${}_{10}C_4$ \ans{\quad $\frac{10 \cdot 9 \cdot 8 \cdot 7}{4 \cdot 3 \cdot 2 \cdot 1} = 210$}
-  \work{1em}
+  \work{3em}
   \item $\dbinom{6}{5}$ \ans{\quad $\frac{6!}{5!\,1!} = 6$}
-  \work{1em}
+  \work{3em}
 \end{enumerate}
 \begin{enumerate}[start=5]
   \item 15 people meet. Each person shakes hands once with every other person. How many handshakes are there?
 
   \ans{${}_{15}C_2 = \frac{15 \cdot 14}{2} = 105$ handshakes}
-  \work{2em}
+  \work{3.5em}
   \item You choose 5 of 12 songs to download. In how many ways can you choose them?
 
   \ans{${}_{12}C_5 = 792$ ways}
-  \work{2em}
+  \work{3.5em}
   \item A salad bar has 8 toppings. A salad has 4 different toppings. How many different salads are there?
 
   \ans{${}_8C_4 = \frac{8 \cdot 7 \cdot 6 \cdot 5}{4 \cdot 3 \cdot 2 \cdot 1} = 70$ salads}
-  \work{2em}
+  \work{3.5em}
 \end{enumerate}
 
 \newpage
@@ -570,7 +570,7 @@ Find each value.
 For each situation, write permutation or combination. Then find the number of ways.
 
 \vspace{0.4em}
-{\renewcommand{\arraystretch}{1.9}
+{\renewcommand{\arraystretch}{2.3}
 \begin{tabular}{|>{\raggedright\arraybackslash}p{3.1in}|>{\raggedright\arraybackslash}p{1.3in}|>{\raggedright\arraybackslash}p{1.7in}|}\hline
 \textbf{Situation} & \textbf{Permutation or combination?} & \textbf{Number of ways} \\ \hline
 (a) Choose 4 of 14 students to carry a banner. & \ans{combination} & \ans{${}_{14}C_4 = 1{,}001$} \\ \hline
@@ -584,7 +584,7 @@ For each situation, write permutation or combination. Then find the number of wa
   \item Why is the answer to (c) 2 times the answer to (d)?
 
   \ans{Each pair of players can be put in order $2! = 2$ ways. A permutation counts both orders. A combination counts the pair once.}
-  \work{3em}
+  \work{6em}
   \item Which situation is a permutation? Circle the letter.
   \choices{\opt{A} & Choosing 3 of 20 students to go on a field trip.}
           {\opt{B} & Choosing 4 of 10 songs to download.}
@@ -603,28 +603,28 @@ For each situation, write permutation or combination. Then find the number of wa
 A playlist has 10 songs: 6 rap songs and 4 K-pop songs. The app picks 3 songs at random. Order does not matter.
 \begin{enumerate}
   \item How many groups of 3 songs are possible? \ans{\quad ${}_{10}C_3 = 120$}
-  \work{2.5em}
+  \work{3.5em}
   \item Find $P(\text{all 3 are rap})$. \ans{\quad ${}_6C_3 = 20$. \; $\frac{20}{120} = \frac{1}{6} \approx 0.17$}
-  \work{3em}
+  \work{4em}
   \item Find $P(\text{all 3 are K-pop})$. \ans{\quad ${}_4C_3 = 4$. \; $\frac{4}{120} = \frac{1}{30} \approx 0.03$}
-  \work{3em}
+  \work{4em}
   \item Find $P(\text{not all 3 are rap})$. \ans{\quad Complement: $1 - \frac{1}{6} = \frac{5}{6} \approx 0.83$}
-  \work{3em}
+  \work{4em}
 \end{enumerate}
 
 \vspace{0.4em}
 A club has 13 members: 5 seniors and 8 juniors. 2 members are chosen at random to go to a meeting.
 \begin{enumerate}[start=5]
   \item How many pairs are possible? \ans{\quad ${}_{13}C_2 = \frac{13 \cdot 12}{2} = 78$}
-  \work{2.5em}
+  \work{3.5em}
   \item Find $P(\text{both seniors})$. \ans{\quad ${}_5C_2 = 10$. \; $\frac{10}{78} = \frac{5}{39} \approx 0.13$}
-  \work{3em}
+  \work{4em}
   \item Find $P(\text{both juniors})$. \ans{\quad ${}_8C_2 = 28$. \; $\frac{28}{78} = \frac{14}{39} \approx 0.36$}
-  \work{3em}
+  \work{4em}
   \item Find $P(\text{one senior and one junior})$.
 
   \ans{$5 \cdot 8 = 40$ pairs. \; $\frac{40}{78} = \frac{20}{39} \approx 0.51$. \quad Check: $10 + 28 + 40 = 78$.}
-  \work{3em}
+  \work{4em}
 \end{enumerate}
 
 \newpage
@@ -634,27 +634,27 @@ A club has 13 members: 5 seniors and 8 juniors. 2 members are chosen at random t
   \item The teacher picks 2 students at random. One reads aloud and one writes on the board. What is the probability that Ana reads and Ben writes?
 
   \ans{Yes, the jobs are different. \; ${}_{20}P_2 = 20 \cdot 19 = 380$. \; $P = \frac{1}{380} \approx 0.003$}
-  \work{3.5em}
+  \work{5em}
   \item The teacher picks 2 students at random to hand out papers. What is the probability that Ana and Ben are picked?
 
   \ans{No, it is the same job. \; ${}_{20}C_2 = 190$. \; $P = \frac{1}{190} \approx 0.005$}
-  \work{3.5em}
+  \work{5em}
   \item Why is the answer to (b) 2 times the answer to (a)?
 
   \ans{In (a), only 1 of the 2 orders of Ana and Ben works. In (b), both orders are the same pair.}
-  \work{3.5em}
+  \work{5em}
   \item A playlist of 6 songs plays in a random order. What is the probability that the songs play in the order you like best?
 
   \ans{Yes, order matters. \; $6! = 720$. \; $P = \frac{1}{720} \approx 0.001$}
-  \work{3.5em}
+  \work{5em}
   \item A 4-digit locker code uses the digits 1 to 8 with no repeats. The code is chosen at random. What is the probability that the code is 1357?
 
   \ans{Yes. 1357 and 7531 are different codes. \; ${}_8P_4 = 1{,}680$. \; $P = \frac{1}{1{,}680} \approx 0.0006$}
-  \work{3.5em}
+  \work{5em}
   \item A student says, ``3 of 10 people win the same prize. Order matters, so the probability that Ana, Ben, and Carla win is $\dfrac{1}{720}$.'' Is the student right? Explain.
 
   \ans{No. It is the same prize, so order does not matter. \; ${}_{10}C_3 = 120$, so $P = \frac{1}{120}$.}
-  \work{3.5em}
+  \work{5em}
 \end{enumerate}
 
 \end{enumerate}
@@ -702,6 +702,7 @@ A test asks the same questions with more words. Read slowly. Circle the best ans
         {\opt{B} & Pick a random digit from 0 to 9. The digits 0, 1, 2, and 3 mean rain.}
         {\opt{C} & Roll a number cube. The numbers 1 and 2 mean rain.}
         {\opt{D} & Flip a coin. Heads means rain.}
+\par\ans{3 of the 10 digits is $\frac{3}{10} = 30\%$. \; B is 40\%, C is $\frac{1}{3}$, and D is 50\%.}
 
 \item How many different 4-letter arrangements can be made from the letters in the word SPORT if no letter can be used more than once?
 \choices{\opt{A} & 5}
