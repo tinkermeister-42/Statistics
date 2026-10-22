@@ -32,3 +32,6 @@ Explain what the line means. Measure how strong the pattern is.
 
 [**Residuals**](4.3_Residuals.qmd)\
 Measure how far each point is from the line.
+
+[**Unit 4 Review**](Review.qmd)\
+Practice every skill from the unit before the quiz.

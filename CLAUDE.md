@@ -119,7 +119,7 @@ set (`.remember`, `.you-try`, `.you-try-m` + `.answer`, `.think`, `.gotcha`,
   `/assessments/Unit_X/UnitX_Quiz.pdf` and `_KEY.pdf`, linked from nowhere
 - **A quiz key lines up page for page.** Answers sit in fixed-height `\abox`
   space, so the key never moves anything; a handout key still shrinks `\work`
-- Unit 1 is done (fall 2026); Units 2-7 have neither yet
+- Every unit has a review and a quiz (fall 2026); later work is revision
 - **Fresh clone mtimes:** checkout writes files in no useful order, so
   `check-site-assets.py` calls every committed PDF and SVG stale. They are
   not: `git ls-files 'handouts/*.pdf' 'assessments/*.pdf' 'images/*.svg' | xargs touch`
