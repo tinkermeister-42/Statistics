@@ -297,7 +297,7 @@ Work with a partner. Compare answers when you finish each problem.
 
    e. Find each athlete's z-score.
 
-   f. Lena jumped 1.55 m and Omar jumped 5.6 m. Who did better compared to the others in the event? Explain.
+   f. Lena jumped 1.55 m and Omar jumped 5.6 m. Who did better compared to the other athletes in the same event? Explain.
 
    Go back to the spelling test ($\mu = 50$, $\sigma = 6$). Use $x = \mu + z\sigma$.
 
