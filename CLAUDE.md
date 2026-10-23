@@ -117,6 +117,9 @@ set (`.remember`, `.you-try`, `.you-try-m` + `.answer`, `.think`, `.gotcha`,
   section per lesson, each question headed by its "I ..." goal. Built by
   `./build.sh UnitX_Quiz`; it inputs `../../handouts/preamble`. Served at
   `/assessments/Unit_X/UnitX_Quiz.pdf` and `_KEY.pdf`, linked from nowhere
+- **Teacher bookmark:** `/assessments/index.html` lists every quiz, review and
+  lesson handout with its key. `scripts/build-assessments-index.py` writes it
+  (`./build.sh` runs it at the end); it is unlisted like the keys
 - **A quiz key lines up page for page.** Answers sit in fixed-height `\abox`
   space, so the key never moves anything; a handout key still shrinks `\work`
 - Every unit has a review and a quiz (fall 2026); later work is revision

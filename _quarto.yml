@@ -14,6 +14,7 @@ resources:
   # the site but linked from nowhere: reachable only by typing the URL, as in
   # the Algebra 1 book (/assessments/Unit_X/<Name>.pdf).
   - assessments/Unit_*/*.pdf
+  - assessments/index.html
 
 extensions:
   - glossary

@@ -21,3 +21,5 @@ for tex in handouts/Unit_*/*.tex assessments/Unit_*/*.tex; do
     rm -f "$base".{aux,log} "${base}_KEY".{aux,log} )
   echo "built $dir/$base(.pdf, _KEY.pdf)"
 done
+# the teacher's bookmark page of every quiz, review and key
+python3 scripts/build-assessments-index.py
