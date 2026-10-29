@@ -116,6 +116,7 @@ book:
         - file: chapters/Unit_7/7.1_Probability_Distributions.qmd
         - file: chapters/Unit_7/7.2_Expected_Value.qmd
         - file: chapters/Unit_7/7.3_Expected_Payoff.qmd
+        - file: chapters/Unit_7/Summary.qmd
         - file: chapters/Unit_7/Review.qmd
 
     - file: glossary.qmd

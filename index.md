@@ -67,6 +67,7 @@ Do the mini lesson first. Then do the matching Khan Academy lessons.
 | [7.1](chapters/Unit_7/7.1_Probability_Distributions.qmd) | Probability distributions | Unit 7, lessons {{< khanlink 7.1 "1" >}} and {{< khanlink 7.2 "2" >}} |
 | [7.2](chapters/Unit_7/7.2_Expected_Value.qmd) | Expected value | Unit 7, lessons {{< khanlink 7.3 "3" >}} and {{< khanlink 7.4 "4" >}} |
 | [7.3](chapters/Unit_7/7.3_Expected_Payoff.qmd) | Expected payoff | Unit 7, lesson {{< khanlink 7.4 "4" >}} |
+| [Summary](chapters/Unit_7/Summary.qmd) | Unit 7 summary tables | |
 | [Review](chapters/Unit_7/Review.qmd) | Unit 7 review | Unit 7, lessons {{< khanlink 7.1 "1" >}} to {{< khanlink 7.4 "4" >}} |
 
 Click a mini lesson number to open it. Click a Khan Academy lesson number to open that lesson on Khan Academy.
