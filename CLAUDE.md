@@ -154,30 +154,28 @@ are team ceremony here, and this session's credentials cannot delete them
   them, send the PDFs, and wait. Committing to `main` before he has looked is
   fine; deploying is not
 - **Deploy only from `main`.** Run `./deploy.sh` on a clean `main`, so the
-  live site never holds work that `main` does not
+  live site never holds work that `main` does not. No deploy-only branches
+  that combine unmerged work
 - **A branch only for large, multi-session work.** Open a pull request and
   squash-merge it (`gh pr merge --squash`). With the repo's "Automatically
   delete head branches" setting on, GitHub deletes the branch on merge. That
   setting is the teacher's to turn on (Settings, General, Pull Requests)
-- **Check at the start of every session.** List remote branches. Anything
-  besides `main` and `gh-pages` is unexpected: run the content check below,
-  get finished work onto `main`, and tell him which branches he can delete
+- **Check at the start of every session:** `scripts/stale-branches.sh`. It
+  lists every branch besides `main` and `gh-pages`, says whether its work is
+  on `main`, and prints one delete command for the safe ones. Get any work
+  marked CHECK onto `main` (or ask him if it looks abandoned), then give him
+  the delete command
 
 Why: he assumes his changes are on `main` and can go weeks without noticing
-they are not. In October 2026 five branches of finished work, most of it
-already deployed, sat unmerged for up to two weeks under an old rule that
-waited for his sign-off.
+they are not. In October 2026 the Statistics repo had five branches of
+finished work, most of it already deployed, sitting unmerged for up to two
+weeks under an old rule that waited for his sign-off.
 
-**Checking a leftover branch is on `main`.** Old work was squash-merged, so a
-branch's own commits never become ancestors of `main`, and `git merge-base
---is-ancestor` or a zero count from `git rev-list origin/main..origin/<branch>`
-reports it as unmerged. What settles it is the content:
-
-```
-git diff origin/main origin/<branch>      # empty output means nothing would be lost
-```
-
-For a branch that `main` has moved past, compare only the files the branch
+**How the check works.** Old work was squash-merged, so a branch's own commits
+never become ancestors of `main`, and `git merge-base --is-ancestor` or a zero
+count from `git rev-list origin/main..origin/<branch>` reports it as unmerged.
+The script instead asks whether merging the branch would change nothing, or
+whether some commit on `main` holds the branch's version of every text file it
 changed. Do not count the files in `git diff --name-only main branch`: that
 reports differences in both directions, so a long-merged branch can look like
 it carries hundreds of files that are really `main`'s own later work.
