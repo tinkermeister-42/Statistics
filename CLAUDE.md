@@ -150,15 +150,27 @@ Keep the repository clean. Dead branches are clutter.
   naming the feature. `main` keeps a history of what was added, not of every
   step it took to get there
 - The branch is deleted once it is merged
-- **Nothing is merged or deleted without the teacher signing off on it.**
-  Propose it, show what would land, and wait
+- **Merge without being asked.** The teacher assumes his changes are on
+  `main` and can go weeks without noticing they are not (in October 2026 four
+  branches of finished, deployed work sat unmerged for up to two weeks). So
+  finished work goes to `main` as part of the task, not as a proposal. Show
+  him the PDFs or pages first when he asks to see them; once he is satisfied,
+  or moves on to something else, squash and push to `main` in the same turn
+- **Deploy only from `main`.** Merge first, then run `./deploy.sh` on `main`,
+  so the live site never holds work that `main` does not
+- **Check at the start of every session.** List remote branches and run the
+  content check below against each one. Report anything not on `main`, and
+  merge finished work right away
+- Deleting a branch is still his call (see the 403 below). Tell him which
+  branches are safe to delete once their work is on `main`
 
 Two things that bite:
 
 - **Deploying is not merging.** `deploy.sh` force-pushes the built `_book` to
   `gh-pages` and touches nothing else, so a change can be live on the site
-  while its source exists only on a feature branch. Check
-  `git rev-list --count origin/main..HEAD` before assuming work is safe
+  while its source exists only on a feature branch. That is how work got
+  stranded before. Check `git rev-list --count origin/main..HEAD` before
+  assuming work is safe
 - **This session's credentials cannot delete branches.** `git push origin
   --delete` returns HTTP 403. That is a permission limit, not a safety
   refusal, so branch removal is the teacher's to do
