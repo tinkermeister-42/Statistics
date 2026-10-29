@@ -30,3 +30,6 @@ Find the long-run average and decide what is fair.
 
 [**Expected Payoff**](7.3_Expected_Payoff.qmd)\
 Decide if a lottery, a game, or a protection plan is worth the money.
+
+[**Unit 7 Review**](Review.qmd)\
+Practice every skill from the unit before the quiz.

@@ -1,0 +1,310 @@
+# Unit 4 Review {.unnumbered}
+
+8 candles of the same kind burned for different numbers of hours. Then each candle was measured.
+
+| Hours burned ($x$) | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **Height in cm ($y$)** | 23 | 19 | 18 | 17 | 13 | 13 | 9 | 8 |
+
+Every tool from Unit 4 tells you something about these candles. A scatterplot shows the pattern. A line makes predictions. The slope and the intercept tell what the line means. A residual shows how far off a prediction is.
+
+This review uses all of them. It has every kind of problem on the Unit 4 quiz, with more of each.
+
+:::{.objectives}
+- [ ] I describe the direction, form, and strength of a scatterplot, and I choose a good line of best fit.
+- [ ] I write the equation of a line of best fit, and I make predictions and know when not to trust them.
+- [ ] I explain the slope of a line of best fit in context, and I explain the y-intercept in context, or tell why it has no meaning.
+- [ ] I estimate the correlation coefficient $r$ from a scatterplot, and I explain why correlation does not prove causation.
+- [ ] I find and explain a residual, and I tell if a point is above or below the line from its residual.
+- [ ] I explain what the least-squares line is, and I use a residual plot to decide if a line is a good model.
+:::
+
+:::{.vocab}
+{{< glink scatterplot >}},
+{{< glink "line of best fit" >}},
+{{< glink "y-hat" >}},
+{{< glink extrapolation >}},
+{{< glink slope >}},
+{{< glink "y-intercept" >}},
+{{< glink "correlation coefficient" >}},
+{{< glink causation >}},
+{{< glink "lurking variable" >}},
+{{< glink residual >}},
+{{< glink "least-squares regression line" >}},
+{{< glink "residual plot" >}}
+:::
+
+:::{.guided-notes-link}
+[Printable review](/handouts/Unit_4/Unit_4_Review.pdf){target="_blank"} - notes and practice problems to print and write on.
+:::
+
+{{< khan 4.1 4.2 4.3 >}}
+
+{{< learn >}}
+
+### 4.1 - Describe and Fit
+
+A {{< glink scatterplot >}} puts one dot on the graph for each candle. A {{< glink "line of best fit" >}} goes through the middle of the dots.
+
+![](/images/Unit_4/Review_candles.svg){width="420px" fig-align="center"}
+
+The pattern is **negative, linear, and strong**.
+
+Two points on the line are $(2, 20)$ and $(7, 10)$.
+
+$$
+m = \frac{10 - 20}{7 - 2} = \frac{-10}{5} = -2
+$$
+
+$$
+20 = -2(2) + b \quad \Rightarrow \quad b = 24
+$$
+
+$$
+\hat{y} = -2x + 24
+$$
+
+A candle that burns 4.5 hours: $\hat{y} = -2(4.5) + 24 = 15$ cm.
+
+:::{.gotcha title="Extrapolation"}
+A candle that burns 15 hours: $\hat{y} = -2(15) + 24 = -6$ cm. A height cannot be negative. The data only goes from 1 to 8 hours.
+:::
+
+***
+
+### 4.2 - Explain the Line
+
+| | Meaning |
+|---|---|
+| **Slope** ($-2$) | For each additional **hour**, the predicted **height** decreases by **2 cm**. |
+| **y-intercept** (24) | When $x = 0$ (a new candle), the predicted height is **24 cm**. |
+| **$r$** | $r$ is always from $-1$ to $1$. The dots are close to a line that goes down, so $r$ is close to $-1$ ($r \approx -0.98$). |
+
+:::{.remember title="Correlation Is Not Causation"}
+When more umbrellas are sold, there are more car accidents. Umbrellas do not cause accidents. Rain causes both. Rain is a {{< glink "lurking variable" >}}.
+:::
+
+***
+
+### 4.3 - Find a Residual
+
+:::{.remember title="Residual"}
+$$
+\text{residual} = \text{actual} - \text{predicted} = y - \hat{y}
+$$
+
+- **Positive** residual: the point is **above** the line.
+- **Negative** residual: the point is **below** the line.
+:::
+
+The candle that burned 4 hours is 17 cm.
+
+$$
+\hat{y} = -2(4) + 24 = 16
+$$
+
+$$
+\text{residual} = 17 - 16 = 1
+$$
+
+The residual is positive, so the dot is **above** the line. The candle is 1 cm taller than predicted.
+
+The {{< glink "least-squares regression line" >}} makes $\Sigma(y - \hat{y})^2$ as small as possible.
+
+![](/images/Unit_4/Review_candles_resid.svg){width="300px" fig-align="center"}
+
+The {{< glink "residual plot" >}} shows no pattern. A line is a **good** model.
+
+{{< practice >}}
+
+Work with a partner. Compare answers when you finish each problem.
+
+**4.1 - Scatterplots and Lines of Best Fit**
+
+1. Describe the direction, form, and strength of each scatterplot.
+
+   ![](/images/Unit_4/Review_scatter_abc.svg){width="520px"}
+
+   a. A
+
+   b. B
+
+   c. C
+
+   12 students recorded how many hours they practiced typing last week and their typing speed.
+
+   | Hours ($x$) | 1 | 2 | 3 | 3 | 4 | 5 | 6 | 6 | 7 | 8 | 9 | 10 |
+   |------------------|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+   | **Words per minute ($y$)** | 28 | 23 | 31 | 25 | 30 | 38 | 35 | 40 | 37 | 45 | 45 | 55 |
+
+   ![](/images/Unit_4/Review_typing.svg){width="420px"}
+
+   d. Describe the direction, form, and strength.
+
+   e. Draw a line of best fit on the graph.
+
+   f. How many dots are above your line? How many are below?
+
+   Ken drew this line for the same data. It goes through the first dot and the last dot.
+
+   ![](/images/Unit_4/Review_typing_ken.svg){width="420px"}
+
+   g. Is it a good line of best fit? Explain.
+
+2. Mia charged her phone on 10 days. She recorded how many minutes it charged and the battery percent at the end. A line of best fit is drawn.
+
+   ![](/images/Unit_4/Review_charging.svg){width="440px"}
+
+   a. Describe the direction, form, and strength.
+
+   b. Use the two marked points to find the slope.
+
+   c. Find $b$.
+
+   d. Write the equation of the line.
+
+   e. Predict the battery percent after 26 minutes of charging.
+
+   f. Predict the battery percent after 80 minutes of charging. Should you trust this prediction? Explain.
+
+   Two points on another line of best fit are $(2, 40)$ and $(8, 10)$.
+
+   g. Find the slope.
+
+   h. Find $b$ and write the equation of the line.
+
+***
+
+**4.2 - Slope, Intercept, and Correlation**
+
+3. Students on a long hike started with full water bottles. The line $\hat{y} = -6x + 32$ predicts the water left, where $x$ is the number of hours of hiking and $y$ is the ounces of water left.
+
+   a. Explain the slope in context.
+
+   b. Explain the y-intercept in context.
+
+   A store sells TVs. The line $\hat{y} = 15x - 200$ predicts the price, where $x$ is the screen size in inches and $y$ is the price in dollars.
+
+   c. Explain the slope in context.
+
+   d. Does the y-intercept have a real meaning here? Explain.
+
+   A pizza shop uses the line $\hat{y} = 1.5x + 9$, where $x$ is the number of toppings and $y$ is the price of a pizza in dollars.
+
+   e. Explain the slope in context.
+
+   f. Explain the y-intercept in context.
+
+4. a. Match each $r$ to a scatterplot: $r = 0.95$, $r = 0.5$, $r = -0.2$, $r = -0.75$
+
+      ![](/images/Unit_4/Review_r_match.svg){width="640px"}
+
+   b. Which shows a stronger linear relationship, $r = -0.7$ or $r = 0.6$? Explain.
+
+   c. Can a scatterplot have $r = 1.5$? Explain.
+
+   In an elementary school, students with bigger shoe sizes have higher reading scores. The correlation is strong and positive.
+
+   d. Do bigger feet cause better reading? Explain.
+
+   e. What lurking variable could cause both?
+
+   In a city, the number of fans sold each day and the number of people at the pool have a strong positive correlation.
+
+   f. Name a lurking variable that could cause both. Explain.
+
+***
+
+**4.3 - Residuals**
+
+5. A delivery app predicts the delivery time with $\hat{y} = 4x + 10$, where $x$ is the distance in miles and $y$ is the time in minutes. Fill in the table.
+
+   | $x$ (miles) | $y$ (actual minutes) | $\hat{y}$ (predicted) | residual $y - \hat{y}$ |
+   |:---:|:---:|:---:|:---:|
+   | 1 | 16 | | |
+   | 2 | 17 | | |
+   | 3 | 22 | | |
+   | 5 | 33 | | |
+   | 6 | 31 | | |
+   | 8 | 44 | | |
+
+   a. Which orders have points above the line? How do you know?
+
+   b. Which order has a point on the line? How do you know?
+
+   c. Explain the residual for the 6-mile order in context.
+
+   d. A 4-mile order has a residual of $-2$. How long did it take?
+
+   e. Another order has a residual of 5. Is its point above or below the line? What does the residual mean?
+
+6. Two lines were fit to the same 5 points. Here are their residuals.
+
+   | | Residuals | $\Sigma(y - \hat{y})^2$ |
+   |---|---|---|
+   | Line A | 3, $-2$, 1, $-1$, $-1$ | |
+   | Line B | 1, $-1$, 2, $-2$, 0 | |
+
+   a. Find $\Sigma(y - \hat{y})^2$ for each line. (Square each residual, then add.)
+
+   b. Which line is closer to the least-squares line? Explain.
+
+   c. Add the residuals of each line without squaring them. Why does this not help you choose a line?
+
+   d. For one data set, the least-squares line has $\Sigma(y - \hat{y})^2 = 12$. Can another line for the same data have $\Sigma(y - \hat{y})^2 = 9$? Explain.
+
+   These are the residual plots for two lines of best fit.
+
+   ![](/images/Unit_4/Review_resid_plots_pq.svg){width="560px"}
+
+   e. Which plot shows that a line is a good model? Explain.
+
+   f. What does the pattern in plot P tell you?
+
+***
+
+**Test-Style Questions**
+
+A test asks the same questions with more words. Read slowly. Choose the best answer.
+
+7. The scatterplot in Problem 1 shows the number of hours 12 students practiced typing last week and their typing speeds, in words per minute. Which equation best represents a line of best fit for the data?
+
+   A. $\hat{y} = -3x + 20$\
+   B. $\hat{y} = 3x + 20$\
+   C. $\hat{y} = 20x + 3$\
+   D. $\hat{y} = 3x + 40$
+
+8. Mia used the line of best fit $\hat{y} = 1.5x + 10$ to predict the battery percent, $y$, of her phone after it charges for $x$ minutes. Her data included charging times from 5 to 55 minutes. Which prediction is **least** likely to be reliable?
+
+   A. the battery percent after 10 minutes of charging\
+   B. the battery percent after 30 minutes of charging\
+   C. the battery percent after 50 minutes of charging\
+   D. the battery percent after 75 minutes of charging
+
+9. A pet store owner found that the equation $\hat{y} = 2.5x + 20$ can be used to predict the price $y$, in dollars, of a fish tank that holds $x$ gallons of water. Which statement best describes the meaning of the slope of the line?
+
+   A. Every fish tank costs $\$2.50$.\
+   B. For each additional gallon a tank holds, the predicted price increases by $\$2.50$.\
+   C. For each additional dollar in price, a tank holds 2.5 more gallons.\
+   D. A tank that holds 0 gallons is predicted to cost $\$2.50$.
+
+10. A study of 200 students found a strong positive correlation between the number of hours students practice a musical instrument each week and their math grades. Which conclusion is best supported by the study?
+
+    A. Practicing a musical instrument causes students to earn higher math grades.\
+    B. Earning higher math grades causes students to practice a musical instrument more.\
+    C. Students who practice more tend to have higher math grades, but the study does not show that one causes the other.\
+    D. There is no relationship between practicing a musical instrument and math grades.
+
+11. A bus company uses the line of best fit $\hat{y} = 3x + 12$ to predict the travel time $y$, in minutes, for a trip of $x$ miles. A 6-mile trip took 27 minutes. Which statement about the residual for this trip is true?
+
+    A. The residual is 3, and the point is above the line.\
+    B. The residual is 3, and the point is below the line.\
+    C. The residual is $-3$, and the point is above the line.\
+    D. The residual is $-3$, and the point is below the line.
+
+12. A student found a line of best fit for a data set and made a residual plot. The residuals are positive for small and large values of $x$ and negative for values of $x$ in the middle. Which conclusion is best supported by the residual plot?
+
+    A. A line is a good model, because some residuals are positive and some are negative.\
+    B. A line is not a good model, because the residuals show a curved pattern.\
+    C. A line is a good model, because the residuals form a clear pattern.\
+    D. A line is not a good model, because the sum of the residuals is 0.

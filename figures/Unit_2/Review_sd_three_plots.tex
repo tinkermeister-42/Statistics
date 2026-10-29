@@ -1,0 +1,19 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}
+\begin{document}
+\begin{tikzpicture}[x=0.75cm,y=1cm]
+  \begin{scope}[yshift=4.8cm]
+    \axis{0}{12}{1}{1}{}
+    \dotsat{3/1,4/1,5/2,6/2,7/2,8/1,9/1}
+    \node[anchor=east,font=\bfseries] at (-0.4,0.5) {J};
+  \end{scope}
+  \begin{scope}[yshift=2.4cm]
+    \axis{0}{12}{1}{1}{}
+    \dotsat{1/2,2/1,4/1,6/2,8/1,10/1,11/2}
+    \node[anchor=east,font=\bfseries] at (-0.4,0.5) {K};
+  \end{scope}
+  \axis{0}{12}{1}{1}{}
+  \dotsat{5/3,6/4,7/3}
+  \node[anchor=east,font=\bfseries] at (-0.4,0.5) {L};
+\end{tikzpicture}
+\end{document}

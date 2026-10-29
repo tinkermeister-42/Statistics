@@ -1,0 +1,730 @@
+\documentclass[11pt]{article}
+\input{../preamble}
+% Unit 6 review.  Problems 1-14 follow the Unit 6 quiz question for question
+% (same "I ..." goals, two or three times the parts); 15-21 ask the same
+% skills in test wording.
+\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000
+\setlist[enumerate,1]{leftmargin=1.5em,itemsep=1.2em}
+\setlist[enumerate,2]{label=(\alph*),leftmargin=2em,itemsep=1.4em}
+\newcommand{\lessonhead}[1]{\par\vspace{0.6em}{\large\bfseries #1}\par\vspace{0.25em}\hrule\vspace{0.6em}}
+\newcommand{\goal}[1]{\textbf{#1}\par\vspace{0.35em}}
+% circled choices: \opt{A} prints plain; \optans{B} is circled in red on the key
+\newcommand{\opt}[1]{\tikz[baseline=(c.base)]\node[inner sep=2.5pt](c){#1};}
+\newcommand{\optans}[1]{\ifkey\tikz[baseline=(c.base)]\node[circle,inner sep=1.2pt,draw=keyred,thick,text=keyred](c){#1};\else\opt{#1}\fi}
+\newcommand{\choices}[4]{\par\vspace{0.3em}\begin{tabular}{@{}l@{\hspace{0.6em}}p{6in}}#1\\#2\\#3\\#4\\\end{tabular}}
+% choices that are fractions: taller rows so the fractions clear each other
+\newcommand{\fchoices}[4]{\par\vspace{0.1em}{\renewcommand{\arraystretch}{2.3}\begin{tabular}{@{}l@{\hspace{0.6em}}p{6in}}#1\\#2\\#3\\#4\\\end{tabular}}}
+% blanks on a tree diagram, filled in red on the key
+\newcommand{\tb}[1]{\underline{\makebox[0.42in]{\ans{#1}}}}
+\newcommand{\te}[1]{\hspace{0.15in}\underline{\makebox[1.3in][l]{\ans{#1}}}}
+
+\begin{document}
+
+\lessontitle{Unit 6 Review}
+
+\textbf{One class, every rule.} A class has 20 students. 8 are in the music club ($M$). 6 are in the art club ($A$). 3 are in both clubs.
+
+\vspace{0.3em}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{1.8in}|>{\raggedright\arraybackslash}p{4.7in}|}
+\hline
+\textbf{6.1 Add for ``or.''}
+
+Add the two groups. Then subtract the overlap, because it was counted twice. &
+\begin{minipage}[t]{1.65in}\vspace{0pt}\scalebox{0.48}{\fig{Unit_6/Review_venn_clubs}}\end{minipage}\hfill
+\begin{minipage}[t]{2.95in}\vspace{0pt}\raggedright
+$P(M \cup A) = P(M) + P(A) - P(M \cap A)$
+
+\rule{0pt}{2.1em}$\phantom{P(M \cup A)} = \dfrac{8}{20} + \dfrac{6}{20} - \dfrac{3}{20} = \dfrac{11}{20} = 0.55$
+
+\rule{0pt}{2.1em}Complement: $P(\text{not } M) = 1 - \dfrac{8}{20} = \dfrac{12}{20} = 0.6$
+
+\rule{0pt}{1.4em}\textbf{Not} mutually exclusive: 3 are in both.
+\end{minipage} \\[0.3em] \hline
+\textbf{6.2 Multiply for ``and.''}
+
+Independent: $P(A) \cdot P(B)$.\newline Dependent: use the new numbers after the first pick. &
+Pick a student on Monday and on Tuesday. The same student can be picked twice: \textbf{independent}.
+
+\rule{0pt}{2.1em}$P(M, M) = \dfrac{8}{20} \cdot \dfrac{8}{20} = 0.16$ \qquad $P(\text{at least one } M) = 1 - 0.6 \cdot 0.6 = 0.64$
+
+\rule{0pt}{1.5em}Pick 2 \textbf{different} students: \textbf{dependent}. 7 of the 19 left are in music.
+
+\rule{0pt}{2.1em}$P(M, M) = \dfrac{8}{20} \cdot \dfrac{7}{19} = \dfrac{56}{380} = \dfrac{14}{95} \approx 0.15$ \\[0.6em] \hline
+\textbf{6.3 Look inside the group.}
+
+$P(A \mid B)$ is the probability of $A$ \textbf{given} $B$. Look only at the $B$ group. &
+Look only at the 8 music students. 3 of them are in art.
+
+\rule{0pt}{2.1em}$P(A \mid M) = \dfrac{3}{8} = 0.375$ \qquad but \qquad $P(A) = \dfrac{6}{20} = 0.3$
+
+\rule{0pt}{1.5em}They are different, so music and art are \textbf{not} independent. \\ \hline
+\textbf{6.4 Simulate.}
+
+Trials give an experimental probability. More trials get closer to the theoretical probability. &
+$P(M) = 0.4$. Digits 0 to 3 = music (4 of the 10 digits). One trial = 2 digits (Monday, Tuesday).
+
+\vspace{0.2em}
+\texttt{\bfseries 91 \; 74 \; \fbox{00} \; 29 \; 75 \; 50 \; 47 \; 36 \; 88 \; \fbox{13}}
+
+2 of the 10 trials have music both days.
+
+\rule{0pt}{2.1em}Experimental: $\dfrac{2}{10} = 0.2$ \qquad Theoretical: $0.4 \cdot 0.4 = 0.16$ \\[0.6em] \hline
+\textbf{6.5 Count arrangements.}
+
+Order matters: a \textbf{permutation}.\newline $n! = n \cdot (n - 1) \cdots 2 \cdot 1$ &
+The 8 music students choose a leader, a helper, and a note-taker. The jobs are different, so order matters.
+
+\rule{0pt}{2.1em}${}_8P_3 = \dfrac{8!}{5!} = 8 \cdot 7 \cdot 6 = 336$ ways \\[0.6em] \hline
+\textbf{6.6 Count groups.}
+
+Order does not matter: a \textbf{combination}. Divide by the number of orders. &
+Choose 3 of the 8 music students to play at a school event. They all have the same job.
+
+\rule{0pt}{2.1em}${}_8C_3 = \dfrac{8!}{3!\,5!} = \dfrac{336}{3!} = \dfrac{336}{6} = 56$ groups \\[0.6em] \hline
+\textbf{6.7 Count to find a probability.}
+
+Count the ways you want and all the ways. Use the same method for both. &
+The 3 players are chosen at random. What is the probability that all 3 are also in art? Only 3 music students are in art, so ${}_3C_3 = 1$ group works.
+
+\rule{0pt}{2.1em}$P(\text{all 3 in art}) = \dfrac{1}{56} \approx 0.02$ \\[0.6em] \hline
+\end{tabular}
+
+\vspace{0.4em}
+\textbf{Does order matter?} If I switch the order, is it a different result? Different jobs: permutation. Same job: combination.
+
+\partner
+
+% ---------------- PROBLEMS ----------------
+\newpage
+\lessonhead{6.1 - Venn Diagrams and the Addition Rule}
+\begin{enumerate}
+
+\item \goal{I find a probability and its complement, and I read the symbols $A \cup B$ and $A \cap B$.}
+50 students said if they listen to rap ($R$) and if they listen to K-pop ($K$).
+
+\begin{minipage}[t]{0.45\linewidth}\vspace{0pt}\raggedright
+\scalebox{0.72}{\fig{Unit_6/Review_venn_rap_kpop}}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.52\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}
+  \item Find $P(R)$.
+
+  \ans{$\frac{17 + 9}{50} = \frac{26}{50} = \frac{13}{25} = 0.52$}
+  \work{2.5em}
+  \item Find $P(\text{not } R)$.
+
+  \ans{$1 - \frac{13}{25} = \frac{12}{25} = 0.48$}
+  \work{2.5em}
+\end{enumerate}
+\end{minipage}
+
+\vspace{0.6em}
+\begin{enumerate}[start=3]
+  \item Find $P(K)$. \ans{\quad $\frac{9 + 12}{50} = \frac{21}{50} = 0.42$}
+  \work{2.5em}
+  \item What does $R \cap K$ mean in words? Find $P(R \cap K)$.
+
+  \ans{Listens to rap \textbf{and} K-pop. \quad $\frac{9}{50} = 0.18$}
+  \work{3em}
+  \item What does $R \cup K$ mean in words? Find $P(R \cup K)$.
+
+  \ans{Listens to rap \textbf{or} K-pop \textbf{or} both. \quad $\frac{17 + 9 + 12}{50} = \frac{38}{50} = \frac{19}{25} = 0.76$}
+  \work{3em}
+  \item Find $P(\text{neither})$. \ans{\quad $\frac{12}{50} = \frac{6}{25} = 0.24$}
+  \work{2.5em}
+  \item Find $P(\text{rap only})$. \ans{\quad $\frac{17}{50} = 0.34$}
+  \work{2.5em}
+  \item Explain why $P(R \cup K) + P(\text{neither}) = 1$.
+
+  \ans{``Neither'' is the complement of $R \cup K$. Each student is in $R \cup K$ or in neither. No student is in both. \quad $0.76 + 0.24 = 1$}
+  \work{3em}
+\end{enumerate}
+
+\newpage
+\item \goal{I use the addition rule, and I decide if two events are mutually exclusive.}
+\begin{enumerate}
+  \item $P(A) = 0.45$, \; $P(B) = 0.3$, and $P(A \cap B) = 0.1$. Find $P(A \cup B)$.
+
+  \ans{$P(A \cup B) = 0.45 + 0.3 - 0.1 = 0.65$}
+  \work{2.5em}
+  \item $A$ and $B$ are mutually exclusive. $P(A) = 0.25$ and $P(B) = 0.35$. Find $P(A \cap B)$ and $P(A \cup B)$.
+
+  \ans{$P(A \cap B) = 0$, because they cannot both happen. \quad $P(A \cup B) = 0.25 + 0.35 = 0.6$}
+  \work{2.5em}
+\end{enumerate}
+
+\vspace{0.4em}
+In a class of 32 students, 15 take choir ($C$), 12 take band ($B$), and 5 take both.
+
+\begin{minipage}[t]{0.45\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}[start=3]
+  \item Fill in the Venn diagram.
+
+  \vspace{0.3em}
+  \scalebox{0.62}{\venn{Choir ($C$)}{Band ($B$)}{\ans{10}}{\ans{5}}{\ans{7}}{\ans{10}}}
+\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.52\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}[start=4]
+  \item Use the addition rule to find $P(C \cup B)$.
+
+  \ans{$\frac{15}{32} + \frac{12}{32} - \frac{5}{32} = \frac{22}{32} = \frac{11}{16} \approx 0.69$}
+\end{enumerate}
+\end{minipage}
+
+\vspace{1.2em}
+Roll a number cube (1 to 6). Are the events mutually exclusive? Find the probability.
+\begin{enumerate}[start=5]
+  \item a 2 or a 5
+
+  \ans{Yes. One roll cannot be both. \quad $\frac{1}{6} + \frac{1}{6} = \frac{2}{6} = \frac{1}{3}$}
+  \work{3em}
+  \item an even number or a number greater than 3
+
+  \ans{No. 4 and 6 are both. \quad $\frac{3}{6} + \frac{3}{6} - \frac{2}{6} = \frac{4}{6} = \frac{2}{3}$}
+  \work{3em}
+\end{enumerate}
+
+\vspace{0.4em}
+Draw one card from a deck of 52. Are the events mutually exclusive? Find the probability.
+\begin{enumerate}[start=7]
+  \item a diamond or a black card
+
+  \ans{Yes. Diamonds are red, so no card is both. \quad $\frac{13}{52} + \frac{26}{52} = \frac{39}{52} = \frac{3}{4}$}
+  \work{3em}
+  \item a red card or a queen
+
+  \ans{No. The queen of hearts and the queen of diamonds are both. \quad $\frac{26}{52} + \frac{4}{52} - \frac{2}{52} = \frac{28}{52} = \frac{7}{13} \approx 0.54$}
+  \work{3em}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{6.2 - The Multiplication Rule}
+\begin{enumerate}[resume]
+
+\item \goal{I use the multiplication rule for independent events and the complement for ``at least one'' questions.}
+A soccer player scores on 75\% of her penalty kicks. The kicks are independent. She takes 2 kicks.
+\begin{enumerate}
+  \item Find $P(\text{scores both})$. \ans{\quad $0.75 \cdot 0.75 = 0.5625$}
+  \work{3.2em}
+  \item Find $P(\text{misses both})$. \ans{\quad $0.25 \cdot 0.25 = 0.0625$}
+  \work{3.2em}
+  \item Find $P(\text{scores at least one})$. \ans{\quad $1 - P(\text{misses both}) = 1 - 0.0625 = 0.9375$}
+  \work{3.2em}
+\end{enumerate}
+
+\vspace{0.4em}
+Spin a spinner with 3 equal parts (red, blue, green). Then roll a number cube.
+\begin{enumerate}[start=4]
+  \item Find $P(\text{red} \cap 6)$. \ans{\quad $\frac{1}{3} \cdot \frac{1}{6} = \frac{1}{18}$}
+  \work{3.2em}
+\end{enumerate}
+
+\vspace{0.4em}
+A quiz has 3 questions. Each question has 5 choices. You guess on all 3.
+\begin{enumerate}[start=5]
+  \item Find $P(\text{all 3 right})$. \ans{\quad $\frac{1}{5} \cdot \frac{1}{5} \cdot \frac{1}{5} = \frac{1}{125} = 0.008$}
+  \work{3.2em}
+  \item Find $P(\text{at least one wrong})$. \ans{\quad $1 - \frac{1}{125} = \frac{124}{125} = 0.992$}
+  \work{3.2em}
+  \item Find $P(\text{all 3 wrong})$. \ans{\quad $\frac{4}{5} \cdot \frac{4}{5} \cdot \frac{4}{5} = \frac{64}{125} = 0.512$}
+  \work{3.2em}
+  \item Find $P(\text{at least one right})$. \ans{\quad $1 - \frac{64}{125} = \frac{61}{125} = 0.488$}
+  \work{3.2em}
+\end{enumerate}
+
+\newpage
+\item \goal{I decide if two events are independent or dependent, and I use the general multiplication rule.}
+A jar has 7 red beads and 3 blue beads. You take 2 beads without looking.
+\begin{enumerate}
+  \item You put the first bead back before you take the second. Find $P(\text{red, red})$.
+
+  \ans{Independent. \quad $\frac{7}{10} \cdot \frac{7}{10} = \frac{49}{100} = 0.49$}
+  \work{3.5em}
+  \item You keep the first bead out. Find $P(\text{red second} \mid \text{red first})$.
+
+  \ans{6 red beads are left out of 9 beads. \quad $\frac{6}{9} = \frac{2}{3}$}
+  \work{3.5em}
+  \item You keep the first bead out. Find $P(\text{red, red})$.
+
+  \ans{Dependent. \quad $\frac{7}{10} \cdot \frac{6}{9} = \frac{42}{90} = \frac{7}{15} \approx 0.47$}
+  \work{3.5em}
+  \item You keep the first bead out. Find $P(\text{blue, blue})$.
+
+  \ans{$\frac{3}{10} \cdot \frac{2}{9} = \frac{6}{90} = \frac{1}{15} \approx 0.07$}
+  \work{3.5em}
+  \item You keep the first bead out. Find $P(\text{red first, then blue})$.
+
+  \ans{$\frac{7}{10} \cdot \frac{3}{9} = \frac{21}{90} = \frac{7}{30} \approx 0.23$}
+  \work{3.5em}
+  \item $P(A) = 0.5$ and $P(B \mid A) = 0.3$. Find $P(A \cap B)$.
+
+  \ans{$P(A \cap B) = P(A) \cdot P(B \mid A) = 0.5 \cdot 0.3 = 0.15$}
+  \work{3.5em}
+\end{enumerate}
+
+\vspace{0.4em}
+Independent or dependent? Explain.
+\begin{enumerate}[start=7]
+  \item Roll a number cube two times.
+
+  \ans{Independent. The first roll does not change the second roll.}
+  \work{3.5em}
+  \item Choose 2 different students from a class to read aloud.
+
+  \ans{Dependent. The first student cannot be chosen again, so the choices change.}
+  \work{3.5em}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{6.3 - Conditional Probability}
+\begin{enumerate}[resume]
+
+\item \goal{I find conditional probabilities from a two-way table, and I check if two events are independent.}
+120 students said if they have a library card and if they read for fun.
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|c|c|c|}\hline
+ & \textbf{Reads for fun} & \textbf{Does not} & \textbf{Total} \\ \hline
+\textbf{Library card} & 36 & 24 & 60 \\ \hline
+\textbf{No library card} & 18 & 42 & 60 \\ \hline
+\textbf{Total} & 54 & 66 & 120 \\ \hline
+\end{tabular}
+\end{center}
+\begin{enumerate}
+  \item Find $P(\text{reads})$. \ans{\quad $\frac{54}{120} = \frac{9}{20} = 0.45$}
+  \work{1.5em}
+  \item Find $P(\text{reads} \mid \text{library card})$. \ans{\quad Only the 60 with a card. \; $\frac{36}{60} = \frac{3}{5} = 0.6$}
+  \work{1.5em}
+  \item Find $P(\text{library card} \mid \text{reads})$. \ans{\quad Only the 54 who read. \; $\frac{36}{54} = \frac{2}{3} \approx 0.67$}
+  \work{1.5em}
+  \item Find $P(\text{reads} \mid \text{no library card})$. \ans{\quad $\frac{18}{60} = \frac{3}{10} = 0.3$}
+  \work{1.5em}
+  \item Find $P(\text{no library card} \mid \text{does not read})$. \ans{\quad $\frac{42}{66} = \frac{7}{11} \approx 0.64$}
+  \work{1.5em}
+  \item Are reading for fun and having a library card independent? Explain.
+
+  \ans{No. $P(\text{reads}) = 0.45$, but $P(\text{reads} \mid \text{library card}) = 0.6$. Knowing about the card changes the probability.}
+  \work{2em}
+\end{enumerate}
+
+\vspace{0.4em}
+80 students said if they are left-handed and if they play an instrument.
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|c|c|c|}\hline
+ & \textbf{Instrument} & \textbf{No instrument} & \textbf{Total} \\ \hline
+\textbf{Left-handed} & 6 & 14 & 20 \\ \hline
+\textbf{Right-handed} & 18 & 42 & 60 \\ \hline
+\textbf{Total} & 24 & 56 & 80 \\ \hline
+\end{tabular}
+\end{center}
+\begin{enumerate}[start=7]
+  \item Find $P(\text{instrument} \mid \text{left-handed})$. \ans{\quad $\frac{6}{20} = \frac{3}{10} = 0.3$}
+  \work{1.5em}
+  \item Are being left-handed and playing an instrument independent? Show your work.
+
+  \ans{Yes. $P(\text{instrument}) = \frac{24}{80} = 0.3$ and $P(\text{instrument} \mid \text{left-handed}) = 0.3$. They are equal.}
+  \work{2em}
+\end{enumerate}
+
+\newpage
+\item \goal{I use a tree diagram and the notation $P(A \mid B)$ to find probabilities.}
+75\% of students do their homework online. 25\% do it on paper.
+90\% of online homework is turned in on time. 70\% of paper homework is turned in on time.
+\begin{enumerate}
+  \item Fill in the tree diagram. Write the missing probabilities and multiply along each path.
+
+  \vspace{0.3em}
+  \begin{center}\tree{Online}{0.75}{Paper}{\tb{0.25}}{On time}{Late}{0.9}{\tb{0.1}}{0.7}{\tb{0.3}}%
+  {\te{$0.75 \cdot 0.9 = 0.675$}}{\te{$0.75 \cdot 0.1 = 0.075$}}{\te{$0.25 \cdot 0.7 = 0.175$}}{\te{$0.25 \cdot 0.3 = 0.075$}}\end{center}
+  \item Find $P(\text{online} \cap \text{on time})$. \ans{\quad $0.75 \cdot 0.9 = 0.675$}
+  \work{2.5em}
+  \item Find $P(\text{on time})$. \ans{\quad $0.675 + 0.175 = 0.85$}
+  \work{2.5em}
+  \item Find $P(\text{late})$ two ways.
+
+  \ans{Add the late paths: $0.075 + 0.075 = 0.15$. \quad Use the complement: $1 - 0.85 = 0.15$.}
+  \work{3em}
+  \item The homework was on time. Find $P(\text{paper} \mid \text{on time})$.
+
+  \ans{$\frac{0.175}{0.85} = \frac{7}{34} \approx 0.21$}
+  \work{3em}
+  \item The homework was late. Find $P(\text{online} \mid \text{late})$.
+
+  \ans{$\frac{0.075}{0.15} = 0.5$}
+  \work{3em}
+  \item Find $P(\text{on time} \mid \text{paper})$. Where on the tree do you see it?
+
+  \ans{0.7. It is on the branch after Paper. \quad Check: $\frac{0.175}{0.25} = 0.7$}
+  \work{3em}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{6.4 - Simulations}
+\begin{enumerate}[resume]
+
+\item \goal{I tell theoretical and experimental probability apart, and I explain the law of large numbers.}
+A number cube is rolled 60 times.
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|c|c|c|c|c|c|}\hline
+Number & 1 & 2 & 3 & 4 & 5 & 6 \\ \hline
+Times rolled & 8 & 12 & 9 & 7 & 10 & 14 \\ \hline
+\end{tabular}
+\end{center}
+\begin{enumerate}
+  \item Find the experimental probability of a 6. \ans{\quad $\frac{14}{60} = \frac{7}{30} \approx 0.23$}
+  \work{2.5em}
+  \item Find the theoretical probability of a 6. \ans{\quad $\frac{1}{6} \approx 0.17$}
+  \work{2.5em}
+  \item Find the experimental probability of an even number. \ans{\quad $\frac{12 + 7 + 14}{60} = \frac{33}{60} = \frac{11}{20} = 0.55$}
+  \work{2.5em}
+  \item Find the theoretical probability of an even number. \ans{\quad $\frac{3}{6} = \frac{1}{2} = 0.5$}
+  \work{2.5em}
+  \item Why are the experimental and theoretical probabilities different?
+
+  \ans{Chance. 60 rolls is not very many trials.}
+  \work{3em}
+  \item The cube is rolled 6,000 times. What number do you expect the experimental probability of a 6 to be close to? Why?
+
+  \ans{Close to $\frac{1}{6} \approx 0.17$.\\[0.2em] The law of large numbers: with more trials, the experimental probability gets closer to the theoretical probability.}
+  \work{3em}
+\end{enumerate}
+
+\vspace{0.4em}
+Theoretical or experimental? Explain.
+\begin{enumerate}[start=7]
+  \item It rained on 12 of the last 30 days, so $P(\text{rain}) = \dfrac{12}{30} = 0.4$.
+
+  \ans{Experimental. It comes from what happened.}
+  \work{3em}
+  \item A spinner has 8 equal parts, so the probability of each part is $\dfrac{1}{8}$.
+
+  \ans{Theoretical. It comes from reasoning about equally likely outcomes.}
+  \work{3em}
+\end{enumerate}
+
+\newpage
+\item \goal{I assign random digits and run a simulation to estimate a probability.}
+A seed sprouts 80\% of the time. Plant 3 seeds. Simulate: \\
+Digits 0 to 7 = sprouts. \; Digits 8 and 9 = does not sprout. \; One trial = 3 digits (3 seeds).
+\begin{enumerate}
+  \item Why do the digits 0 to 7 stand for a seed that sprouts?
+
+  \ans{0 to 7 is 8 of the 10 digits, and $\frac{8}{10} = 80\%$.}
+  \work{2.5em}
+  \item Use these random digits to run 10 trials. Count the seeds that sprout in each trial.
+
+  \begin{center}
+  {\large\texttt{\bfseries 17118 89032 50415 68007 77585 15165}}
+
+  \vspace{0.6em}
+  \renewcommand{\arraystretch}{1.6}
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{|l|p{0.42in}|p{0.42in}|p{0.42in}|p{0.42in}|p{0.42in}|p{0.42in}|p{0.42in}|p{0.42in}|p{0.42in}|p{0.42in}|}\hline
+  Trial & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\ \hline
+  Digits & \ans{171} & \ans{188} & \ans{903} & \ans{250} & \ans{415} & \ans{680} & \ans{077} & \ans{758} & \ans{515} & \ans{165} \\ \hline
+  Sprouts & \ans{3} & \ans{1} & \ans{2} & \ans{3} & \ans{3} & \ans{2} & \ans{3} & \ans{2} & \ans{3} & \ans{3} \\ \hline
+  \end{tabular}
+  \end{center}
+  \item Estimate $P(\text{all 3 sprout})$. \ans{\quad Trials 1, 4, 5, 7, 9, and 10. \; $\frac{6}{10} = 0.6$}
+  \work{2.5em}
+  \item Estimate $P(\text{exactly 2 sprout})$. \ans{\quad Trials 3, 6, and 8. \; $\frac{3}{10} = 0.3$}
+  \work{2.5em}
+  \item The theoretical probability that all 3 sprout is $0.8 \cdot 0.8 \cdot 0.8 = 0.512$. How could you make your estimate closer?
+
+  \ans{Run many more trials.}
+  \work{2.5em}
+\end{enumerate}
+
+\vspace{0.4em}
+How would you assign random digits to simulate each event?
+\begin{enumerate}[start=6]
+  \item A player makes 90\% of her free throws. \ans{\quad 0 to 8 = make, 9 = miss}
+  \work{2.5em}
+  \item An event with $P = 0.15$. \ans{\quad Use pairs: 00 to 14 = yes, 15 to 99 = no}
+  \work{2.5em}
+  \item A spinner with 3 equal parts: red, blue, and green.
+
+  \ans{1, 2, 3 = red; \; 4, 5, 6 = blue; \; 7, 8, 9 = green; \; skip 0}
+  \work{2.5em}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{6.5 - Permutations}
+\begin{enumerate}[resume]
+
+\item \goal{I use the counting principle and factorials.}
+Find each value.
+\begin{enumerate}
+  \item $6!$ \ans{\quad $6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 720$}
+  \work{2.5em}
+  \item $\dfrac{9!}{7!}$ \ans{\quad $9 \cdot 8 = 72$}
+  \work{2.5em}
+  \item $0!$ \ans{\quad 1}
+  \work{2.5em}
+\end{enumerate}
+\begin{enumerate}[start=4]
+  \item A video game character has 5 hair styles, 4 shirts, and 3 hats. How many different characters can you make?
+
+  \ans{$5 \cdot 4 \cdot 3 = 60$ characters}
+  \work{4em}
+  \item A school ID has 2 letters (A to Z) and then 3 digits (0 to 9). Letters and digits can repeat. How many IDs are there?
+
+  \ans{$26 \cdot 26 \cdot 10 \cdot 10 \cdot 10 = 676{,}000$ IDs}
+  \work{4em}
+  \item In how many ways can 8 students line up for a photo?
+
+  \ans{$8! = 40{,}320$ ways}
+  \work{4em}
+  \item In how many ways can you arrange the letters of the word PLANT?
+
+  \ans{$5! = 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 120$ ways}
+  \work{4em}
+\end{enumerate}
+
+\newpage
+\item \goal{I count permutations with ${}_nP_r$, and I tell when repeats are allowed.}
+\begin{enumerate}
+  \item Find ${}_7P_2$. \ans{\quad $7 \cdot 6 = 42$}
+  \work{2.5em}
+  \item Find ${}_9P_4$. \ans{\quad $9 \cdot 8 \cdot 7 \cdot 6 = 3{,}024$}
+  \work{2.5em}
+  \item 11 students run for president, vice president, secretary, and treasurer. In how many ways can the 4 jobs be filled?
+
+  \ans{${}_{11}P_4 = 11 \cdot 10 \cdot 9 \cdot 8 = 7{,}920$ ways}
+  \work{3em}
+  \item 7 swimmers are in a race. In how many ways can gold, silver, and bronze medals be given?
+
+  \ans{${}_7P_3 = 7 \cdot 6 \cdot 5 = 210$ ways}
+  \work{3em}
+\end{enumerate}
+
+\vspace{0.4em}
+A bike lock code has 5 digits (0 to 9).
+\begin{enumerate}[start=5]
+  \item How many codes are there if digits can repeat? \ans{\quad $10^5 = 100{,}000$}
+  \work{3em}
+  \item How many codes are there if no digit repeats? \ans{\quad ${}_{10}P_5 = 10 \cdot 9 \cdot 8 \cdot 7 \cdot 6 = 30{,}240$}
+  \work{3em}
+  \item A code has 3 letters. Each letter is a vowel (A, E, I, O, U). Repeats are allowed. How many codes are there?
+
+  \ans{$5 \cdot 5 \cdot 5 = 5^3 = 125$ codes}
+  \work{3em}
+  \item Which count is a permutation, (e) or (f)? Explain.
+
+  \ans{(f). No digit repeats, and order matters. With repeats, it is not a permutation. Use the counting principle.}
+  \work{3em}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{6.6 - Combinations}
+\begin{enumerate}[resume]
+
+\item \goal{I count combinations with ${}_nC_r$.}
+Find each value.
+\begin{enumerate}
+  \item ${}_7C_2$ \ans{\quad $\frac{7 \cdot 6}{2 \cdot 1} = 21$}
+  \work{3em}
+  \item ${}_9C_3$ \ans{\quad $\frac{9 \cdot 8 \cdot 7}{3 \cdot 2 \cdot 1} = 84$}
+  \work{3em}
+  \item ${}_{10}C_4$ \ans{\quad $\frac{10 \cdot 9 \cdot 8 \cdot 7}{4 \cdot 3 \cdot 2 \cdot 1} = 210$}
+  \work{3em}
+  \item $\dbinom{6}{5}$ \ans{\quad $\frac{6!}{5!\,1!} = 6$}
+  \work{3em}
+\end{enumerate}
+\begin{enumerate}[start=5]
+  \item 15 people meet. Each person shakes hands once with every other person. How many handshakes are there?
+
+  \ans{${}_{15}C_2 = \frac{15 \cdot 14}{2} = 105$ handshakes}
+  \work{3.5em}
+  \item You choose 5 of 12 songs to download. In how many ways can you choose them?
+
+  \ans{${}_{12}C_5 = 792$ ways}
+  \work{3.5em}
+  \item A salad bar has 8 toppings. A salad has 4 different toppings. How many different salads are there?
+
+  \ans{${}_8C_4 = \frac{8 \cdot 7 \cdot 6 \cdot 5}{4 \cdot 3 \cdot 2 \cdot 1} = 70$ salads}
+  \work{3.5em}
+\end{enumerate}
+
+\newpage
+\item \goal{I decide whether a problem needs a permutation or a combination, and I explain the difference.}
+For each situation, write permutation or combination. Then find the number of ways.
+
+\vspace{0.4em}
+{\renewcommand{\arraystretch}{2.3}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{3.1in}|>{\raggedright\arraybackslash}p{1.3in}|>{\raggedright\arraybackslash}p{1.7in}|}\hline
+\textbf{Situation} & \textbf{Permutation or combination?} & \textbf{Number of ways} \\ \hline
+(a) Choose 4 of 14 students to carry a banner. & \ans{combination} & \ans{${}_{14}C_4 = 1{,}001$} \\ \hline
+(b) Give gold, silver, and bronze medals to 3 of 14 dancers. & \ans{permutation} & \ans{${}_{14}P_3 = 2{,}184$} \\ \hline
+(c) Choose a captain and a co-captain from 16 players. & \ans{permutation} & \ans{${}_{16}P_2 = 240$} \\ \hline
+(d) Choose 2 of 16 players to carry the water. & \ans{combination} & \ans{${}_{16}C_2 = 120$} \\ \hline
+(e) Arrange 6 pictures in a row on a wall. & \ans{permutation} & \ans{$6! = 720$} \\ \hline
+(f) Choose 3 of 13 books to read this summer. & \ans{combination} & \ans{${}_{13}C_3 = 286$} \\ \hline
+\end{tabular}}
+\begin{enumerate}[start=7]
+  \item Why is the answer to (c) 2 times the answer to (d)?
+
+  \ans{Each pair of players can be put in order $2! = 2$ ways. A permutation counts both orders. A combination counts the pair once.}
+  \work{6em}
+  \item Which situation is a permutation? Circle the letter.
+  \choices{\opt{A} & Choosing 3 of 20 students to go on a field trip.}
+          {\opt{B} & Choosing 4 of 10 songs to download.}
+          {\optans{C} & Choosing the first, second, and third chair from 9 violin players.}
+          {\opt{D} & Choosing 2 of 6 colors to paint a room.}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{6.7 - Probability with Counting}
+\begin{enumerate}[resume]
+
+\item \goal{I count the possible outcomes and the outcomes I want, and I find the probability.}
+A playlist has 10 songs: 6 rap songs and 4 K-pop songs. The app picks 3 songs at random. Order does not matter.
+\begin{enumerate}
+  \item How many groups of 3 songs are possible? \ans{\quad ${}_{10}C_3 = 120$}
+  \work{3.5em}
+  \item Find $P(\text{all 3 are rap})$. \ans{\quad ${}_6C_3 = 20$. \; $\frac{20}{120} = \frac{1}{6} \approx 0.17$}
+  \work{4em}
+  \item Find $P(\text{all 3 are K-pop})$. \ans{\quad ${}_4C_3 = 4$. \; $\frac{4}{120} = \frac{1}{30} \approx 0.03$}
+  \work{4em}
+  \item Find $P(\text{not all 3 are rap})$. \ans{\quad Complement: $1 - \frac{1}{6} = \frac{5}{6} \approx 0.83$}
+  \work{4em}
+\end{enumerate}
+
+\vspace{0.4em}
+A club has 13 members: 5 seniors and 8 juniors. 2 members are chosen at random to go to a meeting.
+\begin{enumerate}[start=5]
+  \item How many pairs are possible? \ans{\quad ${}_{13}C_2 = \frac{13 \cdot 12}{2} = 78$}
+  \work{3.5em}
+  \item Find $P(\text{both seniors})$. \ans{\quad ${}_5C_2 = 10$. \; $\frac{10}{78} = \frac{5}{39} \approx 0.13$}
+  \work{4em}
+  \item Find $P(\text{both juniors})$. \ans{\quad ${}_8C_2 = 28$. \; $\frac{28}{78} = \frac{14}{39} \approx 0.36$}
+  \work{4em}
+  \item Find $P(\text{one senior and one junior})$.
+
+  \ans{$5 \cdot 8 = 40$ pairs. \; $\frac{40}{78} = \frac{20}{39} \approx 0.51$. \quad Check: $10 + 28 + 40 = 78$.}
+  \work{4em}
+\end{enumerate}
+
+\newpage
+\item \goal{I decide if order matters in a probability problem.}
+20 students are in a class. Does order matter? Find the probability.
+\begin{enumerate}
+  \item The teacher picks 2 students at random. One reads aloud and one writes on the board. What is the probability that Ana reads and Ben writes?
+
+  \ans{Yes, the jobs are different. \; ${}_{20}P_2 = 20 \cdot 19 = 380$. \; $P = \frac{1}{380} \approx 0.003$}
+  \work{5em}
+  \item The teacher picks 2 students at random to hand out papers. What is the probability that Ana and Ben are picked?
+
+  \ans{No, it is the same job. \; ${}_{20}C_2 = 190$. \; $P = \frac{1}{190} \approx 0.005$}
+  \work{5em}
+  \item Why is the answer to (b) 2 times the answer to (a)?
+
+  \ans{In (a), only 1 of the 2 orders of Ana and Ben works. In (b), both orders are the same pair.}
+  \work{5em}
+  \item A playlist of 6 songs plays in a random order. What is the probability that the songs play in the order you like best?
+
+  \ans{Yes, order matters. \; $6! = 720$. \; $P = \frac{1}{720} \approx 0.001$}
+  \work{5em}
+  \item A 4-digit locker code uses the digits 1 to 8 with no repeats. The code is chosen at random. What is the probability that the code is 1357?
+
+  \ans{Yes. 1357 and 7531 are different codes. \; ${}_8P_4 = 1{,}680$. \; $P = \frac{1}{1{,}680} \approx 0.0006$}
+  \work{5em}
+  \item A student says, ``3 of 10 people win the same prize. Order matters, so the probability that Ana, Ben, and Carla win is $\dfrac{1}{720}$.'' Is the student right? Explain.
+
+  \ans{No. It is the same prize, so order does not matter. \; ${}_{10}C_3 = 120$, so $P = \frac{1}{120}$.}
+  \work{5em}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{Test-Style Questions}
+A test asks the same questions with more words. Read slowly. Circle the best answer.
+
+\begin{enumerate}[resume,itemsep=1.2em]
+
+\item In a group of 60 students, 28 are on a sports team, 22 are in a club, and 10 are both on a sports team and in a club. A student is selected at random from the group. What is the probability that the student is on a sports team or in a club?
+\fchoices{\opt{A} & $\dfrac{1}{6}$}
+        {\opt{B} & $\dfrac{1}{2}$}
+        {\optans{C} & $\dfrac{2}{3}$}
+        {\opt{D} & $\dfrac{5}{6}$}
+\par\ans{$\frac{28}{60} + \frac{22}{60} - \frac{10}{60} = \frac{40}{60} = \frac{2}{3}$}
+
+\item A school has two copy machines that work independently of each other. On any given day, the probability that the first machine is broken is 0.1, and the probability that the second machine is broken is 0.2. What is the probability that at least one of the machines works on a given day?
+\choices{\opt{A} & 0.02}
+        {\opt{B} & 0.28}
+        {\opt{C} & 0.72}
+        {\optans{D} & 0.98}
+\par\ans{$P(\text{both broken}) = 0.1 \cdot 0.2 = 0.02$. \; $1 - 0.02 = 0.98$}
+
+\item The two-way table shows the results of a survey of 90 students about their favorite type of movie. A student from the survey is selected at random. Given that the student is in 12th grade, what is the probability that the student prefers action movies?
+
+\vspace{0.3em}
+{\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|l|c|c|c|}\hline
+ & \textbf{Action} & \textbf{Comedy} & \textbf{Total} \\ \hline
+\textbf{11th grade} & 20 & 25 & 45 \\ \hline
+\textbf{12th grade} & 30 & 15 & 45 \\ \hline
+\textbf{Total} & 50 & 40 & 90 \\ \hline
+\end{tabular}}
+\fchoices{\opt{A} & $\dfrac{1}{3}$}
+        {\opt{B} & $\dfrac{5}{9}$}
+        {\opt{C} & $\dfrac{3}{5}$}
+        {\optans{D} & $\dfrac{2}{3}$}
+\par\ans{Only the 45 students in 12th grade. \; $\frac{30}{45} = \frac{2}{3}$}
+
+\newpage
+\item The probability of rain is 30\% on each of the next 5 days. A student wants to use a simulation to model whether it rains on one of these days. Which simulation can the student use?
+\choices{\optans{A} & Pick a random digit from 0 to 9. The digits 0, 1, and 2 mean rain.}
+        {\opt{B} & Pick a random digit from 0 to 9. The digits 0, 1, 2, and 3 mean rain.}
+        {\opt{C} & Roll a number cube. The numbers 1 and 2 mean rain.}
+        {\opt{D} & Flip a coin. Heads means rain.}
+\par\ans{3 of the 10 digits is $\frac{3}{10} = 30\%$. \; B is 40\%, C is $\frac{1}{3}$, and D is 50\%.}
+
+\item How many different 4-letter arrangements can be made from the letters in the word SPORT if no letter can be used more than once?
+\choices{\opt{A} & 5}
+        {\opt{B} & 24}
+        {\optans{C} & 120}
+        {\opt{D} & 625}
+\par\ans{${}_5P_4 = 5 \cdot 4 \cdot 3 \cdot 2 = 120$}
+
+\item A student council has 12 members. A committee of 4 members will be selected from the council. How many different committees of 4 members are possible?
+\choices{\opt{A} & 48}
+        {\optans{B} & 495}
+        {\opt{C} & 11,880}
+        {\opt{D} & 20,736}
+\par\ans{Order does not matter. \; ${}_{12}C_4 = 495$}
+
+\item A teacher will randomly select 2 students from a group of 4 juniors and 6 seniors. What is the probability that both students selected are juniors?
+\fchoices{\opt{A} & $\dfrac{1}{15}$}
+        {\optans{B} & $\dfrac{2}{15}$}
+        {\opt{C} & $\dfrac{4}{25}$}
+        {\opt{D} & $\dfrac{2}{5}$}
+\par\ans{${}_4C_2 = 6$ and ${}_{10}C_2 = 45$. \; $\frac{6}{45} = \frac{2}{15}$}
+
+\end{enumerate}
+
+\end{document}

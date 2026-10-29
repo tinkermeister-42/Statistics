@@ -1,0 +1,436 @@
+\documentclass[11pt]{article}
+\input{../preamble}
+% Unit 5 review.  Problems 1-8 follow the Unit 5 quiz question for question
+% (same "I ..." goals, two or three times the parts); 9-14 ask the same
+% skills in test wording.
+\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000
+\setlist[enumerate,1]{leftmargin=1.5em,itemsep=1.2em}
+\setlist[enumerate,2]{label=(\alph*),leftmargin=2em,itemsep=1.4em}
+\newcommand{\lessonhead}[1]{\par\vspace{0.6em}{\large\bfseries #1}\par\vspace{0.25em}\hrule\vspace{0.6em}}
+\newcommand{\goal}[1]{\textbf{#1}\par\vspace{0.35em}}
+% circled choices: \opt{A} prints plain; \optans{B} is circled in red on the key
+\newcommand{\opt}[1]{\tikz[baseline=(c.base)]\node[inner sep=2.5pt](c){#1};}
+\newcommand{\optans}[1]{\ifkey\tikz[baseline=(c.base)]\node[circle,inner sep=1.2pt,draw=keyred,thick,text=keyred](c){#1};\else\opt{#1}\fi}
+% a grading note on the key: other answers that earn credit
+\newcommand{\also}[1]{\par{\small #1}}
+\newcommand{\choices}[4]{\par\vspace{0.3em}\begin{tabular}{@{}l@{\hspace{0.6em}}>{\raggedright\arraybackslash}p{\dimexpr\linewidth-2.6em\relax}}#1\\#2\\#3\\#4\\\end{tabular}}
+
+\begin{document}
+
+\lessontitle{Unit 5 Review}
+
+\textbf{One study, every tool.} A school has 800 students. A company says its new homework app raises quiz scores. The principal wants to find out if that is true.
+
+\vspace{0.5em}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{1.8in}|>{\raggedright\arraybackslash}p{4.7in}|}
+\hline
+\textbf{5.1 Who is in the study?}
+
+The population is the whole group. The sample is the part we collect data from. &
+Population: all 800 students at the school.\newline
+\textbf{Idea 1:} Post a link: ``Did the app help you?'' 150 students answer. This is \textbf{voluntary response bias}. Students with strong feelings answer most.\newline
+\textbf{Idea 2:} Compare students who chose the app with students who did not. This is an \textbf{observational study}. Students who chose the app may already work harder. \\ \hline
+\textbf{5.2 Choose the sample.}
+
+Use chance.\newline Stratified: a few from every group.\newline Cluster: everyone from a few groups. &
+Randomly pick 10 students from each grade, 9 to 12. The sample is 40 students.\newline
+This is a \textbf{stratified sample}. Every grade is in it, and chance picks the students. \\ \hline
+\textbf{5.3 Run an experiment.}
+
+Random assignment makes the groups alike. The control group does not get the new treatment. &
+\vspace{0.1em}\centerline{\fig{Unit_5/Review_app_design}}
+Explanatory variable: app or paper. \quad Response variable: quiz score.\newline
+Group 2 is the control group. Both groups get the same homework and take the same quiz. \\ \hline
+\textbf{5.4 What can it prove?}
+
+Random sample: we can generalize.\newline Random assignment: we can say cause.\newline Less than 5\% by chance: statistically significant. &
+App group: $\bar{x} = 82$. \; Paper group: $\bar{x} = 74$. \; Difference: $82 - 74 = 8$ points.\newline
+Shuffle the 40 scores into two random groups of 20. Repeat 100 times.
+\centerline{\fig{Unit_5/Review_app_simulation}}
+Only 2 of the 100 shuffles gave 8 or more (2\%). The result is \textbf{statistically significant}.\newline
+Random sample: we can generalize to all 800 students.\newline
+Random assignment: the app \textbf{caused} the higher scores. \\ \hline
+\end{tabular}
+
+\vspace{0.6em}
+\textbf{A bigger sample does not fix bias.} If 1,000 people choose to answer a poll, it is still a voluntary response sample. Only chance makes a sample represent the population.
+
+\partner
+
+% ---------------- PROBLEMS ----------------
+\newpage
+\lessonhead{5.1 - Samples, Studies, and Bias}
+\begin{enumerate}
+
+\item \goal{I name the population and the sample in a study, and I tell a sample survey, an observational study, and an experiment apart.}
+Name the population and the sample.
+\begin{enumerate}
+  \item A factory makes 40,000 soccer balls each month. To check them, it tests 200 balls chosen at random.
+
+  \ans{Population: all 40,000 soccer balls made that month. \; Sample: the 200 balls tested.}
+  \work{2.4em}
+  \item A town wants to know how its residents feel about a new bike path. It asks 350 randomly chosen residents.
+
+  \ans{Population: all residents of the town. \; Sample: the 350 residents asked.}
+  \work{2.4em}
+  \item A school wants to know how many hours its 900 students sleep. It asks every student in 3 homerooms.
+
+  \ans{Population: all 900 students at the school. \; Sample: the students in the 3 homerooms.}
+  \work{2.4em}
+\end{enumerate}
+
+\vspace{0.6em}
+Is each study a sample survey, an observational study, or an experiment? Explain.
+\begin{enumerate}[start=4]
+  \item A city asks 300 bus riders how long they wait for the bus.
+
+  \ans{Sample survey. The city asks a sample questions. It changes nothing.}
+  \work{2.4em}
+  \item Researchers compare the grades of students who have a part-time job and students who do not.
+
+  \ans{Observational study. The researchers do not choose who has a job.}
+  \work{2.4em}
+  \item A gardener randomly chooses 20 bean plants to grow in the sun and 20 to grow in the shade. She measures how tall they grow.
+
+  \ans{Experiment. She assigns a treatment (sun or shade) and measures the result.}
+  \work{2.4em}
+  \item A scientist records the high temperature and the number of people at a beach each day.
+
+  \ans{Observational study. She only measures. She does not change the temperature.}
+  \work{2.4em}
+  \item A teacher randomly chooses half of the class to use a calculator on a quiz. The other half do not use one. She compares the scores.
+
+  \ans{Experiment. The teacher assigns a treatment (calculator or no calculator).}
+\end{enumerate}
+
+\newpage
+\item \goal{I name the type of bias in a sample or a question, and I decide if results can be generalized to a population.}
+Name the type of bias. Explain how it could change the results.
+\begin{enumerate}
+  \item A news website asks readers to click yes or no: ``Should phones be allowed in class?''
+
+  \ans{Voluntary response bias. Readers choose to vote. People with strong feelings vote most, so the result may not match all readers.}
+  \work{3em}
+  \item To learn what music students at his school like, Sam asks his friends at lunch.
+
+  \ans{Convenience. Sam's friends may like the same music as Sam, so the results may not match the school.}
+  \work{3em}
+  \item A school wants to know how many students have a library card. It surveys a random sample of the students who visited the library this year.
+
+  \ans{Undercoverage. Students who never visit the library are left out. They are less likely to have a card, so the percent will look too high.}
+  \work{3em}
+  \item A store mails a survey to 1,000 randomly chosen customers. Only 150 send it back.
+
+  \ans{Nonresponse bias. The 150 who answer may feel more strongly (very happy or very upset) than the 850 who do not.
+  \also{Voluntary response: partial credit. The cue is ``randomly chosen'', so the answer is nonresponse.}}
+  \work{3em}
+  \item A survey asks, ``Do you agree that the new lunch menu, which students love, should stay?''
+
+  \ans{Response bias. The words ``which students love'' push people to say yes.}
+  \work{3em}
+  \item A teacher asks each student, in front of the whole class, ``Did you finish all of your homework this week?''
+
+  \ans{Response bias. The setting pushes students to say yes, because the class is listening.}
+  \work{3em}
+\end{enumerate}
+
+\vspace{0.4em}
+Can the results be generalized to the population? Explain.
+\begin{enumerate}[start=7]
+  \item To learn how students get to school, Omar asks 50 students who are waiting at the bus stop.
+
+  \ans{No. Everyone at the bus stop rides the bus. Students who walk or get a ride are left out, so the sample does not represent the school.}
+  \work{3.5em}
+  \item A school numbers its 1,200 students. A random number generator picks 100 of them. The school asks them how much time they spend on homework.
+
+  \ans{Yes, to all 1,200 students. The sample was chosen at random from the whole school, so it should represent the school well.}
+  \work{3.5em}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{5.2 - Sampling Methods}
+\begin{enumerate}[resume]
+
+\item \goal{I name and describe simple random, stratified, cluster, systematic, and convenience samples, and I tell stratified and cluster samples apart.}
+Name the sampling method. Then write if it uses chance.
+
+\vspace{0.4em}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{4.25in}|>{\raggedright\arraybackslash}p{2.05in}|}\hline
+\textbf{How the sample is chosen} & \textbf{Method}\\ \hline
+(a) \; A teacher writes all 30 names on cards, mixes them in a bag, and draws 5. & \ans{Simple random (uses chance)}\\ \hline
+(b) \; A factory checks every 20th phone case that comes off the line. It starts with a random case from the first 20. & \ans{Systematic (uses chance)}\\ \hline
+(c) \; A school randomly picks 4 of its 40 homerooms and surveys every student in those 4. & \ans{Cluster (uses chance)}\\ \hline
+(d) \; A gym randomly picks 25 members who come in the morning and 25 who come in the evening. & \ans{Stratified (uses chance)}\\ \hline
+(e) \; A reporter asks the first 30 people who leave a concert.\rule[-1.4em]{0pt}{0pt} & \ans{Convenience (no chance)}\\ \hline
+(f) \; A website asks visitors to answer a poll if they want to.\rule[-1.4em]{0pt}{0pt} & \ans{Voluntary response (no chance)\also{Also accept: convenience (no chance).}}\\ \hline
+\end{tabular}
+
+\vspace{1em}
+A school has 600 students in 30 homerooms of 20 students. It has 3 lunch periods with 200 students each. The school wants to survey 60 students.
+\begin{enumerate}[start=7]
+  \item Describe a cluster sample of 60 students.
+
+  \ans{Randomly pick 3 of the 30 homerooms. Ask all 20 students in each one. $3 \times 20 = 60$ students.}
+  \work{3em}
+  \item Describe a stratified sample of 60 students. Use the lunch periods as the groups.
+
+  \ans{Randomly pick 20 students from each of the 3 lunch periods. $3 \times 20 = 60$ students.}
+  \work{3em}
+  \item What is the difference between your samples in (g) and (h)?
+
+  \ans{The cluster sample takes \textbf{everyone} from a \textbf{few} homerooms. The stratified sample takes a \textbf{few} students from \textbf{every} lunch period.}
+  \work{3em}
+  \item A company has 12 phone stores. To survey its workers, the manager randomly selects 10 workers from each of the 12 stores. Which sampling method does the manager use? Circle the letter.
+  \par\vspace{0.3em}\begin{tabular}{@{}l@{\hspace{0.6em}}p{2.4in}l@{\hspace{0.6em}}p{2.4in}}\opt{A} & Simple random sample & \optans{B} & Stratified sample\\ \opt{C} & Cluster sample & \opt{D} & Systematic sample\\\end{tabular}
+\end{enumerate}
+
+\newpage
+\item \goal{I use a random digit table to choose a sample, and I choose a good sampling method for a situation.}
+\begin{center}
+\renewcommand{\arraystretch}{1.3}\large
+\begin{tabular}{|l|l|}\hline
+Row 1 & \texttt{\bfseries 80705 31552 01750 12036 81867 61814 36988 70804}\\
+Row 2 & \texttt{\bfseries 57068 19587 06206 66786 12176 19087 11019 66850}\\ \hline
+\end{tabular}
+\end{center}
+\begin{enumerate}
+  \item A club has 50 members, numbered 01 to 50. Use \textbf{row 1} to choose 5 members.
+
+  \ans{Pairs: 80, 70, 53, \textbf{15}, 52, \textbf{01}, 75, 01, \textbf{20}, \textbf{36}, 81, 86, 76, \textbf{18}.\\
+  Skip numbers over 50 and the second 01 (a repeat). The sample is members 15, 01, 20, 36, and 18.}
+  \work{5em}
+  \item A class has 18 students, numbered 01 to 18. Use \textbf{row 2} to choose 3 students.
+
+  \ans{Pairs: 57, \textbf{06}, 81, 95, 87, 06, 20, 66, 67, 86, \textbf{12}, \textbf{17}.\\
+  Skip numbers over 18 and the second 06 (a repeat). The sample is students 06, 12, and 17.}
+  \work{5em}
+\end{enumerate}
+
+\vspace{0.4em}
+A town has 6,000 residents. 4,500 live in town, and 1,500 live on farms outside town. The town wants to ask 120 residents about a new road.
+\begin{enumerate}[start=3]
+  \item Describe a good sampling method. Name it, and explain why it is a good choice.
+
+  \ans{Stratified sample. Split the residents into town residents and farm residents. $\frac{120}{6{,}000} = 2\%$. Randomly pick $2\%$ of each group: $0.02 \times 4{,}500 = 90$ town residents and $0.02 \times 1{,}500 = 30$ farm residents. Farm residents may use the road in a different way, so both groups are in the sample in the right numbers.
+  \also{Also accept, with a reason: a stratified sample with equal numbers from each group, a simple random sample, or a systematic sample from the full list of 6,000.}}
+  \work{6em}
+  \item Someone says to ask 120 people at the grocery store in town. What is wrong with this method?
+
+  \ans{It is a convenience sample. People who live on farms, or shop somewhere else, are less likely to be there. The sample may not represent the town.}
+  \work{3.5em}
+\end{enumerate}
+
+\vspace{0.4em}
+\begin{enumerate}[start=5]
+  \item A bus company has 30 buses with 40 seats each. It wants to check 120 seats for damage. Describe a fast way to choose the seats. Name the method.
+
+  \ans{Cluster sample. Randomly pick 3 buses and check all 40 seats in each. $3 \times 40 = 120$ seats. Workers only go to 3 buses.}
+  \work{3.5em}
+  \item A teacher wants to choose 4 of her 28 students to test a new website. Describe how to choose a simple random sample.
+
+  \ans{Number the students 01 to 28. Use a random digit table (or a random number generator) to pick 4 numbers. Skip numbers over 28 and repeats.}
+  \work{3.5em}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{5.3 - Experiments}
+\begin{enumerate}[resume]
+
+\item \goal{I name the subjects, treatments, explanatory variable, and response variable in an experiment, and I explain why random assignment matters.}
+Does a new kind of soil help pepper plants grow taller? 36 pepper plants are randomly split into two groups of 18. One group grows in the new soil. The other group grows in regular soil. After 8 weeks, a class measures the height of each plant.
+\begin{enumerate}[itemsep=1.5em]
+  \item What are the subjects? \ans{\quad The 36 pepper plants}
+  \item What are the treatments? \ans{\quad New soil and regular soil}
+  \item What is the explanatory variable? \ans{\quad The type of soil}
+  \item What is the response variable? \ans{\quad The height of each plant after 8 weeks}
+  \item What is the control group? \ans{\quad The 18 plants in regular soil}
+  \item Why split the plants into groups \textbf{at random}?
+
+  \ans{So the two groups are alike. The strongest plants do not all end up in one group. Then a difference in height comes from the soil, not from the plants.}
+  \work{4em}
+\end{enumerate}
+
+\vspace{0.6em}
+A phone company tests a new battery saving setting. 50 phones of the same model are randomly split into two groups of 25. One group uses the new setting. The other group uses the normal setting. Each phone plays the same video until the battery dies. The company records how many hours each battery lasts.
+\begin{enumerate}[start=7,itemsep=1.5em]
+  \item What are the subjects? \ans{\quad The 50 phones}
+  \item What is the explanatory variable? \ans{\quad The setting (new or normal)}
+  \item What is the response variable? \ans{\quad How many hours the battery lasts}
+  \item Instead, the company puts the 25 newest phones in the new setting group. Why is this a problem?
+
+  \ans{Newer batteries may last longer anyway. Then we cannot tell if the setting or the newer batteries caused the longer time. Random assignment makes the groups alike.}
+  \work{4em}
+\end{enumerate}
+
+\newpage
+\item \goal{I explain control groups, placebos, and blinding, and I describe a completely randomized design and a matched pairs design.}
+A company says its new ``study tea'' helps students do better on math tests. 60 student volunteers are randomly split into two groups of 30. One group drinks study tea. The other group drinks a plain tea that looks and tastes the same. Then every student takes the same math test. A teacher grades the tests.
+\begin{enumerate}[itemsep=1em]
+  \item What is the control group? \ans{\quad The 30 students who drink the plain tea}
+  \item The plain tea is a placebo. What is a placebo?
+
+  \ans{A fake treatment that looks real.}
+  \work{1.5em}
+  \item Why give the control group a placebo, and not nothing at all?
+
+  \ans{Students may do better just because they \textit{think} they got study tea (the placebo effect). With a placebo, both groups think they may have it. So an extra difference comes from the study tea itself.}
+  \work{3.5em}
+  \item Why should the students not know which tea they drank?
+
+  \ans{If they know they got study tea, they may feel sure and try harder. The placebo effect could change their scores.}
+  \work{3em}
+  \item Why should the teacher who grades the tests not know?
+
+  \ans{She might, without meaning to, grade the study tea group more kindly.}
+  \work{3em}
+  \item Neither the students nor the teacher knows who drank which tea. What is this called? \ans{\quad Double-blind}
+  \work{2em}
+  \item Is this experiment a completely randomized design or a matched pairs design? Explain.
+
+  \ans{Completely randomized. Each student gets only one treatment, and chance decides which one.}
+  \work{3em}
+  \item Describe how to test study tea with a matched pairs design.
+
+  \ans{Each student takes two math tests of the same difficulty on two days: once after study tea and once after plain tea. A coin flip decides which tea comes first. Compare each student's two scores.
+  \also{Also accept: pair students with similar scores (for example, on a pretest), then flip a coin in each pair to choose who drinks study tea.}}
+  \work{4em}
+  \item Suppose each student drinks both teas, on two different days. Why flip a coin to decide which tea comes first?
+
+  \ans{Students may do better on the second test (practice) or worse (tired). The coin keeps that from always helping the same tea.}
+  \work{3em}
+  \item Why is a matched pairs design a good choice here?
+
+  \ans{Each student is compared to themselves. So differences in math skill from student to student do not matter. {\small (If you paired similar students: each pair has similar skill, so skill differences matter less.)}}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{5.4 - What a Study Can Prove}
+\begin{enumerate}[resume]
+
+\item \goal{I decide if a study's results can be generalized to a population, and I decide if a study can show cause and effect.}
+For each study, can we conclude cause? Can we generalize to the population? Explain.
+
+\vspace{0.4em}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{2.85in}|>{\raggedright\arraybackslash}p{1.65in}|>{\raggedright\arraybackslash}p{1.7in}|}\hline
+\textbf{Study} & \textbf{Cause? Why?} & \textbf{Generalize? Why?}\\ \hline
+(a) \; Researchers randomly choose 800 high school students in Missouri. Students who play a musical instrument have higher math grades.\rule[-2.2em]{0pt}{0pt} & \ans{No. Observational study, no random assignment. Something else could explain both.} & \ans{Yes, to high school students in Missouri. The sample is random.}\\ \hline
+(b) \; 50 volunteers are randomly assigned to use a standing desk or a regular desk for a month. The standing desk group finishes more work.\rule[-2.2em]{0pt}{0pt} & \ans{Yes, for these 50 volunteers (random assignment).\also{Also accept: yes, if the difference is statistically significant.}} & \ans{No. Volunteers are not a random sample of all workers.}\\ \hline
+(c) \; A website asks visitors who own a cat and visitors who own a dog how happy they are. The dog owners say they are happier.\rule[-2.2em]{0pt}{0pt} & \ans{No. People chose their pets. There is no random assignment.} & \ans{No. Visitors chose to answer. It is not a random sample.}\\ \hline
+(d) \; A school randomly chooses 60 of its 900 students. It randomly assigns 30 to read with a new reading app and 30 to read paper books. After a month, the app group reads faster.\rule[-2.2em]{0pt}{0pt} & \ans{Yes. They were randomly assigned.\also{Also accept: yes, if the difference is statistically significant.}} & \ans{Yes, to all 900 students at the school. The sample is random.}\\ \hline
+\end{tabular}
+
+\vspace{1em}
+\begin{enumerate}[start=5]
+  \item A researcher randomly selects 500 adults in a large city. She asks how many books they read each year and how many hours of TV they watch each week. Adults who read more books tend to watch less TV. Which conclusion is best supported? Circle the letter.
+  \choices{\opt{A} & Reading more books causes adults in the city to watch less TV.}
+          {\opt{B} & Reading more books causes all adults in the country to watch less TV.}
+          {\optans{C} & For adults in the city, reading more books is associated with watching less TV, but the study does not show cause.}
+          {\opt{D} & The results apply only to the 500 adults in the study.}
+\end{enumerate}
+
+\newpage
+\item \goal{I use a simulation to decide if a result is statistically significant, and I find mistakes in conclusions about studies.}
+A coach tests a new jump training. 24 players are randomly split into two groups of 12. After 4 weeks, the coach measures how high each player jumps. Each dot is the difference between the group means in one random shuffle of the 24 jumps, when the training does nothing.
+
+\vspace{0.4em}
+\begin{minipage}[t]{0.5\linewidth}\vspace{0pt}\raggedright
+\fig{Unit_5/Review_jump_simulation}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.47\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}[itemsep=0.8em]
+  \item The training group's mean jump was 5 cm higher. How many of the 100 shuffles gave a difference of 5 or more?
+
+  \ans{$1 + 1 = 2$ shuffles}
+  \work{1.5em}
+  \item What percent of the shuffles is that? \ans{\quad $\frac{2}{100} = 2\%$}
+  \work{0.5em}
+  \item Is a 5 cm difference statistically significant? Explain.
+
+  \ans{Yes. Chance gave a difference this big only 2\% of the time. That is less than 5\%.}
+\end{enumerate}
+\end{minipage}
+
+\vspace{0.6em}
+\begin{enumerate}[start=4,itemsep=0.9em]
+  \item Another team did the same experiment. Its training group jumped 2 cm higher. How many shuffles gave 2 or more? Is 2 cm statistically significant?
+
+  \ans{$12 + 8 + 5 + 1 + 1 = 27$ shuffles (27\%). No. Chance gives a difference this big often.}
+  \work{2.5em}
+  \item What is the smallest whole number of cm that would be statistically significant? Explain.
+
+  \ans{5 cm. 5 or more happened 2 times (2\%), which is less than 5\%. 4 or more happened $5 + 1 + 1 = 7$ times (7\%), which is not.}
+  \work{2.5em}
+\end{enumerate}
+
+\vspace{0.3em}
+Find the mistake in each conclusion.
+\begin{enumerate}[start=6,itemsep=0.9em]
+  \item A survey of 400 randomly chosen teens found that teens who read for fun get better grades. A headline says, ``Reading for fun raises grades.''
+
+  \ans{A survey shows an association, not a cause. Teens who read for fun may differ in other ways.}
+  \work{2.5em}
+  \item 36 volunteers from one music class were randomly assigned to two practice plans. Plan B players learned a new song faster. Conclusion: ``Plan B works better for every music student in the country.''
+
+  \ans{The volunteers are not a random sample of all music students. We can only say Plan B caused faster learning for these 36 volunteers.}
+  \work{2.5em}
+  \item In a randomized experiment, Group 1 scored 3 points higher than Group 2. A simulation shows chance gives a difference of 3 or more 35 times out of 100. Conclusion: ``The treatment for Group 1 works better.''
+
+  \ans{It is not statistically significant. Chance gives 3 or more 35\% of the time.}
+  \work{2.5em}
+  \item Rewrite the headline in (f) so it does not claim a cause.
+
+  \ans{``Teens who read for fun tend to get better grades.''}
+  \ifkey\else\par\rule{0pt}{2.6em}\fi
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{Test-Style Questions}
+A test asks the same questions with more words. Read slowly. Circle the best answer.
+
+\begin{enumerate}[resume,itemsep=0.9em]
+
+\item A researcher wants to estimate the mean number of hours that students at a large high school spend on homework each week. She surveys all 28 students in one advanced math class. Which statement best describes a problem with the researcher's method?
+\choices{\opt{A} & The sample is too large to give useful results.}
+        {\opt{B} & The population is the 28 students in the class, so the results cannot be used.}
+        {\optans{C} & The sample may not represent the school, because an advanced class may do more homework.}
+        {\opt{D} & The study is an experiment, so the results cannot be generalized.}
+
+\item A city council member wants to know whether residents support building a new public pool. She posts a survey on her website and asks people to respond. Of the 400 people who respond, 85\% support the pool. Which type of bias is most likely present?
+\choices{\optans{A} & Voluntary response bias, because people chose whether to answer.}
+        {\opt{B} & Nonresponse bias, because some residents who were chosen did not answer.}
+        {\opt{C} & Response bias, because the question was worded unfairly.}
+        {\opt{D} & No bias, because 400 people is a large sample.}
+
+\item A store manager randomly selects a number from 1 to 15, for example 6. She surveys the 6th customer who enters the store, and then she surveys every 15th customer after that. Which sampling method does the manager use?
+\par\vspace{0.3em}\begin{tabular}{@{}l@{\hspace{0.6em}}p{2.6in}l@{\hspace{0.6em}}p{2.6in}}\opt{A} & Simple random sample & \opt{B} & Stratified sample\\ \opt{C} & Cluster sample & \optans{D} & Systematic sample\\\end{tabular}
+
+\item To test whether a new plant food increases the number of flowers on rose plants, 40 rose plants are randomly assigned to get either the plant food or water only. What is the main purpose of the random assignment?
+\choices{\opt{A} & To make sure every plant receives the plant food.}
+        {\optans{B} & To make the two groups alike, so that a difference in flowers can be linked to the plant food.}
+        {\opt{C} & To make sure the results apply to all rose plants in the world.}
+        {\opt{D} & To increase the number of flowers on every plant.}
+
+\item In the homework app study on page 1, a stratified random sample of 40 students was randomly assigned to use the app or paper homework. The app group's mean quiz score was 8 points higher, and 2 of 100 shuffles gave a difference of 8 or more. Which conclusion is best supported?
+\choices{\opt{A} & The difference is likely due to chance, so the app does not work.}
+        {\opt{B} & The app will raise quiz scores for every student in the country.}
+        {\optans{C} & The result is statistically significant, and the app likely caused higher scores at this school.}
+        {\opt{D} & No conclusion is possible, because only 40 of the 800 students were in the study.}
+
+\end{enumerate}
+
+\end{document}

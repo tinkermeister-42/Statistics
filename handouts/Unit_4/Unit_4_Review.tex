@@ -1,0 +1,422 @@
+\documentclass[11pt]{article}
+\input{../preamble}
+% Unit 4 review.  Problems 1-6 follow the Unit 4 quiz question for question
+% (same "I ..." goals, two or three times the parts); 7-12 ask the same
+% skills in test wording.
+\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000
+\setlist[enumerate,1]{leftmargin=1.5em,itemsep=1.2em}
+\setlist[enumerate,2]{label=(\alph*),leftmargin=2em,itemsep=1.6em}
+\newcommand{\lessonhead}[1]{\par\vspace{0.6em}{\large\bfseries #1}\par\vspace{0.25em}\hrule\vspace{0.6em}}
+\newcommand{\goal}[1]{\textbf{#1}\par\vspace{0.35em}}
+\newcommand{\rblank}[1]{\underline{\makebox[0.6in]{\ans{#1}}}}
+% a shared figure with a red answer drawn on top of it on the key:
+% \figwith{Unit_X/<name>}{tikz commands}.  The figure calls \figkey (via
+% \csname, so the web build, where it is undefined, skips it).
+\newcommand{\figwith}[2]{\begingroup\def\figkey{\ifkey\begin{scope}[keyred,thick]#2\end{scope}\fi}\fig{#1}\endgroup}
+% circled choices: \opt{A} prints plain; \optans{B} is circled in red on the key
+\newcommand{\opt}[1]{\tikz[baseline=(c.base)]\node[inner sep=2.5pt](c){#1};}
+\newcommand{\optans}[1]{\ifkey\tikz[baseline=(c.base)]\node[circle,inner sep=1.2pt,draw=keyred,thick,text=keyred](c){#1};\else\opt{#1}\fi}
+\newcommand{\choices}[4]{\par\vspace{0.3em}\begin{tabular}{@{}l@{\hspace{0.6em}}p{6in}}#1\\#2\\#3\\#4\\\end{tabular}}
+
+\begin{document}
+
+\lessontitle{Unit 4 Review}
+
+\textbf{One data set, every tool.} 8 candles of the same kind burned for different numbers of hours. Then each candle was measured.
+
+\vspace{0.3em}
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|l|*{8}{c|}}\hline
+Hours burned ($x$) & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\ \hline
+Height in cm ($y$) & 23 & 19 & 18 & 17 & 13 & 13 & 9 & 8 \\ \hline
+\end{tabular}
+\end{center}
+
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{1.8in}|>{\raggedright\arraybackslash}p{4.7in}|}
+\hline
+\textbf{4.1 Describe and fit.}
+
+Direction, form, strength.\newline A line of best fit goes through the middle of the dots. &
+\begin{minipage}[t]{2.45in}\vspace{0pt}\fig{Unit_4/Review_candles}\end{minipage}\hfill
+\begin{minipage}[t]{2.05in}\vspace{0.3em}\raggedright
+Negative, linear, strong.
+
+\vspace{0.3em}
+Two points on the line:\newline $(2, 20)$ and $(7, 10)$.
+
+\vspace{0.3em}
+$m = \dfrac{10 - 20}{7 - 2} = \dfrac{-10}{5} = -2$
+
+\vspace{0.3em}
+$20 = -2(2) + b$, \; so $b = 24$
+
+\vspace{0.3em}
+$\hat{y} = -2x + 24$
+\end{minipage}
+
+\vspace{0.3em}
+Predict for 4.5 hours: \; $\hat{y} = -2(4.5) + 24 = 15$ cm
+
+Predict for 15 hours: \; $\hat{y} = -2(15) + 24 = -6$ cm. A height cannot be negative. The data only goes from 1 to 8 hours. This is \textbf{extrapolation}. \\ \hline
+\textbf{4.2 Explain the line.}
+
+Slope: for each additional [$x$ unit], the predicted [$y$] changes by the slope.\newline $r$ is from $-1$ to $1$. &
+\textbf{Slope} ($-2$): For each additional hour, the predicted height decreases by 2 cm.
+
+\textbf{y-intercept} (24): When $x = 0$ (a new candle), the predicted height is 24 cm.
+
+\textbf{$r$}: The dots are close to a line that goes down. $r$ is close to $-1$ ($r \approx -0.98$). \\ \hline
+\textbf{4.3 Find a residual.}
+
+residual\newline $=$ actual $-$ predicted\newline $= y - \hat{y}$\newline Positive: above the line.\newline Negative: below the line. &
+The candle that burned 4 hours is 17 cm. \; $\hat{y} = -2(4) + 24 = 16$ cm
+
+Residual $= 17 - 16 = 1$. It is positive, so the dot is \textbf{above} the line. The candle is 1 cm taller than predicted.
+
+The \textbf{least-squares line} makes $\Sigma(y - \hat{y})^2$ as small as possible.
+
+\begin{minipage}[c]{2.3in}\fig{Unit_4/Review_candles_resid}\end{minipage}\hfill
+\begin{minipage}[c]{2.25in}\raggedright
+The residual plot shows no pattern. A line is a \textbf{good} model.
+\end{minipage} \\ \hline
+\end{tabular}
+
+\vspace{0.6em}
+\textbf{Correlation is not causation.} When more umbrellas are sold, there are more car accidents. Umbrellas do not cause accidents. Rain causes both. Rain is a \textbf{lurking variable}.
+
+\partner
+
+% ---------------- PROBLEMS ----------------
+\newpage
+\lessonhead{4.1 - Scatterplots and Lines of Best Fit}
+\begin{enumerate}
+
+\item \goal{I describe the direction, form, and strength of a scatterplot, and I choose a good line of best fit.}
+Describe the direction, form, and strength of each scatterplot.
+\begin{center}\fig{Unit_4/Review_scatter_abc}\end{center}
+\begin{enumerate}[itemsep=1em]
+  \item A \ans{\quad Negative, linear, strong}
+  \item B \ans{\quad Positive, linear, weak (the dots are spread far from a line)}
+  \item C \ans{\quad Curved (not linear), strong. It goes up and then down.}
+\end{enumerate}
+
+\vspace{0.8em}
+12 students recorded how many hours they practiced typing last week and their typing speed.
+
+\vspace{0.3em}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|l|*{12}{c|}}\hline
+Hours ($x$) & 1 & 2 & 3 & 3 & 4 & 5 & 6 & 6 & 7 & 8 & 9 & 10 \\ \hline
+Words per minute ($y$) & 28 & 23 & 31 & 25 & 30 & 38 & 35 & 40 & 37 & 45 & 45 & 55 \\ \hline
+\end{tabular}
+
+\vspace{0.5em}
+\begin{minipage}[t]{0.56\linewidth}\vspace{0pt}\raggedright
+\figwith{Unit_4/Review_typing}{\draw (0,20) -- (11,53);}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.42\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}[start=4,itemsep=0.9em]
+  \item Describe the direction, form, and strength.
+
+  \ans{Positive, linear, strong}
+  \work{1.5em}
+  \item Draw a line of best fit on the graph.
+
+  \ans{One good line is shown in red. Accept any line that follows the trend with about as many dots above as below.}
+  \work{1em}
+  \item How many dots are above your line? How many are below?
+
+  \ans{Red line: 6 above and 6 below. About the same number is the goal.}
+\end{enumerate}
+\end{minipage}
+
+\vspace{0.8em}
+\begin{minipage}[t]{0.56\linewidth}\vspace{0pt}\raggedright
+\fig{Unit_4/Review_typing_ken}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.42\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}[start=7]
+  \item Ken drew this line for the same data. It goes through the first dot and the last dot. Is it a good line of best fit? Explain.
+
+  \ans{No. 10 dots are below it and none are above it. A good line has about the same number of dots above and below.}
+\end{enumerate}
+\end{minipage}
+
+\newpage
+\item \goal{I write the equation of a line of best fit, and I make predictions and know when not to trust them.}
+Mia charged her phone on 10 days. She recorded how many minutes it charged and the battery percent at the end. A line of best fit is drawn.
+
+\vspace{0.4em}
+\begin{minipage}[t]{0.53\linewidth}\vspace{0pt}\raggedright
+\fig{Unit_4/Review_charging}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.44\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}[itemsep=1.2em]
+  \item Describe the direction, form, and strength.
+
+  \ans{Positive, linear, strong}
+  \work{1.5em}
+  \item Use the two marked points to find the slope.
+
+  \ans{$m = \frac{70 - 40}{40 - 20} = \frac{30}{20} = 1.5$}
+  \work{3em}
+  \item Find $b$.
+
+  \ans{$40 = 1.5(20) + b$\\ $40 = 30 + b$, \; so $b = 10$}
+  \work{3em}
+\end{enumerate}
+\end{minipage}
+
+\vspace{0.6em}
+\begin{enumerate}[start=4,itemsep=1.2em]
+  \item Write the equation of the line. \ans{\quad $\hat{y} = 1.5x + 10$}
+  \work{1em}
+  \item Predict the battery percent after 26 minutes of charging.
+
+  \ans{$\hat{y} = 1.5(26) + 10 = 39 + 10 = 49$, \; about 49\%}
+  \work{2.5em}
+  \item Predict the battery percent after 80 minutes of charging. Should you trust this prediction? Explain.
+
+  \ans{$\hat{y} = 1.5(80) + 10 = 130$. No. A battery cannot be more than 100\%. 80 minutes is far outside the data (5 to 55 minutes).}
+  \work{3em}
+\end{enumerate}
+
+\vspace{0.6em}
+Two points on another line of best fit are $(2, 40)$ and $(8, 10)$.
+\begin{enumerate}[start=7,itemsep=1.2em]
+  \item Find the slope.
+
+  \ans{$m = \frac{10 - 40}{8 - 2} = \frac{-30}{6} = -5$}
+  \work{3em}
+  \item Find $b$ and write the equation of the line.
+
+  \ans{$40 = -5(2) + b$, \; $40 = -10 + b$, \; so $b = 50$. \qquad $\hat{y} = -5x + 50$}
+  \work{3em}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{4.2 - Slope, Intercept, and Correlation}
+\begin{enumerate}[resume]
+
+\item \goal{I explain the slope of a line of best fit in context, and I explain the y-intercept in context, or tell why it has no meaning.}
+Students on a long hike started with full water bottles. The line $\hat{y} = -6x + 32$ predicts the water left, where $x$ is the number of hours of hiking and $y$ is the ounces of water left.
+\begin{enumerate}
+  \item Explain the slope in context.
+
+  \ans{For each additional hour of hiking, the predicted water left decreases by 6 ounces.}
+  \work{2.5em}
+  \item Explain the y-intercept in context.
+
+  \ans{When $x = 0$ (at the start of the hike), the predicted water left is 32 ounces.}
+  \work{2.5em}
+\end{enumerate}
+
+\vspace{0.6em}
+A store sells TVs. The line $\hat{y} = 15x - 200$ predicts the price, where $x$ is the screen size in inches and $y$ is the price in dollars.
+\begin{enumerate}[start=3]
+  \item Explain the slope in context.
+
+  \ans{For each additional inch of screen size, the predicted price increases by \$15.}
+  \work{2.5em}
+  \item Does the y-intercept have a real meaning here? Explain.
+
+  \ans{No. It says a TV with a 0-inch screen costs $-$\$200. No TV has a 0-inch screen, and a price cannot be negative.}
+  \work{2.5em}
+\end{enumerate}
+
+\vspace{0.6em}
+A pizza shop uses the line $\hat{y} = 1.5x + 9$, where $x$ is the number of toppings and $y$ is the price of a pizza in dollars.
+\begin{enumerate}[start=5]
+  \item Explain the slope in context.
+
+  \ans{For each additional topping, the predicted price increases by \$1.50.}
+  \work{2.5em}
+  \item Explain the y-intercept in context.
+
+  \ans{When there are 0 toppings (a plain cheese pizza), the predicted price is \$9.}
+  \work{2.5em}
+\end{enumerate}
+
+\newpage
+\item \goal{I estimate the correlation coefficient $r$ from a scatterplot, and I explain why correlation does not prove causation.}
+\begin{enumerate}
+  \item Match each $r$ to a scatterplot: \quad $r = 0.95$, \; $r = 0.5$, \; $r = -0.2$, \; $r = -0.75$
+
+  \vspace{0.4em}
+  \hspace*{-2em}\fig{Unit_4/Review_r_match}
+
+  \vspace{0.5em}
+  W: $r =$ \rblank{0.5} \qquad X: $r =$ \rblank{$-0.75$} \qquad Y: $r =$ \rblank{0.95} \qquad Z: $r =$ \rblank{$-0.2$}
+  \item Which shows a stronger linear relationship, $r = -0.7$ or $r = 0.6$? Explain.
+
+  \ans{$r = -0.7$. It is closer to $-1$ than $0.6$ is to $1$. The minus sign only shows the direction.}
+  \work{2.5em}
+  \item Can a scatterplot have $r = 1.5$? Explain.
+
+  \ans{No. $r$ is always from $-1$ to $1$.}
+  \work{2em}
+\end{enumerate}
+
+\vspace{0.6em}
+In an elementary school, students with bigger shoe sizes have higher reading scores. The correlation is strong and positive.
+\begin{enumerate}[start=4]
+  \item Do bigger feet cause better reading? Explain.
+
+  \ans{No. A correlation shows that two things change together. It does not prove that one causes the other.}
+  \work{2.5em}
+  \item What lurking variable could cause both?
+
+  \ans{Age (or grade). Older students have bigger feet, and they also read better.}
+  \work{2.5em}
+\end{enumerate}
+
+\vspace{0.6em}
+In a city, the number of fans sold each day and the number of people at the pool have a strong positive correlation.
+\begin{enumerate}[start=6]
+  \item Name a lurking variable that could cause both. Explain.
+
+  \ans{Hot weather (the temperature). On hot days, more people buy fans and more people go to the pool.}
+  \work{2.5em}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{4.3 - Residuals}
+\begin{enumerate}[resume]
+
+\item \goal{I find and explain a residual, and I tell if a point is above or below the line from its residual.}
+A delivery app predicts the delivery time with $\hat{y} = 4x + 10$, where $x$ is the distance in miles and $y$ is the time in minutes. Fill in the table.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{|c|c|p{1.4in}|p{1.4in}|}\hline
+$x$ (miles) & $y$ (actual minutes) & $\hat{y}$ (predicted) & residual $y - \hat{y}$ \\ \hline
+1 & 16 & \ans{$4(1) + 10 = 14$} & \ans{$16 - 14 = 2$} \\ \hline
+2 & 17 & \ans{18} & \ans{$17 - 18 = -1$} \\ \hline
+3 & 22 & \ans{22} & \ans{$22 - 22 = 0$} \\ \hline
+5 & 33 & \ans{30} & \ans{$33 - 30 = 3$} \\ \hline
+6 & 31 & \ans{34} & \ans{$31 - 34 = -3$} \\ \hline
+8 & 44 & \ans{42} & \ans{$44 - 42 = 2$} \\ \hline
+\end{tabular}
+\end{center}
+\begin{enumerate}[itemsep=1.2em]
+  \item Which orders have points above the line? How do you know?
+
+  \ans{The 1-mile, 5-mile, and 8-mile orders. Their residuals are positive.}
+  \work{2em}
+  \item Which order has a point on the line? How do you know?
+
+  \ans{The 3-mile order. Its residual is 0.}
+  \work{2em}
+  \item Explain the residual for the 6-mile order in context.
+
+  \ans{The residual is $-3$. The order took 3 minutes less than predicted.}
+  \work{2em}
+  \item A 4-mile order has a residual of $-2$. How long did it take?
+
+  \ans{$\hat{y} = 4(4) + 10 = 26$. \; $y - 26 = -2$, \; so $y = 24$ minutes.}
+  \work{3em}
+  \item Another order has a residual of 5. Is its point above or below the line? What does the residual mean?
+
+  \ans{Above, because the residual is positive. The order took 5 minutes longer than predicted.}
+  \work{2em}
+\end{enumerate}
+
+\newpage
+\item \goal{I explain what the least-squares line is, and I use a residual plot to decide if a line is a good model.}
+Two lines were fit to the same 5 points. Here are their residuals.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{|l|c|c|c|c|c|p{1.9in}|}\hline
+ & \multicolumn{5}{c|}{Residuals} & $\Sigma(y - \hat{y})^2$ \\ \hline
+Line A & 3 & $-2$ & 1 & $-1$ & $-1$ & \ans{$9 + 4 + 1 + 1 + 1 = 16$} \\ \hline
+Line B & 1 & $-1$ & 2 & $-2$ & 0 & \ans{$1 + 1 + 4 + 4 + 0 = 10$} \\ \hline
+\end{tabular}
+\end{center}
+\begin{enumerate}[itemsep=1.2em]
+  \item Find $\Sigma(y - \hat{y})^2$ for each line. (Square each residual, then add.)
+  \item Which line is closer to the least-squares line? Explain.
+
+  \ans{Line B. Its sum of squared residuals (10) is smaller than Line A's (16).}
+  \work{2em}
+  \item Add the residuals of each line without squaring them. Why does this not help you choose a line?
+
+  \ans{Line A: $3 - 2 + 1 - 1 - 1 = 0$. \; Line B: $1 - 1 + 2 - 2 + 0 = 0$. Both sums are 0. The positive and negative residuals cancel out.}
+  \work{3em}
+  \item For one data set, the least-squares line has $\Sigma(y - \hat{y})^2 = 12$. Can another line for the same data have $\Sigma(y - \hat{y})^2 = 9$? Explain.
+
+  \ans{No. The least-squares line has the smallest possible sum. Every other line has a sum of 12 or more.}
+  \work{2.5em}
+\end{enumerate}
+
+\vspace{0.6em}
+These are the residual plots for two lines of best fit.
+\begin{center}\fig{Unit_4/Review_resid_plots_pq}\end{center}
+\begin{enumerate}[start=5,itemsep=1.2em]
+  \item Which plot shows that a line is a good model? Explain.
+
+  \ans{Plot Q. The residuals are scattered at random, with no pattern.}
+  \work{2em}
+  \item What does the pattern in plot P tell you?
+
+  \ans{The residuals make a curve: negative, then positive, then negative. The data is curved, so a line is not a good model.}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{Test-Style Questions}
+A test asks the same questions with more words. Read slowly. Circle the best answer.
+
+\begin{enumerate}[resume,itemsep=1.2em]
+
+\item The scatterplot in Problem 1 shows the number of hours 12 students practiced typing last week and their typing speeds, in words per minute. Which equation best represents a line of best fit for the data?
+\choices{\opt{A} & $\hat{y} = -3x + 20$}
+        {\optans{B} & $\hat{y} = 3x + 20$}
+        {\opt{C} & $\hat{y} = 20x + 3$}
+        {\opt{D} & $\hat{y} = 3x + 40$}
+
+\item Mia used the line of best fit $\hat{y} = 1.5x + 10$ to predict the battery percent, $y$, of her phone after it charges for $x$ minutes. Her data included charging times from 5 to 55 minutes. Which prediction is \textbf{least} likely to be reliable?
+\choices{\opt{A} & the battery percent after 10 minutes of charging}
+        {\opt{B} & the battery percent after 30 minutes of charging}
+        {\opt{C} & the battery percent after 50 minutes of charging}
+        {\optans{D} & the battery percent after 75 minutes of charging}
+
+\item A pet store owner found that the equation $\hat{y} = 2.5x + 20$ can be used to predict the price $y$, in dollars, of a fish tank that holds $x$ gallons of water. Which statement best describes the meaning of the slope of the line?
+\choices{\opt{A} & Every fish tank costs \$2.50.}
+        {\optans{B} & For each additional gallon a tank holds, the predicted price increases by \$2.50.}
+        {\opt{C} & For each additional dollar in price, a tank holds 2.5 more gallons.}
+        {\opt{D} & A tank that holds 0 gallons is predicted to cost \$2.50.}
+
+\item A study of 200 students found a strong positive correlation between the number of hours students practice a musical instrument each week and their math grades. Which conclusion is best supported by the study?
+\choices{\opt{A} & Practicing a musical instrument causes students to earn higher math grades.}
+        {\opt{B} & Earning higher math grades causes students to practice a musical instrument more.}
+        {\optans{C} & Students who practice more tend to have higher math grades, but the study does not show that one causes the other.}
+        {\opt{D} & There is no relationship between practicing a musical instrument and math grades.}
+
+\newpage
+\item A bus company uses the line of best fit $\hat{y} = 3x + 12$ to predict the travel time $y$, in minutes, for a trip of $x$ miles. A 6-mile trip took 27 minutes. Which statement about the residual for this trip is true?
+\choices{\opt{A} & The residual is 3, and the point is above the line.}
+        {\opt{B} & The residual is 3, and the point is below the line.}
+        {\opt{C} & The residual is $-3$, and the point is above the line.}
+        {\optans{D} & The residual is $-3$, and the point is below the line.}
+\par\ans{$\hat{y} = 3(6) + 12 = 30$. \; Residual $= 27 - 30 = -3$. Negative, so the point is below the line.}
+
+\item A student found a line of best fit for a data set and made a residual plot. The residuals are positive for small and large values of $x$ and negative for values of $x$ in the middle. Which conclusion is best supported by the residual plot?
+\choices{\opt{A} & A line is a good model, because some residuals are positive and some are negative.}
+        {\optans{B} & A line is not a good model, because the residuals show a curved pattern.}
+        {\opt{C} & A line is a good model, because the residuals form a clear pattern.}
+        {\opt{D} & A line is not a good model, because the sum of the residuals is 0.}
+
+\end{enumerate}
+
+\end{document}

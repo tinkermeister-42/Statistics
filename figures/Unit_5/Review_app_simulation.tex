@@ -1,0 +1,12 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}
+\begin{document}
+\begin{tikzpicture}[x=0.5cm,y=1cm]
+  \axis{-10}{10}{2}{1}{Difference between the group means in each shuffle}
+  \foreach \v/\c in {-9/1,-8/1,-7/1,-6/2,-5/3,-4/6,-3/9,-2/10,-1/11,0/12,1/11,2/10,3/9,4/6,5/3,6/2,7/1,8/1,9/1}
+    {\foreach \k in {1,...,\c} {\fill (\v,\k*0.2) circle (0.075cm);}}
+  \draw[dashed] (7.5,0) -- (7.5,1.3);
+  \node[font=\small,anchor=south west,align=left] at (7.5,0.75) {8 or more:\\2 shuffles};
+  \node[font=\small,anchor=west] at (-9.8,2.3) {100 shuffles};
+\end{tikzpicture}
+\end{document}

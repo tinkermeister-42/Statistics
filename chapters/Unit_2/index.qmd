@@ -40,3 +40,6 @@ Find the percent of data above, below, or between values.
 
 [**Normal Calculations in Reverse**](2.6_Normal_Calculations_in_Reverse.qmd)\
 Find the value that matches a percentile.
+
+[**Unit 2 Review**](Review.qmd)\
+Practice every skill from the unit before the quiz.

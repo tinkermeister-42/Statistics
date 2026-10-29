@@ -1,0 +1,19 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=0.05cm]
+  \draw[thick] (0,0) -- (5.2,0); \draw[thick] (0,0) -- (0,100);
+  \foreach \p in {0,25,50,75,100} {\draw (0,\p) -- (-0.1,\p) node[left,font=\small] {\p\%};}
+  % Card: reads 70, does not 30
+  \fill[gray!55] (0.7,0) rectangle (1.9,70); \fill[gray!15] (0.7,70) rectangle (1.9,100);
+  \draw (0.7,0) rectangle (1.9,100); \draw (0.7,70) -- (1.9,70);
+  \node at (1.3,35) {70\%}; \node at (1.3,85) {30\%};
+  % No card: reads 30, does not 70
+  \fill[gray!55] (3.1,0) rectangle (4.3,30); \fill[gray!15] (3.1,30) rectangle (4.3,100);
+  \draw (3.1,0) rectangle (4.3,100); \draw (3.1,30) -- (4.3,30);
+  \node at (3.7,15) {30\%}; \node at (3.7,65) {70\%};
+  \node[below] at (1.3,0) {Card}; \node[below] at (3.7,0) {No card};
+  \fill[gray!55] (5.6,70) rectangle (6.0,78); \node[right,font=\small] at (6.05,74) {Reads};
+  \fill[gray!15] (5.6,55) rectangle (6.0,63); \draw (5.6,55) rectangle (6.0,63); \node[right,font=\small] at (6.05,59) {Does not read};
+\end{tikzpicture}
+\end{document}

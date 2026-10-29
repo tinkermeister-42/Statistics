@@ -1,0 +1,12 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}
+\begin{document}
+\begin{tikzpicture}[x=0.12cm,y=0.05cm]
+  \grid{0}{60}{5}{0}{100}{10}{Minutes charging}{Battery (\%)}
+  \draw[thick,blue!70!black] (0,10) -- (60,100);
+  \pts{5/21,10/22,15/35,18/33,25/44,30/59,35/60,45/81,50/82,55/94}
+  \foreach \p in {(20,40),(40,70)} \draw[thick,blue!70!black,fill=white] \p circle (3.2pt);
+  \node[font=\small,anchor=north west] at (20.6,39) {(20, 40)};
+  \node[font=\small,anchor=north west] at (40.6,69) {(40, 70)};
+\end{tikzpicture}
+\end{document}

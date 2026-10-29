@@ -1,0 +1,302 @@
+\documentclass[11pt]{article}
+\input{../../handouts/preamble}
+% Unit quiz: two questions per mini lesson, each headed by the lesson's
+% objective.  The key keeps every box the same height as the student copy,
+% so key page N lines up with quiz page N.
+\newcommand{\lessonhead}[1]{\par\vspace{0.6em}{\large\bfseries #1}\par\vspace{0.25em}\hrule\vspace{0.6em}}
+\newcommand{\goal}[1]{\textbf{#1}\par\vspace{0.35em}}
+% answer box: same height on both copies, answer printed only on the key
+\newcommand{\abox}[2]{\par\begin{minipage}[t][#1][t]{\linewidth}\raggedright\vspace{0.2em}\ans{#2}\end{minipage}\par}
+% circled choices: \opt{A} prints plain; \optans{B} is circled in red on the key
+\newcommand{\opt}[1]{\tikz[baseline=(c.base)]\node[rounded corners=0.6em,inner sep=2.5pt](c){#1};}
+\newcommand{\optans}[1]{\ifkey\tikz[baseline=(c.base)]\node[rounded corners=0.6em,inner sep=2.5pt,draw=keyred,thick,text=keyred](c){#1};\else\opt{#1}\fi}
+% blanks on a tree diagram: same width on both copies, filled in red on the key
+\newcommand{\tb}[1]{\underline{\makebox[0.42in]{\ans{#1}}}}
+\newcommand{\te}[1]{\hspace{0.15in}\underline{\makebox[1.2in][l]{\ans{#1}}}}
+\setlist[enumerate,2]{label=(\alph*),leftmargin=2em,itemsep=0.3em}
+\setlist[enumerate,1]{leftmargin=1.5em,itemsep=1em}
+\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000
+
+\begin{document}
+
+\lessontitle{Unit 6 Quiz: Probability}
+
+Show your work.
+
+% ======================================================================
+\lessonhead{6.1 - Venn Diagrams and the Addition Rule}
+\begin{enumerate}
+
+\item \goal{I find a probability and its complement, and I read the symbols $A \cup B$ and $A \cap B$.}
+40 students said if they have a dog ($D$) and if they have a cat ($C$).
+
+\begin{minipage}[t]{0.44\linewidth}\vspace{0pt}\raggedright
+\scalebox{0.72}{\venn{Dog ($D$)}{Cat ($C$)}{13}{5}{10}{12}}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.53\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}
+  \item Find $P(D)$.
+  \abox{2.8em}{$\frac{13 + 5}{40} = \frac{18}{40} = \frac{9}{20} = 0.45$}
+  \item Find $P(\text{not } D)$.
+  \abox{2.8em}{$1 - \frac{9}{20} = \frac{11}{20} = 0.55$}
+\end{enumerate}
+\end{minipage}
+
+\vspace{0.4em}
+\begin{enumerate}[start=3]
+  \item What does $D \cap C$ mean in words? Find $P(D \cap C)$.
+  \abox{3em}{Has a dog \textbf{and} has a cat. \quad $\frac{5}{40} = \frac{1}{8} = 0.125$}
+  \item What does $D \cup C$ mean in words? Find $P(D \cup C)$.
+  \abox{3em}{Has a dog \textbf{or} a cat \textbf{or} both. \quad $\frac{13 + 5 + 10}{40} = \frac{28}{40} = \frac{7}{10} = 0.7$}
+\end{enumerate}
+
+\item \goal{I use the addition rule, and I decide if two events are mutually exclusive.}
+\begin{enumerate}
+  \item $P(A) = 0.35$, \; $P(B) = 0.45$, and $P(A \cap B) = 0.15$. Find $P(A \cup B)$.
+  \abox{2.6em}{$P(A \cup B) = 0.35 + 0.45 - 0.15 = 0.65$}
+\end{enumerate}
+
+\vspace{0.2em}
+Draw one card from a deck of 52. Face cards are J, Q, and K. \\
+Are the events mutually exclusive? Find the probability.
+\begin{enumerate}[start=2]
+  \item a 7 or a queen
+  \abox{4.3em}{Yes. A card cannot be a 7 and a queen. \\[0.3em] $\frac{4}{52} + \frac{4}{52} = \frac{8}{52} = \frac{2}{13} \approx 0.15$}
+  \item a club or a face card
+  \abox{4.3em}{No. The J, Q, and K of clubs are both. \\[0.3em] $\frac{13}{52} + \frac{12}{52} - \frac{3}{52} = \frac{22}{52} = \frac{11}{26} \approx 0.42$}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{6.2 - The Multiplication Rule}
+\begin{enumerate}[resume]
+
+\item \goal{I use the multiplication rule for independent events and the complement for ``at least one'' questions.}
+A school bus is on time on 90\% of days. The days are independent. Look at 3 school days in a row.
+\begin{enumerate}
+  \item Find $P(\text{on time all 3 days})$.
+  \abox{3.2em}{$0.9 \cdot 0.9 \cdot 0.9 = 0.729$}
+  \item Find $P(\text{late all 3 days})$.
+  \abox{3.2em}{$0.1 \cdot 0.1 \cdot 0.1 = 0.001$}
+  \item Find $P(\text{late at least once})$.
+  \abox{3.6em}{$1 - P(\text{on time all 3 days}) = 1 - 0.729 = 0.271$}
+\end{enumerate}
+
+\item \goal{I decide if two events are independent or dependent, and I use the general multiplication rule.}
+A box has 5 red pens and 7 blue pens. You take 2 pens without looking.
+\begin{enumerate}
+  \item You put the first pen back before you take the second. Find $P(\text{red, red})$.
+  \abox{3.6em}{Independent. \; $\frac{5}{12} \cdot \frac{5}{12} = \frac{25}{144} \approx 0.17$}
+  \item You keep the first pen out. Find $P(\text{red second} \mid \text{red first})$.
+  \abox{3.6em}{4 red pens are left out of 11 pens. \; $\frac{4}{11} \approx 0.36$}
+  \item You keep the first pen out. Find $P(\text{red, red})$.
+  \abox{3.6em}{Dependent. \; $\frac{5}{12} \cdot \frac{4}{11} = \frac{20}{132} = \frac{5}{33} \approx 0.15$}
+  \item Which pair of events is dependent? Circle the letter.
+
+  \vspace{0.3em}
+  \begin{tabular}{@{}ll}
+  \opt{A} & Roll a number cube two times.\\
+  \opt{B} & Flip a coin, then spin a spinner.\\
+  \opt{C} & Pick a name from a hat, put it back, and pick again.\\
+  \optans{D} & Pick a name from a hat, keep it out, and pick again.\\
+  \end{tabular}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{6.3 - Conditional Probability}
+\begin{enumerate}[resume]
+
+\item \goal{I find conditional probabilities from a two-way table, and I check if two events are independent.}
+80 students said if their earbuds are wired or wireless.
+
+\vspace{0.3em}
+\begin{minipage}[t]{0.44\linewidth}\vspace{0pt}\raggedright
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|c|c|c|}\hline
+ & \textbf{Wired} & \textbf{Wireless} & \textbf{Total} \\ \hline
+\textbf{9th grade} & 24 & 16 & 40 \\ \hline
+\textbf{10th grade} & 12 & 28 & 40 \\ \hline
+\textbf{Total} & 36 & 44 & 80 \\ \hline
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.5\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}
+  \item Find $P(\text{wireless} \mid \text{10th grade})$.
+  \abox{3.8em}{Only the 40 in 10th grade. \\[0.2em] $\frac{28}{40} = \frac{7}{10} = 0.7$}
+  \item Find $P(\text{10th grade} \mid \text{wireless})$.
+  \abox{3.8em}{Only the 44 with wireless. \\[0.2em] $\frac{28}{44} = \frac{7}{11} \approx 0.64$}
+\end{enumerate}
+\end{minipage}
+
+\vspace{0.4em}
+\begin{enumerate}[start=3]
+  \item Are having wireless earbuds and being in 10th grade independent? Show your work.
+  \abox{4.4em}{$P(\text{wireless}) = \frac{44}{80} = 0.55$, \; but \; $P(\text{wireless} \mid \text{10th grade}) = 0.7$. \\[0.3em]
+  They are different, so the events are \textbf{not} independent.}
+\end{enumerate}
+
+\item \goal{I use a tree diagram and the notation $P(A \mid B)$ to find probabilities.}
+The chance of rain on Saturday is 30\%. If it rains, the chance that the soccer game is canceled is 80\%.
+If it does not rain, the chance that the game is canceled is 5\%.
+\begin{enumerate}
+  \item Fill in the tree diagram. Write the missing probabilities and multiply along each path.
+
+  \vspace{0.3em}
+  \begin{center}\tree{Rain}{0.3}{No rain}{\tb{0.7}}{Canceled}{Played}{0.8}{\tb{0.2}}{0.05}{\tb{0.95}}%
+  {\te{$0.3 \cdot 0.8 = 0.24$}}{\te{$0.3 \cdot 0.2 = 0.06$}}{\te{$0.7 \cdot 0.05 = 0.035$}}{\te{$0.7 \cdot 0.95 = 0.665$}}\end{center}
+  \item Find $P(\text{canceled})$.
+  \abox{3em}{Add the two canceled paths. \; $0.24 + 0.035 = 0.275$}
+  \item The game was canceled. Find $P(\text{rain} \mid \text{canceled})$.
+  \abox{3.6em}{$\frac{0.24}{0.275} = \frac{48}{55} \approx 0.87$}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{6.4 - Simulations}
+\begin{enumerate}[resume]
+
+\item \goal{I tell theoretical and experimental probability apart, and I explain the law of large numbers.}
+A spinner has 5 equal parts. One part is blue. Lena spins it 50 times. It lands on blue 14 times.
+\begin{enumerate}
+  \item Find the experimental probability of blue.
+  \abox{3em}{$\frac{14}{50} = \frac{7}{25} = 0.28$}
+  \item Find the theoretical probability of blue.
+  \abox{3em}{$\frac{1}{5} = 0.2$}
+  \item Lena spins it 5,000 times. What number do you expect the experimental probability of blue to be close to? Why?
+  \abox{3.6em}{Close to 0.2. The law of large numbers: with more trials, the experimental probability gets closer to the theoretical probability.}
+\end{enumerate}
+
+\item \goal{I assign random digits and run a simulation to estimate a probability.}
+A soccer team wins 60\% of its games. Simulate the next 4 games. \\
+Digits 0 to 5 = win. \; Digits 6 to 9 = loss. \; One trial = 4 digits (4 games).
+\begin{enumerate}
+  \item Why do the digits 0 to 5 stand for a win?
+  \abox{2.6em}{0 to 5 is 6 of the 10 digits, and $\frac{6}{10} = 60\%$.}
+  \item Use these random digits to run 10 trials. Count the wins in each trial.
+
+  \begin{center}
+  {\large\texttt{\bfseries 76869 45827 19553 09040 57143 14173 96580 44469}}
+
+  \vspace{0.6em}
+  \renewcommand{\arraystretch}{1.6}
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{|l|p{0.42in}|p{0.42in}|p{0.42in}|p{0.42in}|p{0.42in}|p{0.42in}|p{0.42in}|p{0.42in}|p{0.42in}|p{0.42in}|}\hline
+  Trial & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\ \hline
+  Digits & \ans{7686} & \ans{9458} & \ans{2719} & \ans{5530} & \ans{9040} & \ans{5714} & \ans{3141} & \ans{7396} & \ans{5804} & \ans{4469} \\ \hline
+  Wins & \ans{0} & \ans{2} & \ans{2} & \ans{4} & \ans{3} & \ans{3} & \ans{4} & \ans{1} & \ans{3} & \ans{2} \\ \hline
+  \end{tabular}
+  \end{center}
+  \item Use your simulation to estimate $P(\text{at least 3 wins})$.
+  \abox{3em}{Trials 4, 5, 6, 7, and 9 have 3 or more wins. \; $\frac{5}{10} = 0.5$}
+  \item A different team wins 35\% of its games. How would you assign random digits to one game?
+  \abox{3em}{Use pairs of digits. \; 00 to 34 = win (35 of the 100 pairs). \; 35 to 99 = loss.}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{6.5 - Permutations}
+\begin{enumerate}[resume]
+
+\item \goal{I use the counting principle and factorials.}
+\begin{enumerate}
+  \item A bike comes in 4 colors, 3 sizes, and 2 seat styles. How many different bikes are there?
+  \abox{3.6em}{$4 \cdot 3 \cdot 2 = 24$ bikes}
+  \item Find $\dfrac{7!}{5!}$.
+  \abox{3.6em}{$\frac{7 \cdot 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1}{5 \cdot 4 \cdot 3 \cdot 2 \cdot 1} = 7 \cdot 6 = 42$}
+  \item In how many ways can 7 songs be put in order on a playlist?
+  \abox{3.6em}{$7! = 7 \cdot 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 5{,}040$ ways}
+\end{enumerate}
+
+\item \goal{I count permutations with ${}_nP_r$, and I tell when repeats are allowed.}
+\begin{enumerate}
+  \item 9 students run for president, vice president, and secretary. In how many ways can the 3 jobs be filled?
+  \abox{3.6em}{Order matters. \; ${}_9P_3 = \frac{9!}{6!} = 9 \cdot 8 \cdot 7 = 504$ ways}
+\end{enumerate}
+A locker code uses 4 letters from A to F (6 letters).
+\begin{enumerate}[start=2]
+  \item How many codes are there if letters can repeat?
+  \abox{4em}{$6 \cdot 6 \cdot 6 \cdot 6 = 6^4 = 1{,}296$ codes}
+  \item How many codes are there if no letter repeats?
+  \abox{4em}{${}_6P_4 = 6 \cdot 5 \cdot 4 \cdot 3 = 360$ codes}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{6.6 - Combinations}
+\begin{enumerate}[resume]
+
+\item \goal{I count combinations with ${}_nC_r$.}
+\begin{enumerate}
+  \item Find ${}_6C_4$.
+  \abox{3.6em}{$\frac{6!}{4!\,2!} = \frac{6 \cdot 5}{2 \cdot 1} = 15$}
+  \item 11 teams are in a league. Each team plays every other team once. How many games are there?
+  \abox{3.6em}{A game is a pair of teams. \; ${}_{11}C_2 = \frac{11 \cdot 10}{2} = 55$ games}
+  \item You choose 4 of 9 photos for a poster. In how many ways can you choose them?
+  \abox{3.6em}{${}_9C_4 = \frac{9 \cdot 8 \cdot 7 \cdot 6}{4 \cdot 3 \cdot 2 \cdot 1} = 126$ ways}
+\end{enumerate}
+
+\item \goal{I decide whether a problem needs a permutation or a combination, and I explain the difference.}
+For each situation, write permutation or combination. Then find the number of ways.
+
+\vspace{0.4em}
+{\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{2.9in}|>{\raggedright\arraybackslash}p{1.3in}|>{\raggedright\arraybackslash}p{1.7in}|}\hline
+\textbf{Situation} & \textbf{Permutation or combination?} & \textbf{Number of ways} \\ \hline
+(a) Choose 3 of 11 students for a clean-up crew. & \ans{combination} & \ans{${}_{11}C_3 = 165$} \\ \hline
+(b) Give 1st, 2nd, and 3rd place to 3 of 11 science projects. & \ans{permutation} & \ans{${}_{11}P_3 = 990$} \\ \hline
+\end{tabular}}
+\begin{enumerate}[start=3]
+  \item Why is the answer to (b) 6 times the answer to (a)?
+  \abox{3.6em}{Each group of 3 can be put in order $3! = 6$ ways. A permutation counts every order. A combination counts the group once.}
+  \item Which situation is a combination? Circle the letter.
+
+  \vspace{0.3em}
+  \begin{tabular}{@{}ll}
+  \opt{A} & Choosing a captain and a co-captain from 15 players.\\
+  \optans{B} & Choosing 5 of 15 players to ride in the first van.\\
+  \opt{C} & Arranging 5 trophies in a row on a shelf.\\
+  \opt{D} & Making a 4-digit code with no repeated digits.\\
+  \end{tabular}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{6.7 - Probability with Counting}
+\begin{enumerate}[resume]
+
+\item \goal{I count the possible outcomes and the outcomes I want, and I find the probability.}
+A coach picks 3 players at random from 7 forwards and 5 defenders.
+\begin{enumerate}
+  \item How many groups of 3 are possible?
+  \abox{3.6em}{${}_{12}C_3 = \frac{12 \cdot 11 \cdot 10}{3 \cdot 2 \cdot 1} = 220$ groups}
+  \item Find $P(\text{all 3 are forwards})$.
+  \abox{4.4em}{${}_7C_3 = 35$ groups of forwards. \; $\frac{35}{220} = \frac{7}{44} \approx 0.16$}
+  \item Find $P(\text{all 3 are defenders})$.
+  \abox{4.4em}{${}_5C_3 = 10$ groups of defenders. \; $\frac{10}{220} = \frac{1}{22} \approx 0.05$}
+\end{enumerate}
+
+\item \goal{I decide if order matters in a probability problem.}
+15 students are in a club. Does order matter? Find the probability.
+\begin{enumerate}
+  \item 3 students are chosen at random to be president, vice president, and secretary. What is the probability that Amira is president, Ben is vice president, and Carla is secretary?
+  \abox{5.4em}{Yes, the jobs are different. \; ${}_{15}P_3 = 2{,}730$. \; $P = \frac{1}{2{,}730} \approx 0.0004$}
+  \item 3 students are chosen at random for a committee. What is the probability that the committee is Amira, Ben, and Carla?
+  \abox{5.4em}{No, it is the same job. \; ${}_{15}C_3 = 455$. \; $P = \frac{1}{455} \approx 0.002$}
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
