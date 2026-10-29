@@ -115,7 +115,9 @@ document.addEventListener("DOMContentLoaded", () => {
         return inner;
       }
 
-      const segments = userTitle.split(/(\$[^$]+\$)/); // inline math segments
+      // Inline math segments. \$ inside math is an escaped dollar sign, so
+      // money in a title is written $\$80{,}000$, the same as in prose.
+      const segments = userTitle.split(/(\$(?:\\.|[^$\\])+\$)/);
       const renderPromises = segments.map((segment) => {
         const isMath = segment.startsWith("$") && segment.endsWith("$");
         if (isMath && window.MathJax?.tex2chtmlPromise) {

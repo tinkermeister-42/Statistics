@@ -563,17 +563,17 @@ window.Quarto = {
 
 
 <p>A lottery ticket costs <span class="math inline">\(\$2\)</span>. You could win <span class="math inline">\(\$500\)</span>! Is the ticket worth buying?</p>
-<p>The prize is big, but the chance is small. In this lesson, you find the <a href="../../glossary.html#glossary-expected-payoff" class="glossary-link" data-term="expected payoff" data-original-href="#glossary-expected-payoff" data-slug="expected-payoff">expected payoff</a>: the amount you win or lose on average. Then you use it to judge lotteries, games, and protection plans.</p>
+<p>The prize is big, but the chance is small. In this lesson, you find the <a href="../../glossary.html#glossary-expected-payoff" class="glossary-link" data-slug="expected-payoff" data-term="expected payoff" data-original-href="#glossary-expected-payoff">expected payoff</a>: the amount you win or lose on average. Then you use it to judge lotteries, games, and protection plans.</p>
 <div class="objectives">
 <ul class="task-list">
 <li><label><input type="checkbox">I find the net gain for each outcome.</label></li>
 <li><label><input type="checkbox">I find the expected payoff of a lottery, game, or plan.</label></li>
 <li><label><input type="checkbox">I explain what an expected payoff means.</label></li>
-<li><label><input type="checkbox">I use expected value, and risk, to make a decision.</label></li>
+<li><label><input type="checkbox">I use expected value and risk to make a decision.</label></li>
 </ul>
 </div>
 <div class="vocab">
-<p><a href="../../glossary.html#glossary-net-gain" class="glossary-link" data-term="net gain" data-original-href="#glossary-net-gain" data-slug="net-gain">net gain</a>, <a href="../../glossary.html#glossary-expected-payoff" class="glossary-link" data-term="expected payoff" data-original-href="#glossary-expected-payoff" data-slug="expected-payoff">expected payoff</a>, <a href="../../glossary.html#glossary-expected-value" class="glossary-link" data-term="expected value" data-original-href="#glossary-expected-value" data-slug="expected-value">expected value</a>, <a href="../../glossary.html#glossary-fair-game" class="glossary-link" data-term="fair game" data-original-href="#glossary-fair-game" data-slug="fair-game">fair game</a></p>
+<p><a href="../../glossary.html#glossary-net-gain" class="glossary-link" data-slug="net-gain" data-term="net gain" data-original-href="#glossary-net-gain">net gain</a>, <a href="../../glossary.html#glossary-expected-payoff" class="glossary-link" data-slug="expected-payoff" data-term="expected payoff" data-original-href="#glossary-expected-payoff">expected payoff</a>, <a href="../../glossary.html#glossary-expected-value" class="glossary-link" data-slug="expected-value" data-term="expected value" data-original-href="#glossary-expected-value">expected value</a>, <a href="../../glossary.html#glossary-fair-game" class="glossary-link" data-slug="fair-game" data-term="fair game" data-original-href="#glossary-fair-game">fair game</a></p>
 </div>
 <div class="guided-notes-link">
 <p><a href="../../handouts/Unit_7/7.3_Expected_Payoff.pdf" target="_blank">Printable mini lesson</a> - notes and practice problems to print and write on.</p>
@@ -587,7 +587,7 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="net-gain-and-expected-payoff">7.3.1 - Net Gain and Expected Payoff</h3>
 <div class="remember" title="Expected Payoff">
 <p><strong>Net gain</strong> <span class="math inline">\(=\)</span> what you win <span class="math inline">\(-\)</span> what you paid</p>
-<p><strong>Expected payoff</strong> <span class="math inline">\(= \Sigma\,(\text{net gain} \cdot \text{probability})\)</span></p>
+<p><strong>Expected payoff</strong>: let <span class="math inline">\(X\)</span> = the net gain. Then <span class="math inline">\(E(X) = \Sigma\, x \cdot P(x)\)</span>.</p>
 </div>
 <p><strong>Example 1: a lottery ticket.</strong> A ticket costs <span class="math inline">\(\$2\)</span>. 1 in 1,000 tickets wins <span class="math inline">\(\$500\)</span>. 1 in 50 tickets wins <span class="math inline">\(\$10\)</span>. The rest win nothing.</p>
 <table class="caption-top table">
@@ -627,7 +627,7 @@ window.Quarto = {
 </tbody>
 </table>
 <p>On average, a buyer <strong>loses <span class="math inline">\(\$1.30\)</span></strong> per ticket. The lottery keeps that money.</p>
-<div class="you-try" title="A game costs $1. You win $4 with probability 0.2. Find the expected payoff.">
+<div class="you-try" title="A game costs $\$1$. You win $\$4$ with probability 0.2. Find the expected payoff.">
 <p>Net gains: <span class="math inline">\(4 - 1 = 3\)</span> (probability 0.2) and <span class="math inline">\(-1\)</span> (probability 0.8).</p>
 <p><span class="math inline">\(3(0.2) + (-1)(0.8) = 0.6 - 0.8 = -0.2\)</span>. You lose 20 cents a game on average.</p>
 </div>
@@ -656,7 +656,7 @@ window.Quarto = {
 </table>
 <p>On average, the plan costs <span class="math inline">\(\$10\)</span> more than paying for a broken phone yourself. That is how the company makes money.</p>
 <div class="think" title="So is a protection plan always a bad idea?">
-<p>Not always. The plan protects you from a sudden <span class="math inline">\(\$300\)</span> bill. If you could not pay that bill, the plan might be worth it to you. Expected value is one part of a decision. How much risk you can afford is another.</p>
+<p>Not always. The plan protects you from a sudden <span class="math inline">\(\$300\)</span> bill. Expected value is one part of a decision. Risk is another part: could you pay the big bill if it came? If not, the plan might be worth it to you.</p>
 </div>
 </section>
 </section>
@@ -670,7 +670,7 @@ window.Quarto = {
 <li><p>Make a table with the net gain, the probability, and <span class="math inline">\(x \cdot P(x)\)</span> for winning and for losing.</p></li>
 <li><p>Find the expected payoff. What does it mean?</p></li>
 </ol></li>
-<li><p>A game costs <span class="math inline">\(\$1\)</span> to play. You spin a spinner: half the time you win nothing, a quarter of the time you win <span class="math inline">\(\$1\)</span>, and a quarter of the time you win <span class="math inline">\(\$3\)</span>.</p>
+<li><p>A game costs <span class="math inline">\(\$1\)</span> to play. The spinner has 4 equal parts. 2 parts win nothing. 1 part wins <span class="math inline">\(\$1\)</span>. 1 part wins <span class="math inline">\(\$3\)</span>.</p>
 <ol type="a">
 <li><p>Find the expected payoff.</p></li>
 <li><p>Is the game fair?</p></li>
@@ -684,7 +684,7 @@ window.Quarto = {
 <hr>
 <p><strong>Warranties</strong></p>
 <ol start="4" type="1">
-<li><p>A laptop repair costs <span class="math inline">\(\$400\)</span>. The chance a laptop needs repair in its first year is 0.15. A one-year warranty costs <span class="math inline">\(\$75\)</span>.</p>
+<li><p>A laptop repair costs <span class="math inline">\(\$400\)</span>. The chance a laptop needs repair in its first year is 0.15. A one-year warranty (a protection plan) costs <span class="math inline">\(\$75\)</span>.</p>
 <ol type="a">
 <li><p>Find the expected repair cost without the warranty.</p></li>
 <li><p>Which is cheaper on average: buying the warranty or not?</p></li>

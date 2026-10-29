@@ -563,8 +563,8 @@ window.Quarto = {
 </header>
 
 
-<p>A soccer team scores 0, 1, 2, 3, or 4 goals in a game, each with its own probability. How many goals does the team score on average?</p>
-<p>You cannot just average 0, 1, 2, 3, and 4. Some values happen more often than others. In this lesson, you find the <a href="../../glossary.html#glossary-expected-value" class="glossary-link" data-term="expected value" data-original-href="#glossary-expected-value" data-slug="expected-value">expected value</a>, an average that uses the probabilities. Then you use probability to decide what is fair.</p>
+<p>A soccer team scores 0, 1, 2, 3, or 4 goals in a game. Each number of goals has its own probability. How many goals does the team score on average?</p>
+<p>You cannot just average 0, 1, 2, 3, and 4. Some values happen more often than others. In this lesson, you find the <a href="../../glossary.html#glossary-expected-value" class="glossary-link" data-slug="expected-value" data-original-href="#glossary-expected-value" data-term="expected value">expected value</a>, an average that uses the probabilities. Then you use probability to decide what is fair.</p>
 <div class="objectives">
 <ul class="task-list">
 <li><label><input type="checkbox">I find the expected value of a random variable.</label></li>
@@ -574,7 +574,7 @@ window.Quarto = {
 </ul>
 </div>
 <div class="vocab">
-<p><a href="../../glossary.html#glossary-expected-value" class="glossary-link" data-term="expected value" data-original-href="#glossary-expected-value" data-slug="expected-value">expected value</a>, <a href="../../glossary.html#glossary-random-variable" class="glossary-link" data-term="random variable" data-original-href="#glossary-random-variable" data-slug="random-variable">random variable</a>, <a href="../../glossary.html#glossary-fair-game" class="glossary-link" data-term="fair game" data-original-href="#glossary-fair-game" data-slug="fair-game">fair game</a></p>
+<p><a href="../../glossary.html#glossary-expected-value" class="glossary-link" data-slug="expected-value" data-original-href="#glossary-expected-value" data-term="expected value">expected value</a>, <a href="../../glossary.html#glossary-random-variable" class="glossary-link" data-slug="random-variable" data-original-href="#glossary-random-variable" data-term="random variable">random variable</a>, <a href="../../glossary.html#glossary-fair-game" class="glossary-link" data-slug="fair-game" data-original-href="#glossary-fair-game" data-term="fair game">fair game</a></p>
 </div>
 <div class="guided-notes-link">
 <p><a href="../../handouts/Unit_7/7.2_Expected_Value.pdf" target="_blank">Printable mini lesson</a> - notes and practice problems to print and write on.</p>
@@ -620,7 +620,7 @@ window.Quarto = {
 <p><span class="math display">\[
 E(X) = \Sigma\, x \cdot P(x)
 \]</span></p>
-<p>Multiply each value by its probability. Then add them all up (<span class="math inline">\(\Sigma\)</span> means add up). The expected value is also called the <strong>mean</strong> of <span class="math inline">\(X\)</span>, written <span class="math inline">\(\mu_X\)</span>.</p>
+<p><span class="math inline">\(E(X)\)</span> means the expected value of <span class="math inline">\(X\)</span>. Multiply each value by its probability. Then add them all up (<span class="math inline">\(\Sigma\)</span> means add up). The expected value is also called the <strong>mean</strong> of <span class="math inline">\(X\)</span>, written <span class="math inline">\(\mu_X\)</span>.</p>
 </div>
 <p><span class="math display">\[
 E(X) = 0 + 0.3 + 0.6 + 0.6 + 0.4 = 1.9 \text{ goals}
@@ -632,7 +632,7 @@ E(X) = 0 + 0.3 + 0.6 + 0.6 + 0.4 = 1.9 \text{ goals}
 </section>
 <section id="fair-decisions" class="level3">
 <h3 class="anchored" data-anchor-id="fair-decisions">7.2.2 - Fair Decisions</h3>
-<p>A method is <strong>fair</strong> if every person has the same probability of being chosen. Ana, Ben, and Cai need to decide who goes first.</p>
+<p>A method is <strong><a href="../../glossary.html#glossary-fair" class="glossary-link" data-slug="fair" data-original-href="#glossary-fair" data-term="fair">fair</a></strong> if every person has the same probability of being chosen. Ana, Ben, and Cai need to decide who goes first.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -659,13 +659,13 @@ E(X) = 0 + 0.3 + 0.6 + 0.6 + 0.4 = 1.9 \text{ goals}
 </section>
 <section id="fair-games" class="level3">
 <h3 class="anchored" data-anchor-id="fair-games">7.2.3 - Fair Games</h3>
-<p>A game is <a href="../../glossary.html#glossary-fair-game" class="glossary-link" data-term="fair" data-original-href="#glossary-fair-game" data-slug="fair-game">fair</a> if the expected value of what you win is <strong>0</strong>.</p>
-<p><strong>Example:</strong> Roll a number cube. You win <span class="math inline">\(\$3\)</span> if you roll a 6. You pay <span class="math inline">\(\$1\)</span> for any other number.</p>
+<p>A game is <a href="../../glossary.html#glossary-fair-game" class="glossary-link" data-slug="fair-game" data-original-href="#glossary-fair-game" data-term="fair">fair</a> if the expected value of the money you win or lose is <strong>0</strong>.</p>
+<p><strong>Example:</strong> Roll a number cube. You win <span class="math inline">\(\$3\)</span> if you roll a 6. You pay <span class="math inline">\(\$1\)</span> for any other number. Let <span class="math inline">\(X\)</span> = the money you win or lose in one game.</p>
 <p><span class="math display">\[
-E(X) = 3 \cdot \frac{1}{6} + (-1) \cdot \frac{5}{6} = \frac{3}{6} - \frac{5}{6} = -\frac{2}{6} \approx -0.33
+E(X) = 3 \cdot \frac{1}{6} + (-1) \cdot \frac{5}{6} = \frac{3}{6} - \frac{5}{6} = -\frac{2}{6} \approx -\$0.33
 \]</span></p>
 <p>On average you lose about 33 cents a game. The game is <strong>not</strong> fair.</p>
-<div class="you-try" title="Find E(X): P(0) = 0.5, P(10) = 0.5.">
+<div class="you-try" title="Find $E(X)$: $P(0) = 0.5$, $P(10) = 0.5$.">
 <p><span class="math inline">\(0(0.5) + 10(0.5) = 5\)</span></p>
 </div>
 </section>
@@ -696,12 +696,12 @@ E(X) = 3 \cdot \frac{1}{6} + (-1) \cdot \frac{5}{6} = \frac{3}{6} - \frac{5}{6} 
 <li><p>Is the number cube fair? Explain.</p></li>
 <li><p>Change the number cube method to make it fair.</p></li>
 </ol></li>
-<li><p>A game: roll a number cube. You win <span class="math inline">\(\$5\)</span> if you roll a 6. You pay <span class="math inline">\(\$1\)</span> for any other number.</p>
+<li><p>A game: roll a number cube. You win <span class="math inline">\(\$5\)</span> if you roll a 6. You pay <span class="math inline">\(\$1\)</span> for any other number. Let <span class="math inline">\(X\)</span> = the money you win or lose in one game.</p>
 <ol type="a">
 <li><p>Find the expected value.</p></li>
 <li><p>Is the game fair? Explain.</p></li>
 </ol></li>
-<li><p>In the example above, you win <span class="math inline">\(\$3\)</span> for a 6. How much should you win for a 6 to make the game fair?</p></li>
+<li><p>In the notes example, you win <span class="math inline">\(\$3\)</span> if you roll a 6. How much should you pay for any other number to make the game fair?</p></li>
 </ol>
 
 

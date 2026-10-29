@@ -563,17 +563,17 @@ window.Quarto = {
 
 
 <p>Flip a coin 20 times. Do you get exactly 10 heads? Probably not. You might get 12, or 8.</p>
-<p>The math says <span class="math inline">\(P(\text{heads}) = \frac{1}{2}\)</span>. Real trials wobble around that number. In this lesson, you compare the two kinds of probability and use random digits to act out chance events.</p>
+<p>The math says <span class="math inline">\(P(\text{heads}) = \frac{1}{2}\)</span>. Real trials give numbers near <span class="math inline">\(\frac{1}{2}\)</span>, but not always exactly <span class="math inline">\(\frac{1}{2}\)</span>. In this lesson, you compare the two kinds of probability and use random digits to act out chance events.</p>
 <div class="objectives">
 <ul class="task-list">
-<li><label><input type="checkbox">I tell theoretical and experimental probability apart.</label></li>
+<li><label><input type="checkbox">I explain the difference between theoretical and experimental probability.</label></li>
 <li><label><input type="checkbox">I explain the law of large numbers.</label></li>
 <li><label><input type="checkbox">I assign random digits to simulate an event.</label></li>
 <li><label><input type="checkbox">I run a simulation and use it to estimate a probability.</label></li>
 </ul>
 </div>
 <div class="vocab">
-<p><a href="../../glossary.html#glossary-theoretical-probability" class="glossary-link" data-original-href="#glossary-theoretical-probability" data-term="theoretical probability" data-slug="theoretical-probability">theoretical probability</a>, <a href="../../glossary.html#glossary-experimental-probability" class="glossary-link" data-original-href="#glossary-experimental-probability" data-term="experimental probability" data-slug="experimental-probability">experimental probability</a>, <a href="../../glossary.html#glossary-law-of-large-numbers" class="glossary-link" data-original-href="#glossary-law-of-large-numbers" data-term="law of large numbers" data-slug="law-of-large-numbers">law of large numbers</a>, <a href="../../glossary.html#glossary-simulation" class="glossary-link" data-original-href="#glossary-simulation" data-term="simulation" data-slug="simulation">simulation</a>, <a href="../../glossary.html#glossary-trial" class="glossary-link" data-original-href="#glossary-trial" data-term="trial" data-slug="trial">trial</a></p>
+<p><a href="../../glossary.html#glossary-theoretical-probability" class="glossary-link" data-term="theoretical probability" data-original-href="#glossary-theoretical-probability" data-slug="theoretical-probability">theoretical probability</a>, <a href="../../glossary.html#glossary-experimental-probability" class="glossary-link" data-term="experimental probability" data-original-href="#glossary-experimental-probability" data-slug="experimental-probability">experimental probability</a>, <a href="../../glossary.html#glossary-law-of-large-numbers" class="glossary-link" data-term="law of large numbers" data-original-href="#glossary-law-of-large-numbers" data-slug="law-of-large-numbers">law of large numbers</a>, <a href="../../glossary.html#glossary-simulation" class="glossary-link" data-term="simulation" data-original-href="#glossary-simulation" data-slug="simulation">simulation</a>, <a href="../../glossary.html#glossary-trial" class="glossary-link" data-term="trial" data-original-href="#glossary-trial" data-slug="trial">trial</a></p>
 </div>
 <div class="guided-notes-link">
 <p><a href="../../handouts/Unit_6/6.4_Simulations.pdf" target="_blank">Printable mini lesson</a> - notes and practice problems to print and write on.</p>
@@ -612,17 +612,17 @@ window.Quarto = {
 </tbody>
 </table>
 <div class="remember" title="The Law of Large Numbers">
-<p>The more trials you do, the closer the experimental probability gets to the theoretical probability.</p>
+<p>The more trials you do, the closer the experimental probability usually gets to the theoretical probability.</p>
 </div>
 <hr>
 </section>
 <section id="running-a-simulation" class="level3">
 <h3 class="anchored" data-anchor-id="running-a-simulation">6.4.2 - Running a Simulation</h3>
-<p>A <a href="../../glossary.html#glossary-simulation" class="glossary-link" data-original-href="#glossary-simulation" data-term="simulation" data-slug="simulation">simulation</a> uses random numbers to act out a chance event many times.</p>
+<p>A <a href="../../glossary.html#glossary-simulation" class="glossary-link" data-term="simulation" data-original-href="#glossary-simulation" data-slug="simulation">simulation</a> uses random numbers to act out a chance event many times.</p>
 <div class="remember" title="Steps">
 <ol type="1">
 <li>Assign digits to the outcomes so the probabilities match.</li>
-<li>Decide what one <a href="../../glossary.html#glossary-trial" class="glossary-link" data-original-href="#glossary-trial" data-term="trial" data-slug="trial">trial</a> is.</li>
+<li>Decide what one <a href="../../glossary.html#glossary-trial" class="glossary-link" data-term="trial" data-original-href="#glossary-trial" data-slug="trial">trial</a> is.</li>
 <li>Run many trials with random digits.</li>
 <li>Count how often the event happened.</li>
 </ol>
@@ -692,8 +692,8 @@ window.Quarto = {
 </table>
 <p>4 of the 10 trials made all 3. The experimental probability is <span class="math inline">\(\frac{4}{10} = 0.4\)</span>.</p>
 <p>The theoretical probability is <span class="math inline">\(0.7 \cdot 0.7 \cdot 0.7 = 0.343\)</span>. With more trials, the simulation would get closer to it.</p>
-<div class="you-try" title="How would you assign digits for an event with P = 0.3?">
-<p>Use 0, 1, 2 for “yes” (3 of the 10 digits) and 3 to 9 for “no.”</p>
+<div class="you-try" title="How would you assign digits for an event with $P = 0.6$?">
+<p>Use 0 to 5 for “yes” (6 of the 10 digits) and 6 to 9 for “no.”</p>
 </div>
 </section>
 </section>
@@ -726,7 +726,7 @@ window.Quarto = {
 <li><p>Estimate <span class="math inline">\(P(\text{at least 2 girls})\)</span> from your simulation.</p></li>
 <li><p>The theoretical probability is 0.5. How could you make your estimate closer?</p></li>
 </ol></li>
-<li><p>A student flips a coin 50 times and gets 34 heads. She wonders if the coin is fair. A computer simulated 100 sets of 50 flips of a fair coin. The number of heads ranged from 17 to 33. No set had 34 or more heads.</p>
+<li><p>A student flips a coin 50 times and gets 34 heads. She wonders if the coin is fair. (A fair coin lands heads half the time.) A computer simulated 100 sets of 50 flips of a fair coin. The number of heads ranged from 17 to 33. No set had 34 or more heads.</p>
 <ol type="a">
 <li><p>What does the simulation tell you about getting 34 heads with a fair coin?</p></li>
 <li><p>Do you think the coin is fair? Explain.</p></li>

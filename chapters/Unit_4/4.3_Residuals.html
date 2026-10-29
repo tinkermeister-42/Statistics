@@ -564,7 +564,7 @@ window.Quarto = {
 
 
 <p>The study line <span class="math inline">\(\hat{y} = 5x + 54\)</span> predicts that a student who studies 4 hours scores 74. One student who studied 4 hours scored 78. Another scored 72.</p>
-<p>The line is never exactly right. In this lesson, you measure how far off each prediction is. That number is called a <a href="../../glossary.html#glossary-residual" class="glossary-link" data-original-href="#glossary-residual" data-slug="residual" data-term="residual">residual</a>.</p>
+<p>The line is not always exactly right. In this lesson, you measure how far off each prediction is. That number is called a <a href="../../glossary.html#glossary-residual" class="glossary-link" data-slug="residual" data-original-href="#glossary-residual" data-term="residual">residual</a>.</p>
 <div class="objectives">
 <ul class="task-list">
 <li><label><input type="checkbox">I find and explain a residual.</label></li>
@@ -574,7 +574,7 @@ window.Quarto = {
 </ul>
 </div>
 <div class="vocab">
-<p><a href="../../glossary.html#glossary-residual" class="glossary-link" data-original-href="#glossary-residual" data-slug="residual" data-term="residual">residual</a>, <a href="../../glossary.html#glossary-y-hat" class="glossary-link" data-original-href="#glossary-y-hat" data-slug="y-hat" data-term="y-hat">y-hat</a>, <a href="../../glossary.html#glossary-least-squares-regression-line" class="glossary-link" data-original-href="#glossary-least-squares-regression-line" data-slug="least-squares-regression-line" data-term="least-squares regression line">least-squares regression line</a>, <a href="../../glossary.html#glossary-residual-plot" class="glossary-link" data-original-href="#glossary-residual-plot" data-slug="residual-plot" data-term="residual plot">residual plot</a></p>
+<p><a href="../../glossary.html#glossary-residual" class="glossary-link" data-slug="residual" data-original-href="#glossary-residual" data-term="residual">residual</a>, <a href="../../glossary.html#glossary-y-hat" class="glossary-link" data-slug="y-hat" data-original-href="#glossary-y-hat" data-term="y-hat">y-hat</a>, <a href="../../glossary.html#glossary-least-squares-regression-line" class="glossary-link" data-slug="least-squares-regression-line" data-original-href="#glossary-least-squares-regression-line" data-term="least-squares regression line">least-squares regression line</a>, <a href="../../glossary.html#glossary-residual-plot" class="glossary-link" data-slug="residual-plot" data-original-href="#glossary-residual-plot" data-term="residual plot">residual plot</a></p>
 </div>
 <div class="guided-notes-link">
 <p><a href="../../handouts/Unit_4/4.3_Residuals.pdf" target="_blank">Printable mini lesson</a> - notes and practice problems to print and write on.</p>
@@ -635,9 +635,9 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<div class="you-try" title="A student studied 6 hours and scored 90. Find the residual.">
-<p><span class="math inline">\(\hat{y} = 5(6) + 54 = 84\)</span>.</p>
-<p>Residual <span class="math inline">\(= 90 - 84 = 6\)</span>. The student scored 6 points more than predicted.</p>
+<div class="you-try" title="A student studied 7 hours and scored 85. Find the residual.">
+<p><span class="math inline">\(\hat{y} = 5(7) + 54 = 89\)</span>.</p>
+<p>Residual <span class="math inline">\(= 85 - 89 = -4\)</span>. The student scored 4 points less than predicted.</p>
 </div>
 <hr>
 </section>
@@ -647,15 +647,15 @@ window.Quarto = {
 <p><span class="math display">\[
 \Sigma(y - \hat{y})^2
 \]</span></p>
-<p>The <a href="../../glossary.html#glossary-least-squares-regression-line" class="glossary-link" data-original-href="#glossary-least-squares-regression-line" data-slug="least-squares-regression-line" data-term="least-squares regression line">least-squares regression line</a> is the line that makes this sum as <strong>small as possible</strong>. Calculators and computers find this line for you.</p>
+<p>The <a href="../../glossary.html#glossary-least-squares-regression-line" class="glossary-link" data-slug="least-squares-regression-line" data-original-href="#glossary-least-squares-regression-line" data-term="least-squares regression line">least-squares regression line</a> is the line that makes this sum as <strong>small as possible</strong>. Calculators and computers find this line for you.</p>
 <div class="think" title="Why square the residuals?">
-<p>Some residuals are positive and some are negative. If you just add them, they cancel out. Squaring makes every one positive, so big misses count a lot.</p>
+<p>Some residuals are positive and some are negative. If you just add them, they cancel out. Squaring makes every one positive (or 0), so big misses count a lot.</p>
 </div>
 <hr>
 </section>
 <section id="residual-plots" class="level3">
 <h3 class="anchored" data-anchor-id="residual-plots">4.3.3 - Residual Plots</h3>
-<p>A <a href="../../glossary.html#glossary-residual-plot" class="glossary-link" data-original-href="#glossary-residual-plot" data-slug="residual-plot" data-term="residual plot">residual plot</a> puts <span class="math inline">\(x\)</span> across the bottom and the residuals up the side.</p>
+<p>A <a href="../../glossary.html#glossary-residual-plot" class="glossary-link" data-slug="residual-plot" data-original-href="#glossary-residual-plot" data-term="residual plot">residual plot</a> puts <span class="math inline">\(x\)</span> across the bottom and the residuals up the side.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../images/Unit_4/4.3_resid_plots.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="560"></p>
