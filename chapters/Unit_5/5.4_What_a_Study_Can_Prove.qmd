@@ -61,7 +61,7 @@ Even if the break does nothing, two random groups will score a little differentl
 
 ![](/images/Unit_5/5.4_simulation.svg){width="560px" fig-align="center"}
 
-Only **3** of the 100 shuffles gave a difference of 6 or more. A 6-point difference is very unlikely to happen by chance alone. We say the result is {{< glink "statistically significant" >}}. The break probably helped.
+Only **2** of the 100 shuffles gave a difference of 6 or more. A 6-point difference is very unlikely to happen by chance alone. We say the result is {{< glink "statistically significant" >}}. The break probably helped.
 
 :::{.remember title="Rule of Thumb"}
 If chance gives a result this big less than about **5%** of the time, call it statistically significant.

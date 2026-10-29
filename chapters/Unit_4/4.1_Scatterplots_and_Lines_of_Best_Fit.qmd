@@ -34,9 +34,9 @@ A {{< glink scatterplot >}} shows two numbers for each person or thing. The firs
 
 | | Ask | The study data |
 |---|---|---|
-| **Direction** | As $x$ goes up, does $y$ go up (positive) or down (negative)? | Positive |
+| **Direction** | As $x$ goes up, does $y$ go up (positive) or down (negative)? No pattern at all is **no association**. | Positive |
 | **Form** | Do the dots follow a line (linear) or a curve? | Linear |
-| **Strength** | Are the dots close to a line (strong) or spread out (weak)? | Strong |
+| **Strength** | Are the dots close to a line (strong), loosely around it (moderate), or spread out (weak)? | Strong |
 | **Unusual** | Any outliers or clusters? | None |
 
 ***
