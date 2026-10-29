@@ -141,56 +141,46 @@ set (`.remember`, `.you-try`, `.you-try-m` + `.answer`, `.think`, `.gotcha`,
 
 ## Branches
 
-Keep the repository clean. Dead branches are clutter.
+**Commit straight to `main`.** The teacher works alone, and his review step is
+seeing the PDFs or pages before they go live, not a branch. Feature branches
+are team ceremony here, and this session's credentials cannot delete them
+(`git push origin --delete` returns HTTP 403), so they pile up.
 
-- Work happens on a feature branch. Granular commits there are fine and
-  wanted while the feature is still being worked on, which is exactly when
-  the branch still exists
-- When a feature is finished it goes to `main` as **one squashed commit**
-  naming the feature. `main` keeps a history of what was added, not of every
+- **Work on `main`.** Commit finished work to `main` and push it in the same
+  turn. Squash work-in-progress commits locally before pushing, so `main`
+  keeps a history of what was added, one commit per piece of work, not every
   step it took to get there
-- The branch is deleted once it is merged
-- **Merge without being asked.** The teacher assumes his changes are on
-  `main` and can go weeks without noticing they are not (in October 2026 four
-  branches of finished, deployed work sat unmerged for up to two weeks). So
-  finished work goes to `main` as part of the task, not as a proposal. Show
-  him the PDFs or pages first when he asks to see them; once he is satisfied,
-  or moves on to something else, squash and push to `main` in the same turn
-- **Deploy only from `main`.** Merge first, then run `./deploy.sh` on `main`,
-  so the live site never holds work that `main` does not
-- **Check at the start of every session.** List remote branches and run the
-  content check below against each one. Report anything not on `main`, and
-  merge finished work right away
-- Deleting a branch is still his call (see the 403 below). Tell him which
-  branches are safe to delete once their work is on `main`
+- **Show before publishing.** When he asks to see printables first, build
+  them, send the PDFs, and wait. Committing to `main` before he has looked is
+  fine; deploying is not
+- **Deploy only from `main`.** Run `./deploy.sh` on a clean `main`, so the
+  live site never holds work that `main` does not
+- **A branch only for large, multi-session work.** Open a pull request and
+  squash-merge it (`gh pr merge --squash`). With the repo's "Automatically
+  delete head branches" setting on, GitHub deletes the branch on merge. That
+  setting is the teacher's to turn on (Settings, General, Pull Requests)
+- **Check at the start of every session.** List remote branches. Anything
+  besides `main` and `gh-pages` is unexpected: run the content check below,
+  get finished work onto `main`, and tell him which branches he can delete
 
-Two things that bite:
+Why: he assumes his changes are on `main` and can go weeks without noticing
+they are not. In October 2026 five branches of finished work, most of it
+already deployed, sat unmerged for up to two weeks under an old rule that
+waited for his sign-off.
 
-- **Deploying is not merging.** `deploy.sh` force-pushes the built `_book` to
-  `gh-pages` and touches nothing else, so a change can be live on the site
-  while its source exists only on a feature branch. That is how work got
-  stranded before. Check `git rev-list --count origin/main..HEAD` before
-  assuming work is safe
-- **This session's credentials cannot delete branches.** `git push origin
-  --delete` returns HTTP 403. That is a permission limit, not a safety
-  refusal, so branch removal is the teacher's to do
-
-**Checking a branch is safe to delete.** Because the convention here is to
-squash, the branch's own commits never become ancestors of `main`, so
-`git merge-base --is-ancestor` and a zero count from `git rev-list
-origin/main..origin/<branch>` both report a squash-merged branch as unmerged.
-They are the right check only for a branch merged the ordinary way.
-
-What settles it for a squashed branch is the content:
+**Checking a leftover branch is on `main`.** Old work was squash-merged, so a
+branch's own commits never become ancestors of `main`, and `git merge-base
+--is-ancestor` or a zero count from `git rev-list origin/main..origin/<branch>`
+reports it as unmerged. What settles it is the content:
 
 ```
 git diff origin/main origin/<branch>      # empty output means nothing would be lost
 ```
 
-Do not judge by `git diff --name-only main branch` and count the files. That
-reports differences in both directions, so a branch long since merged can look
-like it carries hundreds of unmerged files when those files are `main`'s own
-later work.
+For a branch that `main` has moved past, compare only the files the branch
+changed. Do not count the files in `git diff --name-only main branch`: that
+reports differences in both directions, so a long-merged branch can look like
+it carries hundreds of files that are really `main`'s own later work.
 
 ## Writing Style
 
