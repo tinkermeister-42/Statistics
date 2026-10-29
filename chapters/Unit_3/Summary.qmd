@@ -1,0 +1,66 @@
+# Unit 3 Summary {.unnumbered}
+
+Every tool from Unit 3 in one place: two-way tables, Venn diagrams, percents, and association. Use it while you work on the review.
+
+:::{.guided-notes-link}
+[Printable summary](/handouts/Unit_3/Unit_3_Summary.pdf){target="_blank"} - these tables on two pages, to print and keep.
+:::
+
+### Parts of a Two-Way Table
+
+60 students answered two questions: *Do you play a sport?* *Do you have a job?* A {{< glink "two-way table" >}} shows the answers to both questions at once. Every example on this page uses this table.
+
+| | **Job** | **No job** | **Total** |
+|---|:---:|:---:|:---:|
+| **Sport** | 8 | 22 | 30 |
+| **No sport** | 12 | 18 | 30 |
+| **Total** | 20 | 40 | 60 |
+
+| Part | What it is | Example |
+|---|---|---|
+| {{< glink "categorical data" text="Categories" >}} | The answers to each question. They name the rows and the columns. | Rows: Sport, No sport. Columns: Job, No job. |
+| Cell | Counts students who match **both** labels. | 8 students play a sport **and** have a job. |
+| Totals | In the margins: the **Total** row and the **Total** column. | 30 students play a sport. 20 have a job. |
+| Grand total | The corner. | 60 students in all. |
+| Check | Each row adds to its total. Each column adds to its total. | $8 + 22 = 30$. $8 + 12 = 20$. |
+
+***
+
+### Venn Diagram and Two-Way Table
+
+| {{< glink "venn diagram" text="Venn diagram" >}} | Two-way table | Example |
+|---|---|---|
+| **Overlap**: both groups | The cell for Sport **and** Job. | 8 play a sport **and** have a job. |
+| **One circle only** | The cell for Sport and No job. The cell for No sport and Job. | Sport only: $30 - 8 = 22$. Job only: $20 - 8 = 12$. |
+| **Outside** the circles: neither group | The cell for No sport and No job. | $22 + 8 + 12 = 42$ are in at least one circle. Neither: $60 - 42 = 18$. |
+| A **whole circle** | That group's total. | The "Plays a sport" circle holds $22 + 8 = 30$ students, not 22. |
+
+***
+
+### Percents from a Two-Way Table
+
+| | **Job** | **No job** | **Total** |
+|---|:---:|:---:|:---:|
+| **Sport** | 8 | 22 | 30 |
+| **No sport** | 12 | 18 | 30 |
+| **Total** | 20 | 40 | 60 |
+
+| Kind | What it is | Example |
+|---|---|---|
+| {{< glink "relative frequency" text="Relative frequency table" >}} | Divide **every** count by the **grand total**. This gives the percent of **all** students. | $\frac{8}{60} \approx 13\%$. About 13% of **all** the students play a sport and have a job. The four inside cells add to 100%. |
+| {{< glink "marginal distribution" text="Marginal distribution" >}} | Percents from the **totals** (the margins). Divide by the **grand total**. | Job: $\frac{20}{60} \approx 33\%$. No job: $\frac{40}{60} \approx 67\%$. |
+| {{< glink "conditional distribution" text="Conditional distribution" >}} | Percents inside **one group**. Divide by that group's **total**. | Students who play a sport. Job: $\frac{8}{30} \approx 27\%$. No job: $\frac{22}{30} \approx 73\%$. |
+
+**Check the denominator:** "Of the students who **play a sport**, what percent have a job?" Divide by the sport total (30). Do not divide by 60. Do not divide by the job total (20).
+
+***
+
+### Association
+
+| Step | What to do | Example |
+|---|---|---|
+| 1. Find | Find the conditional distribution of each group. | Sport: $\frac{8}{30} \approx 27\%$ have a job. No sport: $\frac{12}{30} = 40\%$ have a job. |
+| 2. Compare | Compare the conditional distributions of the two groups. A {{< glink "segmented bar chart" >}} shows them side by side. | 27% and 40% are **different**. |
+| 3. Decide | Conditional percents are **different** in the groups: the variables are {{< glink slug="association" text="associated" >}}. Conditional percents are about the **same**: there is **no association**. | Playing a sport and having a job are **associated**. In this group, students who play a sport are less likely to have a job. |
+
+**Cause:** an association only says the two things happen together. It does not prove cause.

@@ -28,5 +28,8 @@ Count answers to two questions at once. Turn counts into percents.
 [**Marginal & Conditional Distributions**](3.2_Marginal_and_Conditional_Distributions.qmd)\
 Find percents within one group. Decide if two variables are connected.
 
+[**Unit 3 Summary**](Summary.qmd)\
+Every tool from the unit in one set of tables, to keep beside you.
+
 [**Unit 3 Review**](Review.qmd)\
 Practice every skill from the unit before the quiz.

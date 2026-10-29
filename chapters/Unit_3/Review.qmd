@@ -63,7 +63,7 @@ A {{< glink "relative frequency" >}} table divides every count by the **grand to
 | **No card** | $\frac{9}{50} = 18\%$ | $\frac{21}{50} = 42\%$ | $\frac{30}{50} = 60\%$ |
 | **Total** | $\frac{23}{50} = 46\%$ | $\frac{27}{50} = 54\%$ | 100% |
 
-28% of **all** the students have a card and read for fun. The whole table adds to 100%.
+28% of **all** the students have a card and read for fun. The four inside cells add to 100%.
 
 ***
 

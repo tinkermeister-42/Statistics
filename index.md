@@ -41,6 +41,7 @@ Do the mini lesson first. Then do the matching Khan Academy lessons.
 | **Unit 3: Two-Way Tables** | | |
 | [3.1](chapters/Unit_3/3.1_Two-Way_Tables_and_Relative_Frequency.qmd) | Two-way tables and relative frequency | Unit 3, lesson {{< khanlink 3.1 "1" >}} |
 | [3.2](chapters/Unit_3/3.2_Marginal_and_Conditional_Distributions.qmd) | Marginal and conditional distributions | Unit 3, lesson {{< khanlink 3.2 "2" >}} |
+| [Summary](chapters/Unit_3/Summary.qmd) | Unit 3 summary tables | |
 | [Review](chapters/Unit_3/Review.qmd) | Unit 3 review | Unit 3, lessons {{< khanlink 3.1 "1" >}} and {{< khanlink 3.2 "2" >}} |
 | **Unit 4: Scatterplots** | | |
 | [4.1](chapters/Unit_4/4.1_Scatterplots_and_Lines_of_Best_Fit.qmd) | Scatterplots and lines of best fit | Unit 4, lesson {{< khanlink 4.1 "1" >}} |

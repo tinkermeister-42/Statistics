@@ -1,0 +1,76 @@
+\documentclass[11pt]{article}
+\input{../preamble}
+% Unit summary: the unit's tools in tables, to print and keep. Same tables as
+% chapters/Unit_3/Summary.qmd; edit both together. Nothing to answer, so the
+% _KEY copy is the same sheet.
+\newcommand{\sumhead}[1]{\par\vspace{0.7em}{\large\bfseries #1}\par\vspace{0.3em}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\renewcommand{\arraystretch}{1.25}
+% the sport and job table every example uses; printed on both pages
+\newcommand{\sportjob}{{\renewcommand{\arraystretch}{1.4}%
+\begin{tabular}{|l|c|c|c|}\hline
+ & \textbf{Job} & \textbf{No job} & \textbf{Total} \\ \hline
+\textbf{Sport} & 8 & 22 & 30 \\ \hline
+\textbf{No sport} & 12 & 18 & 30 \\ \hline
+\textbf{Total} & 20 & 40 & 60 \\ \hline
+\end{tabular}}}
+
+\begin{document}
+
+\lessontitle{Unit 3 Summary: Two-Way Tables}
+
+\sumhead{Parts of a Two-Way Table}
+\begin{minipage}[c]{0.56\linewidth}
+60 students answered two questions: \textit{Do you play a sport?} \textit{Do you have a job?} A two-way table shows the answers to both questions at once. Every example on this sheet uses this table.
+\end{minipage}\hfill
+\begin{minipage}[c]{0.4\linewidth}\raggedleft
+\sportjob
+\end{minipage}
+
+\vspace{0.6em}
+\begin{tabular}{|L{1.45in}|L{2.5in}|L{2.52in}|}\hline
+\textbf{Part} & \textbf{What it is} & \textbf{Example}\\ \hline
+Categories & The answers to each question. They name the rows and the columns. & Rows: Sport, No sport. Columns: Job, No job.\\ \hline
+Cell & Counts students who match \textbf{both} labels. & 8 students play a sport \textbf{and} have a job.\\ \hline
+Totals & In the margins: the \textbf{Total} row and the \textbf{Total} column. & 30 students play a sport. 20 have a job.\\ \hline
+Grand total & The corner. & 60 students in all.\\ \hline
+Check & Each row adds to its total. Each column adds to its total. & $8 + 22 = 30$. \ $8 + 12 = 20$.\\ \hline
+\end{tabular}
+
+\sumhead{Venn Diagram and Two-Way Table}
+\begin{tabular}{|L{1.45in}|L{2.5in}|L{2.52in}|}\hline
+\textbf{Venn diagram} & \textbf{Two-way table} & \textbf{Example}\\ \hline
+\textbf{Overlap}: both groups & The cell for Sport \textbf{and} Job. & 8 play a sport \textbf{and} have a job.\\ \hline
+\textbf{One circle only} & The cell for Sport and No job. The cell for No sport and Job. & Sport only: $30 - 8 = 22$. Job only: $20 - 8 = 12$.\\ \hline
+\textbf{Outside} the circles: neither group & The cell for No sport and No job. & $22 + 8 + 12 = 42$ are in at least one circle. Neither: $60 - 42 = 18$.\\ \hline
+A \textbf{whole circle} & That group's total. & The ``Plays a sport'' circle holds $22 + 8 = 30$ students, not 22.\\ \hline
+\end{tabular}
+
+\newpage
+\sumhead{Percents from a Two-Way Table}
+\begin{center}\sportjob\end{center}
+
+{\renewcommand{\arraystretch}{2.3}%
+\begin{tabular}{|L{1.45in}|L{2.5in}|L{2.52in}|}\hline
+\textbf{Kind} & \textbf{What it is} & \textbf{Example}\\ \hline
+Relative frequency table & Divide \textbf{every} count by the \textbf{grand total}. This gives the percent of \textbf{all} students. & $\dfrac{8}{60} \approx 13\%$. About 13\% of \textbf{all} the students play a sport and have a job. The four inside cells add to 100\%.\\ \hline
+Marginal distribution & Percents from the \textbf{totals} (the margins). Divide by the \textbf{grand total}. & Job: $\dfrac{20}{60} \approx 33\%$. \ No job: $\dfrac{40}{60} \approx 67\%$.\\ \hline
+Conditional distribution & Percents inside \textbf{one group}. Divide by that group's \textbf{total}. & Students who play a sport.\newline Job: $\dfrac{8}{30} \approx 27\%$. \ No job: $\dfrac{22}{30} \approx 73\%$.\\ \hline
+\end{tabular}}
+
+\vspace{0.5em}
+\textbf{Check the denominator:} ``Of the students who \textbf{play a sport}, what percent have a job?'' Divide by the sport total (30). Do not divide by 60. Do not divide by the job total (20).
+
+\sumhead{Association}
+{\renewcommand{\arraystretch}{2.3}%
+\begin{tabular}{|L{1.45in}|L{2.5in}|L{2.52in}|}\hline
+\textbf{Step} & \textbf{What to do} & \textbf{Example}\\ \hline
+1. Find & Find the conditional distribution of each group. & Sport: $\dfrac{8}{30} \approx 27\%$ have a job.\newline No sport: $\dfrac{12}{30} = 40\%$ have a job.\\ \hline
+2. Compare & Compare the conditional distributions of the two groups. A segmented bar chart shows them side by side. & 27\% and 40\% are \textbf{different}.\\ \hline
+3. Decide & Conditional percents are \textbf{different} in the groups: the variables are \textbf{associated}. Conditional percents are about the \textbf{same}: there is \textbf{no association}. & Playing a sport and having a job are \textbf{associated}. In this group, students who play a sport are less likely to have a job.\\ \hline
+\end{tabular}}
+
+\vspace{0.5em}
+\textbf{Cause:} an association only says the two things happen together. It does not prove cause.
+
+\end{document}

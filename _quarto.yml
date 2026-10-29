@@ -78,6 +78,7 @@ book:
         - file: chapters/Unit_3/index.qmd
         - file: chapters/Unit_3/3.1_Two-Way_Tables_and_Relative_Frequency.qmd
         - file: chapters/Unit_3/3.2_Marginal_and_Conditional_Distributions.qmd
+        - file: chapters/Unit_3/Summary.qmd
         - file: chapters/Unit_3/Review.qmd
 
     - part: "Unit 4: Scatterplots"
