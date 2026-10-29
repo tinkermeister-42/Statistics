@@ -1,0 +1,94 @@
+\documentclass[11pt]{article}
+\input{../preamble}
+% Unit summary: the unit's tools in tables, to print and keep. Same tables as
+% chapters/Unit_1/Summary.qmd; edit both together. Nothing to answer, so the
+% _KEY copy is the same sheet.
+\newcommand{\sumhead}[1]{\par\vspace{0.7em}{\large\bfseries #1}\par\vspace{0.3em}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\renewcommand{\arraystretch}{1.25}
+
+\begin{document}
+
+\lessontitle{Unit 1 Summary: Displaying One Variable}
+
+\sumhead{Showing the Data}
+\begin{tabular}{|L{1.2in}|L{2.95in}|L{2.3in}|}\hline
+\textbf{Display} & \textbf{How it works} & \textbf{Example}\\ \hline
+Frequency table & Lists each value and its \textbf{frequency} (how many times it happens). Make a tally mark for each value. Then count the marks. & 11 students say how many siblings they have. 4 of them have 1 sibling. Check: $2 + 4 + 3 + 1 + 1 = 11$ students.\\ \hline
+Dot plot & Puts the values on a number line. Each value gets \textbf{one dot}. Dots for the same value stack up. The height of a stack is the frequency. It shows every value. & The same siblings data. The stack above 1 is the tallest, so 1 is the most common.\\ \hline
+Histogram & A bar graph for number data. The values are put into groups called \textbf{bins}. Each bar is one bin. The bars touch (no gaps). It does \textbf{not} show the exact values. It is better than a dot plot when there is a lot of data, or the values are spread out. & Heights of students. The tallest bar is 170 to 180. So 7 students are from 170 cm to 180 cm tall.\\ \hline
+\end{tabular}
+
+\vspace{0.3em}
+\textbf{The histogram rule:} if a value is \textbf{on a line} between two bars, it goes in the bar on the \textbf{right}. 160 goes in the 160 to 170 bar.
+
+\vspace{0.3em}
+\textbf{Every time you read a graph:} read the title, read both axis labels, then check the scale.
+
+\sumhead{Center}
+\begin{tabular}{|L{1.2in}|L{2.95in}|L{2.3in}|}\hline
+\textbf{Measure} & \textbf{How to find it} & \textbf{Example: 2, 3, 8, 3, 4}\\ \hline
+Mean (the average) & Add all the values. Divide by how many values there are. In symbols: $\bar{x} = \dfrac{\Sigma x}{n}$.\newline $\Sigma$ (sigma) means \textbf{add up}. $n$ is how many values there are. $\bar{x}$ (``x-bar'') is the mean. & $\Sigma x = 2 + 3 + 8 + 3 + 4 = 20$ and $n = 5$, so $\bar{x} = \dfrac{20}{5} = 4$.\\ \hline
+Median (the middle) & Put the values in order. Find the middle value. Two values in the middle? The median is the number halfway between them. & In order: 2, 3, \textbf{3}, 4, 8. The median is 3. For 2, 3, 5, 8: $(3 + 5) \div 2 = 4$.\\ \hline
+Mode & The value that happens \textbf{most often}. & The mode is 3.\\ \hline
+\end{tabular}
+
+\sumhead{Shape}
+\begin{tabular}{|L{1.2in}|L{2.95in}|L{2.3in}|}\hline
+\textbf{Shape} & \textbf{What it looks like} & \textbf{Mean and median}\\ \hline
+Skewed left & Tail on the left & mean $<$ median\\ \hline
+Symmetric & Both sides match & mean $\approx$ median\\ \hline
+Skewed right & Tail on the right & mean $>$ median\\ \hline
+\end{tabular}
+
+\vspace{0.3em}
+\textbf{The mean follows the tail.} The tail is the long, low side of a graph. The mean is pulled toward the tail. The median is not pulled much. With a long tail, the median is a better description of a \textbf{typical} value.
+
+\newpage
+\sumhead{Quartiles and Spread}
+\begin{tabular}{|L{2.05in}|L{2.2in}|L{2.2in}|}\hline
+\textbf{How to find it} & \textbf{Example 1: 11 values (odd)} & \textbf{Example 2: 10 values (even)}\\ \hline
+1. Put the data in order. & 3, 4, 6, 7, 9, \textbf{10}, 12, 13, 15, 18, 20 & 1, 3, 4, 6, \textbf{7}, \textbf{9}, 10, 12, 14, 18\\ \hline
+2. Find the \textbf{median}. It splits the data into a lower half and an upper half. & The median is 10. \textbf{Odd number of values:} leave the median out of both halves. & Two middle values, 7 and 9. The median is $(7 + 9) \div 2 = 8$.\\ \hline
+3. \textbf{Q1} = the median of the lower half. & Lower half: 3, 4, \textbf{6}, 7, 9. Q1~=~6 & Lower half: 1, 3, \textbf{4}, 6, 7. Q1~=~4\\ \hline
+4. \textbf{Q3} = the median of the upper half. & Upper half: 12, 13, \textbf{15}, 18, 20. Q3~=~15 & Upper half: 9, 10, \textbf{12}, 14, 18. Q3~=~12\\ \hline
+Five-number summary: minimum, Q1, median, Q3, maximum & 3, 6, 10, 15, 20 & 1, 4, 8, 12, 18\\ \hline
+IQR $= Q_3 - Q_1$ & $15 - 6 = 9$ & $12 - 4 = 8$\\ \hline
+\end{tabular}
+
+\vspace{0.3em}
+\textbf{IQR} (interquartile range): how spread out the \textbf{middle half} of the data is. \textbf{Range} $=$ maximum $-$ minimum. One extreme value changes the range a lot. It does not move the IQR much.
+
+\sumhead{Box Plots}
+\begin{tabular}{|L{1.45in}|L{2.75in}|L{2.25in}|}\hline
+\textbf{Part} & \textbf{What it shows} & \textbf{Example: test scores}\\ \hline
+The box & Goes from Q1 to Q3. Its length is the IQR. It holds the middle \textbf{50\%} of the data. & Half of the students scored from 68 to 84.\\ \hline
+The line inside the box & The median. About \textbf{50\%} of the data is below it. & Half scored less than 76.\\ \hline
+The whiskers & Go out to the minimum and the maximum. & From 52 to 68, and from 84 to 98.\\ \hline
+Each of the 4 parts & About \textbf{25\%} of the data. A long part means the values are \textbf{spread out}. It does not mean there are more of them. & The left whisker (52 to 68) is the longest part. It still holds only about 25\% of the students.\\ \hline
+Above Q1 & About \textbf{75\%} of the data. & About 75\% scored more than 68.\\ \hline
+\end{tabular}
+
+\vspace{0.3em}
+\textbf{Compare two box plots:} put both on the same number line. Then compare the centers and the spreads.
+
+\vspace{0.3em}
+\begin{tabular}{|L{1.25in}|L{0.95in}|L{0.95in}|L{3.05in}|}\hline
+\textbf{Compare} & \textbf{Morning} & \textbf{Afternoon} & \textbf{What it means}\\ \hline
+Center (median) & 72 & 78 & The afternoon class scored \textbf{higher}.\\ \hline
+Spread (IQR) & $80 - 65 = 15$ & $82 - 70 = 12$ & The afternoon scores are \textbf{closer together}.\\ \hline
+\end{tabular}
+
+\sumhead{Outliers}
+\begin{tabular}{|L{3.6in}|L{2.85in}|}\hline
+\textbf{The 1.5 $\times$ IQR rule} & \textbf{Example: 3, 8, 9, 10, 11, 12, 13, 14, 30}\\ \hline
+1. Find Q1, Q3, and the IQR. & Q1 = 8.5, Q3 = 13.5, and IQR = 5.\\ \hline
+2. Lower fence $= Q_1 - 1.5 \times \text{IQR}$ & $1.5 \times 5 = 7.5$. Lower fence $= 8.5 - 7.5 = 1$\\ \hline
+3. Upper fence $= Q_3 + 1.5 \times \text{IQR}$ & Upper fence $= 13.5 + 7.5 = 21$\\ \hline
+4. A value below the lower fence or above the upper fence is an \textbf{outlier}. It is far away from the rest of the data. & 30 is above 21, so \textbf{30 is an outlier}. 3 is not below 1, so 3 is not an outlier.\\ \hline
+\end{tabular}
+
+\vspace{0.3em}
+\textbf{On a box plot:} an outlier is a \textbf{dot}. The whisker stops at the last value that is not an outlier (here, 14).
+
+\end{document}

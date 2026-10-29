@@ -1,0 +1,88 @@
+# Unit 1 Summary {.unnumbered}
+
+Every graph, measure, and rule from Unit 1 in one place. Use it while you work on the review.
+
+:::{.guided-notes-link}
+[Printable summary](/handouts/Unit_1/Unit_1_Summary.pdf){target="_blank"} - these tables on two pages, to print and keep.
+:::
+
+### Showing the Data
+
+| Display | How it works | Example |
+|---|---|---|
+| {{< glink "frequency table" text="Frequency table" >}} | Lists each value and its **frequency** (how many times it happens). Make a tally mark for each value. Then count the marks. | 11 students say how many siblings they have. 4 of them have 1 sibling. Check: $2 + 4 + 3 + 1 + 1 = 11$ students. |
+| {{< glink "dot plot" text="Dot plot" >}} | Puts the values on a number line. Each value gets **one dot**. Dots for the same value stack up. The height of a stack is the frequency. It shows every value. | The same siblings data. The stack above 1 is the tallest, so 1 is the most common. |
+| {{< glink histogram text="Histogram" >}} | A bar graph for number data. The values are put into groups called **bins**. Each bar is one bin. The bars touch (no gaps). It does **not** show the exact values. It is better than a dot plot when there is a lot of data, or the values are spread out. | Heights of students. The tallest bar is 170 to 180. So 7 students are from 170 cm to 180 cm tall. |
+
+**The histogram rule:** if a value is **on a line** between two bars, it goes in the bar on the **right**. 160 goes in the 160 to 170 bar.
+
+**Every time you read a graph:** read the title, read both axis labels, then check the scale.
+
+***
+
+### Center
+
+| Measure | How to find it | Example: 2, 3, 8, 3, 4 |
+|---|---|---|
+| {{< glink mean text="Mean" >}} (the average) | Add all the values. Divide by how many values there are. In symbols: $\bar{x} = \dfrac{\Sigma x}{n}$. $\Sigma$ (sigma) means **add up**. $n$ is how many values there are. $\bar{x}$ ("x-bar") is the mean. | $\Sigma x = 2 + 3 + 8 + 3 + 4 = 20$ and $n = 5$, so $\bar{x} = \dfrac{20}{5} = 4$. |
+| {{< glink median text="Median" >}} (the middle) | Put the values in order. Find the middle value. Two values in the middle? The median is the number halfway between them. | In order: 2, 3, **3**, 4, 8. The median is 3. For 2, 3, 5, 8: $(3 + 5) \div 2 = 4$. |
+| {{< glink mode text="Mode" >}} | The value that happens **most often**. | The mode is 3. |
+
+***
+
+### Shape
+
+| Shape | What it looks like | Mean and median |
+|---|---|---|
+| {{< glink "skewed left" text="Skewed left" >}} | Tail on the left | mean < median |
+| {{< glink symmetric text="Symmetric" >}} | Both sides match | mean ≈ median |
+| {{< glink "skewed right" text="Skewed right" >}} | Tail on the right | mean > median |
+
+**The mean follows the tail.** The {{< glink tail >}} is the long, low side of a graph. The mean is pulled toward the tail. The median is not pulled much. With a long tail, the median is a better description of a **typical** value.
+
+***
+
+### Quartiles and Spread
+
+| How to find it | Example 1: 11 values (odd) | Example 2: 10 values (even) |
+|---|---|---|
+| 1. Put the data in order. | 3, 4, 6, 7, 9, **10**, 12, 13, 15, 18, 20 | 1, 3, 4, 6, **7**, **9**, 10, 12, 14, 18 |
+| 2. Find the **median**. It splits the data into a lower half and an upper half. | The median is 10. **Odd number of values:** leave the median out of both halves. | Two middle values, 7 and 9. The median is $(7 + 9) \div 2 = 8$. |
+| 3. **Q1** = the median of the lower half. | Lower half: 3, 4, **6**, 7, 9. Q1 = 6 | Lower half: 1, 3, **4**, 6, 7. Q1 = 4 |
+| 4. **Q3** = the median of the upper half. | Upper half: 12, 13, **15**, 18, 20. Q3 = 15 | Upper half: 9, 10, **12**, 14, 18. Q3 = 12 |
+| {{< glink "five-number summary" text="Five-number summary" >}}: minimum, Q1, median, Q3, maximum | 3, 6, 10, 15, 20 | 1, 4, 8, 12, 18 |
+| {{< glink IQR >}} $= Q_3 - Q_1$ | $15 - 6 = 9$ | $12 - 4 = 8$ |
+
+**IQR** (interquartile range): how spread out the **middle half** of the data is. **{{< glink range text="Range" >}}** $=$ maximum $-$ minimum. One extreme value changes the range a lot. It does not move the IQR much.
+
+***
+
+### Box Plots
+
+| Part | What it shows | Example: test scores |
+|---|---|---|
+| The box | Goes from Q1 to Q3. Its length is the IQR. It holds the middle **50%** of the data. | Half of the students scored from 68 to 84. |
+| The line inside the box | The median. About **50%** of the data is below it. | Half scored less than 76. |
+| The {{< glink slug="whisker" text="whiskers" >}} | Go out to the minimum and the maximum. | From 52 to 68, and from 84 to 98. |
+| Each of the 4 parts | About **25%** of the data. A long part means the values are **spread out**. It does not mean there are more of them. | The left whisker (52 to 68) is the longest part. It still holds only about 25% of the students. |
+| Above Q1 | About **75%** of the data. | About 75% scored more than 68. |
+
+**Compare two box plots:** put both on the same number line. Then compare the centers and the spreads.
+
+| Compare | Morning | Afternoon | What it means |
+|---|---|---|---|
+| Center (median) | 72 | 78 | The afternoon class scored **higher**. |
+| Spread (IQR) | $80 - 65 = 15$ | $82 - 70 = 12$ | The afternoon scores are **closer together**. |
+
+***
+
+### Outliers
+
+| The 1.5 × IQR rule | Example: 3, 8, 9, 10, 11, 12, 13, 14, 30 |
+|---|---|
+| 1. Find Q1, Q3, and the IQR. | Q1 = 8.5, Q3 = 13.5, and IQR = 5. |
+| 2. Lower {{< glink fence >}} $= Q_1 - 1.5 \times \text{IQR}$ | $1.5 \times 5 = 7.5$. Lower fence $= 8.5 - 7.5 = 1$ |
+| 3. Upper fence $= Q_3 + 1.5 \times \text{IQR}$ | Upper fence $= 13.5 + 7.5 = 21$ |
+| 4. A value below the lower fence or above the upper fence is an {{< glink outlier >}}. It is far away from the rest of the data. | 30 is above 21, so **30 is an outlier**. 3 is not below 1, so 3 is not an outlier. |
+
+**On a box plot:** an outlier is a **dot**. The whisker stops at the last value that is not an outlier (here, 14).

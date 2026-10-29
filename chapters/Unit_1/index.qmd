@@ -35,5 +35,8 @@ Cut the data into four parts and draw a box plot.
 [**Reading Box Plots & Outliers**](1.4_Reading_Box_Plots_and_Outliers.qmd)\
 Read a box plot and find values that are far from the rest.
 
+[**Unit 1 Summary**](Summary.qmd)\
+Every tool from the unit in one set of tables, to keep beside you.
+
 [**Unit 1 Review**](Review.qmd)\
 Practice every skill from the unit before the quiz.
