@@ -47,6 +47,7 @@ Do the mini lesson first. Then do the matching Khan Academy lessons.
 | [4.1](chapters/Unit_4/4.1_Scatterplots_and_Lines_of_Best_Fit.qmd) | Scatterplots and lines of best fit | Unit 4, lesson {{< khanlink 4.1 "1" >}} |
 | [4.2](chapters/Unit_4/4.2_Slope_Intercept_and_Correlation.qmd) | Slope, intercept, and correlation | Unit 4, lesson {{< khanlink 4.2 "2" >}} |
 | [4.3](chapters/Unit_4/4.3_Residuals.qmd) | Residuals | Unit 4, lesson {{< khanlink 4.3 "3" >}} |
+| [Summary](chapters/Unit_4/Summary.qmd) | Unit 4 summary tables | |
 | [Review](chapters/Unit_4/Review.qmd) | Unit 4 review | Unit 4, lessons {{< khanlink 4.1 "1" >}} to {{< khanlink 4.3 "3" >}} |
 | **Unit 5: Study Design** | | |
 | [5.1](chapters/Unit_5/5.1_Samples_Studies_and_Bias.qmd) | Samples, studies, and bias | Unit 5, lessons {{< khanlink 5.1 "1" >}} and {{< khanlink 5.2 "2" >}} |

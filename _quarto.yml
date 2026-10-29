@@ -87,6 +87,7 @@ book:
         - file: chapters/Unit_4/4.1_Scatterplots_and_Lines_of_Best_Fit.qmd
         - file: chapters/Unit_4/4.2_Slope_Intercept_and_Correlation.qmd
         - file: chapters/Unit_4/4.3_Residuals.qmd
+        - file: chapters/Unit_4/Summary.qmd
         - file: chapters/Unit_4/Review.qmd
 
     - part: "Unit 5: Study Design"

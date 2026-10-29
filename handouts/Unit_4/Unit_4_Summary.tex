@@ -1,0 +1,78 @@
+\documentclass[11pt]{article}
+\input{../preamble}
+% Unit summary: the unit's tools in tables, to print and keep. Same tables as
+% chapters/Unit_4/Summary.qmd; edit both together. Nothing to answer, so the
+% _KEY copy is the same sheet.
+\newcommand{\sumhead}[1]{\par\vspace{0.7em}{\large\bfseries #1}\par\vspace{0.3em}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\renewcommand{\arraystretch}{1.25}
+% room above and below a full-size fraction so it clears the rules
+\newcommand{\fracstrut}{\rule[-0.95em]{0pt}{2.3em}}
+
+\begin{document}
+
+\lessontitle{Unit 4 Summary: Scatterplots}
+
+\sumhead{Describing a Scatterplot}
+A \textbf{scatterplot} shows two numbers for each person or thing. The first number ($x$) goes across. The second number ($y$) goes up.
+
+\vspace{0.4em}
+\begin{tabular}{|L{1.2in}|L{2.75in}|L{2.5in}|}\hline
+\textbf{Feature} & \textbf{Ask} & \textbf{Example: the study data}\\ \hline
+Direction & As $x$ goes up, does $y$ go up (\textbf{positive}) or down (\textbf{negative})? No pattern at all is \textbf{no association}. & \textbf{Positive.} The students who studied more mostly scored higher.\\ \hline
+Form & Do the dots follow a line (\textbf{linear}) or a curve? & \textbf{Linear.} The dots follow a line.\\ \hline
+Strength & Are the dots close to a line (\textbf{strong}), a little spread out (\textbf{moderate}), or very spread out (\textbf{weak})? & \textbf{Strong.} The dots are close to the line.\\ \hline
+Unusual & Any outliers or clusters? & None.\\ \hline
+\end{tabular}
+
+\sumhead{The Line of Best Fit}
+A \textbf{line of best fit} follows the trend of the dots. It goes through the middle of the dots. About the same number of dots are above it as below it.
+
+\vspace{0.4em}
+\begin{tabular}{|L{1.2in}|L{2.75in}|L{2.5in}|}\hline
+\textbf{Step} & \textbf{How it works} & \textbf{Example: the study data}\\ \hline
+1. Pick two points & Pick two points \textbf{on the line}. They do not have to be dots. & $(2, 64)$ and $(6, 84)$\\ \hline
+2. Find the slope~$m$ & Subtract the $y$ values. Subtract the $x$ values in the same order. Divide. & \fracstrut$m = \dfrac{84 - 64}{6 - 2} = \dfrac{20}{4} = 5$\\ \hline
+3. Find the y-intercept~$b$ & The equation is $\hat{y} = mx + b$. Put in $m$ and one point. Solve for $b$. & $64 = 5(2) + b$, \; so $b = 54$\\ \hline
+4. Write the equation & Put $m$ and $b$ into $\hat{y} = mx + b$. $\hat{y}$ is read ``y-hat.'' The hat means \textbf{predicted}. & $\hat{y} = 5x + 54$\\ \hline
+5. Predict & Put the $x$ value into the equation. The line predicts $y$. It does not give the exact $y$. & A student studies 5 hours. $\hat{y} = 5(5) + 54 = 79$. The predicted score is \textbf{79}.\\ \hline
+Extrapolation & Predicting far outside the data. It is risky. & 12 hours: $\hat{y} = 5(12) + 54 = 114$. A test score cannot be more than 100. The data only goes from 1 to 8 hours.\\ \hline
+\end{tabular}
+
+\sumhead{Slope and Intercept in Context}
+\begin{tabular}{|L{0.8in}|L{2.1in}|L{1.7in}|L{1.7in}|}\hline
+ & \textbf{Sentence frame} & \textbf{A plant: $\hat{y} = 2.5x + 4$} & \textbf{A candle: $\hat{y} = -2x + 24$}\\ \hline
+Slope & For each additional [$x$ unit], the predicted [$y$] increases (or decreases) by [slope and units]. & For each additional \textbf{week}, the predicted \textbf{height} increases by \textbf{2.5 cm}. & For each additional \textbf{hour}, the predicted \textbf{height} decreases by \textbf{2 cm}.\\ \hline
+y-intercept & When [$x$] is 0, the predicted [$y$] is [intercept and units]. & When $x = 0$ (the day it was planted), the predicted height is \textbf{4 cm}. & When $x = 0$ (a new candle), the predicted height is \textbf{24 cm}.\\ \hline
+\end{tabular}
+
+\vspace{0.3em}
+\textbf{Some intercepts have no meaning:} if $x$ is a person's height, then $x = 0$ is not possible.
+
+\newpage
+\sumhead{Correlation and Causation}
+\begin{tabular}{|L{1.2in}|L{2.75in}|L{2.5in}|}\hline
+\textbf{Idea} & \textbf{What it means} & \textbf{Example}\\ \hline
+Correlation coefficient $r$ & It measures how strong a \textbf{linear} pattern is. $r$ is always from $-1$ to $1$. & The candles: $r \approx -0.98$. The dots are close to a line that goes down.\\ \hline
+Sign of $r$ & The sign shows the direction. $r > 0$ is positive. $r < 0$ is negative. & $r \approx 0.95$ is positive. $r \approx -0.80$ is negative.\\ \hline
+Size of $r$ & Close to $1$ or $-1$ is strong. Close to $0$ is weak. & $r = -0.8$ is stronger than $r = 0.6$. It is closer to $-1$ than $0.6$ is to $1$. The minus sign only tells the direction.\\ \hline
+Correlation is not causation & A correlation shows that two things change together. It does \textbf{not} prove that one causes the other. & Ice cream sales and sunburns have a strong positive correlation. Ice cream does not cause sunburns.\\ \hline
+Lurking variable & A hidden cause of both things. & Hot, sunny weather causes \textbf{both}.\\ \hline
+\end{tabular}
+
+\sumhead{Residuals}
+\begin{tabular}{|L{1.2in}|L{2.75in}|L{2.5in}|}\hline
+\textbf{Idea} & \textbf{What it means} & \textbf{Example: the study line $\hat{y} = 5x + 54$}\\ \hline
+Residual & residual $=$ actual $-$ predicted $= y - \hat{y}$ & A student studied 4 hours and scored 78. $\hat{y} = 5(4) + 54 = 74$. Residual $= 78 - 74 = 4$.\\ \hline
+Positive residual & The point is \textbf{above} the line. & Residual 4: the student scored 4 points \textbf{more} than predicted.\\ \hline
+Negative residual & The point is \textbf{below} the line. & Another student studied 4 hours and scored 72. Residual $= 72 - 74 = -2$. The student scored 2 points \textbf{less} than predicted.\\ \hline
+\end{tabular}
+
+\sumhead{Least Squares and Residual Plots}
+\begin{tabular}{|L{1.2in}|L{2.75in}|L{2.5in}|}\hline
+\textbf{Tool} & \textbf{How it works} & \textbf{What it means}\\ \hline
+Least-squares regression line & Square every residual and add them up: $\Sigma(y - \hat{y})^2$. $\Sigma$ means add up. & This line makes the sum as \textbf{small as possible}. Calculators and computers find this line for you.\\ \hline
+Residual plot & Put $x$ across the bottom and the residuals up the side. & Random scatter, no pattern: a line is a \textbf{good} model. A curved pattern: a line is \textbf{not} a good model. The data is curved.\\ \hline
+\end{tabular}
+
+\end{document}
