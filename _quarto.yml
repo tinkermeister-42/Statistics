@@ -72,6 +72,7 @@ book:
         - file: chapters/Unit_2/2.4_Normal_Distributions_and_the_Empirical_Rule.qmd
         - file: chapters/Unit_2/2.5_Normal_Calculations_with_a_Z-Table.qmd
         - file: chapters/Unit_2/2.6_Normal_Calculations_in_Reverse.qmd
+        - file: chapters/Unit_2/Summary.qmd
         - file: chapters/Unit_2/Review.qmd
 
     - part: "Unit 3: Two-Way Tables"

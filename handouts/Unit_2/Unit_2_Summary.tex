@@ -1,0 +1,136 @@
+\documentclass[11pt]{article}
+\input{../preamble}
+% Unit summary: the unit's tools in tables, to print and keep. Same tables as
+% chapters/Unit_2/Summary.qmd; edit both together. Nothing to answer, so the
+% _KEY copy is the same sheet.
+\newcommand{\sumhead}[1]{\par\vspace{0.35em}{\large\bfseries #1}\par\vspace{0.15em}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\renewcommand{\arraystretch}{1.1}
+% room above and below a full-size fraction in a table row
+\newcommand{\tall}{\rule[-0.85em]{0pt}{2.2em}}
+
+\begin{document}
+
+\lessontitle{Unit 2 Summary: Analyzing One Variable}
+
+\sumhead{Standard Deviation}
+\begin{tabular}{|L{1.45in}|L{5.2in}|}\hline
+\textbf{Standard deviation} & The SD is about how far the values usually are from the mean.\\ \hline
+\textbf{Small SD} & The values are close to the mean. Player A scores close to 10 every game.\\ \hline
+\textbf{Large SD} & The values are spread out. Player B might score 2 or 18.\\ \hline
+\textbf{Facts} & The SD is never negative. It is 0 only when every value is the same. It has the same units as the data (points, minutes, inches).\\ \hline
+\end{tabular}
+
+\vspace{0.5em}
+\begin{tabular}{|L{2.75in}|L{3.9in}|}\hline
+\textbf{Step} & \textbf{Example: 7, 7, 10, 13, 13}\\ \hline
+1. Find the mean, $\bar{x}$. & $\bar{x} = 50 \div 5 = 10$\\ \hline
+2. Subtract the mean from each value. & $-3, -3, 0, 3, 3$\\ \hline
+3. Square each result. & $9, 9, 0, 9, 9$\\ \hline
+4. Add the squares. & $\Sigma(x - \bar{x})^2 = 9 + 9 + 0 + 9 + 9 = 36$\\ \hline
+5. Divide by $n - 1$. This is the \textbf{variance}. & $36 \div 4 = 9$\\ \hline
+6. Take the square root. & $s = \sqrt{9} = 3$\\ \hline
+\tall\textbf{The formula:} \; $s = \sqrt{\dfrac{\Sigma(x - \bar{x})^2}{n - 1}}$ &
+$\Sigma$ (capital sigma) means \textbf{add up}. $\Sigma(x - \bar{x})^2$ means: find $(x - \bar{x})^2$ for every value, then add them all. $n$ is how many values there are. $s$ is the standard deviation.\\ \hline
+\end{tabular}
+
+\sumhead{Choosing Measures}
+\begin{tabular}{|L{2.45in}|L{2.0in}|L{2.0in}|}\hline
+\textbf{Shape of the data} & \textbf{Center} & \textbf{Spread}\\ \hline
+Symmetric, no outliers & mean & standard deviation\\ \hline
+Skewed, or has outliers & median & IQR\\ \hline
+\end{tabular}
+
+\vspace{0.3em}
+\textbf{Why:} an outlier pulls the mean and the SD. It does not pull the median and the IQR much.
+
+\sumhead{Comparing Two Distributions}
+\begin{tabular}{|L{0.85in}|L{2.05in}|L{3.55in}|}\hline
+ & \textbf{Ask} & \textbf{Example: hours of sleep last night}\\ \hline
+\textbf{Shape} & Symmetric or skewed? & 9th grade is symmetric. 12th grade is skewed right.\\ \hline
+\textbf{Center} & Which group is higher? (median or mean) & The median for 9th grade (8 hours) is greater than for 12th grade (6 hours). 9th graders usually sleep about 2 hours more.\\ \hline
+\textbf{Spread} & Which group is more spread out? (IQR or SD) & Both groups have an IQR of 2 hours. The spreads are about the same.\\ \hline
+\textbf{Outliers} & Any values far from the rest? & One 12th grader slept 12 hours. That is an outlier (the upper fence is 10).\\ \hline
+\end{tabular}
+
+\vspace{0.3em}
+\textbf{Use comparing words:} ``The median for 9th grade is \textbf{2 hours greater than} for 12th grade.'' Use numbers and the context.
+
+\sumhead{Percentiles}
+\begin{tabular}{|L{3.25in}|L{3.4in}|}\hline
+\textbf{Percentile} & \textbf{Example: 20 students took a test}\\ \hline
+The percent of the data that is \textbf{below} the value.\newline
+\tall$\dfrac{\text{number of values below}}{\text{total number of values}} \times 100$ &
+15 students scored below 85. $15 \div 20 = 0.75$. A score of 85 is at the \textbf{75th percentile}. It is higher than 75\% of the class.\\ \hline
+A percentile is \textbf{not} a percent score. &
+Scoring at the 75th percentile does \textbf{not} mean you got 75\% of the questions right. It means you scored higher than 75\% of the people.\\ \hline
+\end{tabular}
+
+\newpage
+\sumhead{Z-Scores}
+\begin{tabular}{|L{1.2in}|L{2.75in}|L{2.5in}|}\hline
+ & \textbf{What it tells} & \textbf{Example: mean 70, SD 10}\\ \hline
+\textbf{Z-score}\newline \tall$z = \dfrac{x - \mu}{\sigma}$ &
+How many SDs a value is above or below the mean. $\mu$ (mu) is the mean. $\sigma$ (small sigma) is the SD. &
+\tall$z = \dfrac{85 - 70}{10} = 1.5$\newline 85 is \textbf{1.5 SDs above} the mean.\\ \hline
+\textbf{Sign of $z$} & $z > 0$: above the mean. \newline $z < 0$: below the mean. \; $z = 0$: equal to the mean. &
+55 has $z = -1.5$. It is 1.5 SDs \textbf{below} the mean.\\ \hline
+\textbf{Going backward} & $x = \mu + z\sigma$ & $z = -2$: \; $70 + (-2)(10) = 50$\\ \hline
+\textbf{Comparing} & Z-scores let you compare values from \textbf{different} data sets. &
+Ana: 85, $z = 1.5$. Ben: 80 (mean 74, SD 3), $z = 2$. Ben did better compared to his class.\\ \hline
+\end{tabular}
+
+\sumhead{Normal Distributions and the Empirical Rule}
+\begin{minipage}[c]{3.3in}\centering
+\scalebox{0.6}{\fig{Unit_2/2.4_empirical}}
+\end{minipage}\hfill
+\begin{minipage}[c]{3.45in}\raggedright
+\begin{tabular}{|L{0.6in}|L{1.5in}|L{0.6in}|}\hline
+\textbf{Within} & \textbf{From} & \textbf{About}\\ \hline
+1 SD & $\mu - \sigma$ to $\mu + \sigma$ & 68\%\\ \hline
+2 SDs & $\mu - 2\sigma$ to $\mu + 2\sigma$ & 95\%\\ \hline
+3 SDs & $\mu - 3\sigma$ to $\mu + 3\sigma$ & 99.7\%\\ \hline
+\end{tabular}
+
+\vspace{0.3em}
+A \textbf{normal distribution} is bell-shaped and symmetric. The mean and the median are in the center (they are equal). Two numbers describe it: the mean $\mu$ (center) and the SD $\sigma$ (spread).
+\end{minipage}
+
+\vspace{0.3em}
+\begin{tabular}{|L{3.75in}|L{2.9in}|}\hline
+\textbf{Example: heights, mean 64 inches, SD 3 inches} & \textbf{Answer}\\ \hline
+Percent from 61 to 67 inches & 68\% (within 1 SD)\\ \hline
+Percent from 58 to 70 inches & 95\% (within 2 SDs)\\ \hline
+Percent taller than 67 inches & $13.5\% + 2.35\% + 0.15\% = 16\%$\\ \hline
+Percentile of 67 inches & $100\% - 16\% = 84\%$, the 84th percentile\\ \hline
+\end{tabular}
+
+\vspace{0.3em}
+\textbf{Changes:} a larger SD makes the curve wider and flatter. A different mean moves the curve left or right.
+
+\sumhead{Normal Calculations with a Z-Table}
+\textbf{The z-table gives the area to the left of $z$.} That is the proportion of the data below $z$.
+
+\vspace{0.3em}
+{\setlength{\tabcolsep}{3.5pt}%
+\begin{tabular}{|L{291pt}|L{198pt}|}\hline
+\textbf{Step} & \textbf{Example: heights}\\ \hline
+1. Draw the curve. Shade the part the question asks about. & Shorter than 68 inches: shade below 68.\\ \hline
+2. Find each z-score: \; $z = \frac{x - \mu}{\sigma}$. Round to 2 decimal places. & $z = \frac{68 - 64}{3} = 1.33$\\ \hline
+3. Look up each z-score in the table. & Row 1.3, column .03: .9082, so \textbf{90.82\%}\\ \hline
+4. \textbf{Below:} use the table. \textbf{Above:} $1 -$ table. \newline \textbf{Between:} subtract the two table values. &
+Taller than 68: $1 - .9082 = .0918$, \textbf{9.18\%} \newline 62 to 68: $z = \frac{62 - 64}{3} = -0.67$, table .2514. \newline $.9082 - .2514 = .6568$, \textbf{65.68\%}\\ \hline
+\end{tabular}}
+
+\sumhead{Normal Calculations in Reverse}
+\begin{tabular}{|L{3.55in}|L{3.1in}|}\hline
+\textbf{Step} & \textbf{Example: heights, 90th percentile}\\ \hline
+1. Draw the curve. Shade the area to the \textbf{left}. & 90\% is to the left. The area is .9000.\\ \hline
+2. Look \textbf{inside} the table for the area closest to it. & The closest area is .8997.\\ \hline
+3. Read the z-score from the row and the column. & Row 1.2, column .08: \; $z = 1.28$\\ \hline
+4. Find the value: \; $x = \mu + z\sigma$ & $64 + 1.28 \times 3 = 67.84$, about \textbf{67.8 inches}\\ \hline
+\textbf{Bottom} 10\%: the area to the left is .10. & Closest area .1003, at $z = -1.28$. \newline $64 + (-1.28)(3) = 60.16$, about \textbf{60.2 inches}\\ \hline
+\textbf{Top} 10\%: the area to the left is $1 - .10 = .90$. & Subtract from 1 \textbf{before} you look in the table.\\ \hline
+\end{tabular}
+
+\end{document}

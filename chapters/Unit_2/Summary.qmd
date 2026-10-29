@@ -1,0 +1,119 @@
+# Unit 2 Summary {.unnumbered}
+
+Every tool from Unit 2 in one place. Use it while you work on the review.
+
+:::{.guided-notes-link}
+[Printable summary](/handouts/Unit_2/Unit_2_Summary.pdf){target="_blank"} - these tables on two pages, to print and keep.
+:::
+
+### Standard Deviation
+
+| | |
+|---|---|
+| **{{< glink "standard deviation" text="Standard deviation" >}}** | The SD is about how far the values usually are from the mean. |
+| **Small SD** | The values are close to the mean. Player A scores close to 10 every game. |
+| **Large SD** | The values are spread out. Player B might score 2 or 18. |
+| **Facts** | The SD is never negative. It is 0 only when every value is the same. It has the same units as the data (points, minutes, inches). |
+
+| Step | Example: 7, 7, 10, 13, 13 |
+|---|---|
+| 1. Find the mean, $\bar{x}$. | $\bar{x} = 50 \div 5 = 10$ |
+| 2. Subtract the mean from each value. | $-3, -3, 0, 3, 3$ |
+| 3. Square each result. | $9, 9, 0, 9, 9$ |
+| 4. Add the squares. | $\Sigma(x - \bar{x})^2 = 9 + 9 + 0 + 9 + 9 = 36$ |
+| 5. Divide by $n - 1$. This is the **{{< glink variance >}}**. | $36 \div 4 = 9$ |
+| 6. Take the square root. | $s = \sqrt{9} = 3$ |
+| **The formula:** $s = \sqrt{\dfrac{\Sigma(x - \bar{x})^2}{n - 1}}$ | $\Sigma$ (capital {{< glink slug="sigma-notation" text="sigma" >}}) means **add up**. $\Sigma(x - \bar{x})^2$ means: find $(x - \bar{x})^2$ for every value, then add them all. $n$ is how many values there are. $s$ is the standard deviation. |
+
+***
+
+### Choosing Measures
+
+| Shape of the data | Center | Spread |
+|---|---|---|
+| Symmetric, no outliers | mean | standard deviation |
+| Skewed, or has outliers | median | {{< glink IQR >}} |
+
+**Why:** an outlier pulls the mean and the SD. It does not pull the median and the IQR much.
+
+***
+
+### Comparing Two Distributions
+
+| | Ask | Example: hours of sleep last night |
+|---|---|---|
+| **Shape** | Symmetric or skewed? | 9th grade is symmetric. 12th grade is skewed right. |
+| **Center** | Which group is higher? (median or mean) | The median for 9th grade (8 hours) is greater than for 12th grade (6 hours). 9th graders usually sleep about 2 hours more. |
+| **Spread** | Which group is more spread out? (IQR or SD) | Both groups have an IQR of 2 hours. The spreads are about the same. |
+| **Outliers** | Any values far from the rest? | One 12th grader slept 12 hours. That is an outlier (the upper fence is 10). |
+
+**Use comparing words:** "The median for 9th grade is **2 hours greater than** for 12th grade." Use numbers and the context.
+
+***
+
+### Percentiles
+
+| {{< glink percentile text="Percentile" >}} | Example: 20 students took a test |
+|---|---|
+| The percent of the data that is **below** the value. $\dfrac{\text{number of values below}}{\text{total number of values}} \times 100$ | 15 students scored below 85. $15 \div 20 = 0.75$. A score of 85 is at the **75th percentile**. It is higher than 75% of the class. |
+| A percentile is **not** a percent score. | Scoring at the 75th percentile does **not** mean you got 75% of the questions right. It means you scored higher than 75% of the people. |
+
+***
+
+### Z-Scores
+
+| | What it tells | Example: mean 70, SD 10 |
+|---|---|---|
+| **{{< glink z-score text="Z-score" >}}** $z = \dfrac{x - \mu}{\sigma}$ | How many SDs a value is above or below the mean. $\mu$ ({{< glink mu >}}) is the mean. $\sigma$ (small {{< glink sigma >}}) is the SD. | $z = \dfrac{85 - 70}{10} = 1.5$. 85 is **1.5 SDs above** the mean. |
+| **Sign of $z$** | $z > 0$: above the mean. $z < 0$: below the mean. $z = 0$: equal to the mean. | 55 has $z = -1.5$. It is 1.5 SDs **below** the mean. |
+| **Going backward** | $x = \mu + z\sigma$ | $z = -2$: $70 + (-2)(10) = 50$ |
+| **Comparing** | Z-scores let you compare values from **different** data sets. | Ana: 85, $z = 1.5$. Ben: 80 (mean 74, SD 3), $z = 2$. Ben did better compared to his class. |
+
+***
+
+### Normal Distributions and the Empirical Rule
+
+![](/images/Unit_2/2.4_empirical.svg){width="560px" fig-align="center"}
+
+| Within | From | About |
+|---|---|---|
+| 1 SD | $\mu - \sigma$ to $\mu + \sigma$ | 68% |
+| 2 SDs | $\mu - 2\sigma$ to $\mu + 2\sigma$ | 95% |
+| 3 SDs | $\mu - 3\sigma$ to $\mu + 3\sigma$ | 99.7% |
+
+A **{{< glink "normal distribution" >}}** is bell-shaped and symmetric. The mean and the median are in the center (they are equal). Two numbers describe it: the mean $\mu$ (center) and the SD $\sigma$ (spread).
+
+| Example: heights, mean 64 inches, SD 3 inches | Answer |
+|---|---|
+| Percent from 61 to 67 inches | 68% (within 1 SD) |
+| Percent from 58 to 70 inches | 95% (within 2 SDs) |
+| Percent taller than 67 inches | $13.5\% + 2.35\% + 0.15\% = 16\%$ |
+| Percentile of 67 inches | $100\% - 16\% = 84\%$, the 84th percentile |
+
+**Changes:** a larger SD makes the curve wider and flatter. A different mean moves the curve left or right.
+
+***
+
+### Normal Calculations with a Z-Table
+
+**The {{< glink "z-table" >}} gives the area to the left of $z$.** That is the proportion of the data below $z$.
+
+| Step | Example: heights |
+|---|---|
+| 1. Draw the curve. Shade the part the question asks about. | Shorter than 68 inches: shade below 68. |
+| 2. Find each z-score: $z = \frac{x - \mu}{\sigma}$. Round to 2 decimal places. | $z = \frac{68 - 64}{3} = 1.33$ |
+| 3. Look up each z-score in the table. | Row 1.3, column .03: .9082, so **90.82%** |
+| 4. **Below:** use the table. **Above:** $1 -$ table. **Between:** subtract the two table values. | Taller than 68: $1 - .9082 = .0918$, **9.18%**. 62 to 68: $z = \frac{62 - 64}{3} = -0.67$, table .2514. $.9082 - .2514 = .6568$, **65.68%** |
+
+***
+
+### Normal Calculations in Reverse
+
+| Step | Example: heights, 90th percentile |
+|---|---|
+| 1. Draw the curve. Shade the area to the **left**. | 90% is to the left. The area is .9000. |
+| 2. Look **inside** the table for the area closest to it. | The closest area is .8997. |
+| 3. Read the z-score from the row and the column. | Row 1.2, column .08: $z = 1.28$ |
+| 4. Find the value: $x = \mu + z\sigma$ | $64 + 1.28 \times 3 = 67.84$, about **67.8 inches** |
+| **Bottom** 10%: the area to the left is .10. | Closest area .1003, at $z = -1.28$. $64 + (-1.28)(3) = 60.16$, about **60.2 inches** |
+| **Top** 10%: the area to the left is $1 - .10 = .90$. | Subtract from 1 **before** you look in the table. |

@@ -38,6 +38,7 @@ Do the mini lesson first. Then do the matching Khan Academy lessons.
 | [2.4](chapters/Unit_2/2.4_Normal_Distributions_and_the_Empirical_Rule.qmd) | Normal distributions and the empirical rule | Unit 2, lesson {{< khanlink 2.4 "4" >}} |
 | [2.5](chapters/Unit_2/2.5_Normal_Calculations_with_a_Z-Table.qmd) | Normal calculations with a z-table | Unit 2, lesson {{< khanlink 2.5 "5" >}} |
 | [2.6](chapters/Unit_2/2.6_Normal_Calculations_in_Reverse.qmd) | Normal calculations in reverse | Unit 2, lesson {{< khanlink 2.5 "5" >}} |
+| [Summary](chapters/Unit_2/Summary.qmd) | Unit 2 summary tables | |
 | [Review](chapters/Unit_2/Review.qmd) | Unit 2 review | Unit 2, lessons {{< khanlink 2.1 "1" >}} to {{< khanlink 2.5 "5" >}} |
 | **Unit 3: Two-Way Tables** | | |
 | [3.1](chapters/Unit_3/3.1_Two-Way_Tables_and_Relative_Frequency.qmd) | Two-way tables and relative frequency | Unit 3, lesson {{< khanlink 3.1 "1" >}} |
