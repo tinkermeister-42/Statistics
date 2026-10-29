@@ -1,0 +1,12 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}
+\begin{document}
+\begin{tikzpicture}[x=0.19cm,y=0.4cm]
+  \draw[->] (0,0) -- (0,11); \draw (0,0) -- (78,0);
+  \foreach \y in {0,...,10} \draw (0.4,\y) -- (-0.4,\y) node[left,font=\small] {\y};
+  \foreach \i/\h in {0/3,1/8,2/10,3/5,4/2} \draw[fill=gray!35] (\i*15,0) rectangle (\i*15+15,\h);
+  \foreach \l in {0,15,...,75} \node[below] at (\l,0) {\l};
+  \node[rotate=90] at (-5,5.2) {Number of students};
+  \node at (37.5,-1.9) {Minutes on Khan Academy last night};
+\end{tikzpicture}
+\end{document}

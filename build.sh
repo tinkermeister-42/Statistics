@@ -2,10 +2,11 @@
 # Build the printable mini lesson PDFs: student copy and _KEY copy from one .tex.
 #   ./build.sh                 all handouts
 #   ./build.sh 1.3             only lessons whose file name starts with 1.3
+#   ./build.sh Unit1_Quiz      quizzes in assessments/ build the same way
 set -euo pipefail
 cd "$(dirname "$0")"
 shopt -s nullglob
-for tex in handouts/Unit_*/*.tex; do
+for tex in handouts/Unit_*/*.tex assessments/Unit_*/*.tex; do
   base="$(basename "$tex" .tex)"
   if [[ $# -gt 0 ]]; then
     hit=false; for p in "$@"; do [[ "$base" == "$p"* ]] && hit=true; done

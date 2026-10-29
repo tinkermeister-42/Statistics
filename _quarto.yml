@@ -10,6 +10,10 @@ resources:
   # The _KEY copy sits beside it and is deliberately not linked: it is
   # reachable only by typing the URL.  Built by ./build.sh.
   - handouts/Unit_*/*.pdf
+  # Quizzes and their keys, built by ./build.sh like the handouts.  Copied into
+  # the site but linked from nowhere: reachable only by typing the URL, as in
+  # the Algebra 1 book (/assessments/Unit_X/<Name>.pdf).
+  - assessments/Unit_*/*.pdf
 
 extensions:
   - glossary
@@ -55,6 +59,7 @@ book:
         - file: chapters/Unit_1/1.2_Mean_Median_and_Shape.qmd
         - file: chapters/Unit_1/1.3_Quartiles_IQR_and_Box_Plots.qmd
         - file: chapters/Unit_1/1.4_Reading_Box_Plots_and_Outliers.qmd
+        - file: chapters/Unit_1/Review.qmd
 
     - part: "Unit 2: Analyzing One Variable"
       chapters:

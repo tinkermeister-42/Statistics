@@ -1,0 +1,456 @@
+\documentclass[11pt]{article}
+\input{../preamble}
+% Unit 1 review.  Problems 1-8 follow the Unit 1 quiz question for question
+% (same "I ..." goals, two or three times the parts); 9-13 ask the same
+% skills in test wording.
+\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000
+\setlist[enumerate,1]{leftmargin=1.5em,itemsep=1.2em}
+\setlist[enumerate,2]{label=(\alph*),leftmargin=2em,itemsep=1.6em}
+\newcommand{\lessonhead}[1]{\par\vspace{0.6em}{\large\bfseries #1}\par\vspace{0.25em}\hrule\vspace{0.6em}}
+\newcommand{\goal}[1]{\textbf{#1}\par\vspace{0.35em}}
+\newcommand{\tally}[1]{\tikz[baseline=0pt]{\foreach \i in {1,...,#1} \draw[line width=0.7pt] (\i*0.08,0) -- (\i*0.08,0.22);}}
+\newcommand{\fsblank}[1]{\underline{\makebox[0.6in]{\ans{#1}}}}
+\newcommand{\fivesum}[6]{\par Min \fsblank{#1}\quad Q1 \fsblank{#2}\quad Median \fsblank{#3}\quad Q3 \fsblank{#4}\quad Max \fsblank{#5}\quad IQR \fsblank{#6}}
+% blank dot plot line, dots drawn in red on the key: \dotline{min}{max}{label}{value/count,...}
+\newcommand{\dotline}[4]{%
+\begin{tikzpicture}[x=0.9cm,y=0.33cm]
+  \draw[thick] (#1-0.5,0) -- (#2+0.5,0);
+  \foreach \t in {#1,...,#2} {\draw (\t,0.25) -- (\t,-0.25) node[below] {\t};}
+  \node at ({(#1+#2)/2},-2.3) {#3};
+  \path (#1,0) -- (#1,8.6);
+  \ifkey\foreach \v/\c in {#4} {\ifnum\c>0 \foreach \k in {1,...,\c} {\fill[keyred] (\v,\k*1.15) circle (0.16cm);}\fi}\fi
+\end{tikzpicture}}
+% circled choices: \opt{A} prints plain; \optans{B} is circled in red on the key
+\newcommand{\opt}[1]{\tikz[baseline=(c.base)]\node[inner sep=2.5pt](c){#1};}
+\newcommand{\optans}[1]{\ifkey\tikz[baseline=(c.base)]\node[circle,inner sep=1.2pt,draw=keyred,thick,text=keyred](c){#1};\else\opt{#1}\fi}
+\newcommand{\choices}[4]{\par\vspace{0.3em}\begin{tabular}{@{}l@{\hspace{0.6em}}p{6in}}#1\\#2\\#3\\#4\\\end{tabular}}
+
+\begin{document}
+
+\lessontitle{Unit 1 Review}
+
+\textbf{One data set, every tool.} 11 students said how many movies they watched last month.
+\begin{center}3,\; 1,\; 15,\; 2,\; 4,\; 2,\; 6,\; 1,\; 3,\; 5,\; 2\end{center}
+
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{1.8in}|>{\raggedright\arraybackslash}p{4.7in}|}
+\hline
+\textbf{1.1 Show the data.}
+
+A dot plot puts one dot on the number line for each value. &
+\vspace{0.2em}\centerline{\fig{Unit_1/Review_dot_plot_movies}}
+Most students watched 1 to 6 movies. One student watched 15. \\ \hline
+\textbf{1.2 Find the center.}
+
+$\Sigma$ means add up.\newline $n$ is the number of values.\newline $\bar{x}$ is the mean. &
+\rule{0pt}{2.2em}$\bar{x} = \dfrac{\Sigma x}{n} = \dfrac{44}{11} = 4$ movies
+
+In order: 1, 1, 2, 2, 2, \fbox{3}, 3, 4, 5, 6, 15. \quad Median $= 3$ movies
+
+The tail is on the right. It pulls the mean up, so mean $>$ median.\newline The shape is \textbf{skewed right}. \\ \hline
+\textbf{1.3 Find the spread.}
+
+Odd number of values? Leave the median out of both halves. &
+Lower half 1, 1, \fbox{2}, 2, 2. \quad Q1 $= 2$
+
+Upper half 3, 4, \fbox{5}, 6, 15. \quad Q3 $= 5$
+
+Five-number summary: \; 1, \; 2, \; 3, \; 5, \; 15
+
+IQR $= Q_3 - Q_1 = 5 - 2 = 3$ \\ \hline
+\textbf{1.4 Check for outliers.}
+
+A value below the lower fence or above the upper fence is an outlier. &
+Lower fence $= Q_1 - 1.5 \times \text{IQR} = 2 - 4.5 = -2.5$
+
+Upper fence $= Q_3 + 1.5 \times \text{IQR} = 5 + 4.5 = 9.5$
+
+15 is above 9.5, so \textbf{15 is an outlier}. On a box plot it is a dot. The whisker stops at 6.
+
+\centerline{\fig{Unit_1/Review_box_plot_movies}} \\ \hline
+\end{tabular}
+
+\vspace{0.6em}
+\textbf{Read every box plot the same way.} Each of the 4 parts holds about 25\% of the data. A long part means the values are spread out, not that there are more of them.
+
+\partner
+
+% ---------------- PROBLEMS ----------------
+\newpage
+\lessonhead{1.1 - Frequency Tables, Dot Plots, and Histograms}
+\begin{enumerate}
+
+\item \goal{I make and read a frequency table and a dot plot.}
+20 students said how many times they went to the school library this month.
+\begin{center}2,\; 0,\; 1,\; 3,\; 1,\; 2,\; 2,\; 0,\; 4,\; 1,\; 2,\; 3,\; 1,\; 2,\; 5,\; 1,\; 2,\; 0,\; 3,\; 2\end{center}
+\begin{minipage}[t]{0.47\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}
+  \item Make a frequency table.
+
+  \vspace{0.5em}
+  \renewcommand{\arraystretch}{1.3}
+  \begin{tabular}{|c|p{0.8in}|p{0.75in}|} \hline
+  Visits & Tally & Frequency \\ \hline
+  0 & \ans{\tally{3}} & \ans{3} \\ 1 & \ans{\tally{5}} & \ans{5} \\ 2 & \ans{\tally{7}} & \ans{7} \\ 3 & \ans{\tally{3}} & \ans{3} \\ 4 & \ans{\tally{1}} & \ans{1} \\ 5 & \ans{\tally{1}} & \ans{1} \\ \hline
+  \end{tabular}
+\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.49\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}[start=2]
+  \item Make a dot plot.
+
+  \vspace{0.5em}
+  \begin{center}\dotline{0}{5}{Library visits this month}{0/3,1/5,2/7,3/3,4/1,5/1}\end{center}
+\end{enumerate}
+\end{minipage}
+
+\vspace{1em}
+\begin{enumerate}[start=3]
+  \item What number of visits is most common? \ans{\quad 2 visits (7 students)}
+  \item How many students went 3 or more times? \ans{\quad $3 + 1 + 1 = 5$ students}
+  \item How many students went fewer than 2 times? \ans{\quad $3 + 5 = 8$ students}
+\end{enumerate}
+
+\vspace{1.4em}
+This frequency table shows how many hours some students spent on homework last night.
+
+\vspace{0.4em}
+\begin{minipage}[t]{0.3\linewidth}\vspace{0pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|c|c|} \hline
+Hours & Frequency \\ \hline
+0 & 2 \\ 1 & 5 \\ 2 & 6 \\ 3 & 4 \\ 4 & 2 \\ 5 & 1 \\ \hline
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.66\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}[start=6]
+  \item How many students are in the data? \ans{\quad $2 + 5 + 6 + 4 + 2 + 1 = 20$}
+  \item How many students spent 3 or more hours? \ans{\quad $4 + 2 + 1 = 7$}
+  \item Make a dot plot of the same data.
+
+  \begin{center}\dotline{0}{5}{Hours of homework}{0/2,1/5,2/6,3/4,4/2,5/1}\end{center}
+\end{enumerate}
+\end{minipage}
+
+\newpage
+\item \goal{I make and read a histogram.}
+This histogram shows how many minutes some students spent on Khan Academy last night.
+\begin{center}\fig{Unit_1/Review_histogram_khan}\end{center}
+\begin{enumerate}[itemsep=1.2em]
+  \item How many students spent from 15 to 30 minutes? \ans{\quad 8}
+  \item How many students spent 45 minutes or more? \ans{\quad $5 + 2 = 7$}
+  \item How many students are in the data? \ans{\quad $3 + 8 + 10 + 5 + 2 = 28$}
+  \item One student spent exactly 30 minutes. Which bar is she in?
+
+  \ans{The 30 to 45 bar. A value on the line goes in the bar on the right.}
+  \item Can you tell how many students spent exactly 20 minutes? Explain.
+
+  \ans{No. The graph only shows that 8 students spent from 15 to 30 minutes. It hides the exact values.}
+\end{enumerate}
+
+\vspace{0.5em}
+A runner recorded her time, in minutes, for 16 runs.
+\begin{center}22,\; 25,\; 31,\; 28,\; 24,\; 35,\; 27,\; 29,\; 21,\; 33,\; 26,\; 30,\; 38,\; 25,\; 29,\; 32\end{center}
+\begin{minipage}[t]{0.44\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}[start=6]
+  \item Make a frequency table. Remember the histogram rule.
+
+  \vspace{0.5em}
+  \renewcommand{\arraystretch}{1.5}
+  \begin{tabular}{|c|p{2.1in}|} \hline
+  Minutes & Frequency \\ \hline
+  20 to 25 & \ans{3 \;(21, 22, 24)} \\ 25 to 30 & \ans{7 \;(25, 25, 26, 27, 28, 29, 29)} \\ 30 to 35 & \ans{4 \;(30, 31, 32, 33)} \\ 35 to 40 & \ans{2 \;(35, 38)} \\ \hline
+  \end{tabular}
+\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.53\linewidth}\vspace{0pt}\raggedright
+\begin{enumerate}[start=7]
+  \item Make a histogram. Label both axes.
+
+  \vspace{0.5em}
+  \begin{tikzpicture}[x=0.34cm,y=0.42cm]
+    \draw[->] (0,0) -- (0,8.6); \draw (0,0) -- (25,0);
+    \fill[white] (1.2,-0.25) rectangle (1.8,0.25); \draw (1.0,-0.25) -- (1.4,0.25) (1.6,-0.25) -- (2.0,0.25);
+    \foreach \y in {0,...,8} \draw (0.2,\y) -- (-0.2,\y) node[left,font=\small] {\y};
+    \foreach \l/\p in {20/3,25/8,30/13,35/18,40/23} {\draw (\p,0.2) -- (\p,-0.2) node[below] {\l};}
+    \ifkey\begin{scope}[keyred]
+      \foreach \i/\h in {0/3,1/7,2/4,3/2} \draw[fill=red!12] (3+\i*5,0) rectangle (8+\i*5,\h);
+      \node[rotate=90] at (-2.6,4) {Number of runs};
+      \node at (13,-1.9) {Minutes};
+    \end{scope}\else\path (0,-2.3);\fi
+  \end{tikzpicture}
+\end{enumerate}
+\end{minipage}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{1.2 - Mean, Median, and Shape}
+\begin{enumerate}[resume]
+
+\item \goal{I find the mean and the median of a data set.}
+The temperature at noon for one week, in $^\circ$F:
+\begin{center}68,\; 72,\; 75,\; 70,\; 66,\; 72,\; 88\end{center}
+\begin{enumerate}
+  \item Find $\Sigma x$ and $\bar{x}$.
+
+  \ans{$\Sigma x = 511$, \; $n = 7$, \; $\bar{x} = \frac{511}{7} = 73^\circ$F}
+  \work{4em}
+  \item Find the median.
+
+  \ans{In order: 66, 68, 70, \fbox{72}, 72, 75, 88. \quad Median $= 72^\circ$F}
+  \work{3em}
+\end{enumerate}
+
+\vspace{0.6em}
+Scores on a 20-point quiz:
+\begin{center}15,\; 18,\; 12,\; 20,\; 17,\; 14,\; 19,\; 9\end{center}
+\begin{enumerate}[start=3]
+  \item Find $\bar{x}$.
+
+  \ans{$\Sigma x = 124$, \; $n = 8$, \; $\bar{x} = \frac{124}{8} = 15.5$ points}
+  \work{2.5em}
+  \item Find the median.
+
+  \ans{In order: 9, 12, 14, \fbox{15}, \fbox{17}, 18, 19, 20. \quad Median $= (15 + 17) \div 2 = 16$ points}
+  \work{2em}
+  \item A data set has $\Sigma x = 96$ and $n = 8$. Find $\bar{x}$. \ans{\quad $\bar{x} = \frac{96}{8} = 12$}
+  \work{1em}
+  \item Ana's first four quiz scores are 80, 75, 90, and 85. What score does she need on the fifth quiz so that the mean of all five scores is 84?
+
+  \ans{All five must add to $\Sigma x = 5 \times 84 = 420$. \quad The first four add to $80 + 75 + 90 + 85 = 330$.\\
+  $420 - 330 = 90$. She needs a \textbf{90}.}
+  \work{4em}
+\end{enumerate}
+
+\newpage
+\item \goal{I tell the shape of a graph, and I choose the best measure of center.}
+\begin{center}\fig{Unit_1/Review_shapes_abc}\end{center}
+\begin{enumerate}
+  \item For each histogram, name the shape. Then write $<$, $>$, or $\approx$ to compare the mean and the median.
+
+  \vspace{0.4em}
+  \renewcommand{\arraystretch}{1.5}
+  \begin{tabular}{|c|p{1.6in}|p{2.2in}|} \hline
+  Graph & Shape & mean \; ? \; median \\ \hline
+  A & \ans{symmetric} & \ans{mean $\approx$ median} \\
+  B & \ans{skewed right} & \ans{mean $>$ median} \\
+  C & \ans{skewed left} & \ans{mean $<$ median} \\ \hline
+  \end{tabular}
+\end{enumerate}
+
+\vspace{0.6em}
+Seven students timed their trip to school, in minutes.
+\begin{center}12,\; 10,\; 60,\; 14,\; 12,\; 17,\; 15\end{center}
+\begin{enumerate}[start=2]
+  \item Find the mean and the median.
+
+  \ans{$\Sigma x = 140$, \; $\bar{x} = \frac{140}{7} = 20$ minutes. \quad In order: 10, 12, 12, \fbox{14}, 15, 17, 60. \; Median $= 14$ minutes}
+  \work{3em}
+  \item Which better describes a typical trip, the mean or the median? Explain.
+
+  \ans{The median. 60 is far from the rest. It pulls the mean up. 6 of the 7 students take less time than the mean.}
+  \work{3em}
+\end{enumerate}
+
+\vspace{0.4em}
+Guess the shape of each data set: skewed left, symmetric, or skewed right. Explain.
+\begin{enumerate}[start=4]
+  \item The length of phone calls. Most calls are short. A few calls are very long.
+
+  \ans{Skewed right. The few long calls make a tail on the right.}
+  \work{1.5em}
+  \item The heights of all adult men in Missouri.
+
+  \ans{Symmetric. Most men are near the middle height. Fewer are very short or very tall.}
+  \work{1.5em}
+  \item Scores on a test where most students did very well.
+
+  \ans{Skewed left. A few low scores make a tail on the left.}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{1.3 - Quartiles, IQR, and Box Plots}
+\begin{enumerate}[resume]
+
+\item \goal{I find the five-number summary and the IQR.}
+Find the five-number summary and the IQR of each data set.
+\begin{enumerate}[itemsep=1em]
+  \item 7,\; 15,\; 3,\; 12,\; 9,\; 20,\; 5,\; 11,\; 14
+
+  \ans{In order: 3, 5, 7, 9, \fbox{11}, 12, 14, 15, 20. \quad Lower half 3, 5, 7, 9: Q1 $= 6$. \quad Upper half 12, 14, 15, 20: Q3 $= 14.5$}
+  \work{7em}
+  \fivesum{3}{6}{11}{14.5}{20}{8.5}
+  \item 41,\; 35,\; 50,\; 28,\; 46,\; 39,\; 44,\; 31,\; 52,\; 37,\; 48,\; 42,\; 33
+
+  \ans{In order: 28, 31, 33, 35, 37, 39, \fbox{41}, 42, 44, 46, 48, 50, 52.\\
+  Lower half 28, 31, 33, 35, 37, 39: Q1 $= (33 + 35) \div 2 = 34$. \quad Upper half 42, 44, 46, 48, 50, 52: Q3 $= (46 + 48) \div 2 = 47$}
+  \work{7em}
+  \fivesum{28}{34}{41}{47}{52}{13}
+  \item 6,\; 14,\; 9,\; 21,\; 11,\; 8,\; 17,\; 12,\; 25,\; 10
+
+  \ans{In order: 6, 8, 9, 10, \fbox{11}, \fbox{12}, 14, 17, 21, 25. \quad Median $= (11 + 12) \div 2 = 11.5$\\
+  Lower half 6, 8, 9, 10, 11: Q1 $= 9$. \quad Upper half 12, 14, 17, 21, 25: Q3 $= 17$}
+  \work{7em}
+  \fivesum{6}{9}{11.5}{17}{25}{8}
+\end{enumerate}
+
+\newpage
+\item \goal{I make a box plot.}
+12 students scored these points on a 50-point project.
+\begin{center}38,\; 42,\; 30,\; 45,\; 47,\; 35,\; 40,\; 44,\; 28,\; 49,\; 41,\; 36\end{center}
+\begin{enumerate}[itemsep=1em]
+  \item Find the five-number summary.
+
+  \ans{In order: 28, 30, 35, 36, 38, \fbox{40}, \fbox{41}, 42, 44, 45, 47, 49. \quad Median $= (40 + 41) \div 2 = 40.5$\\
+  Lower half 28, 30, 35, 36, 38, 40: Q1 $= (35 + 36) \div 2 = 35.5$\\
+  Upper half 41, 42, 44, 45, 47, 49: Q3 $= (44 + 45) \div 2 = 44.5$}
+  \work{5em}
+  \par Min \fsblank{28}\quad Q1 \fsblank{35.5}\quad Median \fsblank{40.5}\quad Q3 \fsblank{44.5}\quad Max \fsblank{49}
+  \item Make a box plot.
+
+  \begin{center}
+  \begin{tikzpicture}[x=0.55cm,y=1cm]
+    \axis{25}{50}{5}{1}{Project score}
+    \ifkey\begin{scope}[keyred]\bplotat{1.1}{28}{35.5}{40.5}{44.5}{49}\end{scope}\else\path (25,1.8);\fi
+  \end{tikzpicture}
+  \end{center}
+\end{enumerate}
+
+\vspace{1em}
+The five-number summary of a data set is \; 4, \; 10, \; 13, \; 20, \; 31.
+\begin{enumerate}[start=3,itemsep=1em]
+  \item Make a box plot.
+
+  \begin{center}
+  \begin{tikzpicture}[x=0.42cm,y=1cm]
+    \axis{0}{32}{2}{1}{Value}
+    \ifkey\begin{scope}[keyred]\bplotat{1.1}{4}{10}{13}{20}{31}\end{scope}\else\path (0,1.8);\fi
+  \end{tikzpicture}
+  \end{center}
+  \item Which part of the box plot is the longest? What does that tell you about the data?
+
+  \ans{The right whisker, from 20 to 31. The top 25\% of the values are spread out.}
+  \work{3em}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{1.4 - Reading Box Plots and Outliers}
+\begin{enumerate}[resume]
+
+\item \goal{I read and compare box plots.}
+These box plots show the lengths of fish caught in two lakes.
+\begin{center}\fig{Unit_1/Review_box_plots_fish}\end{center}
+\begin{enumerate}[itemsep=1.3em]
+  \item Write the five-number summary for Lake A. \ans{\quad 6, 9, 12, 14, 20}
+  \item Which lake has the larger median? \ans{\quad Lake B (15 inches is more than 12 inches)}
+  \item Find the IQR of each lake. \ans{\quad Lake A: $14 - 9 = 5$ inches. \; Lake B: $19 - 12 = 7$ inches.}
+  \item Which lake's fish lengths are more consistent? Explain.
+
+  \ans{Lake A. Its IQR (5) and its range (14) are both smaller than Lake B's (7 and 16).}
+  \work{3em}
+  \item About what percent of the fish in Lake B are longer than 12 inches? \ans{\quad 75\%}
+  \item About what percent of the fish in Lake A are from 9 to 14 inches long? \ans{\quad 50\%}
+  \item True or false? Explain. \; \emph{Lake B's right whisker is the longest part, so most of Lake B's fish are from 19 to 24 inches long.}
+
+  \ans{False. Each part holds about 25\% of the fish. A long part means those lengths are spread out.}
+  \work{4em}
+\end{enumerate}
+
+\newpage
+\item \goal{I use the 1.5 $\times$ IQR rule to find outliers.}
+11 students scored these points on a test.
+\begin{center}65,\; 30,\; 72,\; 61,\; 68,\; 78,\; 63,\; 66,\; 60,\; 69,\; 64\end{center}
+\begin{enumerate}[itemsep=1em]
+  \item Find Q1, Q3, and the IQR.
+
+  \ans{In order: 30, 60, 61, 63, 64, \fbox{65}, 66, 68, 69, 72, 78. \quad Lower half 30, 60, 61, 63, 64: Q1 $= 61$\\
+  Upper half 66, 68, 69, 72, 78: Q3 $= 69$. \quad IQR $= 69 - 61 = 8$}
+  \work{4em}
+  \item Find the lower fence and the upper fence.
+
+  \ans{$1.5 \times 8 = 12$. \quad Lower fence $= 61 - 12 = 49$. \quad Upper fence $= 69 + 12 = 81$}
+  \work{3em}
+  \item Which values are outliers? Explain.
+
+  \ans{30 is an outlier, because it is below 49. 78 is \textbf{not} an outlier, because it is not above 81.}
+  \work{2em}
+\end{enumerate}
+
+\vspace{0.6em}
+A store sells 8 used bikes. Here are the prices, in dollars.
+\begin{center}66,\; 40,\; 150,\; 60,\; 80,\; 50,\; 70,\; 64\end{center}
+\begin{enumerate}[start=4,itemsep=1em]
+  \item Find Q1, the median, Q3, and the IQR.
+
+  \ans{In order: 40, 50, 60, \fbox{64}, \fbox{66}, 70, 80, 150. \quad Median $= (64 + 66) \div 2 = 65$\\
+  Lower half 40, 50, 60, 64: Q1 $= (50 + 60) \div 2 = 55$. \quad Upper half 66, 70, 80, 150: Q3 $= (70 + 80) \div 2 = 75$\\
+  IQR $= 75 - 55 = 20$}
+  \work{4em}
+  \item Find the fences. Which values are outliers?
+
+  \ans{$1.5 \times 20 = 30$. \quad $55 - 30 = 25$ \; and \; $75 + 30 = 105$. \quad 150 is an outlier.}
+  \work{3em}
+  \item Make a box plot. Show each outlier as a dot.
+
+  \begin{center}
+  \begin{tikzpicture}[x=0.105cm,y=1cm]
+    \axis{20}{160}{20}{10}{Price of a used bike (dollars)}
+    \ifkey\begin{scope}[keyred]\bplotat{1.1}{40}{55}{65}{75}{80}\outlier{150}{1.1}\end{scope}\else\path (20,1.8);\fi
+  \end{tikzpicture}
+  \end{center}
+  \item Why does the right whisker stop at 80?
+
+  \ans{80 is the largest price that is not an outlier.}
+\end{enumerate}
+
+\end{enumerate}
+
+% ======================================================================
+\newpage
+\lessonhead{Test-Style Questions}
+A test asks the same questions with more words. Read slowly. Circle the best answer.
+
+\begin{enumerate}[resume,itemsep=1.2em]
+
+\item A teacher recorded the number of minutes each of her 28 students spent on Khan Academy last night. The results are shown in the histogram in Problem 2. Which statement is supported by the histogram?
+\choices{\opt{A} & Exactly 8 students spent 20 minutes on Khan Academy.}
+        {\optans{B} & The interval from 30 to 45 minutes contains more students than any other interval.}
+        {\opt{C} & No student spent more than 60 minutes on Khan Academy.}
+        {\opt{D} & Half of the students spent less than 30 minutes on Khan Academy.}
+
+\item The distribution of a data set is skewed to the right. Which statement best describes the relationship between the mean and the median of the data set?
+\choices{\opt{A} & The mean is less than the median.}
+        {\optans{B} & The mean is greater than the median.}
+        {\opt{C} & The mean is equal to the median.}
+        {\opt{D} & The median is twice the mean.}
+
+\item The five-number summary of a data set is 12, 18, 25, 31, 40. What is the interquartile range (IQR) of the data set?
+\choices{\opt{A} & 7}
+        {\optans{B} & 13}
+        {\opt{C} & 25}
+        {\opt{D} & 28}
+
+\item The box plots in Problem 7 show the lengths of fish caught in Lake A and Lake B. Which statement is true?
+\choices{\opt{A} & The median length in Lake A is greater than the median length in Lake B.}
+        {\optans{B} & The interquartile range of Lake A is less than the interquartile range of Lake B.}
+        {\opt{C} & The lengths in Lake A have a greater range than the lengths in Lake B.}
+        {\opt{D} & About 50\% of the fish in Lake B are longer than 19 inches.}
+
+\item For a data set, the first quartile is 40 and the third quartile is 52. Using the 1.5 $\times$ IQR rule, which value would be an outlier?
+\choices{\opt{A} & 25}
+        {\opt{B} & 35}
+        {\opt{C} & 68}
+        {\optans{D} & 74}
+\par\ans{IQR $= 52 - 40 = 12$. \; $1.5 \times 12 = 18$. \; Fences: $40 - 18 = 22$ and $52 + 18 = 70$. \; 74 is above 70.}
+
+\end{enumerate}
+
+\end{document}

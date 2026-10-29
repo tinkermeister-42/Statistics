@@ -1,0 +1,11 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}
+\begin{document}
+\begin{tikzpicture}[x=0.6cm,y=1cm]
+  \axis{4}{26}{2}{1}{Fish length (inches)}
+  \bplotat{2.2}{6}{9}{12}{14}{20}
+  \bplotat{0.9}{8}{12}{15}{19}{24}
+  \node[anchor=east,font=\small] at (3.6,2.2) {Lake A};
+  \node[anchor=east,font=\small] at (3.6,0.9) {Lake B};
+\end{tikzpicture}
+\end{document}

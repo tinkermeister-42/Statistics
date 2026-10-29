@@ -1,0 +1,326 @@
+# Unit 1 Review {.unnumbered}
+
+Eleven students said how many movies they watched last month:
+
+:::{.text-center}
+3, 1, 15, 2, 4, 2, 6, 1, 3, 5, 2
+:::
+
+Every tool from Unit 1 tells you something about this list. A graph shows its shape. The mean and the median show its center. The IQR shows its spread. The fences find the outlier.
+
+This review uses all of them. It has every kind of problem on the Unit 1 quiz, with more of each.
+
+:::{.objectives}
+- [ ] I make and read a frequency table and a dot plot.
+- [ ] I make and read a histogram.
+- [ ] I find the mean and the median of a data set.
+- [ ] I tell the shape of a graph, and I choose the best measure of center.
+- [ ] I find the five-number summary and the IQR.
+- [ ] I make a box plot.
+- [ ] I read and compare box plots.
+- [ ] I use the 1.5 × IQR rule to find outliers.
+:::
+
+:::{.vocab}
+{{< glink "frequency table" >}},
+{{< glink "dot plot" >}},
+{{< glink histogram >}},
+{{< glink mean >}},
+{{< glink median >}},
+{{< glink "skewed left" >}},
+{{< glink "skewed right" >}},
+{{< glink "five-number summary" >}},
+{{< glink IQR >}},
+{{< glink "box plot" >}},
+{{< glink outlier >}},
+{{< glink fence >}}
+:::
+
+:::{.guided-notes-link}
+[Printable review](/handouts/Unit_1/Unit_1_Review.pdf){target="_blank"} - notes and practice problems to print and write on.
+:::
+
+{{< khan 1.1 1.2 1.3 1.4 1.5 >}}
+
+{{< learn >}}
+
+### 1.1 - Show the Data
+
+A {{< glink "dot plot" >}} puts one dot on the number line for each value.
+
+![](/images/Unit_1/Review_dot_plot_movies.svg){width="440px" fig-align="center"}
+
+Most students watched 1 to 6 movies. One student watched 15.
+
+***
+
+### 1.2 - Find the Center
+
+:::{.remember title="The Mean and the Median"}
+$$
+\bar{x} = \frac{\Sigma x}{n} = \frac{44}{11} = 4 \text{ movies}
+$$
+
+- $\Sigma$ means **add up**.
+- $n$ is the number of values.
+- $\bar{x}$ ("x-bar") is the mean.
+
+In order: 1, 1, 2, 2, 2, **3**, 3, 4, 5, 6, 15. The median is **3** movies.
+:::
+
+The tail is on the right. It pulls the mean up, so the mean is greater than the median. The shape is **skewed right**.
+
+***
+
+### 1.3 - Find the Spread
+
+:::{.remember title="Odd Number of Values?"}
+Leave the median out of both halves.
+:::
+
+| Lower half | Upper half |
+|:---:|:---:|
+| 1, 1, **2**, 2, 2 | 3, 4, **5**, 6, 15 |
+| Q1 = 2 | Q3 = 5 |
+
+Five-number summary: 1, 2, 3, 5, 15
+
+$$
+\text{IQR} = Q_3 - Q_1 = 5 - 2 = 3
+$$
+
+***
+
+### 1.4 - Check for Outliers
+
+$$
+\text{Lower fence} = Q_1 - 1.5 \times \text{IQR} = 2 - 4.5 = -2.5
+$$
+
+$$
+\text{Upper fence} = Q_3 + 1.5 \times \text{IQR} = 5 + 4.5 = 9.5
+$$
+
+15 is above 9.5, so **15 is an outlier**. On a box plot it is a dot. The whisker stops at 6.
+
+![](/images/Unit_1/Review_box_plot_movies.svg){width="440px" fig-align="center"}
+
+:::{.gotcha title="Read every box plot the same way"}
+Each of the 4 parts holds about 25% of the data. A long part means the values are spread out. It does **not** mean there are more of them.
+:::
+
+{{< practice >}}
+
+Work with a partner. Compare answers when you finish each problem.
+
+**1.1 - Frequency Tables, Dot Plots, and Histograms**
+
+1. 20 students said how many times they went to the school library this month.
+
+   2, 0, 1, 3, 1, 2, 2, 0, 4, 1, 2, 3, 1, 2, 5, 1, 2, 0, 3, 2
+
+   a. Make a frequency table.
+
+   b. Make a dot plot.
+
+   c. What number of visits is most common?
+
+   d. How many students went 3 or more times?
+
+   e. How many students went fewer than 2 times?
+
+   This frequency table shows how many hours some students spent on homework last night.
+
+   | Hours | Frequency |
+   |:---:|:---:|
+   | 0 | 2 |
+   | 1 | 5 |
+   | 2 | 6 |
+   | 3 | 4 |
+   | 4 | 2 |
+   | 5 | 1 |
+
+   f. How many students are in the data?
+
+   g. How many students spent 3 or more hours?
+
+   h. Make a dot plot of the same data.
+
+2. This histogram shows how many minutes some students spent on Khan Academy last night.
+
+   ![](/images/Unit_1/Review_histogram_khan.svg){width="480px"}
+
+   a. How many students spent from 15 to 30 minutes?
+
+   b. How many students spent 45 minutes or more?
+
+   c. How many students are in the data?
+
+   d. One student spent exactly 30 minutes. Which bar is she in?
+
+   e. Can you tell how many students spent exactly 20 minutes? Explain.
+
+   A runner recorded her time, in minutes, for 16 runs.
+
+   22, 25, 31, 28, 24, 35, 27, 29, 21, 33, 26, 30, 38, 25, 29, 32
+
+   f. Make a frequency table with the bins 20 to 25, 25 to 30, 30 to 35, and 35 to 40. Remember the histogram rule.
+
+   g. Make a histogram. Label both axes.
+
+***
+
+**1.2 - Mean, Median, and Shape**
+
+3. The temperature at noon for one week, in °F:
+
+   68, 72, 75, 70, 66, 72, 88
+
+   a. Find $\Sigma x$ and $\bar{x}$.
+
+   b. Find the median.
+
+   Scores on a 20-point quiz:
+
+   15, 18, 12, 20, 17, 14, 19, 9
+
+   c. Find $\bar{x}$.
+
+   d. Find the median.
+
+   e. A data set has $\Sigma x = 96$ and $n = 8$. Find $\bar{x}$.
+
+   f. Ana's first four quiz scores are 80, 75, 90, and 85. What score does she need on the fifth quiz so that the mean of all five scores is 84?
+
+4. Look at these three histograms.
+
+   ![](/images/Unit_1/Review_shapes_abc.svg){width="640px"}
+
+   a. For each histogram, name the shape. Then write <, >, or ≈ to compare the mean and the median.
+
+   Seven students timed their trip to school, in minutes.
+
+   12, 10, 60, 14, 12, 17, 15
+
+   b. Find the mean and the median.
+
+   c. Which better describes a typical trip, the mean or the median? Explain.
+
+   Guess the shape of each data set: skewed left, symmetric, or skewed right. Explain.
+
+   d. The length of phone calls. Most calls are short. A few calls are very long.
+
+   e. The heights of all adult men in Missouri.
+
+   f. Scores on a test where most students did very well.
+
+***
+
+**1.3 - Quartiles, IQR, and Box Plots**
+
+5. Find the five-number summary and the IQR of each data set.
+
+   a. 7, 15, 3, 12, 9, 20, 5, 11, 14
+
+   b. 41, 35, 50, 28, 46, 39, 44, 31, 52, 37, 48, 42, 33
+
+   c. 6, 14, 9, 21, 11, 8, 17, 12, 25, 10
+
+6. 12 students scored these points on a 50-point project.
+
+   38, 42, 30, 45, 47, 35, 40, 44, 28, 49, 41, 36
+
+   a. Find the five-number summary.
+
+   b. Make a box plot.
+
+   The five-number summary of a data set is 4, 10, 13, 20, 31.
+
+   c. Make a box plot.
+
+   d. Which part of the box plot is the longest? What does that tell you about the data?
+
+***
+
+**1.4 - Reading Box Plots and Outliers**
+
+7. These box plots show the lengths of fish caught in two lakes.
+
+   ![](/images/Unit_1/Review_box_plots_fish.svg){width="560px"}
+
+   a. Write the five-number summary for Lake A.
+
+   b. Which lake has the larger median?
+
+   c. Find the IQR of each lake.
+
+   d. Which lake's fish lengths are more consistent? Explain.
+
+   e. About what percent of the fish in Lake B are longer than 12 inches?
+
+   f. About what percent of the fish in Lake A are from 9 to 14 inches long?
+
+   g. True or false? Explain. *Lake B's right whisker is the longest part, so most of Lake B's fish are from 19 to 24 inches long.*
+
+8. 11 students scored these points on a test.
+
+   65, 30, 72, 61, 68, 78, 63, 66, 60, 69, 64
+
+   a. Find Q1, Q3, and the IQR.
+
+   b. Find the lower fence and the upper fence.
+
+   c. Which values are outliers? Explain.
+
+   A store sells 8 used bikes. Here are the prices, in dollars.
+
+   66, 40, 150, 60, 80, 50, 70, 64
+
+   d. Find Q1, the median, Q3, and the IQR.
+
+   e. Find the fences. Which values are outliers?
+
+   f. Make a box plot. Show each outlier as a dot.
+
+   g. Why does the right whisker stop at 80?
+
+***
+
+**Test-Style Questions**
+
+A test asks the same questions with more words. Read slowly. Choose the best answer.
+
+9. A teacher recorded the number of minutes each of her 28 students spent on Khan Academy last night. The results are shown in the histogram in Problem 2. Which statement is supported by the histogram?
+
+   A. Exactly 8 students spent 20 minutes on Khan Academy.\
+   B. The interval from 30 to 45 minutes contains more students than any other interval.\
+   C. No student spent more than 60 minutes on Khan Academy.\
+   D. Half of the students spent less than 30 minutes on Khan Academy.
+
+10. The distribution of a data set is skewed to the right. Which statement best describes the relationship between the mean and the median of the data set?
+
+    A. The mean is less than the median.\
+    B. The mean is greater than the median.\
+    C. The mean is equal to the median.\
+    D. The median is twice the mean.
+
+11. The five-number summary of a data set is 12, 18, 25, 31, 40. What is the interquartile range (IQR) of the data set?
+
+    A. 7\
+    B. 13\
+    C. 25\
+    D. 28
+
+12. The box plots in Problem 7 show the lengths of fish caught in Lake A and Lake B. Which statement is true?
+
+    A. The median length in Lake A is greater than the median length in Lake B.\
+    B. The interquartile range of Lake A is less than the interquartile range of Lake B.\
+    C. The lengths in Lake A have a greater range than the lengths in Lake B.\
+    D. About 50% of the fish in Lake B are longer than 19 inches.
+
+13. For a data set, the first quartile is 40 and the third quartile is 52. Using the 1.5 × IQR rule, which value would be an outlier?
+
+    A. 25\
+    B. 35\
+    C. 68\
+    D. 74
