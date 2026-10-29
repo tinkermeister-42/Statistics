@@ -44,7 +44,7 @@ Each of the 4 parts holds about **25%** of the data.
 | Below the median | 50% | Half scored less than 76. |
 
 :::{.gotcha title="A long part does not mean more data"}
-The right whisker (84 to 98) is long. It still holds only about 25% of the students. A long part means those scores are **spread out**.
+The left whisker (52 to 68) is the longest part. It still holds only about 25% of the students. A long part means those scores are **spread out**.
 :::
 
 ***
@@ -180,6 +180,6 @@ Work with a partner. Compare answers when you finish each problem.
 
    b. The right whisker is the longest part, so most students are in that part.
 
-   c. The mean is 35 minutes.
+   c. The box plot shows that the mean is 35 minutes.
 
    d. At least one student exercises exactly 70 minutes.

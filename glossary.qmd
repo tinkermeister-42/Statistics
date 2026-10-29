@@ -40,7 +40,7 @@ One group of values in a histogram. Each bar of a histogram is one bin.
 
 ### box plot {#glossary-box-plot}
 
-A graph that shows the five-number summary. A box goes from Q1 to Q3, with a line at the median. Lines called whiskers go out to the minimum and the maximum.
+A graph that shows the five-number summary. A box goes from Q1 to Q3, with a line at the median. Lines called whiskers go out to the minimum and the maximum. If there are outliers, a whisker stops at the last value that is not an outlier.
 
 **See Also:** {{< glink "five-number summary" >}}, {{< glink quartile >}}
 
@@ -89,6 +89,14 @@ A group where order does not matter. The number of ways to choose $r$ things fro
 ### complement {#glossary-complement}
 
 The event that $A$ does **not** happen. $P(\text{not } A) = 1 - P(A)$. Some books write $P(A^C)$.
+
+***
+
+### completely randomized design {#glossary-completely-randomized-design}
+
+An experiment design where chance alone decides which treatment group each subject joins.
+
+**See Also:** {{< glink "randomized block design" >}}, {{< glink "matched pairs" >}}
 
 ***
 
@@ -200,7 +208,7 @@ In a normal distribution, about 68% of the data is within 1 standard deviation o
 
 ### expected payoff {#glossary-expected-payoff}
 
-The expected value of the net gain: $\Sigma\,(\text{net gain} \cdot \text{probability})$. A negative expected payoff means you lose money on average.
+The expected value of the net gain. Let $X$ = the net gain. Then the expected payoff is $E(X) = \Sigma\, x \cdot P(x)$. A negative expected payoff means you lose money on average.
 
 **See Also:** {{< glink "expected value" >}}, {{< glink "net gain" >}}
 
@@ -254,9 +262,17 @@ $n! = n \cdot (n-1) \cdot (n-2) \cdots 2 \cdot 1$, read "$n$ factorial." It coun
 
 ***
 
+### fair {#glossary-fair}
+
+A way of choosing is fair if every person has the same probability of being chosen. A coin is fair if heads and tails each have probability $\frac{1}{2}$.
+
+**See Also:** {{< glink "fair game" >}}
+
+***
+
 ### fair game {#glossary-fair-game}
 
-A game where the expected value of what you win is 0. On average, no one wins or loses.
+A game where the expected value of the money you win or lose is 0. On average, no one wins or loses money.
 
 ***
 
@@ -346,7 +362,7 @@ Short for interquartile range: $Q_3 - Q_1$. It shows how spread out the middle h
 
 ### law of large numbers {#glossary-law-of-large-numbers}
 
-As the number of trials grows, the experimental probability gets closer to the theoretical probability.
+As the number of trials grows, the experimental probability usually gets closer to the theoretical probability.
 
 ***
 
@@ -386,7 +402,7 @@ The percents for one variable, found from the totals in the margins of a two-way
 
 ### matched pairs {#glossary-matched-pairs}
 
-An experiment design where each subject gets both treatments in a random order, or very similar subjects are paired and each gets a different treatment.
+An experiment design with pairs. Each subject gets both treatments in a random order. Or very similar subjects are paired, and each one gets a different treatment.
 
 ***
 
@@ -398,7 +414,7 @@ The largest value in a data set.
 
 ### mean {#glossary-mean}
 
-The sum of all the values divided by how many values there are. Also called the **average**.
+Add up all the values. Then divide by how many values there are. Also called the **average**.
 
 $$\bar{x} = \frac{\Sigma x}{n}$$
 
@@ -436,7 +452,7 @@ The value that happens most often in a data set.
 
 ### mu {#glossary-mu}
 
-The Greek letter $\mu$, read "mew." It stands for the mean of a population or of a normal distribution.
+The Greek letter $\mu$, read "mew." It stands for the mean of a population, of a normal distribution, or of a random variable ($\mu_X$).
 
 **See Also:** {{< glink "x-bar" >}}, {{< glink sigma >}}
 
@@ -451,6 +467,14 @@ $P(A \cap B) = P(A) \cdot P(B \mid A)$. For independent events, this is $P(A) \c
 ### mutually exclusive {#glossary-mutually-exclusive}
 
 Events that cannot happen at the same time. Then $P(A \cap B) = 0$ and $P(A \cup B) = P(A) + P(B)$.
+
+***
+
+### n {#glossary-n}
+
+The number of values in a data set. In $\bar{x} = \dfrac{\Sigma x}{n}$, you divide by $n$.
+
+**See Also:** {{< glink "x-bar" >}}, {{< glink "sigma notation" >}}
 
 ***
 
@@ -562,6 +586,14 @@ A number that comes from a chance process, such as the number of heads in 3 coin
 
 ***
 
+### randomized block design {#glossary-randomized-block-design}
+
+An experiment design that first splits the subjects into groups that are alike (blocks). Then the treatments are randomly assigned inside each block.
+
+**See Also:** {{< glink "completely randomized design" >}}, {{< glink "matched pairs" >}}
+
+***
+
 ### range {#glossary-range}
 
 The maximum minus the minimum. It shows how spread out all the data is.
@@ -579,6 +611,14 @@ A count divided by a total, written as a fraction, decimal, or percent.
 > 12 out of 60 students is a relative frequency of $\frac{12}{60} = 20\%$.
 
 **See Also:** {{< glink frequency >}}, {{< glink "two-way table" >}}
+
+***
+
+### replication {#glossary-replication}
+
+Using many subjects in an experiment. With more subjects, chance differences between the groups get smaller.
+
+**See Also:** {{< glink experiment >}}, {{< glink "random assignment" >}}
 
 ***
 
@@ -692,7 +732,7 @@ A shape where most values are low and a long tail stretches to the right. The me
 
 ### slope {#glossary-slope}
 
-How much $y$ changes when $x$ goes up by 1. For a line of best fit: for each additional unit of $x$, the predicted $y$ changes by the slope.
+How much $y$ changes when $x$ goes up by 1. For a line of best fit, when $x$ goes up by 1, the predicted $y$ changes by the slope.
 
 **See Also:** {{< glink "y-intercept" >}}
 
@@ -718,7 +758,7 @@ $$s = \sqrt{\frac{\Sigma(x - \bar{x})^2}{n - 1}}$$
 
 ### statistically significant {#glossary-statistically-significant}
 
-A result that is too big to happen by chance alone very often (usually less than 5% of the time).
+A result that would rarely happen by chance alone. Usually this means less than 5% of the time.
 
 **See Also:** {{< glink simulation >}}
 
@@ -756,6 +796,14 @@ A mark made for each data value as you count it.
 
 ***
 
+### theoretical distribution {#glossary-theoretical-distribution}
+
+A probability distribution found by reasoning about the chance process (equally likely outcomes, or the multiplication rule), not from data.
+
+**See Also:** {{< glink "empirical distribution" >}}, {{< glink "probability distribution" >}}
+
+***
+
 ### theoretical probability {#glossary-theoretical-probability}
 
 A probability found by reasoning about equally likely outcomes.
@@ -786,7 +834,7 @@ One run of a chance process, such as one flip of a coin or one set of 3 free thr
 
 ### two-way table {#glossary-two-way-table}
 
-A table that shows counts for two categorical variables at once. One variable goes across the rows and the other down the columns. The totals are in the margins.
+A table that shows counts for two categorical variables at once. The groups of one variable name the rows. The groups of the other variable name the columns. The totals are in the margins.
 
 **See Also:** {{< glink "relative frequency" >}}, {{< glink "venn diagram" >}}
 
@@ -821,6 +869,22 @@ A picture that uses overlapping circles to show groups. The overlap shows what i
 A line on a box plot that goes from the box out to the smallest or largest value that is not an outlier.
 
 **See Also:** {{< glink "box plot" >}}
+
+***
+
+### with replacement {#glossary-with-replacement}
+
+Each item is put back before the next draw. Every draw has the same probabilities, so the draws are independent.
+
+**See Also:** {{< glink "without replacement" >}}, {{< glink "independent events" >}}
+
+***
+
+### without replacement {#glossary-without-replacement}
+
+Each item stays out after it is drawn. The probabilities change from one draw to the next, so the draws are dependent.
+
+**See Also:** {{< glink "with replacement" >}}, {{< glink "dependent events" >}}
 
 ***
 

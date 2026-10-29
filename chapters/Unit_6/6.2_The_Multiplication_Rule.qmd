@@ -53,9 +53,11 @@ $$
 
 ### 6.2.2 - Dependent Events
 
+Two events are {{< glink "dependent events" text="dependent" >}} if one happening changes the probability of the other.
+
 A bag has 5 red and 3 blue marbles. Draw 2 marbles.
 
-| **With replacement** (put the first one back) | **Without replacement** (keep the first one out) |
+| **{{< glink "with replacement" text="With replacement" >}}** (put the first one back) | **{{< glink "without replacement" text="Without replacement" >}}** (keep the first one out) |
 |---|---|
 | The second draw is the same as the first. Independent. | The bag changes: 4 red and 3 blue are left. Dependent. |
 | $P(\text{red, red}) = \frac{5}{8} \cdot \frac{5}{8} = \frac{25}{64}$ | $P(\text{red, red}) = \frac{5}{8} \cdot \frac{4}{7} = \frac{20}{56} = \frac{5}{14}$ |
@@ -80,7 +82,7 @@ $$
 P(\text{at least one wrong}) = 1 - P(\text{all right})
 $$
 
-:::{.you-try title="You guess on 3 questions with 4 choices each. Find P(at least one wrong)."}
+:::{.you-try title="You guess on 3 questions with 4 choices each. Find $P(\text{at least one wrong})$."}
 $P(\text{all right}) = \frac{1}{64}$, so $P(\text{at least one wrong}) = 1 - \frac{1}{64} = \frac{63}{64}$.
 :::
 

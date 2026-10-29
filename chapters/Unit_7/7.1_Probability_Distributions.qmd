@@ -14,7 +14,7 @@ No. There are four outcomes: HH, HT, TH, TT. Only one gives 0 heads, but two giv
 :::{.vocab}
 {{< glink "random variable" >}},
 {{< glink "probability distribution" >}},
-{{< glink "theoretical probability" >}},
+{{< glink "theoretical distribution" >}},
 {{< glink "empirical distribution" >}}
 :::
 
@@ -33,6 +33,8 @@ Flip a coin 2 times. Let $X$ = the number of heads. $X$ is a {{< glink "random v
 | $x$ (heads) | 0 | 1 | 2 |
 |---|:---:|:---:|:---:|
 | $P(x)$ | $\frac{1}{4}$ | $\frac{2}{4} = \frac{1}{2}$ | $\frac{1}{4}$ |
+
+$P(x)$ means the probability that $X$ equals $x$. Capital $X$ is the random variable. Small $x$ is one of its values.
 
 ![](/images/Unit_7/7.1_two_coins.svg){width="300px" fig-align="center"}
 
@@ -55,7 +57,7 @@ $$
 
 The symbol $\ge$ means "greater than or equal to."
 
-:::{.you-try title="Find P(X < 2) for the two coin flips."}
+:::{.you-try title="Find $P(X < 2)$ for the two coin flips."}
 $P(0) + P(1) = \frac{1}{4} + \frac{1}{2} = \frac{3}{4}$
 :::
 
@@ -65,7 +67,7 @@ $P(0) + P(1) = \frac{1}{4} + \frac{1}{2} = \frac{3}{4}$
 
 | Kind | Where it comes from | Example |
 |---|---|---|
-| **Theoretical** | Reasoning about equally likely outcomes | The coin flips above |
+| **Theoretical** | Reasoning about the chance process: equally likely outcomes, or the multiplication rule | The coin flips above |
 | **Empirical** | Data. Divide each count by the total. | 50 families: 0 cars: 5, 1 car: 20, 2 cars: 18, 3 cars: 7. So $P(0) = \frac{5}{50} = 0.10$, $P(1) = 0.40$, $P(2) = 0.36$, $P(3) = 0.14$. |
 
 {{< practice >}}
@@ -117,7 +119,9 @@ Work with a partner. Compare answers when you finish each problem.
 
    d. Find $P(X \ge 2)$.
 
-5. 40 households said how many pets they have: 0 pets: 12, 1 pet: 16, 2 pets: 8, 3 pets: 4.
+5. A player makes 70% of her free throws. She shoots 2. Her shots do not affect each other. Let $X$ = the number she makes. Make the probability distribution of $X$.
+
+6. 40 households said how many pets they have: 0 pets: 12, 1 pet: 16, 2 pets: 8, 3 pets: 4.
 
    a. Make the empirical probability distribution.
 

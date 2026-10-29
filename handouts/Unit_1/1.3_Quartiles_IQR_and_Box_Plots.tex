@@ -9,6 +9,8 @@
 \usepackage{enumitem}
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
+\raggedright  % even word spacing, easier to read
+\hyphenpenalty=10000 \exhyphenpenalty=10000  % never split a word across lines
 \setlist[enumerate,2]{label=(\alph*),leftmargin=2em,itemsep=2.2em}
 
 % Build the key with:  pdflatex -jobname=<name>_KEY "\def\iskey{}\input{<name>}"
@@ -46,7 +48,7 @@
 {\Large\bfseries Quartiles, IQR, and Box Plots\ifkey\ \textcolor{red!75!black}{KEY}\fi}\hfill Name \underline{\hspace{2in}}
 
 \vspace{0.6em}
-Quartiles cut the data into \textbf{4 equal parts}. Each part has about \textbf{25\%} of the data.
+Quartiles cut the data into \textbf{4 parts} with the same number of values. Each part has about \textbf{25\%} of the data.
 
 \vspace{0.6em}
 \renewcommand{\arraystretch}{1.3}
@@ -195,14 +197,14 @@ Set B: & 1,\; 2,\; 3,\; 4,\; 5,\; 6,\; 70
   \item Find the IQR of each set.
 
   \ans{Both: Q1 = 2, Q3 = 6, IQR = 4}
-  \vspace{2em}
+  \vspace{\ifkey 0.6em\else 6em\fi}
   \item Find the range (max $-$ min) of each set.
 
   \ans{A: 7 $-$ 1 = 6. \quad B: 70 $-$ 1 = 69}
-  \vspace{2em}
+  \vspace{\ifkey 0.6em\else 6em\fi}
   \item One number changed. Which measure of spread changed a lot? Which did not change? Why?
 
-  \ans{The range changed a lot. The IQR did not change. The IQR only uses the middle half, so one extreme value does not move it. This is like the median vs the mean.}
+  \ans{The range changed a lot. The IQR did not change. The IQR only uses the middle half. One extreme value does not move it much. The median works the same way: one extreme value moves the mean a lot, but not the median.}
 \end{enumerate}
 
 \end{enumerate}

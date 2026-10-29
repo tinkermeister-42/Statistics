@@ -2,7 +2,7 @@
 
 Welcome to Unit 7! Is a raffle ticket worth buying? Should you pay for a phone protection plan? How many goals will a team score, on average?
 
-In this unit, you list every possible outcome of a chance process with its probability. Then you find the long-run average, called the expected value, and use it to make decisions.
+In this unit, you list every possible value of a random variable with its probability. Then you find the long-run average, called the expected value, and use it to make decisions.
 
 ***
 

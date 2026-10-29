@@ -20,6 +20,9 @@ $P(x)$ & $\frac{1}{4}$ & $\frac{2}{4} = \frac{1}{2}$ & $\frac{1}{4}$ \\ \hline
 
 \vspace{0.6em}
 This table is the \textbf{probability distribution} of $X$. It lists every value of $X$ and its probability.
+
+\vspace{0.4em}
+$P(x)$ means the probability that $X$ equals $x$. Capital $X$ is the random variable. Small $x$ is one of its values.
 \end{minipage}\hfill
 \begin{minipage}[c]{0.44\linewidth}\centering
 \scalebox{0.8}{\fig{Unit_7/7.1_two_coins}}
@@ -46,7 +49,7 @@ $P(X \ge 1) = P(1) + P(2) = \frac{1}{2} + \frac{1}{4} = \frac{3}{4}$ \qquad ($\g
 
 \vspace{0.3em}
 \begin{tabular}{|>{\raggedright\arraybackslash}p{1.4in}|>{\raggedright\arraybackslash}p{5.1in}|}\hline
-\textbf{Theoretical} & From reasoning about equally likely outcomes, like the coin flips above.\\ \hline
+\textbf{Theoretical} & From reasoning about the chance process (equally likely outcomes, or the multiplication rule), like the coin flips above.\\ \hline
 \textbf{Empirical} & From data. Divide each count by the total. \par
 50 families: 0 cars: 5, \; 1 car: 20, \; 2 cars: 18, \; 3 cars: 7\par
 $P(0) = \frac{5}{50} = 0.10$, \; $P(1) = 0.40$, \; $P(2) = 0.36$, \; $P(3) = 0.14$\\[0.3em] \hline
@@ -70,8 +73,8 @@ $P(0) = \frac{5}{50} = 0.10$, \; $P(1) = 0.40$, \; $P(2) = 0.36$, \; $P(3) = 0.1
 \end{tabular}
 
 \vspace{0.5em}
-\ans{(a) Valid: sums to 1. \; (b) Not valid: sums to 1.1. \; (c) Not valid: a probability cannot be negative. \; (d) Valid.}
-\work{3em}
+\ans{(a) Valid: sums to 1. \; (b) Not valid: sums to 1.1. \; (c) Not valid: a probability cannot be negative. \\ (d) Valid: each is from 0 to 1, and they sum to 1.}
+\work{6em}
 
 \item Find the missing probability.
 
@@ -84,7 +87,7 @@ $P(0) = \frac{5}{50} = 0.10$, \; $P(1) = 0.40$, \; $P(2) = 0.36$, \; $P(3) = 0.1
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|}\hline $x$ & 0 & 1 & 2 & 3 & 4\\ \hline $P(x)$ & 0.1 & 0.3 & 0.3 & 0.2 & 0.1\\ \hline\end{tabular}
-\qquad \raisebox{-0.5\height}{\scalebox{0.6}{\fig{Unit_7/7.1_goals}}}
+\qquad \raisebox{-0.5\height}{\scalebox{0.85}{\fig{Unit_7/7.1_goals}}}
 \end{center}
 \begin{enumerate}[itemsep=1.4em]
   \item $P(X \ge 2)$ \ans{\quad $0.3 + 0.2 + 0.1 = 0.6$}
@@ -110,10 +113,11 @@ $P(0) = \frac{5}{50} = 0.10$, \; $P(1) = 0.40$, \; $P(2) = 0.36$, \; $P(3) = 0.1
 
   \begin{center}
   \begin{tikzpicture}[x=1.2cm,y=8cm]
-    \foreach \t in {0,0.1,...,0.5} {\draw[gray!25] (-0.6,\t) -- (3.6,\t); \node[left,font=\small] at (-0.6,\t) {\pgfmathprintnumber{\t}};}
+    \foreach \t in {0,0.1,...,0.501} {\draw[gray!25] (-0.6,\t) -- (3.6,\t); \node[left,font=\small] at (-0.6,\t) {\pgfmathprintnumber{\t}};}
     \draw[thick] (-0.6,0) -- (3.6,0); \draw[thick] (-0.6,0) -- (-0.6,0.5);
     \foreach \x in {0,...,3} \node[below] at (\x,0) {\x};
     \node[below=16pt] at (1.5,0) {$x$ = number of heads in 3 flips};
+    \node[rotate=90,above=22pt] at (-0.6,0.25) {$P(x)$};
     \ifkey\foreach \x/\p in {0/0.125,1/0.375,2/0.375,3/0.125} \draw[keyred,thick,fill=red!12] (\x-0.35,0) rectangle (\x+0.35,\p);\fi
   \end{tikzpicture}
   \end{center}
@@ -121,9 +125,21 @@ $P(0) = \frac{5}{50} = 0.10$, \; $P(1) = 0.40$, \; $P(2) = 0.36$, \; $P(3) = 0.1
 \end{enumerate}
 \work{1em}
 
+\item A player makes 70\% of her free throws. She shoots 2. Her shots do not affect each other. Let $X$ = the number she makes. Make the probability distribution of $X$.
+
+\begin{center}
+\renewcommand{\arraystretch}{2.3}
+\begin{tabular}{|c|p{1.5in}|p{1.5in}|p{1.5in}|}\hline
+$x$ & 0 & 1 & 2\\ \hline
+$P(x)$ & \ans{$0.3 \cdot 0.3 = 0.09$} & \ans{$2(0.7)(0.3) = 0.42$} & \ans{$0.7 \cdot 0.7 = 0.49$}\\ \hline
+\end{tabular}
+\end{center}
+\ans{$P(1)$ has a 2: she can make then miss, or miss then make. \; Check: $0.09 + 0.42 + 0.49 = 1$.}
+\work{2em}
+
 \item 40 households said how many pets they have: 0 pets: 12, \; 1 pet: 16, \; 2 pets: 8, \; 3 pets: 4.
 \begin{enumerate}[itemsep=1em]
-  \item Make the empirical probability distribution. \ans{\quad $P(0) = 0.30$, \; $P(1) = 0.40$, \; $P(2) = 0.20$, \; $P(3) = 0.10$}
+  \item Make the empirical probability distribution.\par\ans{$P(0) = 0.30$, \; $P(1) = 0.40$, \; $P(2) = 0.20$, \; $P(3) = 0.10$}
   \work{2em}
   \item Find $P(\text{at least 1 pet})$. \ans{\quad $0.40 + 0.20 + 0.10 = 0.70$ \; (or $1 - 0.30$)}
 \end{enumerate}

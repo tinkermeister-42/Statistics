@@ -8,7 +8,7 @@ An {{< glink experiment >}} solves this. The researcher gives the treatment on p
 - [ ] I name the subjects, treatments, explanatory variable, and response variable in an experiment.
 - [ ] I explain control groups, placebos, and blinding.
 - [ ] I explain why random assignment matters.
-- [ ] I describe a completely randomized design and a matched pairs design.
+- [ ] I describe a completely randomized design, a randomized block design, and a matched pairs design.
 :::
 
 :::{.vocab}
@@ -20,6 +20,9 @@ An {{< glink experiment >}} solves this. The researcher gives the treatment on p
 {{< glink placebo >}},
 {{< glink "double-blind" >}},
 {{< glink "random assignment" >}},
+{{< glink replication >}},
+{{< glink "completely randomized design" >}},
+{{< glink "randomized block design" >}},
 {{< glink "matched pairs" >}}
 :::
 
@@ -45,14 +48,16 @@ An {{< glink experiment >}} solves this. The researcher gives the treatment on p
 
 ![](/images/Unit_5/5.3_design.svg){width="620px" fig-align="center"}
 
+This is a {{< glink "completely randomized design" >}}. Chance alone decides which group each subject joins.
+
 ***
 
 ### 5.3.2 - Principles of a Good Experiment
 
 :::{.remember title="Control, Random Assignment, Replication"}
 - **Control:** Compare to a control group. Keep everything else the same for both groups.
-- **Random assignment:** Use chance to put subjects into groups. Then the groups are alike except for the treatment.
-- **Replication:** Use enough subjects that chance differences between people even out.
+- **Random assignment:** Use chance to put subjects into groups. Then the groups are about the same, except for the treatment.
+- **{{< glink replication text="Replication" >}}:** Use many subjects. With more subjects, chance differences between the groups get smaller.
 :::
 
 :::{.think title="Why give the control group a placebo?"}
@@ -61,15 +66,17 @@ People often feel better just because they *think* they got medicine. This is th
 
 ***
 
-### 5.3.3 - Matched Pairs
+### 5.3.3 - Matched Pairs and Blocks
 
-In a {{< glink "matched pairs" >}} design, each subject gets **both** treatments, in a random order. Or you pair up very similar subjects, like twins.
+In a {{< glink "matched pairs" >}} design, each subject gets **both** treatments, in a random order. Or you pair up very similar subjects, like twins. Each twin gets a different treatment.
 
 **Example:** Which running shoe is faster? Each runner runs once in each shoe. A coin flip decides which shoe goes first. Comparing each runner to themselves removes the differences between runners.
 
 :::{.you-try title="Why flip a coin to decide which shoe goes first?"}
 Runners might be tired on the second run, or warmed up. The coin keeps that from always helping the same shoe.
 :::
+
+**{{< glink "randomized block design" text="Randomized block design" >}}:** first split the subjects into groups that are alike (**blocks**), like boys and girls. Then randomly assign the treatments inside each block. Comparing inside each block keeps the differences between blocks out of the result.
 
 {{< practice >}}
 
@@ -110,3 +117,9 @@ Work with a partner. Compare answers when you finish each problem.
    c. Why is this design better than giving 10 people Lotion A and 10 people Lotion B?
 
 5. A teacher tries a new reading program with her 1st-hour class and the old program with her 6th-hour class. The 1st-hour class scores higher. Can she conclude the new program works better? Explain.
+
+6. A school tests a reading program. It splits students by grade, then randomly assigns half of each grade to the program.
+
+   a. What kind of design is this?
+
+   b. Why split by grade first?

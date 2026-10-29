@@ -1,6 +1,6 @@
 # 7.2 - Expected Value {.unnumbered}
 
-A soccer team scores 0, 1, 2, 3, or 4 goals in a game, each with its own probability. How many goals does the team score on average?
+A soccer team scores 0, 1, 2, 3, or 4 goals in a game. Each number of goals has its own probability. How many goals does the team score on average?
 
 You cannot just average 0, 1, 2, 3, and 4. Some values happen more often than others. In this lesson, you find the {{< glink "expected value" >}}, an average that uses the probabilities. Then you use probability to decide what is fair.
 
@@ -37,7 +37,7 @@ $$
 E(X) = \Sigma\, x \cdot P(x)
 $$
 
-Multiply each value by its probability. Then add them all up ($\Sigma$ means add up). The expected value is also called the **mean** of $X$, written $\mu_X$.
+$E(X)$ means the expected value of $X$. Multiply each value by its probability. Then add them all up ($\Sigma$ means add up). The expected value is also called the **mean** of $X$, written $\mu_X$.
 :::
 
 $$
@@ -52,7 +52,7 @@ No single game has 1.9 goals. Over many games, the team scores about 1.9 goals p
 
 ### 7.2.2 - Fair Decisions
 
-A method is **fair** if every person has the same probability of being chosen. Ana, Ben, and Cai need to decide who goes first.
+A method is **{{< glink fair >}}** if every person has the same probability of being chosen. Ana, Ben, and Cai need to decide who goes first.
 
 | Method | Fair? |
 |---|---|
@@ -63,17 +63,17 @@ A method is **fair** if every person has the same probability of being chosen. A
 
 ### 7.2.3 - Fair Games
 
-A game is {{< glink "fair game" text="fair" >}} if the expected value of what you win is **0**.
+A game is {{< glink "fair game" text="fair" >}} if the expected value of the money you win or lose is **0**.
 
-**Example:** Roll a number cube. You win $\$3$ if you roll a 6. You pay $\$1$ for any other number.
+**Example:** Roll a number cube. You win $\$3$ if you roll a 6. You pay $\$1$ for any other number. Let $X$ = the money you win or lose in one game.
 
 $$
-E(X) = 3 \cdot \frac{1}{6} + (-1) \cdot \frac{5}{6} = \frac{3}{6} - \frac{5}{6} = -\frac{2}{6} \approx -0.33
+E(X) = 3 \cdot \frac{1}{6} + (-1) \cdot \frac{5}{6} = \frac{3}{6} - \frac{5}{6} = -\frac{2}{6} \approx -\$0.33
 $$
 
 On average you lose about 33 cents a game. The game is **not** fair.
 
-:::{.you-try title="Find E(X): P(0) = 0.5, P(10) = 0.5."}
+:::{.you-try title="Find $E(X)$: $P(0) = 0.5$, $P(10) = 0.5$."}
 $0(0.5) + 10(0.5) = 5$
 :::
 
@@ -109,10 +109,10 @@ Work with a partner. Compare answers when you finish each problem.
 
    c. Change the number cube method to make it fair.
 
-5. A game: roll a number cube. You win $\$5$ if you roll a 6. You pay $\$1$ for any other number.
+5. A game: roll a number cube. You win $\$5$ if you roll a 6. You pay $\$1$ for any other number. Let $X$ = the money you win or lose in one game.
 
    a. Find the expected value.
 
    b. Is the game fair? Explain.
 
-6. In the example above, you win $\$3$ for a 6. How much should you win for a 6 to make the game fair?
+6. In the notes example, you win $\$3$ if you roll a 6. How much should you pay for any other number to make the game fair?

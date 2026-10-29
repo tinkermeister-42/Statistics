@@ -2,7 +2,7 @@
 
 A school has 1,200 students. The principal wants to ask 60 of them about the new schedule.
 
-If she asks the first 60 students who walk in the door, she gets the early arrivers. They may not be like everyone else. The best ways to choose use **chance**, so no group is favored.
+If she asks the first 60 students who walk in the door, she gets only the students who come early. They may not be like everyone else. The best ways to choose use **chance**, so no group is favored.
 
 :::{.objectives}
 - [ ] I name and describe simple random, stratified, cluster, systematic, and convenience samples.
@@ -31,15 +31,21 @@ If she asks the first 60 students who walk in the door, she gets the early arriv
 
 | Method | How it works | Example (60 of 1,200) |
 |---|---|---|
-| **Simple random sample (SRS)** | Every group of people has the same chance of being chosen. Like drawing names from a hat. | Number the students 1 to 1,200. A random number generator picks 60 numbers. |
-| **Stratified** | Split the population into groups that are alike (**strata**). Take a random sample from **each** group. | Randomly pick 15 students from each grade: 9th, 10th, 11th, 12th. |
+| **Simple random sample (SRS)** | Every group of the same size has the same chance of being chosen. Like drawing names from a hat. | Number the students 1 to 1,200. A random number generator picks 60 numbers. |
+| **Stratified** | Split the population into groups (**strata**). People in the same group are alike in some way. Take a random sample from **each** group. | Randomly pick 15 students from each grade: 9th, 10th, 11th, 12th. |
 | **Cluster** | Split the population into groups (**clusters**). Randomly pick some **whole** groups. | Randomly pick 3 homerooms. Ask everyone in them. |
-| **Systematic** | Pick a random start. Then take every $k$th person. | Start at a random student from 1 to 20. Then take every 20th student on the list. |
+| **Systematic** | Pick a random start. Then take every $k$th person. $k$ is the population size divided by the sample size. | Start at a random student from 1 to 20. Then take every 20th student on the list. |
 | **Convenience** (bad) | Take whoever is easy to reach. | Ask the first 60 students who walk in the door. |
 
 :::{.gotcha title="Stratified or cluster?"}
 - **Stratified:** a **few** from **every** group.
 - **Cluster:** **everyone** from a **few** groups.
+:::
+
+:::{.you-try title="A school has a list of its 1,200 students. Describe a systematic sample of 80 students."}
+$k = 1{,}200 \div 80 = 15$.
+
+Pick a random start from 1 to 15. Then take every 15th student on the list.
 :::
 
 ***
@@ -61,7 +67,7 @@ Pairs: 52, 60, **18**, **15**, 90, 83, **01**, ...
 Skip numbers over 25. Skip repeats. The sample is students **18, 15, and 01**.
 
 :::{.think title="Why use chance at all?"}
-People who pick a sample "by hand" often pick, without meaning to, people who are easy to reach or similar to themselves. Chance does not pick favorites, so a random sample is not biased toward any group.
+People who choose a sample by hand often choose people who are easy to reach. They may choose people like themselves. They do not mean to do it. Chance does not pick favorites, so a random sample is not biased toward any group.
 :::
 
 {{< practice >}}

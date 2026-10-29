@@ -2,13 +2,13 @@
 
 A club of 10 students picks a president, a vice president, and a secretary. How many different ways can they fill the three jobs?
 
-Listing them all would take a long time. There are 720! In this lesson, you learn to count arrangements without listing them.
+Listing them all would take a long time. There are 720 ways. In this lesson, you learn to count arrangements without listing them.
 
 :::{.objectives}
 - [ ] I use the counting principle.
 - [ ] I find and use factorials.
 - [ ] I count permutations with ${}_nP_r$.
-- [ ] I tell when repeats are allowed and when they are not.
+- [ ] I decide if repeats are allowed.
 :::
 
 :::{.vocab}

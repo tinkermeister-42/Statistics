@@ -12,10 +12,10 @@ How should she choose the 60? The best methods use \textbf{chance} to pick, so n
 \renewcommand{\arraystretch}{1.3}
 \begin{tabular}{|>{\raggedright\arraybackslash}p{1.25in}|>{\raggedright\arraybackslash}p{2.7in}|>{\raggedright\arraybackslash}p{2.45in}|}\hline
 \textbf{Method} & \textbf{How it works} & \textbf{Example (60 of 1,200)}\\ \hline
-\textbf{Simple random sample (SRS)} & Every group of people has the same chance of being chosen. Like drawing names from a hat. & Number the students 1 to 1,200. A random number generator picks 60 numbers.\\ \hline
-\textbf{Stratified} & Split the population into groups that are alike (\textbf{strata}). Take a random sample from \textbf{each} group. & Randomly pick 15 students from each grade: 9th, 10th, 11th, 12th.\\ \hline
+\textbf{Simple random sample (SRS)} & Every group of the same size has the same chance of being chosen. Like drawing names from a hat. & Number the students 1 to 1,200. A random number generator picks 60 numbers.\\ \hline
+\textbf{Stratified} & Split the population into groups (\textbf{strata}). People in the same group are alike in some way. Take a random sample from \textbf{each} group. & Randomly pick 15 students from each grade: 9th, 10th, 11th, 12th.\\ \hline
 \textbf{Cluster} & Split the population into groups (\textbf{clusters}). Randomly pick some \textbf{whole} groups. & Randomly pick 3 homerooms. Ask everyone in them.\\ \hline
-\textbf{Systematic} & Pick a random start. Then take every $k$th person. & Start at a random student between 1 and 20. Then take every 20th student on the list.\\ \hline
+\textbf{Systematic} & Pick a random start. Then take every $k$th person. $k$ is the population size divided by the sample size. & Start at a random student between 1 and 20. Then take every 20th student on the list.\\ \hline
 \textbf{Convenience} (bad) & Take whoever is easy to reach. & Ask the first 60 students who walk in the door.\\ \hline
 \end{tabular}
 
@@ -38,8 +38,8 @@ Row 3 & \texttt{\bfseries 62527 60189 55597 97114 71049 74650 75291 70342}\\ \hl
 \textbf{Example:} Choose 3 of 25 students, numbered 01 to 25. Use row 1.
 
 \vspace{0.2em}
-Pairs: \texttt{52 60 \textbf{18} \textbf{15} 90 83 \textbf{01}} \ldots \qquad
-Skip numbers over 25 and skip repeats. \quad The sample is students \textbf{18, 15, and 01}.
+Pairs: \texttt{\bfseries 52 60 \underline{18} \underline{15} 90 83 \underline{01}} \ldots\par\vspace{0.2em}
+Skip numbers over 25 and skip repeats. The sample is students \textbf{18, 15, and 01}.
 
 \vspace{0.8em}
 \textbf{Why random?} Chance does not pick favorites. A random sample is not biased toward any group.

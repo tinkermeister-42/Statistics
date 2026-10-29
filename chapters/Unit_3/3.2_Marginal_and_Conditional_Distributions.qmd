@@ -6,7 +6,7 @@
 | **No sport** | 12 | 18 | 30 |
 | **Total** | 20 | 40 | 60 |
 
-Do students who play a sport have jobs as often as students who do not? 8 sport players have a job and 12 others do. But that does not answer the question yet. You need percents **inside each group**.
+Do students who play a sport have jobs as often as students who do not? 8 students who play a sport have a job. 12 students who do not play a sport have a job. These counts do not answer the question. You need percents **inside each group**.
 
 In this lesson, you find {{< glink "marginal distribution" text="marginal" >}} and {{< glink "conditional distribution" text="conditional" >}} distributions. Then you use them to decide if two variables are {{< glink slug="association" text="associated" >}}.
 
@@ -70,7 +70,7 @@ The percents are **different**. So playing a sport and having a job are **associ
 :::
 
 :::{.think title="Does this mean sports cause students to not have jobs?"}
-No. An association only says the two things happen together. Maybe practice takes time away from a job. Maybe something else explains both. You will learn more about cause in Unit 5.
+We cannot tell from this table. An association only says the two things happen together. It does not prove cause. Maybe practice takes time away from a job. Maybe something else explains both. You will learn more about cause in Unit 5.
 :::
 
 {{< practice >}}

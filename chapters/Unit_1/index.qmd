@@ -2,7 +2,7 @@
 
 Welcome to Unit 1! Here you learn to show data with pictures and to describe it with a few numbers.
 
-A list of 30 numbers is hard to read. A good graph shows the whole story at once.
+A list of 30 numbers is hard to read. A good graph shows all the data in one picture.
 
 ***
 

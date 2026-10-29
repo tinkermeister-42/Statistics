@@ -36,7 +36,7 @@ A {{< glink scatterplot >}} shows two numbers for each person or thing. The firs
 |---|---|---|
 | **Direction** | As $x$ goes up, does $y$ go up (positive) or down (negative)? No pattern at all is **no association**. | Positive |
 | **Form** | Do the dots follow a line (linear) or a curve? | Linear |
-| **Strength** | Are the dots close to a line (strong), loosely around it (moderate), or spread out (weak)? | Strong |
+| **Strength** | Are the dots close to a line (strong), a little spread out (moderate), or very spread out (weak)? | Strong |
 | **Unusual** | Any outliers or clusters? | None |
 
 ***
@@ -52,13 +52,19 @@ A {{< glink "line of best fit" >}} follows the trend of the dots.
 
 **Finding its equation.** Pick two points **on the line**. They do not have to be dots: $(2, 64)$ and $(6, 84)$.
 
+**Slope** ($m$):
+
 $$
 m = \frac{84 - 64}{6 - 2} = \frac{20}{4} = 5
 $$
 
+**y-intercept** ($b$):
+
 $$
 64 = 5(2) + b \quad \Rightarrow \quad b = 54
 $$
+
+**Equation:**
 
 $$
 \hat{y} = 5x + 54

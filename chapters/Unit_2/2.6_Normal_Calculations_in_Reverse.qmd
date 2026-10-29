@@ -1,6 +1,6 @@
 # 2.6 - Normal Calculations in Reverse {.unnumbered}
 
-A company wants to replace the worst 10% of its batteries. A store wants to sell the heaviest 15% of its apples as "premium." Where should they draw the line?
+A company wants to replace the worst 10% of its batteries. A store wants to sell the heaviest 15% of its apples as "premium." What value should each one use as the cutoff?
 
 In 2.5, you knew the value and found the percent. In this lesson, you know the percent and find the value.
 

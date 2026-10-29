@@ -5,7 +5,7 @@
 - *Do you play a sport?*
 - *Do you have a job?*
 
-A list of 60 answers is hard to read. A {{< glink "two-way table" >}} shows the answers to both questions at once.
+A list of all their answers is hard to read. A {{< glink "two-way table" >}} shows the answers to both questions at once.
 
 :::{.objectives}
 - [ ] I read a two-way table.
@@ -58,9 +58,9 @@ A {{< glink "venn diagram" >}} shows the same data with circles.
 ![](/images/Unit_3/3.1_venn_sport_job.svg){width="320px" fig-align="center"}
 
 - The **overlap** is students in both groups: 8 play a sport and have a job.
-- **Outside** the circles is students in neither group: 18.
+- **Outside** the circles are the students in neither group: 18.
 
-:::{.gotcha title="The circle holds more than the outside part"}
+:::{.gotcha title="A circle includes the overlap"}
 The "Plays a sport" circle holds $22 + 8 = 30$ students, not 22. Remember to add the overlap.
 :::
 
@@ -82,7 +82,7 @@ To make a {{< glink "relative frequency" >}} table, divide every count by the **
 | **No sport** | $\frac{12}{60} = 20\%$ | $\frac{18}{60} = 30\%$ | $\frac{30}{60} = 50\%$ |
 | **Total** | $\frac{20}{60} \approx 33\%$ | $\frac{40}{60} \approx 67\%$ | 100% |
 
-About 13% of **all** the students play a sport and have a job. The whole table adds to 100%.
+About 13% of **all** the students play a sport and have a job. The four inside cells add to 100%.
 
 {{< practice >}}
 

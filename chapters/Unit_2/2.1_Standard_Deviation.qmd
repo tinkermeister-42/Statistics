@@ -72,6 +72,7 @@ $$
 - $\Sigma$ (capital **sigma**) means **add up**.
 - $\Sigma(x - \bar{x})^2$ means: find $(x - \bar{x})^2$ for every value, then add them all.
 - $n$ is how many values there are.
+- $s$ is the standard deviation.
 :::
 
 :::{.think title="Why divide by n − 1 and not n?"}

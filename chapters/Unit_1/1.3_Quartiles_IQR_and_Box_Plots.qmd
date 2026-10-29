@@ -78,21 +78,23 @@ $$
 \text{IQR} = Q_3 - Q_1
 $$
 
+$Q_1$ and $Q_3$ are another way to write Q1 and Q3.
+
 For Example 1: IQR $= 15 - 6 = 9$.
 
 For Example 2: IQR $= 12 - 4 = 8$.
 
 :::{.you-try-m title="Find the five-number summary and the IQR."}
-5, 9, 2, 7, 4, 8, 3
+7, 15, 2, 10, 4, 11, 6
 :::
 :::{.answer title="Answer"}
-In order: 2, 3, 4, **5**, 7, 8, 9. The median is 5.
+In order: 2, 4, 6, **7**, 10, 11, 15. The median is 7.
 
-Lower half: 2, **3**, 4. So Q1 = 3.
+Lower half: 2, **4**, 6. So Q1 = 4.
 
-Upper half: 7, **8**, 9. So Q3 = 8.
+Upper half: 10, **11**, 15. So Q3 = 11.
 
-Five-number summary: 2, 3, 5, 8, 9. IQR $= 8 - 3 = 5$.
+Five-number summary: 2, 4, 7, 11, 15. IQR $= 11 - 4 = 7$.
 :::
 
 ***
@@ -112,9 +114,9 @@ The 4 parts have the same **number of values**, not the same width. A short part
 :::
 
 :::{.think title="Why use the IQR instead of the range?"}
-The range is maximum minus minimum. One extreme value changes it a lot.
+Range $=$ maximum $-$ minimum. One extreme value changes it a lot.
 
-The IQR only uses the middle half of the data. One extreme value does not move it. This is like the median and the mean.
+The IQR only uses the middle half of the data. One extreme value does not move it much. The median works the same way: one extreme value moves the mean a lot, but not the median.
 :::
 
 {{< practice >}}
@@ -177,6 +179,6 @@ Work with a partner. Compare answers when you finish each problem.
 
    a. Find the IQR of each set.
 
-   b. Find the range (maximum minus minimum) of each set.
+   b. Find the range (maximum $-$ minimum) of each set.
 
    c. One number changed. Which measure of spread changed a lot? Which did not change? Why?
