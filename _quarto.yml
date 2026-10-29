@@ -111,6 +111,7 @@ book:
         - file: chapters/Unit_6/6.5_Permutations.qmd
         - file: chapters/Unit_6/6.6_Combinations.qmd
         - file: chapters/Unit_6/6.7_Probability_with_Counting.qmd
+        - file: chapters/Unit_6/Summary.qmd
         - file: chapters/Unit_6/Review.qmd
 
     - part: "Unit 7: Probability Distributions"

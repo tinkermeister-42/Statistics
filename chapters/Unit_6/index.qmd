@@ -45,5 +45,8 @@ Count groups where order does not matter.
 [**Probability with Counting**](6.7_Probability_with_Counting.qmd)\
 Use permutations and combinations to find probabilities.
 
+[**Unit 6 Summary**](Summary.qmd)\
+Every tool from the unit in one set of tables, to keep beside you.
+
 [**Unit 6 Review**](Review.qmd)\
 Practice every skill from the unit before the quiz.

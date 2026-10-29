@@ -1,0 +1,84 @@
+\documentclass[11pt]{article}
+\input{../preamble}
+% Unit summary: the unit's tools in tables, to print and keep. Same tables as
+% chapters/Unit_6/Summary.qmd; edit both together. Nothing to answer, so the
+% _KEY copy is the same sheet.
+\usepackage[column=O]{cellspace}  % room above and below a full-size fraction
+\setlength{\cellspacetoplimit}{1pt}\setlength{\cellspacebottomlimit}{1pt}
+\setlength{\tabcolsep}{4pt}
+\newcommand{\sumhead}[1]{\par\vspace{0.7em}{\large\bfseries #1}\par\vspace{0.3em}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}O{p{#1}}}
+\renewcommand{\arraystretch}{1.15}
+
+\begin{document}
+
+\lessontitle{Unit 6 Summary: Probability}
+
+\sumhead{Probability Symbols}
+\begin{tabular}{|L{0.72in}|L{1.98in}|L{3.9in}|}\hline
+\textbf{Symbol} & \textbf{Read it as} & \textbf{Meaning}\\ \hline
+$P(A)$ & ``the probability of $A$'' & How likely $A$ is, from 0 (impossible) to 1 (certain).\\ \hline
+$P(\text{not } A)$ & ``the probability of not $A$'' & The complement: $A$ does \textbf{not} happen. Some books write $P(A^C)$.\\ \hline
+$A \cup B$ & ``$A$ union $B$'' or ``$A$ or $B$'' & $A$ happens, or $B$ happens, or both.\\ \hline
+$A \cap B$ & ``$A$ intersect $B$'' or ``$A$ and $B$'' & $A$ and $B$ both happen (the overlap).\\ \hline
+$P(A \mid B)$ & ``the probability of $A$ \textbf{given} $B$'' & The probability of $A$ when you know $B$ happened. \mbox{The bar $\mid$ means ``given.''}\\ \hline
+\end{tabular}
+
+\sumhead{Probability Rules}
+\begin{tabular}{|L{0.95in}|L{2.1in}|L{1.43in}|L{2.05in}|}\hline
+\textbf{Rule} & \textbf{Formula} & \textbf{When to use} & \textbf{Example}\\ \hline
+Probability & $P(A) =$\par $\dfrac{\text{number of ways } A \text{ can happen}}{\text{total number of outcomes}}$ & Every outcome is equally likely. & 3 red and 7 blue marbles. Pick one. $P(\text{red}) = \frac{3}{10}$\\ \hline
+Complement & $P(\text{not } A) = 1 - P(A)$\par $P(\text{at least one wrong})$\par $= 1 - P(\text{all right})$ & ``Not $A$.'' Also ``at least one'' questions. & $P(\text{not red}) = 1 - \frac{3}{10} = \frac{7}{10}$\par Guess on 3 questions with 4 choices each: $1 - \frac{1}{64} = \frac{63}{64}$\\ \hline
+Addition rule & $P(A \cup B) =$\par $P(A) + P(B) - P(A \cap B)$ & ``Or.'' Subtract the overlap, because it was counted twice. & 30 students: 12 play soccer ($S$), 10 play basketball ($B$), 4 play both.\par $P(S \cup B) = \frac{12}{30} + \frac{10}{30} - \frac{4}{30} = \frac{18}{30}$\\ \hline
+Mutually exclusive & $P(A \cup B) = P(A) + P(B)$\par $P(A \cap B) = 0$ & ``Or,'' when $A$ and $B$ cannot both happen. & Roll a number cube.\par $P(1 \cup 2) = \frac{1}{6} + \frac{1}{6} = \frac{1}{3}$\\ \hline
+Multiplication rule & $P(A \cap B) = P(A) \cdot P(B)$ & ``And,'' for \textbf{independent} events. & Flip a coin and roll a number cube.\par $P(\text{heads} \cap 6) = \frac{1}{2} \cdot \frac{1}{6} = \frac{1}{12}$\\ \hline
+General multiplication rule & $P(A \cap B) = P(A) \cdot P(B \mid A)$ & ``And,'' for \textbf{dependent} events. & 5 red and 3 blue marbles. Draw 2. Keep the first one out.\par $P(\text{red, red}) = \frac{5}{8} \cdot \frac{4}{7} = \frac{5}{14}$\\ \hline
+Conditional probability & $P(A \mid B) = \dfrac{P(A \cap B)}{P(B)}$\par In a table:\par $P(A \mid B) = \dfrac{\text{number in } A \text{ and } B}{\text{number in } B}$ & You already know $B$ happened. Only look at the $B$ group. & 60 students: 30 play a sport, 20 have a job, 8 do both.\par $P(\text{job} \mid \text{sport}) = \frac{8}{30} \approx 0.27$\par $P(\text{sport} \mid \text{job}) = \frac{8}{20} = 0.40$\\ \hline
+Checking independence & $A$ and $B$ are independent if $P(A \mid B) = P(A)$. & Knowing $B$ does not change the probability of $A$. & $P(\text{job}) = \frac{20}{60} \approx 0.33$, but $P(\text{job} \mid \text{sport}) \approx 0.27$. \textbf{Not} independent.\\ \hline
+\end{tabular}
+
+\vspace{0.3em}
+\textbf{Independent:} one happening does not change the probability of the other, as in drawing \textbf{with replacement}. \textbf{Dependent:} one happening changes it, as in drawing \textbf{without replacement}.
+
+\sumhead{Tree Diagrams}
+60\% of students ride the bus. 25\% of bus riders are late. 10\% of the others are late.
+
+\vspace{0.3em}
+\begin{tabular}{|L{2.45in}|L{2.15in}|L{1.85in}|}\hline
+\textbf{1. Multiply along a path.} & \textbf{2. Add the paths you want.} & \textbf{3. Then divide.}\\ \hline
+$P(\text{bus} \cap \text{late}) = 0.6 \cdot 0.25 = 0.15$\par $P(\text{no bus} \cap \text{late}) = 0.4 \cdot 0.10 = 0.04$ & $P(\text{late}) = 0.15 + 0.04 = 0.19$ & $P(\text{bus} \mid \text{late}) = \frac{0.15}{0.19} \approx 0.79$\\ \hline
+\end{tabular}
+
+\newpage
+\sumhead{Simulations}
+\begin{tabular}{|L{1.15in}|L{2.75in}|L{2.65in}|}\hline
+\textbf{Idea} & \textbf{What it means} & \textbf{Example}\\ \hline
+Theoretical probability & Found by reasoning about equally likely outcomes. & Flip a coin. $P(\text{heads}) = \frac{1}{2}$\\ \hline
+Experimental probability & Found by doing trials: $\dfrac{\text{number of times it happened}}{\text{number of trials}}$ & 20 flips, 12 heads: $\frac{12}{20} = 0.6$\\ \hline
+Simulation & Use random numbers to act out a chance event many times.\par 1. Assign digits to the outcomes so the probabilities match.\par 2. Decide what one trial is.\par 3. Run many trials with random digits.\par 4. Count how often the event happened. & A basketball player makes 70\% of her free throws. About how often does she make all 3 of 3 shots?\par 1. Digits 0 to 6 = make. 7, 8, 9 = miss.\par 2. One trial = 3 digits (3 shots).\par 3. Run 10 trials.\par 4. 4 of the 10 made all 3: $\frac{4}{10} = 0.4$\\ \hline
+Law of large numbers & \multicolumn{2}{>{\raggedright\arraybackslash}O{p{5.48in}}|}{The more trials you do, the closer the experimental probability usually gets to the theoretical probability. The theoretical probability of making all 3 shots is $0.7 \cdot 0.7 \cdot 0.7 = 0.343$. With more trials, the simulation would get closer to it.}\\ \hline
+\end{tabular}
+
+\sumhead{Counting}
+\begin{tabular}{|L{0.95in}|L{2.0in}|L{1.4in}|L{2.18in}|}\hline
+\textbf{Tool} & \textbf{Formula} & \textbf{When to use} & \textbf{Example}\\ \hline
+Counting principle & One choice has $m$ options. A second choice has $n$ options: $m \cdot n$ ways. & Count the ways to make both choices. Also when repeats are allowed. & 3 shirts and 4 pairs of pants: $3 \cdot 4 = 12$ outfits\par 3-letter codes: $26 \cdot 26 \cdot 26 = 17{,}576$\\ \hline
+Factorial & $n! = n \cdot (n - 1) \cdot (n - 2) \cdots 2 \cdot 1$\par Read ``$n$ factorial.'' \; $0! = 1$ & Arrange all $n$ things in order. & 4 students sit in 4 chairs in a row: $4! = 24$ ways\\ \hline
+Permutation & ${}_nP_r = \dfrac{n!}{(n - r)!}$\par Read ``$n$ permute $r$.'' & \textbf{Order matters.} Arrange $r$ of $n$ things. No repeats. & 10 students fill 3 jobs:\par ${}_{10}P_3 = 10 \cdot 9 \cdot 8 = 720$\par 3-letter codes: $26 \cdot 25 \cdot 24 = 15{,}600$\\ \hline
+Combination & ${}_nC_r = \dbinom{n}{r} = \dfrac{n!}{r!\,(n - r)!}$\par Read ``$n$ choose $r$.'' & \textbf{Order does not matter.} Choose $r$ of $n$ things. & A committee of 3 from 5 students: ${}_5C_3 = \frac{5!}{3!\,2!} = 10$\\ \hline
+\end{tabular}
+
+\vspace{0.3em}
+\textbf{Permutation or combination?} Ask: if I switch the order, is it a different result?
+
+\sumhead{Probability with Counting}
+$P(\text{event}) = \dfrac{\text{number of ways the event can happen}}{\text{total number of possible outcomes}}$ \qquad Count both with the same method.
+
+\vspace{0.3em}
+\begin{tabular}{|L{2.85in}|L{0.95in}|L{1.0in}|L{1.0in}|L{0.6in}|}\hline
+\textbf{Example} & \textbf{1. Does order matter?} & \textbf{2. Count all the possible outcomes.} & \textbf{3. Count the outcomes you want.} & \textbf{4. Divide.}\\ \hline
+A teacher randomly picks 2 students from 5 girls and 4 boys. Find $P(\text{both girls})$. & No. Combination. & ${}_9C_2 = 36$ & ${}_5C_2 = 10$ & $\frac{10}{36} = \frac{5}{18}$\par $\approx 0.28$\\ \hline
+A club of 10 picks a president and a vice president at random. Find the probability that Ana is president and Ben is vice president. & Yes (different jobs). Permutation. & ${}_{10}P_2 = 90$ & 1 & $\frac{1}{90}$\\ \hline
+\end{tabular}
+
+\end{document}

@@ -65,6 +65,7 @@ Do the mini lesson first. Then do the matching Khan Academy lessons.
 | [6.5](chapters/Unit_6/6.5_Permutations.qmd) | Permutations | Unit 6, lesson {{< khanlink 6.5 "5" >}} |
 | [6.6](chapters/Unit_6/6.6_Combinations.qmd) | Combinations | Unit 6, lesson {{< khanlink 6.6 "6" >}} |
 | [6.7](chapters/Unit_6/6.7_Probability_with_Counting.qmd) | Probability with counting | Unit 6, lesson {{< khanlink 6.7 "7" >}} |
+| [Summary](chapters/Unit_6/Summary.qmd) | Unit 6 summary tables | |
 | [Review](chapters/Unit_6/Review.qmd) | Unit 6 review | Unit 6, lessons {{< khanlink 6.1 "1" >}} to {{< khanlink 6.7 "7" >}} |
 | **Unit 7: Probability Distributions** | | |
 | [7.1](chapters/Unit_7/7.1_Probability_Distributions.qmd) | Probability distributions | Unit 7, lessons {{< khanlink 7.1 "1" >}} and {{< khanlink 7.2 "2" >}} |
