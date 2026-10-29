@@ -1,0 +1,66 @@
+# Unit 5 Summary {.unnumbered}
+
+Every type of study, sampling method, and experiment design from Unit 5 in one place. Use it while you work on the review.
+
+:::{.guided-notes-link}
+[Printable summary](/handouts/Unit_5/Unit_5_Summary.pdf){target="_blank"} - these tables on two pages, to print and keep.
+:::
+
+### Types of Studies
+
+| Type | What happens | Example |
+|---|---|---|
+| {{< glink "sample survey" text="Sample survey" >}} | Ask a sample questions. | Ask 100 students how many hours they sleep. |
+| {{< glink "observational study" text="Observational study" >}} | Watch or measure. Do **not** change anything. | Compare the grades of students who do and do not play sports. |
+| {{< glink experiment text="Experiment" >}} | **Do something** to the subjects (a treatment) and measure what happens. | Give half the students a 10-minute break before a test. Compare scores. |
+
+***
+
+### Choosing a Sample
+
+| Method | How it works | Example: 60 of 1,200 students |
+|---|---|---|
+| {{< glink "simple random sample" text="Simple random sample (SRS)" >}} | Every group of the same size has the same chance of being chosen. | A random number generator picks 60 student numbers. |
+| {{< glink "stratified sample" text="Stratified" >}} | Split the population into groups that are alike (**strata**). Take a random sample from **each** group. | Randomly pick 15 students from each grade. |
+| {{< glink "cluster sample" text="Cluster" >}} | Split the population into groups (**clusters**). Randomly pick some **whole** groups. | Randomly pick 3 homerooms. Ask everyone in them. |
+| {{< glink "systematic sample" text="Systematic" >}} | Pick a random start. Then take every $k$th person. | Start at a random student from 1 to 20. Take every 20th student. |
+| {{< glink "convenience sample" text="Convenience" >}} (bad) | Take whoever is easy to reach. No chance is used. | Ask the first 60 students who walk in the door. |
+
+**Stratified:** a **few** from **every** group. **Cluster:** **everyone** from a **few** groups.
+
+***
+
+### Bias
+
+| Type of bias | What happens | Example |
+|---|---|---|
+| Voluntary response | People choose if they answer. People with strong feelings answer most. | A radio call-in poll. |
+| Convenience | The sample is whoever is easy to reach. | Asking only your friends. |
+| Undercoverage | Some groups are left out of the sample. | Calling only home phones. |
+| Nonresponse | People who were chosen do not answer. | Half of the mailed surveys never come back. |
+| Response | The question or the setting pushes people to answer a certain way. | "Don't you agree that our great principal deserves a raise?" |
+
+***
+
+### Experiment Designs
+
+| Design | How it works | Example |
+|---|---|---|
+| {{< glink "completely randomized design" text="Completely randomized" >}} | Chance alone puts each subject in a treatment group. | 40 volunteers: chance picks 20 for the new pill and 20 for the placebo. |
+| {{< glink "randomized block design" text="Randomized block" >}} | Split the subjects into groups that are alike (**blocks**). Then chance assigns the treatments inside each block. | 40 gym members. The blocks are beginners and experienced members. Chance picks who gets each workout plan inside each block. |
+| {{< glink "matched pairs" text="Matched pairs" >}} | Each subject gets **both** treatments, in a random order. Or pair up very similar subjects, and chance picks who gets which. | Each runner runs once in each shoe. A coin flip decides which shoe goes first. |
+
+**A good experiment has:** a control group to compare to, random assignment to make the groups alike, and replication (many subjects).
+
+**Blocks and strata:** both split people into groups that are alike, then use chance inside each group. In a stratified sample, chance picks who is in the sample. In a randomized block design, chance picks which treatment each subject gets.
+
+***
+
+### What Can a Study Prove?
+
+| | **Random assignment** | **No random assignment** |
+|---|---|---|
+| **Random sample** | Cause: yes. Generalize: yes. | Cause: no. Generalize: yes. |
+| **Not a random sample** | Cause: yes, for these subjects. Generalize: no. | Cause: no. Generalize: no. |
+
+**Statistically significant:** if chance gives a result this big less than about 5% of the time, the result is probably real.

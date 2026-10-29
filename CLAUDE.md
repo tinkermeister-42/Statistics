@@ -134,7 +134,14 @@ set (`.remember`, `.you-try`, `.you-try-m` + `.answer`, `.think`, `.gotcha`,
   (`./build.sh` runs it at the end); it is unlisted like the keys
 - **A quiz key lines up page for page.** Answers sit in fixed-height `\abox`
   space, so the key never moves anything; a handout key still shrinks `\work`
-- Every unit has a review and a quiz (fall 2026); later work is revision
+- **Summary page:** `chapters/Unit_X/Summary.qmd`, between the last lesson
+  and the review, with the same tables as a one- or two-page printable,
+  `handouts/Unit_X/Unit_X_Summary.tex` (linked from the page). Every tool
+  the unit teaches, in the lessons' own words, notation and examples; nothing
+  new. A lesson edit that changes a rule, formula or example the summary shows
+  changes the summary too
+- Every unit has a review, a quiz and a summary (fall 2026); later work is
+  revision
 - **Fresh clone mtimes:** checkout writes files in no useful order, so
   `check-site-assets.py` calls every committed PDF and SVG stale. They are
   not: `git ls-files 'handouts/*.pdf' 'assessments/*.pdf' 'images/*.svg' | xargs touch`

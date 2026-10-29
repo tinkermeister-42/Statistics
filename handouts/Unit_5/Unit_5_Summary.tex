@@ -1,0 +1,70 @@
+\documentclass[11pt]{article}
+\input{../preamble}
+% Unit summary: the unit's tools in tables, to print and keep. Same tables as
+% chapters/Unit_5/Summary.qmd; edit both together. Nothing to answer, so the
+% _KEY copy is the same sheet.
+\newcommand{\sumhead}[1]{\par\vspace{0.7em}{\large\bfseries #1}\par\vspace{0.3em}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\renewcommand{\arraystretch}{1.25}
+
+\begin{document}
+
+\lessontitle{Unit 5 Summary: Study Design}
+
+\sumhead{Types of Studies}
+\begin{tabular}{|L{1.45in}|L{2.6in}|L{2.6in}|}\hline
+\textbf{Type} & \textbf{What happens} & \textbf{Example}\\ \hline
+Sample survey & Ask a sample questions. & Ask 100 students how many hours they sleep.\\ \hline
+Observational study & Watch or measure. Do \textbf{not} change anything. & Compare the grades of students who do and do not play sports.\\ \hline
+Experiment & \textbf{Do something} to the subjects (a treatment) and measure what happens. & Give half the students a 10-minute break before a test. Compare scores.\\ \hline
+\end{tabular}
+
+\sumhead{Choosing a Sample}
+\begin{tabular}{|L{1.45in}|L{2.6in}|L{2.6in}|}\hline
+\textbf{Method} & \textbf{How it works} & \textbf{Example: 60 of 1,200 students}\\ \hline
+Simple random sample (SRS) & Every group of the same size has the same chance of being chosen. & A random number generator picks 60 student numbers.\\ \hline
+Stratified & Split the population into groups that are alike (\textbf{strata}). Take a random sample from \textbf{each} group. & Randomly pick 15 students from each grade.\\ \hline
+Cluster & Split the population into groups (\textbf{clusters}). Randomly pick some \textbf{whole} groups. & Randomly pick 3 homerooms. Ask everyone in them.\\ \hline
+Systematic & Pick a random start. Then take every $k$th person. & Start at a random student from 1 to 20. Take every 20th student.\\ \hline
+Convenience (bad) & Take whoever is easy to reach. No chance is used. & Ask the first 60 students who walk in the door.\\ \hline
+\end{tabular}
+
+\vspace{0.3em}
+\textbf{Stratified:} a \textbf{few} from \textbf{every} group. \quad \textbf{Cluster:} \textbf{everyone} from a \textbf{few} groups.
+
+\sumhead{Bias}
+\begin{tabular}{|L{1.45in}|L{2.6in}|L{2.6in}|}\hline
+\textbf{Type of bias} & \textbf{What happens} & \textbf{Example}\\ \hline
+Voluntary response & People choose if they answer. People with strong feelings answer most. & A radio call-in poll.\\ \hline
+Convenience & The sample is whoever is easy to reach. & Asking only your friends.\\ \hline
+Undercoverage & Some groups are left out of the sample. & Calling only home phones.\\ \hline
+Nonresponse & People who were chosen do not answer. & Half of the mailed surveys never come back.\\ \hline
+Response & The question or the setting pushes people to answer a certain way. & ``Don't you agree that our great principal deserves a raise?''\\ \hline
+\end{tabular}
+
+\newpage
+\sumhead{Experiment Designs}
+\begin{tabular}{|L{1.45in}|L{2.6in}|L{2.6in}|}\hline
+\textbf{Design} & \textbf{How it works} & \textbf{Example}\\ \hline
+Completely randomized & Chance alone puts each subject in a treatment group. & 40 volunteers: chance picks 20 for the new pill and 20 for the placebo.\\ \hline
+Randomized block & Split the subjects into groups that are alike (\textbf{blocks}). Then chance assigns the treatments inside each block. & 40 gym members. The blocks are beginners and experienced members. Chance picks who gets each workout plan inside each block.\\ \hline
+Matched pairs & Each subject gets \textbf{both} treatments, in a random order. Or pair up very similar subjects, and chance picks who gets which. & Each runner runs once in each shoe. A coin flip decides which shoe goes first.\\ \hline
+\end{tabular}
+
+\vspace{0.5em}
+\textbf{A good experiment has:} a control group to compare to, random assignment to make the groups alike, and replication (many subjects).
+
+\vspace{0.4em}
+\textbf{Blocks and strata:} both split people into groups that are alike, then use chance inside each group. In a stratified sample, chance picks who is in the sample. In a randomized block design, chance picks which treatment each subject gets.
+
+\sumhead{What Can a Study Prove?}
+\begin{tabular}{|L{1.45in}|L{2.6in}|L{2.6in}|}\hline
+ & \textbf{Random assignment} & \textbf{No random assignment}\\ \hline
+\textbf{Random sample} & Cause: yes. Generalize: yes. & Cause: no. Generalize: yes.\\ \hline
+\textbf{Not a random sample} & Cause: yes, for these subjects. Generalize: no. & Cause: no. Generalize: no.\\ \hline
+\end{tabular}
+
+\vspace{0.5em}
+\textbf{Statistically significant:} if chance gives a result this big less than about 5\% of the time, the result is probably real.
+
+\end{document}

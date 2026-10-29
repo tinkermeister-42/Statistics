@@ -12,7 +12,7 @@ This review uses all of them. It has every kind of problem on the Unit 5 quiz, w
 - [ ] I name and describe simple random, stratified, cluster, systematic, and convenience samples, and I tell stratified and cluster samples apart.
 - [ ] I use a random digit table to choose a sample, and I choose a good sampling method for a situation.
 - [ ] I name the subjects, treatments, explanatory variable, and response variable in an experiment, and I explain why random assignment matters.
-- [ ] I explain control groups, placebos, and blinding, and I describe a completely randomized design and a matched pairs design.
+- [ ] I explain control groups, placebos, and blinding, and I describe completely randomized, randomized block, and matched pairs designs.
 - [ ] I decide if a study's results can be generalized to a population, and I decide if a study can show cause and effect.
 - [ ] I use a simulation to decide if a result is statistically significant, and I find mistakes in conclusions about studies.
 :::
@@ -32,6 +32,7 @@ This review uses all of them. It has every kind of problem on the Unit 5 quiz, w
 {{< glink placebo >}},
 {{< glink "double-blind" >}},
 {{< glink "random assignment" >}},
+{{< glink "randomized block design" >}},
 {{< glink "matched pairs" >}},
 {{< glink generalize >}},
 {{< glink "statistically significant" >}}
@@ -246,13 +247,17 @@ Work with a partner. Compare answers when you finish each problem.
 
    f. Neither the students nor the teacher knows who drank which tea. What is this called?
 
-   g. Is this experiment a completely randomized design or a matched pairs design? Explain.
+   g. Is this experiment a completely randomized design, a randomized block design, or a matched pairs design? Explain.
 
    h. Describe how to test study tea with a matched pairs design.
 
    i. Suppose each student drinks both teas, on two different days. Why flip a coin to decide which tea comes first?
 
    j. Why is a matched pairs design a good choice here?
+
+   k. 24 of the 60 students take Algebra 1 and 36 take Algebra 2. Students in Algebra 2 may score higher on a math test. Describe how to test study tea with a randomized block design.
+
+   l. Why split the students by class before assigning the teas?
 
 ***
 

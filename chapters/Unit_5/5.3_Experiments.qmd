@@ -76,7 +76,26 @@ In a {{< glink "matched pairs" >}} design, each subject gets **both** treatments
 Runners might be tired on the second run, or warmed up. The coin keeps that from always helping the same shoe.
 :::
 
-**{{< glink "randomized block design" text="Randomized block design" >}}:** first split the subjects into groups that are alike (**blocks**), like boys and girls. Then randomly assign the treatments inside each block. Comparing inside each block keeps the differences between blocks out of the result.
+In a {{< glink "randomized block design" >}}, first split the subjects into groups that are alike (**blocks**). Then randomly assign the treatments inside each block. Comparing inside each block keeps the differences between blocks out of the result.
+
+**Example:** A gym tests two workout plans with 40 members. 16 members are beginners and 24 are experienced. Beginners usually get stronger faster.
+
+- The blocks are the beginners and the experienced members.
+- Inside each block, chance decides who gets each plan. 8 beginners and 12 experienced members get each plan.
+- Compare the two plans inside each block.
+
+![](/images/Unit_5/5.3_block_design.svg){width="620px" fig-align="center"}
+
+:::{.you-try title="Why not just randomly assign all 40 members to the two plans?"}
+Chance could put more beginners in one plan. That plan would look better because beginners get stronger faster, not because the plan is better. Blocks make sure each plan gets the same number of beginners.
+:::
+
+:::{.note title="Blocks and strata"}
+A randomized block design works like a {{< glink "stratified sample" >}} (5.2). Both split people into groups that are alike. Then both use chance inside each group.
+
+- **Stratified sample:** chance picks **who is in the sample**.
+- **Randomized block design:** chance picks **which treatment** each subject gets.
+:::
 
 {{< practice >}}
 

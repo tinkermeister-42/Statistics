@@ -1,0 +1,21 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}
+\begin{document}
+\begin{tikzpicture}[box/.style={draw,thick,rounded corners=2pt,align=center,font=\small,inner sep=5pt},->,>=stealth,thick]
+  \node[box] (s) at (0,0) {40 gym\\members};
+  \node[box] (b1) at (3.0,1.25) {Block 1:\\16 beginners};
+  \node[box] (b2) at (3.0,-1.25) {Block 2:\\24 experienced};
+  \node[box,fill=gray!15] (r1) at (6.1,1.25) {Random\\assignment};
+  \node[box,fill=gray!15] (r2) at (6.1,-1.25) {Random\\assignment};
+  \node[box] (a1) at (8.9,1.85) {8: Plan A};
+  \node[box] (p1) at (8.9,0.65) {8: Plan B};
+  \node[box] (a2) at (8.9,-0.65) {12: Plan A};
+  \node[box] (p2) at (8.9,-1.85) {12: Plan B};
+  \node[box] (c1) at (11.9,1.25) {Compare\\strength gain};
+  \node[box] (c2) at (11.9,-1.25) {Compare\\strength gain};
+  \draw (s) -- (b1); \draw (s) -- (b2);
+  \draw (b1) -- (r1); \draw (b2) -- (r2);
+  \draw (r1) -- (a1); \draw (r1) -- (p1); \draw (r2) -- (a2); \draw (r2) -- (p2);
+  \draw (a1) -- (c1); \draw (p1) -- (c1); \draw (a2) -- (c2); \draw (p2) -- (c2);
+\end{tikzpicture}
+\end{document}

@@ -52,6 +52,7 @@ Do the mini lesson first. Then do the matching Khan Academy lessons.
 | [5.2](chapters/Unit_5/5.2_Sampling_Methods.qmd) | Sampling methods | Unit 5, lesson {{< khanlink 5.3 "3" >}} |
 | [5.3](chapters/Unit_5/5.3_Experiments.qmd) | Experiments | Unit 5, lesson {{< khanlink 5.4 "4" >}} |
 | [5.4](chapters/Unit_5/5.4_What_a_Study_Can_Prove.qmd) | What a study can prove | Unit 5, lesson {{< khanlink 5.5 "5" >}} |
+| [Summary](chapters/Unit_5/Summary.qmd) | Unit 5 summary tables | |
 | [Review](chapters/Unit_5/Review.qmd) | Unit 5 review | Unit 5, lessons {{< khanlink 5.1 "1" >}} to {{< khanlink 5.5 "5" >}} |
 | **Unit 6: Probability** | | |
 | [6.1](chapters/Unit_6/6.1_Venn_Diagrams_and_the_Addition_Rule.qmd) | Venn diagrams and the addition rule | Unit 6, lesson {{< khanlink 6.1 "1" >}} |

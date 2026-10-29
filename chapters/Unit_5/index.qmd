@@ -35,5 +35,8 @@ Test a treatment fairly.
 [**What a Study Can Prove**](5.4_What_a_Study_Can_Prove.qmd)\
 Decide when results apply to everyone and when they show a cause.
 
+[**Unit 5 Summary**](Summary.qmd)\
+Every tool from the unit in one set of tables, to keep beside you.
+
 [**Unit 5 Review**](Review.qmd)\
 Practice every skill from the unit before the quiz.
