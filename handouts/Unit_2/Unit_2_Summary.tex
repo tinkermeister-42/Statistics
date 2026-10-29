@@ -9,9 +9,16 @@
 % room above and below a full-size fraction in a table row
 \newcommand{\tall}{\rule[-0.85em]{0pt}{2.2em}}
 
+% Same title on the student and _KEY copies: a summary has no answers, so the
+% key is the same sheet and must not grow a line for the word KEY.
+\newlength{\sumtw}
+\newcommand{\sumtitle}[1]{\settowidth{\sumtw}{\Large\bfseries #1}%
+  \ifdim\sumtw>4.3in \hfill Name \underline{\hspace{2in}}\par\vspace{0.5em}{\Large\bfseries #1}\par\vspace{0.6em}%
+  \else {\Large\bfseries #1}\hfill Name \underline{\hspace{2in}}\par\vspace{0.6em}\fi}
+
 \begin{document}
 
-\lessontitle{Unit 2 Summary: Analyzing One Variable}
+\sumtitle{Unit 2 Summary: Analyzing One Variable}
 
 \sumhead{Standard Deviation}
 \begin{tabular}{|L{1.45in}|L{5.2in}|}\hline

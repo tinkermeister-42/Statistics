@@ -7,9 +7,16 @@
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 \renewcommand{\arraystretch}{1.25}
 
+% Same title on the student and _KEY copies: a summary has no answers, so the
+% key is the same sheet and must not grow a line for the word KEY.
+\newlength{\sumtw}
+\newcommand{\sumtitle}[1]{\settowidth{\sumtw}{\Large\bfseries #1}%
+  \ifdim\sumtw>4.3in \hfill Name \underline{\hspace{2in}}\par\vspace{0.5em}{\Large\bfseries #1}\par\vspace{0.6em}%
+  \else {\Large\bfseries #1}\hfill Name \underline{\hspace{2in}}\par\vspace{0.6em}\fi}
+
 \begin{document}
 
-\lessontitle{Unit 5 Summary: Study Design}
+\sumtitle{Unit 5 Summary: Study Design}
 
 \sumhead{Types of Studies}
 \begin{tabular}{|L{1.4in}|L{2.5in}|L{2.55in}|}\hline
