@@ -44,6 +44,7 @@ chapters/Unit_1…7/     # Lessons: #.#_Topic.qmd, index.qmd
 handouts/Unit_1…7/     # Printable mini lessons: .tex source, student + _KEY PDFs
 assessments/Unit_1…7/  # Unit quizzes: .tex source, student + _KEY PDFs (unlisted)
 figures/Unit_1…7/      # TikZ sources for web figures -> images/Unit_X/*.svg
+projects/              # Teacher's finished activity files (PDF, xlsx), served as is, unlisted
 scripts/               # JS helpers, glossary build, figure build, asset check
 styles/                # CSS (copied from the Algebra 1 book)
 _extensions/           # glossary, headings
@@ -142,6 +143,12 @@ set (`.remember`, `.you-try`, `.you-try-m` + `.answer`, `.think`, `.gotcha`,
   changes the summary too
 - Every unit has a review, a quiz and a summary (fall 2026); later work is
   revision
+- **Projects:** the teacher's own finished files go in `projects/` under their
+  own names, served at `/projects/<file>`. Nothing links to them until he asks
+  for a link in a lesson; the teacher bookmark lists them. The repo and site
+  are public, so "unlisted" only means unlinked: anything he plans to sell, or
+  that holds a full solution students must not see, stays out of the repo
+  (git history keeps it even after a delete)
 - **Fresh clone mtimes:** checkout writes files in no useful order, so
   `check-site-assets.py` calls every committed PDF and SVG stale. They are
   not: `git ls-files 'handouts/*.pdf' 'assessments/*.pdf' 'images/*.svg' | xargs touch`

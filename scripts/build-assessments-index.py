@@ -56,6 +56,15 @@ for u in units:
         rows.append(row(title_of(tex), tex.with_suffix(".pdf")))
     parts.append(f"  <h2>Unit {u}</h2>\n  <table>\n" + "\n".join(rows) + "\n  </table>")
 
+# Projects: finished files the teacher drops in projects/, served as they are.
+# One link per file; a project has no key unless one sits beside it.
+proj = [f for f in sorted((root / "projects").glob("*")) if f.is_file()]
+if proj:
+    prow = [f'    <tr><td>{html.escape(f.stem.replace("_", " "))}</td>'
+            f'<td><a href="../projects/{html.escape(f.name)}">{f.suffix[1:].upper()}</a></td><td></td></tr>'
+            for f in proj]
+    parts.append("  <h2>Projects</h2>\n  <table>\n" + "\n".join(prow) + "\n  </table>")
+
 page = """<!DOCTYPE html>
 <html lang="en">
 <head>

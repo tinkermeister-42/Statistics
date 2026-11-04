@@ -15,6 +15,10 @@ resources:
   # the Algebra 1 book (/assessments/Unit_X/<Name>.pdf).
   - assessments/Unit_*/*.pdf
   - assessments/index.html
+  # Class projects and activities the teacher drops in as finished files (PDF,
+  # spreadsheets). Served at /projects/<file> and linked from nowhere until a
+  # lesson links one on purpose; the teacher bookmark page lists them all.
+  - projects/*
 
 extensions:
   - glossary
