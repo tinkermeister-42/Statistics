@@ -1,0 +1,156 @@
+<!--
+lesson: 1.2
+title: Mean, Median, and Shape
+unit: 1
+unit_title: Displaying One Variable
+kind: Mini Lesson
+back: 1.2_Mean_Median_and_Shape
+-->
+  <table class="info">
+    <tr><td style="width:50%"><b>Mean</b> (also called the <b>average</b>)</td>
+      <td style="width:50%"><b>Median</b> (the <b>middle</b>)</td></tr>
+    <tr><td>1. Add all the values.<br>2. Divide by how many values there are.</td>
+      <td>1. Put the values in order.<br>2. Find the middle value.</td></tr>
+    <tr><td>Data: &nbsp;2,&nbsp; 3,&nbsp; 8,&nbsp; 3,&nbsp; 4<br>
+        $2 + 3 + 8 + 3 + 4 = 20$ &nbsp;&nbsp;&nbsp;&nbsp; $20 \div 5 = 4$<br>
+        <b>Mean = 4</b><br>
+        In symbols: &nbsp;$\bar{x} = \dfrac{\Sigma x}{n} = \dfrac{20}{5} = 4$</td>
+      <td>In order: &nbsp;2,&nbsp; 3,&nbsp; <span class="fbox">3</span>,&nbsp; 4,&nbsp; 8 &nbsp;&nbsp;&nbsp;&nbsp; <b>Median = 3</b><br>
+        Even number of values? Two numbers are in the middle. Find the number halfway between them.<br>
+        2,&nbsp; <span class="fbox">3</span>,&nbsp; <span class="fbox">5</span>,&nbsp; 8 &nbsp;&nbsp;&nbsp;&nbsp; $(3 + 5) \div 2 = 4$ &nbsp;&nbsp; <b>Median = 4</b></td></tr>
+  </table>
+
+  <p>$\Sigma$ is the Greek capital letter <b>sigma</b>. It means <b>add up</b>. &nbsp;$\Sigma x$ means add up all the
+    values. &nbsp;$\bar{x}$ (“x-bar”) is the mean. &nbsp;$n$ is how many values.</p>
+
+  <p><b>Shape changes the mean.</b> The <b>tail</b> is the long, low side of a graph.
+    The mean is <b>pulled toward the tail</b>. The median is not pulled much.</p>
+
+  {{fig Unit_1/1.2_shapes}}
+
+  <p><b>Real example: US household income (2024).</b>
+    Most households earn a medium amount. A small number of households earn millions of dollars.
+    That makes a long tail on the right.</p>
+
+  {{fig Unit_1/1.2_income}}
+
+  <p>The median is a better description of a <b>typical</b> household. Most households earn <b>less than the mean</b>.</p>
+  <p><small>Source: US Census Bureau, <i>Income in the United States: 2024</i>. Median \$83,730. Mean about \$121,000.</small></p>
+
+
+  {{practice-head}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">1.</b> A student recorded how many hours she slept each night for one week.
+      <p>7,&nbsp; 8,&nbsp; 6,&nbsp; 9,&nbsp; 7,&nbsp; 5,&nbsp; 7</p>
+    </div>
+    <div class="work">
+      <ol class="parts">
+        <li>Find the mean. {{a}}$49 \div 7 = 7$ hours{{/a}}<div class="h05"></div></li>
+        <li>Find the median. {{a}}5, 6, 7, <span class="fbox">7</span>, 7, 8, 9 &nbsp;$\rightarrow$&nbsp; 7 hours{{/a}}<div class="h05"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> Six students timed their walk to the bus stop, in minutes.
+      <p>15,&nbsp; 22,&nbsp; 18,&nbsp; 30,&nbsp; 19,&nbsp; 16</p>
+    </div>
+    <div class="work">
+      <ol class="parts">
+        <li>Find the mean. {{a}}$120 \div 6 = 20$ minutes{{/a}}<div class="h05"></div></li>
+        <li>Find the median. {{a}}15, 16, <span class="fbox">18</span>, <span class="fbox">19</span>, 22, 30 &nbsp;$\rightarrow$&nbsp; $(18 + 19) \div 2 = 18.5$ minutes. The 30 pulls the mean above the median.{{/a}}<div class="h05"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">3.</b> This dot plot shows how many books some students read this month.</div>
+    <div class="work">
+      <div class="cols2">
+        {{fig Unit_1/1.2_dot_plot_books}}
+        <ol class="parts">
+          <li>How many students are in the data? {{a}}15{{/a}}<div class="h05"></div></li>
+          <li>Find the median. {{a}}The 8th value is 2 books.{{/a}}<div class="h05"></div></li>
+          <li>Find the mean. {{a}}$(0 + 3 + 10 + 12 + 8) \div 15 = 33 \div 15 = 2.2$ books. Watch for: adding 0 to 4 instead of every dot.{{/a}}<div class="h05"></div></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">4.</b> This histogram shows how many minutes some students take to get to school.</div>
+    <div class="work">
+      {{fig Unit_1/1.1_histogram_minutes}}
+      <p>Which bar holds the median? Explain.</p>
+      <div class="h08">{{a}}10 to 20 minutes. There are $5 + 8 + 6 + 3 + 2 = 24$ values, so the median is between the 12th and 13th values. 5 values are below 10. $5 + 8 = 13$ values are below 20. So the 12th and 13th values are both in the 10 to 20 bar.{{/a}}</div>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">5.</b> A small company has 5 people. Here is what each person is paid in one year.</div>
+    <div class="work">
+      <table class="data">
+        <tr><td>Worker A</td><td style="text-align:right">\$30,000</td></tr>
+        <tr><td>Worker B</td><td style="text-align:right">\$32,000</td></tr>
+        <tr><td>Worker C</td><td style="text-align:right">\$35,000</td></tr>
+        <tr><td>Worker D</td><td style="text-align:right">\$38,000</td></tr>
+        <tr><td>Owner</td><td style="text-align:right">\$265,000</td></tr>
+      </table>
+      <ol class="parts">
+        <li>Find the mean pay. {{a}}$400{,}000 \div 5 = \$80{,}000${{/a}}<div class="h05"></div></li>
+        <li>Find the median pay. {{a}}\$35,000{{/a}}<div class="h05"></div></li>
+        <li>The company puts this in a job ad: <i>“Average pay at our company: \$80,000!”</i>
+          Is this true? Is it fair to a person looking for a job? Explain.
+          <div class="h05">{{a}}True, but not fair. 4 of the 5 people earn less than \$40,000. The owner's pay pulls the mean up. The median (\$35,000) is a better description of a typical worker.{{/a}}</div></li>
+        <li>Leave out the owner. Find the mean pay of the 4 workers. How much did one person change the mean?
+          <div class="h05">{{a}}$135{,}000 \div 4 = \$33{,}750$. One person moved the mean up by \$46,250.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">6.</b> Look at each histogram. Name the shape. Then tell if the mean is greater than, less than, or about equal to the median.</div>
+    <div class="work">
+      {{fig Unit_1/1.2_histograms_abc}}
+      <table class="fill">
+        <tr><th>Histogram</th><th>Shape</th><th>Mean $>$, $<$, or $\approx$ median?</th></tr>
+        <tr><td>A</td><td class="wl">{{a}}skewed right{{/a}}</td><td class="wl">{{a}}mean $>$ median{{/a}}</td></tr>
+        <tr><td>B</td><td class="wl">{{a}}skewed left{{/a}}</td><td class="wl">{{a}}mean $<$ median{{/a}}</td></tr>
+        <tr><td>C</td><td class="wl">{{a}}symmetric{{/a}}</td><td class="wl">{{a}}mean $\approx$ median{{/a}}</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">7.</b> Guess the shape of each data set: skewed left, symmetric, or skewed right. Explain.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>The price of every house sold in Columbia this year.
+          <div class="h05">{{a}}Skewed right. Most houses are medium price. A few cost much more.{{/a}}</div></li>
+        <li>Scores on a very easy test. Most students score 90 to 100.
+          <div class="h05">{{a}}Skewed left. Most scores are high. A few students score low.{{/a}}</div></li>
+        <li>The heights of all adult women in Missouri.
+          <div class="h05">{{a}}Symmetric. Most heights are near the middle, with about as many tall as short.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">8.</b> Look at the US household income graph on page 1.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Why is the mean (\$121,000) bigger than the median (\$84,000)?
+          <div class="h05">{{a}}Income is skewed right. A small number of very high incomes pull the mean toward the tail.{{/a}}</div></li>
+        <li>A news story says, <i>“The average US household earns \$121,000.”</i>
+          Is this true? Does it describe a typical household? Explain.
+          <div class="h05">{{a}}It is true for the mean. It does not describe a typical household. Most households earn less. The median is a better description of a typical household.{{/a}}</div></li>
+        <li>Do more than half of households earn less than \$121,000? How do you know?
+          <div class="h05">{{a}}Yes. Half of households earn less than \$84,000 (the median). Some more earn between \$84,000 and \$121,000.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>

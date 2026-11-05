@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7.2  Expected Value</title>
+<link rel="stylesheet" href="../assets/handouts.css">
+</head>
+<body>
+<section class="sheet">
+
+  <div class="masthead">
+    <a class="backlink" href="../../chapters/Unit_7/7.2_Expected_Value.html">&larr; back to the lesson</a>
+    <h1>7.2 &nbsp;Expected Value</h1>
+    <div class="sub">Mini Lesson - Unit 7: Probability Distributions - DHS Statistics</div>
+    <div class="idline"><span>Name</span><span class="small">Date</span><span class="small">Period</span></div>
+  </div>
+
+<p>This table shows the probability of each number of goals a soccer team scores in a game. On average, how many goals does the team score?</p>
+
+  <table class="data">
+    <tr><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> (goals)</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+    <tr><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(x)</annotation></semantics></math></th><td>0.1</td><td>0.3</td><td>0.3</td><td>0.2</td><td>0.1</td></tr>
+    <tr><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>⋅</mo><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">x \cdot P(x)</annotation></semantics></math></th><td>0</td><td>0.3</td><td>0.6</td><td>0.6</td><td>0.4</td></tr>
+  </table>
+
+  <div class="keys">
+    <b>Expected value:</b> &nbsp;&nbsp; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mi mathvariant="normal">Σ</mi><mspace width="0.167em"></mspace><mi>x</mi><mo>⋅</mo><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">E(X) = \Sigma\, x \cdot P(x)</annotation></semantics></math><br>
+    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">E(X)</annotation></semantics></math> means the expected value of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>. Multiply each value by its probability. Then add them all up (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Σ</mi><annotation encoding="application/x-tex">\Sigma</annotation></semantics></math> means add up). The expected value is also called the <b>mean</b> of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>, written <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>μ</mi><mi>X</mi></msub><annotation encoding="application/x-tex">\mu_X</annotation></semantics></math>.
+  </div>
+
+  <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>0</mn><mo>+</mo><mn>0.3</mn><mo>+</mo><mn>0.6</mn><mo>+</mo><mn>0.6</mn><mo>+</mo><mn>0.4</mn><mo>=</mo><mn mathvariant="bold">1.9</mn></mrow><annotation encoding="application/x-tex">E(X) = 0 + 0.3 + 0.6 + 0.6 + 0.4 = \mathbf{1.9}</annotation></semantics></math> goals</p>
+
+  <p><b>What it means:</b> over many games, the team scores about 1.9 goals per game on average.
+    No single game has 1.9 goals. The expected value is a <b>long-run average</b>.</p>
+
+  <p><b>Fair decisions.</b> A method is <b>fair</b> if every person has the same probability of being chosen.</p>
+  <p>Ana, Ben, and Cai need to decide who goes first.</p>
+  <table class="info">
+    <tr><th>Method</th><th>Fair?</th></tr>
+    <tr><td>Roll a number cube. 1 or 2: Ana, 3 or 4: Ben, 5 or 6: Cai.</td><td>Yes. Each has <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>2</mn><mn>6</mn></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{2}{6} = \frac{1}{3}</annotation></semantics></math>.</td></tr>
+    <tr><td>Flip 2 coins. HH: Ana, TT: Ben, one of each: Cai.</td><td>No. Ana <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mn>4</mn></mfrac><annotation encoding="application/x-tex">\frac{1}{4}</annotation></semantics></math>, Ben <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mn>4</mn></mfrac><annotation encoding="application/x-tex">\frac{1}{4}</annotation></semantics></math>, Cai <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>2</mn><mn>4</mn></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{2}{4} = \frac{1}{2}</annotation></semantics></math>.</td></tr>
+  </table>
+
+  <p><b>Fair games.</b> A game is fair if the expected value of the money you win or lose is <b>0</b>.</p>
+  <p><b>Example:</b> Roll a number cube. You win $3 if you roll a 6. You pay $1 for any other number. Let <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math> = the money you win or lose in one game.</p>
+  <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>3</mn><mo>⋅</mo><mfrac><mn>1</mn><mn>6</mn></mfrac><mo>+</mo><mrow><mo stretchy="false" form="prefix">(</mo><mo form="prefix">−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><mo>⋅</mo><mfrac><mn>5</mn><mn>6</mn></mfrac><mo>=</mo><mfrac><mn>3</mn><mn>6</mn></mfrac><mo>−</mo><mfrac><mn>5</mn><mn>6</mn></mfrac><mo>=</mo><mo form="prefix">−</mo><mfrac><mn>2</mn><mn>6</mn></mfrac><mo>≈</mo><mo form="prefix">−</mo><mi>$</mi><mn>0.33</mn></mrow><annotation encoding="application/x-tex">E(X) = 3 \cdot \frac{1}{6} + (-1) \cdot \frac{5}{6} = \frac{3}{6} - \frac{5}{6} = -\frac{2}{6} \approx -$0.33</annotation></semantics></math></p>
+  <p>On average you lose about 33 cents a game. The game is <b>not</b> fair.</p>
+
+
+  <div class="parthead brk"><b>7.2 &nbsp;Expected Value - Practice</b><span class="nm">Name</span></div>
+  <p class="partner">Work with a partner. Compare answers when you finish each problem.</p>
+
+  <div class="ex">
+    <div class="q"><b class="tag">1.</b> Find the expected value.</div>
+    <div class="work">
+      <ol class="parts">
+        <li><table class="data left">
+            <tr><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th><td>1</td><td>2</td><td>3</td></tr>
+            <tr><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(x)</annotation></semantics></math></th><td>0.2</td><td>0.5</td><td>0.3</td></tr>
+          </table>
+          <div class="h03"></div></li>
+        <li><table class="data left">
+            <tr><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th><td>0</td><td>1</td><td>2</td><td>3</td></tr>
+            <tr><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(x)</annotation></semantics></math></th><td>0.3</td><td>0.4</td><td>0.2</td><td>0.1</td></tr>
+          </table>
+          <div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> Flip a coin 3 times. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math> = the number of heads has <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mn>8</mn></mfrac></mrow><annotation encoding="application/x-tex">P(0) = \frac{1}{8}</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>3</mn><mn>8</mn></mfrac></mrow><annotation encoding="application/x-tex">P(1) = \frac{3}{8}</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>3</mn><mn>8</mn></mfrac></mrow><annotation encoding="application/x-tex">P(2) = \frac{3}{8}</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mn>8</mn></mfrac></mrow><annotation encoding="application/x-tex">P(3) = \frac{1}{8}</annotation></semantics></math>.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Find <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">E(X)</annotation></semantics></math>. &nbsp;<div class="h03"></div></li>
+        <li>Explain what <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">E(X)</annotation></semantics></math> means. &nbsp;<div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">3.</b> The number of pets per household is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>, with <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>0.30</mn></mrow><annotation encoding="application/x-tex">P(0) = 0.30</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>0.40</mn></mrow><annotation encoding="application/x-tex">P(1) = 0.40</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>0.20</mn></mrow><annotation encoding="application/x-tex">P(2) = 0.20</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>0.10</mn></mrow><annotation encoding="application/x-tex">P(3) = 0.10</annotation></semantics></math>.
+      A student says, “The expected value is 1.1, so a household can have 1.1 pets.” What is wrong with this?</div>
+    <div class="work h05"></div>
+  </div>
+
+  <div class="ex brk">
+    <div class="q"><b class="tag">4.</b> Four friends use a spinner with 4 equal parts to pick who chooses the movie. Each friend gets one part.
+      Then they switch to rolling a number cube: 1: Ana, 2: Ben, 3: Cai, 4 to 6: Dee.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Is the spinner fair? Explain. &nbsp;<div class="h03"></div></li>
+        <li>Is the number cube fair? Explain. &nbsp;<div class="h03"></div></li>
+        <li>Change the number cube method to make it fair.
+          <div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">5.</b> A game: roll a number cube. You win $5 if you roll a 6. You pay $1 for any other number. Let <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math> = the money you win or lose in one game.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Find the expected value. &nbsp;<div class="h03"></div></li>
+        <li>Is the game fair? Explain. &nbsp;<div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">6.</b> In the notes example, you win $3 if you roll a 6. How much should you pay for any other number to make the game fair?</div>
+    <div class="work h08"></div>
+  </div>
+
+</section>
+</body>
+</html>

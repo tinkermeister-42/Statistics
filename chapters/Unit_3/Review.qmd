@@ -28,7 +28,7 @@ This review uses every tool from Unit 3. It has every kind of problem on the Uni
 :::
 
 :::{.guided-notes-link}
-[Printable review](/handouts/Unit_3/Unit_3_Review.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable review](/handouts/Unit_3/Unit_3_Review.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 {{< khan 3.1 3.2 >}}

@@ -1,0 +1,15 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}\input{../keyed}
+% Handout 1.1, problem 4(c): blank number line for the student; the key draws the dot plot.
+% blank number line, dots filled in on the key: \numline{min}{max}{label}{value/count,...}
+\newcommand{\numline}[4]{%
+\begin{tikzpicture}[x=0.9cm,y=0.33cm]
+  \draw[thick] (#1-0.5,0) -- (#2+0.5,0);
+  \foreach \t in {#1,...,#2} {\draw (\t,0.25) -- (\t,-0.25) node[below] {\t};}
+  \node at ({(#1+#2)/2},-2.3) {#3};
+  \path (#1,0) -- (#1,6);
+  \ifkey\foreach \v/\c in {#4} {\ifnum\c>0 \foreach \k in {1,...,\c} {\fill[red!75!black] (\v,\k*1.15) circle (0.16cm);}\fi}\fi
+\end{tikzpicture}}
+\begin{document}
+\numline{4}{10}{Hours of sleep}{5/2,6/4,7/6,8/5,9/3}
+\end{document}

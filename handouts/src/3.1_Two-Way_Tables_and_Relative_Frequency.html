@@ -1,0 +1,124 @@
+<!--
+lesson: 3.1
+title: Two-Way Tables and Relative Frequency
+unit: 3
+unit_title: Two-Way Tables
+kind: Mini Lesson
+back: 3.1_Two-Way_Tables_and_Relative_Frequency
+-->
+  <p>60 students answered two questions: <i>Do you play a sport?</i> <i>Do you have a job?</i>
+    A <b>two-way table</b> shows the answers to both questions at once.</p>
+
+  <div class="cols2">
+    <div>
+      <table class="data left">
+        <tr><th></th><th>Job</th><th>No job</th><th>Total</th></tr>
+        <tr><th>Sport</th><td>8</td><td>22</td><td>30</td></tr>
+        <tr><th>No sport</th><td>12</td><td>18</td><td>30</td></tr>
+        <tr><th>Total</th><td>20</td><td>40</td><td>60</td></tr>
+      </table>
+    </div>
+    {{fig Unit_3/3.1_venn_sport_job w=2.49in}}
+  </div>
+
+  <table class="plain">
+    <tr><td>Each <b>cell</b> counts students who match <b>both</b> labels.</td><td>8 students play a sport <b>and</b> have a job.</td></tr>
+    <tr><td>The <b>totals</b> are in the margins.</td><td>30 students play a sport. 20 have a job.</td></tr>
+    <tr><td>The <b>grand total</b> is the corner.</td><td>60 students in all.</td></tr>
+  </table>
+
+  <p><b>Check:</b> Each row adds to its total. Each column adds to its total. &nbsp;&nbsp; $8 + 22 = 30$, &nbsp;$8 + 12 = 20$.</p>
+
+  <p><b>Venn diagram:</b> the overlap is “both” (8). Outside the circles is “neither” (18).</p>
+
+  <p><b>Relative frequency table.</b> Divide every count by the <b>grand total</b>. This gives the percent of <b>all</b> students.</p>
+
+  <table class="data left">
+    <tr><th></th><th>Job</th><th>No job</th><th>Total</th></tr>
+    <tr><th>Sport</th><td>$\dfrac{8}{60} \approx 13\%$</td><td>$\dfrac{22}{60} \approx 37\%$</td><td>$\dfrac{30}{60} = 50\%$</td></tr>
+    <tr><th>No sport</th><td>$\dfrac{12}{60} = 20\%$</td><td>$\dfrac{18}{60} = 30\%$</td><td>$\dfrac{30}{60} = 50\%$</td></tr>
+    <tr><th>Total</th><td>$\dfrac{20}{60} \approx 33\%$</td><td>$\dfrac{40}{60} \approx 67\%$</td><td>100%</td></tr>
+  </table>
+
+  <p>About 13% of <b>all</b> the students play a sport and have a job. The four inside cells add to 100%.</p>
+
+
+  {{practice-head}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">1.</b> 80 students said how they get to school.</div>
+    <div class="work">
+      <table class="data">
+        <tr><th></th><th>Bus</th><th>Car</th><th>Walk</th><th>Total</th></tr>
+        <tr><th>9th grade</th><td>18</td><td>12</td><td>10</td><td>40</td></tr>
+        <tr><th>10th grade</th><td>14</td><td>20</td><td>6</td><td>40</td></tr>
+        <tr><th>Total</th><td>32</td><td>32</td><td>16</td><td>80</td></tr>
+      </table>
+      <ol class="parts">
+        <li>How many 10th graders walk? &nbsp;{{a}}6{{/a}}</li>
+        <li>How many students ride the bus? &nbsp;{{a}}32{{/a}}</li>
+        <li>How many students are 9th graders who come by car? &nbsp;{{a}}12{{/a}}</li>
+        <li>How many students do <b>not</b> walk? &nbsp;{{a}}$80 - 16 = 64${{/a}}</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> Fill in the missing numbers. Students said if they ate breakfast today.</div>
+    <div class="work">
+      <table class="fill">
+        <tr><th></th><th>Yes</th><th>No</th><th>Total</th></tr>
+        <tr><th>11th grade</th><td class="w">15</td><td class="w">{{a}}20{{/a}}</td><td class="w">35</td></tr>
+        <tr><th>12th grade</th><td class="w">{{a}}12{{/a}}</td><td class="w">10</td><td class="w">{{a}}22{{/a}}</td></tr>
+        <tr><th>Total</th><td class="w">27</td><td class="w">{{a}}30{{/a}}</td><td class="w">57</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">3.</b> 50 people were asked about pets. 30 like cats. 26 like dogs. 12 like both.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Fill in the two-way table.
+          <table class="fill">
+            <tr><th></th><th>Likes dogs</th><th>No dogs</th><th>Total</th></tr>
+            <tr><th>Likes cats</th><td class="w">{{a}}12{{/a}}</td><td class="w">{{a}}18{{/a}}</td><td class="w">{{a}}30{{/a}}</td></tr>
+            <tr><th>No cats</th><td class="w">{{a}}14{{/a}}</td><td class="w">{{a}}6{{/a}}</td><td class="w">{{a}}20{{/a}}</td></tr>
+            <tr><th>Total</th><td class="w">{{a}}26{{/a}}</td><td class="w">{{a}}24{{/a}}</td><td class="w">{{a}}50{{/a}}</td></tr>
+          </table></li>
+        <li>How many people like neither cats nor dogs? &nbsp;{{a}}6{{/a}}</li>
+      </ol>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">4.</b> This Venn diagram shows which sports 50 students play.</div>
+    <div class="work">
+      {{fig Unit_3/3.1_venn_sports w=2.49in}}
+      <p>Make a two-way table from the Venn diagram.</p>
+      <table class="fill">
+        <tr><th></th><th>Soccer</th><th>No soccer</th><th>Total</th></tr>
+        <tr><th>Basketball</th><td class="w">{{a}}5{{/a}}</td><td class="w">{{a}}15{{/a}}</td><td class="w">{{a}}20{{/a}}</td></tr>
+        <tr><th>No basketball</th><td class="w">{{a}}10{{/a}}</td><td class="w">{{a}}20{{/a}}</td><td class="w">{{a}}30{{/a}}</td></tr>
+        <tr><th>Total</th><td class="w">{{a}}15{{/a}}</td><td class="w">{{a}}35{{/a}}</td><td class="w">{{a}}50{{/a}}</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">5.</b> Make a relative frequency table for problem 1. Divide each count by 80. Write percents.</div>
+    <div class="work">
+      <table class="fill">
+        <tr><th></th><th>Bus</th><th>Car</th><th>Walk</th><th>Total</th></tr>
+        <tr><th>9th grade</th><td class="w">{{a}}22.5%{{/a}}</td><td class="w">{{a}}15%{{/a}}</td><td class="w">{{a}}12.5%{{/a}}</td><td class="w">{{a}}50%{{/a}}</td></tr>
+        <tr><th>10th grade</th><td class="w">{{a}}17.5%{{/a}}</td><td class="w">{{a}}25%{{/a}}</td><td class="w">{{a}}7.5%{{/a}}</td><td class="w">{{a}}50%{{/a}}</td></tr>
+        <tr><th>Total</th><td class="w">{{a}}40%{{/a}}</td><td class="w">{{a}}40%{{/a}}</td><td class="w">{{a}}20%{{/a}}</td><td class="w">{{a}}100%{{/a}}</td></tr>
+      </table>
+      <ol class="parts">
+        <li>What percent of all the students are 10th graders who come by car? &nbsp;{{a}}25%{{/a}}</li>
+        <li>What percent of all the students walk? &nbsp;{{a}}20%{{/a}}</li>
+      </ol>
+    </div>
+  </div>

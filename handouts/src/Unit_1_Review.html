@@ -1,0 +1,380 @@
+<!--
+title: Unit 1 Review
+unit: 1
+unit_title: Displaying One Variable
+kind: Unit Review
+back: Review
+backword: review
+-->
+  <p><b>One data set, every tool.</b> 11 students said how many movies they watched last month.</p>
+  <p>3, 1, 15, 2, 4, 2, 6, 1, 3, 5, 2</p>
+
+  <table class="info">
+    <tr>
+      <td><b>1.1 Show the data.</b>
+        <p>A dot plot puts one dot on the number line for each value.</p></td>
+      <td>{{fig Unit_1/Review_dot_plot_movies}}
+        <p>Most students watched 1 to 6 movies. One student watched 15.</p></td>
+    </tr>
+    <tr>
+      <td><b>1.2 Find the center.</b>
+        <p>$\Sigma$ means add up.<br>$n$ is the number of values.<br>$\bar{x}$ is the mean.</p></td>
+      <td><p>$\bar{x} = \dfrac{\Sigma x}{n} = \dfrac{44}{11} = 4$ movies</p>
+        <p>In order: 1, 1, 2, 2, 2, <span class="fbox">3</span>, 3, 4, 5, 6, 15. &nbsp; Median $= 3$ movies</p>
+        <p>The tail is on the right. It pulls the mean up, so mean $>$ median.<br>The shape is <b>skewed right</b>.</p></td>
+    </tr>
+    <tr>
+      <td><b>1.3 Find the spread.</b>
+        <p>Odd number of values? Leave the median out of both halves.</p></td>
+      <td><p>Lower half 1, 1, <span class="fbox">2</span>, 2, 2. &nbsp; Q1 $= 2$</p>
+        <p>Upper half 3, 4, <span class="fbox">5</span>, 6, 15. &nbsp; Q3 $= 5$</p>
+        <p>Five-number summary: &nbsp;1, &nbsp;2, &nbsp;3, &nbsp;5, &nbsp;15</p>
+        <p>IQR $= Q_3 - Q_1 = 5 - 2 = 3$</p></td>
+    </tr>
+    <tr>
+      <td><b>1.4 Check for outliers.</b>
+        <p>A value below the lower fence or above the upper fence is an outlier.</p></td>
+      <td><p>Lower fence $= Q_1 - 1.5 \times \text{IQR} = 2 - 4.5 = -2.5$</p>
+        <p>Upper fence $= Q_3 + 1.5 \times \text{IQR} = 5 + 4.5 = 9.5$</p>
+        <p>15 is above 9.5, so <b>15 is an outlier</b>. On a box plot it is a dot. The whisker stops at 6.</p>
+        {{fig Unit_1/Review_box_plot_movies}}</td>
+    </tr>
+  </table>
+
+  <p><b>Read every box plot the same way.</b> Each of the 4 parts holds about 25% of the data. A long part means the values are spread out, not that there are more of them.</p>
+
+
+  {{practice-head}}
+
+  <div class="lessonhead">1.1 - Frequency Tables, Dot Plots, and Histograms</div>
+
+  <div class="ex split">
+    <div class="q"><div class="goal"><b class="tag">1.</b> I make and read a frequency table and a dot plot.</div>
+      20 students said how many times they went to the school library this month.<br>
+      2, 0, 1, 3, 1, 2, 2, 0, 4, 1, 2, 3, 1, 2, 5, 1, 2, 0, 3, 2</div>
+    <div class="work">
+      <div class="cols2">
+        <ol class="parts">
+          <li>Make a frequency table.
+            <table class="fill">
+              <tr><th>Visits</th><th>Tally</th><th>Frequency</th></tr>
+              <tr><td>0</td><td class="w">{{a}}{{tally 3}}{{/a}}</td><td>{{a}}3{{/a}}</td></tr>
+              <tr><td>1</td><td class="w">{{a}}{{tally 5}}{{/a}}</td><td>{{a}}5{{/a}}</td></tr>
+              <tr><td>2</td><td class="w">{{a}}{{tally 7}}{{/a}}</td><td>{{a}}7{{/a}}</td></tr>
+              <tr><td>3</td><td class="w">{{a}}{{tally 3}}{{/a}}</td><td>{{a}}3{{/a}}</td></tr>
+              <tr><td>4</td><td class="w">{{a}}{{tally 1}}{{/a}}</td><td>{{a}}1{{/a}}</td></tr>
+              <tr><td>5</td><td class="w">{{a}}{{tally 1}}{{/a}}</td><td>{{a}}1{{/a}}</td></tr>
+            </table></li>
+        </ol>
+        <ol class="parts" style="counter-reset: part 1">
+          <li>Make a dot plot.
+            {{fig Unit_1/Unit_1_Review_library_dotplot}}</li>
+        </ol>
+      </div>
+      <ol class="parts" style="counter-reset: part 2">
+        <li>What number of visits is most common? {{a}}2 visits (7 students){{/a}}
+          <div class="h03"></div></li>
+        <li>How many students went 3 or more times? {{a}}$3 + 1 + 1 = 5$ students{{/a}}
+          <div class="h03"></div></li>
+        <li>How many students went fewer than 2 times? {{a}}$3 + 5 = 8$ students{{/a}}
+          <div class="h03"></div></li>
+      </ol>
+      <p>This frequency table shows how many hours some students spent on homework last night.</p>
+      <div class="cols2">
+        <div>
+          <table class="data left">
+            <tr><th>Hours</th><th>Frequency</th></tr>
+            <tr><td>0</td><td>2</td></tr>
+            <tr><td>1</td><td>5</td></tr>
+            <tr><td>2</td><td>6</td></tr>
+            <tr><td>3</td><td>4</td></tr>
+            <tr><td>4</td><td>2</td></tr>
+            <tr><td>5</td><td>1</td></tr>
+          </table>
+        </div>
+        <ol class="parts" style="counter-reset: part 5">
+          <li>How many students are in the data?
+            <div class="h03">{{a}}$2 + 5 + 6 + 4 + 2 + 1 = 20${{/a}}</div></li>
+          <li>How many students spent 3 or more hours?
+            <div class="h03">{{a}}$4 + 2 + 1 = 7${{/a}}</div></li>
+          <li>Make a dot plot of the same data.
+            {{fig Unit_1/Unit_1_Review_homework_dotplot}}</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="ex split">
+    <div class="q"><div class="goal"><b class="tag">2.</b> I make and read a histogram.</div>
+      This histogram shows how many minutes some students spent on Khan Academy last night.</div>
+    <div class="work">
+      {{fig Unit_1/Review_histogram_khan}}
+      <ol class="parts">
+        <li>How many students spent from 15 to 30 minutes? {{a}}8{{/a}}</li>
+        <li>How many students spent 45 minutes or more? {{a}}$5 + 2 = 7${{/a}}</li>
+        <li>How many students are in the data? {{a}}$3 + 8 + 10 + 5 + 2 = 28${{/a}}</li>
+        <li>One student spent exactly 30 minutes. Which bar is she in?
+          <div class="h03">{{a}}The 30 to 45 bar. A value on the line goes in the bar on the right.{{/a}}</div></li>
+        <li>Can you tell how many students spent exactly 20 minutes? Explain.
+          <div class="h03">{{a}}No. The graph only shows that 8 students spent from 15 to 30 minutes. It hides the exact values.{{/a}}</div></li>
+      </ol>
+      <p>A runner recorded her time, in minutes, for 16 runs.</p>
+      <p>22, 25, 31, 28, 24, 35, 27, 29, 21, 33, 26, 30, 38, 25, 29, 32</p>
+      <div class="cols2">
+        <ol class="parts" style="counter-reset: part 5">
+          <li>Make a frequency table. Remember the histogram rule.
+            <table class="fill">
+              <tr><th>Minutes</th><th>Frequency</th></tr>
+              <tr><td>20 to 25</td><td class="wl">{{a}}3 &nbsp;(21, 22, 24){{/a}}</td></tr>
+              <tr><td>25 to 30</td><td class="wl">{{a}}7 &nbsp;(25, 25, 26, 27, 28, 29, 29){{/a}}</td></tr>
+              <tr><td>30 to 35</td><td class="wl">{{a}}4 &nbsp;(30, 31, 32, 33){{/a}}</td></tr>
+              <tr><td>35 to 40</td><td class="wl">{{a}}2 &nbsp;(35, 38){{/a}}</td></tr>
+            </table></li>
+        </ol>
+        <ol class="parts" style="counter-reset: part 6">
+          <li>Make a histogram. Label both axes.
+            {{fig Unit_1/Unit_1_Review_runs_histogram}}</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="lessonhead">1.2 - Mean, Median, and Shape</div>
+
+  <div class="ex split">
+    <div class="q"><div class="goal"><b class="tag">3.</b> I find the mean and the median of a data set.</div>
+      The temperature at noon for one week, in $^\circ$F:<br>
+      68, 72, 75, 70, 66, 72, 88</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Find $\Sigma x$ and $\bar{x}$.
+          <div class="h08">{{a}}$\Sigma x = 511$, &nbsp;$n = 7$, &nbsp;$\bar{x} = \frac{511}{7} = 73^\circ$F{{/a}}</div></li>
+        <li>Find the median.
+          <div class="h08">{{a}}In order: 66, 68, 70, <span class="fbox">72</span>, 72, 75, 88. &nbsp; Median $= 72^\circ$F{{/a}}</div></li>
+      </ol>
+      <p>Scores on a 20-point quiz:</p>
+      <p>15, 18, 12, 20, 17, 14, 19, 9</p>
+      <ol class="parts" style="counter-reset: part 2">
+        <li>Find $\bar{x}$.
+          <div class="h05">{{a}}$\Sigma x = 124$, &nbsp;$n = 8$, &nbsp;$\bar{x} = \frac{124}{8} = 15.5$ points{{/a}}</div></li>
+        <li>Find the median.
+          <div class="h05">{{a}}In order: 9, 12, 14, <span class="fbox">15</span>, <span class="fbox">17</span>, 18, 19, 20. &nbsp; Median $= (15 + 17) \div 2 = 16$ points{{/a}}</div></li>
+        <li>A data set has $\Sigma x = 96$ and $n = 8$. Find $\bar{x}$. {{a}}$\bar{x} = \frac{96}{8} = 12${{/a}}
+          <div class="h03"></div></li>
+        <li>Ana's first four quiz scores are 80, 75, 90, and 85. What score does she need on the fifth quiz so that the mean of all five scores is 84?
+          <div class="h05">{{a}}All five must add to $\Sigma x = 5 \times 84 = 420$. &nbsp; The first four add to $80 + 75 + 90 + 85 = 330$.<br>
+            $420 - 330 = 90$. She needs a <b>90</b>.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="ex split">
+    <div class="q"><div class="goal"><b class="tag">4.</b> I tell the shape of a graph, and I choose the best measure of center.</div></div>
+    <div class="work">
+      {{fig Unit_1/Review_shapes_abc}}
+      <ol class="parts">
+        <li>For each histogram, name the shape. Then write $<$, $>$, or $\approx$ to compare the mean and the median.
+          <table class="fill">
+            <tr><th>Graph</th><th>Shape</th><th>mean &nbsp;?&nbsp; median</th></tr>
+            <tr><td>A</td><td class="wl">{{a}}symmetric{{/a}}</td><td class="wl">{{a}}mean $\approx$ median{{/a}}</td></tr>
+            <tr><td>B</td><td class="wl">{{a}}skewed right{{/a}}</td><td class="wl">{{a}}mean $>$ median{{/a}}</td></tr>
+            <tr><td>C</td><td class="wl">{{a}}skewed left{{/a}}</td><td class="wl">{{a}}mean $<$ median{{/a}}</td></tr>
+          </table></li>
+      </ol>
+      <p>Seven students timed their trip to school, in minutes.</p>
+      <p>12, 10, 60, 14, 12, 17, 15</p>
+      <ol class="parts" style="counter-reset: part 1">
+        <li>Find the mean and the median.
+          <div class="h08">{{a}}$\Sigma x = 140$, &nbsp;$\bar{x} = \frac{140}{7} = 20$ minutes. &nbsp; In order: 10, 12, 12, <span class="fbox">14</span>, 15, 17, 60. &nbsp;Median $= 14$ minutes{{/a}}</div></li>
+        <li>Which better describes a typical trip, the mean or the median? Explain.
+          <div class="h08">{{a}}The median. 60 is far from the rest. It pulls the mean up. 6 of the 7 students take less time than the mean.{{/a}}</div></li>
+      </ol>
+      <p>Guess the shape of each data set: skewed left, symmetric, or skewed right. Explain.</p>
+      <ol class="parts" style="counter-reset: part 3">
+        <li>The length of phone calls. Most calls are short. A few calls are very long.
+          <div class="h05">{{a}}Skewed right. The few long calls make a tail on the right.{{/a}}</div></li>
+        <li>The heights of all adult men in Missouri.
+          <div class="h05">{{a}}Symmetric. Most men are near the middle height. Fewer are very short or very tall.{{/a}}</div></li>
+        <li>Scores on a test where most students did very well.
+          <div class="h05">{{a}}Skewed left. A few low scores make a tail on the left.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="lessonhead">1.3 - Quartiles, IQR, and Box Plots</div>
+
+  <div class="ex split">
+    <div class="q"><div class="goal"><b class="tag">5.</b> I find the five-number summary and the IQR.</div>
+      Find the five-number summary and the IQR of each data set.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>7, 15, 3, 12, 9, 20, 5, 11, 14
+          <div class="h1">{{a}}In order: 3, 5, 7, 9, <span class="fbox">11</span>, 12, 14, 15, 20. &nbsp; Lower half 3, 5, 7, 9: Q1 $= 6$. &nbsp; Upper half 12, 14, 15, 20: Q3 $= 14.5${{/a}}</div>
+          <p>Min <span class="b s">{{a}}3{{/a}}</span> &nbsp; Q1 <span class="b s">{{a}}6{{/a}}</span> &nbsp; Median <span class="b s">{{a}}11{{/a}}</span> &nbsp; Q3 <span class="b s">{{a}}14.5{{/a}}</span> &nbsp; Max <span class="b s">{{a}}20{{/a}}</span> &nbsp; IQR <span class="b s">{{a}}8.5{{/a}}</span></p></li>
+        <li>41, 35, 50, 28, 46, 39, 44, 31, 52, 37, 48, 42, 33
+          <div class="h1">{{a}}In order: 28, 31, 33, 35, 37, 39, <span class="fbox">41</span>, 42, 44, 46, 48, 50, 52.<br>
+            Lower half 28, 31, 33, 35, 37, 39: Q1 $= (33 + 35) \div 2 = 34$. &nbsp; Upper half 42, 44, 46, 48, 50, 52: Q3 $= (46 + 48) \div 2 = 47${{/a}}</div>
+          <p>Min <span class="b s">{{a}}28{{/a}}</span> &nbsp; Q1 <span class="b s">{{a}}34{{/a}}</span> &nbsp; Median <span class="b s">{{a}}41{{/a}}</span> &nbsp; Q3 <span class="b s">{{a}}47{{/a}}</span> &nbsp; Max <span class="b s">{{a}}52{{/a}}</span> &nbsp; IQR <span class="b s">{{a}}13{{/a}}</span></p></li>
+        <li>6, 14, 9, 21, 11, 8, 17, 12, 25, 10
+          <div class="h1">{{a}}In order: 6, 8, 9, 10, <span class="fbox">11</span>, <span class="fbox">12</span>, 14, 17, 21, 25. &nbsp; Median $= (11 + 12) \div 2 = 11.5$<br>
+            Lower half 6, 8, 9, 10, 11: Q1 $= 9$. &nbsp; Upper half 12, 14, 17, 21, 25: Q3 $= 17${{/a}}</div>
+          <p>Min <span class="b s">{{a}}6{{/a}}</span> &nbsp; Q1 <span class="b s">{{a}}9{{/a}}</span> &nbsp; Median <span class="b s">{{a}}11.5{{/a}}</span> &nbsp; Q3 <span class="b s">{{a}}17{{/a}}</span> &nbsp; Max <span class="b s">{{a}}25{{/a}}</span> &nbsp; IQR <span class="b s">{{a}}8{{/a}}</span></p></li>
+      </ol>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="ex split">
+    <div class="q"><div class="goal"><b class="tag">6.</b> I make a box plot.</div>
+      12 students scored these points on a 50-point project.<br>
+      38, 42, 30, 45, 47, 35, 40, 44, 28, 49, 41, 36</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Find the five-number summary.
+          <div class="h08">{{a}}In order: 28, 30, 35, 36, 38, <span class="fbox">40</span>, <span class="fbox">41</span>, 42, 44, 45, 47, 49. &nbsp; Median $= (40 + 41) \div 2 = 40.5$<br>
+            Lower half 28, 30, 35, 36, 38, 40: Q1 $= (35 + 36) \div 2 = 35.5$<br>
+            Upper half 41, 42, 44, 45, 47, 49: Q3 $= (44 + 45) \div 2 = 44.5${{/a}}</div>
+          <p>Min <span class="b s">{{a}}28{{/a}}</span> &nbsp; Q1 <span class="b s">{{a}}35.5{{/a}}</span> &nbsp; Median <span class="b s">{{a}}40.5{{/a}}</span> &nbsp; Q3 <span class="b s">{{a}}44.5{{/a}}</span> &nbsp; Max <span class="b s">{{a}}49{{/a}}</span></p></li>
+        <li>Make a box plot.
+          {{fig Unit_1/Unit_1_Review_project_boxplot}}</li>
+      </ol>
+      <p>The five-number summary of a data set is &nbsp;4, &nbsp;10, &nbsp;13, &nbsp;20, &nbsp;31.</p>
+      <ol class="parts" style="counter-reset: part 2">
+        <li>Make a box plot.
+          {{fig Unit_1/Unit_1_Review_summary_boxplot}}</li>
+        <li>Which part of the box plot is the longest? What does that tell you about the data?
+          <div class="h05">{{a}}The right whisker, from 20 to 31. The top 25% of the values are spread out.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="lessonhead">1.4 - Reading Box Plots and Outliers</div>
+
+  <div class="ex split">
+    <div class="q"><div class="goal"><b class="tag">7.</b> I read and compare box plots.</div>
+      These box plots show the lengths of fish caught in two lakes.</div>
+    <div class="work">
+      {{fig Unit_1/Review_box_plots_fish}}
+      <ol class="parts">
+        <li>Write the five-number summary for Lake A. {{a}}6, 9, 12, 14, 20{{/a}}</li>
+        <li>Which lake has the larger median? {{a}}Lake B (15 inches is more than 12 inches){{/a}}</li>
+        <li>Find the IQR of each lake. {{a}}Lake A: $14 - 9 = 5$ inches. &nbsp; Lake B: $19 - 12 = 7$ inches.{{/a}}</li>
+        <li>Which lake's fish lengths are more consistent? Explain.
+          <div class="h05">{{a}}Lake A. Its IQR (5) and its range (14) are both smaller than Lake B's (7 and 16).{{/a}}</div></li>
+        <li>About what percent of the fish in Lake B are longer than 12 inches? {{a}}75%{{/a}}</li>
+        <li>About what percent of the fish in Lake A are from 9 to 14 inches long? {{a}}50%{{/a}}</li>
+        <li>True or false? Explain. &nbsp; <i>Lake B's right whisker is the longest part, so most of Lake B's fish are from 19 to 24 inches long.</i>
+          <div class="h05">{{a}}False. Each part holds about 25% of the fish. A long part means those lengths are spread out.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="ex split">
+    <div class="q"><div class="goal"><b class="tag">8.</b> I use the 1.5 $\times$ IQR rule to find outliers.</div>
+      11 students scored these points on a test.<br>
+      65, 30, 72, 61, 68, 78, 63, 66, 60, 69, 64</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Find Q1, Q3, and the IQR.
+          <div class="h08">{{a}}In order: 30, 60, 61, 63, 64, <span class="fbox">65</span>, 66, 68, 69, 72, 78. &nbsp; Lower half 30, 60, 61, 63, 64: Q1 $= 61$<br>
+            Upper half 66, 68, 69, 72, 78: Q3 $= 69$. &nbsp; IQR $= 69 - 61 = 8${{/a}}</div></li>
+        <li>Find the lower fence and the upper fence.
+          <div class="h05">{{a}}$1.5 \times 8 = 12$. &nbsp; Lower fence $= 61 - 12 = 49$. &nbsp; Upper fence $= 69 + 12 = 81${{/a}}</div></li>
+        <li>Which values are outliers? Explain.
+          <div class="h05">{{a}}30 is an outlier, because it is below 49. 78 is <b>not</b> an outlier, because it is not above 81.{{/a}}</div></li>
+      </ol>
+      <p>A store sells 8 used bikes. Here are the prices, in dollars.</p>
+      <p>66, 40, 150, 60, 80, 50, 70, 64</p>
+      <ol class="parts" style="counter-reset: part 3">
+        <li>Find Q1, the median, Q3, and the IQR.
+          <div class="h08">{{a}}In order: 40, 50, 60, <span class="fbox">64</span>, <span class="fbox">66</span>, 70, 80, 150. &nbsp; Median $= (64 + 66) \div 2 = 65$<br>
+            Lower half 40, 50, 60, 64: Q1 $= (50 + 60) \div 2 = 55$. &nbsp; Upper half 66, 70, 80, 150: Q3 $= (70 + 80) \div 2 = 75$<br>
+            IQR $= 75 - 55 = 20${{/a}}</div></li>
+        <li>Find the fences. Which values are outliers?
+          <div class="h05">{{a}}$1.5 \times 20 = 30$. &nbsp; $55 - 30 = 25$ &nbsp;and&nbsp; $75 + 30 = 105$. &nbsp; 150 is an outlier.{{/a}}</div></li>
+        <li>Make a box plot. Show each outlier as a dot.
+          {{fig Unit_1/Unit_1_Review_bikes_boxplot}}</li>
+        <li>Why does the right whisker stop at 80?
+          <div class="h03">{{a}}80 is the largest price that is not an outlier.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="lessonhead">Test-Style Questions</div>
+  <p>A test asks the same questions with more words. Read slowly. Circle the best answer.</p>
+
+  <div class="ex">
+    <div class="q"><b class="tag">9.</b> A teacher recorded the number of minutes each of her 28 students spent on Khan Academy last night. The results are shown in the histogram in Problem 2. Which statement is supported by the histogram?</div>
+    <div class="work">
+      <table class="choices">
+        <tr><td>{{opt A}}</td><td>Exactly 8 students spent 20 minutes on Khan Academy.</td></tr>
+        <tr><td>{{optans B}}</td><td>The interval from 30 to 45 minutes contains more students than any other interval.</td></tr>
+        <tr><td>{{opt C}}</td><td>No student spent more than 60 minutes on Khan Academy.</td></tr>
+        <tr><td>{{opt D}}</td><td>Half of the students spent less than 30 minutes on Khan Academy.</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">10.</b> The distribution of a data set is skewed to the right. Which statement best describes the relationship between the mean and the median of the data set?</div>
+    <div class="work">
+      <table class="choices">
+        <tr><td>{{opt A}}</td><td>The mean is less than the median.</td></tr>
+        <tr><td>{{optans B}}</td><td>The mean is greater than the median.</td></tr>
+        <tr><td>{{opt C}}</td><td>The mean is equal to the median.</td></tr>
+        <tr><td>{{opt D}}</td><td>The median is twice the mean.</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">11.</b> The five-number summary of a data set is 12, 18, 25, 31, 40. What is the interquartile range (IQR) of the data set?</div>
+    <div class="work">
+      <table class="choices">
+        <tr><td>{{opt A}}</td><td>7</td></tr>
+        <tr><td>{{optans B}}</td><td>13</td></tr>
+        <tr><td>{{opt C}}</td><td>25</td></tr>
+        <tr><td>{{opt D}}</td><td>28</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">12.</b> The box plots in Problem 7 show the lengths of fish caught in Lake A and Lake B. Which statement is true?</div>
+    <div class="work">
+      <table class="choices">
+        <tr><td>{{opt A}}</td><td>The median length in Lake A is greater than the median length in Lake B.</td></tr>
+        <tr><td>{{optans B}}</td><td>The interquartile range of Lake A is less than the interquartile range of Lake B.</td></tr>
+        <tr><td>{{opt C}}</td><td>The lengths in Lake A have a greater range than the lengths in Lake B.</td></tr>
+        <tr><td>{{opt D}}</td><td>About 50% of the fish in Lake B are longer than 19 inches.</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">13.</b> For a data set, the first quartile is 40 and the third quartile is 52. Using the 1.5 $\times$ IQR rule, which value would be an outlier?</div>
+    <div class="work">
+      <table class="choices">
+        <tr><td>{{opt A}}</td><td>25</td></tr>
+        <tr><td>{{opt B}}</td><td>35</td></tr>
+        <tr><td>{{opt C}}</td><td>68</td></tr>
+        <tr><td>{{optans D}}</td><td>74</td></tr>
+      </table>
+      {{a}}IQR $= 52 - 40 = 12$. &nbsp; $1.5 \times 12 = 18$. &nbsp; Fences: $40 - 18 = 22$ and $52 + 18 = 70$. &nbsp; 74 is above 70.{{/a}}
+    </div>
+  </div>

@@ -17,7 +17,7 @@ Choosing A, B, C gives the **same committee** as choosing C, A, B. The order doe
 :::
 
 :::{.guided-notes-link}
-[Printable mini lesson](/handouts/Unit_6/6.6_Combinations.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable mini lesson](/handouts/Unit_6/6.6_Combinations.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 {{< khan 6.6 >}}

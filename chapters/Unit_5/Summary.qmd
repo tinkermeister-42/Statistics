@@ -3,7 +3,7 @@
 Every type of study, sampling method, and experiment design from Unit 5 in one place. Use it while you work on the review.
 
 :::{.guided-notes-link}
-[Printable summary](/handouts/Unit_5/Unit_5_Summary.pdf){target="_blank"} - these tables on two pages, to print and keep.
+[Printable summary](/handouts/Unit_5/Unit_5_Summary.html){target="_blank"} - these tables on two pages, to print and keep.
 :::
 
 ### Types of Studies

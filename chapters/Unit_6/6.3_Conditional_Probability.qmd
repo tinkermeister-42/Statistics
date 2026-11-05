@@ -18,7 +18,7 @@ Knowing that the student was late changes the probability. In this lesson, you f
 :::
 
 :::{.guided-notes-link}
-[Printable mini lesson](/handouts/Unit_6/6.3_Conditional_Probability.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable mini lesson](/handouts/Unit_6/6.3_Conditional_Probability.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 {{< khan 6.3 >}}

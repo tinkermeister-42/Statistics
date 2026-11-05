@@ -1,0 +1,123 @@
+<!--
+title: Unit 2 Summary: Analyzing One Variable
+unit: 2
+unit_title: Analyzing One Variable
+kind: Unit Summary
+back: Summary
+backword: summary
+-->
+  <h3>Standard Deviation</h3>
+  <table class="info dense">
+    <colgroup><col style="width:1.6in"><col></colgroup>
+    <tr><td><b>Standard deviation</b></td><td>The SD is about how far the values usually are from the mean.</td></tr>
+    <tr><td><b>Small SD</b></td><td>The values are close to the mean. Player A scores close to 10 every game.</td></tr>
+    <tr><td><b>Large SD</b></td><td>The values are spread out. Player B might score 2 or 18.</td></tr>
+    <tr><td><b>Facts</b></td><td>The SD is never negative. It is 0 only when every value is the same. It has the same units as the data (points, minutes, inches).</td></tr>
+  </table>
+
+  <table class="info dense">
+    <colgroup><col style="width:3in"><col></colgroup>
+    <tr><th>Step</th><th>Example: 7, 7, 10, 13, 13</th></tr>
+    <tr><td>1. Find the mean, $\bar{x}$.</td><td>$\bar{x} = 50 \div 5 = 10$</td></tr>
+    <tr><td>2. Subtract the mean from each value.</td><td>$-3, -3, 0, 3, 3$</td></tr>
+    <tr><td>3. Square each result.</td><td>$9, 9, 0, 9, 9$</td></tr>
+    <tr><td>4. Add the squares.</td><td>$\Sigma(x - \bar{x})^2 = 9 + 9 + 0 + 9 + 9 = 36$</td></tr>
+    <tr><td>5. Divide by $n - 1$. This is the <b>variance</b>.</td><td>$36 \div 4 = 9$</td></tr>
+    <tr><td>6. Take the square root.</td><td>$s = \sqrt{9} = 3$</td></tr>
+    <tr><td><b>The formula:</b> &nbsp;$s = \sqrt{\dfrac{\Sigma(x - \bar{x})^2}{n - 1}}$</td>
+      <td>$\Sigma$ (capital sigma) means <b>add up</b>. $\Sigma(x - \bar{x})^2$ means: find $(x - \bar{x})^2$ for every value, then add them all. $n$ is how many values there are. $s$ is the standard deviation.</td></tr>
+  </table>
+
+  <h3>Choosing Measures</h3>
+  <table class="info dense">
+    <tr><th>Shape of the data</th><th>Center</th><th>Spread</th></tr>
+    <tr><td>Symmetric, no outliers</td><td>mean</td><td>standard deviation</td></tr>
+    <tr><td>Skewed, or has outliers</td><td>median</td><td>IQR</td></tr>
+  </table>
+  <p><b>Why:</b> an outlier pulls the mean and the SD. It does not pull the median and the IQR much.</p>
+
+  <h3>Comparing Two Distributions</h3>
+  <table class="info dense">
+    <colgroup><col style="width:0.95in"><col style="width:2.2in"><col></colgroup>
+    <tr><th></th><th>Ask</th><th>Example: hours of sleep last night</th></tr>
+    <tr><td><b>Shape</b></td><td>Symmetric or skewed?</td><td>9th grade is symmetric. 12th grade is skewed right.</td></tr>
+    <tr><td><b>Center</b></td><td>Which group is higher? (median or mean)</td><td>The median for 9th grade (8 hours) is greater than for 12th grade (6 hours). 9th graders usually sleep about 2 hours more.</td></tr>
+    <tr><td><b>Spread</b></td><td>Which group is more spread out? (IQR or SD)</td><td>Both groups have an IQR of 2 hours. The spreads are about the same.</td></tr>
+    <tr><td><b>Outliers</b></td><td>Any values far from the rest?</td><td>One 12th grader slept 12 hours. That is an outlier (the upper fence is 10).</td></tr>
+  </table>
+  <p><b>Use comparing words:</b> &ldquo;The median for 9th grade is <b>2 hours greater than</b> for 12th grade.&rdquo; Use numbers and the context.</p>
+
+  <h3>Percentiles</h3>
+  <table class="info dense">
+    <colgroup><col style="width:3.5in"><col></colgroup>
+    <tr><th>Percentile</th><th>Example: 20 students took a test</th></tr>
+    <tr><td>The percent of the data that is <b>below</b> the value.<br>
+        $\dfrac{\text{number of values below}}{\text{total number of values}} \times 100$</td>
+      <td>15 students scored below 85. $15 \div 20 = 0.75$. A score of 85 is at the <b>75th percentile</b>. It is higher than 75% of the class.</td></tr>
+    <tr><td>A percentile is <b>not</b> a percent score.</td>
+      <td>Scoring at the 75th percentile does <b>not</b> mean you got 75% of the questions right. It means you scored higher than 75% of the people.</td></tr>
+  </table>
+
+  {{break}}
+
+  <h3>Z-Scores</h3>
+  <table class="info dense">
+    <colgroup><col style="width:1.35in"><col style="width:3.15in"><col></colgroup>
+    <tr><th></th><th>What it tells</th><th>Example: mean 70, SD 10</th></tr>
+    <tr><td><b>Z-score</b><br>$z = \dfrac{x - \mu}{\sigma}$</td>
+      <td>How many SDs a value is above or below the mean. $\mu$ (mu) is the mean. $\sigma$ (small sigma) is the SD.</td>
+      <td>$z = \dfrac{85 - 70}{10} = 1.5$<br>85 is <b>1.5 SDs above</b> the mean.</td></tr>
+    <tr><td><b>Sign of $z$</b></td><td>$z > 0$: above the mean.<br>$z < 0$: below the mean. &nbsp;$z = 0$: equal to the mean.</td>
+      <td>55 has $z = -1.5$. It is 1.5 SDs <b>below</b> the mean.</td></tr>
+    <tr><td><b>Going backward</b></td><td>$x = \mu + z\sigma$</td><td>$z = -2$: &nbsp;$70 + (-2)(10) = 50$</td></tr>
+    <tr><td><b>Comparing</b></td><td>Z-scores let you compare values from <b>different</b> data sets.</td>
+      <td>Ana: 85, $z = 1.5$. Ben: 80 (mean 74, SD 3), $z = 2$. Ben did better compared to his class.</td></tr>
+  </table>
+
+  <h3>Normal Distributions and the Empirical Rule</h3>
+  <div class="figrow">
+    {{fig Unit_2/2.4_empirical w=3in left}}
+    <div>
+      <table class="info dense">
+        <tr><th>Within</th><th>From</th><th>About</th></tr>
+        <tr><td>1 SD</td><td>$\mu - \sigma$ to $\mu + \sigma$</td><td>68%</td></tr>
+        <tr><td>2 SDs</td><td>$\mu - 2\sigma$ to $\mu + 2\sigma$</td><td>95%</td></tr>
+        <tr><td>3 SDs</td><td>$\mu - 3\sigma$ to $\mu + 3\sigma$</td><td>99.7%</td></tr>
+      </table>
+      <p>A <b>normal distribution</b> is bell-shaped and symmetric. The mean and the median are in the center (they are equal). Two numbers describe it: the mean $\mu$ (center) and the SD $\sigma$ (spread).</p>
+    </div>
+  </div>
+
+  <table class="info dense">
+    <colgroup><col style="width:4.1in"><col></colgroup>
+    <tr><th>Example: heights, mean 64 inches, SD 3 inches</th><th>Answer</th></tr>
+    <tr><td>Percent from 61 to 67 inches</td><td>68% (within 1 SD)</td></tr>
+    <tr><td>Percent from 58 to 70 inches</td><td>95% (within 2 SDs)</td></tr>
+    <tr><td>Percent taller than 67 inches</td><td>$13.5\% + 2.35\% + 0.15\% = 16\%$</td></tr>
+    <tr><td>Percentile of 67 inches</td><td>$100\% - 16\% = 84\%$, the 84th percentile</td></tr>
+  </table>
+  <p><b>Changes:</b> a larger SD makes the curve wider and flatter. A different mean moves the curve left or right.</p>
+
+  <h3>Normal Calculations with a Z-Table</h3>
+  <p><b>The z-table gives the area to the left of $z$.</b> That is the proportion of the data below $z$.</p>
+  <table class="info dense">
+    <colgroup><col style="width:4.1in"><col></colgroup>
+    <tr><th>Step</th><th>Example: heights</th></tr>
+    <tr><td>1. Draw the curve. Shade the part the question asks about.</td><td>Shorter than 68 inches: shade below 68.</td></tr>
+    <tr><td>2. Find each z-score: &nbsp;$z = \frac{x - \mu}{\sigma}$. Round to 2 decimal places.</td><td>$z = \frac{68 - 64}{3} = 1.33$</td></tr>
+    <tr><td>3. Look up each z-score in the table.</td><td>Row 1.3, column .03: .9082, so <b>90.82%</b></td></tr>
+    <tr><td>4. <b>Below:</b> use the table. <b>Above:</b> $1 -$ table.<br><b>Between:</b> subtract the two table values.</td>
+      <td>Taller than 68: $1 - .9082 = .0918$, <b>9.18%</b><br>62 to 68: $z = \frac{62 - 64}{3} = -0.67$, table .2514.<br>$.9082 - .2514 = .6568$, <b>65.68%</b></td></tr>
+  </table>
+
+  <h3>Normal Calculations in Reverse</h3>
+  <table class="info dense">
+    <colgroup><col style="width:3.9in"><col></colgroup>
+    <tr><th>Step</th><th>Example: heights, 90th percentile</th></tr>
+    <tr><td>1. Draw the curve. Shade the area to the <b>left</b>.</td><td>90% is to the left. The area is .9000.</td></tr>
+    <tr><td>2. Look <b>inside</b> the table for the area closest to it.</td><td>The closest area is .8997.</td></tr>
+    <tr><td>3. Read the z-score from the row and the column.</td><td>Row 1.2, column .08: &nbsp;$z = 1.28$</td></tr>
+    <tr><td>4. Find the value: &nbsp;$x = \mu + z\sigma$</td><td>$64 + 1.28 \times 3 = 67.84$, about <b>67.8 inches</b></td></tr>
+    <tr><td><b>Bottom</b> 10%: the area to the left is .10.</td><td>Closest area .1003, at $z = -1.28$.<br>$64 + (-1.28)(3) = 60.16$, about <b>60.2 inches</b></td></tr>
+    <tr><td><b>Top</b> 10%: the area to the left is $1 - .10 = .90$.</td><td>Subtract from 1 <b>before</b> you look in the table.</td></tr>
+  </table>

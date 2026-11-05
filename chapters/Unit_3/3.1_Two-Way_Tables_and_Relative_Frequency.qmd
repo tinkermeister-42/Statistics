@@ -22,7 +22,7 @@ A list of all their answers is hard to read. A {{< glink "two-way table" >}} sho
 :::
 
 :::{.guided-notes-link}
-[Printable mini lesson](/handouts/Unit_3/3.1_Two-Way_Tables_and_Relative_Frequency.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable mini lesson](/handouts/Unit_3/3.1_Two-Way_Tables_and_Relative_Frequency.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 {{< khan 3.1 >}}

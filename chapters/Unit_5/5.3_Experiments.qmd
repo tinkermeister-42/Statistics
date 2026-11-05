@@ -27,7 +27,7 @@ An {{< glink experiment >}} solves this. The researcher gives the treatment on p
 :::
 
 :::{.guided-notes-link}
-[Printable mini lesson](/handouts/Unit_5/5.3_Experiments.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable mini lesson](/handouts/Unit_5/5.3_Experiments.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 {{< khan 5.4 >}}

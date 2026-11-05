@@ -1,0 +1,92 @@
+<!--
+title: Unit 7 Summary: Probability Distributions
+unit: 7
+unit_title: Probability Distributions
+kind: Unit Summary
+back: Summary
+backword: summary
+-->
+  <h2>Random Variables and Distributions</h2>
+  <div class="cols2">
+    <p>Flip a coin 2 times. Let $X$ = the number of heads.</p>
+    <div>
+      <table class="data">
+        <tr><th>$x$ (heads)</th><td>0</td><td>1</td><td>2</td></tr>
+        <tr><th>$P(x)$</th><td>$\frac{1}{4}$</td><td>$\frac{2}{4} = \frac{1}{2}$</td><td>$\frac{1}{4}$</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <table class="info dense">
+    <tr><th style="width:1.4in">Idea</th><th style="width:2.9in">What it means</th><th>Example: flip a coin 2 times</th></tr>
+    <tr><td>Random variable</td><td>A number that comes from a chance process.</td><td>$X$ = the number of heads.</td></tr>
+    <tr><td>$X$, $x$, and $P(x)$</td><td>Capital $X$ is the random variable. Small $x$ is one of its values. $P(x)$ means the probability that $X$ equals $x$.</td><td>$x$ is 0, 1, or 2. &nbsp;$P(1) = \frac{1}{2}$.</td></tr>
+    <tr><td>Probability distribution</td><td>It lists every value of $X$ and its probability. It can be a table or a graph.</td><td>The table above.</td></tr>
+    <tr><td>Valid distribution</td><td>1. Every probability is from 0 to 1.<br>2. The probabilities add to 1: $\Sigma P(x) = 1$ ($\Sigma$ means add up).</td><td>$\frac{1}{4} + \frac{1}{2} + \frac{1}{4} = 1$. Valid.</td></tr>
+    <tr><td>Using a distribution</td><td>Add the probabilities of the values you want.</td><td>$P(X \ge 1) = P(1) + P(2)$<br>$= \frac{1}{2} + \frac{1}{4} = \frac{3}{4}$</td></tr>
+  </table>
+
+  <p><b>Symbols:</b> $\ge$ means “greater than or equal to.” &nbsp;&nbsp; $\le$ means “less than or equal to.”</p>
+
+  <h2>Theoretical or Empirical?</h2>
+  <table class="info dense">
+    <tr><th style="width:1.4in">Kind</th><th style="width:2.9in">Where it comes from</th><th>Example</th></tr>
+    <tr><td>Theoretical</td><td>Reasoning about the chance process (equally likely outcomes, or the multiplication rule).</td><td>The coin flips above.</td></tr>
+    <tr><td>Empirical</td><td>Data. Divide each count by the total.</td><td>50 families: 0 cars: 5, 1 car: 20, 2 cars: 18, 3 cars: 7. So $P(0) = \frac{5}{50} = 0.10$, $P(1) = 0.40$, $P(2) = 0.36$, $P(3) = 0.14$.</td></tr>
+  </table>
+
+  <h2>Expected Value</h2>
+  <div class="cols2">
+    <p>The number of goals a soccer team scores in a game:</p>
+    <div>
+      <table class="data">
+        <tr><th>$x$ (goals)</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><th>$P(x)$</th><td>0.1</td><td>0.3</td><td>0.3</td><td>0.2</td><td>0.1</td></tr>
+        <tr><th>$x \cdot P(x)$</th><td>0</td><td>0.3</td><td>0.6</td><td>0.6</td><td>0.4</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <table class="info dense">
+    <tr><th style="width:1.4in">Tool</th><th style="width:2.9in">How it works</th><th>Example: goals in a game</th></tr>
+    <tr><td>Expected value</td><td>$E(X) = \Sigma\, x \cdot P(x)$. &nbsp;$E(X)$ means the expected value of $X$. Multiply each value by its probability. Then add them all up.</td><td>$E(X) = 0 + 0.3 + 0.6 + 0.6 + 0.4$<br>$= 1.9$ goals</td></tr>
+    <tr><td>Mean of $X$</td><td>The expected value is also called the <b>mean</b> of $X$, written $\mu_X$ ($\mu$ is “mu”).</td><td>$\mu_X = 1.9$ goals</td></tr>
+    <tr><td>What it means</td><td>A <b>long-run average</b>. It tells you what happens over many tries. It does not tell you what happens on one try.</td><td>Over many games, the team scores about 1.9 goals per game on average. No single game has 1.9 goals.</td></tr>
+  </table>
+
+  {{break}}
+
+  <h2>Fair or Not?</h2>
+  <table class="info dense">
+    <tr><th style="width:1.4in"></th><th style="width:2.9in">What it means</th><th>Example</th></tr>
+    <tr><td>Fair method of choosing</td><td>Every person has the same probability of being chosen.</td><td>Roll a number cube. 1 or 2: Ana, 3 or 4: Ben, 5 or 6: Cai. Each has $\frac{2}{6} = \frac{1}{3}$. <b>Fair.</b></td></tr>
+    <tr><td>Not a fair method</td><td>Not every person has the same probability.</td><td>Flip 2 coins. HH: Ana, TT: Ben, one of each: Cai. Ana $\frac{1}{4}$, Ben $\frac{1}{4}$, Cai $\frac{2}{4} = \frac{1}{2}$. <b>Not fair.</b></td></tr>
+    <tr><td>Fair game</td><td>The expected value of the money you win or lose is <b>0</b>. On average, no one wins or loses money.</td><td>Roll a number cube. You win \$3 if you roll a 6. You pay \$1 for any other number.<br>$E(X) = 3 \cdot \frac{1}{6} + (-1) \cdot \frac{5}{6} = -\frac{2}{6} \approx -\$0.33$<br>You lose about 33 cents a game. <b>Not fair.</b></td></tr>
+  </table>
+
+  <h2>Expected Payoff</h2>
+  <p>A lottery ticket costs \$2. 1 in 1,000 tickets wins \$500. 1 in 50 tickets wins \$10. The rest win nothing.</p>
+  <table class="data left">
+    <tr><th>Outcome</th><th>Net gain $x$</th><th>$P(x)$</th><th>$x \cdot P(x)$</th></tr>
+    <tr><td>Win \$500</td><td>$500 - 2 = 498$</td><td>0.001</td><td>0.498</td></tr>
+    <tr><td>Win \$10</td><td>$10 - 2 = 8$</td><td>0.02</td><td>0.16</td></tr>
+    <tr><td>Win nothing</td><td>$-2$</td><td>0.979</td><td>$-1.958$</td></tr>
+    <tr><td colspan="3" style="text-align:right">$E(X) = \Sigma\, x \cdot P(x)$</td><td>$-1.30$</td></tr>
+  </table>
+
+  <table class="info dense">
+    <tr><th style="width:1.4in">Tool</th><th style="width:2.9in">How it works</th><th>Example: the lottery ticket</th></tr>
+    <tr><td>Net gain</td><td>Net gain $=$ what you win $-$ what you paid. It is negative when you lose money.</td><td>Win \$500: $500 - 2 = 498$.<br>Win nothing: $-2$.</td></tr>
+    <tr><td>Expected payoff</td><td>Let $X$ = the net gain. Then $E(X) = \Sigma\, x \cdot P(x)$.</td><td>$0.498 + 0.16 + (-1.958) = -1.30$</td></tr>
+    <tr><td>What it means</td><td>The amount you win or lose on average.</td><td>On average, a buyer <b>loses \$1.30</b> per ticket. The lottery keeps that money.</td></tr>
+  </table>
+
+  <p><b>Negative expected payoff:</b> you lose money on average. &nbsp;&nbsp; <b>Expected payoff of 0:</b> the game is fair.</p>
+
+  <h2>Protection Plans</h2>
+  <table class="info dense">
+    <tr><th style="width:1.4in">Step</th><th style="width:2.9in">What to do</th><th>Example: a phone</th></tr>
+    <tr><td>Expected cost with no plan</td><td>Multiply the chance it breaks by the cost to replace it.</td><td>A phone costs \$300 to replace. The chance it breaks this year is 0.10.<br>$0.10 \cdot 300 = \$30$</td></tr>
+    <tr><td>Compare</td><td>Compare it to the cost of the plan.</td><td>The plan costs \$40 for the year. On average, the plan costs \$10 more. That is how the company makes money.</td></tr>
+    <tr><td>Think about risk</td><td>Expected value is one part of a decision. Risk is another part: could you pay the big bill if it came?</td><td>The plan protects you from a sudden \$300 bill. If you could not pay it, the plan might be worth it to you.</td></tr>
+  </table>

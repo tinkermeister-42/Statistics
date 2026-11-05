@@ -1,0 +1,13 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}\input{../keyed}
+% Handout 7.1, problem 4(c): blank bar graph for the student; the key draws the bars.
+\begin{document}
+\begin{tikzpicture}[x=1.2cm,y=8cm]
+  \foreach \t in {0,0.1,...,0.501} {\draw[gray!25] (-0.6,\t) -- (3.6,\t); \node[left,font=\small] at (-0.6,\t) {\pgfmathprintnumber{\t}};}
+  \draw[thick] (-0.6,0) -- (3.6,0); \draw[thick] (-0.6,0) -- (-0.6,0.5);
+  \foreach \x in {0,...,3} \node[below] at (\x,0) {\x};
+  \node[below=16pt] at (1.5,0) {$x$ = number of heads in 3 flips};
+  \node[rotate=90,above=22pt] at (-0.6,0.25) {$P(x)$};
+  \ifkey\foreach \x/\p in {0/0.125,1/0.375,2/0.375,3/0.125} \draw[keyred,thick,fill=red!12] (\x-0.35,0) rectangle (\x+0.35,\p);\fi
+\end{tikzpicture}
+\end{document}

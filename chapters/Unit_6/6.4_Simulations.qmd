@@ -20,7 +20,7 @@ The math says $P(\text{heads}) = \frac{1}{2}$. Real trials give numbers near $\f
 :::
 
 :::{.guided-notes-link}
-[Printable mini lesson](/handouts/Unit_6/6.4_Simulations.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable mini lesson](/handouts/Unit_6/6.4_Simulations.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 {{< khan 6.4 >}}

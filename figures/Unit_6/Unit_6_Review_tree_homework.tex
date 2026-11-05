@@ -1,0 +1,11 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}\input{../keyed}
+% Unit 6 review, problem 6(a): blanks for three branches and the four paths; the key fills them in red.
+\newcommand{\ans}[1]{\ifkey{\color{keyred}#1}\else\phantom{#1}\fi}
+% blanks on a tree diagram, filled in red on the key (from the review handout)
+\newcommand{\tb}[1]{\underline{\makebox[0.42in]{\ans{#1}}}}
+\newcommand{\te}[1]{\hspace{0.15in}\underline{\makebox[1.3in][l]{\ans{#1}}}}
+\begin{document}
+\tree{Online}{0.75}{Paper}{\tb{0.25}}{On time}{Late}{0.9}{\tb{0.1}}{0.7}{\tb{0.3}}%
+{\te{$0.75 \cdot 0.9 = 0.675$}}{\te{$0.75 \cdot 0.1 = 0.075$}}{\te{$0.25 \cdot 0.7 = 0.175$}}{\te{$0.25 \cdot 0.3 = 0.075$}}
+\end{document}

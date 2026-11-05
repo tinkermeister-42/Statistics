@@ -1,0 +1,117 @@
+<!--
+lesson: 6.2
+title: The Multiplication Rule
+unit: 6
+unit_title: Probability
+kind: Mini Lesson
+back: 6.2_The_Multiplication_Rule
+-->
+  <p>You guess on 3 multiple-choice questions. Each has 4 choices. What is the probability you get all 3 right?
+    Each guess has a $\dfrac{1}{4}$ chance. The questions do not affect each other, so multiply:</p>
+  $$P(\text{all 3 right}) = \dfrac{1}{4} \cdot \dfrac{1}{4} \cdot \dfrac{1}{4} = \dfrac{1}{64}$$
+
+  <p><b>Independent events.</b> Two events are <b>independent</b> if one happening does not change the probability of the other.</p>
+
+  <div class="keys">
+    <b>Independent:</b> &nbsp;&nbsp; $P(A \cap B) = P(A) \cdot P(B)$
+  </div>
+
+  <p><b>Example:</b> Flip a coin and roll a number cube. &nbsp; $P(\text{heads} \cap 6) = \dfrac{1}{2} \cdot \dfrac{1}{6} = \dfrac{1}{12}$</p>
+
+  <p><b>Dependent events.</b> Two events are <b>dependent</b> if one happening changes the probability of the other.
+    A bag has 5 red and 3 blue marbles. Draw 2 marbles.</p>
+
+  <table class="info">
+    <tr><td><b>With replacement</b> (put the first one back)</td><td><b>Without replacement</b> (keep the first one out)</td></tr>
+    <tr><td>The second draw is the same as the first.<br>Independent.</td>
+      <td>The bag changes: 4 red and 3 blue are left.<br>Dependent.</td></tr>
+    <tr><td>$P(\text{red, red}) = \dfrac{5}{8} \cdot \dfrac{5}{8} = \dfrac{25}{64}$</td>
+      <td>$P(\text{red, red}) = \dfrac{5}{8} \cdot \dfrac{4}{7} = \dfrac{20}{56} = \dfrac{5}{14}$</td></tr>
+  </table>
+
+  <div class="keys">
+    <p><b>General multiplication rule:</b> &nbsp;&nbsp; $P(A \cap B) = P(A) \cdot P(B \mid A)$</p>
+    <p>$P(B \mid A)$ is read &ldquo;the probability of $B$ <b>given</b> $A$.&rdquo; It is the probability of $B$ after $A$ has already happened.</p>
+  </div>
+
+  <p>In the marble example: $P(\text{red second} \mid \text{red first}) = \dfrac{4}{7}$.</p>
+
+  <div class="box tint">
+    <div class="lbl">Tip</div>
+    &ldquo;At least one&rdquo; questions are often easier with the complement.
+    $P(\text{at least one wrong}) = 1 - P(\text{all right})$.
+  </div>
+
+
+  {{practice-head}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">1.</b> These events are independent. Find each probability.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Flip a coin 3 times. $P(\text{3 heads})$ &nbsp;{{a}}$\frac{1}{2} \cdot \frac{1}{2} \cdot \frac{1}{2} = \frac{1}{8}${{/a}}
+          <div class="h03"></div></li>
+        <li>Roll a number cube twice. $P(\text{two 6s})$ &nbsp;{{a}}$\frac{1}{6} \cdot \frac{1}{6} = \frac{1}{36}${{/a}}
+          <div class="h03"></div></li>
+        <li>A basketball player makes 80% of her free throws. $P(\text{she makes 2 in a row})$ &nbsp;{{a}}$0.8 \cdot 0.8 = 0.64${{/a}}
+          <div class="h03"></div></li>
+        <li>Same player. $P(\text{she misses both})$ &nbsp;{{a}}$0.2 \cdot 0.2 = 0.04${{/a}}
+          <div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> You guess on a 5-question true-or-false quiz.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>$P(\text{all 5 right})$ &nbsp;{{a}}$\left(\frac{1}{2}\right)^5 = \frac{1}{32}${{/a}}
+          <div class="h03"></div></li>
+        <li>$P(\text{at least one wrong})$ &nbsp;{{a}}$1 - \frac{1}{32} = \frac{31}{32}${{/a}}
+          <div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">3.</b> A bag has 4 green and 6 yellow marbles. Draw 2 marbles.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Find $P(\text{green, green})$ <b>with</b> replacement.
+          <div class="h05">{{a}}$\frac{4}{10} \cdot \frac{4}{10} = \frac{16}{100} = \frac{4}{25}${{/a}}</div></li>
+        <li>Find $P(\text{green, green})$ <b>without</b> replacement.
+          <div class="h05">{{a}}$\frac{4}{10} \cdot \frac{3}{9} = \frac{12}{90} = \frac{2}{15}${{/a}}</div></li>
+        <li>Why is the answer to (b) smaller?
+          <div class="h08">{{a}}After a green is taken out, fewer greens are left, so the second green is less likely.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">4.</b> Independent or dependent? Explain.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Flip a coin, then roll a number cube.
+          <div class="h03">{{a}}Independent. The coin does not change the cube.{{/a}}</div></li>
+        <li>Pick a class president, then pick a vice president from the students who are left.
+          <div class="h03">{{a}}Dependent. The president cannot be picked again, so the choices change.{{/a}}</div></li>
+        <li>Draw a card, put it back, shuffle, and draw again.
+          <div class="h03">{{a}}Independent. The deck is the same for the second draw.{{/a}}</div></li>
+        <li>It rains today, and you carry an umbrella today.
+          <div class="h05">{{a}}Dependent. Rain makes carrying an umbrella more likely.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">5.</b> At a school, $P(\text{late}) = 0.2$ and $P(\text{detention} \mid \text{late}) = 0.5$.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Find $P(\text{late} \cap \text{detention})$. &nbsp;{{a}}$0.2 \cdot 0.5 = 0.1${{/a}}</li>
+        <li>Explain what your answer means in words.
+          <div class="h08">{{a}}About 10% of all students are late and get a detention.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>

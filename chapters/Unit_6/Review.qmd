@@ -49,7 +49,7 @@ This review uses all of them. It has every kind of problem on the Unit 6 quiz, w
 :::
 
 :::{.guided-notes-link}
-[Printable review](/handouts/Unit_6/Unit_6_Review.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable review](/handouts/Unit_6/Unit_6_Review.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 {{< khan 6.1 6.2 6.3 6.4 6.5 6.6 6.7 >}}

@@ -1,0 +1,137 @@
+<!--
+lesson: 2.3
+title: Percentiles and Z-Scores
+unit: 2
+unit_title: Analyzing One Variable
+kind: Mini Lesson
+back: 2.3_Percentiles_and_Z-Scores
+-->
+  <p>You scored 85 on a test. Is that good? It depends on how everyone else did.
+    Percentiles and z-scores tell where one value stands in a data set.</p>
+
+  <h2>Percentile</h2>
+  <div class="keys">
+    The <b>percentile</b> of a value is the percent of the data that is <b>below</b> it.
+    <p style="padding-left:1.5in">percentile $= \dfrac{\text{number of values below}}{\text{total number of values}} \times 100$</p>
+  </div>
+
+  <p><b>Example:</b> 20 students took a test. 15 students scored below 85.</p>
+  <p>$15 \div 20 = 0.75$, so a score of 85 is at the <b>75th percentile</b>. 85 is higher than 75% of the class.</p>
+
+  <h2>Z-score</h2>
+  <div class="keys">
+    A <b>z-score</b> tells how many standard deviations a value is above or below the mean.
+    <p style="padding-left:1.2in">$z = \dfrac{x - \mu}{\sigma}$ &nbsp;&nbsp;&nbsp; $x$ = the value, &nbsp;$\mu$ = the mean, &nbsp;$\sigma$ = the SD</p>
+    <p>$z > 0$: above the mean. &nbsp;&nbsp;&nbsp; $z < 0$: below the mean. &nbsp;&nbsp;&nbsp; $z = 0$: equal to the mean.</p>
+  </div>
+
+  <p><b>Example:</b> The test has a mean of 70 and an SD of 10. What is the z-score of 85?</p>
+  <p>$z = \dfrac{85 - 70}{10} = \dfrac{15}{10} = 1.5$ &nbsp;&nbsp;&nbsp; 85 is <b>1.5 standard deviations above</b> the mean.</p>
+
+  {{fig Unit_2/2.3_z_line}}
+
+  <p><small>$\mu$ is the Greek letter <b>mu</b>. $\sigma$ is a small <b>sigma</b>. Do not mix it up with the capital $\Sigma$, which means add up.</small></p>
+
+  <p><b>Comparing with z-scores.</b> Z-scores let you compare values from different data sets.</p>
+  <table class="data left">
+    <tr><th></th><th>Score</th><th>Mean</th><th>SD</th><th>$z$</th></tr>
+    <tr><td>Ana, math test</td><td>85</td><td>70</td><td>10</td><td>$\frac{85 - 70}{10} = 1.5$</td></tr>
+    <tr><td>Ben, history test</td><td>80</td><td>74</td><td>3</td><td>$\frac{80 - 74}{3} = 2$</td></tr>
+  </table>
+  <p>Ana's score is higher, but Ben did better <b>compared to his class</b>. His z-score is larger.</p>
+
+  <p><b>Going backward:</b> &nbsp;&nbsp; $x = \mu + z\sigma$ &nbsp;&nbsp;&nbsp;
+    $z = -2$ on Ana's test: &nbsp;$70 + (-2)(10) = 50$</p>
+
+
+  {{practice-head}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">1.</b> Here are the quiz scores of 20 students, in order.
+      <p>52, 58, 61, 64, 66, 68, 70, 71, 73, 75, 76, 78, 80, 81, 83, 85, 88, 90, 94, 98</p>
+    </div>
+    <div class="work">
+      <ol class="parts">
+        <li>What percentile is a score of 83? &nbsp;{{a}}14 scores are below 83. $14 \div 20 = 0.70$, the 70th percentile.{{/a}}
+          <div class="h03"></div></li>
+        <li>What percentile is a score of 61? &nbsp;{{a}}2 scores are below. $2 \div 20 = 0.10$, the 10th percentile.{{/a}}
+          <div class="h03"></div></li>
+        <li>Which score is at the 50th percentile? &nbsp;{{a}}50% of 20 is 10 scores below it: 76.{{/a}}
+          <div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> This dot plot shows how many hours 25 students spent on homework last week.</div>
+    <div class="work">
+      {{fig Unit_2/2.3_dot_plot_hours}}
+      <ol class="parts">
+        <li>What percentile is 7 hours? &nbsp;{{a}}$1 + 2 + 3 + 5 + 5 = 16$ below. $16 \div 25 = 0.64$, the 64th percentile.{{/a}}
+          <div class="h03"></div></li>
+        <li>What percentile is 4 hours? &nbsp;{{a}}3 below. $3 \div 25 = 0.12$, the 12th percentile.{{/a}}
+          <div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">3.</b> A class took a quiz. The mean is 20 points and the SD is 4 points. Find the z-score of each score. Then say what it means.</div>
+    <div class="work">
+      <ol class="parts">
+        <li><div class="h05">26 &nbsp;{{a}}$z = \frac{26 - 20}{4} = 1.5$. &nbsp;1.5 SDs above the mean.{{/a}}</div></li>
+        <li><div class="h05">14 &nbsp;{{a}}$z = \frac{14 - 20}{4} = -1.5$. &nbsp;1.5 SDs below the mean.{{/a}}</div></li>
+        <li><div class="h05">20 &nbsp;{{a}}$z = 0$. &nbsp;Equal to the mean.{{/a}}</div></li>
+        <li><div class="h05">30 &nbsp;{{a}}$z = \frac{30 - 20}{4} = 2.5$. &nbsp;2.5 SDs above the mean.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">4.</b> Lin took two tests.
+      <table class="data">
+        <tr><th>Test</th><th>Lin's score</th><th>Class mean</th><th>Class SD</th></tr>
+        <tr><td>Spanish</td><td>88</td><td>80</td><td>4</td></tr>
+        <tr><td>Science</td><td>90</td><td>84</td><td>6</td></tr>
+      </table>
+    </div>
+    <div class="work">
+      <ol class="parts">
+        <li>Find Lin's z-score on each test. &nbsp;{{a}}Spanish: $\frac{88 - 80}{4} = 2$. &nbsp;Science: $\frac{90 - 84}{6} = 1$.{{/a}}
+          <div class="h05"></div></li>
+        <li>Lin's science score is higher. On which test did Lin do better compared to the class? Explain.
+          <div class="h05">{{a}}Spanish. Lin was 2 SDs above the mean in Spanish, but only 1 SD above in science.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">5.</b> A test has a mean of 70 and an SD of 8.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>What score has a z-score of 2? &nbsp;{{a}}$70 + 2 \times 8 = 86${{/a}}
+          <div class="h03"></div></li>
+        <li>What score has a z-score of $-0.5$? &nbsp;{{a}}$70 + (-0.5)(8) = 70 - 4 = 66${{/a}}
+          <div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">6.</b> In a 100-meter race, a <b>lower</b> time is better. The team's mean time is 14.0 seconds, with an SD of 0.5 seconds.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Maria ran 13.0 seconds. Find her z-score. &nbsp;{{a}}$z = \frac{13.0 - 14.0}{0.5} = -2${{/a}}
+          <div class="h03"></div></li>
+        <li>Is a negative z-score good or bad for Maria? Explain.
+          <div class="h05">{{a}}Good. She is 2 SDs below the mean time, so she was much faster than most of the team.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">7.</b> A student says, &ldquo;A z-score of $-1$ means the value is 1 less than the mean.&rdquo; Is the student right? Explain.</div>
+    <div class="work h08">{{a}}No. It means the value is 1 <b>standard deviation</b> below the mean. With an SD of 10, that is 10 less than the mean.{{/a}}</div>
+  </div>

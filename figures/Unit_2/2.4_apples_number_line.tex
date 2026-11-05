@@ -1,0 +1,12 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}\input{../keyed}
+% Handout 2.4, problem 1: blank number line under the curve; the key labels the weights.
+\begin{document}
+\begin{tikzpicture}[x=1.5cm,y=0.8cm]
+  \bellcurve
+  \draw[thick] (-3.8,0) -- (3.8,0);
+  \foreach \z in {-3,...,3} \draw (\z,0.12) -- (\z,-0.12);
+  \ifkey\begin{scope}[keyred]\foreach \z/\v in {-3/120,-2/130,-1/140,0/150,1/160,2/170,3/180} \node[below] at (\z,-0.12) {\v};\end{scope}\fi
+  \node at (0,-1.1) {Weight (grams)};
+\end{tikzpicture}
+\end{document}

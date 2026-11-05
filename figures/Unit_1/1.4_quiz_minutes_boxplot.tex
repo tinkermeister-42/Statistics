@@ -1,0 +1,9 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}\input{../keyed}
+% Handout 1.4, problem 3(b): blank axis for the student; the key draws the box plot.
+\begin{document}
+\begin{tikzpicture}[x=0.3cm,y=1cm]
+  \axis{0}{50}{5}{1}{Minutes to finish the quiz}
+  \ifkey\begin{scope}[keyred]\bplotat{1}{18}{20}{23.5}{27}{28}\outlier{2}{1}\outlier{45}{1}\end{scope}\else\path (0,1.6);\fi
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,8 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}\input{../keyed}
+% Handout 6.1, problem 2(a): empty regions for the student; the key writes the counts in red.
+% The phantom keeps the student copy the same size as the key.
+\newcommand{\ans}[1]{\ifkey{\color{keyred}#1}\else\phantom{#1}\fi}
+\begin{document}
+\venn{Spanish ($S$)}{Art ($A$)}{\ans{12}}{\ans{6}}{\ans{9}}{\ans{13}}
+\end{document}

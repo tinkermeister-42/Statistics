@@ -1,0 +1,118 @@
+<!--
+lesson: 6.4
+title: Simulations
+unit: 6
+unit_title: Probability
+kind: Mini Lesson
+back: 6.4_Simulations
+-->
+  <table class="info">
+    <tr><th></th><th>How you find it</th><th>Coin example</th></tr>
+    <tr><td><b>Theoretical probability</b></td><td>By reasoning about equally likely outcomes.</td>
+      <td>$P(\text{heads}) = \dfrac{1}{2}$</td></tr>
+    <tr><td><b>Experimental probability</b></td><td>By doing trials:<br>$\dfrac{\text{number of times it happened}}{\text{number of trials}}$</td>
+      <td>20 flips, 12 heads:<br>$\dfrac{12}{20} = 0.6$</td></tr>
+  </table>
+
+  <p><b>The law of large numbers:</b> the more trials you do, the closer the experimental probability usually gets to the theoretical probability.</p>
+
+  <p><b>A simulation</b> uses random numbers to act out a chance event many times.</p>
+  <table class="plain">
+    <tr><td>1.</td><td>Assign digits to the outcomes so the probabilities match.</td></tr>
+    <tr><td>2.</td><td>Decide what one <b>trial</b> is.</td></tr>
+    <tr><td>3.</td><td>Run many trials with random digits.</td></tr>
+    <tr><td>4.</td><td>Count how often the event happened.</td></tr>
+  </table>
+
+  <p><b>Example:</b> A basketball player makes 70% of her free throws. About how often does she make all 3 of 3 shots?</p>
+  <table class="plain">
+    <tr><td>1.</td><td>Digits 0 to 6 = make (7 of the 10 digits is 70%). &nbsp;Digits 7, 8, 9 = miss.</td></tr>
+    <tr><td>2.</td><td>One trial = 3 digits (3 shots).</td></tr>
+    <tr><td>3.</td><td>Use row 1 below. Make 10 trials.</td></tr>
+  </table>
+
+  <table class="data">
+    <tr><td>Row 1</td><td><b><code>26647 37828 83005 96123 30669 70587</code></b></td></tr>
+    <tr><td>Row 2</td><td><b><code>15021 10728 56722 07313 39118 78635</code></b></td></tr>
+  </table>
+
+  <table class="data">
+    <tr><td>Trial</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+    <tr><td>Digits</td><td>266</td><td>473</td><td>782</td><td>883</td><td>005</td><td>961</td><td>233</td><td>066</td><td>970</td><td>587</td></tr>
+    <tr><td>Makes</td><td><b>3</b></td><td>2</td><td>1</td><td>1</td><td><b>3</b></td><td>2</td><td><b>3</b></td><td><b>3</b></td><td>1</td><td>1</td></tr>
+  </table>
+
+  <p>4 of the 10 trials made all 3. &nbsp;Experimental probability: $\dfrac{4}{10} = 0.4$.</p>
+  <p>The theoretical probability is $0.7 \cdot 0.7 \cdot 0.7 = 0.343$. With more trials, the simulation would get closer to it.</p>
+
+
+  {{practice-head}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">1.</b> A spinner has 4 equal parts: red, blue, green, yellow. It is spun 40 times.</div>
+    <div class="work">
+      <table class="data">
+        <tr><td>Red</td><td>Blue</td><td>Green</td><td>Yellow</td></tr>
+        <tr><td>14</td><td>8</td><td>10</td><td>8</td></tr>
+      </table>
+      <ol class="parts">
+        <li>Find the experimental probability of red. &nbsp;{{a}}$\frac{14}{40} = 0.35${{/a}}
+          <div class="h03"></div></li>
+        <li>Find the theoretical probability of red. &nbsp;{{a}}$\frac{1}{4} = 0.25${{/a}}
+          <div class="h03"></div></li>
+        <li>Why are they different? &nbsp;{{a}}Chance. 40 spins is not very many trials.{{/a}}
+          <div class="h03"></div></li>
+        <li>What would you expect if the spinner were spun 4,000 times? &nbsp;{{a}}The fraction of reds would be close to 0.25.{{/a}}
+          <div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> How would you assign random digits to simulate each event?</div>
+    <div class="work">
+      <ol class="parts">
+        <li>A coin lands heads ($P = 0.5$). &nbsp;{{a}}0 to 4 = heads, 5 to 9 = tails{{/a}}
+          <div class="h03"></div></li>
+        <li>A student is chosen from a class where 30% walk to school. &nbsp;{{a}}0, 1, 2 = walks; 3 to 9 = does not{{/a}}
+          <div class="h03"></div></li>
+        <li>A number cube is rolled. &nbsp;{{a}}1 to 6 = the number rolled; skip 0, 7, 8, 9{{/a}}
+          <div class="h03"></div></li>
+        <li>An event with $P = 0.25$. &nbsp;{{a}}Use pairs: 00 to 24 = yes, 25 to 99 = no{{/a}}
+          <div class="h05"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">3.</b> A family has 3 children. Each child is equally likely to be a girl or a boy.
+      Simulate: even digit = girl, odd digit = boy. One trial = 3 digits.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Use <b>row 2</b> on page 1 to run 10 trials. Count the girls in each trial.
+          <table class="fill">
+            <tr><td>Trial</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+            <tr><td>Digits</td><td>{{a}}150{{/a}}</td><td>{{a}}211{{/a}}</td><td>{{a}}072{{/a}}</td><td>{{a}}856{{/a}}</td><td>{{a}}722{{/a}}</td><td>{{a}}073{{/a}}</td><td>{{a}}133{{/a}}</td><td>{{a}}911{{/a}}</td><td>{{a}}878{{/a}}</td><td>{{a}}635{{/a}}</td></tr>
+            <tr><td>Girls</td><td>{{a}}1{{/a}}</td><td>{{a}}1{{/a}}</td><td>{{a}}2{{/a}}</td><td>{{a}}2{{/a}}</td><td>{{a}}2{{/a}}</td><td>{{a}}1{{/a}}</td><td>{{a}}0{{/a}}</td><td>{{a}}0{{/a}}</td><td>{{a}}2{{/a}}</td><td>{{a}}1{{/a}}</td></tr>
+          </table></li>
+        <li>Estimate $P(\text{at least 2 girls})$ from your simulation. &nbsp;{{a}}$\frac{4}{10} = 0.4${{/a}}</li>
+        <li>The theoretical probability is 0.5. How could you make your estimate closer? &nbsp;{{a}}Run many more trials.{{/a}}
+          <div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">4.</b> A student flips a coin 50 times and gets 34 heads. She wonders if the coin is fair. (A fair coin lands heads half the time.)
+      A computer simulated 100 sets of 50 flips of a fair coin. The number of heads ranged from 17 to 33. No set had 34 or more heads.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>What does the simulation tell you about getting 34 heads with a fair coin?
+          <div class="h05">{{a}}It is very unusual. It did not happen once in 100 simulations.{{/a}}</div></li>
+        <li>Do you think the coin is fair? Explain.
+          <div class="h08">{{a}}Probably not. 34 heads would almost never happen with a fair coin, so the result is statistically significant.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>

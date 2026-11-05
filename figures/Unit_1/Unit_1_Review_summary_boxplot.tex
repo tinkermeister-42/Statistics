@@ -1,0 +1,9 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}\input{../keyed}
+% Unit 1 Review, problem 6(c): blank axis for the student; the key draws the box plot.
+\begin{document}
+\begin{tikzpicture}[x=0.42cm,y=1cm]
+  \axis{0}{32}{2}{1}{Value}
+  \ifkey\begin{scope}[keyred]\bplotat{1.1}{4}{10}{13}{20}{31}\end{scope}\else\path (0,1.8);\fi
+\end{tikzpicture}
+\end{document}

@@ -35,7 +35,7 @@ This review uses all of them. It has every kind of problem on the Unit 4 quiz, w
 :::
 
 :::{.guided-notes-link}
-[Printable review](/handouts/Unit_4/Unit_4_Review.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable review](/handouts/Unit_4/Unit_4_Review.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 {{< khan 4.1 4.2 4.3 >}}

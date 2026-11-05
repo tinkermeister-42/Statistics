@@ -19,7 +19,7 @@ The line is not always exactly right. In this lesson, you measure how far off ea
 :::
 
 :::{.guided-notes-link}
-[Printable mini lesson](/handouts/Unit_4/4.3_Residuals.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable mini lesson](/handouts/Unit_4/4.3_Residuals.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 {{< khan 4.3 >}}

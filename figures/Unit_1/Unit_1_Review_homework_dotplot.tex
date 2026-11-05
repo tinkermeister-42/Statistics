@@ -1,0 +1,15 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}\input{../keyed}
+% Unit 1 Review, problem 1(h): blank dot plot line for the student; the key draws the dots.
+% blank dot plot line, dots drawn in red on the key: \dotline{min}{max}{label}{value/count,...}
+\newcommand{\dotline}[4]{%
+\begin{tikzpicture}[x=0.9cm,y=0.33cm]
+  \draw[thick] (#1-0.5,0) -- (#2+0.5,0);
+  \foreach \t in {#1,...,#2} {\draw (\t,0.25) -- (\t,-0.25) node[below] {\t};}
+  \node at ({(#1+#2)/2},-2.3) {#3};
+  \path (#1,0) -- (#1,8.6);
+  \ifkey\foreach \v/\c in {#4} {\ifnum\c>0 \foreach \k in {1,...,\c} {\fill[keyred] (\v,\k*1.15) circle (0.16cm);}\fi}\fi
+\end{tikzpicture}}
+\begin{document}
+\dotline{0}{5}{Hours of homework}{0/2,1/5,2/6,3/4,4/2,5/1}
+\end{document}

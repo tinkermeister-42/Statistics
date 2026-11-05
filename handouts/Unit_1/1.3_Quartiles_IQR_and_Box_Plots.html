@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1.3  Quartiles, IQR, and Box Plots</title>
+<link rel="stylesheet" href="../assets/handouts.css">
+</head>
+<body>
+<section class="sheet">
+
+  <div class="masthead">
+    <a class="backlink" href="../../chapters/Unit_1/1.3_Quartiles_IQR_and_Box_Plots.html">&larr; back to the lesson</a>
+    <h1>1.3 &nbsp;Quartiles, IQR, and Box Plots</h1>
+    <div class="sub">Mini Lesson - Unit 1: Displaying One Variable - DHS Statistics</div>
+    <div class="idline"><span>Name</span><span class="small">Date</span><span class="small">Period</span></div>
+  </div>
+
+<p>Quartiles cut the data into <b>4 parts</b> with the same number of values. Each part has about <b>25%</b> of the data.</p>
+
+  <table class="info">
+    <tr><th>How to find the quartiles</th><th>Five-number summary</th></tr>
+    <tr>
+      <td>1. Put the data in order.<br>
+        2. Find the <b>median</b>. It splits the data into a <b>lower half</b> and an <b>upper half</b>.<br>
+        3. <b>Q1</b> = median of the lower half.<br>
+        4. <b>Q3</b> = median of the upper half.<br>
+        <b>Odd number of values?</b> Leave the median out of both halves.</td>
+      <td>Minimum<br>Q1<br>Median<br>Q3<br>Maximum
+        <p><b>IQR = Q3 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>−</mo><annotation encoding="application/x-tex">-</annotation></semantics></math> Q1</b><br>
+        The IQR (interquartile range) is how spread out the <b>middle half</b> of the data is.</p></td>
+    </tr>
+  </table>
+
+  <p><b>Example 1: odd number of values (11)</b></p>
+  <p>3, 4, 6, 7, 9, <span class="fbox">10</span>, 12, 13, 15, 18, 20 &nbsp;&nbsp;&nbsp; Median = 10 (leave it out of the halves)</p>
+  <p>Lower half: 3, 4, <span class="fbox">6</span>, 7, 9 &nbsp;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>→</mo><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math>&nbsp; Q1 = 6 &nbsp;&nbsp;&nbsp;
+    Upper half: 12, 13, <span class="fbox">15</span>, 18, 20 &nbsp;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>→</mo><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math>&nbsp; Q3 = 15</p>
+  <p>IQR = 15 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>−</mo><annotation encoding="application/x-tex">-</annotation></semantics></math> 6 = <b>9</b></p>
+
+  <p><b>Example 2: even number of values (10)</b></p>
+  <p>1, 3, 4, 6, <span class="fbox">7</span>, <span class="fbox">9</span>, 10, 12, 14, 18 &nbsp;&nbsp;&nbsp; Median = (7 + 9) <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>÷</mo><annotation encoding="application/x-tex">\div</annotation></semantics></math> 2 = 8</p>
+  <p>Lower half: 1, 3, <span class="fbox">4</span>, 6, 7 &nbsp;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>→</mo><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math>&nbsp; Q1 = 4 &nbsp;&nbsp;&nbsp;
+    Upper half: 9, 10, <span class="fbox">12</span>, 14, 18 &nbsp;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>→</mo><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math>&nbsp; Q3 = 12</p>
+  <p>IQR = 12 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>−</mo><annotation encoding="application/x-tex">-</annotation></semantics></math> 4 = <b>8</b></p>
+
+  <p><b>A box plot draws the five-number summary.</b> Here is Example 1.</p>
+
+  <img class="fig" src="../../images/Unit_1/1.3_box_plot_example.svg" style="width:6.70in" alt="">
+
+  <div class="box warn">
+    <div class="lbl">Gotcha</div>
+    The 4 parts have the same <b>number of values</b>, not the same width.
+    A short part means the values are packed close together.
+  </div>
+
+
+  <div class="parthead brk"><b>1.3 &nbsp;Quartiles, IQR, and Box Plots - Practice</b><span class="nm">Name</span></div>
+  <p class="partner">Work with a partner. Compare answers when you finish each problem.</p>
+
+  <div class="ex">
+    <div class="q"><b class="tag">1.</b> Find the five-number summary and the IQR.<br>
+      4, 8, 1, 6, 9, 3, 7</div>
+    <div class="work h08"></div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> Find the five-number summary and the IQR.<br>
+      12, 15, 10, 20, 18, 11, 16, 14</div>
+    <div class="work h08"></div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">3.</b> Eleven students recorded how many minutes they spent on homework last night.<br>
+      30, 10, 45, 5, 25, 60, 15, 30, 10, 40, 20</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Find the five-number summary.
+          <div class="h08"></div></li>
+        <li>Make a box plot.
+          <img class="fig" src="../../images/Unit_1/1.3_homework_minutes_boxplot.svg" style="width:6.22in" alt=""></li>
+        <li>What is the IQR? What does it tell you?
+          <div class="h08"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex brk">
+    <div class="q"><b class="tag">4.</b> Twelve students counted how many texts they sent in one hour.<br>
+      13, 2, 20, 8, 30, 12, 5, 18, 10, 24, 8, 15</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Find the five-number summary.
+          <div class="h08"></div></li>
+        <li>Make a box plot.
+          <img class="fig" src="../../images/Unit_1/1.3_texts_boxplot.svg" style="width:6.06in" alt=""></li>
+        <li>Which part of the box plot is the longest? What does that tell you about the data?
+          <div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">5.</b> This dot plot shows how many pets some students have.</div>
+    <div class="work">
+      <img class="fig" src="../../images/Unit_1/1.3_dot_plot_pets.svg" style="width:3.01in" alt="">
+      <ol class="parts">
+        <li>How many students are in the data? 
+          <div class="h03"></div></li>
+        <li>Find Q1, the median, and Q3.
+          <div class="h05"></div></li>
+        <li>Find the IQR. </li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex brk">
+    <div class="q"><b class="tag">6.</b> Look at these two data sets.
+      <table class="plain">
+        <tr><td>Set A:</td><td>1, 2, 3, 4, 5, 6, 7</td></tr>
+        <tr><td>Set B:</td><td>1, 2, 3, 4, 5, 6, 70</td></tr>
+      </table>
+    </div>
+    <div class="work">
+      <ol class="parts">
+        <li>Find the IQR of each set.
+          <div class="h13"></div></li>
+        <li>Find the range (max <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>−</mo><annotation encoding="application/x-tex">-</annotation></semantics></math> min) of each set.
+          <div class="h13"></div></li>
+        <li>One number changed. Which measure of spread changed a lot? Which did not change? Why?
+          <div class="h13"></div></li>
+      </ol>
+    </div>
+  </div>
+
+</section>
+</body>
+</html>

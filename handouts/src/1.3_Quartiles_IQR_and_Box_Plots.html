@@ -1,0 +1,132 @@
+<!--
+lesson: 1.3
+title: Quartiles, IQR, and Box Plots
+unit: 1
+unit_title: Displaying One Variable
+kind: Mini Lesson
+back: 1.3_Quartiles_IQR_and_Box_Plots
+-->
+  <p>Quartiles cut the data into <b>4 parts</b> with the same number of values. Each part has about <b>25%</b> of the data.</p>
+
+  <table class="info">
+    <tr><th>How to find the quartiles</th><th>Five-number summary</th></tr>
+    <tr>
+      <td>1. Put the data in order.<br>
+        2. Find the <b>median</b>. It splits the data into a <b>lower half</b> and an <b>upper half</b>.<br>
+        3. <b>Q1</b> = median of the lower half.<br>
+        4. <b>Q3</b> = median of the upper half.<br>
+        <b>Odd number of values?</b> Leave the median out of both halves.</td>
+      <td>Minimum<br>Q1<br>Median<br>Q3<br>Maximum
+        <p><b>IQR = Q3 $-$ Q1</b><br>
+        The IQR (interquartile range) is how spread out the <b>middle half</b> of the data is.</p></td>
+    </tr>
+  </table>
+
+  <p><b>Example 1: odd number of values (11)</b></p>
+  <p>3, 4, 6, 7, 9, <span class="fbox">10</span>, 12, 13, 15, 18, 20 &nbsp;&nbsp;&nbsp; Median = 10 (leave it out of the halves)</p>
+  <p>Lower half: 3, 4, <span class="fbox">6</span>, 7, 9 &nbsp;$\rightarrow$&nbsp; Q1 = 6 &nbsp;&nbsp;&nbsp;
+    Upper half: 12, 13, <span class="fbox">15</span>, 18, 20 &nbsp;$\rightarrow$&nbsp; Q3 = 15</p>
+  <p>IQR = 15 $-$ 6 = <b>9</b></p>
+
+  <p><b>Example 2: even number of values (10)</b></p>
+  <p>1, 3, 4, 6, <span class="fbox">7</span>, <span class="fbox">9</span>, 10, 12, 14, 18 &nbsp;&nbsp;&nbsp; Median = (7 + 9) $\div$ 2 = 8</p>
+  <p>Lower half: 1, 3, <span class="fbox">4</span>, 6, 7 &nbsp;$\rightarrow$&nbsp; Q1 = 4 &nbsp;&nbsp;&nbsp;
+    Upper half: 9, 10, <span class="fbox">12</span>, 14, 18 &nbsp;$\rightarrow$&nbsp; Q3 = 12</p>
+  <p>IQR = 12 $-$ 4 = <b>8</b></p>
+
+  <p><b>A box plot draws the five-number summary.</b> Here is Example 1.</p>
+
+  {{fig Unit_1/1.3_box_plot_example}}
+
+  <div class="box warn">
+    <div class="lbl">Gotcha</div>
+    The 4 parts have the same <b>number of values</b>, not the same width.
+    A short part means the values are packed close together.
+  </div>
+
+
+  {{practice-head}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">1.</b> Find the five-number summary and the IQR.<br>
+      4, 8, 1, 6, 9, 3, 7</div>
+    <div class="work h08">{{a}}In order: 1, 3, 4, <span class="fbox">6</span>, 7, 8, 9. &nbsp; Min 1, Q1 3, Median 6, Q3 8, Max 9. &nbsp; IQR = 8 $-$ 3 = 5{{/a}}</div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> Find the five-number summary and the IQR.<br>
+      12, 15, 10, 20, 18, 11, 16, 14</div>
+    <div class="work h08">{{a}}In order: 10, 11, 12, 14, 15, 16, 18, 20. &nbsp; Median = (14 + 15) $\div$ 2 = 14.5<br>
+      Lower half 10, 11, 12, 14: Q1 = 11.5. &nbsp; Upper half 15, 16, 18, 20: Q3 = 17.<br>
+      Min 10, Q1 11.5, Median 14.5, Q3 17, Max 20. &nbsp; IQR = 5.5{{/a}}</div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">3.</b> Eleven students recorded how many minutes they spent on homework last night.<br>
+      30, 10, 45, 5, 25, 60, 15, 30, 10, 40, 20</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Find the five-number summary.
+          <div class="h08">{{a}}5, 10, 10, 15, 20, <span class="fbox">25</span>, 30, 30, 40, 45, 60. &nbsp; Min 5, Q1 10, Median 25, Q3 40, Max 60{{/a}}</div></li>
+        <li>Make a box plot.
+          {{fig Unit_1/1.3_homework_minutes_boxplot}}</li>
+        <li>What is the IQR? What does it tell you?
+          <div class="h08">{{a}}40 $-$ 10 = 30 minutes. The middle half of the students spent between 10 and 40 minutes, a spread of 30 minutes.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">4.</b> Twelve students counted how many texts they sent in one hour.<br>
+      13, 2, 20, 8, 30, 12, 5, 18, 10, 24, 8, 15</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Find the five-number summary.
+          <div class="h08">{{a}}2, 5, 8, 8, 10, <span class="fbox">12</span>, <span class="fbox">13</span>, 15, 18, 20, 24, 30. &nbsp; Median 12.5<br>
+            Lower half 2, 5, 8, 8, 10, 12: Q1 = 8. &nbsp; Upper half 13, 15, 18, 20, 24, 30: Q3 = 19.<br>
+            Min 2, Q1 8, Median 12.5, Q3 19, Max 30{{/a}}</div></li>
+        <li>Make a box plot.
+          {{fig Unit_1/1.3_texts_boxplot}}</li>
+        <li>Which part of the box plot is the longest? What does that tell you about the data?
+          <div class="h03">{{a}}The right whisker (19 to 30). The top 25% of students are spread out the most.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">5.</b> This dot plot shows how many pets some students have.</div>
+    <div class="work">
+      {{fig Unit_1/1.3_dot_plot_pets}}
+      <ol class="parts">
+        <li>How many students are in the data? {{a}}16{{/a}}
+          <div class="h03"></div></li>
+        <li>Find Q1, the median, and Q3.
+          <div class="h05">{{a}}1, 1, 2, 2, 2, 3, 3, <span class="fbox">3</span>, <span class="fbox">3</span>, 4, 4, 4, 5, 5, 6, 8. &nbsp; Median 3<br>
+            Lower half: 1, 1, 2, 2, 2, 3, 3, 3 $\rightarrow$ Q1 = 2. &nbsp; Upper half: 3, 4, 4, 4, 5, 5, 6, 8 $\rightarrow$ Q3 = 4.5{{/a}}</div></li>
+        <li>Find the IQR. {{a}}4.5 $-$ 2 = 2.5{{/a}}</li>
+      </ol>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">6.</b> Look at these two data sets.
+      <table class="plain">
+        <tr><td>Set A:</td><td>1, 2, 3, 4, 5, 6, 7</td></tr>
+        <tr><td>Set B:</td><td>1, 2, 3, 4, 5, 6, 70</td></tr>
+      </table>
+    </div>
+    <div class="work">
+      <ol class="parts">
+        <li>Find the IQR of each set.
+          <div class="h13">{{a}}Both: Q1 = 2, Q3 = 6, IQR = 4{{/a}}</div></li>
+        <li>Find the range (max $-$ min) of each set.
+          <div class="h13">{{a}}A: 7 $-$ 1 = 6. &nbsp; B: 70 $-$ 1 = 69{{/a}}</div></li>
+        <li>One number changed. Which measure of spread changed a lot? Which did not change? Why?
+          <div class="h13">{{a}}The range changed a lot. The IQR did not change. The IQR only uses the middle half. One extreme value does not move it much. The median works the same way: one extreme value moves the mean a lot, but not the median.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>

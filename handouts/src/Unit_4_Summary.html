@@ -1,0 +1,73 @@
+<!--
+title: Unit 4 Summary: Scatterplots
+unit: 4
+unit_title: Scatterplots
+kind: Unit Summary
+back: Summary
+backword: summary
+-->
+  <h2>Describing a Scatterplot</h2>
+  <p>A <b>scatterplot</b> shows two numbers for each person or thing. The first number ($x$) goes across. The second number ($y$) goes up.</p>
+
+  <table class="info dense">
+    <colgroup><col style="width:18.6%"><col style="width:42.6%"><col style="width:38.8%"></colgroup>
+    <tr><th>Feature</th><th>Ask</th><th>Example: the study data</th></tr>
+    <tr><td>Direction</td><td>As $x$ goes up, does $y$ go up (<b>positive</b>) or down (<b>negative</b>)? No pattern at all is <b>no association</b>.</td><td><b>Positive.</b> The students who studied more mostly scored higher.</td></tr>
+    <tr><td>Form</td><td>Do the dots follow a line (<b>linear</b>) or a curve?</td><td><b>Linear.</b> The dots follow a line.</td></tr>
+    <tr><td>Strength</td><td>Are the dots close to a line (<b>strong</b>), a little spread out (<b>moderate</b>), or very spread out (<b>weak</b>)?</td><td><b>Strong.</b> The dots are close to the line.</td></tr>
+    <tr><td>Unusual</td><td>Any outliers or clusters?</td><td>None.</td></tr>
+  </table>
+
+  <h2>The Line of Best Fit</h2>
+  <p>A <b>line of best fit</b> follows the trend of the dots. It goes through the middle of the dots. About the same number of dots are above it as below it.</p>
+
+  <table class="info dense">
+    <colgroup><col style="width:18.6%"><col style="width:42.6%"><col style="width:38.8%"></colgroup>
+    <tr><th>Step</th><th>How it works</th><th>Example: the study data</th></tr>
+    <tr><td>1. Pick two points</td><td>Pick two points <b>on the line</b>. They do not have to be dots.</td><td>$(2, 64)$ and $(6, 84)$</td></tr>
+    <tr><td>2. Find the slope&nbsp;$m$</td><td>Subtract the $y$ values. Subtract the $x$ values in the same order. Divide.</td><td>$m = \dfrac{84 - 64}{6 - 2} = \dfrac{20}{4} = 5$</td></tr>
+    <tr><td>3. Find the y-intercept&nbsp;$b$</td><td>The equation is $\hat{y} = mx + b$. Put in $m$ and one point. Solve for $b$.</td><td>$64 = 5(2) + b$, &nbsp;so $b = 54$</td></tr>
+    <tr><td>4. Write the equation</td><td>Put $m$ and $b$ into $\hat{y} = mx + b$. $\hat{y}$ is read &ldquo;y-hat.&rdquo; The hat means <b>predicted</b>.</td><td>$\hat{y} = 5x + 54$</td></tr>
+    <tr><td>5. Predict</td><td>Put the $x$ value into the equation. The line predicts $y$. It does not give the exact $y$.</td><td>A student studies 5 hours. $\hat{y} = 5(5) + 54 = 79$. The predicted score is <b>79</b>.</td></tr>
+    <tr><td>Extrapolation</td><td>Predicting far outside the data. It is risky.</td><td>12 hours: $\hat{y} = 5(12) + 54 = 114$. A test score cannot be more than 100. The data only goes from 1 to 8 hours.</td></tr>
+  </table>
+
+  <h2>Slope and Intercept in Context</h2>
+  <table class="info dense">
+    <colgroup><col style="width:12.7%"><col style="width:33.3%"><col style="width:27%"><col style="width:27%"></colgroup>
+    <tr><th></th><th>Sentence frame</th><th>A plant: $\hat{y} = 2.5x + 4$</th><th>A candle: $\hat{y} = {-2}x + 24$</th></tr>
+    <tr><td>Slope</td><td>For each additional [$x$ unit], the predicted [$y$] increases (or decreases) by [slope and units].</td><td>For each additional <b>week</b>, the predicted <b>height</b> increases by <b>2.5 cm</b>.</td><td>For each additional <b>hour</b>, the predicted <b>height</b> decreases by <b>2 cm</b>.</td></tr>
+    <tr><td>y-intercept</td><td>When [$x$] is 0, the predicted [$y$] is [intercept and units].</td><td>When $x = 0$ (the day it was planted), the predicted height is <b>4 cm</b>.</td><td>When $x = 0$ (a new candle), the predicted height is <b>24 cm</b>.</td></tr>
+  </table>
+
+  <p><b>Some intercepts have no meaning:</b> if $x$ is a person's height, then $x = 0$ is not possible.</p>
+
+  {{break}}
+
+  <h2>Correlation and Causation</h2>
+  <table class="info dense">
+    <colgroup><col style="width:18.6%"><col style="width:42.6%"><col style="width:38.8%"></colgroup>
+    <tr><th>Idea</th><th>What it means</th><th>Example</th></tr>
+    <tr><td>Correlation coefficient $r$</td><td>It measures how strong a <b>linear</b> pattern is. $r$ is always from $-1$ to $1$.</td><td>The candles: $r \approx {-0.98}$. The dots are close to a line that goes down.</td></tr>
+    <tr><td>Sign of $r$</td><td>The sign shows the direction. $r > 0$ is positive. $r < 0$ is negative.</td><td>$r \approx 0.95$ is positive. $r \approx {-0.80}$ is negative.</td></tr>
+    <tr><td>Size of $r$</td><td>Close to $1$ or $-1$ is strong. Close to $0$ is weak.</td><td>$r = {-0.8}$ is stronger than $r = 0.6$. It is closer to $-1$ than $0.6$ is to $1$. The minus sign only tells the direction.</td></tr>
+    <tr><td>Correlation is not causation</td><td>A correlation shows that two things change together. It does <b>not</b> prove that one causes the other.</td><td>Ice cream sales and sunburns have a strong positive correlation. Ice cream does not cause sunburns.</td></tr>
+    <tr><td>Lurking variable</td><td>A hidden cause of both things.</td><td>Hot, sunny weather causes <b>both</b>.</td></tr>
+  </table>
+
+  <h2>Residuals</h2>
+  <table class="info dense">
+    <colgroup><col style="width:18.6%"><col style="width:42.6%"><col style="width:38.8%"></colgroup>
+    <tr><th>Idea</th><th>What it means</th><th>Example: the study line $\hat{y} = 5x + 54$</th></tr>
+    <tr><td>Residual</td><td>residual $=$ actual $-$ predicted $= y - \hat{y}$</td><td>A student studied 4 hours and scored 78. $\hat{y} = 5(4) + 54 = 74$. Residual $= 78 - 74 = 4$.</td></tr>
+    <tr><td>Positive residual</td><td>The point is <b>above</b> the line.</td><td>Residual 4: the student scored 4 points <b>more</b> than predicted.</td></tr>
+    <tr><td>Negative residual</td><td>The point is <b>below</b> the line.</td><td>Another student studied 4 hours and scored 72. Residual $= 72 - 74 = {-2}$. The student scored 2 points <b>less</b> than predicted.</td></tr>
+  </table>
+
+  <h2>Least Squares and Residual Plots</h2>
+  <table class="info dense">
+    <colgroup><col style="width:18.6%"><col style="width:42.6%"><col style="width:38.8%"></colgroup>
+    <tr><th>Tool</th><th>How it works</th><th>What it means</th></tr>
+    <tr><td>Least-squares regression line</td><td>Square every residual and add them up: $\Sigma(y - \hat{y})^2$. $\Sigma$ means add up.</td><td>This line makes the sum as <b>small as possible</b>. Calculators and computers find this line for you.</td></tr>
+    <tr><td>Residual plot</td><td>Put $x$ across the bottom and the residuals up the side.</td><td>Random scatter, no pattern: a line is a <b>good</b> model. A curved pattern: a line is <b>not</b> a good model. The data is curved.</td></tr>
+  </table>

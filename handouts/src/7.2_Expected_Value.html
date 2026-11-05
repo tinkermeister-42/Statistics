@@ -1,0 +1,105 @@
+<!--
+lesson: 7.2
+title: Expected Value
+unit: 7
+unit_title: Probability Distributions
+kind: Mini Lesson
+back: 7.2_Expected_Value
+-->
+  <p>This table shows the probability of each number of goals a soccer team scores in a game. On average, how many goals does the team score?</p>
+
+  <table class="data">
+    <tr><th>$x$ (goals)</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+    <tr><th>$P(x)$</th><td>0.1</td><td>0.3</td><td>0.3</td><td>0.2</td><td>0.1</td></tr>
+    <tr><th>$x \cdot P(x)$</th><td>0</td><td>0.3</td><td>0.6</td><td>0.6</td><td>0.4</td></tr>
+  </table>
+
+  <div class="keys">
+    <b>Expected value:</b> &nbsp;&nbsp; $E(X) = \Sigma\, x \cdot P(x)$<br>
+    $E(X)$ means the expected value of $X$. Multiply each value by its probability. Then add them all up ($\Sigma$ means add up). The expected value is also called the <b>mean</b> of $X$, written $\mu_X$.
+  </div>
+
+  <p>$E(X) = 0 + 0.3 + 0.6 + 0.6 + 0.4 = \mathbf{1.9}$ goals</p>
+
+  <p><b>What it means:</b> over many games, the team scores about 1.9 goals per game on average.
+    No single game has 1.9 goals. The expected value is a <b>long-run average</b>.</p>
+
+  <p><b>Fair decisions.</b> A method is <b>fair</b> if every person has the same probability of being chosen.</p>
+  <p>Ana, Ben, and Cai need to decide who goes first.</p>
+  <table class="info">
+    <tr><th>Method</th><th>Fair?</th></tr>
+    <tr><td>Roll a number cube. 1 or 2: Ana, 3 or 4: Ben, 5 or 6: Cai.</td><td>Yes. Each has $\frac{2}{6} = \frac{1}{3}$.</td></tr>
+    <tr><td>Flip 2 coins. HH: Ana, TT: Ben, one of each: Cai.</td><td>No. Ana $\frac{1}{4}$, Ben $\frac{1}{4}$, Cai $\frac{2}{4} = \frac{1}{2}$.</td></tr>
+  </table>
+
+  <p><b>Fair games.</b> A game is fair if the expected value of the money you win or lose is <b>0</b>.</p>
+  <p><b>Example:</b> Roll a number cube. You win \$3 if you roll a 6. You pay \$1 for any other number. Let $X$ = the money you win or lose in one game.</p>
+  <p>$E(X) = 3 \cdot \frac{1}{6} + (-1) \cdot \frac{5}{6} = \frac{3}{6} - \frac{5}{6} = -\frac{2}{6} \approx -\$0.33$</p>
+  <p>On average you lose about 33 cents a game. The game is <b>not</b> fair.</p>
+
+
+  {{practice-head}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">1.</b> Find the expected value.</div>
+    <div class="work">
+      <ol class="parts">
+        <li><table class="data left">
+            <tr><th>$x$</th><td>1</td><td>2</td><td>3</td></tr>
+            <tr><th>$P(x)$</th><td>0.2</td><td>0.5</td><td>0.3</td></tr>
+          </table>
+          <div class="h03">{{a}}$1(0.2) + 2(0.5) + 3(0.3) = 0.2 + 1.0 + 0.9 = 2.1${{/a}}</div></li>
+        <li><table class="data left">
+            <tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr>
+            <tr><th>$P(x)$</th><td>0.3</td><td>0.4</td><td>0.2</td><td>0.1</td></tr>
+          </table>
+          <div class="h03">{{a}}$0 + 0.4 + 0.4 + 0.3 = 1.1${{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> Flip a coin 3 times. $X$ = the number of heads has $P(0) = \frac{1}{8}$, $P(1) = \frac{3}{8}$, $P(2) = \frac{3}{8}$, $P(3) = \frac{1}{8}$.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Find $E(X)$. &nbsp;{{a}}$0 + \frac{3}{8} + \frac{6}{8} + \frac{3}{8} = \frac{12}{8} = 1.5${{/a}}<div class="h03"></div></li>
+        <li>Explain what $E(X)$ means. &nbsp;{{a}}If you flip 3 coins many times, you get 1.5 heads per set of 3 on average.{{/a}}<div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">3.</b> The number of pets per household is $X$, with $P(0) = 0.30$, $P(1) = 0.40$, $P(2) = 0.20$, $P(3) = 0.10$.
+      A student says, “The expected value is 1.1, so a household can have 1.1 pets.” What is wrong with this?</div>
+    <div class="work h05">{{a}}No household has 1.1 pets. 1.1 is the average over many households.{{/a}}</div>
+  </div>
+
+  {{break}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">4.</b> Four friends use a spinner with 4 equal parts to pick who chooses the movie. Each friend gets one part.
+      Then they switch to rolling a number cube: 1: Ana, 2: Ben, 3: Cai, 4 to 6: Dee.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Is the spinner fair? Explain. &nbsp;{{a}}Yes. Each friend has $\frac{1}{4}$.{{/a}}<div class="h03"></div></li>
+        <li>Is the number cube fair? Explain. &nbsp;{{a}}No. Dee has $\frac{3}{6} = \frac{1}{2}$. The others have $\frac{1}{6}$.{{/a}}<div class="h03"></div></li>
+        <li>Change the number cube method to make it fair.
+          <div class="h03">{{a}}Example: 1: Ana, 2: Ben, 3: Cai, 4: Dee, and roll again on 5 or 6.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">5.</b> A game: roll a number cube. You win \$5 if you roll a 6. You pay \$1 for any other number. Let $X$ = the money you win or lose in one game.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Find the expected value. &nbsp;{{a}}$5 \cdot \frac{1}{6} + (-1) \cdot \frac{5}{6} = \frac{5}{6} - \frac{5}{6} = 0${{/a}}<div class="h03"></div></li>
+        <li>Is the game fair? Explain. &nbsp;{{a}}Yes. The expected value is 0, so no one wins or loses on average.{{/a}}<div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">6.</b> In the notes example, you win \$3 if you roll a 6. How much should you pay for any other number to make the game fair?</div>
+    <div class="work h08">{{a}}Let $c$ = what you pay. &nbsp;$3 \cdot \frac{1}{6} - c \cdot \frac{5}{6} = 0$, so $5c = 3$ and $c = \$0.60$.{{/a}}</div>
+  </div>

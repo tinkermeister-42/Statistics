@@ -17,7 +17,7 @@ More than 300 million. One ticket has about a 1 in 300 million chance. In this l
 :::
 
 :::{.guided-notes-link}
-[Printable mini lesson](/handouts/Unit_6/6.7_Probability_with_Counting.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable mini lesson](/handouts/Unit_6/6.7_Probability_with_Counting.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 {{< khan 6.7 >}}

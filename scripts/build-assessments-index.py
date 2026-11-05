@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Write assessments/index.html: the teacher's bookmark page.
 
-Lists every unit quiz, unit review and lesson handout, each with its key.
+Lists every unit quiz and test (PDF), then every handout sheet (HTML: unit
+review, unit summary, lesson handouts, tables), each with its key when it has one.
 Like the quizzes and keys themselves it is unlisted: copied into the site by
 _quarto.yml `resources:` but linked from no page and not in the search index.
 Run by ./build.sh after a full build; rerun by hand after adding a unit.
@@ -13,47 +14,49 @@ out = root / "assessments" / "index.html"
 
 
 def title_of(tex):
-    """The sheet's own title: \\lessontitle{...}, or the first \\Large\\bfseries line."""
+    """A quiz's own title: \\lessontitle{...}."""
     text = tex.read_text()
-    m = re.search(r"\\lessontitle\{([^}]*)\}", text) or re.search(r"\\Large\\bfseries ([^\\{}]+)", text)
+    m = re.search(r"\\lessontitle\{([^}]*)\}", text)
     return m.group(1).strip() if m else tex.stem.replace("_", " ")
 
 
-def row(label, pdf):
-    """One table row: label, student PDF link, key PDF link (paths relative to assessments/)."""
-    rel = pdf.relative_to(root)
+def meta_of(frag):
+    """A handout fragment's metadata header (handouts/src/<name>.html)."""
+    m = re.match(r"\A<!--(.*?)-->", frag.read_text(), re.S)
+    meta = {}
+    for line in (m.group(1) if m else "").splitlines():
+        if ":" in line:
+            k, v = line.split(":", 1)
+            meta[k.strip()] = v.strip()
+    return meta
+
+
+def row(label, path):
+    """One table row: label, student link, key link if a key exists
+    (paths relative to assessments/)."""
+    rel = path.relative_to(root)
     href = ("../" + str(rel)) if rel.parts[0] != "assessments" else str(pathlib.Path(*rel.parts[1:]))
-    key = href[:-4] + "_KEY.pdf"
+    key = path.with_name(path.stem + "_KEY" + path.suffix)
+    khref = href[: -len(path.suffix)] + "_KEY" + path.suffix
+    keycell = f'<a class="key" href="{khref}">Key</a>' if key.exists() else ""
     return (f'    <tr><td>{html.escape(label)}</td>'
-            f'<td><a href="{href}">Student</a></td>'
-            f'<td><a class="key" href="{key}">Key</a></td></tr>')
+            f'<td><a href="{href}">Student</a></td><td>{keycell}</td></tr>')
 
 
-def unit_num(p):
-    return int(re.search(r"Unit_(\d+)", str(p)).group(1))
+sheets = {}  # unit -> [(fragment stem, meta)]
+for frag in sorted((root / "handouts" / "src").glob("*.html")):
+    meta = meta_of(frag)
+    sheets.setdefault(int(meta.get("unit", 0)), []).append((frag.stem, meta))
 
-
-units = sorted({unit_num(p) for p in root.glob("handouts/Unit_*/*.tex")})
 parts = []
-for u in units:
+for u in sorted(k for k in sheets if k):
     rows = []
     for tex in sorted(root.glob(f"assessments/Unit_{u}/*.tex")):
         rows.append(row(title_of(tex), tex.with_suffix(".pdf")))
-    review = root / f"handouts/Unit_{u}/Unit_{u}_Review.tex"
-    if review.exists():
-        rows.append(row(title_of(review), review.with_suffix(".pdf")))
-    lessons = [t for t in sorted(root.glob(f"handouts/Unit_{u}/*.tex"), key=lambda t: t.stem)
-               if re.match(r"\d+\.\d+_", t.stem)]
-    for tex in lessons:
-        # the lesson page's own heading ("1.1 - Frequency Tables, ...") names it best
-        qmd = root / f"chapters/Unit_{u}/{tex.stem}.qmd"
-        h = re.match(r"#\s*(\S+)\s*-\s*(.+?)\s*\{", qmd.read_text()) if qmd.exists() else None
-        label = f"{h.group(1)} {h.group(2)}" if h else f"{tex.stem.split('_')[0]} {title_of(tex)}"
-        rows.append(row(label, tex.with_suffix(".pdf")))
-    others = [t for t in sorted(root.glob(f"handouts/Unit_{u}/*.tex"))
-              if t not in lessons and t != review]
-    for tex in others:
-        rows.append(row(title_of(tex), tex.with_suffix(".pdf")))
+    order = {"Unit Review": 0, "Unit Summary": 1, "Mini Lesson": 2}
+    for stem, meta in sorted(sheets[u], key=lambda sm: (order.get(sm[1].get("kind"), 3), sm[0])):
+        label = (meta["lesson"] + " " if meta.get("lesson") else "") + meta.get("title", stem)
+        rows.append(row(label, root / "handouts" / f"Unit_{u}" / f"{stem}.html"))
     parts.append(f"  <h2>Unit {u}</h2>\n  <table>\n" + "\n".join(rows) + "\n  </table>")
 
 # Projects: finished files the teacher drops in projects/, served as they are.

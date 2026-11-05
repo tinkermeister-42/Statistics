@@ -1,0 +1,10 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}
+\input{../keyed}
+\begin{document}
+\begin{tikzpicture}[x=0.55cm,y=0.07cm]
+  \grid{0}{11}{1}{15}{60}{5}{Hours of typing practice last week}{Words per minute}
+  \pts{1/28,2/23,3/31,3/25,4/30,5/38,6/35,6/40,7/37,8/45,9/45,10/55}
+  \ifkey\begin{scope}[keyred,thick]\draw (0,20) -- (11,53);\end{scope}\fi
+\end{tikzpicture}
+\end{document}

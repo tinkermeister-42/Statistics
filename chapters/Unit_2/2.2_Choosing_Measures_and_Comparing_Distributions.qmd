@@ -22,7 +22,7 @@ In this lesson, you choose the best measures of {{< glink center >}} and {{< gli
 :::
 
 :::{.guided-notes-link}
-[Printable mini lesson](/handouts/Unit_2/2.2_Choosing_Measures_and_Comparing_Distributions.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable mini lesson](/handouts/Unit_2/2.2_Choosing_Measures_and_Comparing_Distributions.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 {{< khan 2.1 2.2 >}}

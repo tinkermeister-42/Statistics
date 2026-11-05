@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6.1  Venn Diagrams and the Addition Rule</title>
+<link rel="stylesheet" href="../assets/handouts.css">
+</head>
+<body>
+<section class="sheet">
+
+  <div class="masthead">
+    <a class="backlink" href="../../chapters/Unit_6/6.1_Venn_Diagrams_and_the_Addition_Rule.html">&larr; back to the lesson</a>
+    <h1>6.1 &nbsp;Venn Diagrams and the Addition Rule</h1>
+    <div class="sub">Mini Lesson - Unit 6: Probability - DHS Statistics</div>
+    <div class="idline"><span>Name</span><span class="small">Date</span><span class="small">Period</span></div>
+  </div>
+
+<p><b>Probability</b> is how likely something is, from 0 (impossible) to 1 (certain).
+    When every outcome is equally likely:</p>
+  <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mrow><mrow><mtext mathvariant="normal">number of ways </mtext><mspace width="0.333em"></mspace></mrow><mi>A</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> can happen</mtext></mrow></mrow><mtext mathvariant="normal">total number of outcomes</mtext></mfrac></mrow><annotation encoding="application/x-tex">P(A) = \frac{\text{number of ways } A \text{ can happen}}{\text{total number of outcomes}}</annotation></semantics></math>
+
+  <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(A)</annotation></semantics></math> is read &ldquo;the probability of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>.&rdquo; &nbsp;&nbsp; <b>Complement:</b> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mrow><mtext mathvariant="normal">not </mtext><mspace width="0.333em"></mspace></mrow><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>1</mn><mo>−</mo><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{not } A) = 1 - P(A)</annotation></semantics></math>.
+    &nbsp;(Some books write <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><msup><mi>A</mi><mi>C</mi></msup><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(A^C)</annotation></semantics></math>.)</p>
+
+  <p><b>Example:</b> A bag has 3 red and 7 blue marbles. Pick one. &nbsp;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">red</mtext><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mfrac displaystyle="true"><mn>3</mn><mn>10</mn></mfrac></mrow><annotation encoding="application/x-tex">P(\text{red}) = \dfrac{3}{10}</annotation></semantics></math>, and
+    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">not red</mtext><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>1</mn><mo>−</mo><mfrac displaystyle="true"><mn>3</mn><mn>10</mn></mfrac><mo>=</mo><mfrac displaystyle="true"><mn>7</mn><mn>10</mn></mfrac></mrow><annotation encoding="application/x-tex">P(\text{not red}) = 1 - \dfrac{3}{10} = \dfrac{7}{10}</annotation></semantics></math>.</p>
+
+  <h2>Symbols for &ldquo;or&rdquo; and &ldquo;and&rdquo;</h2>
+  <table class="info fit">
+    <tr><th class="c">Symbol</th><th>Read it as</th><th>Meaning</th></tr>
+    <tr><td class="c"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A \cup B</annotation></semantics></math></td><td>&ldquo;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> union <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>&rdquo; or &ldquo;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> or <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>&rdquo;</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> happens, or <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math> happens, or both</td></tr>
+    <tr><td class="c"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A \cap B</annotation></semantics></math></td><td>&ldquo;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> intersect <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>&rdquo; or &ldquo;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>&rdquo;</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math> both happen (the overlap)</td></tr>
+  </table>
+
+  <p><b>Example:</b> 30 students. 12 play soccer, 10 play basketball, 4 play both.</p>
+  <div class="cols2">
+    <div><img class="fig" src="../../images/Unit_6/6.1_venn_sports.svg" style="width:2.4in" alt=""></div>
+    <div>
+      <p>If we add <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>12</mn><mo>+</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">12 + 10</annotation></semantics></math>, the 4 students who play both are counted <b>twice</b>. Subtract them once.</p>
+      <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>S</mi><mo>∪</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mfrac displaystyle="true"><mn>12</mn><mn>30</mn></mfrac><mo>+</mo><mfrac displaystyle="true"><mn>10</mn><mn>30</mn></mfrac><mo>−</mo><mfrac displaystyle="true"><mn>4</mn><mn>30</mn></mfrac><mo>=</mo><mfrac displaystyle="true"><mn>18</mn><mn>30</mn></mfrac><mo>=</mo><mn>0.6</mn></mrow><annotation encoding="application/x-tex">P(S \cup B) = \dfrac{12}{30} + \dfrac{10}{30} - \dfrac{4}{30} = \dfrac{18}{30} = 0.6</annotation></semantics></math></p>
+    </div>
+  </div>
+
+  <div class="keys">
+    <b>The addition rule:</b> &nbsp;&nbsp; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>∪</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo>+</mo><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo>−</mo><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>∩</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(A \cup B) = P(A) + P(B) - P(A \cap B)</annotation></semantics></math>
+  </div>
+
+  <p><b>Mutually exclusive</b> events cannot both happen, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>∩</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">P(A \cap B) = 0</annotation></semantics></math>. Then <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>∪</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo>+</mo><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(A \cup B) = P(A) + P(B)</annotation></semantics></math>.</p>
+  <p><b>Example:</b> Roll a number cube (1 to 6). Rolling a 1 and rolling a 2 are mutually exclusive.</p>
+  <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>∪</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mfrac displaystyle="true"><mn>1</mn><mn>6</mn></mfrac><mo>+</mo><mfrac displaystyle="true"><mn>1</mn><mn>6</mn></mfrac><mo>=</mo><mfrac displaystyle="true"><mn>2</mn><mn>6</mn></mfrac><mo>=</mo><mfrac displaystyle="true"><mn>1</mn><mn>3</mn></mfrac></mrow><annotation encoding="application/x-tex">P(1 \cup 2) = \dfrac{1}{6} + \dfrac{1}{6} = \dfrac{2}{6} = \dfrac{1}{3}</annotation></semantics></math></p>
+
+  <p><b>A deck of cards</b> has 52 cards: 4 suits (hearts, diamonds, clubs, spades), 13 cards in each suit (A, 2 to 10, J, Q, K).</p>
+
+
+  <div class="parthead brk"><b>6.1 &nbsp;Venn Diagrams and the Addition Rule - Practice</b><span class="nm">Name</span></div>
+  <p class="partner">Work with a partner. Compare answers when you finish each problem.</p>
+
+  <div class="ex">
+    <div class="q"><b class="tag">1.</b> Roll a number cube (1 to 6). Find each probability.</div>
+    <div class="work">
+      <ol class="parts">
+        <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">even</mtext><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{even})</annotation></semantics></math> &nbsp;
+          <div class="h03"></div></li>
+        <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mrow><mtext mathvariant="normal">not </mtext><mspace width="0.333em"></mspace></mrow><mn>6</mn><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{not } 6)</annotation></semantics></math> &nbsp;
+          <div class="h03"></div></li>
+        <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mrow><mtext mathvariant="normal">greater than </mtext><mspace width="0.333em"></mspace></mrow><mn>4</mn><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{greater than } 4)</annotation></semantics></math> &nbsp;
+          <div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> In a class of 40 students, 18 take Spanish (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>), 15 take art (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>), and 6 take both.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Fill in the Venn diagram.
+          <img class="fig" src="../../images/Unit_6/6.1_venn_spanish_art.svg" style="width:2.3in" alt=""></li>
+        <li>Find <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>S</mi><mo>∪</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(S \cup A)</annotation></semantics></math>. &nbsp;
+          <div class="h03"></div></li>
+        <li>Find <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>S</mi><mo>∩</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(S \cap A)</annotation></semantics></math>. &nbsp;</li>
+        <li>Find the probability that a student takes neither. &nbsp;</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">3.</b> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">P(A) = 0.5</annotation></semantics></math>, &nbsp;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>0.4</mn></mrow><annotation encoding="application/x-tex">P(B) = 0.4</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>∩</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>0.2</mn></mrow><annotation encoding="application/x-tex">P(A \cap B) = 0.2</annotation></semantics></math>. Find <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>∪</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(A \cup B)</annotation></semantics></math>.</div>
+    <div class="work h03"></div>
+  </div>
+
+  <div class="ex brk">
+    <div class="q"><b class="tag">4.</b> Draw one card from a deck. Are the events mutually exclusive? Find the probability.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>a heart or a spade
+          <div class="h05"></div></li>
+        <li>a heart or a king
+          <div class="h05"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">5.</b> Pick one student from this table at random.</div>
+    <div class="work">
+      <table class="data">
+        <tr><th></th><th>Bus</th><th>Car</th><th>Walk</th><th>Total</th></tr>
+        <tr><th>9th grade</th><td>18</td><td>12</td><td>10</td><td>40</td></tr>
+        <tr><th>10th grade</th><td>14</td><td>20</td><td>6</td><td>40</td></tr>
+        <tr><th>Total</th><td>32</td><td>32</td><td>16</td><td>80</td></tr>
+      </table>
+      <ol class="parts">
+        <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">9th grade</mtext><mo>∩</mo><mtext mathvariant="normal">car</mtext><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{9th grade} \cap \text{car})</annotation></semantics></math> &nbsp;</li>
+        <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">10th grade</mtext><mo>∪</mo><mtext mathvariant="normal">walk</mtext><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{10th grade} \cup \text{walk})</annotation></semantics></math> &nbsp;
+          <div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">6.</b> A student says, &ldquo;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>0.6</mn></mrow><annotation encoding="application/x-tex">P(A) = 0.6</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">P(B) = 0.5</annotation></semantics></math>, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>∪</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>1.1</mn></mrow><annotation encoding="application/x-tex">P(A \cup B) = 1.1</annotation></semantics></math>.&rdquo; What did the student do wrong?</div>
+    <div class="work h08"></div>
+  </div>
+
+</section>
+</body>
+</html>

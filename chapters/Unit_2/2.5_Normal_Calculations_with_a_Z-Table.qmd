@@ -16,11 +16,11 @@ Adult women have a mean height of 64 inches and an SD of 3 inches. What percent 
 :::
 
 :::{.guided-notes-link}
-[Printable mini lesson](/handouts/Unit_2/2.5_Normal_Calculations_with_a_Z-Table.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable mini lesson](/handouts/Unit_2/2.5_Normal_Calculations_with_a_Z-Table.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 :::{.guided-notes-link}
-[Z-table](/handouts/Unit_2/Z_Table.pdf){target="_blank"} - the standard normal table, two pages. You need it for this lesson and the next.
+[Z-table](/handouts/Unit_2/Z_Table.html){target="_blank"} - the standard normal table, two pages. You need it for this lesson and the next.
 :::
 
 {{< khan 2.5 >}}

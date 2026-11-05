@@ -22,7 +22,7 @@ In this lesson, you read box plots, compare two box plots, and find {{< glink sl
 :::
 
 :::{.guided-notes-link}
-[Printable mini lesson](/handouts/Unit_1/1.4_Reading_Box_Plots_and_Outliers.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable mini lesson](/handouts/Unit_1/1.4_Reading_Box_Plots_and_Outliers.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 {{< khan 1.5 >}}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6.5  Permutations (Teacher Key)</title>
+<link rel="stylesheet" href="../assets/handouts.css">
+</head>
+<body>
+<section class="sheet">
+
+  <div class="masthead">
+    <a class="backlink" href="../../chapters/Unit_6/6.5_Permutations.html">&larr; back to the lesson</a>
+    <h1>6.5 &nbsp;Permutations</h1>
+    <div class="sub">Mini Lesson - Unit 6: Probability - DHS Statistics</div>
+    <div class="keybadge">Teacher Key: answers in red</div>
+  </div>
+
+<p><b>The counting principle.</b> If one choice has <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math> options and a second choice has <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> options, there are <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>⋅</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m \cdot n</annotation></semantics></math> ways to make both choices.</p>
+  <p><b>Example:</b> 3 shirts and 4 pairs of pants make <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>⋅</mo><mn>4</mn><mo>=</mo><mn>12</mn></mrow><annotation encoding="application/x-tex">3 \cdot 4 = 12</annotation></semantics></math> outfits.</p>
+
+  <p><b>Arranging.</b> In how many ways can 4 students sit in 4 chairs in a row?</p>
+  <div class="figrow c">
+    <table class="info fit">
+      <tr><td class="c">Chair 1</td><td class="c">Chair 2</td><td class="c">Chair 3</td><td class="c">Chair 4</td></tr>
+      <tr><td class="c">4 choices</td><td class="c">3 left</td><td class="c">2 left</td><td class="c">1 left</td></tr>
+    </table>
+    <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo>⋅</mo><mn>3</mn><mo>⋅</mo><mn>2</mn><mo>⋅</mo><mn>1</mn><mo>=</mo><mn>24</mn></mrow><annotation encoding="application/x-tex">4 \cdot 3 \cdot 2 \cdot 1 = 24</annotation></semantics></math> ways</p>
+  </div>
+
+  <div class="keys">
+    <p><b>Factorial:</b> &nbsp; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi>!</mi><mo>=</mo><mi>n</mi><mo>⋅</mo><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><mo>⋅</mo><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><mi>⋯</mi><mn>2</mn><mo>⋅</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n! = n \cdot (n - 1) \cdot (n - 2) \cdots 2 \cdot 1</annotation></semantics></math> &nbsp;&nbsp; read &ldquo;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> factorial&rdquo;</p>
+    <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mi>!</mi><mo>=</mo><mn>4</mn><mo>⋅</mo><mn>3</mn><mo>⋅</mo><mn>2</mn><mo>⋅</mo><mn>1</mn><mo>=</mo><mn>24</mn></mrow><annotation encoding="application/x-tex">4! = 4 \cdot 3 \cdot 2 \cdot 1 = 24</annotation></semantics></math> &nbsp;&nbsp; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>!</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">1! = 1</annotation></semantics></math> &nbsp;&nbsp; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mi>!</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">0! = 1</annotation></semantics></math> (there is exactly one way to arrange nothing)</p>
+  </div>
+
+  <p><b>Permutations.</b> A <b>permutation</b> is an arrangement where <b>order matters</b>.</p>
+  <p><b>Example:</b> A club of 10 students picks a president, a vice president, and a secretary. How many ways?</p>
+  <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mo>⋅</mo><mn>9</mn><mo>⋅</mo><mn>8</mn><mo>=</mo><mn>720</mn></mrow><annotation encoding="application/x-tex">10 \cdot 9 \cdot 8 = 720</annotation></semantics></math> ways. &nbsp; (Ana as president and Ben as vice president is different from Ben as president and Ana as vice president.)</p>
+
+  <div class="keys">
+    <p><b>Permutation formula:</b> &nbsp;&nbsp; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mi>n</mi></msub><msub><mi>P</mi><mi>r</mi></msub><mo>=</mo><mfrac displaystyle="true"><mrow><mi>n</mi><mi>!</mi></mrow><mrow><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>−</mo><mi>r</mi><mo stretchy="false" form="postfix">)</mo></mrow><mi>!</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">{}_nP_r = \dfrac{n!}{(n - r)!}</annotation></semantics></math> &nbsp;&nbsp; arrange <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math> things chosen from <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> things</p>
+    <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mn>10</mn></msub><msub><mi>P</mi><mn>3</mn></msub><mo>=</mo><mfrac displaystyle="true"><mrow><mn>10</mn><mi>!</mi></mrow><mrow><mn>7</mn><mi>!</mi></mrow></mfrac><mo>=</mo></mrow><annotation encoding="application/x-tex">{}_{10}P_3 = \dfrac{10!}{7!} =</annotation></semantics></math> <span class="f"><b>10 &middot; 9 &middot; 8 &middot; <s>7 &middot; 6 &ctdot; 1</s></b><b><s>7 &middot; 6 &ctdot; 1</s></b></span> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mn>720</mn></mrow><annotation encoding="application/x-tex">= 720</annotation></semantics></math></p>
+  </div>
+
+  <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mi>n</mi></msub><msub><mi>P</mi><mi>r</mi></msub></mrow><annotation encoding="application/x-tex">{}_nP_r</annotation></semantics></math> is read &ldquo;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> permute <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>.&rdquo; Some books write <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>,</mo><mi>r</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(n, r)</annotation></semantics></math>.</p>
+
+  <p><b>Repeats allowed?</b> 3-letter codes from 26 letters:</p>
+  <table class="plain">
+    <tr><td>No repeats:</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>26</mn><mo>⋅</mo><mn>25</mn><mo>⋅</mo><mn>24</mn><mo>=</mo><mn>15,600</mn></mrow><annotation encoding="application/x-tex">26 \cdot 25 \cdot 24 = 15{,}600</annotation></semantics></math> &nbsp; (a permutation)</td></tr>
+    <tr><td>Repeats allowed:</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>26</mn><mo>⋅</mo><mn>26</mn><mo>⋅</mo><mn>26</mn><mo>=</mo><msup><mn>26</mn><mn>3</mn></msup><mo>=</mo><mn>17,576</mn></mrow><annotation encoding="application/x-tex">26 \cdot 26 \cdot 26 = 26^3 = 17{,}576</annotation></semantics></math> &nbsp; (not a permutation; use the counting principle)</td></tr>
+  </table>
+
+
+  <div class="parthead brk"><b>6.5 &nbsp;Permutations - Practice</b></div>
+  <p class="partner">Work with a partner. Compare answers when you finish each problem.</p>
+
+  <div class="ex">
+    <div class="q"><b class="tag">1.</b> Find each value.</div>
+    <div class="work">
+      <ol class="parts">
+        <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mi>!</mi></mrow><annotation encoding="application/x-tex">5!</annotation></semantics></math> &nbsp;<span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mo>⋅</mo><mn>4</mn><mo>⋅</mo><mn>3</mn><mo>⋅</mo><mn>2</mn><mo>⋅</mo><mn>1</mn><mo>=</mo><mn>120</mn></mrow><annotation encoding="application/x-tex">5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 120</annotation></semantics></math></span>
+          <div class="h03"></div></li>
+        <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac displaystyle="true"><mrow><mn>6</mn><mi>!</mi></mrow><mrow><mn>4</mn><mi>!</mi></mrow></mfrac><annotation encoding="application/x-tex">\dfrac{6!}{4!}</annotation></semantics></math> &nbsp;<span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6</mn><mo>⋅</mo><mn>5</mn><mo>=</mo><mn>30</mn></mrow><annotation encoding="application/x-tex">6 \cdot 5 = 30</annotation></semantics></math></span>
+          <div class="h03"></div></li>
+        <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mi>!</mi></mrow><annotation encoding="application/x-tex">0!</annotation></semantics></math> &nbsp;<span class="ans-key">1</span>
+          <div class="h03"></div></li>
+        <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mn>8</mn></msub><msub><mi>P</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">{}_8P_3</annotation></semantics></math> &nbsp;<span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8</mn><mo>⋅</mo><mn>7</mn><mo>⋅</mo><mn>6</mn><mo>=</mo><mn>336</mn></mrow><annotation encoding="application/x-tex">8 \cdot 7 \cdot 6 = 336</annotation></semantics></math></span>
+          <div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> You have 5 shirts, 3 pairs of pants, and 2 pairs of shoes. How many outfits can you make?</div>
+    <div class="work h05"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mo>⋅</mo><mn>3</mn><mo>⋅</mo><mn>2</mn><mo>=</mo><mn>30</mn></mrow><annotation encoding="application/x-tex">5 \cdot 3 \cdot 2 = 30</annotation></semantics></math></span></div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">3.</b> In how many ways can 6 different books be arranged on a shelf?</div>
+    <div class="work h05"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6</mn><mi>!</mi><mo>=</mo><mn>720</mn></mrow><annotation encoding="application/x-tex">6! = 720</annotation></semantics></math></span></div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">4.</b> 8 runners are in a race. In how many ways can gold, silver, and bronze medals be given?</div>
+    <div class="work h05"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mn>8</mn></msub><msub><mi>P</mi><mn>3</mn></msub><mo>=</mo><mn>8</mn><mo>⋅</mo><mn>7</mn><mo>⋅</mo><mn>6</mn><mo>=</mo><mn>336</mn></mrow><annotation encoding="application/x-tex">{}_8P_3 = 8 \cdot 7 \cdot 6 = 336</annotation></semantics></math></span></div>
+  </div>
+
+  <div class="ex brk">
+    <div class="q"><b class="tag">5.</b> A phone code has 4 digits (0 to 9).</div>
+    <div class="work">
+      <ol class="parts">
+        <li>How many codes are there if digits can repeat? &nbsp;<span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mo>⋅</mo><mn>10</mn><mo>⋅</mo><mn>10</mn><mo>⋅</mo><mn>10</mn><mo>=</mo><mn>10,000</mn></mrow><annotation encoding="application/x-tex">10 \cdot 10 \cdot 10 \cdot 10 = 10{,}000</annotation></semantics></math></span>
+          <div class="h03"></div></li>
+        <li>How many codes are there if no digit repeats? &nbsp;<span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mn>10</mn></msub><msub><mi>P</mi><mn>4</mn></msub><mo>=</mo><mn>10</mn><mo>⋅</mo><mn>9</mn><mo>⋅</mo><mn>8</mn><mo>⋅</mo><mn>7</mn><mo>=</mo><mn>5,040</mn></mrow><annotation encoding="application/x-tex">{}_{10}P_4 = 10 \cdot 9 \cdot 8 \cdot 7 = 5{,}040</annotation></semantics></math></span>
+          <div class="h05"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">6.</b> In how many ways can you arrange the letters of the word MATH?</div>
+    <div class="work h05"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mi>!</mi><mo>=</mo><mn>24</mn></mrow><annotation encoding="application/x-tex">4! = 24</annotation></semantics></math></span></div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">7.</b> A club of 12 members picks a president and a treasurer. One person cannot have both jobs. How many ways?</div>
+    <div class="work h05"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mn>12</mn></msub><msub><mi>P</mi><mn>2</mn></msub><mo>=</mo><mn>12</mn><mo>⋅</mo><mn>11</mn><mo>=</mo><mn>132</mn></mrow><annotation encoding="application/x-tex">{}_{12}P_2 = 12 \cdot 11 = 132</annotation></semantics></math></span></div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">8.</b> Explain why <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mn>10</mn></msub><msub><mi>P</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">{}_{10}P_3</annotation></semantics></math> is the same as <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mo>⋅</mo><mn>9</mn><mo>⋅</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">10 \cdot 9 \cdot 8</annotation></semantics></math>.</div>
+    <div class="work h08"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mn>10</mn><mi>!</mi></mrow><mrow><mn>7</mn><mi>!</mi></mrow></mfrac><annotation encoding="application/x-tex">\frac{10!}{7!}</annotation></semantics></math>: everything from 7 down to 1 cancels, so only <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mo>⋅</mo><mn>9</mn><mo>⋅</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">10 \cdot 9 \cdot 8</annotation></semantics></math> is left.<br>That matches 10 choices, then 9, then 8.</span></div>
+  </div>
+
+</section>
+</body>
+</html>

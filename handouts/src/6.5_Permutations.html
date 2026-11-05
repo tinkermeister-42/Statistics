@@ -1,0 +1,104 @@
+<!--
+lesson: 6.5
+title: Permutations
+unit: 6
+unit_title: Probability
+kind: Mini Lesson
+back: 6.5_Permutations
+-->
+  <p><b>The counting principle.</b> If one choice has $m$ options and a second choice has $n$ options, there are $m \cdot n$ ways to make both choices.</p>
+  <p><b>Example:</b> 3 shirts and 4 pairs of pants make $3 \cdot 4 = 12$ outfits.</p>
+
+  <p><b>Arranging.</b> In how many ways can 4 students sit in 4 chairs in a row?</p>
+  <div class="figrow c">
+    <table class="info fit">
+      <tr><td class="c">Chair 1</td><td class="c">Chair 2</td><td class="c">Chair 3</td><td class="c">Chair 4</td></tr>
+      <tr><td class="c">4 choices</td><td class="c">3 left</td><td class="c">2 left</td><td class="c">1 left</td></tr>
+    </table>
+    <p>$4 \cdot 3 \cdot 2 \cdot 1 = 24$ ways</p>
+  </div>
+
+  <div class="keys">
+    <p><b>Factorial:</b> &nbsp; $n! = n \cdot (n - 1) \cdot (n - 2) \cdots 2 \cdot 1$ &nbsp;&nbsp; read &ldquo;$n$ factorial&rdquo;</p>
+    <p>$4! = 4 \cdot 3 \cdot 2 \cdot 1 = 24$ &nbsp;&nbsp; $1! = 1$ &nbsp;&nbsp; $0! = 1$ (there is exactly one way to arrange nothing)</p>
+  </div>
+
+  <p><b>Permutations.</b> A <b>permutation</b> is an arrangement where <b>order matters</b>.</p>
+  <p><b>Example:</b> A club of 10 students picks a president, a vice president, and a secretary. How many ways?</p>
+  <p>$10 \cdot 9 \cdot 8 = 720$ ways. &nbsp; (Ana as president and Ben as vice president is different from Ben as president and Ana as vice president.)</p>
+
+  <div class="keys">
+    <p><b>Permutation formula:</b> &nbsp;&nbsp; ${}_nP_r = \dfrac{n!}{(n - r)!}$ &nbsp;&nbsp; arrange $r$ things chosen from $n$ things</p>
+    <p>${}_{10}P_3 = \dfrac{10!}{7!} =$ <span class="f"><b>10 &middot; 9 &middot; 8 &middot; <s>7 &middot; 6 &ctdot; 1</s></b><b><s>7 &middot; 6 &ctdot; 1</s></b></span> $= 720$</p>
+  </div>
+
+  <p>${}_nP_r$ is read &ldquo;$n$ permute $r$.&rdquo; Some books write $P(n, r)$.</p>
+
+  <p><b>Repeats allowed?</b> 3-letter codes from 26 letters:</p>
+  <table class="plain">
+    <tr><td>No repeats:</td><td>$26 \cdot 25 \cdot 24 = 15{,}600$ &nbsp; (a permutation)</td></tr>
+    <tr><td>Repeats allowed:</td><td>$26 \cdot 26 \cdot 26 = 26^3 = 17{,}576$ &nbsp; (not a permutation; use the counting principle)</td></tr>
+  </table>
+
+
+  {{practice-head}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">1.</b> Find each value.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>$5!$ &nbsp;{{a}}$5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 120${{/a}}
+          <div class="h03"></div></li>
+        <li>$\dfrac{6!}{4!}$ &nbsp;{{a}}$6 \cdot 5 = 30${{/a}}
+          <div class="h03"></div></li>
+        <li>$0!$ &nbsp;{{a}}1{{/a}}
+          <div class="h03"></div></li>
+        <li>${}_8P_3$ &nbsp;{{a}}$8 \cdot 7 \cdot 6 = 336${{/a}}
+          <div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> You have 5 shirts, 3 pairs of pants, and 2 pairs of shoes. How many outfits can you make?</div>
+    <div class="work h05">{{a}}$5 \cdot 3 \cdot 2 = 30${{/a}}</div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">3.</b> In how many ways can 6 different books be arranged on a shelf?</div>
+    <div class="work h05">{{a}}$6! = 720${{/a}}</div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">4.</b> 8 runners are in a race. In how many ways can gold, silver, and bronze medals be given?</div>
+    <div class="work h05">{{a}}${}_8P_3 = 8 \cdot 7 \cdot 6 = 336${{/a}}</div>
+  </div>
+
+  {{break}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">5.</b> A phone code has 4 digits (0 to 9).</div>
+    <div class="work">
+      <ol class="parts">
+        <li>How many codes are there if digits can repeat? &nbsp;{{a}}$10 \cdot 10 \cdot 10 \cdot 10 = 10{,}000${{/a}}
+          <div class="h03"></div></li>
+        <li>How many codes are there if no digit repeats? &nbsp;{{a}}${}_{10}P_4 = 10 \cdot 9 \cdot 8 \cdot 7 = 5{,}040${{/a}}
+          <div class="h05"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">6.</b> In how many ways can you arrange the letters of the word MATH?</div>
+    <div class="work h05">{{a}}$4! = 24${{/a}}</div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">7.</b> A club of 12 members picks a president and a treasurer. One person cannot have both jobs. How many ways?</div>
+    <div class="work h05">{{a}}${}_{12}P_2 = 12 \cdot 11 = 132${{/a}}</div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">8.</b> Explain why ${}_{10}P_3$ is the same as $10 \cdot 9 \cdot 8$.</div>
+    <div class="work h08">{{a}}$\frac{10!}{7!}$: everything from 7 down to 1 cancels, so only $10 \cdot 9 \cdot 8$ is left.<br>That matches 10 choices, then 9, then 8.{{/a}}</div>
+  </div>

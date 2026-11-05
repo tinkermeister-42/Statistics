@@ -20,7 +20,7 @@ You also learn how to tell if a difference is real or just chance.
 :::
 
 :::{.guided-notes-link}
-[Printable mini lesson](/handouts/Unit_5/5.4_What_a_Study_Can_Prove.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable mini lesson](/handouts/Unit_5/5.4_What_a_Study_Can_Prove.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 {{< khan 5.5 >}}

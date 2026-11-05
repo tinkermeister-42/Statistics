@@ -18,7 +18,7 @@ Listing them all would take a long time. There are 720 ways. In this lesson, you
 :::
 
 :::{.guided-notes-link}
-[Printable mini lesson](/handouts/Unit_6/6.5_Permutations.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable mini lesson](/handouts/Unit_6/6.5_Permutations.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 {{< khan 6.5 >}}

@@ -21,7 +21,7 @@ Each dot is one student. The students who studied more mostly scored higher. In 
 :::
 
 :::{.guided-notes-link}
-[Printable mini lesson](/handouts/Unit_4/4.1_Scatterplots_and_Lines_of_Best_Fit.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable mini lesson](/handouts/Unit_4/4.1_Scatterplots_and_Lines_of_Best_Fit.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 {{< khan 4.1 >}}

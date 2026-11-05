@@ -1,0 +1,11 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}\input{../keyed}
+% Handout 1.3, problem 3(b): blank axis for the student; the key draws the box plot.
+\begin{document}
+\begin{tikzpicture}[x=0.24cm,y=1cm]
+  \draw[thick] (-2,0) -- (62,0);
+  \foreach \t in {0,5,...,60} \draw (\t,0.2) -- (\t,-0.2) node[below] {\t};
+  \node at (30,-0.95) {Minutes of homework};
+  \ifkey\begin{scope}[red!75!black]\bplot{5}{10}{25}{40}{60}\end{scope}\else\path (0,1.6);\fi
+\end{tikzpicture}
+\end{document}

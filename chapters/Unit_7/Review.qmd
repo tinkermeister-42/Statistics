@@ -29,7 +29,7 @@ This review uses all of them. It has every kind of problem on the Unit 7 quiz, w
 :::
 
 :::{.guided-notes-link}
-[Printable review](/handouts/Unit_7/Unit_7_Review.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable review](/handouts/Unit_7/Unit_7_Review.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 {{< khan 7.1 7.2 7.3 7.4 >}}

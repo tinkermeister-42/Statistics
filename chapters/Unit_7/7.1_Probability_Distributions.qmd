@@ -19,7 +19,7 @@ No. There are four outcomes: HH, HT, TH, TT. Only one gives 0 heads, but two giv
 :::
 
 :::{.guided-notes-link}
-[Printable mini lesson](/handouts/Unit_7/7.1_Probability_Distributions.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable mini lesson](/handouts/Unit_7/7.1_Probability_Distributions.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 {{< khan 7.1 7.2 >}}

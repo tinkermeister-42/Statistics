@@ -20,7 +20,7 @@ Does ice cream cause sunburns? Of course not. In this lesson, you learn what a l
 :::
 
 :::{.guided-notes-link}
-[Printable mini lesson](/handouts/Unit_4/4.2_Slope_Intercept_and_Correlation.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable mini lesson](/handouts/Unit_4/4.2_Slope_Intercept_and_Correlation.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 {{< khan 4.2 >}}

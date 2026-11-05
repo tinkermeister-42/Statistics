@@ -25,7 +25,7 @@ In this lesson, you find {{< glink "marginal distribution" text="marginal" >}} a
 :::
 
 :::{.guided-notes-link}
-[Printable mini lesson](/handouts/Unit_3/3.2_Marginal_and_Conditional_Distributions.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable mini lesson](/handouts/Unit_3/3.2_Marginal_and_Conditional_Distributions.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 {{< khan 3.2 >}}

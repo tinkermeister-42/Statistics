@@ -22,7 +22,7 @@ In this lesson, you learn the {{< glink "standard deviation" >}}, a number that 
 :::
 
 :::{.guided-notes-link}
-[Printable mini lesson](/handouts/Unit_2/2.1_Standard_Deviation.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable mini lesson](/handouts/Unit_2/2.1_Standard_Deviation.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 {{< khan 2.1 >}}

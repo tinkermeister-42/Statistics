@@ -3,7 +3,7 @@
 Every probability symbol, rule, simulation step, and counting tool from Unit 6 in one place. Use it while you work on the review.
 
 :::{.guided-notes-link}
-[Printable summary](/handouts/Unit_6/Unit_6_Summary.pdf){target="_blank"} - these tables on two pages, to print and keep.
+[Printable summary](/handouts/Unit_6/Unit_6_Summary.html){target="_blank"} - these tables on two pages, to print and keep.
 :::
 
 ### Probability Symbols

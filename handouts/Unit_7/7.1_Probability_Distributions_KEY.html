@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7.1  Probability Distributions (Teacher Key)</title>
+<link rel="stylesheet" href="../assets/handouts.css">
+</head>
+<body>
+<section class="sheet">
+
+  <div class="masthead">
+    <a class="backlink" href="../../chapters/Unit_7/7.1_Probability_Distributions.html">&larr; back to the lesson</a>
+    <h1>7.1 &nbsp;Probability Distributions</h1>
+    <div class="sub">Mini Lesson - Unit 7: Probability Distributions - DHS Statistics</div>
+    <div class="keybadge">Teacher Key: answers in red</div>
+  </div>
+
+<p>Flip a coin 2 times. Let <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math> = the number of heads. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math> is a <b>random variable</b>: a number that comes from a chance process.</p>
+
+  <div class="cols2">
+    <div>
+      <p>Outcomes: HH, HT, TH, TT (all equally likely)</p>
+      <table class="data left">
+        <tr><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> (heads)</th><td>0</td><td>1</td><td>2</td></tr>
+        <tr><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(x)</annotation></semantics></math></th><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mn>4</mn></mfrac><annotation encoding="application/x-tex">\frac{1}{4}</annotation></semantics></math></td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>2</mn><mn>4</mn></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{2}{4} = \frac{1}{2}</annotation></semantics></math></td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mn>4</mn></mfrac><annotation encoding="application/x-tex">\frac{1}{4}</annotation></semantics></math></td></tr>
+      </table>
+      <p>This table is the <b>probability distribution</b> of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>. It lists every value of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math> and its probability.</p>
+      <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(x)</annotation></semantics></math> means the probability that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math> equals <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>. Capital <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math> is the random variable. Small <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> is one of its values.</p>
+    </div>
+    <div>
+      <img class="fig" src="../../images/Unit_7/7.1_two_coins.svg" style="width:1.93in" alt="">
+    </div>
+  </div>
+
+  <div class="keys">
+    <b>A valid probability distribution:</b><br>
+    1. Every probability is from 0 to 1. &nbsp;&nbsp; 2. The probabilities add to 1: &nbsp;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Σ</mi><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\Sigma P(x) = 1</annotation></semantics></math>
+  </div>
+
+  <p>Check: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\frac{1}{4} + \frac{1}{2} + \frac{1}{4} = 1</annotation></semantics></math>. &nbsp;Valid.</p>
+
+  <p><b>Using a distribution.</b> Add the probabilities of the values you want.</p>
+  <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>≥</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><mo>+</mo><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>=</mo><mfrac><mn>3</mn><mn>4</mn></mfrac></mrow><annotation encoding="application/x-tex">P(X \ge 1) = P(1) + P(2) = \frac{1}{2} + \frac{1}{4} = \frac{3}{4}</annotation></semantics></math> &nbsp;&nbsp; (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>≥</mo><annotation encoding="application/x-tex">\ge</annotation></semantics></math> means “greater than or equal to”)</p>
+
+  <p><b>Theoretical or empirical?</b></p>
+  <table class="info">
+    <tr><th>Theoretical</th><td>From reasoning about the chance process (equally likely outcomes, or the multiplication rule), like the coin flips above.</td></tr>
+    <tr><th>Empirical</th><td>From data. Divide each count by the total.<br>
+      50 families: 0 cars: 5, &nbsp;1 car: 20, &nbsp;2 cars: 18, &nbsp;3 cars: 7<br>
+      <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>5</mn><mn>50</mn></mfrac><mo>=</mo><mn>0.10</mn></mrow><annotation encoding="application/x-tex">P(0) = \frac{5}{50} = 0.10</annotation></semantics></math>, &nbsp;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>0.40</mn></mrow><annotation encoding="application/x-tex">P(1) = 0.40</annotation></semantics></math>, &nbsp;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>0.36</mn></mrow><annotation encoding="application/x-tex">P(2) = 0.36</annotation></semantics></math>, &nbsp;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>0.14</mn></mrow><annotation encoding="application/x-tex">P(3) = 0.14</annotation></semantics></math></td></tr>
+  </table>
+
+
+  <div class="parthead brk"><b>7.1 &nbsp;Probability Distributions - Practice</b></div>
+  <p class="partner">Work with a partner. Compare answers when you finish each problem.</p>
+
+  <div class="ex">
+    <div class="q"><b class="tag">1.</b> Is each table a valid probability distribution? Explain.</div>
+    <div class="work">
+      <ol class="parts cols2">
+        <li><table class="data left">
+          <tr><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th><td>1</td><td>2</td><td>3</td></tr>
+          <tr><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(x)</annotation></semantics></math></th><td>0.2</td><td>0.3</td><td>0.5</td></tr>
+        </table></li>
+        <li><table class="data left">
+          <tr><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th><td>1</td><td>2</td><td>3</td></tr>
+          <tr><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(x)</annotation></semantics></math></th><td>0.4</td><td>0.4</td><td>0.3</td></tr>
+        </table></li>
+        <li><table class="data left">
+          <tr><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th><td>1</td><td>2</td><td>3</td></tr>
+          <tr><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(x)</annotation></semantics></math></th><td>0.5</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix">−</mo><mn>0.1</mn></mrow><annotation encoding="application/x-tex">-0.1</annotation></semantics></math></td><td>0.6</td></tr>
+        </table></li>
+        <li><table class="data left">
+          <tr><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th><td>1</td><td>2</td><td>3</td></tr>
+          <tr><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(x)</annotation></semantics></math></th><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mn>3</mn></mfrac><annotation encoding="application/x-tex">\frac{1}{3}</annotation></semantics></math></td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mn>3</mn></mfrac><annotation encoding="application/x-tex">\frac{1}{3}</annotation></semantics></math></td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mn>3</mn></mfrac><annotation encoding="application/x-tex">\frac{1}{3}</annotation></semantics></math></td></tr>
+        </table></li>
+      </ol>
+      <div class="h08"><span class="ans-key">(a) Valid: sums to 1. &nbsp;(b) Not valid: sums to 1.1. &nbsp;(c) Not valid: a probability cannot be negative.<br>
+        (d) Valid: each is from 0 to 1, and they sum to 1.</span></div>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> Find the missing probability.</div>
+    <div class="work">
+      <div class="figrow">
+        <div><table class="data left">
+          <tr><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th><td>0</td><td>1</td><td>2</td><td>3</td></tr>
+          <tr><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(x)</annotation></semantics></math></th><td>0.15</td><td>0.35</td><td>?</td><td>0.10</td></tr>
+        </table></div>
+        <p><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>−</mo><mrow><mo stretchy="false" form="prefix">(</mo><mn>0.15</mn><mo>+</mo><mn>0.35</mn><mo>+</mo><mn>0.10</mn><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>0.40</mn></mrow><annotation encoding="application/x-tex">1 - (0.15 + 0.35 + 0.10) = 0.40</annotation></semantics></math></span></p>
+      </div>
+      <div class="h05"></div>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">3.</b> This is the distribution of the number of goals a soccer team scores in a game.</div>
+    <div class="work">
+      <div class="figrow c">
+        <table class="data">
+          <tr><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+          <tr><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(x)</annotation></semantics></math></th><td>0.1</td><td>0.3</td><td>0.3</td><td>0.2</td><td>0.1</td></tr>
+        </table>
+        <img class="fig" src="../../images/Unit_7/7.1_goals.svg" style="width:2.52in" alt="">
+      </div>
+      <ol class="parts">
+        <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>≥</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(X \ge 2)</annotation></semantics></math> &nbsp;<span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.3</mn><mo>+</mo><mn>0.2</mn><mo>+</mo><mn>0.1</mn><mo>=</mo><mn>0.6</mn></mrow><annotation encoding="application/x-tex">0.3 + 0.2 + 0.1 = 0.6</annotation></semantics></math></span><div class="h03"></div></li>
+        <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>&lt;</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(X &lt; 1)</annotation></semantics></math> &nbsp;<span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.1</mn><annotation encoding="application/x-tex">0.1</annotation></semantics></math></span><div class="h03"></div></li>
+        <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>≤</mo><mi>X</mi><mo>≤</mo><mn>3</mn><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(1 \le X \le 3)</annotation></semantics></math> &nbsp;<span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.3</mn><mo>+</mo><mn>0.3</mn><mo>+</mo><mn>0.2</mn><mo>=</mo><mn>0.8</mn></mrow><annotation encoding="application/x-tex">0.3 + 0.3 + 0.2 = 0.8</annotation></semantics></math></span><div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex brk">
+    <div class="q"><b class="tag">4.</b> Flip a coin 3 times. Let <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math> = the number of heads.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>List all 8 outcomes. &nbsp;<span class="ans-key">HHH, HHT, HTH, THH, HTT, THT, TTH, TTT</span><div class="h03"></div></li>
+        <li>Make the probability distribution of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>.
+          <table class="fill">
+            <tr><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th><td>0</td><td>1</td><td>2</td><td>3</td></tr>
+            <tr style="height:.4in"><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(x)</annotation></semantics></math></th><td><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mn>8</mn></mfrac><annotation encoding="application/x-tex">\frac{1}{8}</annotation></semantics></math></span></td><td><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>3</mn><mn>8</mn></mfrac><annotation encoding="application/x-tex">\frac{3}{8}</annotation></semantics></math></span></td><td><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>3</mn><mn>8</mn></mfrac><annotation encoding="application/x-tex">\frac{3}{8}</annotation></semantics></math></span></td><td><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mn>8</mn></mfrac><annotation encoding="application/x-tex">\frac{1}{8}</annotation></semantics></math></span></td></tr>
+          </table></li>
+        <li>Draw a bar graph of the distribution.
+          <img class="fig" src="../../images/Unit_7/7.1_three_coins_blank_KEY.svg" style="width:2.69in" alt=""></li>
+        <li>Find <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>≥</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(X \ge 2)</annotation></semantics></math>. &nbsp;<span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>3</mn><mn>8</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>8</mn></mfrac><mo>=</mo><mfrac><mn>4</mn><mn>8</mn></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{3}{8} + \frac{1}{8} = \frac{4}{8} = \frac{1}{2}</annotation></semantics></math></span><div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">5.</b> A player makes 70% of her free throws. She shoots 2. Her shots do not affect each other. Let <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math> = the number she makes. Make the probability distribution of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>.</div>
+    <div class="work">
+      <table class="fill">
+        <tr><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th><td class="w">0</td><td class="w">1</td><td class="w">2</td></tr>
+        <tr style="height:.4in"><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(x)</annotation></semantics></math></th><td class="w"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.3</mn><mo>⋅</mo><mn>0.3</mn><mo>=</mo><mn>0.09</mn></mrow><annotation encoding="application/x-tex">0.3 \cdot 0.3 = 0.09</annotation></semantics></math></span></td><td class="w"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mrow><mo stretchy="false" form="prefix">(</mo><mn>0.7</mn><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mn>0.3</mn><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>0.42</mn></mrow><annotation encoding="application/x-tex">2(0.7)(0.3) = 0.42</annotation></semantics></math></span></td><td class="w"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.7</mn><mo>⋅</mo><mn>0.7</mn><mo>=</mo><mn>0.49</mn></mrow><annotation encoding="application/x-tex">0.7 \cdot 0.7 = 0.49</annotation></semantics></math></span></td></tr>
+      </table>
+      <div class="h03"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(1)</annotation></semantics></math> has a 2: she can make then miss, or miss then make. &nbsp;Check: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.09</mn><mo>+</mo><mn>0.42</mn><mo>+</mo><mn>0.49</mn><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">0.09 + 0.42 + 0.49 = 1</annotation></semantics></math>.</span></div>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">6.</b> 40 households said how many pets they have: 0 pets: 12, &nbsp;1 pet: 16, &nbsp;2 pets: 8, &nbsp;3 pets: 4.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Make the empirical probability distribution.
+          <div class="h03"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>0.30</mn></mrow><annotation encoding="application/x-tex">P(0) = 0.30</annotation></semantics></math>, &nbsp;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>0.40</mn></mrow><annotation encoding="application/x-tex">P(1) = 0.40</annotation></semantics></math>, &nbsp;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>0.20</mn></mrow><annotation encoding="application/x-tex">P(2) = 0.20</annotation></semantics></math>, &nbsp;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>0.10</mn></mrow><annotation encoding="application/x-tex">P(3) = 0.10</annotation></semantics></math></span></div></li>
+        <li>Find <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">at least 1 pet</mtext><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{at least 1 pet})</annotation></semantics></math>. &nbsp;<span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.40</mn><mo>+</mo><mn>0.20</mn><mo>+</mo><mn>0.10</mn><mo>=</mo><mn>0.70</mn></mrow><annotation encoding="application/x-tex">0.40 + 0.20 + 0.10 = 0.70</annotation></semantics></math> &nbsp;(or <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>−</mo><mn>0.30</mn></mrow><annotation encoding="application/x-tex">1 - 0.30</annotation></semantics></math>)</span><div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+</section>
+</body>
+</html>

@@ -1,0 +1,7 @@
+% For a handout-only figure that draws its answer in red on the key.
+%   \input{../preamble}\input{../keyed}   then wrap the answer in \ifkey ... \fi
+% scripts/make-figures.sh builds <name>.svg and, because the source uses
+% \ifkey, <name>_KEY.svg with \iskey defined.
+\newif\ifkey
+\ifdefined\iskey \keytrue \fi
+\colorlet{keyred}{red!75!black}

@@ -24,7 +24,7 @@ In this lesson, you learn who is in a study, what kind of study it is, and how {
 :::
 
 :::{.guided-notes-link}
-[Printable mini lesson](/handouts/Unit_5/5.1_Samples_Studies_and_Bias.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable mini lesson](/handouts/Unit_5/5.1_Samples_Studies_and_Bias.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 {{< khan 5.1 5.2 >}}

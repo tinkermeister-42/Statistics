@@ -3,7 +3,7 @@
 Every tool from Unit 3 in one place: two-way tables, Venn diagrams, percents, and association. Use it while you work on the review.
 
 :::{.guided-notes-link}
-[Printable summary](/handouts/Unit_3/Unit_3_Summary.pdf){target="_blank"} - these tables on two pages, to print and keep.
+[Printable summary](/handouts/Unit_3/Unit_3_Summary.html){target="_blank"} - these tables on two pages, to print and keep.
 :::
 
 ### Parts of a Two-Way Table

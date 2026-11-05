@@ -23,7 +23,7 @@ In this lesson, you use {{< glink slug="percentile" text="percentiles" >}} and {
 :::
 
 :::{.guided-notes-link}
-[Printable mini lesson](/handouts/Unit_2/2.3_Percentiles_and_Z-Scores.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable mini lesson](/handouts/Unit_2/2.3_Percentiles_and_Z-Scores.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 {{< khan 2.3 >}}

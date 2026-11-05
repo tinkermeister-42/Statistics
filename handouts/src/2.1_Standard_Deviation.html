@@ -1,0 +1,153 @@
+<!--
+lesson: 2.1
+title: Standard Deviation
+unit: 2
+unit_title: Analyzing One Variable
+kind: Mini Lesson
+back: 2.1_Standard_Deviation
+-->
+  <p>Two basketball players both score <b>10 points</b> per game on average.</p>
+
+  {{fig Unit_2/2.1_players w=5.2in}}
+
+  <p>Player A's points are close to the mean. Player B's points are spread far from the mean.
+    The <b>standard deviation</b> (SD) measures this.</p>
+
+  <div class="keys">
+    <b>Standard deviation</b> is about how far the values usually are from the mean.<br>
+    <b>Small SD:</b> values are close to the mean. &nbsp;&nbsp; <b>Large SD:</b> values are spread out.
+  </div>
+
+  <h2>How to Find the Standard Deviation</h2>
+  <p><b>Example:</b> 7, 7, 10, 13, 13</p>
+  <div class="cols2">
+    <table class="plain">
+      <tr><td>1.</td><td>Find the mean, $\bar{x}$. &nbsp; $\bar{x} = 50 \div 5 = 10$</td></tr>
+      <tr><td>2.</td><td>Subtract the mean from each value.</td></tr>
+      <tr><td>3.</td><td>Square each result.</td></tr>
+      <tr><td>4.</td><td>Add the squares. &nbsp; $\Sigma(x - \bar{x})^2 = 36$</td></tr>
+      <tr><td>5.</td><td>Divide by $n - 1$. &nbsp; $36 \div 4 = 9$<br>(This number is called the <b>variance</b>.)</td></tr>
+      <tr><td>6.</td><td>Take the square root. &nbsp; $s = \sqrt{9} = \mathbf{3}$</td></tr>
+    </table>
+    <table class="data">
+      <tr><th>$x$</th><th>$x - \bar{x}$</th><th>$(x - \bar{x})^2$</th></tr>
+      <tr><td>7</td><td>$-3$</td><td>9</td></tr>
+      <tr><td>7</td><td>$-3$</td><td>9</td></tr>
+      <tr><td>10</td><td>0</td><td>0</td></tr>
+      <tr><td>13</td><td>3</td><td>9</td></tr>
+      <tr><td>13</td><td>3</td><td>9</td></tr>
+      <tr><td colspan="2" style="text-align:right">$\Sigma(x - \bar{x})^2$</td><td>36</td></tr>
+    </table>
+  </div>
+
+  <p><b>The formula:</b> &nbsp; $\displaystyle s = \sqrt{\frac{\Sigma(x - \bar{x})^2}{n - 1}}$
+    &nbsp;&nbsp; ($s$ = the standard deviation, &nbsp;$n$ = how many values)</p>
+  <p>$\Sigma$ (capital <b>sigma</b>) means <b>add up</b>. &nbsp;$\Sigma(x - \bar{x})^2$ means: find
+    $(x - \bar{x})^2$ for every value, then add them all.</p>
+
+  <div class="cols2">
+  <div class="box tint">
+    <div class="lbl">Why $n - 1$?</div>
+    Our data is usually a <b>sample</b>, a small part of a bigger group. A sample is usually a little
+    less spread out than the whole group. Dividing by $n - 1$ makes $s$ a little bigger to fix this.
+  </div>
+
+  <div class="box tint">
+    <div class="lbl">Remember</div>
+    <ul>
+      <li>The SD is never negative.</li>
+      <li>The SD is 0 only when every value is the same.</li>
+      <li>The SD has the same units as the data (points, minutes, inches).</li>
+    </ul>
+  </div>
+  </div>
+
+
+  {{practice-head}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">1.</b> Find the standard deviation of 4, 6, 8, 10, 12.</div>
+    <div class="work cols2">
+      <table class="fill">
+        <tr><th>$x$</th><th>$x - \bar{x}$</th><th>$(x - \bar{x})^2$</th></tr>
+        <tr><td>4</td><td class="w">{{a}}$-4${{/a}}</td><td class="w">{{a}}16{{/a}}</td></tr>
+        <tr><td>6</td><td class="w">{{a}}$-2${{/a}}</td><td class="w">{{a}}4{{/a}}</td></tr>
+        <tr><td>8</td><td class="w">{{a}}0{{/a}}</td><td class="w">{{a}}0{{/a}}</td></tr>
+        <tr><td>10</td><td class="w">{{a}}2{{/a}}</td><td class="w">{{a}}4{{/a}}</td></tr>
+        <tr><td>12</td><td class="w">{{a}}4{{/a}}</td><td class="w">{{a}}16{{/a}}</td></tr>
+        <tr><td colspan="2" style="text-align:right">$\Sigma(x - \bar{x})^2$</td><td class="w">{{a}}40{{/a}}</td></tr>
+      </table>
+      <div>
+        <p>Mean: <span class="b m">{{a}}$40 \div 5 = 8${{/a}}</span></p>
+        <div class="h1"></div>
+        <p>$s =$ <span class="b l">{{a}}$\sqrt{40 \div 4} = \sqrt{10} \approx 3.16${{/a}}</span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> Four quiz scores: 7, 3, 7, 7. Find the standard deviation.</div>
+    <div class="work cols2">
+      <table class="fill">
+        <tr><th>$x$</th><th>$x - \bar{x}$</th><th>$(x - \bar{x})^2$</th></tr>
+        <tr><td>7</td><td class="w">{{a}}1{{/a}}</td><td class="w">{{a}}1{{/a}}</td></tr>
+        <tr><td>3</td><td class="w">{{a}}$-3${{/a}}</td><td class="w">{{a}}9{{/a}}</td></tr>
+        <tr><td>7</td><td class="w">{{a}}1{{/a}}</td><td class="w">{{a}}1{{/a}}</td></tr>
+        <tr><td>7</td><td class="w">{{a}}1{{/a}}</td><td class="w">{{a}}1{{/a}}</td></tr>
+        <tr><td colspan="2" style="text-align:right">$\Sigma(x - \bar{x})^2$</td><td class="w">{{a}}12{{/a}}</td></tr>
+      </table>
+      <div>
+        <p>Mean: <span class="b m">{{a}}$24 \div 4 = 6${{/a}}</span></p>
+        <div class="h1"></div>
+        <p>$s =$ <span class="b l">{{a}}$\sqrt{12 \div 3} = \sqrt{4} = 2${{/a}}</span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">3.</b> Look at the two players on page 1.
+      <table class="plain">
+        <tr><td>Player A:</td><td>9, 10, 10, 11, 10</td></tr>
+        <tr><td>Player B:</td><td>2, 18, 5, 15, 10</td></tr>
+      </table>
+    </div>
+    <div class="work">
+      <ol class="parts">
+        <li>Find the mean of each player. <span class="b l">{{a}}A: $50 \div 5 = 10$. &nbsp;B: $50 \div 5 = 10$.{{/a}}</span></li>
+        <li>Without calculating, which player has the larger SD? Explain.
+          <div class="h05">{{a}}Player B. B's points are much farther from 10.{{/a}}</div></li>
+        <li>Find $s$ for Player A.
+          <div class="h08">{{a}}Differences $-1, 0, 0, 1, 0$. &nbsp;$\Sigma(x - \bar{x})^2 = 2$. &nbsp;$s = \sqrt{2 \div 4} = \sqrt{0.5} \approx 0.71${{/a}}</div></li>
+        <li>Player B's SD is about 6.67. A coach needs a player who scores close to 10 points every game.
+          Which player should the coach choose? Explain.
+          <div class="h05">{{a}}Player A. A's SD is much smaller, so A's scores stay close to 10.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">4.</b> All three dot plots have a mean of 5. Put them in order from the
+      <b>smallest</b> SD to the <b>largest</b> SD. Explain.</div>
+    <div class="work">
+      {{fig Unit_2/2.1_rank_sd}}
+      <div class="h08">{{a}}R, P, Q. The dots in R are packed close to 5. The dots in Q are far from 5.<br>
+        (The SDs are about 0.67, 1.83, and 3.16.){{/a}}</div>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">5.</b> Think about what the SD means.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Can a standard deviation be negative? Explain.
+          <div class="h08">{{a}}No. It comes from adding squares (never negative) and taking a square root.{{/a}}</div></li>
+        <li>Find the SD of 10, 10, 10, 10 without a formula. Explain.
+          <div class="h08">{{a}}0. Every value equals the mean, so there is no spread.{{/a}}</div></li>
+        <li>Set B is 9, 10, 10, 11. Set C is 0, 10, 10, 20. Both have a mean of 10. Which set has the
+          larger SD? Explain.
+          <div class="h08">{{a}}Set C. Its values are much farther from 10.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>

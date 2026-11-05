@@ -1,0 +1,9 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}\input{../keyed}
+% Unit 1 Review, problem 8(f): blank axis for the student; the key draws the box plot and the outlier.
+\begin{document}
+\begin{tikzpicture}[x=0.105cm,y=1cm]
+  \axis{20}{160}{20}{10}{Price of a used bike (dollars)}
+  \ifkey\begin{scope}[keyred]\bplotat{1.1}{40}{55}{65}{75}{80}\outlier{150}{1.1}\end{scope}\else\path (20,1.8);\fi
+\end{tikzpicture}
+\end{document}

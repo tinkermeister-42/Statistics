@@ -1,0 +1,425 @@
+<!--
+title: Unit 7 Review
+unit: 7
+unit_title: Probability Distributions
+kind: Unit Review
+back: Review
+backword: review
+-->
+  <div class="figrow">
+    <p><b>One game, every tool.</b> A game booth at the school fair raises money. You pay $\$2$ to spin this spinner one time. It has 4 equal parts. You win the prize on your part.</p>
+    {{fig Unit_7/Review_spinner_prizes w=0.8in}}
+  </div>
+
+  <table class="info">
+    <tr>
+      <td>
+        <p><b>7.1 Make the distribution.</b><br>List every value of $X$ with its probability.<br>Each $P(x)$ is from 0 to 1.<br>$\Sigma P(x) = 1$<br>($\Sigma$ means add up.)</p>
+      </td>
+      <td>
+        <div class="cols2">
+          <div>
+            <p>$X$ = the prize from one spin, in dollars.</p>
+            <table class="data left">
+              <tr><th>$x$</th><td>0</td><td>1</td><td>5</td></tr>
+              <tr><th>$P(x)$</th><td>$\dfrac{2}{4} = \dfrac{1}{2}$</td><td>$\dfrac{1}{4}$</td><td>$\dfrac{1}{4}$</td></tr>
+            </table>
+            <p>Check: $\dfrac{1}{2} + \dfrac{1}{4} + \dfrac{1}{4} = 1$. &nbsp;Valid.</p>
+          </div>
+          <div>
+            {{fig Unit_7/Review_prize_bars w=2in}}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><b>7.1 Theoretical or empirical?</b><br><b>Theoretical</b>: from equally likely outcomes.<br><b>Empirical</b>: from data. Divide each count by the total.</p>
+      </td>
+      <td>
+        <p>The 4 parts are equally likely, so the table above is <b>theoretical</b>.</p>
+        <p>The booth counted 100 spins: $\$0$ 52 times, $\$1$ 23 times, $\$5$ 25 times. This is the <b>empirical</b> distribution:</p>
+        <p>$P(0) = \dfrac{52}{100} = 0.52$, &nbsp;&nbsp; $P(1) = 0.23$, &nbsp;&nbsp; $P(5) = 0.25$</p>
+        <p>It is close to the theoretical one, but not the same.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><b>7.2 Find the expected value.</b><br>$E(X) = \Sigma\, x \cdot P(x)$<br>Multiply each value by its probability. Then add. $E(X)$ is also the mean of $X$, written $\mu_X$.</p>
+      </td>
+      <td>
+        <div class="figrow">
+          <div><table class="data left">
+            <tr><th>$x$</th><td>0</td><td>1</td><td>5</td></tr>
+            <tr><th>$P(x)$</th><td>0.5</td><td>0.25</td><td>0.25</td></tr>
+            <tr><th>$x \cdot P(x)$</th><td>0</td><td>0.25</td><td>1.25</td></tr>
+          </table></div>
+          <p>$E(X) = 0 + 0.25 + 1.25 = \$1.50$</p>
+        </div>
+        <p>Over many spins, a spin pays about $\$1.50$ on average. No single spin pays $\$1.50$.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><b>7.3 Find the expected payoff.</b><br><b>Net gain</b> $=$ what you win $-$ what you paid.<br>A game is <b>fair</b> if the expected payoff is 0.</p>
+      </td>
+      <td>
+        <p>A spin costs $\$2$.</p>
+        <table class="data left">
+          <tr><th>Outcome</th><th>Net gain $x$</th><th>$P(x)$</th><th>$x \cdot P(x)$</th></tr>
+          <tr><td>Win $\$0$</td><td>$0 - 2 = -2$</td><td>0.5</td><td>$-1$</td></tr>
+          <tr><td>Win $\$1$</td><td>$1 - 2 = -1$</td><td>0.25</td><td>$-0.25$</td></tr>
+          <tr><td>Win $\$5$</td><td>$5 - 2 = 3$</td><td>0.25</td><td>0.75</td></tr>
+        </table>
+        <p>Expected payoff $= -1 - 0.25 + 0.75 = -\$0.50$</p>
+        <p>On average, a player loses 50 cents a spin. The game is <b>not fair</b>. The booth keeps that money for the school. A spin that cost $\$1.50$ would be fair.</p>
+      </td>
+    </tr>
+  </table>
+
+  <p><b>Expected value is a long-run average.</b> It tells you what happens over many tries. It does not tell you what happens on one try. For a decision, also think about risk: can you pay for the worst outcome?</p>
+
+
+  {{practice-head}}
+
+  <div class="lessonhead">7.1 - Probability Distributions</div>
+
+  <div class="ex split">
+    <div class="q"><div class="goal"><b class="tag">1.</b> I check if a probability distribution is valid, and I draw it as a graph.</div>
+      Is each table a valid probability distribution? Explain.</div>
+    <div class="work">
+      <ol class="parts cols2">
+        <li><table class="data left">
+            <tr><th>$x$</th><td>0</td><td>1</td><td>2</td></tr>
+            <tr><th>$P(x)$</th><td>0.25</td><td>0.45</td><td>0.30</td></tr>
+          </table>
+          <div class="h05">{{a}}Valid. Each one is from 0 to 1, and $0.25 + 0.45 + 0.30 = 1$.{{/a}}</div></li>
+        <li><table class="data left">
+            <tr><th>$x$</th><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+            <tr><th>$P(x)$</th><td>0.1</td><td>0.3</td><td>0.3</td><td>0.2</td></tr>
+          </table>
+          <div class="h05">{{a}}Not valid. $0.1 + 0.3 + 0.3 + 0.2 = 0.9$, not 1.{{/a}}</div></li>
+        <li><table class="data left">
+            <tr><th>$x$</th><td>0</td><td>1</td><td>2</td></tr>
+            <tr><th>$P(x)$</th><td>0.6</td><td>0.5</td><td>$-0.1$</td></tr>
+          </table>
+          <div class="h05">{{a}}Not valid. They add to 1, but $-0.1$ is less than 0.{{/a}}</div></li>
+        <li><table class="data left">
+            <tr><th>$x$</th><td>1</td><td>2</td><td>3</td></tr>
+            <tr><th>$P(x)$</th><td>$\dfrac{1}{2}$</td><td>$\dfrac{1}{3}$</td><td>$\dfrac{1}{6}$</td></tr>
+          </table>
+          <div class="h05">{{a}}Valid. $\frac{3}{6} + \frac{2}{6} + \frac{1}{6} = \frac{6}{6} = 1$.{{/a}}</div></li>
+      </ol>
+
+      <p>Let $X$ = the number of library books a student checks out in one visit.</p>
+      <table class="data">
+        <tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><th>$P(x)$</th><td>0.10</td><td>0.40</td><td>?</td><td>0.15</td><td>0.05</td></tr>
+      </table>
+
+      <div class="cols2">
+        <ol class="parts" style="counter-reset: part 4">
+          <li>Find the missing probability, $P(2)$.
+            <div class="h05">{{a}}$1 - (0.10 + 0.40 + 0.15 + 0.05)$<br>$= 1 - 0.70 = 0.30${{/a}}</div></li>
+          <li>Find $P(X \ge 2)$.
+            <div class="h03">{{a}}$0.30 + 0.15 + 0.05 = 0.50${{/a}}</div></li>
+          <li>Find $P(1 \le X \le 3)$.<br>($\le$ means “less than or equal to.”)
+            <div class="h03">{{a}}$0.40 + 0.30 + 0.15 = 0.85${{/a}}</div></li>
+        </ol>
+        <ol class="parts" style="counter-reset: part 7">
+          <li>Draw a bar graph of the distribution.
+            {{fig Unit_7/Unit_7_Review_books_blank left}}</li>
+        </ol>
+      </div>
+
+      <ol class="parts" style="counter-reset: part 8">
+        <li>Find the missing probability.
+          <div class="figrow">
+            <div><table class="data left">
+              <tr><th>$x$</th><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+              <tr><th>$P(x)$</th><td>$\dfrac{1}{8}$</td><td>$\dfrac{3}{8}$</td><td>?</td><td>$\dfrac{1}{4}$</td></tr>
+            </table></div>
+            <p>{{a}}$1 - \left(\frac{1}{8} + \frac{3}{8} + \frac{2}{8}\right) = \frac{2}{8} = \frac{1}{4}${{/a}}</p>
+          </div>
+          <div class="h05"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="ex split">
+    <div class="q"><div class="goal"><b class="tag">2.</b> I explain what a random variable is, and I make theoretical and empirical distributions.</div>
+      Is each one a random variable? Explain.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>The number of heads when you flip a coin 4 times.
+          <div class="h03">{{a}}Yes. It is a number, and it comes from a chance process.{{/a}}</div></li>
+        <li>The number of days in the month of May.
+          <div class="h03">{{a}}No. It is always 31. It does not come from chance.{{/a}}</div></li>
+        <li>The color of the next car that drives past the school.
+          <div class="h03">{{a}}No. It comes from chance, but it is not a number.{{/a}}</div></li>
+      </ol>
+
+      <p>A spinner has 3 equal parts, numbered 1, 2, and 3. Spin it 2 times. Let $X$ = the sum of the two numbers.</p>
+      <ol class="parts" style="counter-reset: part 3">
+        <li>List all 9 outcomes and the sum for each.
+          <div class="h08">{{a}}1+1 = 2, &nbsp;1+2 = 3, &nbsp;1+3 = 4, &nbsp;2+1 = 3, &nbsp;2+2 = 4, &nbsp;2+3 = 5, &nbsp;3+1 = 4, &nbsp;3+2 = 5, &nbsp;3+3 = 6{{/a}}</div></li>
+        <li>Make the theoretical probability distribution of $X$.
+          <table class="fill">
+            <tr><th>$x$</th><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+            <tr style="height:.4in"><th>$P(x)$</th><td>{{a}}$\frac{1}{9}${{/a}}</td><td>{{a}}$\frac{2}{9}${{/a}}</td><td>{{a}}$\frac{3}{9}${{/a}}</td><td>{{a}}$\frac{2}{9}${{/a}}</td><td>{{a}}$\frac{1}{9}${{/a}}</td></tr>
+          </table></li>
+        <li>Find $P(X \ge 5)$. &nbsp;{{a}}$\frac{2}{9} + \frac{1}{9} = \frac{3}{9} = \frac{1}{3}${{/a}}<div class="h03"></div></li>
+      </ol>
+
+      <div class="cols2">
+        <p>A class did this 100 times. Each time, they spun 2 times and wrote the sum.</p>
+        <table class="data">
+          <tr><th>Sum</th><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+          <tr><th>Count</th><td>9</td><td>24</td><td>30</td><td>25</td><td>12</td></tr>
+        </table>
+      </div>
+
+      <ol class="parts" style="counter-reset: part 6">
+        <li>Make the empirical probability distribution of $X$.
+          <table class="fill">
+            <tr><th>$x$</th><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+            <tr><th>$P(x)$</th><td>{{a}}0.09{{/a}}</td><td>{{a}}0.24{{/a}}</td><td>{{a}}0.30{{/a}}</td><td>{{a}}0.25{{/a}}</td><td>{{a}}0.12{{/a}}</td></tr>
+          </table></li>
+        <li>Compare $P(4)$ in the two distributions. Why are they different?
+          <div class="h05">{{a}}Theoretical: $\frac{3}{9} \approx 0.33$. &nbsp;Empirical: 0.30. &nbsp;The empirical one comes from only 100 tries. Chance makes the counts vary.{{/a}}</div></li>
+        <li>The class does this 1,000 more times. What do you expect to happen to the empirical distribution?
+          <div class="h03">{{a}}It should get closer to the theoretical distribution. More trials give results closer to the theoretical probabilities.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="lessonhead">7.2 - Expected Value</div>
+
+  <div class="ex split">
+    <div class="q"><div class="goal"><b class="tag">3.</b> I find the expected value of a random variable, and I explain what it means.</div>
+      Let $X$ = the number of hits a baseball player gets in one game.</div>
+    <div class="work">
+      <table class="fill">
+        <tr><th>$x$ (hits)</th><td>0</td><td>1</td><td>2</td><td>3</td></tr>
+        <tr><th>$P(x)$</th><td>0.25</td><td>0.45</td><td>0.20</td><td>0.10</td></tr>
+        <tr><th>$x \cdot P(x)$</th><td>{{a}}0{{/a}}</td><td>{{a}}0.45{{/a}}</td><td>{{a}}0.40{{/a}}</td><td>{{a}}0.30{{/a}}</td></tr>
+      </table>
+      <ol class="parts">
+        <li>Fill in the last row of the table.</li>
+        <li>Find $E(X)$.
+          <div class="h03">{{a}}$E(X) = \Sigma\, x \cdot P(x) = 0 + 0.45 + 0.40 + 0.30 = 1.15$ hits{{/a}}</div></li>
+        <li>What does $E(X)$ mean?
+          <div class="h03">{{a}}Over many games, the player gets about 1.15 hits per game, on average.{{/a}}</div></li>
+        <li>A student says, “The expected value must be wrong. A player cannot get part of a hit.” Explain the mistake.
+          <div class="h05">{{a}}The expected value is a long-run average. It does not have to be a value that can happen in one game.{{/a}}</div></li>
+        <li>The player plays 40 games. About how many hits do you expect? &nbsp;{{a}}$40 \times 1.15 = 46$ hits{{/a}}<div class="h03"></div></li>
+      </ol>
+
+      <p>Flip a coin 4 times. Let $X$ = the number of heads.</p>
+      <table class="data">
+        <tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><th>$P(x)$</th><td>$\dfrac{1}{16}$</td><td>$\dfrac{4}{16}$</td><td>$\dfrac{6}{16}$</td><td>$\dfrac{4}{16}$</td><td>$\dfrac{1}{16}$</td></tr>
+      </table>
+      <ol class="parts" style="counter-reset: part 5">
+        <li>Find $E(X)$.
+          <div class="h05">{{a}}$0 \cdot \frac{1}{16} + 1 \cdot \frac{4}{16} + 2 \cdot \frac{6}{16} + 3 \cdot \frac{4}{16} + 4 \cdot \frac{1}{16} = \frac{0 + 4 + 12 + 12 + 4}{16} = \frac{32}{16} = 2$ heads{{/a}}</div></li>
+        <li>This distribution is symmetric. How does that help you check your answer to (f)?
+          <div class="h03">{{a}}The probabilities are the same on both sides of 2. So the mean is in the middle, at 2.{{/a}}</div></li>
+      </ol>
+
+      <ol class="parts" style="counter-reset: part 7">
+        <li>Another name for $E(X)$ is $\mu_X$, the mean of $X$. ($\mu$ is “mu.”) Find $\mu_X$ for this table.
+          <div class="figrow">
+            <div><table class="data left">
+              <tr><th>$x$</th><td>10</td><td>20</td><td>50</td></tr>
+              <tr><th>$P(x)$</th><td>0.5</td><td>0.3</td><td>0.2</td></tr>
+            </table></div>
+            <p>{{a}}$\mu_X = 10(0.5) + 20(0.3) + 50(0.2) = 5 + 6 + 10 = 21${{/a}}</p>
+          </div>
+          <div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="ex split">
+    <div class="q"><div class="goal"><b class="tag">4.</b> I decide if a method of choosing is fair, and I decide if a game is fair.</div>
+      Rosa, Tam, and Yusuf need to choose who goes first in a game. Is each method fair? Explain.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Roll a number cube. 1 or 4: Rosa. &nbsp;2 or 5: Tam. &nbsp;3 or 6: Yusuf.
+          <div class="h05">{{a}}Fair. Each person has $\frac{2}{6} = \frac{1}{3}$.{{/a}}</div></li>
+        <li>Draw one card from a standard deck. Hearts: Rosa. &nbsp;Diamonds: Tam. &nbsp;Clubs or spades: Yusuf.
+          <div class="h05">{{a}}Not fair. Rosa $\frac{13}{52} = \frac{1}{4}$, &nbsp;Tam $\frac{13}{52} = \frac{1}{4}$, &nbsp;Yusuf $\frac{26}{52} = \frac{1}{2}$.{{/a}}</div></li>
+        <li>Draw one card from a standard deck. A face card (J, Q, K): Rosa. &nbsp;An ace: Tam. &nbsp;Any other card: Yusuf.
+          <div class="h05">{{a}}Not fair. Rosa $\frac{12}{52}$, &nbsp;Tam $\frac{4}{52}$, &nbsp;Yusuf $\frac{36}{52}$.{{/a}}</div></li>
+        <li>Flip a coin. Heads: Rosa. Tails: roll a number cube. 1, 2, or 3: Tam. &nbsp;4, 5, or 6: Yusuf.
+          <div class="h05">{{a}}Not fair. Rosa $\frac{1}{2}$, &nbsp;Tam $\frac{1}{2} \cdot \frac{3}{6} = \frac{1}{4}$, &nbsp;Yusuf $\frac{1}{2} \cdot \frac{3}{6} = \frac{1}{4}$.{{/a}}</div></li>
+        <li>Change method (b) to make it fair.
+          <div class="h03">{{a}}Example: Hearts: Rosa. Diamonds: Tam. Clubs: Yusuf. Spades: draw again.{{/a}}</div></li>
+      </ol>
+
+      <p>At a school fair booth, you draw one card from a standard deck. You win $\$6$ if it is a heart. You pay $\$2$ for any other card.</p>
+      <ol class="parts" style="counter-reset: part 5">
+        <li>Find the expected value of what you win.
+          <div class="h05">{{a}}$6 \cdot \frac{13}{52} + (-2) \cdot \frac{39}{52} = \frac{78}{52} - \frac{78}{52} = 0${{/a}}</div></li>
+        <li>Is the game fair? Explain. &nbsp;{{a}}Yes. The expected value is 0. On average, no one wins or loses.{{/a}}<div class="h03"></div></li>
+      </ol>
+
+      <p>At another booth, you flip 2 coins. You win $\$5$ if both are heads. You pay $\$2$ for anything else.</p>
+      <ol class="parts" style="counter-reset: part 7">
+        <li>Find the expected value. Is the game fair?
+          <div class="h05">{{a}}$5 \cdot \frac{1}{4} + (-2) \cdot \frac{3}{4} = \frac{5}{4} - \frac{6}{4} = -\frac{1}{4} = -\$0.25$. &nbsp;Not fair. You lose 25 cents a game, on average.{{/a}}</div></li>
+        <li>You play this game 40 times. About how much money do you expect to win or lose in total?
+          <div class="h03">{{a}}$40 \times (-\$0.25) = -\$10$. &nbsp;You expect to lose about $\$10$.{{/a}}</div></li>
+        <li>How much should you win for two heads to make the game fair?
+          <div class="h03">{{a}}$w \cdot \frac{1}{4} - \frac{6}{4} = 0$, so $w = 6$. &nbsp;You should win $\$6$.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="lessonhead">7.3 - Expected Payoff</div>
+
+  <div class="ex split">
+    <div class="q"><div class="goal"><b class="tag">5.</b> I find the net gain for each outcome, and I find the expected payoff of a lottery, game, or plan.</div>
+      The art club sells 250 raffle tickets for $\$4$ each. One ticket wins $\$250$. Five tickets win $\$30$ each. The rest win nothing.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Fill in the table.
+          <table class="fill">
+            <tr><th>Outcome</th><th>Net gain $x$</th><th>$P(x)$</th><th>$x \cdot P(x)$</th></tr>
+            <tr style="height:.4in"><td>Win $\$250$</td><td class="w">{{a}}$250 - 4 = 246${{/a}}</td><td class="w">{{a}}$\frac{1}{250} = 0.004${{/a}}</td><td class="w">{{a}}0.984{{/a}}</td></tr>
+            <tr style="height:.4in"><td>Win $\$30$</td><td class="w">{{a}}$30 - 4 = 26${{/a}}</td><td class="w">{{a}}$\frac{5}{250} = 0.02${{/a}}</td><td class="w">{{a}}0.52{{/a}}</td></tr>
+            <tr style="height:.4in"><td>Win nothing</td><td class="w">{{a}}$-4${{/a}}</td><td class="w">{{a}}$\frac{244}{250} = 0.976${{/a}}</td><td class="w">{{a}}$-3.904${{/a}}</td></tr>
+          </table></li>
+        <li>Find the expected payoff. &nbsp;{{a}}$0.984 + 0.52 - 3.904 = -\$2.40${{/a}}<div class="h03"></div></li>
+        <li>What does the expected payoff mean? &nbsp;{{a}}On average, a buyer loses $\$2.40$ per ticket.{{/a}}<div class="h03"></div></li>
+        <li>The club sells all 250 tickets. How much money does the club raise?
+          <div class="h03">{{a}}$250 \times \$2.40 = \$600$ &nbsp;(or $\$1{,}000 - \$250 - \$150 = \$600$){{/a}}</div></li>
+      </ol>
+
+      <p>At another booth, you pay $\$3$ to spin a spinner with 10 equal parts. 1 part wins $\$20$. 2 parts win $\$5$. The other 7 parts win nothing.</p>
+      <ol class="parts" style="counter-reset: part 4">
+        <li>Find the net gain for each outcome.
+          <div class="h03">{{a}}Win $\$20$: $20 - 3 = 17$. &nbsp;&nbsp;Win $\$5$: $5 - 3 = 2$. &nbsp;&nbsp;Win nothing: $-3$.{{/a}}</div></li>
+        <li>Find the expected payoff.
+          <div class="h03">{{a}}$17(0.1) + 2(0.2) + (-3)(0.7) = 1.7 + 0.4 - 2.1 = 0${{/a}}</div></li>
+        <li>Is the game fair? Should a player expect to win money?
+          <div class="h03">{{a}}Yes, it is fair. No. On average, a player does not win or lose money.{{/a}}</div></li>
+        <li>The school wants to make $\$1$ per player, on average. How much should a spin cost?
+          <div class="h05">{{a}}Average prize: $20(0.1) + 5(0.2) = \$3$. &nbsp;Cost: $\$3 + \$1 = \$4$.<br>
+            Check: $16(0.1) + 1(0.2) + (-4)(0.7) = 1.6 + 0.2 - 2.8 = -1${{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="ex split">
+    <div class="q"><div class="goal"><b class="tag">6.</b> I use expected value, and risk, to make a decision.</div>
+      A game console costs $\$350$ to repair. The chance that it needs a repair in the first year is 0.06. Plan A is a one-year protection plan. It costs $\$29$.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Find the expected repair cost with no plan. &nbsp;{{a}}$0.06 \cdot 350 = \$21${{/a}}<div class="h03"></div></li>
+        <li>Which is cheaper on average: Plan A or no plan? By how much?
+          <div class="h03">{{a}}No plan. &nbsp;$\$29 - \$21 = \$8$ cheaper on average.{{/a}}</div></li>
+        <li>Give a reason someone might still buy Plan A.
+          <div class="h03">{{a}}They could not pay a sudden $\$350$ bill. The plan removes that risk.{{/a}}</div></li>
+        <li>The store sells 500 of Plan A. About how much money does the store expect to make?
+          <div class="h03">{{a}}Each plan: $\$29 - \$21 = \$8$. &nbsp;&nbsp;$500 \times 8 = \$4{,}000${{/a}}</div></li>
+      </ol>
+
+      <p>Plan B costs $\$12$. With Plan B, you still pay $\$100$ if the console needs a repair.</p>
+      <ol class="parts" style="counter-reset: part 4">
+        <li>Find the expected cost of Plan B.
+          <div class="h05">{{a}}You always pay $\$12$. You pay $\$100$ more with probability 0.06.<br>$12 + 0.06 \cdot 100 = 12 + 6 = \$18${{/a}}</div></li>
+        <li>Which choice costs the least on average: no plan, Plan A, or Plan B?
+          <div class="h03">{{a}}Plan B ($\$18$). Then no plan ($\$21$). Then Plan A ($\$29$).{{/a}}</div></li>
+        <li>Mia has only $\$60$ saved for surprise bills. Which choice would you tell her to pick? Explain.
+          <div class="h05">{{a}}Plan A. With no plan, she could get a $\$350$ bill. With Plan B, she could get a $\$100$ bill. Both are more than $\$60$. With Plan A, she never pays more than $\$29$.{{/a}}</div></li>
+        <li>At what price would Plan A cost the same as no plan, on average?
+          <div class="h03">{{a}}$\$21$, the expected repair cost with no plan.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="lessonhead">Test-Style Questions</div>
+  <p>A test asks the same questions with more words. Read slowly. Circle the best answer.</p>
+
+  <div class="ex">
+    <div class="q"><b class="tag">7.</b> The random variable $X$ represents the number of times a randomly selected student rode the city bus last week. The table shows the probability distribution of $X$, but one probability is missing.</div>
+    <div class="work">
+      <table class="data left">
+        <tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><th>$P(x)$</th><td>0.42</td><td>0.25</td><td>0.18</td><td>?</td><td>0.05</td></tr>
+      </table>
+      <p>What is the probability that a randomly selected student rode the city bus at least 2 times last week?</p>
+      <p>{{opt A}} 0.10 &emsp;&emsp; {{opt B}} 0.23 &emsp;&emsp; {{optans C}} 0.33 &emsp;&emsp; {{opt D}} 0.58</p>
+      <div class="h03">{{a}}Missing: $1 - 0.90 = 0.10$. &nbsp;$P(X \ge 2) = 0.18 + 0.10 + 0.05 = 0.33${{/a}}</div>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">8.</b> Which of the following describes an empirical probability distribution?</div>
+    <div class="work">
+      <table class="choices">
+        <tr><td>{{opt A}}</td><td>The probability of each sum when two fair number cubes are rolled, found by listing all 36 outcomes.</td></tr>
+        <tr><td>{{opt B}}</td><td>The probability of each number of heads when 3 fair coins are flipped, found by listing all 8 outcomes.</td></tr>
+        <tr><td>{{optans C}}</td><td>The probability of each number of goals a team scores, found by dividing the number of games with that many goals by the total number of games played last season.</td></tr>
+        <tr><td>{{opt D}}</td><td>The probability of drawing each suit from a standard deck of 52 cards, found by counting the cards of each suit.</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">9.</b> On each turn of a board game, a player spins a spinner and earns points. The random variable $X$ represents the number of points a player earns on one turn. The table shows the probability distribution of $X$.</div>
+    <div class="work">
+      <table class="data left">
+        <tr><th>$x$</th><td>0</td><td>2</td><td>5</td><td>10</td></tr>
+        <tr><th>$P(x)$</th><td>0.4</td><td>0.3</td><td>0.2</td><td>0.1</td></tr>
+      </table>
+      <p>What is the expected value of $X$?</p>
+      <p>{{opt A}} 0 &emsp;&emsp; {{optans B}} 2.6 &emsp;&emsp; {{opt C}} 4.25 &emsp;&emsp; {{opt D}} 17</p>
+      <div class="h03">{{a}}$0(0.4) + 2(0.3) + 5(0.2) + 10(0.1) = 0 + 0.6 + 1.0 + 1.0 = 2.6${{/a}}</div>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">10.</b> In a game, a player rolls a fair number cube one time. If the cube lands on 6, the player wins $\$10$. If the cube lands on any other number, the player loses $\$1$. Which statement about the game is true?</div>
+    <div class="work">
+      <table class="choices">
+        <tr><td>{{opt A}}</td><td>The game is fair, because the player wins on only one of the six numbers.</td></tr>
+        <tr><td>{{opt B}}</td><td>The game is fair, because the expected value of the game is $\$0$.</td></tr>
+        <tr><td>{{opt C}}</td><td>The game is not fair, because the player loses about $\$0.83$ per game, on average.</td></tr>
+        <tr><td>{{optans D}}</td><td>The game is not fair, because the player wins about $\$0.83$ per game, on average.</td></tr>
+      </table>
+      <div class="h03">{{a}}$10 \cdot \frac{1}{6} + (-1) \cdot \frac{5}{6} = \frac{10}{6} - \frac{5}{6} = \frac{5}{6} \approx \$0.83${{/a}}</div>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">11.</b> A company charges $\$75$ for a one-year warranty on a washing machine. The company estimates that 4% of the machines will need a repair that costs $\$900$ during the year, and that the other machines will need no repairs. Based on these estimates, what is the company's expected profit for each warranty it sells?</div>
+    <div class="work">
+      <p>{{opt A}} $\$36$ &emsp;&emsp; {{optans B}} $\$39$ &emsp;&emsp; {{opt C}} $\$75$ &emsp;&emsp; {{opt D}} $\$825$</p>
+      <div class="h03">{{a}}Expected repair cost: $0.04 \cdot 900 = \$36$. &nbsp;Profit: $\$75 - \$36 = \$39${{/a}}</div>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">12.</b> A school club sells 500 raffle tickets for $\$4$ each. One ticket wins a $\$500$ prize, and 5 tickets each win a $\$50$ prize. All other tickets win nothing. What is the expected payoff for a person who buys one ticket?</div>
+    <div class="work">
+      <p>{{opt A}} $-\$4.00$ &emsp;&emsp; {{optans B}} $-\$2.50$ &emsp;&emsp; {{opt C}} $\$1.50$ &emsp;&emsp; {{opt D}} $\$2.50$</p>
+      <div class="h03">{{a}}$496 \cdot \frac{1}{500} + 46 \cdot \frac{5}{500} + (-4) \cdot \frac{494}{500} = 0.992 + 0.46 - 3.952 = -\$2.50${{/a}}</div>
+    </div>
+  </div>

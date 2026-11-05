@@ -1,12 +1,15 @@
 #!/bin/bash
-# Build the printable mini lesson PDFs: student copy and _KEY copy from one .tex.
-#   ./build.sh                 all handouts
-#   ./build.sh 1.3             only lessons whose file name starts with 1.3
-#   ./build.sh Unit1_Quiz      quizzes in assessments/ build the same way
+# Build the printables.
+#   Handouts: handouts/src/<name>.html -> handouts/Unit_X/<name>.html and
+#     _KEY.html (scripts/build-handouts.py).
+#   Quizzes and tests: assessments/Unit_X/<name>.tex -> <name>.pdf and _KEY.pdf.
+#   ./build.sh                 everything
+#   ./build.sh 1.3             only sheets whose name starts with 1.3
+#   ./build.sh Unit1_Quiz      just that quiz
 set -euo pipefail
 cd "$(dirname "$0")"
 shopt -s nullglob
-for tex in handouts/Unit_*/*.tex assessments/Unit_*/*.tex; do
+for tex in assessments/Unit_*/*.tex; do
   base="$(basename "$tex" .tex)"
   if [[ $# -gt 0 ]]; then
     hit=false; for p in "$@"; do [[ "$base" == "$p"* ]] && hit=true; done
@@ -21,5 +24,7 @@ for tex in handouts/Unit_*/*.tex assessments/Unit_*/*.tex; do
     rm -f "$base".{aux,log} "${base}_KEY".{aux,log} )
   echo "built $dir/$base(.pdf, _KEY.pdf)"
 done
+# the HTML handouts (lessons, reviews, summaries, tables) from handouts/src/
+python3 scripts/build-handouts.py "$@"
 # the teacher's bookmark page of every quiz, review and key
 python3 scripts/build-assessments-index.py

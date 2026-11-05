@@ -1,0 +1,134 @@
+<!--
+lesson: 2.2
+title: Choosing Measures and Comparing Distributions
+unit: 2
+unit_title: Analyzing One Variable
+kind: Mini Lesson
+back: 2.2_Choosing_Measures_and_Comparing_Distributions
+-->
+  <p><b>Which measures should you use?</b> It depends on the shape of the data.</p>
+
+  <table class="info fit">
+    <tr><th>Shape of the data</th><th class="c">Center</th><th class="c">Spread</th></tr>
+    <tr><td>Symmetric, no outliers</td><td class="c">mean</td><td class="c">standard deviation</td></tr>
+    <tr><td>Skewed, or has outliers</td><td class="c">median</td><td class="c">IQR</td></tr>
+  </table>
+
+  <div class="box tint">
+    <div class="lbl">Why?</div>
+    An outlier pulls the mean and the SD. It does not pull the median and the IQR much.
+  </div>
+
+  <p><b>Example:</b> 2, 3, 3, 4, 5, 40</p>
+  <div class="cols2">
+    <table class="data left">
+      <tr><th></th><th>Mean</th><th>SD</th><th>Median</th><th>IQR</th></tr>
+      <tr><td>With 40</td><td>9.5</td><td>15.0</td><td>3.5</td><td>2</td></tr>
+      <tr><td>Without 40</td><td>3.4</td><td>1.1</td><td>3</td><td>2</td></tr>
+    </table>
+    <p>One value moved the mean by 6.1 and the SD by about 14. The median moved 0.5. The IQR did not move.</p>
+  </div>
+
+  <p><b>Comparing two distributions.</b> Talk about all four of these. Use numbers and the context.</p>
+  <table class="plain">
+    <tr><td><b>Shape:</b></td><td>symmetric or skewed?</td></tr>
+    <tr><td><b>Center:</b></td><td>which group is higher? (median or mean)</td></tr>
+    <tr><td><b>Spread:</b></td><td>which group is more spread out? (IQR or SD)</td></tr>
+    <tr><td><b>Outliers:</b></td><td>any values far from the rest?</td></tr>
+  </table>
+
+  {{fig Unit_2/2.2_sleep w=4.1in}}
+
+  <table class="info">
+    <tr><td>Shape</td><td>9th grade is symmetric. 12th grade is skewed right.</td></tr>
+    <tr><td>Center</td><td>The median for 9th grade (8 hours) is greater than for 12th grade (6 hours). 9th graders usually sleep about 2 hours more.</td></tr>
+    <tr><td>Spread</td><td>Both groups have an IQR of 2 hours. The spreads are about the same.</td></tr>
+    <tr><td>Outliers</td><td>One 12th grader slept 12 hours. That is an outlier (the upper fence is 10).</td></tr>
+  </table>
+
+  <p>12th grade has an outlier, so we compare with the median and the IQR.</p>
+
+
+  {{practice-head}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">1.</b> For each data set, should you use the <b>mean and SD</b> or the <b>median and IQR</b>? Explain.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>The heights of 200 adult women. The histogram is symmetric.
+          <div class="h05">{{a}}Mean and SD. The data is symmetric with no outliers.{{/a}}</div></li>
+        <li>The price of every house sold in a city. The histogram is skewed right.
+          <div class="h05">{{a}}Median and IQR. The data is skewed.{{/a}}</div></li>
+        <li>Quiz scores: 7, 8, 8, 9, 9, 10, 2
+          <div class="h05">{{a}}Median and IQR. 2 is an outlier.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> Look at the example on page 1: 2, 3, 3, 4, 5, 40.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Which pair describes a typical value better: mean 9.5 and SD 15.0, or median 3.5 and IQR 2? Explain.
+          <div class="h05">{{a}}Median 3.5 and IQR 2. Five of the six values are from 2 to 5. The mean of 9.5 is bigger than all of them except 40.{{/a}}</div></li>
+        <li>A student says, &ldquo;The SD is 15, so the values are very spread out.&rdquo; Is that a fair description? Explain.
+          <div class="h05">{{a}}No. Five values are packed from 2 to 5. One outlier makes the SD large.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">3.</b> These dot plots show how many books students in two classes read this summer.</div>
+    <div class="work">
+      {{fig Unit_2/2.2_books}}
+      <ol class="parts">
+        <li>Describe the shape of each class.
+          <div class="h08">{{a}}Class A is symmetric. Class B is skewed right.{{/a}}</div></li>
+        <li>Class A has median 3 and IQR 2. Class B has median 1 and IQR 2. Compare the centers.
+          <div class="h08">{{a}}The median for Class A (3 books) is greater than for Class B (1 book). Class A usually read 2 more books.{{/a}}</div></li>
+        <li>Compare the spreads.
+          <div class="h08">{{a}}Both IQRs are 2 books. The spreads are about the same.{{/a}}</div></li>
+        <li>Does either class have an outlier? Explain.
+          <div class="h08">{{a}}Yes. One student in Class B read 9 books. The upper fence for B is $3 + 1.5 \times 2 = 6$.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">4.</b> These box plots show test scores in two class periods.</div>
+    <div class="work">
+      {{fig Unit_2/2.2_periods}}
+      <ol class="parts">
+        <li>Compare the centers. Use numbers.
+          <div class="h05">{{a}}The medians are close: Period 2 is 78 and Period 5 is 76. Period 2 is a little higher.{{/a}}</div></li>
+        <li>Compare the spreads. Use numbers.
+          <div class="h05">{{a}}Period 2 IQR $= 85 - 70 = 15$. Period 5 IQR $= 79 - 72 = 7$. Period 2 is much more spread out.{{/a}}</div></li>
+        <li>Which period's scores are more consistent? Explain.
+          <div class="h05">{{a}}Period 5. Its IQR and its range are both smaller.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">5.</b> Two soccer teams measured the heights of their players. Both histograms are symmetric.
+      <table class="data">
+        <tr><th></th><th>Mean</th><th>SD</th></tr>
+        <tr><td>Team X</td><td>70 inches</td><td>2 inches</td></tr>
+        <tr><td>Team Y</td><td>72 inches</td><td>5 inches</td></tr>
+      </table>
+    </div>
+    <div class="work">
+      <ol class="parts">
+        <li>Which team is taller on average? &nbsp;{{a}}Team Y, by 2 inches.{{/a}}
+          <div class="h03"></div></li>
+        <li>Which team has heights that are more spread out? &nbsp;{{a}}Team Y. Its SD is larger.{{/a}}
+          <div class="h03"></div></li>
+        <li>Write one sentence that compares the two teams. Use both the center and the spread.
+          <div class="h08">{{a}}Team Y is taller on average (72 vs 70 inches), and its heights are more spread out (SD 5 vs 2 inches).{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>

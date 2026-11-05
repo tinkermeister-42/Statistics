@@ -1,0 +1,7 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}\input{../keyed}
+% Unit 3 Review, problem 2(f): empty regions for the student; the key writes the counts in red.
+\newcommand{\ans}[1]{\ifkey\leavevmode{\color{keyred}\let\frac\dfrac #1}\fi}
+\begin{document}
+\venn{Rides a bike}{Skateboards}{\ans{32}}{\ans{14}}{\ans{8}}{\ans{26}}
+\end{document}

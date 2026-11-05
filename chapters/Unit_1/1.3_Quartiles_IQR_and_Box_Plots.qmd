@@ -24,7 +24,7 @@ In this lesson, you find quartiles, use them to measure spread, and draw a {{< g
 :::
 
 :::{.guided-notes-link}
-[Printable mini lesson](/handouts/Unit_1/1.3_Quartiles_IQR_and_Box_Plots.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable mini lesson](/handouts/Unit_1/1.3_Quartiles_IQR_and_Box_Plots.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 {{< khan 1.4 1.5 >}}

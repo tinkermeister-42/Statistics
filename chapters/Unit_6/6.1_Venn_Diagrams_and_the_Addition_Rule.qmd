@@ -21,7 +21,7 @@ You might add: $12 + 10 = 22$, so $\frac{22}{30}$. But 4 students play both. The
 :::
 
 :::{.guided-notes-link}
-[Printable mini lesson](/handouts/Unit_6/6.1_Venn_Diagrams_and_the_Addition_Rule.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable mini lesson](/handouts/Unit_6/6.1_Venn_Diagrams_and_the_Addition_Rule.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 {{< khan 6.1 >}}

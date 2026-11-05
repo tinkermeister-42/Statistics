@@ -1,0 +1,104 @@
+<!--
+lesson: 6.6
+title: Combinations
+unit: 6
+unit_title: Probability
+kind: Mini Lesson
+back: 6.6_Combinations
+-->
+  <p>Pick 3 students from 5 (A, B, C, D, E) to be on a committee. All 3 have the same job.
+    Choosing A, B, C is the <b>same committee</b> as choosing C, A, B. <b>Order does not matter.</b></p>
+
+  <table class="plain">
+    <tr><td>Count as if order mattered:</td><td>${}_5P_3 = 5 \cdot 4 \cdot 3 = 60$</td></tr>
+    <tr><td>Each committee of 3 was counted $3! = 6$ times:</td><td>ABC, ACB, BAC, BCA, CAB, CBA</td></tr>
+    <tr><td>Divide:</td><td>$60 \div 6 = \mathbf{10}$ committees</td></tr>
+  </table>
+
+  <div class="keys">
+    <p><b>Combination formula:</b> &nbsp;&nbsp; ${}_nC_r = \left.\displaystyle\binom{n}{r}\right. = \dfrac{n!}{r!\,\mathopen{(}n - r\mathclose{)}!}$ &nbsp;&nbsp; choose $r$ things from $n$ things</p>
+    <p>${}_nC_r$ and $\left.\displaystyle\binom{n}{r}\right.$ are both read &ldquo;$n$ choose $r$.&rdquo; Some books write $C(n, r)$.</p>
+  </div>
+
+  <p><b>Example:</b> &nbsp;&nbsp; ${}_5C_3 = \dfrac{5!}{3!\,2!} = \dfrac{120}{6 \cdot 2} = 10$</p>
+
+  <p><b>Permutation or combination?</b> Ask: <i>If I switch the order, is it a different result?</i></p>
+  <table class="info">
+    <tr><th>Order matters: permutation</th><th>Order does not matter: combination</th></tr>
+    <tr><td>President, vice president, secretary (different jobs)</td><td>A committee of 3 (same job)</td></tr>
+    <tr><td>1st, 2nd, 3rd place</td><td>Picking 3 winners of the same prize</td></tr>
+    <tr><td>Arranging books on a shelf</td><td>Choosing 3 books to take on a trip</td></tr>
+  </table>
+
+  <p><b>Handshakes.</b> 10 people each shake hands once with everyone else. A handshake is a pair, and Ana-Ben is the same as Ben-Ana:
+    &nbsp;&nbsp; ${}_{10}C_2 = \dfrac{10 \cdot 9}{2} = 45$ handshakes.</p>
+
+
+  {{practice-head}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">1.</b> Find each value.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>${}_5C_2$
+          <div class="h05">{{a}}$\frac{5 \cdot 4}{2 \cdot 1} = 10${{/a}}</div></li>
+        <li>${}_6C_3$
+          <div class="h05">{{a}}$\frac{6 \cdot 5 \cdot 4}{3 \cdot 2 \cdot 1} = 20${{/a}}</div></li>
+        <li>${}_8C_1$ &nbsp;{{a}}8{{/a}}
+          <div class="h03"></div></li>
+        <li>$\left.\displaystyle\binom{7}{7}\right.$ &nbsp;{{a}}1 (there is one way to choose all of them){{/a}}
+          <div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> Permutation or combination? Then find the number of ways.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Choose 3 pizza toppings from 10. &nbsp;{{a}}Combination. ${}_{10}C_3 = 120${{/a}}
+          <div class="h03"></div></li>
+        <li>Give 1st, 2nd, and 3rd prizes to 3 of 10 people. &nbsp;{{a}}Permutation. ${}_{10}P_3 = 720${{/a}}
+          <div class="h03"></div></li>
+        <li>Choose a president and a treasurer from 12 people. &nbsp;{{a}}Permutation. ${}_{12}P_2 = 132${{/a}}
+          <div class="h03"></div></li>
+        <li>Choose 4 people from 15 for a committee. &nbsp;{{a}}Combination. ${}_{15}C_4 = 1{,}365${{/a}}
+          <div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">3.</b> 12 people meet. Each person shakes hands once with every other person. How many handshakes?</div>
+    <div class="work h05">{{a}}${}_{12}C_2 = \frac{12 \cdot 11}{2} = 66${{/a}}</div>
+  </div>
+
+  {{break}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">4.</b> A restaurant has 8 toppings. A pizza has 2 different toppings. How many different 2-topping pizzas are there?</div>
+    <div class="work h05">{{a}}${}_8C_2 = \frac{8 \cdot 7}{2} = 28${{/a}}</div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">5.</b> Compare ${}_{10}P_3 = 720$ and ${}_{10}C_3 = 120$.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Why is ${}_{10}P_3$ bigger? &nbsp;{{a}}It counts each group of 3 once for every order.{{/a}}
+          <div class="h03"></div></li>
+        <li>What number do you divide by to get from 720 to 120? Why? &nbsp;{{a}}$3! = 6$. Each group of 3 can be ordered 6 ways.{{/a}}
+          <div class="h05"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">6.</b> A hand of 5 cards is dealt from a deck of 52 cards. Use a calculator. How many different hands are there?</div>
+    <div class="work h05">{{a}}${}_{52}C_5 = 2{,}598{,}960${{/a}}</div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">7.</b> A student says, &ldquo;Choosing 2 of 6 students to clean the board is a permutation, because there are 2 people.&rdquo;
+      Do you agree? Explain.</div>
+    <div class="work h08">{{a}}No. Both students do the same job, so the order does not matter. It is a combination: ${}_6C_2 = 15$.{{/a}}</div>
+  </div>

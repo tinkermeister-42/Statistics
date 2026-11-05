@@ -22,7 +22,7 @@ Data with this shape has a {{< glink "normal distribution" >}}. In this lesson, 
 :::
 
 :::{.guided-notes-link}
-[Printable mini lesson](/handouts/Unit_2/2.4_Normal_Distributions_and_the_Empirical_Rule.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable mini lesson](/handouts/Unit_2/2.4_Normal_Distributions_and_the_Empirical_Rule.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 {{< khan 2.4 >}}

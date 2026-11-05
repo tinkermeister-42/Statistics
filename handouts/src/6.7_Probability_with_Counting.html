@@ -1,0 +1,92 @@
+<!--
+lesson: 6.7
+title: Probability with Counting
+unit: 6
+unit_title: Probability
+kind: Mini Lesson
+back: 6.7_Probability_with_Counting
+-->
+  <p>When every outcome is equally likely, count the outcomes with permutations or combinations.</p>
+
+  <div class="keys">
+    $P(\text{event}) = \dfrac{\text{number of ways the event can happen}}{\text{total number of possible outcomes}}$ &nbsp;&nbsp; Count both with the same method.
+  </div>
+
+  <p><b>Example 1: choosing a group.</b> A teacher randomly picks 2 students from 5 girls and 4 boys. What is $P(\text{both girls})$?</p>
+  <table class="plain">
+    <tr><td>Total ways to pick 2 of 9:</td><td>${}_9C_2 = 36$</td></tr>
+    <tr><td>Ways to pick 2 of the 5 girls:</td><td>${}_5C_2 = 10$</td></tr>
+    <tr><td>Probability:</td><td>$P(\text{both girls}) = \dfrac{10}{36} = \dfrac{5}{18} \approx 0.28$</td></tr>
+  </table>
+
+  <p><b>Example 2: a lottery.</b> Pick 3 different numbers from 1 to 20. Order does not matter. What is $P(\text{win})$?</p>
+  <p>Total: ${}_{20}C_3 = 1{,}140$. &nbsp; Only 1 of them wins. &nbsp; $P(\text{win}) = \dfrac{1}{1{,}140} \approx 0.0009$</p>
+
+  <p><b>Example 3: jobs.</b> 10 students are in a club. A president and a vice president are chosen at random.
+    What is the probability that Ana is president and Ben is vice president?</p>
+  <p>Order matters (different jobs). Total: ${}_{10}P_2 = 90$. &nbsp; Only 1 way works. &nbsp; $P = \dfrac{1}{90}$</p>
+
+  <p><b>Steps</b></p>
+  <table class="plain">
+    <tr><td>1.</td><td>Decide: does order matter? (permutation or combination)</td></tr>
+    <tr><td>2.</td><td>Count all the possible outcomes.</td></tr>
+    <tr><td>3.</td><td>Count the outcomes you want.</td></tr>
+    <tr><td>4.</td><td>Divide.</td></tr>
+  </table>
+
+
+  {{practice-head}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">1.</b> A committee of 3 is chosen at random from 6 juniors (11th grade) and 4 seniors (12th grade).</div>
+    <div class="work">
+      <ol class="parts">
+        <li>How many committees are possible? &nbsp;{{a}}${}_{10}C_3 = 120${{/a}}
+          <div class="h03"></div></li>
+        <li>Find $P(\text{all seniors})$.
+          <div class="h05">{{a}}${}_4C_3 = 4$. &nbsp;$\frac{4}{120} = \frac{1}{30}${{/a}}</div></li>
+        <li>Find $P(\text{all juniors})$.
+          <div class="h05">{{a}}${}_6C_3 = 20$. &nbsp;$\frac{20}{120} = \frac{1}{6}${{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> A lottery: pick 4 different numbers from 1 to 30. Order does not matter. What is the probability of winning with one ticket?</div>
+    <div class="work h05">{{a}}${}_{30}C_4 = 27{,}405$. &nbsp;$P(\text{win}) = \frac{1}{27{,}405}${{/a}}</div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">3.</b> 6 runners are in a race. Each order of finish is equally likely. What is the probability that Maya finishes 1st and Leo finishes 2nd?</div>
+    <div class="work h05">{{a}}Order matters. ${}_6P_2 = 30$. &nbsp;$P = \frac{1}{30}${{/a}}</div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">4.</b> Two cards are dealt from a deck of 52. What is $P(\text{both aces})$? (There are 4 aces.)</div>
+    <div class="work h05">{{a}}${}_4C_2 = 6$ and ${}_{52}C_2 = 1{,}326$. &nbsp;$P = \frac{6}{1{,}326} = \frac{1}{221}${{/a}}</div>
+  </div>
+
+  {{break}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">5.</b> In a taste test, there are 4 drinks from 4 different brands. A person tastes each drink and matches it to a brand. Each brand is used once.
+      If the person just guesses, what is the probability that all 4 are right?</div>
+    <div class="work h05">{{a}}There are $4! = 24$ ways to match the brands. Only 1 is right. &nbsp;$P = \frac{1}{24}${{/a}}</div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">6.</b> You grab 2 shirts at random from a drawer of 8 shirts. 3 of the shirts are blue. What is $P(\text{both blue})$?</div>
+    <div class="work h05">{{a}}${}_3C_2 = 3$ and ${}_8C_2 = 28$. &nbsp;$P = \frac{3}{28}${{/a}}</div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">7.</b> A big lottery asks you to pick 5 numbers from 1 to 70 and 1 extra number from 1 to 25.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Use a calculator. How many different tickets are possible?
+          <div class="h05">{{a}}${}_{70}C_5 \cdot 25 = 12{,}103{,}014 \cdot 25 = 302{,}575{,}350${{/a}}</div></li>
+        <li>What is the probability of winning with one ticket? Should you expect to win? Explain.
+          <div class="h08">{{a}}$\frac{1}{302{,}575{,}350}$. No. Winning is extremely unlikely.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>

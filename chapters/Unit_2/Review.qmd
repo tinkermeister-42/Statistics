@@ -42,11 +42,11 @@ This review uses all of them. It has every kind of problem on the Unit 2 quiz, w
 :::
 
 :::{.guided-notes-link}
-[Printable review](/handouts/Unit_2/Unit_2_Review.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable review](/handouts/Unit_2/Unit_2_Review.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 :::{.guided-notes-link}
-[Z-table](/handouts/Unit_2/Z_Table.pdf){target="_blank"} - the standard normal table, two pages. You need it for 2.5 and 2.6.
+[Z-table](/handouts/Unit_2/Z_Table.html){target="_blank"} - the standard normal table, two pages. You need it for 2.5 and 2.6.
 :::
 
 {{< khan 2.1 2.2 2.3 2.4 2.5 >}}

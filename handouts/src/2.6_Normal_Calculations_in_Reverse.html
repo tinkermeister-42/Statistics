@@ -1,0 +1,103 @@
+<!--
+lesson: 2.6
+title: Normal Calculations in Reverse
+unit: 2
+unit_title: Analyzing One Variable
+kind: Mini Lesson
+back: 2.6_Normal_Calculations_in_Reverse
+-->
+  <p>In 2.5, you knew the value and found the percent. Now you know the percent and find the value.</p>
+
+  <p><b>Example:</b> Heights of adult women: mean 64 inches, SD 3 inches.
+    How tall is a woman at the <b>90th percentile</b>?</p>
+
+  {{fig Unit_2/2.6_reverse}}
+
+  <table class="info">
+    <tr><th>Steps</th><th>Example: 90th percentile</th></tr>
+    <tr><td>1. Draw the curve. Shade the area to the <b>left</b>.</td><td>90% is to the left. The area is .9000.</td></tr>
+    <tr><td>2. Look <b>inside</b> the table for the area closest to it.</td><td>The closest area is .8997.</td></tr>
+    <tr><td>3. Read the z-score from the row and the column.</td><td>Row 1.2, column .08: &nbsp;$z = 1.28$</td></tr>
+    <tr><td>4. Find the value: &nbsp;$x = \mu + z\sigma$</td><td>$64 + 1.28 \times 3 = 64 + 3.84 = 67.84$</td></tr>
+  </table>
+
+  <p>A woman at the 90th percentile is about <b>67.8 inches</b> tall.</p>
+
+  <h2>&ldquo;Top&rdquo; and &ldquo;bottom&rdquo; questions</h2>
+  <table class="info fit">
+    <tr><td>The <b>bottom 10%</b></td><td>area to the left is .10</td></tr>
+    <tr><td>The <b>top 10%</b></td><td>area to the left is $1 - .10 = .90$</td></tr>
+  </table>
+
+  <p><b>Example:</b> Below what height are the shortest 10% of women?</p>
+
+  <p>Area .1000. &nbsp;Closest in the table: .1003 at $z = -1.28$. &nbsp;$64 + (-1.28)(3) = 64 - 3.84 = 60.16$. &nbsp;About <b>60.2 inches</b>.</p>
+
+  <div class="box warn">
+    <div class="lbl">Gotcha</div>
+    The table gives areas to the <b>left</b>. For &ldquo;top&rdquo; questions, subtract from 1 before you look in the table.
+  </div>
+
+  <p>Use your z-table sheet for the problems.</p>
+
+
+  {{practice-head}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">1.</b> Use the z-table. Find the z-score at each percentile.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>80th percentile &nbsp; {{a}}closest area .7995: &nbsp;$z = 0.84${{/a}}</li>
+        <li>30th percentile &nbsp; {{a}}closest area .3015: &nbsp;$z = -0.52${{/a}}</li>
+        <li>97.5th percentile &nbsp; {{a}}area .9750: &nbsp;$z = 1.96${{/a}}</li>
+        <li>25th percentile &nbsp; {{a}}closest area .2514: &nbsp;$z = -0.67${{/a}}</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> A test has scores with a normal distribution. The mean is 500 and the SD is 100.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>What score is at the 90th percentile?
+          <div class="h08">{{a}}$z = 1.28$. &nbsp;$500 + 1.28 \times 100 = 628${{/a}}</div></li>
+        <li>What score is at the 30th percentile?
+          <div class="h08">{{a}}$z = -0.52$. &nbsp;$500 + (-0.52)(100) = 448${{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">3.</b> A phone battery lasts a mean of 20 hours with an SD of 2 hours. The times have a normal distribution. The company replaces any battery in the bottom 10%. Below what time does a battery get replaced?</div>
+    <div class="work">
+      <div class="h08">{{a}}Area .10: &nbsp;$z = -1.28$. &nbsp;$20 + (-1.28)(2) = 20 - 2.56 = 17.44$. &nbsp;About 17.4 hours.{{/a}}</div>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">4.</b> Apples have a mean weight of 150 grams and an SD of 10 grams. The weights have a normal distribution. The heaviest 15% are sold as &ldquo;premium.&rdquo; How heavy must an apple be to be premium?</div>
+    <div class="work">
+      <div class="h08">{{a}}Top 15%, so the area to the left is $1 - .15 = .85$. &nbsp;Closest: .8508 at $z = 1.04$. &nbsp;$150 + 1.04 \times 10 = 160.4$ grams.{{/a}}</div>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">5.</b> Use the test from problem 2 (mean 500, SD 100). One question goes forward and one goes in reverse.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>What percentile is a score of 640?
+          <div class="h08">{{a}}$z = \frac{640 - 500}{100} = 1.4$. &nbsp;Table: .9192. &nbsp;About the 92nd percentile.{{/a}}</div></li>
+        <li>What score is at the 75th percentile?
+          <div class="h08">{{a}}Closest area .7486 at $z = 0.67$. &nbsp;$500 + 0.67 \times 100 = 567${{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">6.</b> <b>Challenge.</b> The heights of a type of plant have a normal distribution with a mean of 30 cm. 97.5% of the plants are shorter than 39.8 cm. Find the SD.</div>
+    <div class="work">
+      <div class="h2">{{a}}97.5th percentile: $z = 1.96$. &nbsp;$30 + 1.96\sigma = 39.8$, so $1.96\sigma = 9.8$ and $\sigma = 9.8 \div 1.96 = 5$ cm.{{/a}}</div>
+    </div>
+  </div>

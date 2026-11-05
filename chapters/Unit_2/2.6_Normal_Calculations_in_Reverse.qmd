@@ -18,11 +18,11 @@ In 2.5, you knew the value and found the percent. In this lesson, you know the p
 :::
 
 :::{.guided-notes-link}
-[Printable mini lesson](/handouts/Unit_2/2.6_Normal_Calculations_in_Reverse.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable mini lesson](/handouts/Unit_2/2.6_Normal_Calculations_in_Reverse.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 :::{.guided-notes-link}
-[Z-table](/handouts/Unit_2/Z_Table.pdf){target="_blank"} - the standard normal table, two pages.
+[Z-table](/handouts/Unit_2/Z_Table.html){target="_blank"} - the standard normal table, two pages.
 :::
 
 {{< khan 2.5 >}}

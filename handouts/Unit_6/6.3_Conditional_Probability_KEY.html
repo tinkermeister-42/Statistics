@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6.3  Conditional Probability (Teacher Key)</title>
+<link rel="stylesheet" href="../assets/handouts.css">
+</head>
+<body>
+<section class="sheet">
+
+  <div class="masthead">
+    <a class="backlink" href="../../chapters/Unit_6/6.3_Conditional_Probability.html">&larr; back to the lesson</a>
+    <h1>6.3 &nbsp;Conditional Probability</h1>
+    <div class="sub">Mini Lesson - Unit 6: Probability - DHS Statistics</div>
+    <div class="keybadge">Teacher Key: answers in red</div>
+  </div>
+
+<p>A <b>conditional probability</b> is a probability when you already know something happened.</p>
+
+  <div class="keys">
+    <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>∣</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mfrac displaystyle="true"><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>∩</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow></mfrac></mrow><annotation encoding="application/x-tex">P(A \mid B) = \dfrac{P(A \cap B)}{P(B)}</annotation></semantics></math> &nbsp;&nbsp; read &ldquo;the probability of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> <b>given</b> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>&rdquo;</p>
+    <p>In a table: only look at the <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math> group. &nbsp;&nbsp; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>∣</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mfrac displaystyle="true"><mrow><mrow><mtext mathvariant="normal">number in </mtext><mspace width="0.333em"></mspace></mrow><mi>A</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> and </mtext><mspace width="0.333em"></mspace></mrow><mi>B</mi></mrow><mrow><mrow><mtext mathvariant="normal">number in </mtext><mspace width="0.333em"></mspace></mrow><mi>B</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">P(A \mid B) = \dfrac{\text{number in } A \text{ and } B}{\text{number in } B}</annotation></semantics></math></p>
+  </div>
+
+  <div class="cols2">
+    <table class="data left">
+      <tr><th></th><th>Job</th><th>No job</th><th>Total</th></tr>
+      <tr><th>Sport</th><td>8</td><td>22</td><td>30</td></tr>
+      <tr><th>No sport</th><td>12</td><td>18</td><td>30</td></tr>
+      <tr><th>Total</th><td>20</td><td>40</td><td>60</td></tr>
+    </table>
+    <div>
+      <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">job</mtext><mo>∣</mo><mtext mathvariant="normal">sport</mtext><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mfrac displaystyle="true"><mn>8</mn><mn>30</mn></mfrac><mo>≈</mo><mn>0.27</mn></mrow><annotation encoding="application/x-tex">P(\text{job} \mid \text{sport}) = \dfrac{8}{30} \approx 0.27</annotation></semantics></math> &nbsp; (only the 30 in sports)</p>
+      <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">sport</mtext><mo>∣</mo><mtext mathvariant="normal">job</mtext><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mfrac displaystyle="true"><mn>8</mn><mn>20</mn></mfrac><mo>=</mo><mn>0.40</mn></mrow><annotation encoding="application/x-tex">P(\text{sport} \mid \text{job}) = \dfrac{8}{20} = 0.40</annotation></semantics></math> &nbsp; (only the 20 with jobs)</p>
+      <p>The order matters. These are different questions.</p>
+    </div>
+  </div>
+
+  <p><b>Tree diagrams.</b> 60% of students ride the bus. 25% of bus riders are late. 10% of the others are late.</p>
+
+  <img class="fig" src="../../images/Unit_6/6.3_tree_bus.svg" style="width:4.3in" alt="">
+
+  <table class="plain">
+    <tr><td>Multiply <b>along</b> a path:</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">bus</mtext><mo>∩</mo><mtext mathvariant="normal">late</mtext><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>0.6</mn><mo>⋅</mo><mn>0.25</mn><mo>=</mo><mn>0.15</mn></mrow><annotation encoding="application/x-tex">P(\text{bus} \cap \text{late}) = 0.6 \cdot 0.25 = 0.15</annotation></semantics></math></td></tr>
+    <tr><td>Add the paths you want:</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">late</mtext><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>0.15</mn><mo>+</mo><mn>0.04</mn><mo>=</mo><mn>0.19</mn></mrow><annotation encoding="application/x-tex">P(\text{late}) = 0.15 + 0.04 = 0.19</annotation></semantics></math></td></tr>
+    <tr><td>Then divide:</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">bus</mtext><mo>∣</mo><mtext mathvariant="normal">late</mtext><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mfrac displaystyle="true"><mn>0.15</mn><mn>0.19</mn></mfrac><mo>≈</mo><mn>0.79</mn></mrow><annotation encoding="application/x-tex">P(\text{bus} \mid \text{late}) = \dfrac{0.15}{0.19} \approx 0.79</annotation></semantics></math></td></tr>
+  </table>
+
+  <p>About 79% of late students ride the bus. Only 60% of all students ride the bus. So knowing a student is late makes it more likely that the student rides the bus.</p>
+
+  <p><b>Independence check.</b> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math> are independent if <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>∣</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(A \mid B) = P(A)</annotation></semantics></math>.</p>
+  <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">job</mtext><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mfrac displaystyle="true"><mn>20</mn><mn>60</mn></mfrac><mo>≈</mo><mn>0.33</mn></mrow><annotation encoding="application/x-tex">P(\text{job}) = \dfrac{20}{60} \approx 0.33</annotation></semantics></math> &nbsp;but&nbsp; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">job</mtext><mo>∣</mo><mtext mathvariant="normal">sport</mtext><mo stretchy="false" form="postfix">)</mo></mrow><mo>≈</mo><mn>0.27</mn></mrow><annotation encoding="application/x-tex">P(\text{job} \mid \text{sport}) \approx 0.27</annotation></semantics></math>.</p>
+  <p>They are different, so having a job and playing a sport are <b>not</b> independent.</p>
+
+
+  <div class="parthead brk"><b>6.3 &nbsp;Conditional Probability - Practice</b></div>
+  <p class="partner">Work with a partner. Compare answers when you finish each problem.</p>
+
+  <div class="ex">
+    <div class="q"><b class="tag">1.</b> 100 students said if they ate breakfast and if they were on time.</div>
+    <div class="work">
+      <table class="data">
+        <tr><th></th><th>Breakfast</th><th>No breakfast</th><th>Total</th></tr>
+        <tr><th>On time</th><td>45</td><td>15</td><td>60</td></tr>
+        <tr><th>Late</th><td>10</td><td>30</td><td>40</td></tr>
+        <tr><th>Total</th><td>55</td><td>45</td><td>100</td></tr>
+      </table>
+      <ol class="parts">
+        <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">late</mtext><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{late})</annotation></semantics></math> &nbsp;<span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>40</mn><mn>100</mn></mfrac><mo>=</mo><mn>0.40</mn></mrow><annotation encoding="application/x-tex">\frac{40}{100} = 0.40</annotation></semantics></math></span>
+          <div class="h03"></div></li>
+        <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">late</mtext><mo>∣</mo><mtext mathvariant="normal">no breakfast</mtext><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{late} \mid \text{no breakfast})</annotation></semantics></math> &nbsp;<span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>30</mn><mn>45</mn></mfrac><mo>≈</mo><mn>0.67</mn></mrow><annotation encoding="application/x-tex">\frac{30}{45} \approx 0.67</annotation></semantics></math></span>
+          <div class="h03"></div></li>
+        <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">no breakfast</mtext><mo>∣</mo><mtext mathvariant="normal">late</mtext><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{no breakfast} \mid \text{late})</annotation></semantics></math> &nbsp;<span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>30</mn><mn>40</mn></mfrac><mo>=</mo><mn>0.75</mn></mrow><annotation encoding="application/x-tex">\frac{30}{40} = 0.75</annotation></semantics></math></span>
+          <div class="h03"></div></li>
+        <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">late</mtext><mo>∣</mo><mtext mathvariant="normal">breakfast</mtext><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{late} \mid \text{breakfast})</annotation></semantics></math> &nbsp;<span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>10</mn><mn>55</mn></mfrac><mo>≈</mo><mn>0.18</mn></mrow><annotation encoding="application/x-tex">\frac{10}{55} \approx 0.18</annotation></semantics></math></span>
+          <div class="h03"></div></li>
+        <li>Are being late and eating breakfast independent? Explain.
+          <div class="h05"><span class="ans-key">No. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">late</mtext><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>0.40</mn></mrow><annotation encoding="application/x-tex">P(\text{late}) = 0.40</annotation></semantics></math>, but <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">late</mtext><mo>∣</mo><mtext mathvariant="normal">no breakfast</mtext><mo stretchy="false" form="postfix">)</mo></mrow><mo>≈</mo><mn>0.67</mn></mrow><annotation encoding="application/x-tex">P(\text{late} \mid \text{no breakfast}) \approx 0.67</annotation></semantics></math>. Knowing about breakfast changes the probability.</span></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>∩</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>0.12</mn></mrow><annotation encoding="application/x-tex">P(A \cap B) = 0.12</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>0.4</mn></mrow><annotation encoding="application/x-tex">P(B) = 0.4</annotation></semantics></math>. Find <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>∣</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(A \mid B)</annotation></semantics></math>.</div>
+    <div class="work h03"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>0.12</mn><mn>0.4</mn></mfrac><mo>=</mo><mn>0.3</mn></mrow><annotation encoding="application/x-tex">\frac{0.12}{0.4} = 0.3</annotation></semantics></math></span></div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">3.</b> Draw one card from a deck. Face cards are J, Q, and K (12 in all).</div>
+    <div class="work">
+      <ol class="parts">
+        <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">king</mtext><mo>∣</mo><mtext mathvariant="normal">face card</mtext><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{king} \mid \text{face card})</annotation></semantics></math> &nbsp;<span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>4</mn><mn>12</mn></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{4}{12} = \frac{1}{3}</annotation></semantics></math></span>
+          <div class="h03"></div></li>
+        <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">face card</mtext><mo>∣</mo><mtext mathvariant="normal">king</mtext><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{face card} \mid \text{king})</annotation></semantics></math> &nbsp;<span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>4</mn><mn>4</mn></mfrac><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\frac{4}{4} = 1</annotation></semantics></math>. Every king is a face card.</span>
+          <div class="h05"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex brk">
+    <div class="q"><b class="tag">4.</b> A factory has two machines. Machine A makes 70% of the parts and Machine B makes 30%.
+      2% of A's parts are defective (D). 5% of B's parts are defective.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Fill in the tree diagram.
+          <img class="fig" src="../../images/Unit_6/6.3_tree_machines_KEY.svg" style="width:4.36in" alt=""></li>
+        <li>Find <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>D</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(D)</annotation></semantics></math>, the probability a part is defective. &nbsp;<span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.014</mn><mo>+</mo><mn>0.015</mn><mo>=</mo><mn>0.029</mn></mrow><annotation encoding="application/x-tex">0.014 + 0.015 = 0.029</annotation></semantics></math></span>
+          <div class="h03"></div></li>
+        <li>A part is defective. Find <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo>∣</mo><mi>D</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(B \mid D)</annotation></semantics></math>.
+          <div class="h03"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>0.015</mn><mn>0.029</mn></mfrac><mo>≈</mo><mn>0.52</mn></mrow><annotation encoding="application/x-tex">\frac{0.015}{0.029} \approx 0.52</annotation></semantics></math>. Even though B makes fewer parts, about half of the defective parts come from B.</span></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">5.</b> 100 students said if they wear glasses and if they play an instrument.
+      40 play an instrument, and 12 of them wear glasses. 30 of all 100 students wear glasses.
+      Are wearing glasses and playing an instrument independent? Show your work.</div>
+    <div class="work h08"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">glasses</mtext><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>30</mn><mn>100</mn></mfrac><mo>=</mo><mn>0.3</mn></mrow><annotation encoding="application/x-tex">P(\text{glasses}) = \frac{30}{100} = 0.3</annotation></semantics></math>. &nbsp;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">glasses</mtext><mo>∣</mo><mtext mathvariant="normal">instrument</mtext><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>12</mn><mn>40</mn></mfrac><mo>=</mo><mn>0.3</mn></mrow><annotation encoding="application/x-tex">P(\text{glasses} \mid \text{instrument}) = \frac{12}{40} = 0.3</annotation></semantics></math>. &nbsp;They are equal, so yes, independent.</span></div>
+  </div>
+
+</section>
+</body>
+</html>

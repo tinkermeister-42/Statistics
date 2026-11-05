@@ -20,7 +20,7 @@ If she asks the first 60 students who walk in the door, she gets only the studen
 :::
 
 :::{.guided-notes-link}
-[Printable mini lesson](/handouts/Unit_5/5.2_Sampling_Methods.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable mini lesson](/handouts/Unit_5/5.2_Sampling_Methods.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 {{< khan 5.3 >}}

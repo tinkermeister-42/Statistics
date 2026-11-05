@@ -1,0 +1,127 @@
+<!--
+title: Unit 6 Summary: Probability
+unit: 6
+unit_title: Probability
+kind: Unit Summary
+back: Summary
+backword: summary
+-->
+  <style>
+    /* Two pages, as the LaTeX summary: this one's first page is the densest of the summaries,
+       and with the stylesheet's dense padding its tree table runs onto a third page. */
+    table.info.dense th, table.info.dense td { padding: 0.5px 5px; }
+  </style>
+  <h2>Probability Symbols</h2>
+  <table class="info dense">
+    <tr><th style="width:0.7in">Symbol</th><th style="width:2.1in">Read it as</th><th>Meaning</th></tr>
+    <tr><td>$P(A)$</td><td>&ldquo;the probability of $A$&rdquo;</td><td>How likely $A$ is, from 0 (impossible) to 1 (certain).</td></tr>
+    <tr><td>$P(\text{not } A)$</td><td>&ldquo;the probability of not $A$&rdquo;</td><td>The complement: $A$ does <b>not</b> happen. Some books write $P(A^C)$.</td></tr>
+    <tr><td>$A \cup B$</td><td>&ldquo;$A$ union $B$&rdquo; or &ldquo;$A$ or $B$&rdquo;</td><td>$A$ happens, or $B$ happens, or both.</td></tr>
+    <tr><td>$A \cap B$</td><td>&ldquo;$A$ intersect $B$&rdquo; or &ldquo;$A$ and $B$&rdquo;</td><td>$A$ and $B$ both happen (the overlap).</td></tr>
+    <tr><td>$P(A \mid B)$</td><td>&ldquo;the probability of $A$ <b>given</b> $B$&rdquo;</td><td>The probability of $A$ when you know $B$ happened. The bar $\mid$ means &ldquo;given.&rdquo;</td></tr>
+  </table>
+
+  <h2>Probability Rules</h2>
+  <table class="info dense">
+    <tr><th style="width:1.05in">Rule</th><th style="width:2.35in">Formula</th><th style="width:1.5in">When to use</th><th>Example</th></tr>
+    <tr><td>Probability</td>
+      <td>$P(A) =$<br>$\dfrac{\text{number of ways } A \text{ can happen}}{\text{total number of outcomes}}$</td>
+      <td>Every outcome is equally likely.</td>
+      <td>3 red and 7 blue marbles. Pick one. $P(\text{red}) = \frac{3}{10}$</td></tr>
+    <tr><td>Complement</td>
+      <td>$P(\text{not } A) = 1 - P(A)$<br>$P(\text{at least one wrong})$<br>$= 1 - P(\text{all right})$</td>
+      <td>&ldquo;Not $A$.&rdquo; Also &ldquo;at least one&rdquo; questions.</td>
+      <td>$P(\text{not red}) = 1 - \frac{3}{10} = \frac{7}{10}$<br>Guess on 3 questions with 4 choices each: $1 - \frac{1}{64} = \frac{63}{64}$</td></tr>
+    <tr><td>Addition rule</td>
+      <td>$P(A \cup B) =$<br>$P(A) + P(B) - P(A \cap B)$</td>
+      <td>&ldquo;Or.&rdquo; Subtract the overlap, because it was counted twice.</td>
+      <td>30 students: 12 play soccer ($S$), 10 play basketball ($B$), 4 play both.<br>$P(S \cup B) = \frac{12}{30} + \frac{10}{30} - \frac{4}{30} = \frac{18}{30}$</td></tr>
+    <tr><td>Mutually exclusive</td>
+      <td>$P(A \cup B) = P(A) + P(B)$<br>$P(A \cap B) = 0$</td>
+      <td>&ldquo;Or,&rdquo; when $A$ and $B$ cannot both happen.</td>
+      <td>Roll a number cube.<br>$P(1 \cup 2) = \frac{1}{6} + \frac{1}{6} = \frac{1}{3}$</td></tr>
+    <tr><td>Multiplication rule</td>
+      <td>$P(A \cap B) = P(A) \cdot P(B)$</td>
+      <td>&ldquo;And,&rdquo; for <b>independent</b> events.</td>
+      <td>Flip a coin and roll a number cube.<br>$P(\text{heads} \cap 6) = \frac{1}{2} \cdot \frac{1}{6} = \frac{1}{12}$</td></tr>
+    <tr><td>General multiplication rule</td>
+      <td>$P(A \cap B) = P(A) \cdot P(B \mid A)$</td>
+      <td>&ldquo;And,&rdquo; for <b>dependent</b> events.</td>
+      <td>5 red and 3 blue marbles. Draw 2. Keep the first one out.<br>$P(\text{red, red}) = \frac{5}{8} \cdot \frac{4}{7} = \frac{5}{14}$</td></tr>
+    <tr><td>Conditional probability</td>
+      <td>$P(A \mid B) = \dfrac{P(A \cap B)}{P(B)}$<br>In a table:<br>$P(A \mid B) = \dfrac{\text{number in } A \text{ and } B}{\text{number in } B}$</td>
+      <td>You already know $B$ happened. Only look at the $B$ group.</td>
+      <td>60 students: 30 play a sport, 20 have a job, 8 do both.<br>$P(\text{job} \mid \text{sport}) = \frac{8}{30} \approx 0.27$<br>$P(\text{sport} \mid \text{job}) = \frac{8}{20} = 0.40$</td></tr>
+    <tr><td>Checking independence</td>
+      <td>$A$ and $B$ are independent if $P(A \mid B) = P(A)$.</td>
+      <td>Knowing $B$ does not change the probability of $A$.</td>
+      <td>$P(\text{job}) = \frac{20}{60} \approx 0.33$, but $P(\text{job} \mid \text{sport}) \approx 0.27$. <b>Not</b> independent.</td></tr>
+  </table>
+
+  <p><b>Independent:</b> one happening does not change the probability of the other, as in drawing <b>with replacement</b>. <b>Dependent:</b> one happening changes it, as in drawing <b>without replacement</b>.</p>
+
+  <h2>Tree Diagrams</h2>
+  <p>60% of students ride the bus. 25% of bus riders are late. 10% of the others are late.</p>
+  <table class="info dense">
+    <tr><th style="width:2.75in">1. Multiply along a path.</th><th style="width:2.4in">2. Add the paths you want.</th><th>3. Then divide.</th></tr>
+    <tr><td>$P(\text{bus} \cap \text{late}) = 0.6 \cdot 0.25 = 0.15$<br>$P(\text{no bus} \cap \text{late}) = 0.4 \cdot 0.10 = 0.04$</td>
+      <td>$P(\text{late}) = 0.15 + 0.04 = 0.19$</td>
+      <td>$P(\text{bus} \mid \text{late}) = \frac{0.15}{0.19} \approx 0.79$</td></tr>
+  </table>
+
+  {{break}}
+
+  <h2>Simulations</h2>
+  <table class="info dense">
+    <tr><th style="width:1.3in">Idea</th><th style="width:3.05in">What it means</th><th>Example</th></tr>
+    <tr><td>Theoretical probability</td>
+      <td>Found by reasoning about equally likely outcomes.</td>
+      <td>Flip a coin. $P(\text{heads}) = \frac{1}{2}$</td></tr>
+    <tr><td>Experimental probability</td>
+      <td>Found by doing trials: $\dfrac{\text{number of times it happened}}{\text{number of trials}}$</td>
+      <td>20 flips, 12 heads: $\frac{12}{20} = 0.6$</td></tr>
+    <tr><td>Simulation</td>
+      <td>Use random numbers to act out a chance event many times.<br>1. Assign digits to the outcomes so the probabilities match.<br>2. Decide what one trial is.<br>3. Run many trials with random digits.<br>4. Count how often the event happened.</td>
+      <td>A basketball player makes 70% of her free throws. About how often does she make all 3 of 3 shots?<br>1. Digits 0 to 6 = make. 7, 8, 9 = miss.<br>2. One trial = 3 digits (3 shots).<br>3. Run 10 trials.<br>4. 4 of the 10 made all 3: $\frac{4}{10} = 0.4$</td></tr>
+    <tr><td>Law of large numbers</td>
+      <td colspan="2">The more trials you do, the closer the experimental probability usually gets to the theoretical probability. The theoretical probability of making all 3 shots is $0.7 \cdot 0.7 \cdot 0.7 = 0.343$. With more trials, the simulation would get closer to it.</td></tr>
+  </table>
+
+  <h2>Counting</h2>
+  <table class="info dense">
+    <tr><th style="width:1.05in">Tool</th><th style="width:2.25in">Formula</th><th style="width:1.55in">When to use</th><th>Example</th></tr>
+    <tr><td>Counting principle</td>
+      <td>One choice has $m$ options. A second choice has $n$ options: $m \cdot n$ ways.</td>
+      <td>Count the ways to make both choices. Also when repeats are allowed.</td>
+      <td>3 shirts and 4 pairs of pants: $3 \cdot 4 = 12$ outfits<br>3-letter codes: $26 \cdot 26 \cdot 26 = 17{,}576$</td></tr>
+    <tr><td>Factorial</td>
+      <td>$n! = n \cdot (n - 1) \cdot (n - 2) \cdots 2 \cdot 1$<br>Read &ldquo;$n$ factorial.&rdquo; &nbsp; $0! = 1$</td>
+      <td>Arrange all $n$ things in order.</td>
+      <td>4 students sit in 4 chairs in a row: $4! = 24$ ways</td></tr>
+    <tr><td>Permutation</td>
+      <td>${}_nP_r = \dfrac{n!}{(n - r)!}$<br>Read &ldquo;$n$ permute $r$.&rdquo;</td>
+      <td><b>Order matters.</b> Arrange $r$ of $n$ things. No repeats.</td>
+      <td>10 students fill 3 jobs:<br>${}_{10}P_3 = 10 \cdot 9 \cdot 8 = 720$<br>3-letter codes: $26 \cdot 25 \cdot 24 = 15{,}600$</td></tr>
+    <tr><td>Combination</td>
+      <td>${}_nC_r = \left.\displaystyle\binom{n}{r}\right. = \dfrac{n!}{r!\,\mathopen{(}n - r\mathclose{)}!}$<br>Read &ldquo;$n$ choose $r$.&rdquo;</td>
+      <td><b>Order does not matter.</b> Choose $r$ of $n$ things.</td>
+      <td>A committee of 3 from 5 students: ${}_5C_3 = \frac{5!}{3!\,2!} = 10$</td></tr>
+  </table>
+
+  <p><b>Permutation or combination?</b> Ask: if I switch the order, is it a different result?</p>
+
+  <h2>Probability with Counting</h2>
+  <p>$P(\text{event}) = \dfrac{\text{number of ways the event can happen}}{\text{total number of possible outcomes}}$ &nbsp;&nbsp; Count both with the same method.</p>
+  <table class="info dense">
+    <tr><th style="width:3.2in">Example</th><th style="width:1.05in">1. Does order matter?</th><th style="width:1.1in">2. Count all the possible outcomes.</th><th style="width:1.1in">3. Count the outcomes you want.</th><th>4. Divide.</th></tr>
+    <tr><td>A teacher randomly picks 2 students from 5 girls and 4 boys. Find $P(\text{both girls})$.</td>
+      <td>No. Combination.</td>
+      <td>${}_9C_2 = 36$</td>
+      <td>${}_5C_2 = 10$</td>
+      <td>$\frac{10}{36} = \frac{5}{18}$<br>$\approx 0.28$</td></tr>
+    <tr><td>A club of 10 picks a president and a vice president at random. Find the probability that Ana is president and Ben is vice president.</td>
+      <td>Yes (different jobs). Permutation.</td>
+      <td>${}_{10}P_2 = 90$</td>
+      <td>1</td>
+      <td>$\frac{1}{90}$</td></tr>
+  </table>

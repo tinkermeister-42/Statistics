@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6.4  Simulations</title>
+<link rel="stylesheet" href="../assets/handouts.css">
+</head>
+<body>
+<section class="sheet">
+
+  <div class="masthead">
+    <a class="backlink" href="../../chapters/Unit_6/6.4_Simulations.html">&larr; back to the lesson</a>
+    <h1>6.4 &nbsp;Simulations</h1>
+    <div class="sub">Mini Lesson - Unit 6: Probability - DHS Statistics</div>
+    <div class="idline"><span>Name</span><span class="small">Date</span><span class="small">Period</span></div>
+  </div>
+
+<table class="info">
+    <tr><th></th><th>How you find it</th><th>Coin example</th></tr>
+    <tr><td><b>Theoretical probability</b></td><td>By reasoning about equally likely outcomes.</td>
+      <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">heads</mtext><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mfrac displaystyle="true"><mn>1</mn><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">P(\text{heads}) = \dfrac{1}{2}</annotation></semantics></math></td></tr>
+    <tr><td><b>Experimental probability</b></td><td>By doing trials:<br><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac displaystyle="true"><mtext mathvariant="normal">number of times it happened</mtext><mtext mathvariant="normal">number of trials</mtext></mfrac><annotation encoding="application/x-tex">\dfrac{\text{number of times it happened}}{\text{number of trials}}</annotation></semantics></math></td>
+      <td>20 flips, 12 heads:<br><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac displaystyle="true"><mn>12</mn><mn>20</mn></mfrac><mo>=</mo><mn>0.6</mn></mrow><annotation encoding="application/x-tex">\dfrac{12}{20} = 0.6</annotation></semantics></math></td></tr>
+  </table>
+
+  <p><b>The law of large numbers:</b> the more trials you do, the closer the experimental probability usually gets to the theoretical probability.</p>
+
+  <p><b>A simulation</b> uses random numbers to act out a chance event many times.</p>
+  <table class="plain">
+    <tr><td>1.</td><td>Assign digits to the outcomes so the probabilities match.</td></tr>
+    <tr><td>2.</td><td>Decide what one <b>trial</b> is.</td></tr>
+    <tr><td>3.</td><td>Run many trials with random digits.</td></tr>
+    <tr><td>4.</td><td>Count how often the event happened.</td></tr>
+  </table>
+
+  <p><b>Example:</b> A basketball player makes 70% of her free throws. About how often does she make all 3 of 3 shots?</p>
+  <table class="plain">
+    <tr><td>1.</td><td>Digits 0 to 6 = make (7 of the 10 digits is 70%). &nbsp;Digits 7, 8, 9 = miss.</td></tr>
+    <tr><td>2.</td><td>One trial = 3 digits (3 shots).</td></tr>
+    <tr><td>3.</td><td>Use row 1 below. Make 10 trials.</td></tr>
+  </table>
+
+  <table class="data">
+    <tr><td>Row 1</td><td><b><code>26647 37828 83005 96123 30669 70587</code></b></td></tr>
+    <tr><td>Row 2</td><td><b><code>15021 10728 56722 07313 39118 78635</code></b></td></tr>
+  </table>
+
+  <table class="data">
+    <tr><td>Trial</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+    <tr><td>Digits</td><td>266</td><td>473</td><td>782</td><td>883</td><td>005</td><td>961</td><td>233</td><td>066</td><td>970</td><td>587</td></tr>
+    <tr><td>Makes</td><td><b>3</b></td><td>2</td><td>1</td><td>1</td><td><b>3</b></td><td>2</td><td><b>3</b></td><td><b>3</b></td><td>1</td><td>1</td></tr>
+  </table>
+
+  <p>4 of the 10 trials made all 3. &nbsp;Experimental probability: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac displaystyle="true"><mn>4</mn><mn>10</mn></mfrac><mo>=</mo><mn>0.4</mn></mrow><annotation encoding="application/x-tex">\dfrac{4}{10} = 0.4</annotation></semantics></math>.</p>
+  <p>The theoretical probability is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.7</mn><mo>⋅</mo><mn>0.7</mn><mo>⋅</mo><mn>0.7</mn><mo>=</mo><mn>0.343</mn></mrow><annotation encoding="application/x-tex">0.7 \cdot 0.7 \cdot 0.7 = 0.343</annotation></semantics></math>. With more trials, the simulation would get closer to it.</p>
+
+
+  <div class="parthead brk"><b>6.4 &nbsp;Simulations - Practice</b><span class="nm">Name</span></div>
+  <p class="partner">Work with a partner. Compare answers when you finish each problem.</p>
+
+  <div class="ex">
+    <div class="q"><b class="tag">1.</b> A spinner has 4 equal parts: red, blue, green, yellow. It is spun 40 times.</div>
+    <div class="work">
+      <table class="data">
+        <tr><td>Red</td><td>Blue</td><td>Green</td><td>Yellow</td></tr>
+        <tr><td>14</td><td>8</td><td>10</td><td>8</td></tr>
+      </table>
+      <ol class="parts">
+        <li>Find the experimental probability of red. &nbsp;
+          <div class="h03"></div></li>
+        <li>Find the theoretical probability of red. &nbsp;
+          <div class="h03"></div></li>
+        <li>Why are they different? &nbsp;
+          <div class="h03"></div></li>
+        <li>What would you expect if the spinner were spun 4,000 times? &nbsp;
+          <div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> How would you assign random digits to simulate each event?</div>
+    <div class="work">
+      <ol class="parts">
+        <li>A coin lands heads (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">P = 0.5</annotation></semantics></math>). &nbsp;
+          <div class="h03"></div></li>
+        <li>A student is chosen from a class where 30% walk to school. &nbsp;
+          <div class="h03"></div></li>
+        <li>A number cube is rolled. &nbsp;
+          <div class="h03"></div></li>
+        <li>An event with <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mn>0.25</mn></mrow><annotation encoding="application/x-tex">P = 0.25</annotation></semantics></math>. &nbsp;
+          <div class="h05"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex brk">
+    <div class="q"><b class="tag">3.</b> A family has 3 children. Each child is equally likely to be a girl or a boy.
+      Simulate: even digit = girl, odd digit = boy. One trial = 3 digits.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Use <b>row 2</b> on page 1 to run 10 trials. Count the girls in each trial.
+          <table class="fill">
+            <tr><td>Trial</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+            <tr><td>Digits</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>Girls</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          </table></li>
+        <li>Estimate <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">at least 2 girls</mtext><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{at least 2 girls})</annotation></semantics></math> from your simulation. &nbsp;</li>
+        <li>The theoretical probability is 0.5. How could you make your estimate closer? &nbsp;
+          <div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">4.</b> A student flips a coin 50 times and gets 34 heads. She wonders if the coin is fair. (A fair coin lands heads half the time.)
+      A computer simulated 100 sets of 50 flips of a fair coin. The number of heads ranged from 17 to 33. No set had 34 or more heads.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>What does the simulation tell you about getting 34 heads with a fair coin?
+          <div class="h05"></div></li>
+        <li>Do you think the coin is fair? Explain.
+          <div class="h08"></div></li>
+      </ol>
+    </div>
+  </div>
+
+</section>
+</body>
+</html>

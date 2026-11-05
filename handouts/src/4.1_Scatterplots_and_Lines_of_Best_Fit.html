@@ -1,0 +1,102 @@
+<!--
+lesson: 4.1
+title: Scatterplots and Lines of Best Fit
+unit: 4
+unit_title: Scatterplots
+kind: Mini Lesson
+back: 4.1_Scatterplots_and_Lines_of_Best_Fit
+-->
+  <p>Ten students recorded how many hours they studied and their test score. A <b>scatterplot</b> shows
+    both numbers for each student. Each dot is one student.</p>
+
+  <div class="cols2">
+    {{fig Unit_4/4.1_study_line w=3.43in}}
+    <table class="plain">
+      <tr><td><b>Direction</b></td><td><b>Positive</b>: as $x$ goes up, $y$ goes up. (Negative: $y$ goes down. No pattern at all: no association.)</td></tr>
+      <tr><td><b>Form</b></td><td><b>Linear</b>: the dots follow a line. (Or curved.)</td></tr>
+      <tr><td><b>Strength</b></td><td><b>Strong</b>: the dots are close to the line. (Or moderate: a little spread out. Or weak: very spread out.)</td></tr>
+      <tr><td><b>Unusual</b></td><td>Outliers or clusters? None here.</td></tr>
+    </table>
+  </div>
+
+  <p><b>Line of best fit.</b> A line that follows the trend of the dots.</p>
+  <ul>
+    <li>It goes through the middle of the dots.</li>
+    <li>About the same number of dots are above it as below it.</li>
+  </ul>
+
+  <p><b>Finding its equation.</b> Pick two points <b>on the line</b> (they do not have to be dots): $(2, 64)$ and $(6, 84)$.</p>
+  <table class="plain">
+    <tr><td>Slope:</td><td>$m = \dfrac{84 - 64}{6 - 2} = \dfrac{20}{4} = 5$</td></tr>
+    <tr><td>$y$-intercept:</td><td>$64 = 5(2) + b$, &nbsp;so $b = 54$</td></tr>
+    <tr><td>Equation:</td><td>$\hat{y} = 5x + 54$</td></tr>
+  </table>
+
+  <p>$\hat{y}$ is read &ldquo;y-hat.&rdquo; The hat means <b>predicted</b>. The line predicts $y$; it does not give the exact $y$.</p>
+
+  <p><b>Predicting.</b> A student studies 5 hours: &nbsp;$\hat{y} = 5(5) + 54 = 79$. &nbsp;The predicted score is 79.</p>
+
+  <div class="box warn">
+    <div class="lbl">Gotcha: extrapolation</div>
+    Predicting far outside the data is risky.
+    12 hours gives $\hat{y} = 5(12) + 54 = 114$, but a test score cannot be more than 100.
+    The data only goes from 1 to 8 hours.
+  </div>
+
+
+  {{practice-head}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">1.</b> Describe the direction, form, and strength of each scatterplot.</div>
+    <div class="work">
+      {{fig Unit_4/4.1_describe}}
+      <ol class="parts">
+        <li>A &nbsp;{{a}}Positive, linear, strong{{/a}}<div class="h03"></div></li>
+        <li>B &nbsp;{{a}}Negative, linear, moderate (the dots are spread out from a line){{/a}}<div class="h03"></div></li>
+        <li>C &nbsp;{{a}}No association: no direction or pattern{{/a}}<div class="h03"></div></li>
+        <li>D &nbsp;{{a}}Curved (not linear), strong. It goes down and then up.{{/a}}<div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> Which line fits the study data best? Explain why the other two do not.</div>
+    <div class="work">
+      {{fig Unit_4/4.1_lines w=3.46in}}
+      <div class="h05">{{a}}Line B. It follows the trend, with about as many dots above as below.
+        Line A is too flat: it is above the low dots and below the high dots. Line C is below all the dots.{{/a}}</div>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="ex split">
+    <div class="q"><b class="tag">3.</b> This scatterplot shows the age and value of 10 used cars. A line of best fit is drawn.</div>
+    <div class="work">
+      {{fig Unit_4/4.1_car w=3.54in}}
+      <ol class="parts">
+        <li>Describe the direction, form, and strength. &nbsp;{{a}}Negative, linear, strong{{/a}}
+          <div class="h03"></div></li>
+        <li>Use the two marked points to find the slope.
+          <div class="h05">{{a}}$m = \dfrac{10 - 30}{8 - 0} = \dfrac{-20}{8} = {-2.5}${{/a}}</div></li>
+        <li>Write the equation of the line. &nbsp;{{a}}$\hat{y} = {-2.5}x + 30${{/a}}
+          <div class="h03"></div></li>
+        <li>Predict the value of a 6-year-old car.
+          <div class="h05">{{a}}$\hat{y} = {-2.5}(6) + 30 = 15$, &nbsp;about \$15,000{{/a}}</div></li>
+        <li>Predict the value of a 15-year-old car. Does your answer make sense? Explain.
+          <div class="h05">{{a}}$\hat{y} = {-2.5}(15) + 30 = {-7.5}$. No. A car cannot be worth less than \$0. 15 years is far outside the data (1 to 9 years).{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">4.</b> The line for the study data is $\hat{y} = 5x + 54$.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Predict the score of a student who studies 3 hours. &nbsp;{{a}}$5(3) + 54 = 69${{/a}}
+          <div class="h03"></div></li>
+        <li>A student plans to study 10 hours. Predict the score. Should you trust this prediction? Explain.
+          <div class="h05">{{a}}$5(10) + 54 = 104$. No. Scores cannot be more than 100, and 10 hours is outside the data.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>

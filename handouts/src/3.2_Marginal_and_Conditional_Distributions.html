@@ -1,0 +1,129 @@
+<!--
+lesson: 3.2
+title: Marginal and Conditional Distributions
+unit: 3
+unit_title: Two-Way Tables
+kind: Mini Lesson
+back: 3.2_Marginal_and_Conditional_Distributions
+-->
+  <p>Do students who play a sport have jobs as often as students who do not?
+    To answer, compare percents <b>inside each group</b>.</p>
+
+  <table class="data">
+    <tr><th></th><th>Job</th><th>No job</th><th>Total</th></tr>
+    <tr><th>Sport</th><td>8</td><td>22</td><td>30</td></tr>
+    <tr><th>No sport</th><td>12</td><td>18</td><td>30</td></tr>
+    <tr><th>Total</th><td>20</td><td>40</td><td>60</td></tr>
+  </table>
+
+  <table class="info">
+    <tr><th style="width:1.7in"></th><th style="width:2.7in">What it is</th><th>Example</th></tr>
+    <tr><td><b>Marginal distribution</b></td><td>Percents from the <b>totals</b> (the margins). Divide by the <b>grand total</b>.</td>
+      <td>Job: $\dfrac{20}{60} \approx 33\%$ &nbsp;&nbsp; No job: $\dfrac{40}{60} \approx 67\%$</td></tr>
+    <tr><td><b>Conditional distribution</b></td><td>Percents inside <b>one group</b>. Divide by that group's <b>total</b>.</td>
+      <td>Students who play a sport:<br>Job: $\dfrac{8}{30} \approx 27\%$ &nbsp;&nbsp; No job: $\dfrac{22}{30} \approx 73\%$</td></tr>
+  </table>
+
+  <p><b>Compare the conditional distributions.</b></p>
+  <div class="cols2">
+    {{fig Unit_3/3.2_bars_sport_job w=2.94in}}
+    <div>
+      <p>Sport: $\dfrac{8}{30} \approx 27\%$ have a job.</p>
+      <p>No sport: $\dfrac{12}{30} = 40\%$ have a job.</p>
+      <p>The percents are <b>different</b>. Playing a sport and having a job are <b>associated</b>.
+        In this group, students who play a sport are less likely to have a job.</p>
+      <p>If the percents were about the <b>same</b>, there would be <b>no association</b>.</p>
+    </div>
+  </div>
+
+  <div class="box warn">
+    <div class="lbl">Gotcha: check the denominator.</div>
+    “Of the students who <b>play a sport</b>, what percent have a job?” Divide by the sport total (30), not by 60 and not by the job total (20).
+  </div>
+
+
+  {{practice-head}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">1.</b> Use the table of how 80 students get to school.</div>
+    <div class="work">
+      <table class="data">
+        <tr><th></th><th>Bus</th><th>Car</th><th>Walk</th><th>Total</th></tr>
+        <tr><th>9th grade</th><td>18</td><td>12</td><td>10</td><td>40</td></tr>
+        <tr><th>10th grade</th><td>14</td><td>20</td><td>6</td><td>40</td></tr>
+        <tr><th>Total</th><td>32</td><td>32</td><td>16</td><td>80</td></tr>
+      </table>
+      <p>Find the marginal distribution of how students get to school.</p>
+      <div class="h05">{{a}}Bus: $\frac{32}{80} = 40\%$. &nbsp;Car: $\frac{32}{80} = 40\%$. &nbsp;Walk: $\frac{16}{80} = 20\%$.{{/a}}</div>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> Use the same table.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Find the conditional distribution of how 9th graders get to school.
+          <div class="h05">{{a}}Bus $\frac{18}{40} = 45\%$, &nbsp;Car $\frac{12}{40} = 30\%$, &nbsp;Walk $\frac{10}{40} = 25\%${{/a}}</div></li>
+        <li>Find the conditional distribution of how 10th graders get to school.
+          <div class="h05">{{a}}Bus $\frac{14}{40} = 35\%$, &nbsp;Car $\frac{20}{40} = 50\%$, &nbsp;Walk $\frac{6}{40} = 15\%${{/a}}</div></li>
+        <li>Is grade associated with how students get to school? Explain.
+          <div class="h05">{{a}}Yes. The percents are different. For example, 50% of 10th graders come by car, but only 30% of 9th graders.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">3.</b> Use the same table.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>What percent of 10th graders come by car? &nbsp;{{a}}$\frac{20}{40} = 50\%${{/a}}</li>
+        <li>What percent of car riders are 10th graders? &nbsp;{{a}}$\frac{20}{32} = 62.5\%${{/a}}</li>
+        <li>Why are the answers to (a) and (b) different?
+          <div class="h05">{{a}}They divide by different groups: (a) by the 40 10th graders, (b) by the 32 car riders.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">4.</b> Is each statement about the school table a <b>marginal</b> or a <b>conditional</b> percent?</div>
+    <div class="work">
+      <ol class="parts">
+        <li>40% of all students ride the bus. &nbsp;{{a}}Marginal{{/a}}</li>
+        <li>Of the students who walk, 62.5% are 9th graders. &nbsp;{{a}}Conditional (only walkers){{/a}}</li>
+        <li>Half of the students are 10th graders. &nbsp;{{a}}Marginal{{/a}}</li>
+        <li>25% of 9th graders walk. &nbsp;{{a}}Conditional (only 9th graders){{/a}}</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">5.</b> 100 students said if they wear glasses and if they play an instrument.</div>
+    <div class="work">
+      <table class="data">
+        <tr><th></th><th>Glasses</th><th>No glasses</th><th>Total</th></tr>
+        <tr><th>Instrument</th><td>12</td><td>28</td><td>40</td></tr>
+        <tr><th>No instrument</th><td>18</td><td>42</td><td>60</td></tr>
+        <tr><th>Total</th><td>30</td><td>70</td><td>100</td></tr>
+      </table>
+      <ol class="parts">
+        <li>What percent of students who play an instrument wear glasses? &nbsp;{{a}}$\frac{12}{40} = 30\%${{/a}}</li>
+        <li>What percent of students who do not play an instrument wear glasses? &nbsp;{{a}}$\frac{18}{60} = 30\%${{/a}}</li>
+        <li>Is playing an instrument associated with wearing glasses? Explain.
+          <div class="h05">{{a}}No. The percents are the same (30%) in both groups.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">6.</b> This segmented bar chart shows the conditional distributions from problem 2.</div>
+    <div class="work">
+      {{fig Unit_3/3.2_bars_transport}}
+      <ol class="parts">
+        <li>Which grade has the larger percent of students who walk? &nbsp;{{a}}9th grade (25% vs 15%){{/a}}</li>
+        <li>How does the chart show that grade and transportation are associated?
+          <div class="h05">{{a}}The two bars are split differently. If there were no association, the bars would look about the same.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>

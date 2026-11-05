@@ -37,7 +37,7 @@ This review uses all of them. It has every kind of problem on the Unit 1 quiz, w
 :::
 
 :::{.guided-notes-link}
-[Printable review](/handouts/Unit_1/Unit_1_Review.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable review](/handouts/Unit_1/Unit_1_Review.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 {{< khan 1.1 1.2 1.3 1.4 1.5 >}}

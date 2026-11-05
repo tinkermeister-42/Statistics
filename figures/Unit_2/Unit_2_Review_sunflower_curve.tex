@@ -1,0 +1,16 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}\input{../keyed}
+% Unit 2 Review, problem 7(a).  Copied from the review handout:
+% blank normal curve over a number line; the key writes the values in red:
+% \labelcurve{v1/v2/.../v7 as z/value pairs}{axis label}
+\newcommand{\labelcurve}[2]{%
+\begin{tikzpicture}[x=1.3cm,y=0.7cm]
+  \bellcurve
+  \draw[thick] (-3.8,0) -- (3.8,0);
+  \foreach \z in {-3,...,3} \draw (\z,0.12) -- (\z,-0.12);
+  \ifkey\begin{scope}[keyred]\foreach \z/\v in {#1} \node[below] at (\z,-0.12) {\v};\end{scope}\fi
+  \node at (0,-1.3) {#2};
+\end{tikzpicture}}
+\begin{document}
+\labelcurve{-3/144,-2/156,-1/168,0/180,1/192,2/204,3/216}{Height of a sunflower (cm)}
+\end{document}

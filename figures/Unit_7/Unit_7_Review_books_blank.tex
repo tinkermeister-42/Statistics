@@ -1,0 +1,13 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}\input{../keyed}
+% Unit 7 review, problem 1(h): blank bar graph for the student; the key draws the bars.
+% \blankbars is the handout's own macro (handouts/Unit_7/Unit_7_Review.tex):
+% \blankbars{xmax}{x/0,...}{ymax}{x label}{x/p,...}
+\newcommand{\blankbars}[5]{%
+  \def\pbmax{#1}\probbars{#2}{#3}{0.1}{#4}%
+  \ifkey\foreach \x/\p in {#5} \draw[keyred,thick,fill=red!12] (\x-0.35,0) rectangle (\x+0.35,\p);\fi}
+\begin{document}
+\begin{tikzpicture}[x=0.95cm,y=7cm]
+  \blankbars{4.6}{0/0,1/0,2/0,3/0,4/0}{0.4}{$x$ = books checked out}{0/0.10,1/0.40,2/0.30,3/0.15,4/0.05}
+\end{tikzpicture}
+\end{document}

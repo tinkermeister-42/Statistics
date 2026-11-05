@@ -32,7 +32,7 @@ In this lesson, you learn two ways to find the center of data: the {{< glink mea
 :::
 
 :::{.guided-notes-link}
-[Printable mini lesson](/handouts/Unit_1/1.2_Mean_Median_and_Shape.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable mini lesson](/handouts/Unit_1/1.2_Mean_Median_and_Shape.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 {{< khan 1.3 >}}

@@ -1,0 +1,115 @@
+<!--
+lesson: 6.1
+title: Venn Diagrams and the Addition Rule
+unit: 6
+unit_title: Probability
+kind: Mini Lesson
+back: 6.1_Venn_Diagrams_and_the_Addition_Rule
+-->
+  <p><b>Probability</b> is how likely something is, from 0 (impossible) to 1 (certain).
+    When every outcome is equally likely:</p>
+  $$P(A) = \frac{\text{number of ways } A \text{ can happen}}{\text{total number of outcomes}}$$
+
+  <p>$P(A)$ is read &ldquo;the probability of $A$.&rdquo; &nbsp;&nbsp; <b>Complement:</b> $P(\text{not } A) = 1 - P(A)$.
+    &nbsp;(Some books write $P(A^C)$.)</p>
+
+  <p><b>Example:</b> A bag has 3 red and 7 blue marbles. Pick one. &nbsp;$P(\text{red}) = \dfrac{3}{10}$, and
+    $P(\text{not red}) = 1 - \dfrac{3}{10} = \dfrac{7}{10}$.</p>
+
+  <h2>Symbols for &ldquo;or&rdquo; and &ldquo;and&rdquo;</h2>
+  <table class="info fit">
+    <tr><th class="c">Symbol</th><th>Read it as</th><th>Meaning</th></tr>
+    <tr><td class="c">$A \cup B$</td><td>&ldquo;$A$ union $B$&rdquo; or &ldquo;$A$ or $B$&rdquo;</td><td>$A$ happens, or $B$ happens, or both</td></tr>
+    <tr><td class="c">$A \cap B$</td><td>&ldquo;$A$ intersect $B$&rdquo; or &ldquo;$A$ and $B$&rdquo;</td><td>$A$ and $B$ both happen (the overlap)</td></tr>
+  </table>
+
+  <p><b>Example:</b> 30 students. 12 play soccer, 10 play basketball, 4 play both.</p>
+  <div class="cols2">
+    <div>{{fig Unit_6/6.1_venn_sports w=2.4in}}</div>
+    <div>
+      <p>If we add $12 + 10$, the 4 students who play both are counted <b>twice</b>. Subtract them once.</p>
+      <p>$P(S \cup B) = \dfrac{12}{30} + \dfrac{10}{30} - \dfrac{4}{30} = \dfrac{18}{30} = 0.6$</p>
+    </div>
+  </div>
+
+  <div class="keys">
+    <b>The addition rule:</b> &nbsp;&nbsp; $P(A \cup B) = P(A) + P(B) - P(A \cap B)$
+  </div>
+
+  <p><b>Mutually exclusive</b> events cannot both happen, so $P(A \cap B) = 0$. Then $P(A \cup B) = P(A) + P(B)$.</p>
+  <p><b>Example:</b> Roll a number cube (1 to 6). Rolling a 1 and rolling a 2 are mutually exclusive.</p>
+  <p>$P(1 \cup 2) = \dfrac{1}{6} + \dfrac{1}{6} = \dfrac{2}{6} = \dfrac{1}{3}$</p>
+
+  <p><b>A deck of cards</b> has 52 cards: 4 suits (hearts, diamonds, clubs, spades), 13 cards in each suit (A, 2 to 10, J, Q, K).</p>
+
+
+  {{practice-head}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">1.</b> Roll a number cube (1 to 6). Find each probability.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>$P(\text{even})$ &nbsp;{{a}}$\frac{3}{6} = \frac{1}{2}${{/a}}
+          <div class="h03"></div></li>
+        <li>$P(\text{not } 6)$ &nbsp;{{a}}$1 - \frac{1}{6} = \frac{5}{6}${{/a}}
+          <div class="h03"></div></li>
+        <li>$P(\text{greater than } 4)$ &nbsp;{{a}}$\frac{2}{6} = \frac{1}{3}${{/a}}
+          <div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> In a class of 40 students, 18 take Spanish ($S$), 15 take art ($A$), and 6 take both.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Fill in the Venn diagram.
+          {{fig Unit_6/6.1_venn_spanish_art w=2.3in}}</li>
+        <li>Find $P(S \cup A)$. &nbsp;{{a}}$\frac{18}{40} + \frac{15}{40} - \frac{6}{40} = \frac{27}{40}${{/a}}
+          <div class="h03"></div></li>
+        <li>Find $P(S \cap A)$. &nbsp;{{a}}$\frac{6}{40} = \frac{3}{20}${{/a}}</li>
+        <li>Find the probability that a student takes neither. &nbsp;{{a}}$\frac{13}{40}${{/a}}</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">3.</b> $P(A) = 0.5$, &nbsp;$P(B) = 0.4$, and $P(A \cap B) = 0.2$. Find $P(A \cup B)$.</div>
+    <div class="work h03">{{a}}$0.5 + 0.4 - 0.2 = 0.7${{/a}}</div>
+  </div>
+
+  {{break}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">4.</b> Draw one card from a deck. Are the events mutually exclusive? Find the probability.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>a heart or a spade
+          <div class="h05">{{a}}Mutually exclusive (a card has one suit). &nbsp;$\frac{13}{52} + \frac{13}{52} = \frac{26}{52} = \frac{1}{2}${{/a}}</div></li>
+        <li>a heart or a king
+          <div class="h05">{{a}}Not mutually exclusive (the king of hearts). &nbsp;$\frac{13}{52} + \frac{4}{52} - \frac{1}{52} = \frac{16}{52} = \frac{4}{13}${{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">5.</b> Pick one student from this table at random.</div>
+    <div class="work">
+      <table class="data">
+        <tr><th></th><th>Bus</th><th>Car</th><th>Walk</th><th>Total</th></tr>
+        <tr><th>9th grade</th><td>18</td><td>12</td><td>10</td><td>40</td></tr>
+        <tr><th>10th grade</th><td>14</td><td>20</td><td>6</td><td>40</td></tr>
+        <tr><th>Total</th><td>32</td><td>32</td><td>16</td><td>80</td></tr>
+      </table>
+      <ol class="parts">
+        <li>$P(\text{9th grade} \cap \text{car})$ &nbsp;{{a}}$\frac{12}{80} = 0.15${{/a}}</li>
+        <li>$P(\text{10th grade} \cup \text{walk})$ &nbsp;{{a}}$\frac{40}{80} + \frac{16}{80} - \frac{6}{80} = \frac{50}{80} = 0.625${{/a}}
+          <div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">6.</b> A student says, &ldquo;$P(A) = 0.6$ and $P(B) = 0.5$, so $P(A \cup B) = 1.1$.&rdquo; What did the student do wrong?</div>
+    <div class="work h08">{{a}}A probability cannot be more than 1. The student forgot to subtract $P(A \cap B)$, the overlap that was counted twice.{{/a}}</div>
+  </div>

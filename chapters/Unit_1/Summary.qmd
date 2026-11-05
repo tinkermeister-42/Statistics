@@ -3,7 +3,7 @@
 Every graph, measure, and rule from Unit 1 in one place. Use it while you work on the review.
 
 :::{.guided-notes-link}
-[Printable summary](/handouts/Unit_1/Unit_1_Summary.pdf){target="_blank"} - these tables on two pages, to print and keep.
+[Printable summary](/handouts/Unit_1/Unit_1_Summary.html){target="_blank"} - these tables on two pages, to print and keep.
 :::
 
 ### Showing the Data

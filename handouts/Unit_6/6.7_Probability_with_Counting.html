@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6.7  Probability with Counting</title>
+<link rel="stylesheet" href="../assets/handouts.css">
+</head>
+<body>
+<section class="sheet">
+
+  <div class="masthead">
+    <a class="backlink" href="../../chapters/Unit_6/6.7_Probability_with_Counting.html">&larr; back to the lesson</a>
+    <h1>6.7 &nbsp;Probability with Counting</h1>
+    <div class="sub">Mini Lesson - Unit 6: Probability - DHS Statistics</div>
+    <div class="idline"><span>Name</span><span class="small">Date</span><span class="small">Period</span></div>
+  </div>
+
+<p>When every outcome is equally likely, count the outcomes with permutations or combinations.</p>
+
+  <div class="keys">
+    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">event</mtext><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mfrac displaystyle="true"><mtext mathvariant="normal">number of ways the event can happen</mtext><mtext mathvariant="normal">total number of possible outcomes</mtext></mfrac></mrow><annotation encoding="application/x-tex">P(\text{event}) = \dfrac{\text{number of ways the event can happen}}{\text{total number of possible outcomes}}</annotation></semantics></math> &nbsp;&nbsp; Count both with the same method.
+  </div>
+
+  <p><b>Example 1: choosing a group.</b> A teacher randomly picks 2 students from 5 girls and 4 boys. What is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">both girls</mtext><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{both girls})</annotation></semantics></math>?</p>
+  <table class="plain">
+    <tr><td>Total ways to pick 2 of 9:</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mn>9</mn></msub><msub><mi>C</mi><mn>2</mn></msub><mo>=</mo><mn>36</mn></mrow><annotation encoding="application/x-tex">{}_9C_2 = 36</annotation></semantics></math></td></tr>
+    <tr><td>Ways to pick 2 of the 5 girls:</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mn>5</mn></msub><msub><mi>C</mi><mn>2</mn></msub><mo>=</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">{}_5C_2 = 10</annotation></semantics></math></td></tr>
+    <tr><td>Probability:</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">both girls</mtext><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mfrac displaystyle="true"><mn>10</mn><mn>36</mn></mfrac><mo>=</mo><mfrac displaystyle="true"><mn>5</mn><mn>18</mn></mfrac><mo>≈</mo><mn>0.28</mn></mrow><annotation encoding="application/x-tex">P(\text{both girls}) = \dfrac{10}{36} = \dfrac{5}{18} \approx 0.28</annotation></semantics></math></td></tr>
+  </table>
+
+  <p><b>Example 2: a lottery.</b> Pick 3 different numbers from 1 to 20. Order does not matter. What is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">win</mtext><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{win})</annotation></semantics></math>?</p>
+  <p>Total: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mn>20</mn></msub><msub><mi>C</mi><mn>3</mn></msub><mo>=</mo><mn>1,140</mn></mrow><annotation encoding="application/x-tex">{}_{20}C_3 = 1{,}140</annotation></semantics></math>. &nbsp; Only 1 of them wins. &nbsp; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">win</mtext><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mfrac displaystyle="true"><mn>1</mn><mrow><mn>1,140</mn></mrow></mfrac><mo>≈</mo><mn>0.0009</mn></mrow><annotation encoding="application/x-tex">P(\text{win}) = \dfrac{1}{1{,}140} \approx 0.0009</annotation></semantics></math></p>
+
+  <p><b>Example 3: jobs.</b> 10 students are in a club. A president and a vice president are chosen at random.
+    What is the probability that Ana is president and Ben is vice president?</p>
+  <p>Order matters (different jobs). Total: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mn>10</mn></msub><msub><mi>P</mi><mn>2</mn></msub><mo>=</mo><mn>90</mn></mrow><annotation encoding="application/x-tex">{}_{10}P_2 = 90</annotation></semantics></math>. &nbsp; Only 1 way works. &nbsp; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mfrac displaystyle="true"><mn>1</mn><mn>90</mn></mfrac></mrow><annotation encoding="application/x-tex">P = \dfrac{1}{90}</annotation></semantics></math></p>
+
+  <p><b>Steps</b></p>
+  <table class="plain">
+    <tr><td>1.</td><td>Decide: does order matter? (permutation or combination)</td></tr>
+    <tr><td>2.</td><td>Count all the possible outcomes.</td></tr>
+    <tr><td>3.</td><td>Count the outcomes you want.</td></tr>
+    <tr><td>4.</td><td>Divide.</td></tr>
+  </table>
+
+
+  <div class="parthead brk"><b>6.7 &nbsp;Probability with Counting - Practice</b><span class="nm">Name</span></div>
+  <p class="partner">Work with a partner. Compare answers when you finish each problem.</p>
+
+  <div class="ex">
+    <div class="q"><b class="tag">1.</b> A committee of 3 is chosen at random from 6 juniors (11th grade) and 4 seniors (12th grade).</div>
+    <div class="work">
+      <ol class="parts">
+        <li>How many committees are possible? &nbsp;
+          <div class="h03"></div></li>
+        <li>Find <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">all seniors</mtext><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{all seniors})</annotation></semantics></math>.
+          <div class="h05"></div></li>
+        <li>Find <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">all juniors</mtext><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{all juniors})</annotation></semantics></math>.
+          <div class="h05"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> A lottery: pick 4 different numbers from 1 to 30. Order does not matter. What is the probability of winning with one ticket?</div>
+    <div class="work h05"></div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">3.</b> 6 runners are in a race. Each order of finish is equally likely. What is the probability that Maya finishes 1st and Leo finishes 2nd?</div>
+    <div class="work h05"></div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">4.</b> Two cards are dealt from a deck of 52. What is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">both aces</mtext><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{both aces})</annotation></semantics></math>? (There are 4 aces.)</div>
+    <div class="work h05"></div>
+  </div>
+
+  <div class="ex brk">
+    <div class="q"><b class="tag">5.</b> In a taste test, there are 4 drinks from 4 different brands. A person tastes each drink and matches it to a brand. Each brand is used once.
+      If the person just guesses, what is the probability that all 4 are right?</div>
+    <div class="work h05"></div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">6.</b> You grab 2 shirts at random from a drawer of 8 shirts. 3 of the shirts are blue. What is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">both blue</mtext><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{both blue})</annotation></semantics></math>?</div>
+    <div class="work h05"></div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">7.</b> A big lottery asks you to pick 5 numbers from 1 to 70 and 1 extra number from 1 to 25.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Use a calculator. How many different tickets are possible?
+          <div class="h05"></div></li>
+        <li>What is the probability of winning with one ticket? Should you expect to win? Explain.
+          <div class="h08"></div></li>
+      </ol>
+    </div>
+  </div>
+
+</section>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6.2  The Multiplication Rule (Teacher Key)</title>
+<link rel="stylesheet" href="../assets/handouts.css">
+</head>
+<body>
+<section class="sheet">
+
+  <div class="masthead">
+    <a class="backlink" href="../../chapters/Unit_6/6.2_The_Multiplication_Rule.html">&larr; back to the lesson</a>
+    <h1>6.2 &nbsp;The Multiplication Rule</h1>
+    <div class="sub">Mini Lesson - Unit 6: Probability - DHS Statistics</div>
+    <div class="keybadge">Teacher Key: answers in red</div>
+  </div>
+
+<p>You guess on 3 multiple-choice questions. Each has 4 choices. What is the probability you get all 3 right?
+    Each guess has a <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac displaystyle="true"><mn>1</mn><mn>4</mn></mfrac><annotation encoding="application/x-tex">\dfrac{1}{4}</annotation></semantics></math> chance. The questions do not affect each other, so multiply:</p>
+  <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">all 3 right</mtext><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mfrac displaystyle="true"><mn>1</mn><mn>4</mn></mfrac><mo>⋅</mo><mfrac displaystyle="true"><mn>1</mn><mn>4</mn></mfrac><mo>⋅</mo><mfrac displaystyle="true"><mn>1</mn><mn>4</mn></mfrac><mo>=</mo><mfrac displaystyle="true"><mn>1</mn><mn>64</mn></mfrac></mrow><annotation encoding="application/x-tex">P(\text{all 3 right}) = \dfrac{1}{4} \cdot \dfrac{1}{4} \cdot \dfrac{1}{4} = \dfrac{1}{64}</annotation></semantics></math>
+
+  <p><b>Independent events.</b> Two events are <b>independent</b> if one happening does not change the probability of the other.</p>
+
+  <div class="keys">
+    <b>Independent:</b> &nbsp;&nbsp; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>∩</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo>⋅</mo><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(A \cap B) = P(A) \cdot P(B)</annotation></semantics></math>
+  </div>
+
+  <p><b>Example:</b> Flip a coin and roll a number cube. &nbsp; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">heads</mtext><mo>∩</mo><mn>6</mn><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mfrac displaystyle="true"><mn>1</mn><mn>2</mn></mfrac><mo>⋅</mo><mfrac displaystyle="true"><mn>1</mn><mn>6</mn></mfrac><mo>=</mo><mfrac displaystyle="true"><mn>1</mn><mn>12</mn></mfrac></mrow><annotation encoding="application/x-tex">P(\text{heads} \cap 6) = \dfrac{1}{2} \cdot \dfrac{1}{6} = \dfrac{1}{12}</annotation></semantics></math></p>
+
+  <p><b>Dependent events.</b> Two events are <b>dependent</b> if one happening changes the probability of the other.
+    A bag has 5 red and 3 blue marbles. Draw 2 marbles.</p>
+
+  <table class="info">
+    <tr><td><b>With replacement</b> (put the first one back)</td><td><b>Without replacement</b> (keep the first one out)</td></tr>
+    <tr><td>The second draw is the same as the first.<br>Independent.</td>
+      <td>The bag changes: 4 red and 3 blue are left.<br>Dependent.</td></tr>
+    <tr><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">red, red</mtext><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mfrac displaystyle="true"><mn>5</mn><mn>8</mn></mfrac><mo>⋅</mo><mfrac displaystyle="true"><mn>5</mn><mn>8</mn></mfrac><mo>=</mo><mfrac displaystyle="true"><mn>25</mn><mn>64</mn></mfrac></mrow><annotation encoding="application/x-tex">P(\text{red, red}) = \dfrac{5}{8} \cdot \dfrac{5}{8} = \dfrac{25}{64}</annotation></semantics></math></td>
+      <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">red, red</mtext><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mfrac displaystyle="true"><mn>5</mn><mn>8</mn></mfrac><mo>⋅</mo><mfrac displaystyle="true"><mn>4</mn><mn>7</mn></mfrac><mo>=</mo><mfrac displaystyle="true"><mn>20</mn><mn>56</mn></mfrac><mo>=</mo><mfrac displaystyle="true"><mn>5</mn><mn>14</mn></mfrac></mrow><annotation encoding="application/x-tex">P(\text{red, red}) = \dfrac{5}{8} \cdot \dfrac{4}{7} = \dfrac{20}{56} = \dfrac{5}{14}</annotation></semantics></math></td></tr>
+  </table>
+
+  <div class="keys">
+    <p><b>General multiplication rule:</b> &nbsp;&nbsp; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>∩</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo>⋅</mo><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo>∣</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(A \cap B) = P(A) \cdot P(B \mid A)</annotation></semantics></math></p>
+    <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo>∣</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(B \mid A)</annotation></semantics></math> is read &ldquo;the probability of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math> <b>given</b> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>.&rdquo; It is the probability of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math> after <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> has already happened.</p>
+  </div>
+
+  <p>In the marble example: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">red second</mtext><mo>∣</mo><mtext mathvariant="normal">red first</mtext><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mfrac displaystyle="true"><mn>4</mn><mn>7</mn></mfrac></mrow><annotation encoding="application/x-tex">P(\text{red second} \mid \text{red first}) = \dfrac{4}{7}</annotation></semantics></math>.</p>
+
+  <div class="box tint">
+    <div class="lbl">Tip</div>
+    &ldquo;At least one&rdquo; questions are often easier with the complement.
+    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">at least one wrong</mtext><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>1</mn><mo>−</mo><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">all right</mtext><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{at least one wrong}) = 1 - P(\text{all right})</annotation></semantics></math>.
+  </div>
+
+
+  <div class="parthead brk"><b>6.2 &nbsp;The Multiplication Rule - Practice</b></div>
+  <p class="partner">Work with a partner. Compare answers when you finish each problem.</p>
+
+  <div class="ex">
+    <div class="q"><b class="tag">1.</b> These events are independent. Find each probability.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Flip a coin 3 times. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">3 heads</mtext><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{3 heads})</annotation></semantics></math> &nbsp;<span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⋅</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⋅</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>8</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{2} \cdot \frac{1}{2} \cdot \frac{1}{2} = \frac{1}{8}</annotation></semantics></math></span>
+          <div class="h03"></div></li>
+        <li>Roll a number cube twice. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">two 6s</mtext><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{two 6s})</annotation></semantics></math> &nbsp;<span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>6</mn></mfrac><mo>⋅</mo><mfrac><mn>1</mn><mn>6</mn></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>36</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{6} \cdot \frac{1}{6} = \frac{1}{36}</annotation></semantics></math></span>
+          <div class="h03"></div></li>
+        <li>A basketball player makes 80% of her free throws. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">she makes 2 in a row</mtext><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{she makes 2 in a row})</annotation></semantics></math> &nbsp;<span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.8</mn><mo>⋅</mo><mn>0.8</mn><mo>=</mo><mn>0.64</mn></mrow><annotation encoding="application/x-tex">0.8 \cdot 0.8 = 0.64</annotation></semantics></math></span>
+          <div class="h03"></div></li>
+        <li>Same player. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">she misses both</mtext><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{she misses both})</annotation></semantics></math> &nbsp;<span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.2</mn><mo>⋅</mo><mn>0.2</mn><mo>=</mo><mn>0.04</mn></mrow><annotation encoding="application/x-tex">0.2 \cdot 0.2 = 0.04</annotation></semantics></math></span>
+          <div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> You guess on a 5-question true-or-false quiz.</div>
+    <div class="work">
+      <ol class="parts">
+        <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">all 5 right</mtext><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{all 5 right})</annotation></semantics></math> &nbsp;<span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>5</mn></msup><mo>=</mo><mfrac><mn>1</mn><mn>32</mn></mfrac></mrow><annotation encoding="application/x-tex">\left(\frac{1}{2}\right)^5 = \frac{1}{32}</annotation></semantics></math></span>
+          <div class="h03"></div></li>
+        <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">at least one wrong</mtext><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{at least one wrong})</annotation></semantics></math> &nbsp;<span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>−</mo><mfrac><mn>1</mn><mn>32</mn></mfrac><mo>=</mo><mfrac><mn>31</mn><mn>32</mn></mfrac></mrow><annotation encoding="application/x-tex">1 - \frac{1}{32} = \frac{31}{32}</annotation></semantics></math></span>
+          <div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">3.</b> A bag has 4 green and 6 yellow marbles. Draw 2 marbles.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Find <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">green, green</mtext><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{green, green})</annotation></semantics></math> <b>with</b> replacement.
+          <div class="h05"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>4</mn><mn>10</mn></mfrac><mo>⋅</mo><mfrac><mn>4</mn><mn>10</mn></mfrac><mo>=</mo><mfrac><mn>16</mn><mn>100</mn></mfrac><mo>=</mo><mfrac><mn>4</mn><mn>25</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{4}{10} \cdot \frac{4}{10} = \frac{16}{100} = \frac{4}{25}</annotation></semantics></math></span></div></li>
+        <li>Find <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">green, green</mtext><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{green, green})</annotation></semantics></math> <b>without</b> replacement.
+          <div class="h05"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>4</mn><mn>10</mn></mfrac><mo>⋅</mo><mfrac><mn>3</mn><mn>9</mn></mfrac><mo>=</mo><mfrac><mn>12</mn><mn>90</mn></mfrac><mo>=</mo><mfrac><mn>2</mn><mn>15</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{4}{10} \cdot \frac{3}{9} = \frac{12}{90} = \frac{2}{15}</annotation></semantics></math></span></div></li>
+        <li>Why is the answer to (b) smaller?
+          <div class="h08"><span class="ans-key">After a green is taken out, fewer greens are left, so the second green is less likely.</span></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex brk">
+    <div class="q"><b class="tag">4.</b> Independent or dependent? Explain.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Flip a coin, then roll a number cube.
+          <div class="h03"><span class="ans-key">Independent. The coin does not change the cube.</span></div></li>
+        <li>Pick a class president, then pick a vice president from the students who are left.
+          <div class="h03"><span class="ans-key">Dependent. The president cannot be picked again, so the choices change.</span></div></li>
+        <li>Draw a card, put it back, shuffle, and draw again.
+          <div class="h03"><span class="ans-key">Independent. The deck is the same for the second draw.</span></div></li>
+        <li>It rains today, and you carry an umbrella today.
+          <div class="h05"><span class="ans-key">Dependent. Rain makes carrying an umbrella more likely.</span></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">5.</b> At a school, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">late</mtext><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>0.2</mn></mrow><annotation encoding="application/x-tex">P(\text{late}) = 0.2</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">detention</mtext><mo>∣</mo><mtext mathvariant="normal">late</mtext><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">P(\text{detention} \mid \text{late}) = 0.5</annotation></semantics></math>.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Find <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">late</mtext><mo>∩</mo><mtext mathvariant="normal">detention</mtext><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{late} \cap \text{detention})</annotation></semantics></math>. &nbsp;<span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.2</mn><mo>⋅</mo><mn>0.5</mn><mo>=</mo><mn>0.1</mn></mrow><annotation encoding="application/x-tex">0.2 \cdot 0.5 = 0.1</annotation></semantics></math></span></li>
+        <li>Explain what your answer means in words.
+          <div class="h08"><span class="ans-key">About 10% of all students are late and get a detention.</span></div></li>
+      </ol>
+    </div>
+  </div>
+
+</section>
+</body>
+</html>

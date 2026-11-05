@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4.3  Residuals (Teacher Key)</title>
+<link rel="stylesheet" href="../assets/handouts.css">
+</head>
+<body>
+<section class="sheet">
+
+  <div class="masthead">
+    <a class="backlink" href="../../chapters/Unit_4/4.3_Residuals.html">&larr; back to the lesson</a>
+    <h1>4.3 &nbsp;Residuals</h1>
+    <div class="sub">Mini Lesson - Unit 4: Scatterplots - DHS Statistics</div>
+    <div class="keybadge">Teacher Key: answers in red</div>
+  </div>
+
+<p>A line of best fit makes predictions. Most real points are a little above or below the line.
+    A <b>residual</b> measures how far off the prediction is.</p>
+
+  <div class="keys">
+    <b>residual</b> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>=</mo><annotation encoding="application/x-tex">=</annotation></semantics></math> actual <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>−</mo><annotation encoding="application/x-tex">-</annotation></semantics></math> predicted <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mi>y</mi><mo>−</mo><mover><mi>y</mi><mo accent="true" stretchy="false">̂</mo></mover></mrow><annotation encoding="application/x-tex">= y - \hat{y}</annotation></semantics></math><br>
+    Positive residual: the point is <b>above</b> the line. &nbsp;&nbsp;&nbsp; Negative residual: the point is <b>below</b> the line.
+  </div>
+
+  <img class="fig" src="../../images/Unit_4/4.3_residuals.svg" style="width:3.54in" alt="">
+
+  <p><b>Example:</b> The line is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>y</mi><mo accent="true" stretchy="false">̂</mo></mover><mo>=</mo><mn>5</mn><mi>x</mi><mo>+</mo><mn>54</mn></mrow><annotation encoding="application/x-tex">\hat{y} = 5x + 54</annotation></semantics></math>. Two students studied 4 hours.</p>
+  <table class="data left">
+    <tr><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math> (actual)</th><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>y</mi><mo accent="true" stretchy="false">̂</mo></mover><annotation encoding="application/x-tex">\hat{y}</annotation></semantics></math> (predicted)</th><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>−</mo><mover><mi>y</mi><mo accent="true" stretchy="false">̂</mo></mover></mrow><annotation encoding="application/x-tex">y - \hat{y}</annotation></semantics></math></th><th>Meaning</th></tr>
+    <tr><td>4</td><td>78</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mrow><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mo stretchy="false" form="postfix">)</mo></mrow><mo>+</mo><mn>54</mn><mo>=</mo><mn>74</mn></mrow><annotation encoding="application/x-tex">5(4) + 54 = 74</annotation></semantics></math></td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>78</mn><mo>−</mo><mn>74</mn><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">78 - 74 = 4</annotation></semantics></math></td><td>scored 4 points <b>more</b> than predicted</td></tr>
+    <tr><td>4</td><td>72</td><td>74</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>72</mn><mo>−</mo><mn>74</mn><mo>=</mo><mrow><mo form="prefix">−</mo><mn>2</mn></mrow></mrow><annotation encoding="application/x-tex">72 - 74 = {-2}</annotation></semantics></math></td><td>scored 2 points <b>less</b> than predicted</td></tr>
+  </table>
+
+  <p><b>The least-squares line.</b> Square every residual and add them: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Σ</mi><msup><mrow><mo stretchy="false" form="prefix">(</mo><mi>y</mi><mo>−</mo><mover><mi>y</mi><mo accent="true" stretchy="false">̂</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\Sigma(y - \hat{y})^2</annotation></semantics></math>.
+    The <b>least-squares regression line</b> is the line that makes this sum as small as possible.
+    Calculators and computers find this line for you.</p>
+
+  <p><b>Residual plots.</b> Put <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> across the bottom and the residuals up the side.</p>
+
+  <img class="fig" src="../../images/Unit_4/4.3_resid_plots.svg" style="width:5.64in" alt="">
+
+  <table class="plain">
+    <tr><td><b>A:</b> random scatter, no pattern.</td><td>A line is a <b>good</b> model.</td></tr>
+    <tr><td><b>B:</b> a curved pattern.</td><td>A line is <b>not</b> a good model. The data is curved.</td></tr>
+  </table>
+
+
+  <div class="parthead brk"><b>4.3 &nbsp;Residuals - Practice</b></div>
+  <p class="partner">Work with a partner. Compare answers when you finish each problem.</p>
+
+  <div class="ex">
+    <div class="q"><b class="tag">1.</b> A plant's height (cm) is predicted by <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>y</mi><mo accent="true" stretchy="false">̂</mo></mover><mo>=</mo><mn>2.5</mn><mi>x</mi><mo>+</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">\hat{y} = 2.5x + 4</annotation></semantics></math>, where <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> is the number of weeks. Fill in the table.</div>
+    <div class="work">
+      <table class="fill">
+        <tr><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> (weeks)</th><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math> (actual)</th><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>y</mi><mo accent="true" stretchy="false">̂</mo></mover><annotation encoding="application/x-tex">\hat{y}</annotation></semantics></math> (predicted)</th><th>residual <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>−</mo><mover><mi>y</mi><mo accent="true" stretchy="false">̂</mo></mover></mrow><annotation encoding="application/x-tex">y - \hat{y}</annotation></semantics></math></th></tr>
+        <tr><td>1</td><td>6.8</td><td class="w"><span class="ans-key">6.5</span></td><td class="w"><span class="ans-key">0.3</span></td></tr>
+        <tr><td>2</td><td>8.6</td><td class="w"><span class="ans-key">9</span></td><td class="w"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix">−</mo><mn>0.4</mn></mrow><annotation encoding="application/x-tex">-0.4</annotation></semantics></math></span></td></tr>
+        <tr><td>3</td><td>11.8</td><td class="w"><span class="ans-key">11.5</span></td><td class="w"><span class="ans-key">0.3</span></td></tr>
+        <tr><td>4</td><td>13.6</td><td class="w"><span class="ans-key">14</span></td><td class="w"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix">−</mo><mn>0.4</mn></mrow><annotation encoding="application/x-tex">-0.4</annotation></semantics></math></span></td></tr>
+        <tr><td>5</td><td>16.9</td><td class="w"><span class="ans-key">16.5</span></td><td class="w"><span class="ans-key">0.4</span></td></tr>
+      </table>
+      <ol class="parts">
+        <li>Which weeks have points above the line? &nbsp;<span class="ans-key">Weeks 1, 3, and 5 (positive residuals)</span>
+          <div class="h03"></div></li>
+        <li>Is the point for week 2 above or below the line? How do you know? &nbsp;<span class="ans-key">Below. Its residual is negative.</span>
+          <div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> Use the study line <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>y</mi><mo accent="true" stretchy="false">̂</mo></mover><mo>=</mo><mn>5</mn><mi>x</mi><mo>+</mo><mn>54</mn></mrow><annotation encoding="application/x-tex">\hat{y} = 5x + 54</annotation></semantics></math>.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>A student studied 6 hours and scored 90. Find the residual.
+          <div class="h05"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>y</mi><mo accent="true" stretchy="false">̂</mo></mover><mo>=</mo><mn>5</mn><mrow><mo stretchy="false" form="prefix">(</mo><mn>6</mn><mo stretchy="false" form="postfix">)</mo></mrow><mo>+</mo><mn>54</mn><mo>=</mo><mn>84</mn></mrow><annotation encoding="application/x-tex">\hat{y} = 5(6) + 54 = 84</annotation></semantics></math>. &nbsp;Residual <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mn>90</mn><mo>−</mo><mn>84</mn><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">= 90 - 84 = 6</annotation></semantics></math>.</span></div></li>
+        <li>Another student has a residual of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix">−</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">-5</annotation></semantics></math>. What does that mean?
+          <div class="h05"><span class="ans-key">The student scored 5 points less than the line predicted.</span></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">3.</b> The used car line is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>y</mi><mo accent="true" stretchy="false">̂</mo></mover><mo>=</mo><mrow><mo form="prefix">−</mo><mn>2.5</mn></mrow><mi>x</mi><mo>+</mo><mn>30</mn></mrow><annotation encoding="application/x-tex">\hat{y} = {-2.5}x + 30</annotation></semantics></math> (value in thousands of dollars). A 6-year-old car is worth $14,000. Find the residual and explain it.</div>
+    <div class="work h05"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>y</mi><mo accent="true" stretchy="false">̂</mo></mover><mo>=</mo><mrow><mo form="prefix">−</mo><mn>2.5</mn></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mn>6</mn><mo stretchy="false" form="postfix">)</mo></mrow><mo>+</mo><mn>30</mn><mo>=</mo><mn>15</mn></mrow><annotation encoding="application/x-tex">\hat{y} = {-2.5}(6) + 30 = 15</annotation></semantics></math>. &nbsp;Residual <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mn>14</mn><mo>−</mo><mn>15</mn><mo>=</mo><mrow><mo form="prefix">−</mo><mn>1</mn></mrow></mrow><annotation encoding="application/x-tex">= 14 - 15 = {-1}</annotation></semantics></math>. The car is worth $1,000 less than predicted.</span></div>
+  </div>
+
+  <div class="ex brk">
+    <div class="q"><b class="tag">4.</b> Two lines were fit to the same 4 points. Here are their residuals.</div>
+    <div class="work">
+      <table class="fill">
+        <tr><th></th><th colspan="4">Residuals</th><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Σ</mi><msup><mrow><mo stretchy="false" form="prefix">(</mo><mi>y</mi><mo>−</mo><mover><mi>y</mi><mo accent="true" stretchy="false">̂</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\Sigma(y - \hat{y})^2</annotation></semantics></math></th></tr>
+        <tr><td>Line A</td><td>2</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix">−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math></td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix">−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math></td><td>0</td><td class="wl"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>0</mn><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">4 + 1 + 1 + 0 = 6</annotation></semantics></math></span></td></tr>
+        <tr><td>Line B</td><td>3</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix">−</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">-2</annotation></semantics></math></td><td>1</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix">−</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">-2</annotation></semantics></math></td><td class="wl"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>9</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>4</mn><mo>=</mo><mn>18</mn></mrow><annotation encoding="application/x-tex">9 + 4 + 1 + 4 = 18</annotation></semantics></math></span></td></tr>
+      </table>
+      <ol class="parts">
+        <li>Find <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Σ</mi><msup><mrow><mo stretchy="false" form="prefix">(</mo><mi>y</mi><mo>−</mo><mover><mi>y</mi><mo accent="true" stretchy="false">̂</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\Sigma(y - \hat{y})^2</annotation></semantics></math> for each line. (Square each residual, then add.)
+          <div class="h03"></div></li>
+        <li>Which line is closer to the least-squares line? Explain. &nbsp;<span class="ans-key">Line A. Its <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Σ</mi><msup><mrow><mo stretchy="false" form="prefix">(</mo><mi>y</mi><mo>−</mo><mover><mi>y</mi><mo accent="true" stretchy="false">̂</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\Sigma(y - \hat{y})^2</annotation></semantics></math> is smaller.</span>
+          <div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">5.</b> Look at the residual plots on page 1.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Which plot shows that a line is a good model? &nbsp;<span class="ans-key">A</span>
+          <div class="h03"></div></li>
+        <li>What does the pattern in plot B tell you? &nbsp;<span class="ans-key">The data is curved, so a straight line does not fit well.</span>
+          <div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">6.</b> A residual plot has positive residuals for small <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>, negative residuals in the middle, and positive residuals for large <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>. Is a line a good model? Explain.</div>
+    <div class="work h08"><span class="ans-key">No. The residuals make a U-shaped pattern. The data is curved.</span></div>
+  </div>
+
+</section>
+</body>
+</html>

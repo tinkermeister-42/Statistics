@@ -3,7 +3,7 @@
 Every tool from Unit 2 in one place. Use it while you work on the review.
 
 :::{.guided-notes-link}
-[Printable summary](/handouts/Unit_2/Unit_2_Summary.pdf){target="_blank"} - these tables on two pages, to print and keep.
+[Printable summary](/handouts/Unit_2/Unit_2_Summary.html){target="_blank"} - these tables on two pages, to print and keep.
 :::
 
 ### Standard Deviation

@@ -26,7 +26,7 @@ That is about a 1.6% chance. In this lesson, you learn when and how to multiply 
 :::
 
 :::{.guided-notes-link}
-[Printable mini lesson](/handouts/Unit_6/6.2_The_Multiplication_Rule.pdf){target="_blank"} - notes and practice problems to print and write on.
+[Printable mini lesson](/handouts/Unit_6/6.2_The_Multiplication_Rule.html){target="_blank"} - notes and practice problems to print and write on.
 :::
 
 {{< khan 6.2 >}}

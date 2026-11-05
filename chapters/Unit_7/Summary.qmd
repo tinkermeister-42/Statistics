@@ -3,7 +3,7 @@
 Every probability distribution, expected value, and payoff tool from Unit 7 in one place. Use it while you work on the review.
 
 :::{.guided-notes-link}
-[Printable summary](/handouts/Unit_7/Unit_7_Summary.pdf){target="_blank"} - these tables on two pages, to print and keep.
+[Printable summary](/handouts/Unit_7/Unit_7_Summary.html){target="_blank"} - these tables on two pages, to print and keep.
 :::
 
 ### Random Variables and Distributions

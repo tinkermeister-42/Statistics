@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6.6  Combinations (Teacher Key)</title>
+<link rel="stylesheet" href="../assets/handouts.css">
+</head>
+<body>
+<section class="sheet">
+
+  <div class="masthead">
+    <a class="backlink" href="../../chapters/Unit_6/6.6_Combinations.html">&larr; back to the lesson</a>
+    <h1>6.6 &nbsp;Combinations</h1>
+    <div class="sub">Mini Lesson - Unit 6: Probability - DHS Statistics</div>
+    <div class="keybadge">Teacher Key: answers in red</div>
+  </div>
+
+<p>Pick 3 students from 5 (A, B, C, D, E) to be on a committee. All 3 have the same job.
+    Choosing A, B, C is the <b>same committee</b> as choosing C, A, B. <b>Order does not matter.</b></p>
+
+  <table class="plain">
+    <tr><td>Count as if order mattered:</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mn>5</mn></msub><msub><mi>P</mi><mn>3</mn></msub><mo>=</mo><mn>5</mn><mo>⋅</mo><mn>4</mn><mo>⋅</mo><mn>3</mn><mo>=</mo><mn>60</mn></mrow><annotation encoding="application/x-tex">{}_5P_3 = 5 \cdot 4 \cdot 3 = 60</annotation></semantics></math></td></tr>
+    <tr><td>Each committee of 3 was counted <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>!</mi><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">3! = 6</annotation></semantics></math> times:</td><td>ABC, ACB, BAC, BCA, CAB, CBA</td></tr>
+    <tr><td>Divide:</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>60</mn><mo>÷</mo><mn>6</mn><mo>=</mo><mn>𝟏𝟎</mn></mrow><annotation encoding="application/x-tex">60 \div 6 = \mathbf{10}</annotation></semantics></math> committees</td></tr>
+  </table>
+
+  <div class="keys">
+    <p><b>Combination formula:</b> &nbsp;&nbsp; <math displaystyle="true" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mi>n</mi></msub><msub><mi>C</mi><mi>r</mi></msub><mo>=</mo><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mi>n</mi><mi>r</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mo>=</mo><mfrac displaystyle="true"><mrow><mi>n</mi><mi>!</mi></mrow><mrow><mi>r</mi><mi>!</mi><mspace width="0.167em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>−</mo><mi>r</mi><mo stretchy="false" form="postfix">)</mo><mi>!</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">{}_nC_r = \left.\displaystyle\binom{n}{r}\right. = \dfrac{n!}{r!\,\mathopen{(}n - r\mathclose{)}!}</annotation></semantics></math> &nbsp;&nbsp; choose <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math> things from <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> things</p>
+    <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mi>n</mi></msub><msub><mi>C</mi><mi>r</mi></msub></mrow><annotation encoding="application/x-tex">{}_nC_r</annotation></semantics></math> and <math displaystyle="true" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mi>n</mi><mi>r</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\left.\displaystyle\binom{n}{r}\right.</annotation></semantics></math> are both read &ldquo;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> choose <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>.&rdquo; Some books write <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>,</mo><mi>r</mi><mo stretchy="false" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">C(n, r)</annotation></semantics></math>.</p>
+  </div>
+
+  <p><b>Example:</b> &nbsp;&nbsp; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mn>5</mn></msub><msub><mi>C</mi><mn>3</mn></msub><mo>=</mo><mfrac displaystyle="true"><mrow><mn>5</mn><mi>!</mi></mrow><mrow><mn>3</mn><mi>!</mi><mspace width="0.167em"></mspace><mn>2</mn><mi>!</mi></mrow></mfrac><mo>=</mo><mfrac displaystyle="true"><mn>120</mn><mrow><mn>6</mn><mo>⋅</mo><mn>2</mn></mrow></mfrac><mo>=</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">{}_5C_3 = \dfrac{5!}{3!\,2!} = \dfrac{120}{6 \cdot 2} = 10</annotation></semantics></math></p>
+
+  <p><b>Permutation or combination?</b> Ask: <i>If I switch the order, is it a different result?</i></p>
+  <table class="info">
+    <tr><th>Order matters: permutation</th><th>Order does not matter: combination</th></tr>
+    <tr><td>President, vice president, secretary (different jobs)</td><td>A committee of 3 (same job)</td></tr>
+    <tr><td>1st, 2nd, 3rd place</td><td>Picking 3 winners of the same prize</td></tr>
+    <tr><td>Arranging books on a shelf</td><td>Choosing 3 books to take on a trip</td></tr>
+  </table>
+
+  <p><b>Handshakes.</b> 10 people each shake hands once with everyone else. A handshake is a pair, and Ana-Ben is the same as Ben-Ana:
+    &nbsp;&nbsp; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mn>10</mn></msub><msub><mi>C</mi><mn>2</mn></msub><mo>=</mo><mfrac displaystyle="true"><mrow><mn>10</mn><mo>⋅</mo><mn>9</mn></mrow><mn>2</mn></mfrac><mo>=</mo><mn>45</mn></mrow><annotation encoding="application/x-tex">{}_{10}C_2 = \dfrac{10 \cdot 9}{2} = 45</annotation></semantics></math> handshakes.</p>
+
+
+  <div class="parthead brk"><b>6.6 &nbsp;Combinations - Practice</b></div>
+  <p class="partner">Work with a partner. Compare answers when you finish each problem.</p>
+
+  <div class="ex">
+    <div class="q"><b class="tag">1.</b> Find each value.</div>
+    <div class="work">
+      <ol class="parts">
+        <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mn>5</mn></msub><msub><mi>C</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">{}_5C_2</annotation></semantics></math>
+          <div class="h05"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>5</mn><mo>⋅</mo><mn>4</mn></mrow><mrow><mn>2</mn><mo>⋅</mo><mn>1</mn></mrow></mfrac><mo>=</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">\frac{5 \cdot 4}{2 \cdot 1} = 10</annotation></semantics></math></span></div></li>
+        <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mn>6</mn></msub><msub><mi>C</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">{}_6C_3</annotation></semantics></math>
+          <div class="h05"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>6</mn><mo>⋅</mo><mn>5</mn><mo>⋅</mo><mn>4</mn></mrow><mrow><mn>3</mn><mo>⋅</mo><mn>2</mn><mo>⋅</mo><mn>1</mn></mrow></mfrac><mo>=</mo><mn>20</mn></mrow><annotation encoding="application/x-tex">\frac{6 \cdot 5 \cdot 4}{3 \cdot 2 \cdot 1} = 20</annotation></semantics></math></span></div></li>
+        <li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mn>8</mn></msub><msub><mi>C</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">{}_8C_1</annotation></semantics></math> &nbsp;<span class="ans-key">8</span>
+          <div class="h03"></div></li>
+        <li><math displaystyle="true" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mn>7</mn><mn>7</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\left.\displaystyle\binom{7}{7}\right.</annotation></semantics></math> &nbsp;<span class="ans-key">1 (there is one way to choose all of them)</span>
+          <div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> Permutation or combination? Then find the number of ways.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Choose 3 pizza toppings from 10. &nbsp;<span class="ans-key">Combination. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mn>10</mn></msub><msub><mi>C</mi><mn>3</mn></msub><mo>=</mo><mn>120</mn></mrow><annotation encoding="application/x-tex">{}_{10}C_3 = 120</annotation></semantics></math></span>
+          <div class="h03"></div></li>
+        <li>Give 1st, 2nd, and 3rd prizes to 3 of 10 people. &nbsp;<span class="ans-key">Permutation. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mn>10</mn></msub><msub><mi>P</mi><mn>3</mn></msub><mo>=</mo><mn>720</mn></mrow><annotation encoding="application/x-tex">{}_{10}P_3 = 720</annotation></semantics></math></span>
+          <div class="h03"></div></li>
+        <li>Choose a president and a treasurer from 12 people. &nbsp;<span class="ans-key">Permutation. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mn>12</mn></msub><msub><mi>P</mi><mn>2</mn></msub><mo>=</mo><mn>132</mn></mrow><annotation encoding="application/x-tex">{}_{12}P_2 = 132</annotation></semantics></math></span>
+          <div class="h03"></div></li>
+        <li>Choose 4 people from 15 for a committee. &nbsp;<span class="ans-key">Combination. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mn>15</mn></msub><msub><mi>C</mi><mn>4</mn></msub><mo>=</mo><mn>1,365</mn></mrow><annotation encoding="application/x-tex">{}_{15}C_4 = 1{,}365</annotation></semantics></math></span>
+          <div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">3.</b> 12 people meet. Each person shakes hands once with every other person. How many handshakes?</div>
+    <div class="work h05"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mn>12</mn></msub><msub><mi>C</mi><mn>2</mn></msub><mo>=</mo><mfrac><mrow><mn>12</mn><mo>⋅</mo><mn>11</mn></mrow><mn>2</mn></mfrac><mo>=</mo><mn>66</mn></mrow><annotation encoding="application/x-tex">{}_{12}C_2 = \frac{12 \cdot 11}{2} = 66</annotation></semantics></math></span></div>
+  </div>
+
+  <div class="ex brk">
+    <div class="q"><b class="tag">4.</b> A restaurant has 8 toppings. A pizza has 2 different toppings. How many different 2-topping pizzas are there?</div>
+    <div class="work h05"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mn>8</mn></msub><msub><mi>C</mi><mn>2</mn></msub><mo>=</mo><mfrac><mrow><mn>8</mn><mo>⋅</mo><mn>7</mn></mrow><mn>2</mn></mfrac><mo>=</mo><mn>28</mn></mrow><annotation encoding="application/x-tex">{}_8C_2 = \frac{8 \cdot 7}{2} = 28</annotation></semantics></math></span></div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">5.</b> Compare <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mn>10</mn></msub><msub><mi>P</mi><mn>3</mn></msub><mo>=</mo><mn>720</mn></mrow><annotation encoding="application/x-tex">{}_{10}P_3 = 720</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mn>10</mn></msub><msub><mi>C</mi><mn>3</mn></msub><mo>=</mo><mn>120</mn></mrow><annotation encoding="application/x-tex">{}_{10}C_3 = 120</annotation></semantics></math>.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Why is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mn>10</mn></msub><msub><mi>P</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">{}_{10}P_3</annotation></semantics></math> bigger? &nbsp;<span class="ans-key">It counts each group of 3 once for every order.</span>
+          <div class="h03"></div></li>
+        <li>What number do you divide by to get from 720 to 120? Why? &nbsp;<span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>!</mi><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">3! = 6</annotation></semantics></math>. Each group of 3 can be ordered 6 ways.</span>
+          <div class="h05"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">6.</b> A hand of 5 cards is dealt from a deck of 52 cards. Use a calculator. How many different hands are there?</div>
+    <div class="work h05"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mn>52</mn></msub><msub><mi>C</mi><mn>5</mn></msub><mo>=</mo><mn>2,598,960</mn></mrow><annotation encoding="application/x-tex">{}_{52}C_5 = 2{,}598{,}960</annotation></semantics></math></span></div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">7.</b> A student says, &ldquo;Choosing 2 of 6 students to clean the board is a permutation, because there are 2 people.&rdquo;
+      Do you agree? Explain.</div>
+    <div class="work h08"><span class="ans-key">No. Both students do the same job, so the order does not matter. It is a combination: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow></mrow><mn>6</mn></msub><msub><mi>C</mi><mn>2</mn></msub><mo>=</mo><mn>15</mn></mrow><annotation encoding="application/x-tex">{}_6C_2 = 15</annotation></semantics></math>.</span></div>
+  </div>
+
+</section>
+</body>
+</html>

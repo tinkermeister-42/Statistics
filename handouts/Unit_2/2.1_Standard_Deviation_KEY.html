@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2.1  Standard Deviation (Teacher Key)</title>
+<link rel="stylesheet" href="../assets/handouts.css">
+</head>
+<body>
+<section class="sheet">
+
+  <div class="masthead">
+    <a class="backlink" href="../../chapters/Unit_2/2.1_Standard_Deviation.html">&larr; back to the lesson</a>
+    <h1>2.1 &nbsp;Standard Deviation</h1>
+    <div class="sub">Mini Lesson - Unit 2: Analyzing One Variable - DHS Statistics</div>
+    <div class="keybadge">Teacher Key: answers in red</div>
+  </div>
+
+<p>Two basketball players both score <b>10 points</b> per game on average.</p>
+
+  <img class="fig" src="../../images/Unit_2/2.1_players.svg" style="width:5.2in" alt="">
+
+  <p>Player A's points are close to the mean. Player B's points are spread far from the mean.
+    The <b>standard deviation</b> (SD) measures this.</p>
+
+  <div class="keys">
+    <b>Standard deviation</b> is about how far the values usually are from the mean.<br>
+    <b>Small SD:</b> values are close to the mean. &nbsp;&nbsp; <b>Large SD:</b> values are spread out.
+  </div>
+
+  <h2>How to Find the Standard Deviation</h2>
+  <p><b>Example:</b> 7, 7, 10, 13, 13</p>
+  <div class="cols2">
+    <table class="plain">
+      <tr><td>1.</td><td>Find the mean, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">‾</mo></mover><annotation encoding="application/x-tex">\bar{x}</annotation></semantics></math>. &nbsp; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo>=</mo><mn>50</mn><mo>÷</mo><mn>5</mn><mo>=</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">\bar{x} = 50 \div 5 = 10</annotation></semantics></math></td></tr>
+      <tr><td>2.</td><td>Subtract the mean from each value.</td></tr>
+      <tr><td>3.</td><td>Square each result.</td></tr>
+      <tr><td>4.</td><td>Add the squares. &nbsp; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Σ</mi><msup><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>=</mo><mn>36</mn></mrow><annotation encoding="application/x-tex">\Sigma(x - \bar{x})^2 = 36</annotation></semantics></math></td></tr>
+      <tr><td>5.</td><td>Divide by <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n - 1</annotation></semantics></math>. &nbsp; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>36</mn><mo>÷</mo><mn>4</mn><mo>=</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">36 \div 4 = 9</annotation></semantics></math><br>(This number is called the <b>variance</b>.)</td></tr>
+      <tr><td>6.</td><td>Take the square root. &nbsp; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><msqrt><mn>9</mn></msqrt><mo>=</mo><mn>𝟑</mn></mrow><annotation encoding="application/x-tex">s = \sqrt{9} = \mathbf{3}</annotation></semantics></math></td></tr>
+    </table>
+    <table class="data">
+      <tr><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>−</mo><mover><mi>x</mi><mo accent="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">x - \bar{x}</annotation></semantics></math></th><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></msup><annotation encoding="application/x-tex">(x - \bar{x})^2</annotation></semantics></math></th></tr>
+      <tr><td>7</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix">−</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">-3</annotation></semantics></math></td><td>9</td></tr>
+      <tr><td>7</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix">−</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">-3</annotation></semantics></math></td><td>9</td></tr>
+      <tr><td>10</td><td>0</td><td>0</td></tr>
+      <tr><td>13</td><td>3</td><td>9</td></tr>
+      <tr><td>13</td><td>3</td><td>9</td></tr>
+      <tr><td colspan="2" style="text-align:right"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Σ</mi><msup><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\Sigma(x - \bar{x})^2</annotation></semantics></math></td><td>36</td></tr>
+    </table>
+  </div>
+
+  <p><b>The formula:</b> &nbsp; <math displaystyle="true" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><msqrt><mfrac><mrow><mi mathvariant="normal">Σ</mi><msup><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mfrac></msqrt></mrow><annotation encoding="application/x-tex">\displaystyle s = \sqrt{\frac{\Sigma(x - \bar{x})^2}{n - 1}}</annotation></semantics></math>
+    &nbsp;&nbsp; (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math> = the standard deviation, &nbsp;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> = how many values)</p>
+  <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Σ</mi><annotation encoding="application/x-tex">\Sigma</annotation></semantics></math> (capital <b>sigma</b>) means <b>add up</b>. &nbsp;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Σ</mi><msup><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\Sigma(x - \bar{x})^2</annotation></semantics></math> means: find
+    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></msup><annotation encoding="application/x-tex">(x - \bar{x})^2</annotation></semantics></math> for every value, then add them all.</p>
+
+  <div class="cols2">
+  <div class="box tint">
+    <div class="lbl">Why <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n - 1</annotation></semantics></math>?</div>
+    Our data is usually a <b>sample</b>, a small part of a bigger group. A sample is usually a little
+    less spread out than the whole group. Dividing by <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n - 1</annotation></semantics></math> makes <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math> a little bigger to fix this.
+  </div>
+
+  <div class="box tint">
+    <div class="lbl">Remember</div>
+    <ul>
+      <li>The SD is never negative.</li>
+      <li>The SD is 0 only when every value is the same.</li>
+      <li>The SD has the same units as the data (points, minutes, inches).</li>
+    </ul>
+  </div>
+  </div>
+
+
+  <div class="parthead brk"><b>2.1 &nbsp;Standard Deviation - Practice</b></div>
+  <p class="partner">Work with a partner. Compare answers when you finish each problem.</p>
+
+  <div class="ex">
+    <div class="q"><b class="tag">1.</b> Find the standard deviation of 4, 6, 8, 10, 12.</div>
+    <div class="work cols2">
+      <table class="fill">
+        <tr><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>−</mo><mover><mi>x</mi><mo accent="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">x - \bar{x}</annotation></semantics></math></th><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></msup><annotation encoding="application/x-tex">(x - \bar{x})^2</annotation></semantics></math></th></tr>
+        <tr><td>4</td><td class="w"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix">−</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">-4</annotation></semantics></math></span></td><td class="w"><span class="ans-key">16</span></td></tr>
+        <tr><td>6</td><td class="w"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix">−</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">-2</annotation></semantics></math></span></td><td class="w"><span class="ans-key">4</span></td></tr>
+        <tr><td>8</td><td class="w"><span class="ans-key">0</span></td><td class="w"><span class="ans-key">0</span></td></tr>
+        <tr><td>10</td><td class="w"><span class="ans-key">2</span></td><td class="w"><span class="ans-key">4</span></td></tr>
+        <tr><td>12</td><td class="w"><span class="ans-key">4</span></td><td class="w"><span class="ans-key">16</span></td></tr>
+        <tr><td colspan="2" style="text-align:right"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Σ</mi><msup><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\Sigma(x - \bar{x})^2</annotation></semantics></math></td><td class="w"><span class="ans-key">40</span></td></tr>
+      </table>
+      <div>
+        <p>Mean: <span class="b m"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>40</mn><mo>÷</mo><mn>5</mn><mo>=</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">40 \div 5 = 8</annotation></semantics></math></span></span></p>
+        <div class="h1"></div>
+        <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo></mrow><annotation encoding="application/x-tex">s =</annotation></semantics></math> <span class="b l"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msqrt><mrow><mn>40</mn><mo>÷</mo><mn>4</mn></mrow></msqrt><mo>=</mo><msqrt><mn>10</mn></msqrt><mo>≈</mo><mn>3.16</mn></mrow><annotation encoding="application/x-tex">\sqrt{40 \div 4} = \sqrt{10} \approx 3.16</annotation></semantics></math></span></span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> Four quiz scores: 7, 3, 7, 7. Find the standard deviation.</div>
+    <div class="work cols2">
+      <table class="fill">
+        <tr><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>−</mo><mover><mi>x</mi><mo accent="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">x - \bar{x}</annotation></semantics></math></th><th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></msup><annotation encoding="application/x-tex">(x - \bar{x})^2</annotation></semantics></math></th></tr>
+        <tr><td>7</td><td class="w"><span class="ans-key">1</span></td><td class="w"><span class="ans-key">1</span></td></tr>
+        <tr><td>3</td><td class="w"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix">−</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">-3</annotation></semantics></math></span></td><td class="w"><span class="ans-key">9</span></td></tr>
+        <tr><td>7</td><td class="w"><span class="ans-key">1</span></td><td class="w"><span class="ans-key">1</span></td></tr>
+        <tr><td>7</td><td class="w"><span class="ans-key">1</span></td><td class="w"><span class="ans-key">1</span></td></tr>
+        <tr><td colspan="2" style="text-align:right"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Σ</mi><msup><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\Sigma(x - \bar{x})^2</annotation></semantics></math></td><td class="w"><span class="ans-key">12</span></td></tr>
+      </table>
+      <div>
+        <p>Mean: <span class="b m"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>24</mn><mo>÷</mo><mn>4</mn><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">24 \div 4 = 6</annotation></semantics></math></span></span></p>
+        <div class="h1"></div>
+        <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo></mrow><annotation encoding="application/x-tex">s =</annotation></semantics></math> <span class="b l"><span class="ans-key"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msqrt><mrow><mn>12</mn><mo>÷</mo><mn>3</mn></mrow></msqrt><mo>=</mo><msqrt><mn>4</mn></msqrt><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\sqrt{12 \div 3} = \sqrt{4} = 2</annotation></semantics></math></span></span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">3.</b> Look at the two players on page 1.
+      <table class="plain">
+        <tr><td>Player A:</td><td>9, 10, 10, 11, 10</td></tr>
+        <tr><td>Player B:</td><td>2, 18, 5, 15, 10</td></tr>
+      </table>
+    </div>
+    <div class="work">
+      <ol class="parts">
+        <li>Find the mean of each player. <span class="b l"><span class="ans-key">A: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>50</mn><mo>÷</mo><mn>5</mn><mo>=</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">50 \div 5 = 10</annotation></semantics></math>. &nbsp;B: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>50</mn><mo>÷</mo><mn>5</mn><mo>=</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">50 \div 5 = 10</annotation></semantics></math>.</span></span></li>
+        <li>Without calculating, which player has the larger SD? Explain.
+          <div class="h05"><span class="ans-key">Player B. B's points are much farther from 10.</span></div></li>
+        <li>Find <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math> for Player A.
+          <div class="h08"><span class="ans-key">Differences <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix">−</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">-1, 0, 0, 1, 0</annotation></semantics></math>. &nbsp;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Σ</mi><msup><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\Sigma(x - \bar{x})^2 = 2</annotation></semantics></math>. &nbsp;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><msqrt><mrow><mn>2</mn><mo>÷</mo><mn>4</mn></mrow></msqrt><mo>=</mo><msqrt><mn>0.5</mn></msqrt><mo>≈</mo><mn>0.71</mn></mrow><annotation encoding="application/x-tex">s = \sqrt{2 \div 4} = \sqrt{0.5} \approx 0.71</annotation></semantics></math></span></div></li>
+        <li>Player B's SD is about 6.67. A coach needs a player who scores close to 10 points every game.
+          Which player should the coach choose? Explain.
+          <div class="h05"><span class="ans-key">Player A. A's SD is much smaller, so A's scores stay close to 10.</span></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex brk">
+    <div class="q"><b class="tag">4.</b> All three dot plots have a mean of 5. Put them in order from the
+      <b>smallest</b> SD to the <b>largest</b> SD. Explain.</div>
+    <div class="work">
+      <img class="fig" src="../../images/Unit_2/2.1_rank_sd.svg" style="width:3.54in" alt="">
+      <div class="h08"><span class="ans-key">R, P, Q. The dots in R are packed close to 5. The dots in Q are far from 5.<br>
+        (The SDs are about 0.67, 1.83, and 3.16.)</span></div>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">5.</b> Think about what the SD means.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Can a standard deviation be negative? Explain.
+          <div class="h08"><span class="ans-key">No. It comes from adding squares (never negative) and taking a square root.</span></div></li>
+        <li>Find the SD of 10, 10, 10, 10 without a formula. Explain.
+          <div class="h08"><span class="ans-key">0. Every value equals the mean, so there is no spread.</span></div></li>
+        <li>Set B is 9, 10, 10, 11. Set C is 0, 10, 10, 20. Both have a mean of 10. Which set has the
+          larger SD? Explain.
+          <div class="h08"><span class="ans-key">Set C. Its values are much farther from 10.</span></div></li>
+      </ol>
+    </div>
+  </div>
+
+</section>
+</body>
+</html>

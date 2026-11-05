@@ -6,10 +6,16 @@ project:
 resources:
   - glossary.json
   - scripts/*.js
-  # Printable mini lessons.  The student copy is linked from each lesson page.
-  # The _KEY copy sits beside it and is deliberately not linked: it is
-  # reachable only by typing the URL.  Built by ./build.sh.
-  - handouts/Unit_*/*.pdf
+  # Printable handouts (lessons, reviews, summaries, the z-table): HTML pages
+  # that print, built from handouts/src/ by ./build.sh.  The student copy is
+  # linked from each lesson page.  The _KEY copy sits beside it and is
+  # deliberately not linked: it is reachable only by typing the URL.
+  - handouts/Unit_*/*.html
+  - handouts/assets/*
+  # Figures.  Quarto copies an image it finds referenced from a rendered .qmd;
+  # one that only a handout shows (a blank axis, its red _KEY copy) is
+  # invisible to it, so every figure is named here.
+  - images/Unit_*/*.svg
   # Quizzes and their keys, built by ./build.sh like the handouts.  Copied into
   # the site but linked from nowhere: reachable only by typing the URL, as in
   # the Algebra 1 book (/assessments/Unit_X/<Name>.pdf).

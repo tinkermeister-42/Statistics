@@ -1,0 +1,113 @@
+<!--
+lesson: 2.4
+title: Normal Distributions and the Empirical Rule
+unit: 2
+unit_title: Analyzing One Variable
+kind: Mini Lesson
+back: 2.4_Normal_Distributions_and_the_Empirical_Rule
+-->
+  <p>Measure the heights of thousands of adult women. The histogram makes a smooth <b>bell shape</b>.
+    Data like this has a <b>normal distribution</b>.</p>
+
+  <div class="keys">
+    <b>A normal distribution:</b>
+    <ul>
+      <li>is bell-shaped and symmetric</li>
+      <li>has the mean and the median in the center (they are equal)</li>
+      <li>is described by two numbers: the <b>mean</b> $\mu$ (center) and the <b>SD</b> $\sigma$ (spread)</li>
+    </ul>
+  </div>
+
+  <p>A larger SD makes the curve wider and flatter. A different mean moves the curve left or right.</p>
+
+  <h2>The empirical rule (68-95-99.7 rule)</h2>
+
+  {{fig Unit_2/2.4_empirical w=4.8in}}
+
+  <p>About <b>68%</b> of the data is within <b>1 SD</b> of the mean.<br>
+    About <b>95%</b> of the data is within <b>2 SDs</b> of the mean.<br>
+    About <b>99.7%</b> of the data is within <b>3 SDs</b> of the mean.</p>
+
+  <p><b>Example:</b> Heights of adult women have a mean of about 64 inches and an SD of about 3 inches.</p>
+
+  {{fig Unit_2/2.4_heights w=4.2in}}
+
+  <table class="info">
+    <tr><td>Percent from 61 to 67 inches</td><td>68% (within 1 SD)</td></tr>
+    <tr><td>Percent from 58 to 70 inches</td><td>95% (within 2 SDs)</td></tr>
+    <tr><td>Percent taller than 67 inches</td><td>$13.5\% + 2.35\% + 0.15\% = 16\%$</td></tr>
+    <tr><td>Percentile of 67 inches</td><td>$100\% - 16\% = 84\%$, the 84th percentile</td></tr>
+  </table>
+
+  <p><b>Tip:</b> Draw the curve and label it every time. Then add up the parts you need.</p>
+
+
+  {{practice-head}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">1.</b> The weights of apples from one orchard have a normal distribution. The mean is 150 grams and the SD is 10 grams.</div>
+    <div class="work">
+      <p>Label the number line with the weights.</p>
+      {{fig Unit_2/2.4_apples_number_line w=4.3in}}
+      <p>About what percent of the apples weigh:</p>
+      <ol class="parts">
+        <li><div class="h05">from 140 to 160 grams? &nbsp;{{a}}68%{{/a}}</div></li>
+        <li><div class="h05">from 130 to 170 grams? &nbsp;{{a}}95%{{/a}}</div></li>
+        <li><div class="h05">more than 160 grams? &nbsp;{{a}}$13.5 + 2.35 + 0.15 = 16\%${{/a}}</div></li>
+        <li><div class="h05">less than 130 grams? &nbsp;{{a}}$2.35 + 0.15 = 2.5\%${{/a}}</div></li>
+        <li><div class="h05">from 150 to 170 grams? &nbsp;{{a}}$34 + 13.5 = 47.5\%${{/a}}</div></li>
+        <li><div class="h05">from 130 to 160 grams? &nbsp;{{a}}$13.5 + 34 + 34 = 81.5\%${{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> A phone battery lasts a mean of 20 hours with an SD of 2 hours. The times have a normal distribution.</div>
+    <div class="work">
+      <ol class="parts">
+        <li><div class="h05">Between what two times do the middle 95% of batteries last? &nbsp;{{a}}$20 - 4 = 16$ to $20 + 4 = 24$ hours{{/a}}</div></li>
+        <li><div class="h05">What percentile is 22 hours? &nbsp;{{a}}$50 + 34 = 84$, the 84th percentile{{/a}}</div></li>
+        <li><div class="h05">About what percent of batteries last less than 16 hours? &nbsp;{{a}}2.5%{{/a}}</div></li>
+        <li>A battery lasts 27 hours. Is that unusual? Explain.
+          <div class="h05">{{a}}Yes. 27 is 3.5 SDs above the mean. Almost no batteries (less than 0.15%) last that long.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">3.</b> In a normal distribution, what percentile is a value with each z-score?</div>
+    <div class="work">
+      <ol class="parts">
+        <li><div class="h05">$z = 0$ &nbsp;{{a}}50th percentile{{/a}}</div></li>
+        <li><div class="h05">$z = 1$ &nbsp;{{a}}$50 + 34 = 84$th percentile{{/a}}</div></li>
+        <li><div class="h05">$z = -2$ &nbsp;{{a}}$2.35 + 0.15 = 2.5$th percentile{{/a}}</div></li>
+        <li><div class="h05">$z = 2$ &nbsp;{{a}}$100 - 2.5 = 97.5$th percentile{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">4.</b> The three curves are normal distributions.</div>
+    <div class="work">
+      {{fig Unit_2/2.4_compare_curves}}
+      <ol class="parts">
+        <li><div class="h05">Which two curves have the same mean? &nbsp;{{a}}A and B (both 8){{/a}}</div></li>
+        <li><div class="h05">Which curve has the largest SD? Explain. &nbsp;{{a}}B. It is the widest and most spread out.{{/a}}</div></li>
+        <li>How are A and C the same? How are they different?
+          <div class="h05">{{a}}Same SD (same width and shape). Different means: A is centered at 8, C at 16.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">5.</b> Would each data set have a normal distribution? Explain.</div>
+    <div class="work">
+      <ol class="parts">
+        <li><div class="h05">The heights of all adult men in Missouri. &nbsp;{{a}}Yes. Heights are bell-shaped and symmetric.{{/a}}</div></li>
+        <li><div class="h05">The yearly income of every household in the US. &nbsp;{{a}}No. Income is skewed right.{{/a}}</div></li>
+        <li><div class="h05">Scores on a very easy test. &nbsp;{{a}}No. Most scores are high, so it is skewed left.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>

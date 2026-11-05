@@ -1,0 +1,15 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}\input{../keyed}
+% Handout 1.1, problem 6(b): blank axes for the student; the key draws the histogram and labels.
+\begin{document}
+\begin{tikzpicture}[x=0.38cm,y=0.42cm]
+  \draw[->] (0,0) -- (0,6.6); \draw (0,0) -- (30,0);
+  \foreach \y in {0,...,6} \draw (0.2,\y) -- (-0.2,\y) node[left,font=\small] {\y};
+  \foreach \l/\p in {5/3,10/8,15/13,20/18,25/23,30/28} {\draw (\p,0.2) -- (\p,-0.2) node[below] {\l};}
+  \ifkey\begin{scope}[red!75!black]
+    \foreach \i/\h in {0/3,1/5,2/4,3/2,4/1} \draw[fill=red!12] (3+\i*5,0) rectangle (8+\i*5,\h);
+    \node[rotate=90] at (-2.6,3) {Games};
+    \node at (15.5,-1.9) {Points scored};
+  \end{scope}\fi
+\end{tikzpicture}
+\end{document}

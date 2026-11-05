@@ -1,0 +1,11 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}
+% Z table, page 1: the area to the left of a negative z.
+\begin{document}
+\begin{tikzpicture}[x=0.45cm,y=0.45cm]
+  \fill[gray!30,domain=-3.2:-0.8,samples=60] (-3.2,0) -- plot (\x,{2*exp(-\x*\x/2)}) -- (-0.8,0) -- cycle;
+  \draw[thick,domain=-3.4:3.4,samples=100] plot (\x,{2*exp(-\x*\x/2)});
+  \draw (-3.6,0) -- (3.6,0);
+  \draw (-0.8,0.1) -- ++(0,-0.2) node[below,font=\small] {$z$};
+\end{tikzpicture}
+\end{document}

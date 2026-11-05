@@ -1,0 +1,8 @@
+\documentclass[border=6pt]{standalone}
+\input{../preamble}\input{../keyed}
+% Handout 6.3, problem 4(a): the student fills in two branches and the four paths; the key writes them in red.
+% The phantom keeps the student copy the same size as the key.
+\newcommand{\ans}[1]{\ifkey{\color{keyred}#1}\else\phantom{#1}\fi}
+\begin{document}
+\tree{A}{0.7}{B}{0.3}{D}{not D}{0.02}{\ans{0.98}}{0.05}{\ans{0.95}}{\ans{$0.7 \cdot 0.02 = 0.014$}}{\ans{$0.7 \cdot 0.98 = 0.686$}}{\ans{$0.3 \cdot 0.05 = 0.015$}}{\ans{$0.3 \cdot 0.95 = 0.285$}}
+\end{document}

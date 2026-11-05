@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unit 2 Summary: Analyzing One Variable</title>
+<link rel="stylesheet" href="../assets/handouts.css">
+</head>
+<body>
+<section class="sheet">
+
+  <div class="masthead">
+    <a class="backlink" href="../../chapters/Unit_2/Summary.html">&larr; back to the summary</a>
+    <h1>Unit 2 Summary: Analyzing One Variable</h1>
+    <div class="sub">Unit Summary - Unit 2: Analyzing One Variable - DHS Statistics</div>
+    <div class="idline"><span>Name</span><span class="small">Date</span><span class="small">Period</span></div>
+  </div>
+
+<h3>Standard Deviation</h3>
+  <table class="info dense">
+    <colgroup><col style="width:1.6in"><col></colgroup>
+    <tr><td><b>Standard deviation</b></td><td>The SD is about how far the values usually are from the mean.</td></tr>
+    <tr><td><b>Small SD</b></td><td>The values are close to the mean. Player A scores close to 10 every game.</td></tr>
+    <tr><td><b>Large SD</b></td><td>The values are spread out. Player B might score 2 or 18.</td></tr>
+    <tr><td><b>Facts</b></td><td>The SD is never negative. It is 0 only when every value is the same. It has the same units as the data (points, minutes, inches).</td></tr>
+  </table>
+
+  <table class="info dense">
+    <colgroup><col style="width:3in"><col></colgroup>
+    <tr><th>Step</th><th>Example: 7, 7, 10, 13, 13</th></tr>
+    <tr><td>1. Find the mean, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">‾</mo></mover><annotation encoding="application/x-tex">\bar{x}</annotation></semantics></math>.</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo>=</mo><mn>50</mn><mo>÷</mo><mn>5</mn><mo>=</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">\bar{x} = 50 \div 5 = 10</annotation></semantics></math></td></tr>
+    <tr><td>2. Subtract the mean from each value.</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix">−</mo><mn>3</mn><mo>,</mo><mo form="prefix">−</mo><mn>3</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">-3, -3, 0, 3, 3</annotation></semantics></math></td></tr>
+    <tr><td>3. Square each result.</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>9</mn><mo>,</mo><mn>9</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>9</mn><mo>,</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">9, 9, 0, 9, 9</annotation></semantics></math></td></tr>
+    <tr><td>4. Add the squares.</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Σ</mi><msup><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>=</mo><mn>9</mn><mo>+</mo><mn>9</mn><mo>+</mo><mn>0</mn><mo>+</mo><mn>9</mn><mo>+</mo><mn>9</mn><mo>=</mo><mn>36</mn></mrow><annotation encoding="application/x-tex">\Sigma(x - \bar{x})^2 = 9 + 9 + 0 + 9 + 9 = 36</annotation></semantics></math></td></tr>
+    <tr><td>5. Divide by <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n - 1</annotation></semantics></math>. This is the <b>variance</b>.</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>36</mn><mo>÷</mo><mn>4</mn><mo>=</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">36 \div 4 = 9</annotation></semantics></math></td></tr>
+    <tr><td>6. Take the square root.</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><msqrt><mn>9</mn></msqrt><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">s = \sqrt{9} = 3</annotation></semantics></math></td></tr>
+    <tr><td><b>The formula:</b> &nbsp;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><msqrt><mfrac displaystyle="true"><mrow><mi mathvariant="normal">Σ</mi><msup><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mfrac></msqrt></mrow><annotation encoding="application/x-tex">s = \sqrt{\dfrac{\Sigma(x - \bar{x})^2}{n - 1}}</annotation></semantics></math></td>
+      <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Σ</mi><annotation encoding="application/x-tex">\Sigma</annotation></semantics></math> (capital sigma) means <b>add up</b>. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Σ</mi><msup><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\Sigma(x - \bar{x})^2</annotation></semantics></math> means: find <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></msup><annotation encoding="application/x-tex">(x - \bar{x})^2</annotation></semantics></math> for every value, then add them all. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> is how many values there are. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math> is the standard deviation.</td></tr>
+  </table>
+
+  <h3>Choosing Measures</h3>
+  <table class="info dense">
+    <tr><th>Shape of the data</th><th>Center</th><th>Spread</th></tr>
+    <tr><td>Symmetric, no outliers</td><td>mean</td><td>standard deviation</td></tr>
+    <tr><td>Skewed, or has outliers</td><td>median</td><td>IQR</td></tr>
+  </table>
+  <p><b>Why:</b> an outlier pulls the mean and the SD. It does not pull the median and the IQR much.</p>
+
+  <h3>Comparing Two Distributions</h3>
+  <table class="info dense">
+    <colgroup><col style="width:0.95in"><col style="width:2.2in"><col></colgroup>
+    <tr><th></th><th>Ask</th><th>Example: hours of sleep last night</th></tr>
+    <tr><td><b>Shape</b></td><td>Symmetric or skewed?</td><td>9th grade is symmetric. 12th grade is skewed right.</td></tr>
+    <tr><td><b>Center</b></td><td>Which group is higher? (median or mean)</td><td>The median for 9th grade (8 hours) is greater than for 12th grade (6 hours). 9th graders usually sleep about 2 hours more.</td></tr>
+    <tr><td><b>Spread</b></td><td>Which group is more spread out? (IQR or SD)</td><td>Both groups have an IQR of 2 hours. The spreads are about the same.</td></tr>
+    <tr><td><b>Outliers</b></td><td>Any values far from the rest?</td><td>One 12th grader slept 12 hours. That is an outlier (the upper fence is 10).</td></tr>
+  </table>
+  <p><b>Use comparing words:</b> &ldquo;The median for 9th grade is <b>2 hours greater than</b> for 12th grade.&rdquo; Use numbers and the context.</p>
+
+  <h3>Percentiles</h3>
+  <table class="info dense">
+    <colgroup><col style="width:3.5in"><col></colgroup>
+    <tr><th>Percentile</th><th>Example: 20 students took a test</th></tr>
+    <tr><td>The percent of the data that is <b>below</b> the value.<br>
+        <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac displaystyle="true"><mtext mathvariant="normal">number of values below</mtext><mtext mathvariant="normal">total number of values</mtext></mfrac><mo>×</mo><mn>100</mn></mrow><annotation encoding="application/x-tex">\dfrac{\text{number of values below}}{\text{total number of values}} \times 100</annotation></semantics></math></td>
+      <td>15 students scored below 85. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>15</mn><mo>÷</mo><mn>20</mn><mo>=</mo><mn>0.75</mn></mrow><annotation encoding="application/x-tex">15 \div 20 = 0.75</annotation></semantics></math>. A score of 85 is at the <b>75th percentile</b>. It is higher than 75% of the class.</td></tr>
+    <tr><td>A percentile is <b>not</b> a percent score.</td>
+      <td>Scoring at the 75th percentile does <b>not</b> mean you got 75% of the questions right. It means you scored higher than 75% of the people.</td></tr>
+  </table>
+
+  <h3 class="brk">Z-Scores</h3>
+  <table class="info dense">
+    <colgroup><col style="width:1.35in"><col style="width:3.15in"><col></colgroup>
+    <tr><th></th><th>What it tells</th><th>Example: mean 70, SD 10</th></tr>
+    <tr><td><b>Z-score</b><br><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mfrac displaystyle="true"><mrow><mi>x</mi><mo>−</mo><mi>μ</mi></mrow><mi>σ</mi></mfrac></mrow><annotation encoding="application/x-tex">z = \dfrac{x - \mu}{\sigma}</annotation></semantics></math></td>
+      <td>How many SDs a value is above or below the mean. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math> (mu) is the mean. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math> (small sigma) is the SD.</td>
+      <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mfrac displaystyle="true"><mrow><mn>85</mn><mo>−</mo><mn>70</mn></mrow><mn>10</mn></mfrac><mo>=</mo><mn>1.5</mn></mrow><annotation encoding="application/x-tex">z = \dfrac{85 - 70}{10} = 1.5</annotation></semantics></math><br>85 is <b>1.5 SDs above</b> the mean.</td></tr>
+    <tr><td><b>Sign of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math></b></td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">z &gt; 0</annotation></semantics></math>: above the mean.<br><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>&lt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">z &lt; 0</annotation></semantics></math>: below the mean. &nbsp;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">z = 0</annotation></semantics></math>: equal to the mean.</td>
+      <td>55 has <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mo form="prefix">−</mo><mn>1.5</mn></mrow><annotation encoding="application/x-tex">z = -1.5</annotation></semantics></math>. It is 1.5 SDs <b>below</b> the mean.</td></tr>
+    <tr><td><b>Going backward</b></td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>μ</mi><mo>+</mo><mi>z</mi><mi>σ</mi></mrow><annotation encoding="application/x-tex">x = \mu + z\sigma</annotation></semantics></math></td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mo form="prefix">−</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">z = -2</annotation></semantics></math>: &nbsp;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>70</mn><mo>+</mo><mrow><mo stretchy="false" form="prefix">(</mo><mo form="prefix">−</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mn>10</mn><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>50</mn></mrow><annotation encoding="application/x-tex">70 + (-2)(10) = 50</annotation></semantics></math></td></tr>
+    <tr><td><b>Comparing</b></td><td>Z-scores let you compare values from <b>different</b> data sets.</td>
+      <td>Ana: 85, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mn>1.5</mn></mrow><annotation encoding="application/x-tex">z = 1.5</annotation></semantics></math>. Ben: 80 (mean 74, SD 3), <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">z = 2</annotation></semantics></math>. Ben did better compared to his class.</td></tr>
+  </table>
+
+  <h3>Normal Distributions and the Empirical Rule</h3>
+  <div class="figrow">
+    <img class="fig left" src="../../images/Unit_2/2.4_empirical.svg" style="width:3in" alt="">
+    <div>
+      <table class="info dense">
+        <tr><th>Within</th><th>From</th><th>About</th></tr>
+        <tr><td>1 SD</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>−</mo><mi>σ</mi></mrow><annotation encoding="application/x-tex">\mu - \sigma</annotation></semantics></math> to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>+</mo><mi>σ</mi></mrow><annotation encoding="application/x-tex">\mu + \sigma</annotation></semantics></math></td><td>68%</td></tr>
+        <tr><td>2 SDs</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>−</mo><mn>2</mn><mi>σ</mi></mrow><annotation encoding="application/x-tex">\mu - 2\sigma</annotation></semantics></math> to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>+</mo><mn>2</mn><mi>σ</mi></mrow><annotation encoding="application/x-tex">\mu + 2\sigma</annotation></semantics></math></td><td>95%</td></tr>
+        <tr><td>3 SDs</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>−</mo><mn>3</mn><mi>σ</mi></mrow><annotation encoding="application/x-tex">\mu - 3\sigma</annotation></semantics></math> to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>+</mo><mn>3</mn><mi>σ</mi></mrow><annotation encoding="application/x-tex">\mu + 3\sigma</annotation></semantics></math></td><td>99.7%</td></tr>
+      </table>
+      <p>A <b>normal distribution</b> is bell-shaped and symmetric. The mean and the median are in the center (they are equal). Two numbers describe it: the mean <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math> (center) and the SD <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math> (spread).</p>
+    </div>
+  </div>
+
+  <table class="info dense">
+    <colgroup><col style="width:4.1in"><col></colgroup>
+    <tr><th>Example: heights, mean 64 inches, SD 3 inches</th><th>Answer</th></tr>
+    <tr><td>Percent from 61 to 67 inches</td><td>68% (within 1 SD)</td></tr>
+    <tr><td>Percent from 58 to 70 inches</td><td>95% (within 2 SDs)</td></tr>
+    <tr><td>Percent taller than 67 inches</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>13.5</mn><mi>%</mi><mo>+</mo><mn>2.35</mn><mi>%</mi><mo>+</mo><mn>0.15</mn><mi>%</mi><mo>=</mo><mn>16</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">13.5\% + 2.35\% + 0.15\% = 16\%</annotation></semantics></math></td></tr>
+    <tr><td>Percentile of 67 inches</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>100</mn><mi>%</mi><mo>−</mo><mn>16</mn><mi>%</mi><mo>=</mo><mn>84</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">100\% - 16\% = 84\%</annotation></semantics></math>, the 84th percentile</td></tr>
+  </table>
+  <p><b>Changes:</b> a larger SD makes the curve wider and flatter. A different mean moves the curve left or right.</p>
+
+  <h3>Normal Calculations with a Z-Table</h3>
+  <p><b>The z-table gives the area to the left of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>.</b> That is the proportion of the data below <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>.</p>
+  <table class="info dense">
+    <colgroup><col style="width:4.1in"><col></colgroup>
+    <tr><th>Step</th><th>Example: heights</th></tr>
+    <tr><td>1. Draw the curve. Shade the part the question asks about.</td><td>Shorter than 68 inches: shade below 68.</td></tr>
+    <tr><td>2. Find each z-score: &nbsp;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mfrac><mrow><mi>x</mi><mo>−</mo><mi>μ</mi></mrow><mi>σ</mi></mfrac></mrow><annotation encoding="application/x-tex">z = \frac{x - \mu}{\sigma}</annotation></semantics></math>. Round to 2 decimal places.</td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mfrac><mrow><mn>68</mn><mo>−</mo><mn>64</mn></mrow><mn>3</mn></mfrac><mo>=</mo><mn>1.33</mn></mrow><annotation encoding="application/x-tex">z = \frac{68 - 64}{3} = 1.33</annotation></semantics></math></td></tr>
+    <tr><td>3. Look up each z-score in the table.</td><td>Row 1.3, column .03: .9082, so <b>90.82%</b></td></tr>
+    <tr><td>4. <b>Below:</b> use the table. <b>Above:</b> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>−</mo></mrow><annotation encoding="application/x-tex">1 -</annotation></semantics></math> table.<br><b>Between:</b> subtract the two table values.</td>
+      <td>Taller than 68: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>−</mo><mn>.9082</mn><mo>=</mo><mn>.0918</mn></mrow><annotation encoding="application/x-tex">1 - .9082 = .0918</annotation></semantics></math>, <b>9.18%</b><br>62 to 68: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mfrac><mrow><mn>62</mn><mo>−</mo><mn>64</mn></mrow><mn>3</mn></mfrac><mo>=</mo><mo form="prefix">−</mo><mn>0.67</mn></mrow><annotation encoding="application/x-tex">z = \frac{62 - 64}{3} = -0.67</annotation></semantics></math>, table .2514.<br><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>.9082</mn><mo>−</mo><mn>.2514</mn><mo>=</mo><mn>.6568</mn></mrow><annotation encoding="application/x-tex">.9082 - .2514 = .6568</annotation></semantics></math>, <b>65.68%</b></td></tr>
+  </table>
+
+  <h3>Normal Calculations in Reverse</h3>
+  <table class="info dense">
+    <colgroup><col style="width:3.9in"><col></colgroup>
+    <tr><th>Step</th><th>Example: heights, 90th percentile</th></tr>
+    <tr><td>1. Draw the curve. Shade the area to the <b>left</b>.</td><td>90% is to the left. The area is .9000.</td></tr>
+    <tr><td>2. Look <b>inside</b> the table for the area closest to it.</td><td>The closest area is .8997.</td></tr>
+    <tr><td>3. Read the z-score from the row and the column.</td><td>Row 1.2, column .08: &nbsp;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mn>1.28</mn></mrow><annotation encoding="application/x-tex">z = 1.28</annotation></semantics></math></td></tr>
+    <tr><td>4. Find the value: &nbsp;<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>μ</mi><mo>+</mo><mi>z</mi><mi>σ</mi></mrow><annotation encoding="application/x-tex">x = \mu + z\sigma</annotation></semantics></math></td><td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>64</mn><mo>+</mo><mn>1.28</mn><mo>×</mo><mn>3</mn><mo>=</mo><mn>67.84</mn></mrow><annotation encoding="application/x-tex">64 + 1.28 \times 3 = 67.84</annotation></semantics></math>, about <b>67.8 inches</b></td></tr>
+    <tr><td><b>Bottom</b> 10%: the area to the left is .10.</td><td>Closest area .1003, at <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mo form="prefix">−</mo><mn>1.28</mn></mrow><annotation encoding="application/x-tex">z = -1.28</annotation></semantics></math>.<br><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>64</mn><mo>+</mo><mrow><mo stretchy="false" form="prefix">(</mo><mo form="prefix">−</mo><mn>1.28</mn><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo stretchy="false" form="postfix">)</mo></mrow><mo>=</mo><mn>60.16</mn></mrow><annotation encoding="application/x-tex">64 + (-1.28)(3) = 60.16</annotation></semantics></math>, about <b>60.2 inches</b></td></tr>
+    <tr><td><b>Top</b> 10%: the area to the left is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>−</mo><mn>.10</mn><mo>=</mo><mn>.90</mn></mrow><annotation encoding="application/x-tex">1 - .10 = .90</annotation></semantics></math>.</td><td>Subtract from 1 <b>before</b> you look in the table.</td></tr>
+  </table>
+
+</section>
+</body>
+</html>

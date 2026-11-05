@@ -1,0 +1,97 @@
+<!--
+lesson: 7.3
+title: Expected Payoff
+unit: 7
+unit_title: Probability Distributions
+kind: Mini Lesson
+back: 7.3_Expected_Payoff
+-->
+  <p>Is a lottery ticket worth buying? Is a protection plan worth the money? The expected value of the <b>payoff</b> tells you what happens on average.</p>
+
+  <div class="keys">
+    <b>Net gain</b> $=$ what you win $-$ what you paid<br>
+    <b>Expected payoff</b>: let $X$ = the net gain. Then $E(X) = \Sigma\, x \cdot P(x)$.
+  </div>
+
+  <p><b>Example 1: a lottery ticket.</b> A ticket costs \$2. 1 in 1,000 tickets wins \$500. 1 in 50 tickets wins \$10. The rest win nothing.</p>
+
+  <table class="data">
+    <tr><th>Outcome</th><th>Net gain $x$</th><th>$P(x)$</th><th>$x \cdot P(x)$</th></tr>
+    <tr><td>Win \$500</td><td>$500 - 2 = 498$</td><td>0.001</td><td>0.498</td></tr>
+    <tr><td>Win \$10</td><td>$10 - 2 = 8$</td><td>0.02</td><td>0.16</td></tr>
+    <tr><td>Win nothing</td><td>$-2$</td><td>0.979</td><td>$-1.958$</td></tr>
+    <tr><td colspan="3" style="text-align:right">$E(X) = \Sigma\, x \cdot P(x)$</td><td>$-1.30$</td></tr>
+  </table>
+
+  <p>On average, a buyer <b>loses \$1.30</b> per ticket. The lottery keeps that money.</p>
+
+  <p><b>Example 2: a protection plan.</b> A phone costs \$300 to replace. The chance it breaks this year is 0.10.
+    A protection plan costs \$40 for the year.</p>
+
+  <table class="plain">
+    <tr><td>Expected cost with no plan:</td><td>$0.10 \cdot 300 = \$30$</td></tr>
+    <tr><td>Cost of the plan:</td><td>\$40</td></tr>
+  </table>
+
+  <p>On average, the plan costs \$10 more than paying for a broken phone yourself. That is how the company makes money.</p>
+
+  <p><b>But:</b> the plan protects you from a sudden \$300 bill. Expected value is one part of a decision. Risk is another part: could you pay the big bill if it came? If not, the plan might be worth it to you.</p>
+
+
+  {{practice-head}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">1.</b> A school sells 500 raffle tickets for \$5 each. One ticket wins \$1,000.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Fill in the table.
+          <table class="fill">
+            <tr><th>Outcome</th><th>Net gain $x$</th><th>$P(x)$</th><th>$x \cdot P(x)$</th></tr>
+            <tr style="height:.42in"><td>Win</td><td class="w">{{a}}995{{/a}}</td><td class="w">{{a}}$\frac{1}{500}${{/a}}</td><td class="w">{{a}}1.99{{/a}}</td></tr>
+            <tr style="height:.42in"><td>Lose</td><td class="w">{{a}}$-5${{/a}}</td><td class="w">{{a}}$\frac{499}{500}${{/a}}</td><td class="w">{{a}}$-4.99${{/a}}</td></tr>
+          </table></li>
+        <li>Find the expected payoff. What does it mean? &nbsp;{{a}}$1.99 - 4.99 = -\$3$. On average, a buyer loses \$3 per ticket.{{/a}}<div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> A game costs \$1 to play. The spinner has 4 equal parts. 2 parts win nothing. 1 part wins \$1. 1 part wins \$3.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Find the expected payoff.
+          <div class="h05">{{a}}Net gains: $-1$, 0, 2. &nbsp;$(-1)(0.5) + 0(0.25) + 2(0.25) = -0.5 + 0 + 0.5 = 0${{/a}}</div></li>
+        <li>Is the game fair? &nbsp;{{a}}Yes. The expected payoff is 0.{{/a}}<div class="h03"></div></li>
+      </ol>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">3.</b> At a carnival, you pay \$2 and draw one card from a deck. An ace wins \$10. A face card (J, Q, K) wins \$5. Anything else wins nothing.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Find the probability of each outcome. &nbsp;{{a}}Ace $\frac{4}{52}$, face card $\frac{12}{52}$, other $\frac{36}{52}${{/a}}<div class="h03"></div></li>
+        <li>Find the expected payoff. Should you expect to win money?
+          <div class="h05">{{a}}$8 \cdot \frac{4}{52} + 3 \cdot \frac{12}{52} + (-2) \cdot \frac{36}{52} = \frac{32 + 36 - 72}{52} = -\frac{4}{52} \approx -\$0.08$<br>No. You lose about 8 cents a game on average.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">4.</b> A laptop repair costs \$400. The chance a laptop needs repair in its first year is 0.15. A one-year warranty (a protection plan) costs \$75.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Find the expected repair cost without the warranty. &nbsp;{{a}}$0.15 \cdot 400 = \$60${{/a}}<div class="h03"></div></li>
+        <li>Which is cheaper on average: buying the warranty or not? &nbsp;{{a}}Not buying it (\$60 is less than \$75).{{/a}}<div class="h03"></div></li>
+        <li>Give a reason someone might still buy the warranty.
+          <div class="h03">{{a}}They could not afford a sudden \$400 bill. The warranty removes that risk.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">5.</b> The store sells 1,000 of these warranties. About how much money does the store expect to make? Explain.</div>
+    <div class="work h08">{{a}}It collects $1{,}000 \cdot 75 = \$75{,}000$. About 150 laptops need repair: $150 \cdot 400 = \$60{,}000$. It expects to make about \$15,000.{{/a}}</div>
+  </div>

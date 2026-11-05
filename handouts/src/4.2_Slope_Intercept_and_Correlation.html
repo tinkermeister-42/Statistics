@@ -1,0 +1,113 @@
+<!--
+lesson: 4.2
+title: Slope, Intercept, and Correlation
+unit: 4
+unit_title: Scatterplots
+kind: Mini Lesson
+back: 4.2_Slope_Intercept_and_Correlation
+-->
+  <p>A student measured a plant every week. The line of best fit is $\hat{y} = 2.5x + 4$.</p>
+
+  <div class="cols2">
+    {{fig Unit_4/4.2_plant w=3.05in}}
+    <div>
+      <table class="info">
+        <tr><td><b>Slope</b> (2.5): For each additional <u>week</u>, the predicted <u>height</u> increases by <b>2.5 cm</b>.</td></tr>
+        <tr><td><b>y-intercept</b> (4): When $x = 0$ (the day it was planted), the predicted height is <b>4 cm</b>.</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <p><b>Sentence frames</b></p>
+  <table class="plain">
+    <tr><td>Slope:</td><td>For each additional [$x$ unit], the predicted [$y$] increases (or decreases) by [slope and units].</td></tr>
+    <tr><td>Intercept:</td><td>When [$x$] is 0, the predicted [$y$] is [intercept and units].</td></tr>
+  </table>
+
+  <div class="box warn">
+    <div class="lbl">Gotcha</div>
+    Sometimes the intercept has no real meaning. If $x$ is a person's height, $x = 0$ is not possible.
+  </div>
+
+  <p><b>The correlation coefficient $r$</b> measures how strong a <b>linear</b> pattern is.</p>
+
+  {{fig Unit_4/4.2_r_examples}}
+
+  <table class="plain">
+    <tr><td>$r$ is always from $-1$ to $1$.</td><td></td></tr>
+    <tr><td><b>Sign</b> shows the direction:</td><td>$r > 0$ positive, &nbsp;$r < 0$ negative.</td></tr>
+    <tr><td><b>Size</b> shows the strength:</td><td>close to $1$ or $-1$ is strong. Close to $0$ is weak.</td></tr>
+    <tr><td>$r = {-0.8}$ is <b>stronger</b> than $r = 0.6$.</td><td>The sign only tells the direction.</td></tr>
+  </table>
+
+  <p><b>Correlation is not causation.</b> In summer, ice cream sales and sunburns both go up. They have a strong positive correlation.
+    Ice cream does not cause sunburns. Hot, sunny weather causes <b>both</b>. A hidden cause like this is called a <b>lurking variable</b>.</p>
+
+
+  {{practice-head}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">1.</b> The value of a used car is $\hat{y} = {-2.5}x + 30$, where $x$ is the age in years and $y$ is the value in thousands of dollars.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Explain the slope in context.
+          <div class="h05">{{a}}For each additional year of age, the predicted value decreases by \$2,500 (2.5 thousand dollars).{{/a}}</div></li>
+        <li>Explain the y-intercept in context.
+          <div class="h05">{{a}}When the car is new (0 years old), the predicted value is \$30,000.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> For adults, arm span can be predicted from height: $\hat{y} = 1.02x - 1.3$, where $x$ and $y$ are in inches.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Explain the slope in context.
+          <div class="h05">{{a}}For each additional inch of height, the predicted arm span increases by 1.02 inches.{{/a}}</div></li>
+        <li>Does the y-intercept have a real meaning here? Explain.
+          <div class="h05">{{a}}No. It says a person 0 inches tall has an arm span of $-1.3$ inches. No adult is 0 inches tall.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">3.</b> Match each $r$ to a scatterplot: &nbsp;&nbsp;$r = {-0.9}$, &nbsp;$r = 0.3$, &nbsp;$r = 0.85$, &nbsp;$r = {-0.4}$</div>
+    <div class="work">
+      {{fig Unit_4/4.2_match}}
+      <div class="h05">{{a}}P: $r = 0.85$. &nbsp;&nbsp;Q: $r = {-0.4}$. &nbsp;&nbsp;R: $r = 0.3$. &nbsp;&nbsp;S: $r = {-0.9}$.{{/a}}</div>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">4.</b> Is each statement true or false? Explain.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>$r = {-0.9}$ shows a weaker relationship than $r = 0.5$.
+          <div class="h05">{{a}}False. $-0.9$ is closer to $-1$, so it is stronger. The minus sign only means negative.{{/a}}</div></li>
+        <li>A scatterplot has $r = 1.3$.
+          <div class="h05">{{a}}False. $r$ is always from $-1$ to $1$.{{/a}}</div></li>
+        <li>$r = 0$ means there is no linear pattern.
+          <div class="h05">{{a}}True. (There could still be a curved pattern.){{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">5.</b> In a city, the number of fire trucks sent to a fire and the amount of damage have a strong positive correlation.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Do more fire trucks cause more damage? Explain.
+          <div class="h05">{{a}}No. Correlation does not prove cause.{{/a}}</div></li>
+        <li>What lurking variable could cause both?
+          <div class="h05">{{a}}The size of the fire. A big fire causes more damage and gets more trucks.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">6.</b> A study finds that students who eat breakfast have higher grades. A news story says, &ldquo;Eating breakfast raises your grades.&rdquo;
+      Is the news story right? Name a lurking variable that could explain the pattern.</div>
+    <div class="work h08">{{a}}Not proven. This only shows an association. Lurking variables: more sleep, a family routine, or more support at home could lead to both breakfast and better grades.{{/a}}</div>
+  </div>

@@ -1,0 +1,394 @@
+/* ==========================================================================
+   Guided Notes — shared print stylesheet
+   Used by every guided-notes handout in guided_notes/Unit_*/
+   Design rule: nothing depends on a printed background. Structure comes from
+   borders and weight, so the handout still reads when a browser prints with
+   "background graphics" turned off.
+   ========================================================================== */
+
+@page { size: letter; margin: 0.5in; }
+* { box-sizing: border-box; }
+
+:root {
+  --ink:   #111;
+  --key:   #c0192b;
+  --rule:  #9aa3ab;
+  --faint: #dde2e7;
+  --tint:  #f2f5f8;
+  --accent:#2c5f8a;
+  --warn:  #b45309;
+}
+
+body {
+  margin: 0;
+  background: #e9ecef;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 11.5pt;
+  line-height: 1.4;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+.sheet {
+  width: 7.5in;
+  margin: .35in auto;
+  padding: .3in .3in .35in;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,.18);
+}
+.pagebreak, .brk { page-break-before: always; }
+
+/* ---------- masthead & part headers ---------- */
+.masthead { border-bottom: 2.5px solid var(--ink); padding-bottom: 6px; margin-bottom: 10px; }
+.masthead h1 { font-size: 16pt; margin: 0 0 2px; }
+.masthead .sub { font-size: 9.5pt; color: #444; font-style: italic; }
+.idline { display: flex; gap: 14px; font-size: 10pt; margin-top: 8px; }
+.idline span { flex: 1; border-bottom: 1px solid var(--ink); }
+.idline span.small { flex: 0 0 1.3in; }
+
+.parthead {
+  font-size: 10pt; color: #333; margin: 0 0 8px; padding-bottom: 3px;
+  border-bottom: 2px solid var(--ink); display: flex; gap: 14px;
+}
+.parthead b { flex: 1; }
+.parthead .nm { flex: 0 0 2.6in; border-bottom: 1px solid var(--ink); font-size: 9.5pt; color: #666; }
+
+/* ---------- headings ---------- */
+h2 {
+  font-size: 11.5pt; margin: 15px 0 6px; padding: 3px 0 3px 9px;
+  border-left: 5px solid var(--ink); border-bottom: 1.5px solid var(--ink);
+  background: #eaeff4;
+}
+h2 .num { color: #555; font-weight: normal; margin-right: 7px; }
+h3 {
+  font-size: 10.5pt; margin: 13px 0 4px; color: var(--accent);
+  border-bottom: 1px solid var(--faint); padding-bottom: 2px;
+}
+
+p { margin: 4px 0; }
+ul, ol { margin: 4px 0 4px 20px; padding: 0; }
+li { margin: 2px 0; }
+i, em { color: #333; }
+
+/* ---------- fill-in blanks ---------- */
+.b    { display: inline-block; border-bottom: 1px solid var(--ink); min-width: 1.1in; }
+.b.s  { min-width: .5in; }
+.b.m  { min-width: 1.6in; }
+.b.l  { min-width: 2.4in; }
+.b.xl { min-width: 100%; }
+
+/* ---------- blocks ---------- */
+.keys {
+  background: var(--tint); border: 1px solid var(--faint); border-left: 4px solid var(--accent);
+  border-radius: 2px; padding: 6px 10px; margin: 6px 0 10px;
+}
+.keys ul { margin-left: 16px; }
+
+.box { border: 1px solid var(--rule); border-radius: 3px; padding: 6px 9px; margin: 8px 0; }
+.box > .lbl {
+  font-size: 8.5pt; text-transform: uppercase; letter-spacing: .06em;
+  font-family: Verdana, Geneva, sans-serif; color: #444; margin-bottom: 3px;
+}
+.box.tint { background: var(--tint); }
+.box.warn { border-color: var(--warn); border-left-width: 4px; background: #fffaf3; }
+.box.warn > .lbl { color: var(--warn); }
+
+/* End-of-lesson summary: sentences to complete from a word bank.  The bank
+   carries a couple of extra words so the last blanks are not free. */
+.wordbank {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 18px;
+  border: 1px dashed var(--rule); border-radius: 3px; padding: 4px 8px; margin: 4px 0 8px;
+  font-weight: bold;
+}
+.summary p { margin: 7px 0; }
+
+/* ---------- objectives & vocabulary ---------- */
+.obj li { list-style: none; margin-left: -20px; }
+.obj li::before {
+  content: ""; display: inline-block; width: 10px; height: 10px;
+  border: 1px solid var(--ink); margin-right: 8px;
+}
+table.vocab { width: 100%; border-collapse: collapse; margin-top: 4px; }
+table.vocab td { border: 1px solid var(--faint); padding: 5px 7px; vertical-align: top; }
+table.vocab td.term { width: 1.5in; font-weight: bold; background: var(--tint); }
+table.vocab td.def { height: .38in; }
+
+/* ---------- problems ---------- */
+.ex { border: 1px solid var(--rule); border-radius: 3px; margin: 8px 0; }
+.ex > .q { background: var(--tint); border-bottom: 1px solid var(--rule); padding: 4px 9px; }
+.ex > .q b.tag {
+  font-family: Verdana, Geneva, sans-serif; font-size: 9pt; color: var(--accent);
+  letter-spacing: .03em;
+}
+.ex > .work { padding: 5px 9px 7px; }
+
+/* A demoted example: same slot, but the student works it rather than watching.
+   Dashed edge + a small pill, so it reads as different without adding a box. */
+.ex.yours { border-style: dashed; }
+.ex.yours > .q { background: #fff; }
+.yt {
+  float: right; margin-left: 8px;
+  font-family: Verdana, Geneva, sans-serif; font-size: 7.5pt;
+  letter-spacing: .06em; text-transform: uppercase; color: var(--accent);
+  border: 1px solid var(--accent); border-radius: 2px; padding: 0 4px;
+}
+
+/* Where a two-day lesson divides.  Day 2 starts on a fresh sheet so the
+   handout can be given out in halves. */
+.daybreak {
+  display: flex; align-items: center; gap: 9px; margin: 15px 0 11px;
+  font-family: Verdana, Geneva, sans-serif; font-size: 8.5pt;
+  text-transform: uppercase; letter-spacing: .08em; color: var(--accent);
+  page-break-before: always;
+}
+.daybreak::before, .daybreak::after {
+  content: ""; flex: 1; border-top: 2px dashed var(--rule);
+}
+.h05 { min-height: .5in; }  .h08 { min-height: .8in; }  .h1  { min-height: 1in; }
+.h13 { min-height: 1.3in; } .h16 { min-height: 1.6in; } .h2  { min-height: 2in; }
+.h25 { min-height: 2.5in; }
+
+.ans { margin-top: 5px; font-size: 10pt; }
+.ruled { border-bottom: 1px solid var(--faint); height: .32in; }
+
+/* ---------- graphics (as <img> so they always print) ---------- */
+img.nl   { display: block; width: 100%; height: auto; margin: 3px 0 2px; }
+img.grid { display: block; width: 2.9in; height: auto; margin: 4px auto; }
+img.grid.sm  { width: 2.3in; }
+img.grid.lg  { width: 3.6in; }
+img.fig  { display: block; max-width: 100%; height: auto; margin: 4px 0; }
+
+/* A story figure sitting beside its question: the pizzas in 1.5, the stairs in
+   4.2.  Capped so a picture never pushes the writing space off the page. */
+.figrow { display: flex; gap: 16px; align-items: flex-start; margin: 4px 0 2px; }
+.figrow img { display: block; height: auto; max-width: 100%; }
+.figrow figure { margin: 0; text-align: center; }
+.figrow figcaption { font-size: 8.5pt; color: #555; margin-top: 1px; }
+.fig-s img { max-height: 1.05in; }
+.fig-m img { max-height: 1.6in; }
+/* Multi-panel figures students have to read: size by width, and by shape, so a
+   square 2x2 panel does not swallow the page. */
+.fig-w  { display: block; }
+.fig-w  img { width: 100%; max-width: 5.4in; max-height: none; margin: 3px auto; }
+.fig-sq { display: block; }
+.fig-sq img { width: 100%; max-width: 3.3in; max-height: none; margin: 3px auto; }
+
+/* ---------- layout helpers ---------- */
+.cols2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 22px; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0 18px; }
+.cols4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 0 14px; }
+
+/* a small table students fill in (input/output, x/y, t-charts) */
+table.fill { border-collapse: collapse; margin: 5px 0; }
+table.fill td, table.fill th {
+  border: 1px solid var(--ink); padding: 4px 10px; min-width: .62in; height: .3in;
+  text-align: center;
+}
+table.fill th { background: var(--tint); font-size: 10pt; }
+
+/* worked-steps scaffold: left column for the step, right for the reason */
+table.steps { width: 100%; border-collapse: collapse; margin: 4px 0; }
+table.steps td { border: 1px solid var(--faint); padding: 5px 8px; height: .34in; }
+table.steps td.why { width: 2.6in; color: #555; font-size: 10pt; }
+table.steps th {
+  border: 1px solid var(--faint); background: var(--tint); font-size: 9pt; padding: 3px 8px;
+  font-family: Verdana, Geneva, sans-serif; font-weight: normal; color: #444;
+}
+
+/* ---------- pagination ---------- */
+.ex, .keys, .box, .masthead, .parthead, table.vocab tr, table.fill, table.steps {
+  page-break-inside: avoid;
+}
+h2, h3, .parthead { page-break-after: avoid; }
+
+@media print {
+  body { background: #fff; font-size: 11pt; }
+  .sheet { width: auto; margin: 0; padding: 0; box-shadow: none; }
+}
+
+/* ==========================================================================
+   Math notation — plain HTML/CSS, no MathJax.
+   Handouts must render identically offline and on a school printer, so the
+   notation is built from borders and vertical-align rather than a JS library.
+   ========================================================================== */
+
+/* variables and expressions */
+var, .v { font-family: "Times New Roman", Georgia, serif; font-style: italic; }
+
+/* stacked fraction:  <span class="f"><b>3</b><b>4</b></span>  */
+.f {
+  display: inline-block; vertical-align: -0.62em; text-align: center;
+  margin: 0 .14em; line-height: 1.15;
+}
+.f > b { display: block; font-weight: inherit; padding: 0 .3em; }
+.f > b:first-child { border-bottom: 1.2px solid currentColor; }
+.f.sm { font-size: .88em; }
+
+/* mixed number:  2 <span class="f">…</span>  needs no extra markup */
+
+/* square root:  <span class="sqrt">25</span>  */
+.sqrt::before { content: "\221A"; }
+.sqrt { border-top: 1.1px solid currentColor; padding: 0 .18em 0 .06em; margin-left: .05em; }
+.sqrt::before { position: relative; left: -.18em; top: .04em; border-top: none; }
+
+/* repeating decimal bar:  0.<span class="rep">3</span>  */
+.rep { border-top: 1.2px solid currentColor; padding: 0 .05em; }
+
+/* long-division / vertical work space */
+.tallbox { border: 1px solid var(--faint); border-radius: 2px; min-height: 1in; margin: 4px 0; }
+
+/* a system of equations:  <div class="sys"><span>…</span><span>…</span></div> */
+.sys {
+  display: inline-block; border-left: 2px solid var(--ink);
+  padding: 1px 0 1px 8px; margin: 3px 0;
+}
+.sys > span { display: block; line-height: 1.5; }
+
+/* area model ("box method") grid the student fills in */
+table.area { border-collapse: collapse; margin: 5px 0; }
+table.area td, table.area th {
+  border: 1px solid var(--ink); height: .42in; min-width: .95in; text-align: center;
+  padding: 3px 6px;
+}
+table.area td.hdr, table.area th { background: var(--tint); font-weight: bold; }
+table.area td.corner { border: none; background: transparent; }
+
+/* link back to the lesson — on screen only, never on the printed handout */
+.backlink {
+  float: right; font-family: Verdana, Geneva, sans-serif; font-size: 8.5pt;
+  color: var(--accent); text-decoration: none;
+}
+.backlink:hover { text-decoration: underline; }
+@media print { .backlink { display: none; } }
+
+/* ---- teacher key --------------------------------------------------------
+   Answers are dropped from the student handout by the builder; here they are
+   what makes the key a key.  Colour is the signal, weight is the fallback so
+   the key still reads on a black-and-white printer. */
+.ans-key { color: var(--key); font-weight: 600; }
+div.ans-key { margin: 2px 0; }
+/* an answer sitting on a fill-in blank */
+.b > .ans-key, .b .ans-key { padding: 0 3px; font-weight: 600; }
+/* answers inside the step/fill tables and work areas */
+.steps .ans-key, .fill .ans-key, .area .ans-key { font-weight: 600; }
+.ans-key var { color: inherit; }
+
+.keybadge {
+  margin-top: 6px; padding: 2px 8px; display: inline-block;
+  font-family: Verdana, Geneva, sans-serif; font-size: 8.5pt;
+  text-transform: uppercase; letter-spacing: .06em;
+  color: var(--key); border: 1.5px solid var(--key); border-radius: 3px;
+}
+
+@media print {
+  /* keep the red when the browser is asked to print backgrounds/colours */
+  .ans-key, .keybadge { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+
+/* ==========================================================================
+   DHS Statistics additions.  The rules above are the Algebra 1 guided notes
+   stylesheet unchanged, so the two books print the same way.
+   ========================================================================== */
+
+/* Math is MathML, written as TeX in the fragment and converted by pandoc at
+   build time.  Native in every current browser, no JavaScript, prints sharp. */
+/* Gelasio ships with the handouts (SIL Open Font License, beside it in
+   assets/).  It is drawn to Georgia's measurements, so the sheets look like
+   the Algebra 1 notes, and every computer breaks the pages in the same places:
+   a sheet checked here prints the same at school. */
+@font-face { font-family: "Gelasio"; font-weight: 400; font-style: normal; src: url("Gelasio-Regular.woff2") format("woff2"); }
+@font-face { font-family: "Gelasio"; font-weight: 400; font-style: italic; src: url("Gelasio-Italic.woff2") format("woff2"); }
+@font-face { font-family: "Gelasio"; font-weight: 600; font-style: normal; src: url("Gelasio-SemiBold.woff2") format("woff2"); }
+@font-face { font-family: "Gelasio"; font-weight: 600; font-style: italic; src: url("Gelasio-SemiBoldItalic.woff2") format("woff2"); }
+@font-face { font-family: "Gelasio"; font-weight: 700; font-style: normal; src: url("Gelasio-Bold.woff2") format("woff2"); }
+@font-face { font-family: "Gelasio"; font-weight: 700; font-style: italic; src: url("Gelasio-BoldItalic.woff2") format("woff2"); }
+body { font-family: Gelasio, Georgia, "Times New Roman", serif; }
+/* bold inside a key answer (a pick, a final result) still stands out */
+.ans-key b, .ans-key strong { font-weight: 900; text-decoration: underline; text-decoration-thickness: 1px; }
+
+/* Latin Modern Math ships with the handouts (GUST Font License, beside it in
+   assets/), so every computer lays out fractions, roots and exponents the
+   same way, in the face LaTeX uses. */
+@font-face {
+  font-family: "Latin Modern Math";
+  src: url("latinmodern-math.woff") format("woff");
+}
+math { font-family: "Latin Modern Math", math; font-size: 1.12em; }
+/* words inside a formula (\text{...}) in the body face, not the math font */
+mtext { font-family: Gelasio, Georgia, serif; }
+/* answers print fractions full size, as the LaTeX keys did with \dfrac */
+.ans-key math { math-style: normal; }
+math[display="block"] { margin: 4px 0; }
+
+.partner { margin: 2px 0 8px; font-style: italic; }
+
+/* a centered figure; natural size, never wider than the page */
+img.fig { margin: 6px auto; }
+img.fig.left { margin: 4px 0; }
+.figrow.c { justify-content: center; }
+
+/* bordered table of words and examples (notes, summaries) */
+table.info { width: 100%; border-collapse: collapse; margin: 5px 0 8px; }
+table.info th, table.info td {
+  border: 1px solid var(--rule); padding: 4px 7px; vertical-align: top; text-align: left;
+}
+table.info th { background: var(--tint); font-weight: bold; }
+table.info td.c, table.info th.c { text-align: center; }
+table.info.fit { width: auto; }
+/* a table with no rules: step lists, labelled data lines */
+table.plain { border-collapse: collapse; margin: 3px 0; }
+table.plain td { padding: 2px 10px 2px 0; vertical-align: top; }
+/* a small centered data table */
+table.data { border-collapse: collapse; margin: 5px auto; }
+table.data th, table.data td { border: 1px solid var(--ink); padding: 3px 10px; text-align: center; }
+table.data th { background: var(--tint); }
+table.data.left { margin-left: 0; }
+/* fill-in cells sized for answers */
+table.fill td.w { min-width: 1.1in; }
+table.fill td.wl { min-width: 2in; text-align: left; }
+
+/* multiple choice: A to D down the page, the answer circled on the key */
+.opt { display: inline-block; min-width: 1.4em; text-align: center; padding: 0 3px; }
+.opt.circ { border: 1.6px solid var(--key); border-radius: 1em; color: var(--key); font-weight: 600; }
+table.choices { border-collapse: collapse; margin: 3px 0 3px 2px; }
+table.choices td { padding: 1px 6px 1px 0; vertical-align: top; line-height: 1.3; }
+table.choices td:first-child { width: 2em; }
+
+/* tally marks: plain strokes, as lesson 1.1 teaches them */
+.tally { letter-spacing: .18em; font-family: "Times New Roman", serif; font-weight: 600; }
+
+/* an unordered list of problem parts, labelled (a), (b), ... */
+ol.parts { list-style: none; counter-reset: part; margin-left: 4px; }
+ol.parts > li { counter-increment: part; position: relative; padding-left: 2em; margin: 6px 0; }
+ol.parts > li::before { content: "(" counter(part, lower-alpha) ")"; position: absolute; left: 0; }
+
+/* a numbered problem in the practice set */
+.prob { margin: 10px 0 6px; page-break-inside: avoid; }
+.prob > .pn { font-weight: bold; margin-right: 4px; }
+.prob.split { page-break-inside: auto; }
+/* A problem split into parts may break between parts (each part stays whole,
+   and the stem stays with the first part), the rule the Algebra quizzes use. */
+.ex.split { page-break-inside: auto; }
+.ex.split > .q { break-after: avoid; }
+ol.parts > li { page-break-inside: avoid; }
+
+/* "I ..." goal heading a review problem */
+.goal { font-weight: bold; margin: 2px 0 4px; }
+/* lesson header inside a review: 5.3 - Experiments */
+.lessonhead { font-size: 12pt; font-weight: bold; margin: 14px 0 6px; padding-bottom: 2px;
+  border-bottom: 1.5px solid var(--ink); page-break-after: avoid; }
+
+/* the key's "also accept" note */
+.also { display: block; font-size: 9.5pt; font-weight: normal; color: var(--key); }
+/* stats fill-in tables run 6 or 7 rows; a slightly shorter row keeps a
+   problem with two of them on one page */
+table.fill td, table.fill th { height: .27in; padding: 2px 10px; }
+/* more work-space heights (inches), for the LaTeX \work{} sizes */
+.h03 { min-height: .3in; } .h3 { min-height: 3in; } .h4 { min-height: 4in; }
+/* a summary's tables: tighter, as the LaTeX summaries set them, so a unit's
+   tools fit on two pages */
+table.info.dense { font-size: 10pt; line-height: 1.2; margin: 3px 0 5px; }
+table.info.dense th, table.info.dense td { padding: 1.5px 6px; }
+/* a boxed number (the median picked out of a sorted list), LaTeX's \fbox */
+.fbox { border: 1px solid currentColor; padding: 0 2px; }

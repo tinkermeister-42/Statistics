@@ -1,0 +1,101 @@
+<!--
+lesson: 5.2
+title: Sampling Methods
+unit: 5
+unit_title: Study Design
+kind: Mini Lesson
+back: 5.2_Sampling_Methods
+-->
+  <p>A school has 1,200 students. The principal wants to ask 60 of them about the new schedule.
+    How should she choose the 60? The best methods use <b>chance</b> to pick, so no group is favored.</p>
+
+  <table class="info">
+    <tr><th>Method</th><th>How it works</th><th>Example (60 of 1,200)</th></tr>
+    <tr><td><b>Simple random sample (SRS)</b></td><td>Every group of the same size has the same chance of being chosen. Like drawing names from a hat.</td><td>Number the students 1 to 1,200. A random number generator picks 60 numbers.</td></tr>
+    <tr><td><b>Stratified</b></td><td>Split the population into groups (<b>strata</b>). People in the same group are alike in some way. Take a random sample from <b>each</b> group.</td><td>Randomly pick 15 students from each grade: 9th, 10th, 11th, 12th.</td></tr>
+    <tr><td><b>Cluster</b></td><td>Split the population into groups (<b>clusters</b>). Randomly pick some <b>whole</b> groups.</td><td>Randomly pick 3 homerooms. Ask everyone in them.</td></tr>
+    <tr><td><b>Systematic</b></td><td>Pick a random start. Then take every $k$th person. $k$ is the population size divided by the sample size.</td><td>Start at a random student between 1 and 20. Then take every 20th student on the list.</td></tr>
+    <tr><td><b>Convenience</b> (bad)</td><td>Take whoever is easy to reach.</td><td>Ask the first 60 students who walk in the door.</td></tr>
+  </table>
+
+  <p><b>Stratified or cluster?</b> &nbsp;Stratified: a <b>few</b> from <b>every</b> group. &nbsp;Cluster: <b>everyone</b> from a <b>few</b> groups.</p>
+
+  <p><b>Using a random digit table.</b> Each digit is random. Read the digits in pairs for 2-digit numbers.</p>
+
+  <table class="data">
+    <tr><td>Row 1</td><td><code><b>52601 81590 83016 61318 60913 90996 03082 46281</b></code></td></tr>
+    <tr><td>Row 2</td><td><code><b>94821 99351 81909 37865 79754 32319 48757 49118</b></code></td></tr>
+    <tr><td>Row 3</td><td><code><b>62527 60189 55597 97114 71049 74650 75291 70342</b></code></td></tr>
+  </table>
+
+  <p><b>Example:</b> Choose 3 of 25 students, numbered 01 to 25. Use row 1.</p>
+  <p>Pairs: <code><b>52 60 <u>18</u> <u>15</u> 90 83 <u>01</u></b></code> &hellip;</p>
+  <p>Skip numbers over 25 and skip repeats. The sample is students <b>18, 15, and 01</b>.</p>
+
+  <div class="box tint">
+    <div class="lbl">Why random?</div>
+    Chance does not pick favorites. A random sample is not biased toward any group.
+  </div>
+
+
+  {{practice-head}}
+
+  <div class="ex split">
+    <div class="q"><b class="tag">1.</b> Name the sampling method.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>A store gives a survey to every 10th customer, starting with a randomly chosen customer from the first 10.
+          <div class="h03">{{a}}Systematic{{/a}}</div></li>
+        <li>A city randomly picks 5 of its 40 neighborhoods and surveys every home in those 5.
+          <div class="h03">{{a}}Cluster{{/a}}</div></li>
+        <li>A teacher puts all 28 names in a hat and draws 6.
+          <div class="h03">{{a}}Simple random sample{{/a}}</div></li>
+        <li>A college randomly picks 50 first-year, 50 second-year, 50 third-year, and 50 fourth-year students.
+          <div class="h03">{{a}}Stratified (the strata are the years){{/a}}</div></li>
+        <li>A reporter asks people walking past a coffee shop.
+          <div class="h03">{{a}}Convenience{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">2.</b> A class has 30 students, numbered 01 to 30. Use <b>row 3</b> of the random digit table on page 1 to choose 4 students.</div>
+    <div class="work h05">{{a}}Pairs: 62 52 76 <b>01</b> 89 55 59 79 71 <b>14</b> 71 <b>04</b> 97 46 50 75 <b>29</b>. &nbsp;The sample is 01, 14, 04, 29.{{/a}}</div>
+  </div>
+
+  {{break}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">3.</b> A school wants to survey 100 of its 1,000 students about sports. About half of the students play a sport.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Describe how to take a stratified sample.
+          <div class="h05">{{a}}Split the students into athletes and non-athletes. Randomly choose 50 from each group.{{/a}}</div></li>
+        <li>Why might a stratified sample be better than an SRS here?
+          <div class="h05">{{a}}It makes sure both groups are in the sample in the right numbers. An SRS could, by chance, pick too many athletes.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">4.</b> A farmer has 50 rows of corn. She wants to check 500 plants for insects. She randomly picks 5 rows and checks every plant in them.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>What method is this? &nbsp;{{a}}Cluster{{/a}}</li>
+        <li>Why would a farmer choose this method?
+          <div class="h03">{{a}}It is quicker. She only walks 5 rows instead of searching the whole field.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">5.</b> Maya wants to know how students feel about school lunch. She surveys the first 40 students in the lunch line.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>What method is this? What is the problem?
+          <div class="h05">{{a}}Convenience. Students who skip lunch or come late are left out, so the results are biased.{{/a}}</div></li>
+        <li>Describe a better way for Maya to choose 40 students.
+          <div class="h05">{{a}}Get a list of all students. Use a random number generator to pick 40 names (an SRS).{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>

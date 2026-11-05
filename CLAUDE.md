@@ -13,8 +13,19 @@ callouts, glossary and headings extensions. Less depth: a mini lesson is
 notes, a worked example or two, one You Try, and the practice set.
 
 ## Build & Deploy
-- **Handouts:** `./build.sh [1.3 ...]` builds `handouts/Unit_X/<name>.pdf` and
-  `<name>_KEY.pdf` from one `.tex` (pdflatex, TikZ). Commit the PDFs
+- **Handouts are HTML pages that print,** in the style of the Algebra 1
+  book's guided notes. Each sheet is a fragment, `handouts/src/<name>.html`;
+  `./build.sh [1.3 ...]` runs `scripts/build-handouts.py`, which writes
+  `handouts/Unit_X/<name>.html` and, when the sheet has answers,
+  `<name>_KEY.html`. Commit both. The fragment conventions are in the
+  builder's docstring. The teacher prints from the browser (Letter)
+- **Check a printout before calling it done.** Print it the way Chrome does
+  (Playwright `page.pdf`, Letter, 0.5in margins) and compare its page count
+  with what the sheet had; the key must break on the same pages as the
+  student copy. The font ships with the sheets (Gelasio, drawn to Georgia's
+  measurements; Latin Modern Math), so a check here matches every computer
+- **Quizzes and tests stay LaTeX:** `./build.sh UnitX_Quiz` builds
+  `assessments/Unit_X/<name>.pdf` and `_KEY.pdf` (pdflatex, TikZ). Commit the PDFs
 - **Web figures:** `scripts/make-figures.sh [1.3 ...]` turns
   `figures/Unit_X/<name>.tex` into `images/Unit_X/<name>.svg`. Shared macros
   are in `figures/preamble.tex`
@@ -41,7 +52,10 @@ notes, a worked example or two, one You Try, and the practice set.
 ## Structure
 ```
 chapters/Unit_1…7/     # Lessons: #.#_Topic.qmd, index.qmd
-handouts/Unit_1…7/     # Printable mini lessons: .tex source, student + _KEY PDFs
+handouts/src/          # Printable sheets (lessons, reviews, summaries, z-table): HTML fragments
+handouts/Unit_1…7/     # Built from src: <name>.html + <name>_KEY.html (committed)
+handouts/assets/       # handouts.css (the Algebra notes stylesheet + stats additions), fonts
+handouts/preamble.tex  # LaTeX preamble the quizzes still use
 assessments/Unit_1…7/  # Unit quizzes: .tex source, student + _KEY PDFs (unlisted)
 figures/Unit_1…7/      # TikZ sources for web figures -> images/Unit_X/*.svg
 projects/              # Teacher's finished activity files (PDF, xlsx), served as is, unlisted
@@ -53,23 +67,23 @@ glossary.qmd           # Source -> glossary.json on render
 
 ## Lesson Page Pattern
 Title, a concrete hook, `.objectives`, `.vocab`, a `.guided-notes-link` to
-the student PDF, `{{< learn >}}` with numbered `### #.#.# -` sections, then
+the student handout, `{{< learn >}}` with numbered `### #.#.# -` sections, then
 `{{< practice >}}` restating the handout problems. Callouts are the Algebra 1
 set (`.remember`, `.you-try`, `.you-try-m` + `.answer`, `.think`, `.gotcha`,
 `.note`, `.real-world`).
 
 - **Lesson, handout and figures are one change.** The page restates the
   handout's notes and problems. Edit both together
-- **One figure source from 1.4 on.** Handouts start with
-  `\input{../preamble}` (`handouts/preamble.tex`: `\lessontitle`, `\ans`,
-  `\work`, `\partner`) and pull shared figures with
-  `\fig{Unit_X/<name>}`, the same `figures/` file the web page uses as an
-  SVG. Only handout-only drawings (blank axes for students, answers drawn in
-  red on the key) live in the handout. 1.1 to 1.3 predate this and draw
-  their own copies
+- **One figure source.** A handout shows the same SVG as the web page:
+  `{{fig Unit_X/<name>}}` in the fragment, printed at the size LaTeX drew it.
+  A drawing only a handout uses (a blank axis, a graph whose answer the key
+  draws in red) is its own `figures/Unit_X/<sheet>_<what>.tex` that inputs
+  `../keyed` and wraps the answer in `\ifkey ... \fi`; `make-figures.sh`
+  then also writes `<name>_KEY.svg`, which the key copy uses by itself
 - **Preambles touch everything.** Changing `figures/preamble.tex` or
-  `handouts/preamble.tex` makes every handout that uses them stale, and the
-  deploy check will say so: rebuild with `./build.sh 1.4 2. 3.` (and so on)
+  `handouts/preamble.tex` makes every figure or quiz that uses them stale, and
+  the deploy check will say so: rebuild with `scripts/make-figures.sh` and
+  `./build.sh Unit` (every quiz)
 - **Khan Academy links:** `{{< khan 2.1 2.2 >}}` goes under the printable
   link on each lesson page; `{{< khanlink 2.3 "3" >}}` is used in the course
   map. Keys are Khan's own `<unit>.<lesson>`; the list is in
@@ -78,30 +92,34 @@ set (`.remember`, `.you-try`, `.you-try-m` + `.answer`, `.think`, `.gotcha`,
 - **Figure macros** (`figures/preamble.tex`): `\dotplot`, `\dotsat`,
   `\shapehist`, `\axis`, `\bplotat`, `\outlier`, `\bellcurve`,
   `\shadez`, `\zaxis`, `\venn`, `\grid`, `\pts`, `\tree` (two-stage
-  probability tree, 14 arguments), `\probbars`. Handouts can call them
+  probability tree, 14 arguments), `\probbars`. Quizzes can call them
   directly, with `\ans{}` in the blanks a student fills in
-- **Key answers print fractions full size:** `\ans` makes `\frac` act as
-  `\dfrac`. Give a table that holds key fractions an `\arraystretch` of
-  about 2.3 so they clear the rules
+- **Key answers print fractions full size:** math inside an answer is
+  display style (the stylesheet; `\ans` does the same in the quizzes). A key
+  fraction is taller than a line, so give the space it lands in room on both
+  copies (a work area, or `<tr style="height:.4in">` in a fill-in table), or
+  the key grows and stops lining up. In the quizzes, give a table that holds
+  key fractions an `\arraystretch` of about 2.3
 - **Unit intro topic lists** end each link line with a backslash (a hard
   line break). Trailing double spaces get stripped by editors
-- **Z-table:** `handouts/Unit_2/Z_Table.tex` (generated from the normal CDF,
+- **Z-table:** `handouts/src/Z_Table.html` (generated from the normal CDF,
   area to the left, 4 decimals) is linked from 2.5 and 2.6 with a second
   `.guided-notes-link`. Answers in those lessons use the table's rounded
   values, and a reverse lookup takes the closest area in the table
-- **Keys are unlisted.** `<name>_KEY.pdf` is served beside the student PDF
+- **Keys are unlisted.** `<name>_KEY.html` is served beside the student copy
   but nothing links to it. The URL is predictable on purpose so it can be
   shared with colleagues. Practice answers are not printed on the page, so a
   You Try or worked example never reuses a practice problem's numbers or
   scenario
-- **A key answers the paper in the space provided.** Answers go inline with
-  `\ans{...}` in the handout `.tex`; drawn answers (dot plots, box plots,
-  histograms) are drawn in red inside `\ifkey ... \fi`. The key keeps the
-  student copy's page count and page breaks. Give the student copy real room
-  to write (`\work{}`, or `itemsep=\ifkey 1em\else 5em\fi`)
-- **Handouts are ragged right with hyphenation off** (`handouts/preamble.tex`;
-  1.1 to 1.3 set it in their own preambles). A minipage or `p{}` column is
-  justified again unless it gets its own `\raggedright`
+- **A key answers the paper in the space provided.** In a fragment an answer
+  is `{{a}}...{{/a}}`, placed in the work area (`.work` with a height class
+  `h03` to `h4`), blank (`.b`) or table cell the student writes in; drawn
+  answers are `_KEY.svg` figures. The work area keeps its height on both
+  copies, so the key keeps the student copy's page count and page breaks.
+  Give the student copy real room to write
+- **Math in a fragment is TeX in `$...$`,** as on the lesson pages; pandoc
+  turns it into MathML at build time (no JavaScript). A dollar sign in prose
+  is `\$`. Never put `{{a}}` inside math: put the math inside the answer
 - **Quartiles follow Khan:** with an odd count the median is left out of both
   halves
 - **Money in prose is math:** write `$\$84{,}000$`, as the Algebra book does.
@@ -122,7 +140,7 @@ set (`.remember`, `.you-try`, `.you-try-m` + `.answer`, `.think`, `.gotcha`,
 
 ## Unit Reviews and Quizzes
 - **Review page:** `chapters/Unit_X/Review.qmd` after the last lesson, handout
-  `handouts/Unit_X/Unit_X_Review.tex`, figures `figures/Unit_X/Review_*.tex`.
+  `handouts/src/Unit_X_Review.html`, figures `figures/Unit_X/Review_*.tex`.
   Learn Together walks one small data set through every lesson's tool; the
   practice mirrors the quiz question for question (same "I ..." goals, 2-3x
   the parts), then ends with test-style multiple choice in EOC wording
@@ -130,14 +148,16 @@ set (`.remember`, `.you-try`, `.you-try-m` + `.answer`, `.think`, `.gotcha`,
   section per lesson, each question headed by its "I ..." goal. Built by
   `./build.sh UnitX_Quiz`; it inputs `../../handouts/preamble`. Served at
   `/assessments/Unit_X/UnitX_Quiz.pdf` and `_KEY.pdf`, linked from nowhere
-- **Teacher bookmark:** `/assessments/index.html` lists every quiz, review and
-  lesson handout with its key. `scripts/build-assessments-index.py` writes it
+- **Teacher bookmark:** `/assessments/index.html` lists every quiz, review,
+  summary and lesson handout with its key, and the projects. `scripts/build-assessments-index.py` writes it
   (`./build.sh` runs it at the end); it is unlisted like the keys
 - **A quiz key lines up page for page.** Answers sit in fixed-height `\abox`
-  space, so the key never moves anything; a handout key still shrinks `\work`
+  space, so the key never moves anything; a handout key does the same with
+  its work areas
 - **Summary page:** `chapters/Unit_X/Summary.qmd`, between the last lesson
   and the review, with the same tables as a one- or two-page printable,
-  `handouts/Unit_X/Unit_X_Summary.tex` (linked from the page). Every tool
+  `handouts/src/Unit_X_Summary.html` (linked from the page; tables
+  `class="info dense"`; no answers, so no key). Every tool
   the unit teaches, in the lessons' own words, notation and examples; nothing
   new. A lesson edit that changes a rule, formula or example the summary shows
   changes the summary too
@@ -150,8 +170,8 @@ set (`.remember`, `.you-try`, `.you-try-m` + `.answer`, `.think`, `.gotcha`,
   that holds a full solution students must not see, stays out of the repo
   (git history keeps it even after a delete)
 - **Fresh clone mtimes:** checkout writes files in no useful order, so
-  `check-site-assets.py` calls every committed PDF and SVG stale. They are
-  not: `git ls-files 'handouts/*.pdf' 'assessments/*.pdf' 'images/*.svg' | xargs touch`
+  `check-site-assets.py` can call committed files stale. They are not:
+  `git ls-files 'handouts/Unit_*/*.html' 'assessments/*.pdf' 'images/*.svg' | xargs touch`
 
 ## Branches
 

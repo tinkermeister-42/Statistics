@@ -1,0 +1,349 @@
+<!--
+title: Unit 4 Review
+unit: 4
+unit_title: Scatterplots
+kind: Unit Review
+back: Review
+backword: review
+-->
+  <p><b>One data set, every tool.</b> 8 candles of the same kind burned for different numbers of hours. Then each candle was measured.</p>
+
+  <table class="data">
+    <tr><td>Hours burned ($x$)</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr>
+    <tr><td>Height in cm ($y$)</td><td>23</td><td>19</td><td>18</td><td>17</td><td>13</td><td>13</td><td>9</td><td>8</td></tr>
+  </table>
+
+  <table class="info">
+    <colgroup><col style="width:1.8in"><col></colgroup>
+    <tr>
+      <td><p><b>4.1 Describe and fit.</b></p>
+        <p>Direction, form, strength.<br>A line of best fit goes through the middle of the dots.</p></td>
+      <td>
+        <div class="cols2">
+          {{fig Unit_4/Review_candles left}}
+          <div>
+            <p>Negative, linear, strong.</p>
+            <p>Two points on the line:<br>$(2, 20)$ and $(7, 10)$.</p>
+            <p>$m = \dfrac{10 - 20}{7 - 2} = \dfrac{-10}{5} = {-2}$</p>
+            <p>$20 = {-2}(2) + b$, &nbsp;so $b = 24$</p>
+            <p>$\hat{y} = {-2}x + 24$</p>
+          </div>
+        </div>
+        <p>Predict for 4.5 hours: &nbsp;$\hat{y} = {-2}(4.5) + 24 = 15$ cm</p>
+        <p>Predict for 15 hours: &nbsp;$\hat{y} = {-2}(15) + 24 = {-6}$ cm. A height cannot be negative. The data only goes from 1 to 8 hours. This is <b>extrapolation</b>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><p><b>4.2 Explain the line.</b></p>
+        <p>Slope: for each additional [$x$ unit], the predicted [$y$] changes by the slope.<br>$r$ is from $-1$ to $1$.</p></td>
+      <td>
+        <p><b>Slope</b> ($-2$): For each additional hour, the predicted height decreases by 2 cm.</p>
+        <p><b>y-intercept</b> (24): When $x = 0$ (a new candle), the predicted height is 24 cm.</p>
+        <p><b>$r$</b>: The dots are close to a line that goes down. $r$ is close to $-1$ ($r \approx {-0.98}$).</p>
+      </td>
+    </tr>
+    <tr>
+      <td><p><b>4.3 Find a residual.</b></p>
+        <p>residual<br>$=$ actual $-$ predicted<br>$= y - \hat{y}$<br>Positive: above the line.<br>Negative: below the line.</p></td>
+      <td>
+        <p>The candle that burned 4 hours is 17 cm. &nbsp;$\hat{y} = {-2}(4) + 24 = 16$ cm</p>
+        <p>Residual $= 17 - 16 = 1$. It is positive, so the dot is <b>above</b> the line. The candle is 1 cm taller than predicted.</p>
+        <p>The <b>least-squares line</b> makes $\Sigma(y - \hat{y})^2$ as small as possible.</p>
+        <div class="cols2">
+          {{fig Unit_4/Review_candles_resid left}}
+          <p>The residual plot shows no pattern. A line is a <b>good</b> model.</p>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <p><b>Correlation is not causation.</b> When more umbrellas are sold, there are more car accidents. Umbrellas do not cause accidents. Rain causes both. Rain is a <b>lurking variable</b>.</p>
+
+
+  {{practice-head}}
+
+  <div class="lessonhead">4.1 - Scatterplots and Lines of Best Fit</div>
+
+  <div class="ex split">
+    <div class="q"><div class="goal"><b class="tag">1.</b> I describe the direction, form, and strength of a scatterplot, and I choose a good line of best fit.</div>
+      Describe the direction, form, and strength of each scatterplot.</div>
+    <div class="work">
+      {{fig Unit_4/Review_scatter_abc}}
+      <ol class="parts">
+        <li>A &nbsp;{{a}}Negative, linear, strong{{/a}}</li>
+        <li>B &nbsp;{{a}}Positive, linear, weak (the dots are spread far from a line){{/a}}</li>
+        <li>C &nbsp;{{a}}Curved (not linear), strong. It goes up and then down.{{/a}}</li>
+      </ol>
+
+      <p>12 students recorded how many hours they practiced typing last week and their typing speed.</p>
+      <table class="data left">
+        <tr><td>Hours ($x$)</td><td>1</td><td>2</td><td>3</td><td>3</td><td>4</td><td>5</td><td>6</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+        <tr><td>Words per minute ($y$)</td><td>28</td><td>23</td><td>31</td><td>25</td><td>30</td><td>38</td><td>35</td><td>40</td><td>37</td><td>45</td><td>45</td><td>55</td></tr>
+      </table>
+
+      <div class="cols2">
+        {{fig Unit_4/Unit_4_Review_typing_line left}}
+        <ol class="parts" style="counter-reset: part 3">
+          <li>Describe the direction, form, and strength.
+            <div class="h03">{{a}}Positive, linear, strong{{/a}}</div></li>
+          <li>Draw a line of best fit on the graph.
+            <div class="h03">{{a}}One good line is shown in red. Accept any line that follows the trend with about as many dots above as below.{{/a}}</div></li>
+          <li>How many dots are above your line? How many are below?
+            <div class="h03">{{a}}Red line: 6 above and 6 below. About the same number is the goal.{{/a}}</div></li>
+        </ol>
+      </div>
+
+      <div class="cols2">
+        {{fig Unit_4/Review_typing_ken left}}
+        <ol class="parts" style="counter-reset: part 6">
+          <li>Ken drew this line for the same data. It goes through the first dot and the last dot. Is it a good line of best fit? Explain.
+            <div class="h05">{{a}}No. 10 dots are below it and none are above it. A good line has about the same number of dots above and below.{{/a}}</div></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="ex split">
+    <div class="q"><div class="goal"><b class="tag">2.</b> I write the equation of a line of best fit, and I make predictions and know when not to trust them.</div>
+      Mia charged her phone on 10 days. She recorded how many minutes it charged and the battery percent at the end. A line of best fit is drawn.</div>
+    <div class="work">
+      <div class="cols2">
+        {{fig Unit_4/Review_charging left}}
+        <ol class="parts">
+          <li>Describe the direction, form, and strength.
+            <div class="h05">{{a}}Positive, linear, strong{{/a}}</div></li>
+          <li>Use the two marked points to find the slope.
+            <div class="h05">{{a}}$m = \frac{70 - 40}{40 - 20} = \frac{30}{20} = 1.5${{/a}}</div></li>
+          <li>Find $b$.
+            <div class="h05">{{a}}$40 = 1.5(20) + b$<br>$40 = 30 + b$, &nbsp;so $b = 10${{/a}}</div></li>
+        </ol>
+      </div>
+
+      <ol class="parts" style="counter-reset: part 3">
+        <li>Write the equation of the line. &nbsp;{{a}}$\hat{y} = 1.5x + 10${{/a}}
+          <div class="h03"></div></li>
+        <li>Predict the battery percent after 26 minutes of charging.
+          <div class="h05">{{a}}$\hat{y} = 1.5(26) + 10 = 39 + 10 = 49$, &nbsp;about 49%{{/a}}</div></li>
+        <li>Predict the battery percent after 80 minutes of charging. Should you trust this prediction? Explain.
+          <div class="h05">{{a}}$\hat{y} = 1.5(80) + 10 = 130$. No. A battery cannot be more than 100%. 80 minutes is far outside the data (5 to 55 minutes).{{/a}}</div></li>
+      </ol>
+
+      <p>Two points on another line of best fit are $(2, 40)$ and $(8, 10)$.</p>
+      <ol class="parts" style="counter-reset: part 6">
+        <li>Find the slope.
+          <div class="h05">{{a}}$m = \frac{10 - 40}{8 - 2} = \frac{-30}{6} = {-5}${{/a}}</div></li>
+        <li>Find $b$ and write the equation of the line.
+          <div class="h05">{{a}}$40 = {-5}(2) + b$, &nbsp;$40 = {-10} + b$, &nbsp;so $b = 50$. &nbsp;&nbsp;&nbsp;&nbsp;$\hat{y} = {-5}x + 50${{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="lessonhead">4.2 - Slope, Intercept, and Correlation</div>
+
+  <div class="ex split">
+    <div class="q"><div class="goal"><b class="tag">3.</b> I explain the slope of a line of best fit in context, and I explain the y-intercept in context, or tell why it has no meaning.</div>
+      Students on a long hike started with full water bottles. The line $\hat{y} = {-6}x + 32$ predicts the water left, where $x$ is the number of hours of hiking and $y$ is the ounces of water left.</div>
+    <div class="work">
+      <ol class="parts">
+        <li>Explain the slope in context.
+          <div class="h05">{{a}}For each additional hour of hiking, the predicted water left decreases by 6 ounces.{{/a}}</div></li>
+        <li>Explain the y-intercept in context.
+          <div class="h05">{{a}}When $x = 0$ (at the start of the hike), the predicted water left is 32 ounces.{{/a}}</div></li>
+      </ol>
+
+      <p>A store sells TVs. The line $\hat{y} = 15x - 200$ predicts the price, where $x$ is the screen size in inches and $y$ is the price in dollars.</p>
+      <ol class="parts" style="counter-reset: part 2">
+        <li>Explain the slope in context.
+          <div class="h05">{{a}}For each additional inch of screen size, the predicted price increases by \$15.{{/a}}</div></li>
+        <li>Does the y-intercept have a real meaning here? Explain.
+          <div class="h05">{{a}}No. It says a TV with a 0-inch screen costs $-$\$200. No TV has a 0-inch screen, and a price cannot be negative.{{/a}}</div></li>
+      </ol>
+
+      <p>A pizza shop uses the line $\hat{y} = 1.5x + 9$, where $x$ is the number of toppings and $y$ is the price of a pizza in dollars.</p>
+      <ol class="parts" style="counter-reset: part 4">
+        <li>Explain the slope in context.
+          <div class="h05">{{a}}For each additional topping, the predicted price increases by \$1.50.{{/a}}</div></li>
+        <li>Explain the y-intercept in context.
+          <div class="h05">{{a}}When there are 0 toppings (a plain cheese pizza), the predicted price is \$9.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="ex split">
+    <div class="q"><div class="goal"><b class="tag">4.</b> I estimate the correlation coefficient $r$ from a scatterplot, and I explain why correlation does not prove causation.</div></div>
+    <div class="work">
+      <ol class="parts">
+        <li>Match each $r$ to a scatterplot: &nbsp;&nbsp;$r = 0.95$, &nbsp;$r = 0.5$, &nbsp;$r = {-0.2}$, &nbsp;$r = {-0.75}$
+          {{fig Unit_4/Review_r_match left}}
+          <p>W: $r =$ <span class="b s">{{a}}0.5{{/a}}</span> &nbsp;&nbsp;&nbsp;&nbsp;X: $r =$ <span class="b s">{{a}}$-0.75${{/a}}</span> &nbsp;&nbsp;&nbsp;&nbsp;Y: $r =$ <span class="b s">{{a}}0.95{{/a}}</span> &nbsp;&nbsp;&nbsp;&nbsp;Z: $r =$ <span class="b s">{{a}}$-0.2${{/a}}</span></p></li>
+        <li>Which shows a stronger linear relationship, $r = {-0.7}$ or $r = 0.6$? Explain.
+          <div class="h05">{{a}}$r = {-0.7}$. It is closer to $-1$ than $0.6$ is to $1$. The minus sign only shows the direction.{{/a}}</div></li>
+        <li>Can a scatterplot have $r = 1.5$? Explain.
+          <div class="h05">{{a}}No. $r$ is always from $-1$ to $1$.{{/a}}</div></li>
+      </ol>
+
+      <p>In an elementary school, students with bigger shoe sizes have higher reading scores. The correlation is strong and positive.</p>
+      <ol class="parts" style="counter-reset: part 3">
+        <li>Do bigger feet cause better reading? Explain.
+          <div class="h05">{{a}}No. A correlation shows that two things change together. It does not prove that one causes the other.{{/a}}</div></li>
+        <li>What lurking variable could cause both?
+          <div class="h05">{{a}}Age (or grade). Older students have bigger feet, and they also read better.{{/a}}</div></li>
+      </ol>
+
+      <p>In a city, the number of fans sold each day and the number of people at the pool have a strong positive correlation.</p>
+      <ol class="parts" style="counter-reset: part 5">
+        <li>Name a lurking variable that could cause both. Explain.
+          <div class="h05">{{a}}Hot weather (the temperature). On hot days, more people buy fans and more people go to the pool.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="lessonhead">4.3 - Residuals</div>
+
+  <div class="ex split">
+    <div class="q"><div class="goal"><b class="tag">5.</b> I find and explain a residual, and I tell if a point is above or below the line from its residual.</div>
+      A delivery app predicts the delivery time with $\hat{y} = 4x + 10$, where $x$ is the distance in miles and $y$ is the time in minutes. Fill in the table.</div>
+    <div class="work">
+      <table class="fill">
+        <tr><th>$x$ (miles)</th><th>$y$ (actual minutes)</th><th>$\hat{y}$ (predicted)</th><th>residual $y - \hat{y}$</th></tr>
+        <tr><td>1</td><td>16</td><td class="w">{{a}}$4(1) + 10 = 14${{/a}}</td><td class="w">{{a}}$16 - 14 = 2${{/a}}</td></tr>
+        <tr><td>2</td><td>17</td><td class="w">{{a}}18{{/a}}</td><td class="w">{{a}}$17 - 18 = {-1}${{/a}}</td></tr>
+        <tr><td>3</td><td>22</td><td class="w">{{a}}22{{/a}}</td><td class="w">{{a}}$22 - 22 = 0${{/a}}</td></tr>
+        <tr><td>5</td><td>33</td><td class="w">{{a}}30{{/a}}</td><td class="w">{{a}}$33 - 30 = 3${{/a}}</td></tr>
+        <tr><td>6</td><td>31</td><td class="w">{{a}}34{{/a}}</td><td class="w">{{a}}$31 - 34 = {-3}${{/a}}</td></tr>
+        <tr><td>8</td><td>44</td><td class="w">{{a}}42{{/a}}</td><td class="w">{{a}}$44 - 42 = 2${{/a}}</td></tr>
+      </table>
+      <ol class="parts">
+        <li>Which orders have points above the line? How do you know?
+          <div class="h05">{{a}}The 1-mile, 5-mile, and 8-mile orders. Their residuals are positive.{{/a}}</div></li>
+        <li>Which order has a point on the line? How do you know?
+          <div class="h05">{{a}}The 3-mile order. Its residual is 0.{{/a}}</div></li>
+        <li>Explain the residual for the 6-mile order in context.
+          <div class="h05">{{a}}The residual is $-3$. The order took 3 minutes less than predicted.{{/a}}</div></li>
+        <li>A 4-mile order has a residual of $-2$. How long did it take?
+          <div class="h05">{{a}}$\hat{y} = 4(4) + 10 = 26$. &nbsp;$y - 26 = {-2}$, &nbsp;so $y = 24$ minutes.{{/a}}</div></li>
+        <li>Another order has a residual of 5. Is its point above or below the line? What does the residual mean?
+          <div class="h05">{{a}}Above, because the residual is positive. The order took 5 minutes longer than predicted.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="ex split">
+    <div class="q"><div class="goal"><b class="tag">6.</b> I explain what the least-squares line is, and I use a residual plot to decide if a line is a good model.</div>
+      Two lines were fit to the same 5 points. Here are their residuals.</div>
+    <div class="work">
+      <table class="fill">
+        <tr><th></th><th colspan="5">Residuals</th><th>$\Sigma(y - \hat{y})^2$</th></tr>
+        <tr><td>Line A</td><td>3</td><td>$-2$</td><td>1</td><td>$-1$</td><td>$-1$</td><td class="wl">{{a}}$9 + 4 + 1 + 1 + 1 = 16${{/a}}</td></tr>
+        <tr><td>Line B</td><td>1</td><td>$-1$</td><td>2</td><td>$-2$</td><td>0</td><td class="wl">{{a}}$1 + 1 + 4 + 4 + 0 = 10${{/a}}</td></tr>
+      </table>
+      <ol class="parts">
+        <li>Find $\Sigma(y - \hat{y})^2$ for each line. (Square each residual, then add.)</li>
+        <li>Which line is closer to the least-squares line? Explain.
+          <div class="h05">{{a}}Line B. Its sum of squared residuals (10) is smaller than Line A's (16).{{/a}}</div></li>
+        <li>Add the residuals of each line without squaring them. Why does this not help you choose a line?
+          <div class="h05">{{a}}Line A: $3 - 2 + 1 - 1 - 1 = 0$. &nbsp;Line B: $1 - 1 + 2 - 2 + 0 = 0$. Both sums are 0. The positive and negative residuals cancel out.{{/a}}</div></li>
+        <li>For one data set, the least-squares line has $\Sigma(y - \hat{y})^2 = 12$. Can another line for the same data have $\Sigma(y - \hat{y})^2 = 9$? Explain.
+          <div class="h05">{{a}}No. The least-squares line has the smallest possible sum. Every other line has a sum of 12 or more.{{/a}}</div></li>
+      </ol>
+
+      <p>These are the residual plots for two lines of best fit.</p>
+      {{fig Unit_4/Review_resid_plots_pq}}
+      <ol class="parts" style="counter-reset: part 4">
+        <li>Which plot shows that a line is a good model? Explain.
+          <div class="h05">{{a}}Plot Q. The residuals are scattered at random, with no pattern.{{/a}}</div></li>
+        <li>What does the pattern in plot P tell you?
+          <div class="h05">{{a}}The residuals make a curve: negative, then positive, then negative. The data is curved, so a line is not a good model.{{/a}}</div></li>
+      </ol>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="lessonhead">Test-Style Questions</div>
+  <p>A test asks the same questions with more words. Read slowly. Circle the best answer.</p>
+
+  <div class="ex">
+    <div class="q"><b class="tag">7.</b> The scatterplot in Problem 1 shows the number of hours 12 students practiced typing last week and their typing speeds, in words per minute. Which equation best represents a line of best fit for the data?</div>
+    <div class="work">
+      <table class="choices">
+        <tr><td>{{opt A}}</td><td>$\hat{y} = {-3}x + 20$</td></tr>
+        <tr><td>{{optans B}}</td><td>$\hat{y} = 3x + 20$</td></tr>
+        <tr><td>{{opt C}}</td><td>$\hat{y} = 20x + 3$</td></tr>
+        <tr><td>{{opt D}}</td><td>$\hat{y} = 3x + 40$</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">8.</b> Mia used the line of best fit $\hat{y} = 1.5x + 10$ to predict the battery percent, $y$, of her phone after it charges for $x$ minutes. Her data included charging times from 5 to 55 minutes. Which prediction is <b>least</b> likely to be reliable?</div>
+    <div class="work">
+      <table class="choices">
+        <tr><td>{{opt A}}</td><td>the battery percent after 10 minutes of charging</td></tr>
+        <tr><td>{{opt B}}</td><td>the battery percent after 30 minutes of charging</td></tr>
+        <tr><td>{{opt C}}</td><td>the battery percent after 50 minutes of charging</td></tr>
+        <tr><td>{{optans D}}</td><td>the battery percent after 75 minutes of charging</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">9.</b> A pet store owner found that the equation $\hat{y} = 2.5x + 20$ can be used to predict the price $y$, in dollars, of a fish tank that holds $x$ gallons of water. Which statement best describes the meaning of the slope of the line?</div>
+    <div class="work">
+      <table class="choices">
+        <tr><td>{{opt A}}</td><td>Every fish tank costs \$2.50.</td></tr>
+        <tr><td>{{optans B}}</td><td>For each additional gallon a tank holds, the predicted price increases by \$2.50.</td></tr>
+        <tr><td>{{opt C}}</td><td>For each additional dollar in price, a tank holds 2.5 more gallons.</td></tr>
+        <tr><td>{{opt D}}</td><td>A tank that holds 0 gallons is predicted to cost \$2.50.</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">10.</b> A study of 200 students found a strong positive correlation between the number of hours students practice a musical instrument each week and their math grades. Which conclusion is best supported by the study?</div>
+    <div class="work">
+      <table class="choices">
+        <tr><td>{{opt A}}</td><td>Practicing a musical instrument causes students to earn higher math grades.</td></tr>
+        <tr><td>{{opt B}}</td><td>Earning higher math grades causes students to practice a musical instrument more.</td></tr>
+        <tr><td>{{optans C}}</td><td>Students who practice more tend to have higher math grades, but the study does not show that one causes the other.</td></tr>
+        <tr><td>{{opt D}}</td><td>There is no relationship between practicing a musical instrument and math grades.</td></tr>
+      </table>
+    </div>
+  </div>
+
+  {{break}}
+
+  <div class="ex">
+    <div class="q"><b class="tag">11.</b> A bus company uses the line of best fit $\hat{y} = 3x + 12$ to predict the travel time $y$, in minutes, for a trip of $x$ miles. A 6-mile trip took 27 minutes. Which statement about the residual for this trip is true?</div>
+    <div class="work">
+      <table class="choices">
+        <tr><td>{{opt A}}</td><td>The residual is 3, and the point is above the line.</td></tr>
+        <tr><td>{{opt B}}</td><td>The residual is 3, and the point is below the line.</td></tr>
+        <tr><td>{{opt C}}</td><td>The residual is $-3$, and the point is above the line.</td></tr>
+        <tr><td>{{optans D}}</td><td>The residual is $-3$, and the point is below the line.</td></tr>
+      </table>
+      {{a}}<p>$\hat{y} = 3(6) + 12 = 30$. &nbsp;Residual $= 27 - 30 = {-3}$. Negative, so the point is below the line.</p>{{/a}}
+    </div>
+  </div>
+
+  <div class="ex">
+    <div class="q"><b class="tag">12.</b> A student found a line of best fit for a data set and made a residual plot. The residuals are positive for small and large values of $x$ and negative for values of $x$ in the middle. Which conclusion is best supported by the residual plot?</div>
+    <div class="work">
+      <table class="choices">
+        <tr><td>{{opt A}}</td><td>A line is a good model, because some residuals are positive and some are negative.</td></tr>
+        <tr><td>{{optans B}}</td><td>A line is not a good model, because the residuals show a curved pattern.</td></tr>
+        <tr><td>{{opt C}}</td><td>A line is a good model, because the residuals form a clear pattern.</td></tr>
+        <tr><td>{{opt D}}</td><td>A line is not a good model, because the sum of the residuals is 0.</td></tr>
+      </table>
+    </div>
+  </div>
