@@ -1,0 +1,35 @@
+name: Fix stuck work site deployment
+
+# For when the work site will not publish: a Pages deployment that timed out
+# can stay "in progress" inside GitHub Pages, and every later build fails with
+# "Deployment request failed ... due to in progress deployment. Please cancel
+# <sha> first".  Nothing on the web page can cancel it.  This cancels it with
+# the same token the mirror uses, then asks Pages to build the work site again.
+# Run it from the Actions tab; paste the sha from the error if it differs.
+
+on:
+  workflow_dispatch:
+    inputs:
+      stuck_sha:
+        description: "Commit of the stuck deployment (from the error message)"
+        required: true
+        default: "a91f717f941e9e74b6fcc230df1e9a6f787a1d98"
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cancel the stuck deployment, then rebuild the work site
+        env:
+          GH_TOKEN: ${{ secrets.WORK_TOKEN }}
+          REPO: ${{ secrets.WORK_OWNER }}/${{ secrets.WORK_REPO }}
+          SHA: ${{ inputs.stuck_sha }}
+        run: |
+          echo "Cancelling Pages deployment $SHA on $REPO"
+          gh api -X POST "repos/$REPO/pages/deployments/$SHA/cancel" \
+            && echo "Cancelled." \
+            || echo "Cancel was refused (already finished, or the token cannot manage Pages)."
+          sleep 10
+          echo "Requesting a new Pages build"
+          gh api -X POST "repos/$REPO/pages/builds" --jq '.status' \
+            || echo "Build request was refused; rerun the failed pages build on the work repo instead."
