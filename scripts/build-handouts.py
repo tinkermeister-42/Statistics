@@ -41,6 +41,7 @@ SHELL = """<!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{heading}{title_suffix}</title>
+<link rel="icon" type="image/png" href="../../images/logo.png">
 <link rel="stylesheet" href="../assets/handouts.css">
 </head>
 <body>
